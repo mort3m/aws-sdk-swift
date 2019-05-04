@@ -47,11 +47,11 @@ class DynamoDBTests: XCTestCase {
         _ = try client.createTable(createTableInput)
 
         let putItemInput = DynamoDB.PutItemInput(
-            tableName: tableName,
             item: [
                 "hashKey": DynamoDB.AttributeValue(s: "hello"),
                 "rangeKey": DynamoDB.AttributeValue(s: "world")
-            ]
+            ],
+            tableName: tableName
         )
         _ = try client.putItem(putItemInput)
     }

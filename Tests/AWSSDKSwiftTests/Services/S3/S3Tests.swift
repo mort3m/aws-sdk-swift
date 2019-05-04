@@ -49,7 +49,7 @@ class S3Tests: XCTestCase {
             key: TestData.shared.key
         )
 
-        let output = try client.putObject(putRequest)
+        let output = try client.putObject(putRequest).wait()
         XCTAssertNotNil(output.eTag)
     }
 
@@ -64,7 +64,7 @@ class S3Tests: XCTestCase {
         )
 
         _ = try client.putObject(putRequest)
-        let object = try client.getObject(S3.GetObjectRequest(bucket: TestData.shared.bucket, key: "hello.txt"))
+        let object = try client.getObject(S3.GetObjectRequest(bucket: TestData.shared.bucket, key: "hello.txt")).wait()
         XCTAssertEqual(object.body, TestData.shared.bodyData)
     }
 
@@ -77,9 +77,9 @@ class S3Tests: XCTestCase {
             key: TestData.shared.key
         )
 
-        let putResult = try client.putObject(putRequest)
+        let putResult = try client.putObject(putRequest).wait()
 
-        let output = try client.listObjects(S3.ListObjectsRequest(bucket: TestData.shared.bucket))
+        let output = try client.listObjects(S3.ListObjectsRequest(bucket: TestData.shared.bucket)).wait()
         XCTAssertEqual(output.maxKeys, 1000)
         XCTAssertEqual(output.contents?.first?.key, TestData.shared.key)
         XCTAssertEqual(output.contents?.first?.size, Int32(TestData.shared.bodyData.count))
