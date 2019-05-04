@@ -47,11 +47,11 @@ class DynamoDBTests: XCTestCase {
         _ = try client.createTable(createTableInput)
 
         let putItemInput = DynamoDB.PutItemInput(
+            tableName: tableName,
             item: [
                 "hashKey": DynamoDB.AttributeValue(s: "hello"),
                 "rangeKey": DynamoDB.AttributeValue(s: "world")
-            ],
-            tableName: tableName
+            ]
         )
         _ = try client.putItem(putItemInput)
     }
@@ -76,7 +76,7 @@ class DynamoDBTests: XCTestCase {
                 tableName: tableName
             )
 
-            let output = try client.getItem(input)
+            let output = try client.getItem(input).wait()
             XCTAssertEqual(output.item?["hashKey"]?.s, "hello")
             XCTAssertEqual(output.item?["rangeKey"]?.s, "world")
         } catch {
