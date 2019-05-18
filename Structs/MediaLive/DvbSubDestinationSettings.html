@@ -14,7 +14,7 @@
     <a title="DvbSubDestinationSettings Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControlAB0cde8TeletexthI0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/teletextGridControl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControlAB0cde8TeletexthI0OSgvp">teletextGridControl</a>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignmentAB0cdE9AlignmentOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/alignment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignmentAB0cdE9AlignmentOSgvp">alignment</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</p>
+                        <p>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting <q>smart</q> justification will left-justify live subtitles and center-justify pre-recorded subtitles.  This option is not valid for source captions that are STL or 608/embedded.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">teletextGridControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationTeletextGridControl.html">DvbSubDestinationTeletextGridControl</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationAlignment.html">DvbSubDestinationAlignment</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowYOffsets5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/shadowYOffset" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowYOffsets5Int32VSgvp">shadowYOffset</a>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV15backgroundColorAB0cde10BackgroundH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV15backgroundColorAB0cde10BackgroundH0OSgvp">backgroundColor</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text.  All burn-in and DVB-Sub font settings must match.</p>
+                        <p>Specifies the color of the rectangle behind the captions.  All burn-in and DVB-Sub font settings must match.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shadowYOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationBackgroundColor.html">DvbSubDestinationBackgroundColor</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV17backgroundOpacitys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backgroundOpacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV17backgroundOpacitys5Int32VSgvp">backgroundOpacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter blank is equivalent to setting it to 0 (transparent).  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backgroundOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -649,6 +676,87 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/InputLocation.html">InputLocation</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9fontColorAB0cde4FontH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fontColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9fontColorAB0cde4FontH0OSgvp">fontColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the color of the burned-in captions.  This option is not valid for source captions that are STL, 608/embedded or teletext.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationFontColor.html">DvbSubDestinationFontColor</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV11fontOpacitys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fontOpacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV11fontOpacitys5Int32VSgvp">fontOpacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV14fontResolutions5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fontResolution" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV14fontResolutions5Int32VSgvp">fontResolution</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Font resolution in DPI (dots per inch); default is 96 dpi.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontResolution</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,141 +847,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9yPositions5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/yPosition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9yPositions5Int32VSgvp">yPosition</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output.  This option is not valid for source captions that are STL, 608/embedded or teletext.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">yPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV11fontOpacitys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/fontOpacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV11fontOpacitys5Int32VSgvp">fontOpacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV15backgroundColorAB0cde10BackgroundH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/backgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV15backgroundColorAB0cde10BackgroundH0OSgvp">backgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the color of the rectangle behind the captions.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationBackgroundColor.html">DvbSubDestinationBackgroundColor</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9fontColorAB0cde4FontH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/fontColor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9fontColorAB0cde4FontH0OSgvp">fontColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the color of the burned-in captions.  This option is not valid for source captions that are STL, 608/embedded or teletext.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationFontColor.html">DvbSubDestinationFontColor</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV17backgroundOpacitys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/backgroundOpacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV17backgroundOpacitys5Int32VSgvp">backgroundOpacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter blank is equivalent to setting it to 0 (transparent).  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backgroundOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV11shadowColorAB0cde6ShadowH0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/shadowColor" class="dashAnchor"></a>
                     <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV11shadowColorAB0cde6ShadowH0OSgvp">shadowColor</a>
@@ -892,87 +865,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shadowColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationShadowColor.html">DvbSubDestinationShadowColor</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9xPositions5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/xPosition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9xPositions5Int32VSgvp">xPosition</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter.  This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">xPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignmentAB0cdE9AlignmentOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/alignment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignmentAB0cdE9AlignmentOSgvp">alignment</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting <q>smart</q> justification will left-justify live subtitles and center-justify pre-recorded subtitles.  This option is not valid for source captions that are STL or 608/embedded.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationAlignment.html">DvbSubDestinationAlignment</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowXOffsets5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/shadowXOffset" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowXOffsets5Int32VSgvp">shadowXOffset</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left.  All burn-in and DVB-Sub font settings must match.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shadowXOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV14fontResolutions5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/fontResolution" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV14fontResolutions5Int32VSgvp">fontResolution</a>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowXOffsets5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/shadowXOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowXOffsets5Int32VSgvp">shadowXOffset</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Font resolution in DPI (dots per inch); default is 96 dpi.  All burn-in and DVB-Sub font settings must match.</p>
+                        <p>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left.  All burn-in and DVB-Sub font settings must match.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fontResolution</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shadowXOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,9 +928,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControl13shadowYOffset4font0L4Size12outlineColor0nM09yPosition0L7Opacity010backgroundO00lO00rQ00jO001xP09alignment0J7XOffset0jQ00L10ResolutionAdB0cde8TeletexthI0OSg_s5Int32VSgAB13InputLocationVSgSSSgAB0cde7OutlineO0OSgA_A_A_AB0cde10BackgroundO0OSgAB0cde4FontO0OSgA_AB0cde6ShadowO0OSgA_AB0cdE9AlignmentOSgA_A_A_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(teletextGridControl:shadowYOffset:font:fontSize:outlineColor:outlineSize:yPosition:fontOpacity:backgroundColor:fontColor:backgroundOpacity:shadowColor:xPosition:alignment:shadowXOffset:shadowOpacity:fontResolution:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControl13shadowYOffset4font0L4Size12outlineColor0nM09yPosition0L7Opacity010backgroundO00lO00rQ00jO001xP09alignment0J7XOffset0jQ00L10ResolutionAdB0cde8TeletexthI0OSg_s5Int32VSgAB13InputLocationVSgSSSgAB0cde7OutlineO0OSgA_A_A_AB0cde10BackgroundO0OSgAB0cde4FontO0OSgA_AB0cde6ShadowO0OSgA_AB0cdE9AlignmentOSgA_A_A_tcfc">init(teletextGridControl:shadowYOffset:font:fontSize:outlineColor:outlineSize:yPosition:fontOpacity:backgroundColor:fontColor:backgroundOpacity:shadowColor:xPosition:alignment:shadowXOffset:shadowOpacity:fontResolution:)</a>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowYOffsets5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/shadowYOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV13shadowYOffsets5Int32VSgvp">shadowYOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shadowYOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControlAB0cde8TeletexthI0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/teletextGridControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV19teletextGridControlAB0cde8TeletexthI0OSgvp">teletextGridControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">teletextGridControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationTeletextGridControl.html">DvbSubDestinationTeletextGridControl</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9xPositions5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/xPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9xPositions5Int32VSgvp">xPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter.  This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">xPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9yPositions5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/yPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9yPositions5Int32VSgvp">yPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output.  This option is not valid for source captions that are STL, 608/embedded or teletext.  These source settings are already pre-defined by the caption stream.  All burn-in and DVB-Sub font settings must match.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">yPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignment15backgroundColor0H7Opacity4font0kI00kJ00K10Resolution0K4Size07outlineI00nM006shadowI00oJ00O7XOffset0O7YOffset19teletextGridControl9xPosition01yU0AdB0cdE9AlignmentOSg_AB0cde10BackgroundI0OSgs5Int32VSgAB13InputLocationVSgAB0cde4FontI0OSgA2_A2_SSSgAB0cde7OutlineI0OSgA2_AB0cde6ShadowI0OSgA2_A2_A2_AB0cde8TeletextsT0OSgA2_A2_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(alignment:backgroundColor:backgroundOpacity:font:fontColor:fontOpacity:fontResolution:fontSize:outlineColor:outlineSize:shadowColor:shadowOpacity:shadowXOffset:shadowYOffset:teletextGridControl:xPosition:yPosition:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV25DvbSubDestinationSettingsV9alignment15backgroundColor0H7Opacity4font0kI00kJ00K10Resolution0K4Size07outlineI00nM006shadowI00oJ00O7XOffset0O7YOffset19teletextGridControl9xPosition01yU0AdB0cdE9AlignmentOSg_AB0cde10BackgroundI0OSgs5Int32VSgAB13InputLocationVSgAB0cde4FontI0OSgA2_A2_SSSgAB0cde7OutlineI0OSgA2_AB0cde6ShadowI0OSgA2_A2_A2_AB0cde8TeletextsT0OSgA2_A2_tcfc">init(alignment:backgroundColor:backgroundOpacity:font:fontColor:fontOpacity:fontResolution:fontSize:outlineColor:outlineSize:shadowColor:shadowOpacity:shadowXOffset:shadowYOffset:teletextGridControl:xPosition:yPosition:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1053,7 +1053,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">teletextGridControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationTeletextGridControl.html">DvbSubDestinationTeletextGridControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowYOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/InputLocation.html">InputLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outlineColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationOutlineColor.html">DvbSubDestinationOutlineColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outlineSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">yPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationBackgroundColor.html">DvbSubDestinationBackgroundColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationFontColor.html">DvbSubDestinationFontColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backgroundOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationShadowColor.html">DvbSubDestinationShadowColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">xPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationAlignment.html">DvbSubDestinationAlignment</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowXOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontResolution</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">alignment</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationAlignment.html">DvbSubDestinationAlignment</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationBackgroundColor.html">DvbSubDestinationBackgroundColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backgroundOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/InputLocation.html">InputLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationFontColor.html">DvbSubDestinationFontColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontResolution</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outlineColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationOutlineColor.html">DvbSubDestinationOutlineColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outlineSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowColor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationShadowColor.html">DvbSubDestinationShadowColor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowOpacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowXOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shadowYOffset</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">teletextGridControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSubDestinationTeletextGridControl.html">DvbSubDestinationTeletextGridControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">xPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">yPosition</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,7 +1065,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="CreateHITRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV14maxAssignmentss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxAssignments" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV14maxAssignmentss5Int32VSgvp">maxAssignments</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of times the HIT can be accepted and completed before the HIT becomes unavailable.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxAssignments</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5MTurkAAV16CreateHITRequestV27assignmentDurationInSecondss5Int64Vvp"></a>
                     <a name="//apple_ref/swift/Property/assignmentDurationInSeconds" class="dashAnchor"></a>
                     <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV27assignmentDurationInSecondss5Int64Vvp">assignmentDurationInSeconds</a>
@@ -622,33 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">assignmentDurationInSeconds</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV5titleSSvp"></a>
-                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV5titleSSvp">title</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The title of the HIT. A title should be short and descriptive about the kind of task the HIT contains. On the Amazon Mechanical Turk web site, the HIT title appears in search results, and everywhere the HIT is mentioned.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,114 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV8questionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/question" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV8questionSSSgvp">question</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The data the person completing the HIT uses to produce the results.   Constraints: Must be a QuestionForm data structure, an ExternalQuestion data structure, or an HTMLQuestion data structure. The XML question data must not be larger than 64 kilobytes (65,535 bytes) in size, including whitespace.  Either a Question parameter or a HITLayoutId parameter must be provided.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV18uniqueRequestTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/uniqueRequestToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV18uniqueRequestTokenSSSgvp">uniqueRequestToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A unique identifier for this request which allows you to retry the call on error without creating duplicate HITs. This is useful in cases such as network timeouts where it is unclear whether or not the call succeeded on the server. If the HIT already exists in the system from a previous call using the same UniqueRequestToken, subsequent calls will return a AWS.MechanicalTurk.HitAlreadyExists error with a message containing the HITId.    Note: It is your responsibility to ensure uniqueness of the token. The unique token expires after 24 hours. Subsequent calls using the same UniqueRequestToken made after the 24 hour limit could create duplicate HITs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV17lifetimeInSecondss5Int64Vvp"></a>
-                    <a name="//apple_ref/swift/Property/lifetimeInSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV17lifetimeInSecondss5Int64Vvp">lifetimeInSeconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An amount of time, in seconds, after which the HIT is no longer available for users to accept. After the lifetime of the HIT elapses, the HIT no longer appears in HIT searches, even if not all of the assignments for the HIT have been accepted.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lifetimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV19requesterAnnotationSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requesterAnnotation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV19requesterAnnotationSSSgvp">requesterAnnotation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An arbitrary data field. The RequesterAnnotation parameter lets your application attach arbitrary data to the HIT for tracking purposes. For example, this parameter could be an identifier internal to the Requester&rsquo;s application that corresponds with the HIT.   The RequesterAnnotation parameter for a HIT is only visible to the Requester who created the HIT. It is not shown to the Worker, or any other Requester.   The RequesterAnnotation parameter may be different for each HIT you submit. It does not affect how your HITs are grouped.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requesterAnnotation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5MTurkAAV16CreateHITRequestV11descriptionSSvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
                     <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV11descriptionSSvp">description</a>
@@ -838,60 +676,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV25qualificationRequirementsSayAB24QualificationRequirementVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/qualificationRequirements" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV25qualificationRequirementsSayAB24QualificationRequirementVGSgvp">qualificationRequirements</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Conditions that a Worker&rsquo;s Qualifications must meet in order to accept the HIT. A HIT can have between zero and ten Qualification requirements. All requirements must be met in order for a Worker to accept the HIT. Additionally, other actions can be restricted using the ActionsGuarded field on each QualificationRequirement structure.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationRequirements</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/QualificationRequirement.html">QualificationRequirement</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV19hITLayoutParametersSayAB18HITLayoutParameterVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/hITLayoutParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV19hITLayoutParametersSayAB18HITLayoutParameterVGSgvp">hITLayoutParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If the HITLayoutId is provided, any placeholder values must be filled in with values using the HITLayoutParameter structure. For more information, see HITLayout.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hITLayoutParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/HITLayoutParameter.html">HITLayoutParameter</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV8keywordsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keywords" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV8keywordsSSSgvp">keywords</a>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV19hITLayoutParametersSayAB18HITLayoutParameterVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hITLayoutParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV19hITLayoutParametersSayAB18HITLayoutParameterVGSgvp">hITLayoutParameters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more words or phrases that describe the HIT, separated by commas. These words are used in searches to find HITs.</p>
+                        <p>If the HITLayoutId is provided, any placeholder values must be filled in with values using the HITLayoutParameter structure. For more information, see HITLayout.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keywords</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hITLayoutParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/HITLayoutParameter.html">HITLayoutParameter</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,6 +766,168 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV8keywordsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keywords" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV8keywordsSSSgvp">keywords</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more words or phrases that describe the HIT, separated by commas. These words are used in searches to find HITs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keywords</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV17lifetimeInSecondss5Int64Vvp"></a>
+                    <a name="//apple_ref/swift/Property/lifetimeInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV17lifetimeInSecondss5Int64Vvp">lifetimeInSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An amount of time, in seconds, after which the HIT is no longer available for users to accept. After the lifetime of the HIT elapses, the HIT no longer appears in HIT searches, even if not all of the assignments for the HIT have been accepted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lifetimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV14maxAssignmentss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxAssignments" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV14maxAssignmentss5Int32VSgvp">maxAssignments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of times the HIT can be accepted and completed before the HIT becomes unavailable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxAssignments</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV25qualificationRequirementsSayAB24QualificationRequirementVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/qualificationRequirements" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV25qualificationRequirementsSayAB24QualificationRequirementVGSgvp">qualificationRequirements</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conditions that a Worker&rsquo;s Qualifications must meet in order to accept the HIT. A HIT can have between zero and ten Qualification requirements. All requirements must be met in order for a Worker to accept the HIT. Additionally, other actions can be restricted using the ActionsGuarded field on each QualificationRequirement structure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationRequirements</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/QualificationRequirement.html">QualificationRequirement</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV8questionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/question" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV8questionSSSgvp">question</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The data the person completing the HIT uses to produce the results.   Constraints: Must be a QuestionForm data structure, an ExternalQuestion data structure, or an HTMLQuestion data structure. The XML question data must not be larger than 64 kilobytes (65,535 bytes) in size, including whitespace.  Either a Question parameter or a HITLayoutId parameter must be provided.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV19requesterAnnotationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requesterAnnotation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV19requesterAnnotationSSSgvp">requesterAnnotation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An arbitrary data field. The RequesterAnnotation parameter lets your application attach arbitrary data to the HIT for tracking purposes. For example, this parameter could be an identifier internal to the Requester&rsquo;s application that corresponds with the HIT.   The RequesterAnnotation parameter for a HIT is only visible to the Requester who created the HIT. It is not shown to the Worker, or any other Requester.   The RequesterAnnotation parameter may be different for each HIT you submit. It does not affect how your HITs are grouped.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requesterAnnotation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5MTurkAAV16CreateHITRequestV6rewardSSvp"></a>
                     <a name="//apple_ref/swift/Property/reward" class="dashAnchor"></a>
                     <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV6rewardSSvp">reward</a>
@@ -1009,9 +955,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16CreateHITRequestV14maxAssignments27assignmentDurationInSeconds5title0F12ReviewPolicy017autoApprovalDelayhI08question18uniqueRequestToken08lifetimehI019requesterAnnotation11description25qualificationRequirements19hITLayoutParameters01hZ2Id8keywords09hITReviewL06rewardADs5Int32VSg_s5Int64VSSAB0kL0VSgAYSgSSSgA2_AYA2_SSSayAB24QualificationRequirementVGSgSayAB18HITLayoutParameterVGSgA2_A2_A0_SStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(maxAssignments:assignmentDurationInSeconds:title:assignmentReviewPolicy:autoApprovalDelayInSeconds:question:uniqueRequestToken:lifetimeInSeconds:requesterAnnotation:description:qualificationRequirements:hITLayoutParameters:hITLayoutId:keywords:hITReviewPolicy:reward:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV14maxAssignments27assignmentDurationInSeconds5title0F12ReviewPolicy017autoApprovalDelayhI08question18uniqueRequestToken08lifetimehI019requesterAnnotation11description25qualificationRequirements19hITLayoutParameters01hZ2Id8keywords09hITReviewL06rewardADs5Int32VSg_s5Int64VSSAB0kL0VSgAYSgSSSgA2_AYA2_SSSayAB24QualificationRequirementVGSgSayAB18HITLayoutParameterVGSgA2_A2_A0_SStcfc">init(maxAssignments:assignmentDurationInSeconds:title:assignmentReviewPolicy:autoApprovalDelayInSeconds:question:uniqueRequestToken:lifetimeInSeconds:requesterAnnotation:description:qualificationRequirements:hITLayoutParameters:hITLayoutId:keywords:hITReviewPolicy:reward:)</a>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV5titleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV5titleSSvp">title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The title of the HIT. A title should be short and descriptive about the kind of task the HIT contains. On the Amazon Mechanical Turk web site, the HIT title appears in search results, and everywhere the HIT is mentioned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV18uniqueRequestTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uniqueRequestToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV18uniqueRequestTokenSSSgvp">uniqueRequestToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A unique identifier for this request which allows you to retry the call on error without creating duplicate HITs. This is useful in cases such as network timeouts where it is unclear whether or not the call succeeded on the server. If the HIT already exists in the system from a previous call using the same UniqueRequestToken, subsequent calls will return a AWS.MechanicalTurk.HitAlreadyExists error with a message containing the HITId.    Note: It is your responsibility to ensure uniqueness of the token. The unique token expires after 24 hours. Subsequent calls using the same UniqueRequestToken made after the 24 hour limit could create duplicate HITs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16CreateHITRequestV27assignmentDurationInSeconds0D12ReviewPolicy017autoApprovalDelayfG011description11hITLayoutId01hN10Parameters09hITReviewI08keywords08lifetimefG014maxAssignments25qualificationRequirements8question19requesterAnnotation6reward5title18uniqueRequestTokenADs5Int64V_AB0hI0VSgAVSgS2SSgSayAB18HITLayoutParameterVGSgAYA_AVs5Int32VSgSayAB24QualificationRequirementVGSgA_A_S2SA_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(assignmentDurationInSeconds:assignmentReviewPolicy:autoApprovalDelayInSeconds:description:hITLayoutId:hITLayoutParameters:hITReviewPolicy:keywords:lifetimeInSeconds:maxAssignments:qualificationRequirements:question:requesterAnnotation:reward:title:uniqueRequestToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16CreateHITRequestV27assignmentDurationInSeconds0D12ReviewPolicy017autoApprovalDelayfG011description11hITLayoutId01hN10Parameters09hITReviewI08keywords08lifetimefG014maxAssignments25qualificationRequirements8question19requesterAnnotation6reward5title18uniqueRequestTokenADs5Int64V_AB0hI0VSgAVSgS2SSgSayAB18HITLayoutParameterVGSgAYA_AVs5Int32VSgSayAB24QualificationRequirementVGSgA_A_S2SA_tcfc">init(assignmentDurationInSeconds:assignmentReviewPolicy:autoApprovalDelayInSeconds:description:hITLayoutId:hITLayoutParameters:hITReviewPolicy:keywords:lifetimeInSeconds:maxAssignments:qualificationRequirements:question:requesterAnnotation:reward:title:uniqueRequestToken:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,7 +1026,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">maxAssignments</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">assignmentDurationInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">assignmentReviewPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/ReviewPolicy.html">ReviewPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoApprovalDelayInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lifetimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">requesterAnnotation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">qualificationRequirements</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/QualificationRequirement.html">QualificationRequirement</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hITLayoutParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/HITLayoutParameter.html">HITLayoutParameter</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hITLayoutId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keywords</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hITReviewPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/ReviewPolicy.html">ReviewPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reward</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">assignmentDurationInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">assignmentReviewPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/ReviewPolicy.html">ReviewPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoApprovalDelayInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">hITLayoutId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hITLayoutParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/HITLayoutParameter.html">HITLayoutParameter</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hITReviewPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/ReviewPolicy.html">ReviewPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keywords</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lifetimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">maxAssignments</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualificationRequirements</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/QualificationRequirement.html">QualificationRequirement</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requesterAnnotation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reward</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1038,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

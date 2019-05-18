@@ -14,7 +14,7 @@
     <a title="InstanceFleetConfig Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacitys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/targetOnDemandCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacitys5Int32VSgvp">targetOnDemandCapacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision. When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as specified by InstanceTypeConfig. Each instance configuration has a specified WeightedCapacity. When an On-Demand instance is provisioned, the WeightedCapacity units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a WeightedCapacity of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units.  If not specified or set to 0, only Spot instances are provisioned for the instance fleet using TargetSpotCapacity. At least one of TargetSpotCapacity and TargetOnDemandCapacity should be greater than 0. For a master instance fleet, only one of TargetSpotCapacity and TargetOnDemandCapacity can be specified, and its value must be 1.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetOnDemandCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EMRAAV19InstanceFleetConfigV08instanceC4TypeAB0bcF0Ovp"></a>
                     <a name="//apple_ref/swift/Property/instanceFleetType" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV08instanceC4TypeAB0bcF0Ovp">instanceFleetType</a>
@@ -622,6 +595,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceFleetType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceFleetType.html">InstanceFleetType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV19InstanceFleetConfigV19instanceTypeConfigsSayAB0bfD0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceTypeConfigs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV19instanceTypeConfigsSayAB0bfD0VGSgvp">instanceTypeConfigs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instance type configurations that define the EC2 instances in the instance fleet.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceTypeConfigs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceTypeConfig.html">InstanceTypeConfig</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,6 +685,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacitys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/targetOnDemandCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacitys5Int32VSgvp">targetOnDemandCapacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision. When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as specified by InstanceTypeConfig. Each instance configuration has a specified WeightedCapacity. When an On-Demand instance is provisioned, the WeightedCapacity units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a WeightedCapacity of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units.  If not specified or set to 0, only Spot instances are provisioned for the instance fleet using TargetSpotCapacity. At least one of TargetSpotCapacity and TargetOnDemandCapacity should be greater than 0. For a master instance fleet, only one of TargetSpotCapacity and TargetOnDemandCapacity can be specified, and its value must be 1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetOnDemandCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EMRAAV19InstanceFleetConfigV18targetSpotCapacitys5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/targetSpotCapacity" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV18targetSpotCapacitys5Int32VSgvp">targetSpotCapacity</a>
@@ -712,36 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceFleetConfigV19instanceTypeConfigsSayAB0bfD0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceTypeConfigs" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV19instanceTypeConfigsSayAB0bfD0VGSgvp">instanceTypeConfigs</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance type configurations that define the EC2 instances in the instance fleet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceTypeConfigs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceTypeConfig.html">InstanceTypeConfig</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacity08instanceC4Type20launchSpecifications4name0e4SpotH00iJ7ConfigsADs5Int32VSg_AB0bcJ0OAB0bc12ProvisioningL0VSgSSSgAMSayAB0bjD0VGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(targetOnDemandCapacity:instanceFleetType:launchSpecifications:name:targetSpotCapacity:instanceTypeConfigs:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV22targetOnDemandCapacity08instanceC4Type20launchSpecifications4name0e4SpotH00iJ7ConfigsADs5Int32VSg_AB0bcJ0OAB0bc12ProvisioningL0VSgSSSgAMSayAB0bjD0VGSgtcfc">init(targetOnDemandCapacity:instanceFleetType:launchSpecifications:name:targetSpotCapacity:instanceTypeConfigs:)</a>
+                    <a name="/s:3EMRAAV19InstanceFleetConfigV08instanceC4Type0eF7Configs20launchSpecifications4name22targetOnDemandCapacity0k4SpotN0AdB0bcF0O_SayAB0bfD0VGSgAB0bc12ProvisioningI0VSgSSSgs5Int32VSgAWtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(instanceFleetType:instanceTypeConfigs:launchSpecifications:name:targetOnDemandCapacity:targetSpotCapacity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceFleetConfigV08instanceC4Type0eF7Configs20launchSpecifications4name22targetOnDemandCapacity0k4SpotN0AdB0bcF0O_SayAB0bfD0VGSgAB0bc12ProvisioningI0VSgSSSgs5Int32VSgAWtcfc">init(instanceFleetType:instanceTypeConfigs:launchSpecifications:name:targetOnDemandCapacity:targetSpotCapacity:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">targetOnDemandCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceFleetType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceFleetType.html">InstanceFleetType</a></span><span class="p">,</span> <span class="nv">launchSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceFleetProvisioningSpecifications.html">InstanceFleetProvisioningSpecifications</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetSpotCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceTypeConfigs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceTypeConfig.html">InstanceTypeConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">instanceFleetType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceFleetType.html">InstanceFleetType</a></span><span class="p">,</span> <span class="nv">instanceTypeConfigs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceTypeConfig.html">InstanceTypeConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceFleetProvisioningSpecifications.html">InstanceFleetProvisioningSpecifications</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetOnDemandCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetSpotCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

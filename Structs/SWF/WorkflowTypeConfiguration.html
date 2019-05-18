@@ -14,7 +14,7 @@
     <a title="WorkflowTypeConfiguration Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/defaultTaskList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp">defaultTaskList</a>
+                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultChildPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp">defaultChildPolicy</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The default task list, specified when registering the workflow type, for decisions tasks scheduled for workflow executions of this type. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision.</p>
+                        <p>The default policy to use for the child workflow executions when a workflow execution of this type is terminated, by calling the TerminateWorkflowExecution action explicitly or due to an expired timeout. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision. The supported child policies are:    TERMINATE – The child executions are terminated.    REQUEST_CANCEL – A request to cancel is attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.    ABANDON – No action is taken. The child executions continue to run.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTaskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultChildPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/defaultTaskStartToCloseTimeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp">defaultTaskStartToCloseTimeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The default maximum duration, specified when registering the workflow type, that a decision task for executions of this workflow type might take before returning completion or failure. If the task doesn&#39;tdo close in the specified time then the task is automatically timed out and rescheduled. If the decider eventually reports a completion or failure, it is ignored. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTaskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3SWFAAV25WorkflowTypeConfigurationV17defaultLambdaRoleSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/defaultLambdaRole" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV17defaultLambdaRoleSSSgvp">defaultLambdaRole</a>
@@ -685,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/defaultChildPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp">defaultChildPolicy</a>
+                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultTaskList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp">defaultTaskList</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The default policy to use for the child workflow executions when a workflow execution of this type is terminated, by calling the TerminateWorkflowExecution action explicitly or due to an expired timeout. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision. The supported child policies are:    TERMINATE – The child executions are terminated.    REQUEST_CANCEL – A request to cancel is attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.    ABANDON – No action is taken. The child executions continue to run.</p>
+                        <p>The default task list, specified when registering the workflow type, for decisions tasks scheduled for workflow executions of this type. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultChildPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTaskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskList0E28ExecutionStartToCloseTimeout0efijkL00E10LambdaRole0E11ChildPolicy0eF8PriorityAdB0fG0VSg_SSSgA2nB0oP0OSgANtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(defaultTaskList:defaultExecutionStartToCloseTimeout:defaultTaskStartToCloseTimeout:defaultLambdaRole:defaultChildPolicy:defaultTaskPriority:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskList0E28ExecutionStartToCloseTimeout0efijkL00E10LambdaRole0E11ChildPolicy0eF8PriorityAdB0fG0VSg_SSSgA2nB0oP0OSgANtcfc">init(defaultTaskList:defaultExecutionStartToCloseTimeout:defaultTaskStartToCloseTimeout:defaultLambdaRole:defaultChildPolicy:defaultTaskPriority:)</a>
+                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultTaskStartToCloseTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp">defaultTaskStartToCloseTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default maximum duration, specified when registering the workflow type, that a decision task for executions of this workflow type might take before returning completion or failure. If the task doesn&#39;tdo close in the specified time then the task is automatically timed out and rescheduled. If the decider eventually reports a completion or failure, it is ignored. This default can be overridden when starting a workflow execution using the StartWorkflowExecution action or the StartChildWorkflowExecution Decision. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTaskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicy0E28ExecutionStartToCloseTimeout0E10LambdaRole0E8TaskList0eO8Priority0eoijkL0AdB0fG0OSg_SSSgAnB0oP0VSgA2Ntcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(defaultChildPolicy:defaultExecutionStartToCloseTimeout:defaultLambdaRole:defaultTaskList:defaultTaskPriority:defaultTaskStartToCloseTimeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicy0E28ExecutionStartToCloseTimeout0E10LambdaRole0E8TaskList0eO8Priority0eoijkL0AdB0fG0OSg_SSSgAnB0oP0VSgA2Ntcfc">init(defaultChildPolicy:defaultExecutionStartToCloseTimeout:defaultLambdaRole:defaultTaskList:defaultTaskPriority:defaultTaskStartToCloseTimeout:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp">defaultTaskList</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV35defaultExecutionStartToCloseTimeoutSSSgvp">defaultExecutionStartToCloseTimeout</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp">defaultTaskStartToCloseTimeout</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV17defaultLambdaRoleSSSgvp">defaultLambdaRole</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp">defaultChildPolicy</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV19defaultTaskPrioritySSSgvp">defaultTaskPriority</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV18defaultChildPolicyAB0fG0OSgvp">defaultChildPolicy</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV35defaultExecutionStartToCloseTimeoutSSSgvp">defaultExecutionStartToCloseTimeout</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV17defaultLambdaRoleSSSgvp">defaultLambdaRole</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV15defaultTaskListAB0fG0VSgvp">defaultTaskList</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV19defaultTaskPrioritySSSgvp">defaultTaskPriority</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SWF/WorkflowTypeConfiguration.html#/s:3SWFAAV25WorkflowTypeConfigurationV30defaultTaskStartToCloseTimeoutSSSgvp">defaultTaskStartToCloseTimeout</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

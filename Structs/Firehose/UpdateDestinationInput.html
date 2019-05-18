@@ -14,7 +14,7 @@
     <a title="UpdateDestinationInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV02s3cB0AB02S3cB0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/s3DestinationUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV02s3cB0AB02S3cB0VSgvp">s3DestinationUpdate</a>
+                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/currentDeliveryStreamVersionId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionIdSSvp">currentDeliveryStreamVersionId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>[Deprecated] Describes an update for a destination in Amazon S3.</p>
+                        <p>Obtain this value from the VersionId result of DeliveryStreamDescription. This value is required, and helps the service perform conditional operations. For example, if there is an interleaving update and this value is null, then the update destination fails. After the update is successful, the VersionId value is updated. The service then performs a merge of the old configuration with the new configuration.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationUpdate.html">S3DestinationUpdate</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">currentDeliveryStreamVersionId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV010extendedS3cB0AB08ExtendedfcB0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/extendedS3DestinationUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV010extendedS3cB0AB08ExtendedfcB0VSgvp">extendedS3DestinationUpdate</a>
+                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV13destinationIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/destinationId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV13destinationIdSSvp">destinationId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Describes an update for a destination in Amazon S3.</p>
+                        <p>The ID of the destination.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extendedS3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ExtendedS3DestinationUpdate.html">ExtendedS3DestinationUpdate</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/currentDeliveryStreamVersionId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionIdSSvp">currentDeliveryStreamVersionId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Obtain this value from the VersionId result of DeliveryStreamDescription. This value is required, and helps the service perform conditional operations. For example, if there is an interleaving update and this value is null, then the update destination fails. After the update is successful, the VersionId value is updated. The service then performs a merge of the old configuration with the new configuration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">currentDeliveryStreamVersionId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">destinationId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,6 +685,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV010extendedS3cB0AB08ExtendedfcB0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/extendedS3DestinationUpdate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV010extendedS3cB0AB08ExtendedfcB0VSgvp">extendedS3DestinationUpdate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes an update for a destination in Amazon S3.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extendedS3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ExtendedS3DestinationUpdate.html">ExtendedS3DestinationUpdate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8FirehoseAAV22UpdateDestinationInputV08redshiftcB0AB08RedshiftcB0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/redshiftDestinationUpdate" class="dashAnchor"></a>
                     <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV08redshiftcB0AB08RedshiftcB0VSgvp">redshiftDestinationUpdate</a>
@@ -739,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV13destinationIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/destinationId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV13destinationIdSSvp">destinationId</a>
+                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV02s3cB0AB02S3cB0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/s3DestinationUpdate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV02s3cB0AB02S3cB0VSgvp">s3DestinationUpdate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the destination.</p>
+                        <p>[Deprecated] Describes an update for a destination in Amazon S3.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">destinationId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationUpdate.html">S3DestinationUpdate</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV02s3cB018deliveryStreamName010extendedS3cB0015currentDeliveryG9VersionId013elasticsearchcB008redshiftcB0011destinationN006splunkcB0AdB0jcB0VSg_SSAB08ExtendedjcB0VSgSSAB013ElasticsearchcB0VSgAB08RedshiftcB0VSgSSAB06SplunkcB0VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(s3DestinationUpdate:deliveryStreamName:extendedS3DestinationUpdate:currentDeliveryStreamVersionId:elasticsearchDestinationUpdate:redshiftDestinationUpdate:destinationId:splunkDestinationUpdate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV02s3cB018deliveryStreamName010extendedS3cB0015currentDeliveryG9VersionId013elasticsearchcB008redshiftcB0011destinationN006splunkcB0AdB0jcB0VSg_SSAB08ExtendedjcB0VSgSSAB013ElasticsearchcB0VSgAB08RedshiftcB0VSgSSAB06SplunkcB0VSgtcfc">init(s3DestinationUpdate:deliveryStreamName:extendedS3DestinationUpdate:currentDeliveryStreamVersionId:elasticsearchDestinationUpdate:redshiftDestinationUpdate:destinationId:splunkDestinationUpdate:)</a>
+                    <a name="/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionId08deliveryG4Name011destinationI0013elasticsearchcB0010extendedS3cB008redshiftcB002s3cB006splunkcB0ADSS_S2SAB013ElasticsearchcB0VSgAB08ExtendedocB0VSgAB08RedshiftcB0VSgAB0ocB0VSgAB06SplunkcB0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(currentDeliveryStreamVersionId:deliveryStreamName:destinationId:elasticsearchDestinationUpdate:extendedS3DestinationUpdate:redshiftDestinationUpdate:s3DestinationUpdate:splunkDestinationUpdate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV22UpdateDestinationInputV30currentDeliveryStreamVersionId08deliveryG4Name011destinationI0013elasticsearchcB0010extendedS3cB008redshiftcB002s3cB006splunkcB0ADSS_S2SAB013ElasticsearchcB0VSgAB08ExtendedocB0VSgAB08RedshiftcB0VSgAB0ocB0VSgAB06SplunkcB0VSgtcfc">init(currentDeliveryStreamVersionId:deliveryStreamName:destinationId:elasticsearchDestinationUpdate:extendedS3DestinationUpdate:redshiftDestinationUpdate:s3DestinationUpdate:splunkDestinationUpdate:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">s3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationUpdate.html">S3DestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliveryStreamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">extendedS3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ExtendedS3DestinationUpdate.html">ExtendedS3DestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">currentDeliveryStreamVersionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">elasticsearchDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchDestinationUpdate.html">ElasticsearchDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">redshiftDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/RedshiftDestinationUpdate.html">RedshiftDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">destinationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">splunkDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/SplunkDestinationUpdate.html">SplunkDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">currentDeliveryStreamVersionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">deliveryStreamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">destinationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">elasticsearchDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchDestinationUpdate.html">ElasticsearchDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extendedS3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ExtendedS3DestinationUpdate.html">ExtendedS3DestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">redshiftDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/RedshiftDestinationUpdate.html">RedshiftDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3DestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationUpdate.html">S3DestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">splunkDestinationUpdate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/SplunkDestinationUpdate.html">SplunkDestinationUpdate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

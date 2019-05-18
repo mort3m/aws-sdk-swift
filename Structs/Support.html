@@ -14,7 +14,7 @@
     <a title="Support Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SupportAAV19addAttachmentsToSetyAB03AddcdE8ResponseVAB0fcdE7RequestVKF"></a>
+                    <a name="/s:7SupportAAV19addAttachmentsToSety3NIO15EventLoopFutureCyAB03AddcdE8ResponseVGAB0jcdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/addAttachmentsToSet(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV19addAttachmentsToSetyAB03AddcdE8ResponseVAB0fcdE7RequestVKF">addAttachmentsToSet(_:)</a>
+                    <a class="token" href="#/s:7SupportAAV19addAttachmentsToSety3NIO15EventLoopFutureCyAB03AddcdE8ResponseVGAB0jcdE7RequestVKF">addAttachmentsToSet(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -594,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addAttachmentsToSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/AddAttachmentsToSetRequest.html">AddAttachmentsToSetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/AddAttachmentsToSetResponse.html">AddAttachmentsToSetResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addAttachmentsToSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/AddAttachmentsToSetRequest.html">AddAttachmentsToSetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/AddAttachmentsToSetResponse.html">AddAttachmentsToSetResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -604,333 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SupportAAV28describeTrustedAdvisorChecksyAB08DescribecdE8ResponseVAB0fcdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorChecks(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV28describeTrustedAdvisorChecksyAB08DescribecdE8ResponseVAB0fcdE7RequestVKF">describeTrustedAdvisorChecks(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns information about all available Trusted Advisor checks, including name, ID, category, description, and metadata. You must specify a language code; English (<q>en</q>) and Japanese (<q>ja</q>) are currently supported. The response contains a TrustedAdvisorCheckDescription for each check.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorChecks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorChecksRequest.html">DescribeTrustedAdvisorChecksRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorChecksResponse.html">DescribeTrustedAdvisorChecksResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV26refreshTrustedAdvisorCheckyAB07RefreshcdE8ResponseVAB0fcdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/refreshTrustedAdvisorCheck(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV26refreshTrustedAdvisorCheckyAB07RefreshcdE8ResponseVAB0fcdE7RequestVKF">refreshTrustedAdvisorCheck(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Requests a refresh of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks.  Some checks are refreshed automatically, and they cannot be refreshed by using this operation. Use of the RefreshTrustedAdvisorCheck operation for these checks causes an InvalidParameterValue error.  The response contains a TrustedAdvisorCheckRefreshStatus object, which contains these fields:    status. The refresh status of the check: <q>none</q>, <q>enqueued</q>, <q>processing</q>, <q>success</q>, or <q>abandoned</q>.    millisUntilNextRefreshable. The amount of time, in milliseconds, until the check is eligible for refresh.    checkId. The unique identifier for the check.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshTrustedAdvisorCheck</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/RefreshTrustedAdvisorCheckRequest.html">RefreshTrustedAdvisorCheckRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/RefreshTrustedAdvisorCheckResponse.html">RefreshTrustedAdvisorCheckResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV13describeCasesyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeCases(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV13describeCasesyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeCases(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a list of cases that you specify by passing one or more case IDs. In addition, you can filter the cases by date by setting values for the afterTime and beforeTime request parameters. You can set values for the includeResolvedCases and includeCommunications request parameters to control how much information is returned.  Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an error. The response returns the following in JSON format:   One or more CaseDetails data types.    One or more nextToken values, which specify where to paginate the returned records represented by the CaseDetails objects.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCases</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeCasesRequest.html">DescribeCasesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeCasesResponse.html">DescribeCasesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV11resolveCaseyAB07ResolveC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/resolveCase(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV11resolveCaseyAB07ResolveC8ResponseVAB0dC7RequestVKF">resolveCase(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Takes a caseId and returns the initial state of the case along with the state of the case after the call to ResolveCase completed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/ResolveCaseRequest.html">ResolveCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/ResolveCaseResponse.html">ResolveCaseResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV22describeSeverityLevelsyAB08DescribecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeSeverityLevels(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV22describeSeverityLevelsyAB08DescribecD8ResponseVAB0ecD7RequestVKF">describeSeverityLevels(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the list of severity levels that you can assign to an AWS Support case. The severity level for a case is also a field in the CaseDetails data type included in any CreateCase request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeSeverityLevels</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeSeverityLevelsRequest.html">DescribeSeverityLevelsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeSeverityLevelsResponse.html">DescribeSeverityLevelsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV33describeTrustedAdvisorCheckResultyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckResult(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV33describeTrustedAdvisorCheckResultyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF">describeTrustedAdvisorCheckResult(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the results of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks. The response contains a TrustedAdvisorCheckResult object, which contains these three objects:    TrustedAdvisorCategorySpecificSummary     TrustedAdvisorResourceDetail     TrustedAdvisorResourcesSummary    In addition, the response contains these fields:    status. The alert status of the check: <q>ok</q> (green), <q>warning</q> (yellow), <q>error</q> (red), or <q>not_available</q>.    timestamp. The time of the last refresh of the check.    checkId. The unique identifier for the check.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckResult</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckResultRequest.html">DescribeTrustedAdvisorCheckResultRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckResultResponse.html">DescribeTrustedAdvisorCheckResultResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV18describeAttachmentyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeAttachment(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV18describeAttachmentyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeAttachment(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the attachment that has the specified ID. Attachment IDs are generated by the case management system when you add an attachment to a case or case communication. Attachment IDs are returned in the AttachmentDetails objects that are returned by the DescribeCommunications operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeAttachment</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeAttachmentRequest.html">DescribeAttachmentRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeAttachmentResponse.html">DescribeAttachmentResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV10createCaseyAB06CreateC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createCase(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV10createCaseyAB06CreateC8ResponseVAB0dC7RequestVKF">createCase(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a new case in the AWS Support Center. This operation is modeled on the behavior of the AWS Support Center Create Case page. Its parameters require you to specify the following information:     issueType. The type of issue for the case. You can specify either <q>customer-service</q> or <q>technical.</q> If you do not indicate a value, the default is <q>technical.</q>     serviceCode. The code for an AWS service. You obtain the serviceCode by calling DescribeServices.     categoryCode. The category for the service defined for the serviceCode value. You also obtain the category code for a service by calling DescribeServices. Each AWS service defines its own set of category codes.     severityCode. A value that indicates the urgency of the case, which in turn determines the response time according to your service level agreement with AWS Support. You obtain the SeverityCode by calling DescribeSeverityLevels.    subject. The Subject field on the AWS Support Center Create Case page.    communicationBody. The Description field on the AWS Support Center Create Case page.    attachmentSetId. The ID of a set of attachments that has been created by using AddAttachmentsToSet.    language. The human language in which AWS Support handles the case. English and Japanese are currently supported.    ccEmailAddresses. The AWS Support Center CC field on the Create Case page. You can list email addresses to be copied on any correspondence about the case. The account that opens the case is already identified by passing the AWS Credentials in the HTTP POST method or in a method or function call from one of the programming languages supported by an AWS SDK.     To add additional communication or attachments to an existing case, use AddCommunicationToCase.  A successful CreateCase request returns an AWS Support case number. Case numbers are used by the DescribeCases operation to retrieve existing AWS Support cases.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/CreateCaseRequest.html">CreateCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/CreateCaseResponse.html">CreateCaseResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV16describeServicesyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeServices(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV16describeServicesyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeServices(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the current list of AWS services and a list of service categories that applies to each one. You then use service names and categories in your CreateCase requests. Each AWS service has its own set of categories. The service codes and category codes correspond to the values that are displayed in the Service and Category drop-down lists on the AWS Support Center Create Case page. The values in those fields, however, do not necessarily match the service codes and categories returned by the DescribeServices request. Always use the service codes and categories obtained programmatically. This practice ensures that you always have the most recent set of service and category codes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeServices</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeServicesRequest.html">DescribeServicesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeServicesResponse.html">DescribeServicesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV22describeCommunicationsyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeCommunications(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV22describeCommunicationsyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeCommunications(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns communications (and attachments) for one or more support cases. You can use the afterTime and beforeTime parameters to filter by date. You can use the caseId parameter to restrict the results to a particular case. Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an error. You can use the maxResults and nextToken parameters to control the pagination of the result set. Set maxResults to the number of cases you want displayed on each page, and use nextToken to specify the resumption of pagination.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCommunications</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeCommunicationsRequest.html">DescribeCommunicationsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeCommunicationsResponse.html">DescribeCommunicationsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV42describeTrustedAdvisorCheckRefreshStatusesyAB08DescribecdefG8ResponseVAB0hcdefG7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckRefreshStatuses(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV42describeTrustedAdvisorCheckRefreshStatusesyAB08DescribecdefG8ResponseVAB0hcdefG7RequestVKF">describeTrustedAdvisorCheckRefreshStatuses(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the refresh status of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks.  Some checks are refreshed automatically, and their refresh statuses cannot be retrieved by using this operation. Use of the DescribeTrustedAdvisorCheckRefreshStatuses operation for these checks causes an InvalidParameterValue error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckRefreshStatuses</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesRequest.html">DescribeTrustedAdvisorCheckRefreshStatusesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesResponse.html">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV36describeTrustedAdvisorCheckSummariesyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckSummaries(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV36describeTrustedAdvisorCheckSummariesyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF">describeTrustedAdvisorCheckSummaries(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the summaries of the results of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks. The response contains an array of TrustedAdvisorCheckSummary objects.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckSummaries</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesRequest.html">DescribeTrustedAdvisorCheckSummariesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesResponse.html">DescribeTrustedAdvisorCheckSummariesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV22addCommunicationToCaseyAB03AddcdE8ResponseVAB0fcdE7RequestVKF"></a>
+                    <a name="/s:7SupportAAV22addCommunicationToCasey3NIO15EventLoopFutureCyAB03AddcdE8ResponseVGAB0jcdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/addCommunicationToCase(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV22addCommunicationToCaseyAB03AddcdE8ResponseVAB0fcdE7RequestVKF">addCommunicationToCase(_:)</a>
+                    <a class="token" href="#/s:7SupportAAV22addCommunicationToCasey3NIO15EventLoopFutureCyAB03AddcdE8ResponseVGAB0jcdE7RequestVKF">addCommunicationToCase(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +621,331 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCommunicationToCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/AddCommunicationToCaseRequest.html">AddCommunicationToCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Support/AddCommunicationToCaseResponse.html">AddCommunicationToCaseResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCommunicationToCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/AddCommunicationToCaseRequest.html">AddCommunicationToCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/AddCommunicationToCaseResponse.html">AddCommunicationToCaseResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV10createCasey3NIO15EventLoopFutureCyAB06CreateC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createCase(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV10createCasey3NIO15EventLoopFutureCyAB06CreateC8ResponseVGAB0hC7RequestVKF">createCase(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new case in the AWS Support Center. This operation is modeled on the behavior of the AWS Support Center Create Case page. Its parameters require you to specify the following information:     issueType. The type of issue for the case. You can specify either <q>customer-service</q> or <q>technical.</q> If you do not indicate a value, the default is <q>technical.</q>     serviceCode. The code for an AWS service. You obtain the serviceCode by calling DescribeServices.     categoryCode. The category for the service defined for the serviceCode value. You also obtain the category code for a service by calling DescribeServices. Each AWS service defines its own set of category codes.     severityCode. A value that indicates the urgency of the case, which in turn determines the response time according to your service level agreement with AWS Support. You obtain the SeverityCode by calling DescribeSeverityLevels.    subject. The Subject field on the AWS Support Center Create Case page.    communicationBody. The Description field on the AWS Support Center Create Case page.    attachmentSetId. The ID of a set of attachments that has been created by using AddAttachmentsToSet.    language. The human language in which AWS Support handles the case. English and Japanese are currently supported.    ccEmailAddresses. The AWS Support Center CC field on the Create Case page. You can list email addresses to be copied on any correspondence about the case. The account that opens the case is already identified by passing the AWS Credentials in the HTTP POST method or in a method or function call from one of the programming languages supported by an AWS SDK.     To add additional communication or attachments to an existing case, use AddCommunicationToCase.  A successful CreateCase request returns an AWS Support case number. Case numbers are used by the DescribeCases operation to retrieve existing AWS Support cases.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/CreateCaseRequest.html">CreateCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/CreateCaseResponse.html">CreateCaseResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV18describeAttachmenty3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeAttachment(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV18describeAttachmenty3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeAttachment(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the attachment that has the specified ID. Attachment IDs are generated by the case management system when you add an attachment to a case or case communication. Attachment IDs are returned in the AttachmentDetails objects that are returned by the DescribeCommunications operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeAttachment</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeAttachmentRequest.html">DescribeAttachmentRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeAttachmentResponse.html">DescribeAttachmentResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV13describeCasesy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeCases(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV13describeCasesy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeCases(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of cases that you specify by passing one or more case IDs. In addition, you can filter the cases by date by setting values for the afterTime and beforeTime request parameters. You can set values for the includeResolvedCases and includeCommunications request parameters to control how much information is returned.  Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an error. The response returns the following in JSON format:   One or more CaseDetails data types.    One or more nextToken values, which specify where to paginate the returned records represented by the CaseDetails objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCases</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeCasesRequest.html">DescribeCasesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeCasesResponse.html">DescribeCasesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV22describeCommunicationsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeCommunications(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV22describeCommunicationsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeCommunications(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns communications (and attachments) for one or more support cases. You can use the afterTime and beforeTime parameters to filter by date. You can use the caseId parameter to restrict the results to a particular case. Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an error. You can use the maxResults and nextToken parameters to control the pagination of the result set. Set maxResults to the number of cases you want displayed on each page, and use nextToken to specify the resumption of pagination.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCommunications</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeCommunicationsRequest.html">DescribeCommunicationsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeCommunicationsResponse.html">DescribeCommunicationsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV16describeServicesy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeServices(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV16describeServicesy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeServices(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current list of AWS services and a list of service categories that applies to each one. You then use service names and categories in your CreateCase requests. Each AWS service has its own set of categories. The service codes and category codes correspond to the values that are displayed in the Service and Category drop-down lists on the AWS Support Center Create Case page. The values in those fields, however, do not necessarily match the service codes and categories returned by the DescribeServices request. Always use the service codes and categories obtained programmatically. This practice ensures that you always have the most recent set of service and category codes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeServices</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeServicesRequest.html">DescribeServicesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeServicesResponse.html">DescribeServicesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV22describeSeverityLevelsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeSeverityLevels(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV22describeSeverityLevelsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF">describeSeverityLevels(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the list of severity levels that you can assign to an AWS Support case. The severity level for a case is also a field in the CaseDetails data type included in any CreateCase request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeSeverityLevels</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeSeverityLevelsRequest.html">DescribeSeverityLevelsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeSeverityLevelsResponse.html">DescribeSeverityLevelsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV42describeTrustedAdvisorCheckRefreshStatusesy3NIO15EventLoopFutureCyAB08DescribecdefG8ResponseVGAB0lcdefG7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckRefreshStatuses(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV42describeTrustedAdvisorCheckRefreshStatusesy3NIO15EventLoopFutureCyAB08DescribecdefG8ResponseVGAB0lcdefG7RequestVKF">describeTrustedAdvisorCheckRefreshStatuses(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the refresh status of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks.  Some checks are refreshed automatically, and their refresh statuses cannot be retrieved by using this operation. Use of the DescribeTrustedAdvisorCheckRefreshStatuses operation for these checks causes an InvalidParameterValue error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckRefreshStatuses</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesRequest.html">DescribeTrustedAdvisorCheckRefreshStatusesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesResponse.html">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV33describeTrustedAdvisorCheckResulty3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckResult(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV33describeTrustedAdvisorCheckResulty3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF">describeTrustedAdvisorCheckResult(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the results of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks. The response contains a TrustedAdvisorCheckResult object, which contains these three objects:    TrustedAdvisorCategorySpecificSummary     TrustedAdvisorResourceDetail     TrustedAdvisorResourcesSummary    In addition, the response contains these fields:    status. The alert status of the check: <q>ok</q> (green), <q>warning</q> (yellow), <q>error</q> (red), or <q>not_available</q>.    timestamp. The time of the last refresh of the check.    checkId. The unique identifier for the check.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckResult</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckResultRequest.html">DescribeTrustedAdvisorCheckResultRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckResultResponse.html">DescribeTrustedAdvisorCheckResultResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV36describeTrustedAdvisorCheckSummariesy3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorCheckSummaries(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV36describeTrustedAdvisorCheckSummariesy3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF">describeTrustedAdvisorCheckSummaries(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the summaries of the results of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks. The response contains an array of TrustedAdvisorCheckSummary objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorCheckSummaries</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesRequest.html">DescribeTrustedAdvisorCheckSummariesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesResponse.html">DescribeTrustedAdvisorCheckSummariesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV28describeTrustedAdvisorChecksy3NIO15EventLoopFutureCyAB08DescribecdE8ResponseVGAB0jcdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTrustedAdvisorChecks(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV28describeTrustedAdvisorChecksy3NIO15EventLoopFutureCyAB08DescribecdE8ResponseVGAB0jcdE7RequestVKF">describeTrustedAdvisorChecks(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns information about all available Trusted Advisor checks, including name, ID, category, description, and metadata. You must specify a language code; English (<q>en</q>) and Japanese (<q>ja</q>) are currently supported. The response contains a TrustedAdvisorCheckDescription for each check.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrustedAdvisorChecks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorChecksRequest.html">DescribeTrustedAdvisorChecksRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/DescribeTrustedAdvisorChecksResponse.html">DescribeTrustedAdvisorChecksResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV26refreshTrustedAdvisorChecky3NIO15EventLoopFutureCyAB07RefreshcdE8ResponseVGAB0jcdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/refreshTrustedAdvisorCheck(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV26refreshTrustedAdvisorChecky3NIO15EventLoopFutureCyAB07RefreshcdE8ResponseVGAB0jcdE7RequestVKF">refreshTrustedAdvisorCheck(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests a refresh of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling DescribeTrustedAdvisorChecks.  Some checks are refreshed automatically, and they cannot be refreshed by using this operation. Use of the RefreshTrustedAdvisorCheck operation for these checks causes an InvalidParameterValue error.  The response contains a TrustedAdvisorCheckRefreshStatus object, which contains these fields:    status. The refresh status of the check: <q>none</q>, <q>enqueued</q>, <q>processing</q>, <q>success</q>, or <q>abandoned</q>.    millisUntilNextRefreshable. The amount of time, in milliseconds, until the check is eligible for refresh.    checkId. The unique identifier for the check.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">refreshTrustedAdvisorCheck</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/RefreshTrustedAdvisorCheckRequest.html">RefreshTrustedAdvisorCheckRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/RefreshTrustedAdvisorCheckResponse.html">RefreshTrustedAdvisorCheckResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV11resolveCasey3NIO15EventLoopFutureCyAB07ResolveC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/resolveCase(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV11resolveCasey3NIO15EventLoopFutureCyAB07ResolveC8ResponseVGAB0hC7RequestVKF">resolveCase(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Takes a caseId and returns the initial state of the case along with the state of the case after the call to ResolveCase completed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCase</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Support/ResolveCaseRequest.html">ResolveCaseRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Support/ResolveCaseResponse.html">ResolveCaseResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -956,902 +956,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV24DescribeServicesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeServicesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV24DescribeServicesResponseV">DescribeServicesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeServicesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServicesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV30TrustedAdvisorResourcesSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorResourcesSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV30TrustedAdvisorResourcesSummaryV">TrustedAdvisorResourcesSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorResourcesSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorResourcesSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV18CreateCaseResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateCaseResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV18CreateCaseResponseV">CreateCaseResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/CreateCaseResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV28TrustedAdvisorResourceDetailV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorResourceDetail" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV28TrustedAdvisorResourceDetailV">TrustedAdvisorResourceDetail</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorResourceDetail.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorResourceDetail</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV41DescribeTrustedAdvisorCheckResultResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckResultResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV41DescribeTrustedAdvisorCheckResultResponseV">DescribeTrustedAdvisorCheckResultResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckResultResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckResultResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV33RefreshTrustedAdvisorCheckRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RefreshTrustedAdvisorCheckRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV33RefreshTrustedAdvisorCheckRequestV">RefreshTrustedAdvisorCheckRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/RefreshTrustedAdvisorCheckRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RefreshTrustedAdvisorCheckRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV17CreateCaseRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateCaseRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV17CreateCaseRequestV">CreateCaseRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/CreateCaseRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV17AttachmentDetailsV"></a>
-                    <a name="//apple_ref/swift/Struct/AttachmentDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV17AttachmentDetailsV">AttachmentDetails</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/AttachmentDetails.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AttachmentDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV49DescribeTrustedAdvisorCheckRefreshStatusesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckRefreshStatusesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV49DescribeTrustedAdvisorCheckRefreshStatusesRequestV">DescribeTrustedAdvisorCheckRefreshStatusesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckRefreshStatusesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV13CommunicationV"></a>
-                    <a name="//apple_ref/swift/Struct/Communication" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV13CommunicationV">Communication</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/Communication.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Communication</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV26TrustedAdvisorCheckSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV26TrustedAdvisorCheckSummaryV">TrustedAdvisorCheckSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorCheckSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV40DescribeTrustedAdvisorCheckResultRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckResultRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV40DescribeTrustedAdvisorCheckResultRequestV">DescribeTrustedAdvisorCheckResultRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckResultRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckResultRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV50DescribeTrustedAdvisorCheckRefreshStatusesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckRefreshStatusesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV50DescribeTrustedAdvisorCheckRefreshStatusesResponseV">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckRefreshStatusesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV20DescribeCasesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCasesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV20DescribeCasesRequestV">DescribeCasesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeCasesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCasesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV30TrustedAdvisorCheckDescriptionV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV30TrustedAdvisorCheckDescriptionV">TrustedAdvisorCheckDescription</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorCheckDescription.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV13SeverityLevelV"></a>
-                    <a name="//apple_ref/swift/Struct/SeverityLevel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV13SeverityLevelV">SeverityLevel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/SeverityLevel.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SeverityLevel</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV25TrustedAdvisorCheckResultV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV25TrustedAdvisorCheckResultV">TrustedAdvisorCheckResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorCheckResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV18ResolveCaseRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ResolveCaseRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV18ResolveCaseRequestV">ResolveCaseRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/ResolveCaseRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV29DescribeCommunicationsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCommunicationsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV29DescribeCommunicationsRequestV">DescribeCommunicationsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeCommunicationsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCommunicationsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV36DescribeTrustedAdvisorChecksResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorChecksResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV36DescribeTrustedAdvisorChecksResponseV">DescribeTrustedAdvisorChecksResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorChecksResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorChecksResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV44DescribeTrustedAdvisorCheckSummariesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckSummariesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV44DescribeTrustedAdvisorCheckSummariesResponseV">DescribeTrustedAdvisorCheckSummariesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckSummariesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV25DescribeAttachmentRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeAttachmentRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV25DescribeAttachmentRequestV">DescribeAttachmentRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeAttachmentRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAttachmentRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV43DescribeTrustedAdvisorCheckSummariesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckSummariesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV43DescribeTrustedAdvisorCheckSummariesRequestV">DescribeTrustedAdvisorCheckSummariesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckSummariesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV37TrustedAdvisorCategorySpecificSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCategorySpecificSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV37TrustedAdvisorCategorySpecificSummaryV">TrustedAdvisorCategorySpecificSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorCategorySpecificSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCategorySpecificSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV29AddCommunicationToCaseRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/AddCommunicationToCaseRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV29AddCommunicationToCaseRequestV">AddCommunicationToCaseRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/AddCommunicationToCaseRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddCommunicationToCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV10AttachmentV"></a>
-                    <a name="//apple_ref/swift/Struct/Attachment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV10AttachmentV">Attachment</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/Attachment.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Attachment</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV8CategoryV"></a>
-                    <a name="//apple_ref/swift/Struct/Category" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV8CategoryV">Category</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/Category.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Category</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV34RefreshTrustedAdvisorCheckResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/RefreshTrustedAdvisorCheckResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV34RefreshTrustedAdvisorCheckResponseV">RefreshTrustedAdvisorCheckResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/RefreshTrustedAdvisorCheckResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RefreshTrustedAdvisorCheckResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV24RecentCaseCommunicationsV"></a>
-                    <a name="//apple_ref/swift/Struct/RecentCaseCommunications" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV24RecentCaseCommunicationsV">RecentCaseCommunications</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/RecentCaseCommunications.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RecentCaseCommunications</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV30DescribeCommunicationsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCommunicationsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV30DescribeCommunicationsResponseV">DescribeCommunicationsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeCommunicationsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCommunicationsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV29DescribeSeverityLevelsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeSeverityLevelsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV29DescribeSeverityLevelsRequestV">DescribeSeverityLevelsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeSeverityLevelsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeSeverityLevelsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV23DescribeServicesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeServicesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV23DescribeServicesRequestV">DescribeServicesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeServicesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServicesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1874,174 +978,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddAttachmentsToSetRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV30AddCommunicationToCaseResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/AddCommunicationToCaseResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV30AddCommunicationToCaseResponseV">AddCommunicationToCaseResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/AddCommunicationToCaseResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddCommunicationToCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV19ResolveCaseResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ResolveCaseResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV19ResolveCaseResponseV">ResolveCaseResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/ResolveCaseResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV35TrustedAdvisorCostOptimizingSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCostOptimizingSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV35TrustedAdvisorCostOptimizingSummaryV">TrustedAdvisorCostOptimizingSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/TrustedAdvisorCostOptimizingSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCostOptimizingSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV26DescribeAttachmentResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeAttachmentResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV26DescribeAttachmentResponseV">DescribeAttachmentResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeAttachmentResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAttachmentResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV21DescribeCasesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCasesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV21DescribeCasesResponseV">DescribeCasesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/DescribeCasesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCasesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7SupportAAV7ServiceV"></a>
-                    <a name="//apple_ref/swift/Struct/Service" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV7ServiceV">Service</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Support/Service.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Service</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2079,9 +1015,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SupportAAV35DescribeTrustedAdvisorChecksRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorChecksRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV35DescribeTrustedAdvisorChecksRequestV">DescribeTrustedAdvisorChecksRequest</a>
+                    <a name="/s:7SupportAAV29AddCommunicationToCaseRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AddCommunicationToCaseRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV29AddCommunicationToCaseRequestV">AddCommunicationToCaseRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2091,13 +1027,97 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/Support/DescribeTrustedAdvisorChecksRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/Support/AddCommunicationToCaseRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorChecksRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddCommunicationToCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV30AddCommunicationToCaseResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AddCommunicationToCaseResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV30AddCommunicationToCaseResponseV">AddCommunicationToCaseResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/AddCommunicationToCaseResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddCommunicationToCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV10AttachmentV"></a>
+                    <a name="//apple_ref/swift/Struct/Attachment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV10AttachmentV">Attachment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/Attachment.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Attachment</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV17AttachmentDetailsV"></a>
+                    <a name="//apple_ref/swift/Struct/AttachmentDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV17AttachmentDetailsV">AttachmentDetails</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/AttachmentDetails.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AttachmentDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2135,9 +1155,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SupportAAV32TrustedAdvisorCheckRefreshStatusV"></a>
-                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckRefreshStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SupportAAV32TrustedAdvisorCheckRefreshStatusV">TrustedAdvisorCheckRefreshStatus</a>
+                    <a name="/s:7SupportAAV8CategoryV"></a>
+                    <a name="//apple_ref/swift/Struct/Category" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV8CategoryV">Category</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2147,13 +1167,349 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/Support/TrustedAdvisorCheckRefreshStatus.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/Support/Category.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckRefreshStatus</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Category</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV13CommunicationV"></a>
+                    <a name="//apple_ref/swift/Struct/Communication" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV13CommunicationV">Communication</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/Communication.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Communication</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV17CreateCaseRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateCaseRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV17CreateCaseRequestV">CreateCaseRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/CreateCaseRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV18CreateCaseResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateCaseResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV18CreateCaseResponseV">CreateCaseResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/CreateCaseResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV25DescribeAttachmentRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeAttachmentRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV25DescribeAttachmentRequestV">DescribeAttachmentRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeAttachmentRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAttachmentRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV26DescribeAttachmentResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeAttachmentResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV26DescribeAttachmentResponseV">DescribeAttachmentResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeAttachmentResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAttachmentResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV20DescribeCasesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCasesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV20DescribeCasesRequestV">DescribeCasesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeCasesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCasesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV21DescribeCasesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCasesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV21DescribeCasesResponseV">DescribeCasesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeCasesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCasesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV29DescribeCommunicationsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCommunicationsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV29DescribeCommunicationsRequestV">DescribeCommunicationsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeCommunicationsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCommunicationsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV30DescribeCommunicationsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCommunicationsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV30DescribeCommunicationsResponseV">DescribeCommunicationsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeCommunicationsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCommunicationsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV23DescribeServicesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeServicesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV23DescribeServicesRequestV">DescribeServicesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeServicesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServicesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV24DescribeServicesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeServicesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV24DescribeServicesResponseV">DescribeServicesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeServicesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServicesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV29DescribeSeverityLevelsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeSeverityLevelsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV29DescribeSeverityLevelsRequestV">DescribeSeverityLevelsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeSeverityLevelsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeSeverityLevelsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2188,12 +1544,656 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV49DescribeTrustedAdvisorCheckRefreshStatusesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckRefreshStatusesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV49DescribeTrustedAdvisorCheckRefreshStatusesRequestV">DescribeTrustedAdvisorCheckRefreshStatusesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckRefreshStatusesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV50DescribeTrustedAdvisorCheckRefreshStatusesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckRefreshStatusesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV50DescribeTrustedAdvisorCheckRefreshStatusesResponseV">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckRefreshStatusesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckRefreshStatusesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV40DescribeTrustedAdvisorCheckResultRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckResultRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV40DescribeTrustedAdvisorCheckResultRequestV">DescribeTrustedAdvisorCheckResultRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckResultRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckResultRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV41DescribeTrustedAdvisorCheckResultResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckResultResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV41DescribeTrustedAdvisorCheckResultResponseV">DescribeTrustedAdvisorCheckResultResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckResultResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckResultResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV43DescribeTrustedAdvisorCheckSummariesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckSummariesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV43DescribeTrustedAdvisorCheckSummariesRequestV">DescribeTrustedAdvisorCheckSummariesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckSummariesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV44DescribeTrustedAdvisorCheckSummariesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorCheckSummariesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV44DescribeTrustedAdvisorCheckSummariesResponseV">DescribeTrustedAdvisorCheckSummariesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorCheckSummariesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorCheckSummariesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV35DescribeTrustedAdvisorChecksRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorChecksRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV35DescribeTrustedAdvisorChecksRequestV">DescribeTrustedAdvisorChecksRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorChecksRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorChecksRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV36DescribeTrustedAdvisorChecksResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrustedAdvisorChecksResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV36DescribeTrustedAdvisorChecksResponseV">DescribeTrustedAdvisorChecksResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/DescribeTrustedAdvisorChecksResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrustedAdvisorChecksResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV24RecentCaseCommunicationsV"></a>
+                    <a name="//apple_ref/swift/Struct/RecentCaseCommunications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV24RecentCaseCommunicationsV">RecentCaseCommunications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/RecentCaseCommunications.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RecentCaseCommunications</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV33RefreshTrustedAdvisorCheckRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RefreshTrustedAdvisorCheckRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV33RefreshTrustedAdvisorCheckRequestV">RefreshTrustedAdvisorCheckRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/RefreshTrustedAdvisorCheckRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RefreshTrustedAdvisorCheckRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV34RefreshTrustedAdvisorCheckResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/RefreshTrustedAdvisorCheckResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV34RefreshTrustedAdvisorCheckResponseV">RefreshTrustedAdvisorCheckResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/RefreshTrustedAdvisorCheckResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RefreshTrustedAdvisorCheckResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV18ResolveCaseRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ResolveCaseRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV18ResolveCaseRequestV">ResolveCaseRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/ResolveCaseRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCaseRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV19ResolveCaseResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ResolveCaseResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV19ResolveCaseResponseV">ResolveCaseResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/ResolveCaseResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCaseResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV7ServiceV"></a>
+                    <a name="//apple_ref/swift/Struct/Service" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV7ServiceV">Service</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/Service.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Service</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV13SeverityLevelV"></a>
+                    <a name="//apple_ref/swift/Struct/SeverityLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV13SeverityLevelV">SeverityLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/SeverityLevel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SeverityLevel</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV37TrustedAdvisorCategorySpecificSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCategorySpecificSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV37TrustedAdvisorCategorySpecificSummaryV">TrustedAdvisorCategorySpecificSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCategorySpecificSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCategorySpecificSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV30TrustedAdvisorCheckDescriptionV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV30TrustedAdvisorCheckDescriptionV">TrustedAdvisorCheckDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCheckDescription.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV32TrustedAdvisorCheckRefreshStatusV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckRefreshStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV32TrustedAdvisorCheckRefreshStatusV">TrustedAdvisorCheckRefreshStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCheckRefreshStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckRefreshStatus</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV25TrustedAdvisorCheckResultV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV25TrustedAdvisorCheckResultV">TrustedAdvisorCheckResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCheckResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV26TrustedAdvisorCheckSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCheckSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV26TrustedAdvisorCheckSummaryV">TrustedAdvisorCheckSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCheckSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCheckSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV35TrustedAdvisorCostOptimizingSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorCostOptimizingSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV35TrustedAdvisorCostOptimizingSummaryV">TrustedAdvisorCostOptimizingSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorCostOptimizingSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorCostOptimizingSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV28TrustedAdvisorResourceDetailV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorResourceDetail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV28TrustedAdvisorResourceDetailV">TrustedAdvisorResourceDetail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorResourceDetail.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorResourceDetail</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SupportAAV30TrustedAdvisorResourcesSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/TrustedAdvisorResourcesSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SupportAAV30TrustedAdvisorResourcesSummaryV">TrustedAdvisorResourcesSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Support/TrustedAdvisorResourcesSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TrustedAdvisorResourcesSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

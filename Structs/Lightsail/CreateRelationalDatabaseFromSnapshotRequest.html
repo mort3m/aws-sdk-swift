@@ -14,7 +14,7 @@
     <a title="CreateRelationalDatabaseFromSnapshotRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4NameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/relationalDatabaseSnapshotName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4NameSSSgvp">relationalDatabaseSnapshotName</a>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZoneSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZoneSSSgvp">availabilityZone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the database snapshot from which to create your new database.</p>
+                        <p>The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format. You can get a list of Availability Zones by using the get regions operation. Be sure to add the include relational database Availability Zones parameter to your request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relationalDatabaseSnapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV23useLatestRestorableTimeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/useLatestRestorableTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV23useLatestRestorableTimeSbSgvp">useLatestRestorableTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether your database is restored from the latest backup time. A value of true restores from the latest backup time.  Default: false  Constraints: Cannot be specified if the restore time parameter is provided.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV06sourcecD4NameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceRelationalDatabaseName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV06sourcecD4NameSSSgvp">sourceRelationalDatabaseName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the source database.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceRelationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV11restoreTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/restoreTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV11restoreTime15AWSSDKSwiftCore0I5StampVSgvp">restoreTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time to restore your database from. Constraints:   Must be before the latest restorable time for the database.   Cannot be specified if the use latest restorable time parameter is true.   Specified in Universal Coordinated Time (UTC).   Specified in the Unix time format. For example, if you wish to use a restore time of October 1, 2018, at 8 PM UTC, then you input 1538424000 as the restore time.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV4tagsSayAB3TagVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV4tagsSayAB3TagVGSgvp">tags</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The tag keys and optional values to add to the resource during create. To tag a resource after it has been created, see the tag resource operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Lightsail/Tag.html">Tag</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD4NameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/relationalDatabaseName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD4NameSSvp">relationalDatabaseName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name to use for your new database. Constraints:   Must contain from 2 to 255 alphanumeric characters, or hyphens.   The first and last character must be a letter or number.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD8BundleIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/relationalDatabaseBundleId" class="dashAnchor"></a>
                     <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD8BundleIdSSSgvp">relationalDatabaseBundleId</a>
@@ -793,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZoneSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZoneSSSgvp">availabilityZone</a>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD4NameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/relationalDatabaseName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationalD4NameSSvp">relationalDatabaseName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format. You can get a list of Availability Zones by using the get regions operation. Be sure to add the include relational database Availability Zones parameter to your request.</p>
+                        <p>The name to use for your new database. Constraints:   Must contain from 2 to 255 alphanumeric characters, or hyphens.   The first and last character must be a letter or number.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +685,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4Name23useLatestRestorableTime06sourcecdI007restoreM04tags18publiclyAccessible0hdI00hD8BundleId16availabilityZoneADSSSg_SbSgAN15AWSSDKSwiftCore0M5StampVSgSayAB3TagVGSgAOSSA2Ntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(relationalDatabaseSnapshotName:useLatestRestorableTime:sourceRelationalDatabaseName:restoreTime:tags:publiclyAccessible:relationalDatabaseName:relationalDatabaseBundleId:availabilityZone:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4Name23useLatestRestorableTime06sourcecdI007restoreM04tags18publiclyAccessible0hdI00hD8BundleId16availabilityZoneADSSSg_SbSgAN15AWSSDKSwiftCore0M5StampVSgSayAB3TagVGSgAOSSA2Ntcfc">init(relationalDatabaseSnapshotName:useLatestRestorableTime:sourceRelationalDatabaseName:restoreTime:tags:publiclyAccessible:relationalDatabaseName:relationalDatabaseBundleId:availabilityZone:)</a>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4NameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/relationalDatabaseSnapshotName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV010relationaldF4NameSSSgvp">relationalDatabaseSnapshotName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the database snapshot from which to create your new database.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relationalDatabaseSnapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV11restoreTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/restoreTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV11restoreTime15AWSSDKSwiftCore0I5StampVSgvp">restoreTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time to restore your database from. Constraints:   Must be before the latest restorable time for the database.   Cannot be specified if the use latest restorable time parameter is true.   Specified in Universal Coordinated Time (UTC).   Specified in the Unix time format. For example, if you wish to use a restore time of October 1, 2018, at 8 PM UTC, then you input 1538424000 as the restore time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV06sourcecD4NameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceRelationalDatabaseName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV06sourcecD4NameSSSgvp">sourceRelationalDatabaseName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the source database.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceRelationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV4tagsSayAB3TagVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV4tagsSayAB3TagVGSgvp">tags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The tag keys and optional values to add to the resource during create. To tag a resource after it has been created, see the tag resource operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Lightsail/Tag.html">Tag</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV23useLatestRestorableTimeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/useLatestRestorableTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV23useLatestRestorableTimeSbSgvp">useLatestRestorableTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether your database is restored from the latest backup time. A value of true restores from the latest backup time.  Default: false  Constraints: Cannot be specified if the restore time parameter is provided.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZone18publiclyAccessible010relationalD8BundleId0lD4Name0ldfO011restoreTime06sourcecdO04tags019useLatestRestorableQ0ADSSSg_SbSgANSSAN15AWSSDKSwiftCore0Q5StampVSgANSayAB3TagVGSgAOtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(availabilityZone:publiclyAccessible:relationalDatabaseBundleId:relationalDatabaseName:relationalDatabaseSnapshotName:restoreTime:sourceRelationalDatabaseName:tags:useLatestRestorableTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9LightsailAAV43CreateRelationalDatabaseFromSnapshotRequestV16availabilityZone18publiclyAccessible010relationalD8BundleId0lD4Name0ldfO011restoreTime06sourcecdO04tags019useLatestRestorableQ0ADSSSg_SbSgANSSAN15AWSSDKSwiftCore0Q5StampVSgANSayAB3TagVGSgAOtcfc">init(availabilityZone:publiclyAccessible:relationalDatabaseBundleId:relationalDatabaseName:relationalDatabaseSnapshotName:restoreTime:sourceRelationalDatabaseName:tags:useLatestRestorableTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">relationalDatabaseSnapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceRelationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Lightsail/Tag.html">Tag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">relationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">relationalDatabaseBundleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">relationalDatabaseBundleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">relationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">relationalDatabaseSnapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceRelationalDatabaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Lightsail/Tag.html">Tag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

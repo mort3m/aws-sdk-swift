@@ -14,7 +14,7 @@
     <a title="PutEmailIdentityMailFromAttributesRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6DomainSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mailFromDomain" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6DomainSSSgvp">mailFromDomain</a>
+                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailureAB08BehaviorjkL0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/behaviorOnMxFailure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailureAB08BehaviorjkL0OSgvp">behaviorOnMxFailure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The custom MAIL FROM domain that you want the verified identity to use. The MAIL FROM domain must meet the following criteria:   It has to be a subdomain of the verified identity.   It can&rsquo;t be used to receive email.   It can&rsquo;t be used in a <q>From</q> address if the MAIL FROM domain is a destination for feedback forwarding emails.</p>
+                        <p>The action that you want Amazon Pinpoint to take if it can&rsquo;t read the required MX record when you send an email. When you set this value to UseDefaultValue, Amazon Pinpoint uses amazonses.com as the MAIL FROM domain. When you set this value to RejectMessage, Amazon Pinpoint returns a MailFromDomainNotVerified error, and doesn&rsquo;t attempt to deliver the email. These behaviors are taken when the custom MAIL FROM domain configuration is in the Pending, Failed, and TemporaryFailure states.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">behaviorOnMxFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PinpointEmail/BehaviorOnMxFailure.html">BehaviorOnMxFailure</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailureAB08BehaviorjkL0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/behaviorOnMxFailure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailureAB08BehaviorjkL0OSgvp">behaviorOnMxFailure</a>
+                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6DomainSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mailFromDomain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6DomainSSSgvp">mailFromDomain</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The action that you want Amazon Pinpoint to take if it can&rsquo;t read the required MX record when you send an email. When you set this value to UseDefaultValue, Amazon Pinpoint uses amazonses.com as the MAIL FROM domain. When you set this value to RejectMessage, Amazon Pinpoint returns a MailFromDomainNotVerified error, and doesn&rsquo;t attempt to deliver the email. These behaviors are taken when the custom MAIL FROM domain configuration is in the Pending, Failed, and TemporaryFailure states.</p>
+                        <p>The custom MAIL FROM domain that you want the verified identity to use. The MAIL FROM domain must meet the following criteria:   It has to be a subdomain of the verified identity.   It can&rsquo;t be used to receive email.   It can&rsquo;t be used in a <q>From</q> address if the MAIL FROM domain is a destination for feedback forwarding emails.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">behaviorOnMxFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PinpointEmail/BehaviorOnMxFailure.html">BehaviorOnMxFailure</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6Domain05emailD019behaviorOnMxFailureADSSSg_SSAB08BehaviormnO0OSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(mailFromDomain:emailIdentity:behaviorOnMxFailure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV04mailF6Domain05emailD019behaviorOnMxFailureADSSSg_SSAB08BehaviormnO0OSgtcfc">init(mailFromDomain:emailIdentity:behaviorOnMxFailure:)</a>
+                    <a name="/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailure05emailD004mailF6DomainAdB08BehaviorjkL0OSg_S2SSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(behaviorOnMxFailure:emailIdentity:mailFromDomain:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13PinpointEmailAAV03PutB33IdentityMailFromAttributesRequestV19behaviorOnMxFailure05emailD004mailF6DomainAdB08BehaviorjkL0OSg_S2SSgtcfc">init(behaviorOnMxFailure:emailIdentity:mailFromDomain:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emailIdentity</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">behaviorOnMxFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PinpointEmail/BehaviorOnMxFailure.html">BehaviorOnMxFailure</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">behaviorOnMxFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PinpointEmail/BehaviorOnMxFailure.html">BehaviorOnMxFailure</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emailIdentity</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="SendMessageRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,60 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SQSAAV18SendMessageRequestV8queueUrlSSvp"></a>
-                    <a name="//apple_ref/swift/Property/queueUrl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV8queueUrlSSvp">queueUrl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The URL of the Amazon SQS queue to which a message is sent. Queue URLs and names are case-sensitive.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queueUrl</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SQSAAV18SendMessageRequestV11messageBodySSvp"></a>
-                    <a name="//apple_ref/swift/Property/messageBody" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV11messageBodySSvp">messageBody</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The message to send. The maximum string size is 256 KB.  A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:  #x9 | #xA | #xD | #x20 to #xD7FF | #xE000 to #xFFFD | #x10000 to #x10FFFF  Any characters not included in this list will be rejected. For more information, see the W3C specification for characters.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageBody</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3SQSAAV18SendMessageRequestV12delaySecondss5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/delaySeconds" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SQSAAV18SendMessageRequestV12delaySecondss5Int32VSgvp">delaySeconds</a>
@@ -649,33 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">delaySeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SQSAAV18SendMessageRequestV22messageDeduplicationIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/messageDeduplicationId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV22messageDeduplicationIdSSSgvp">messageDeduplicationId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages. If a message with a particular MessageDeduplicationId is sent successfully, any messages sent with the same MessageDeduplicationId are accepted successfully but aren&rsquo;t delivered during the 5-minute deduplication interval. For more information, see  Exactly-Once Processing in the Amazon Simple Queue Service Developer Guide.   Every message must have a unique MessageDeduplicationId,   You may provide a MessageDeduplicationId explicitly.   If you aren&rsquo;t able to provide a MessageDeduplicationId and you enable ContentBasedDeduplication for your queue, Amazon SQS uses a SHA-256 hash to generate the MessageDeduplicationId using the body of the message (but not the attributes of the message).    If you don&rsquo;t provide a MessageDeduplicationId and the queue doesn&rsquo;t have ContentBasedDeduplication set, the action fails with an error.   If the queue has ContentBasedDeduplication set, your MessageDeduplicationId overrides the generated one.     When ContentBasedDeduplication is in effect, messages with identical content sent within the deduplication interval are treated as duplicates and only one copy of the message is delivered.   If you send one message with ContentBasedDeduplication enabled and then another message with a MessageDeduplicationId that is the same as the one generated for the first MessageDeduplicationId, the two messages are treated as duplicates and only one copy of the message is delivered.     The MessageDeduplicationId is available to the consumer of the message (this can be useful for troubleshooting delivery issues). If a message is sent successfully but the acknowledgement is lost and the message is resent with the same MessageDeduplicationId after the deduplication interval, Amazon SQS can&rsquo;t detect duplicate messages. Amazon SQS continues to keep track of the message deduplication ID even after the message is received and deleted.  The length of MessageDeduplicationId is 128 characters. MessageDeduplicationId can contain alphanumeric characters (a-z, A-Z, 0-9) and punctuation (!&ldquo;#$%&amp;&lsquo;()*+,-./:;&lt;=&gt;?@[]^_`{|}~). For best practices of using MessageDeduplicationId, see Using the MessageDeduplicationId Property in the Amazon Simple Queue Service Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageDeduplicationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,6 +631,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SQSAAV18SendMessageRequestV11messageBodySSvp"></a>
+                    <a name="//apple_ref/swift/Property/messageBody" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV11messageBodySSvp">messageBody</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The message to send. The maximum string size is 256 KB.  A message can include only XML, JSON, and unformatted text. The following Unicode characters are allowed:  #x9 | #xA | #xD | #x20 to #xD7FF | #xE000 to #xFFFD | #x10000 to #x10FFFF  Any characters not included in this list will be rejected. For more information, see the W3C specification for characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageBody</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQSAAV18SendMessageRequestV22messageDeduplicationIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/messageDeduplicationId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV22messageDeduplicationIdSSSgvp">messageDeduplicationId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages. If a message with a particular MessageDeduplicationId is sent successfully, any messages sent with the same MessageDeduplicationId are accepted successfully but aren&rsquo;t delivered during the 5-minute deduplication interval. For more information, see  Exactly-Once Processing in the Amazon Simple Queue Service Developer Guide.   Every message must have a unique MessageDeduplicationId,   You may provide a MessageDeduplicationId explicitly.   If you aren&rsquo;t able to provide a MessageDeduplicationId and you enable ContentBasedDeduplication for your queue, Amazon SQS uses a SHA-256 hash to generate the MessageDeduplicationId using the body of the message (but not the attributes of the message).    If you don&rsquo;t provide a MessageDeduplicationId and the queue doesn&rsquo;t have ContentBasedDeduplication set, the action fails with an error.   If the queue has ContentBasedDeduplication set, your MessageDeduplicationId overrides the generated one.     When ContentBasedDeduplication is in effect, messages with identical content sent within the deduplication interval are treated as duplicates and only one copy of the message is delivered.   If you send one message with ContentBasedDeduplication enabled and then another message with a MessageDeduplicationId that is the same as the one generated for the first MessageDeduplicationId, the two messages are treated as duplicates and only one copy of the message is delivered.     The MessageDeduplicationId is available to the consumer of the message (this can be useful for troubleshooting delivery issues). If a message is sent successfully but the acknowledgement is lost and the message is resent with the same MessageDeduplicationId after the deduplication interval, Amazon SQS can&rsquo;t detect duplicate messages. Amazon SQS continues to keep track of the message deduplication ID even after the message is received and deleted.  The length of MessageDeduplicationId is 128 characters. MessageDeduplicationId can contain alphanumeric characters (a-z, A-Z, 0-9) and punctuation (!&ldquo;#$%&amp;&lsquo;()*+,-./:;&lt;=&gt;?@[]^_`{|}~). For best practices of using MessageDeduplicationId, see Using the MessageDeduplicationId Property in the Amazon Simple Queue Service Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageDeduplicationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SQSAAV18SendMessageRequestV14messageGroupIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/messageGroupId" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SQSAAV18SendMessageRequestV14messageGroupIdSSSgvp">messageGroupId</a>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SQSAAV18SendMessageRequestV8queueUrl11messageBody12delaySeconds0G15DeduplicationId0G10Attributes0g5GroupL0ADSS_SSs5Int32VSgSSSgSDySSAB0C14AttributeValueVGSgANtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(queueUrl:messageBody:delaySeconds:messageDeduplicationId:messageAttributes:messageGroupId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV8queueUrl11messageBody12delaySeconds0G15DeduplicationId0G10Attributes0g5GroupL0ADSS_SSs5Int32VSgSSSgSDySSAB0C14AttributeValueVGSgANtcfc">init(queueUrl:messageBody:delaySeconds:messageDeduplicationId:messageAttributes:messageGroupId:)</a>
+                    <a name="/s:3SQSAAV18SendMessageRequestV8queueUrlSSvp"></a>
+                    <a name="//apple_ref/swift/Property/queueUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV8queueUrlSSvp">queueUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL of the Amazon SQS queue to which a message is sent. Queue URLs and names are case-sensitive.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queueUrl</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SQSAAV18SendMessageRequestV12delaySeconds17messageAttributes0G4Body0G15DeduplicationId0g5GroupK08queueUrlADs5Int32VSg_SDySSAB0C14AttributeValueVGSgS2SSgARSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(delaySeconds:messageAttributes:messageBody:messageDeduplicationId:messageGroupId:queueUrl:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SQSAAV18SendMessageRequestV12delaySeconds17messageAttributes0G4Body0G15DeduplicationId0g5GroupK08queueUrlADs5Int32VSg_SDySSAB0C14AttributeValueVGSgS2SSgARSStcfc">init(delaySeconds:messageAttributes:messageBody:messageDeduplicationId:messageGroupId:queueUrl:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">queueUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">messageBody</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">delaySeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageDeduplicationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SQS/MessageAttributeValue.html">MessageAttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">delaySeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/SQS/MessageAttributeValue.html">MessageAttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageBody</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">messageDeduplicationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queueUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="SimpleDB Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,252 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV18batchPutAttributesyyAB05BatchdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/batchPutAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV18batchPutAttributesyyAB05BatchdE7RequestVKF">batchPutAttributes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The BatchPutAttributes operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple PutAttribute operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput.   The client may specify the item name with the Item.X.ItemName parameter. The client may specify new attributes using a combination of the Item.X.Attribute.Y.Name and Item.X.Attribute.Y.Value parameters. The client may specify the first attribute for the first item using the parameters Item.0.Attribute.0.Name and Item.0.Attribute.0.Value, and for the second attribute for the first item by the parameters Item.0.Attribute.1.Name and Item.0.Attribute.1.Value, and so on.   Attributes are uniquely identified within an item by their name/value combination. For example, a single item can have the attributes { <q>first_name</q>, <q>first_value</q> } and { <q>first_name</q>, <q>second_value</q> }. However, it cannot have two attribute instances where both the Item.X.Attribute.Y.Name and Item.X.Attribute.Y.Value are the same.   Optionally, the requester can supply the Replace parameter for each individual value. Setting this value to true will cause the new attribute values to replace the existing attribute values. For example, if an item I has the attributes { &lsquo;a&rsquo;, &lsquo;1&rsquo; }, { &lsquo;b&rsquo;, &lsquo;2&rsquo;} and { &lsquo;b&rsquo;, &lsquo;3&rsquo; } and the requester does a BatchPutAttributes of {&lsquo;I&rsquo;, &lsquo;b&rsquo;, &lsquo;4&rsquo; } with the Replace parameter set to true, the final attributes of the item will be { &lsquo;a&rsquo;, &lsquo;1&rsquo; } and { &lsquo;b&rsquo;, &lsquo;4&rsquo; }, replacing the previous values of the &lsquo;b&rsquo; attribute with the new value.   You cannot specify an empty string as an item or as an attribute name. The BatchPutAttributes operation succeeds or fails in its entirety. There are no partial puts.   This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists.   You can execute multiple BatchPutAttributes operations and other operations in parallel. However, large numbers of concurrent BatchPutAttributes calls can result in Service Unavailable (503) responses.   The following limitations are enforced for this operation:  256 attribute name-value pairs per item 1 MB request size 1 billion attributes per domain 10 GB of total user data storage per domain 25 item limit per BatchPutAttributes operation</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchPutAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/BatchPutAttributesRequest.html">BatchPutAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV11listDomainsyAB04ListD6ResultVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listDomains(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV11listDomainsyAB04ListD6ResultVAB0eD7RequestVKF">listDomains(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ListDomains operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by MaxNumberOfDomains. A NextToken is returned if there are more than MaxNumberOfDomains domains. Calling ListDomains successive times with the NextToken provided by the operation returns up to MaxNumberOfDomains more domain names with each successive operation call.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listDomains</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/ListDomainsRequest.html">ListDomainsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/SimpleDB/ListDomainsResult.html">ListDomainsResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV12createDomainyyAB06CreateD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createDomain(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV12createDomainyyAB06CreateD7RequestVKF">createDomain(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The CreateDomain operation creates a new domain. The domain name should be unique among the domains associated with the Access Key ID provided in the request. The CreateDomain operation may take 10 or more seconds to complete.   CreateDomain is an idempotent operation; running it multiple times using the same domain name will not result in an error response.   The client can create up to 100 domains per account.   If the client requires additional domains, go to  <a href="http://aws.amazon.com/contact-us/simpledb-limit-request/">http://aws.amazon.com/contact-us/simpledb-limit-request/</a>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDomain</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/CreateDomainRequest.html">CreateDomainRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV13putAttributesyyAB03PutD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/putAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV13putAttributesyyAB03PutD7RequestVKF">putAttributes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The PutAttributes operation creates or replaces attributes in an item. The client may specify new attributes using a combination of the Attribute.X.Name and Attribute.X.Value parameters. The client specifies the first attribute by the parameters Attribute.0.Name and Attribute.0.Value, the second attribute by the parameters Attribute.1.Name and Attribute.1.Value, and so on.   Attributes are uniquely identified in an item by their name/value combination. For example, a single item can have the attributes { <q>first_name</q>, <q>first_value</q> } and { <q>first_name</q>, second_value&quot; }. However, it cannot have two attribute instances where both the Attribute.X.Name and Attribute.X.Value are the same.   Optionally, the requestor can supply the Replace parameter for each individual attribute. Setting this value to true causes the new attribute value to replace the existing attribute value(s). For example, if an item has the attributes { &lsquo;a&rsquo;, &lsquo;1&rsquo; }, { &lsquo;b&rsquo;, &lsquo;2&rsquo;} and { &lsquo;b&rsquo;, &lsquo;3&rsquo; } and the requestor calls PutAttributes using the attributes { &lsquo;b&rsquo;, &lsquo;4&rsquo; } with the Replace parameter set to true, the final attributes of the item are changed to { &lsquo;a&rsquo;, &lsquo;1&rsquo; } and { &lsquo;b&rsquo;, &lsquo;4&rsquo; }, which replaces the previous values of the &lsquo;b&rsquo; attribute with the new value.   Using PutAttributes to replace attribute values that do not exist will not result in an error response.   You cannot specify an empty string as an attribute name.   Because Amazon SimpleDB makes multiple copies of client data and uses an eventual consistency update model, an immediate GetAttributes or Select operation (read) immediately after a PutAttributes or DeleteAttributes operation (write) might not return the updated data.   The following limitations are enforced for this operation:  256 total attribute name-value pairs per item One billion attributes per domain 10 GB of total user data storage per domain</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/PutAttributesRequest.html">PutAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV14domainMetadatayAB06DomainD6ResultVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/domainMetadata(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV14domainMetadatayAB06DomainD6ResultVAB0eD7RequestVKF">domainMetadata(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">domainMetadata</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DomainMetadataRequest.html">DomainMetadataRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/SimpleDB/DomainMetadataResult.html">DomainMetadataResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV12deleteDomainyyAB06DeleteD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteDomain(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV12deleteDomainyyAB06DeleteD7RequestVKF">deleteDomain(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The DeleteDomain operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The DeleteDomain operation might take 10 or more seconds to complete.   Running DeleteDomain on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteDomain</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DeleteDomainRequest.html">DeleteDomainRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV13getAttributesyAB03GetD6ResultVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/getAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV13getAttributesyAB03GetD6ResultVAB0eD7RequestVKF">getAttributes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter.   If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas.   If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/GetAttributesRequest.html">GetAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/SimpleDB/GetAttributesResult.html">GetAttributesResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV6selectyAB12SelectResultVAB0D7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/select(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV6selectyAB12SelectResultVAB0D7RequestVKF">select(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Select operation returns a set of attributes for ItemNames that match the select expression. Select is similar to the standard SQL SELECT statement.   The total size of the response cannot exceed 1 MB in total size. Amazon SimpleDB automatically adjusts the number of items returned per page to enforce this limit. For example, if the client asks to retrieve 2500 items, but each individual item is 10 kB in size, the system returns 100 items and an appropriate NextToken so the client can access the next page of results.   For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">select</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/SelectRequest.html">SelectRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/SimpleDB/SelectResult.html">SelectResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV16deleteAttributesyyAB06DeleteD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV16deleteAttributesyyAB06DeleteD7RequestVKF">deleteAttributes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted.   If DeleteAttributes is called without being passed any attributes or values specified, all the attributes for the item are deleted.   DeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response.   Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a GetAttributes or Select operation (read) immediately after a DeleteAttributes or PutAttributes operation (write) might not return updated item data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DeleteAttributesRequest.html">DeleteAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV21batchDeleteAttributesyyAB05BatchdE7RequestVKF"></a>
+                    <a name="/s:8SimpleDBAAV21batchDeleteAttributesy3NIO15EventLoopFutureCyytGAB05BatchdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/batchDeleteAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV21batchDeleteAttributesyyAB05BatchdE7RequestVKF">batchDeleteAttributes(_:)</a>
+                    <a class="token" href="#/s:8SimpleDBAAV21batchDeleteAttributesy3NIO15EventLoopFutureCyytGAB05BatchdE7RequestVKF">batchDeleteAttributes(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +594,256 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchDeleteAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/BatchDeleteAttributesRequest.html">BatchDeleteAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchDeleteAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/BatchDeleteAttributesRequest.html">BatchDeleteAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV18batchPutAttributesy3NIO15EventLoopFutureCyytGAB05BatchdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/batchPutAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV18batchPutAttributesy3NIO15EventLoopFutureCyytGAB05BatchdE7RequestVKF">batchPutAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The BatchPutAttributes operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple PutAttribute operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput.   The client may specify the item name with the Item.X.ItemName parameter. The client may specify new attributes using a combination of the Item.X.Attribute.Y.Name and Item.X.Attribute.Y.Value parameters. The client may specify the first attribute for the first item using the parameters Item.0.Attribute.0.Name and Item.0.Attribute.0.Value, and for the second attribute for the first item by the parameters Item.0.Attribute.1.Name and Item.0.Attribute.1.Value, and so on.   Attributes are uniquely identified within an item by their name/value combination. For example, a single item can have the attributes { <q>first_name</q>, <q>first_value</q> } and { <q>first_name</q>, <q>second_value</q> }. However, it cannot have two attribute instances where both the Item.X.Attribute.Y.Name and Item.X.Attribute.Y.Value are the same.   Optionally, the requester can supply the Replace parameter for each individual value. Setting this value to true will cause the new attribute values to replace the existing attribute values. For example, if an item I has the attributes { &lsquo;a&rsquo;, &lsquo;1&rsquo; }, { &lsquo;b&rsquo;, &lsquo;2&rsquo;} and { &lsquo;b&rsquo;, &lsquo;3&rsquo; } and the requester does a BatchPutAttributes of {&lsquo;I&rsquo;, &lsquo;b&rsquo;, &lsquo;4&rsquo; } with the Replace parameter set to true, the final attributes of the item will be { &lsquo;a&rsquo;, &lsquo;1&rsquo; } and { &lsquo;b&rsquo;, &lsquo;4&rsquo; }, replacing the previous values of the &lsquo;b&rsquo; attribute with the new value.   You cannot specify an empty string as an item or as an attribute name. The BatchPutAttributes operation succeeds or fails in its entirety. There are no partial puts.   This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists.   You can execute multiple BatchPutAttributes operations and other operations in parallel. However, large numbers of concurrent BatchPutAttributes calls can result in Service Unavailable (503) responses.   The following limitations are enforced for this operation:  256 attribute name-value pairs per item 1 MB request size 1 billion attributes per domain 10 GB of total user data storage per domain 25 item limit per BatchPutAttributes operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchPutAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/BatchPutAttributesRequest.html">BatchPutAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV12createDomainy3NIO15EventLoopFutureCyytGAB06CreateD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createDomain(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV12createDomainy3NIO15EventLoopFutureCyytGAB06CreateD7RequestVKF">createDomain(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The CreateDomain operation creates a new domain. The domain name should be unique among the domains associated with the Access Key ID provided in the request. The CreateDomain operation may take 10 or more seconds to complete.   CreateDomain is an idempotent operation; running it multiple times using the same domain name will not result in an error response.   The client can create up to 100 domains per account.   If the client requires additional domains, go to  <a href="http://aws.amazon.com/contact-us/simpledb-limit-request/">http://aws.amazon.com/contact-us/simpledb-limit-request/</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDomain</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/CreateDomainRequest.html">CreateDomainRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV16deleteAttributesy3NIO15EventLoopFutureCyytGAB06DeleteD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV16deleteAttributesy3NIO15EventLoopFutureCyytGAB06DeleteD7RequestVKF">deleteAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted.   If DeleteAttributes is called without being passed any attributes or values specified, all the attributes for the item are deleted.   DeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response.   Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a GetAttributes or Select operation (read) immediately after a DeleteAttributes or PutAttributes operation (write) might not return updated item data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DeleteAttributesRequest.html">DeleteAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV12deleteDomainy3NIO15EventLoopFutureCyytGAB06DeleteD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteDomain(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV12deleteDomainy3NIO15EventLoopFutureCyytGAB06DeleteD7RequestVKF">deleteDomain(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The DeleteDomain operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The DeleteDomain operation might take 10 or more seconds to complete.   Running DeleteDomain on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteDomain</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DeleteDomainRequest.html">DeleteDomainRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV14domainMetadatay3NIO15EventLoopFutureCyAB06DomainD6ResultVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/domainMetadata(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV14domainMetadatay3NIO15EventLoopFutureCyAB06DomainD6ResultVGAB0iD7RequestVKF">domainMetadata(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">domainMetadata</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/DomainMetadataRequest.html">DomainMetadataRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SimpleDB/DomainMetadataResult.html">DomainMetadataResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV13getAttributesy3NIO15EventLoopFutureCyAB03GetD6ResultVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/getAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV13getAttributesy3NIO15EventLoopFutureCyAB03GetD6ResultVGAB0iD7RequestVKF">getAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter.   If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas.   If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/GetAttributesRequest.html">GetAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SimpleDB/GetAttributesResult.html">GetAttributesResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV11listDomainsy3NIO15EventLoopFutureCyAB04ListD6ResultVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listDomains(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV11listDomainsy3NIO15EventLoopFutureCyAB04ListD6ResultVGAB0iD7RequestVKF">listDomains(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ListDomains operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by MaxNumberOfDomains. A NextToken is returned if there are more than MaxNumberOfDomains domains. Calling ListDomains successive times with the NextToken provided by the operation returns up to MaxNumberOfDomains more domain names with each successive operation call.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listDomains</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/ListDomainsRequest.html">ListDomainsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SimpleDB/ListDomainsResult.html">ListDomainsResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV13putAttributesy3NIO15EventLoopFutureCyytGAB03PutD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/putAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV13putAttributesy3NIO15EventLoopFutureCyytGAB03PutD7RequestVKF">putAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The PutAttributes operation creates or replaces attributes in an item. The client may specify new attributes using a combination of the Attribute.X.Name and Attribute.X.Value parameters. The client specifies the first attribute by the parameters Attribute.0.Name and Attribute.0.Value, the second attribute by the parameters Attribute.1.Name and Attribute.1.Value, and so on.   Attributes are uniquely identified in an item by their name/value combination. For example, a single item can have the attributes { <q>first_name</q>, <q>first_value</q> } and { <q>first_name</q>, second_value&quot; }. However, it cannot have two attribute instances where both the Attribute.X.Name and Attribute.X.Value are the same.   Optionally, the requestor can supply the Replace parameter for each individual attribute. Setting this value to true causes the new attribute value to replace the existing attribute value(s). For example, if an item has the attributes { &lsquo;a&rsquo;, &lsquo;1&rsquo; }, { &lsquo;b&rsquo;, &lsquo;2&rsquo;} and { &lsquo;b&rsquo;, &lsquo;3&rsquo; } and the requestor calls PutAttributes using the attributes { &lsquo;b&rsquo;, &lsquo;4&rsquo; } with the Replace parameter set to true, the final attributes of the item are changed to { &lsquo;a&rsquo;, &lsquo;1&rsquo; } and { &lsquo;b&rsquo;, &lsquo;4&rsquo; }, which replaces the previous values of the &lsquo;b&rsquo; attribute with the new value.   Using PutAttributes to replace attribute values that do not exist will not result in an error response.   You cannot specify an empty string as an attribute name.   Because Amazon SimpleDB makes multiple copies of client data and uses an eventual consistency update model, an immediate GetAttributes or Select operation (read) immediately after a PutAttributes or DeleteAttributes operation (write) might not return the updated data.   The following limitations are enforced for this operation:  256 total attribute name-value pairs per item One billion attributes per domain 10 GB of total user data storage per domain</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">putAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/PutAttributesRequest.html">PutAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV6selecty3NIO15EventLoopFutureCyAB12SelectResultVGAB0H7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/select(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV6selecty3NIO15EventLoopFutureCyAB12SelectResultVGAB0H7RequestVKF">select(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Select operation returns a set of attributes for ItemNames that match the select expression. Select is similar to the standard SQL SELECT statement.   The total size of the response cannot exceed 1 MB in total size. Amazon SimpleDB automatically adjusts the number of items returned per page to enforce this limit. For example, if the client asks to retrieve 2500 items, but each individual item is 10 kB in size, the system returns 100 items and an appropriate NextToken so the client can access the next page of results.   For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">select</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/SimpleDB/SelectRequest.html">SelectRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SimpleDB/SelectResult.html">SelectResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -851,9 +857,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV20ReplaceableAttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/ReplaceableAttribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV20ReplaceableAttributeV">ReplaceableAttribute</a>
+                    <a name="/s:8SimpleDBAAV9AttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/Attribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV9AttributeV">Attribute</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -863,69 +869,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/SimpleDB/ReplaceableAttribute.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/SimpleDB/Attribute.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV19GetAttributesResultV"></a>
-                    <a name="//apple_ref/swift/Struct/GetAttributesResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV19GetAttributesResultV">GetAttributesResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/GetAttributesResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetAttributesResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV20DomainMetadataResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DomainMetadataResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV20DomainMetadataResultV">DomainMetadataResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/DomainMetadataResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainMetadataResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Attribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -963,258 +913,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV22DeletableAttributeListV"></a>
-                    <a name="//apple_ref/swift/Struct/DeletableAttributeList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV22DeletableAttributeListV">DeletableAttributeList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/DeletableAttributeList.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableAttributeList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV18DeletableAttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/DeletableAttribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV18DeletableAttributeV">DeletableAttribute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/DeletableAttribute.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV12SelectResultV"></a>
-                    <a name="//apple_ref/swift/Struct/SelectResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV12SelectResultV">SelectResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/SelectResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SelectResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV19ReplaceableItemListV"></a>
-                    <a name="//apple_ref/swift/Struct/ReplaceableItemList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV19ReplaceableItemListV">ReplaceableItemList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ReplaceableItemList.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableItemList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV9AttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/Attribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV9AttributeV">Attribute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/Attribute.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Attribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV19DeleteDomainRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteDomainRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV19DeleteDomainRequestV">DeleteDomainRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/DeleteDomainRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteDomainRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV18ListDomainsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListDomainsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV18ListDomainsRequestV">ListDomainsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ListDomainsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDomainsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV13DeletableItemV"></a>
-                    <a name="//apple_ref/swift/Struct/DeletableItem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV13DeletableItemV">DeletableItem</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/DeletableItem.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableItem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV4ItemV"></a>
-                    <a name="//apple_ref/swift/Struct/Item" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV4ItemV">Item</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/Item.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Item</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8SimpleDBAAV17AttributeNameListV"></a>
                     <a name="//apple_ref/swift/Struct/AttributeNameList" class="dashAnchor"></a>
                     <a class="token" href="#/s:8SimpleDBAAV17AttributeNameListV">AttributeNameList</a>
@@ -1234,230 +932,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AttributeNameList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV19CreateDomainRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateDomainRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV19CreateDomainRequestV">CreateDomainRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/CreateDomainRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateDomainRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV8ItemListV"></a>
-                    <a name="//apple_ref/swift/Struct/ItemList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV8ItemListV">ItemList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ItemList.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ItemList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV15UpdateConditionV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateCondition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV15UpdateConditionV">UpdateCondition</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/UpdateCondition.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateCondition</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV15ReplaceableItemV"></a>
-                    <a name="//apple_ref/swift/Struct/ReplaceableItem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV15ReplaceableItemV">ReplaceableItem</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ReplaceableItem.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableItem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV20GetAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/GetAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV20GetAttributesRequestV">GetAttributesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/GetAttributesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV24ReplaceableAttributeListV"></a>
-                    <a name="//apple_ref/swift/Struct/ReplaceableAttributeList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV24ReplaceableAttributeListV">ReplaceableAttributeList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ReplaceableAttributeList.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableAttributeList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV13SelectRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/SelectRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV13SelectRequestV">SelectRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/SelectRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SelectRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8SimpleDBAAV17ListDomainsResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ListDomainsResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV17ListDomainsResultV">ListDomainsResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/SimpleDB/ListDomainsResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDomainsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1495,9 +969,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV21DomainMetadataRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DomainMetadataRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV21DomainMetadataRequestV">DomainMetadataRequest</a>
+                    <a name="/s:8SimpleDBAAV25BatchPutAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/BatchPutAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV25BatchPutAttributesRequestV">BatchPutAttributesRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1507,13 +981,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/SimpleDB/DomainMetadataRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/SimpleDB/BatchPutAttributesRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainMetadataRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BatchPutAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1523,9 +997,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV20PutAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/PutAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV20PutAttributesRequestV">PutAttributesRequest</a>
+                    <a name="/s:8SimpleDBAAV19CreateDomainRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateDomainRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV19CreateDomainRequestV">CreateDomainRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1535,13 +1009,97 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/SimpleDB/PutAttributesRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/SimpleDB/CreateDomainRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateDomainRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV18DeletableAttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/DeletableAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV18DeletableAttributeV">DeletableAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DeletableAttribute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV22DeletableAttributeListV"></a>
+                    <a name="//apple_ref/swift/Struct/DeletableAttributeList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV22DeletableAttributeListV">DeletableAttributeList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DeletableAttributeList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableAttributeList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV13DeletableItemV"></a>
+                    <a name="//apple_ref/swift/Struct/DeletableItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV13DeletableItemV">DeletableItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DeletableItem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeletableItem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1579,9 +1137,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV25BatchPutAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/BatchPutAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV25BatchPutAttributesRequestV">BatchPutAttributesRequest</a>
+                    <a name="/s:8SimpleDBAAV23DeleteAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV23DeleteAttributesRequestV">DeleteAttributesRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1591,13 +1149,97 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/SimpleDB/BatchPutAttributesRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/SimpleDB/DeleteAttributesRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BatchPutAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV19DeleteDomainRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteDomainRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV19DeleteDomainRequestV">DeleteDomainRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DeleteDomainRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteDomainRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV21DomainMetadataRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DomainMetadataRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV21DomainMetadataRequestV">DomainMetadataRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DomainMetadataRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainMetadataRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV20DomainMetadataResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DomainMetadataResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV20DomainMetadataResultV">DomainMetadataResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/DomainMetadataResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainMetadataResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1635,9 +1277,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8SimpleDBAAV23DeleteAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8SimpleDBAAV23DeleteAttributesRequestV">DeleteAttributesRequest</a>
+                    <a name="/s:8SimpleDBAAV20GetAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/GetAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV20GetAttributesRequestV">GetAttributesRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1647,13 +1289,377 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/SimpleDB/DeleteAttributesRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/SimpleDB/GetAttributesRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV19GetAttributesResultV"></a>
+                    <a name="//apple_ref/swift/Struct/GetAttributesResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV19GetAttributesResultV">GetAttributesResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/GetAttributesResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetAttributesResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV4ItemV"></a>
+                    <a name="//apple_ref/swift/Struct/Item" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV4ItemV">Item</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/Item.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Item</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV8ItemListV"></a>
+                    <a name="//apple_ref/swift/Struct/ItemList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV8ItemListV">ItemList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ItemList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ItemList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV18ListDomainsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListDomainsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV18ListDomainsRequestV">ListDomainsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ListDomainsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDomainsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV17ListDomainsResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ListDomainsResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV17ListDomainsResultV">ListDomainsResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ListDomainsResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDomainsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV20PutAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/PutAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV20PutAttributesRequestV">PutAttributesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/PutAttributesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV20ReplaceableAttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/ReplaceableAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV20ReplaceableAttributeV">ReplaceableAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ReplaceableAttribute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV24ReplaceableAttributeListV"></a>
+                    <a name="//apple_ref/swift/Struct/ReplaceableAttributeList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV24ReplaceableAttributeListV">ReplaceableAttributeList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ReplaceableAttributeList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableAttributeList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV15ReplaceableItemV"></a>
+                    <a name="//apple_ref/swift/Struct/ReplaceableItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV15ReplaceableItemV">ReplaceableItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ReplaceableItem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableItem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV19ReplaceableItemListV"></a>
+                    <a name="//apple_ref/swift/Struct/ReplaceableItemList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV19ReplaceableItemListV">ReplaceableItemList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/ReplaceableItemList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ReplaceableItemList</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV13SelectRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/SelectRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV13SelectRequestV">SelectRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/SelectRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SelectRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV12SelectResultV"></a>
+                    <a name="//apple_ref/swift/Struct/SelectResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV12SelectResultV">SelectResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/SelectResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SelectResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8SimpleDBAAV15UpdateConditionV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8SimpleDBAAV15UpdateConditionV">UpdateCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/SimpleDB/UpdateCondition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateCondition</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1665,7 +1671,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

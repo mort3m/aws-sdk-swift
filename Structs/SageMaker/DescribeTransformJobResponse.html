@@ -14,7 +14,7 @@
     <a title="DescribeTransformJobResponse Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransformss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxConcurrentTransforms" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransformss5Int32VSgvp">maxConcurrentTransforms</a>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategyAB05BatchH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/batchStrategy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategyAB05BatchH0OSgvp">batchStrategy</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The maximum number of parallel requests on each instance node that can be launched in a transform job. The default value is 1.</p>
+                        <p>SingleRecord means only one record was used per a batch. MultiRecord means batches contained as many records that could possibly fit within the MaxPayloadInMB limit.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxConcurrentTransforms</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">batchStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/BatchStrategy.html">BatchStrategy</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV16transformEndTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/transformEndTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV16transformEndTime15AWSSDKSwiftCore0I5StampVSgvp">transformEndTime</a>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV11environmentSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV11environmentSDyS2SGSgvp">environment</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,122 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates when the transform job is Completed, Stopped, or Failed. You are billed for the time interval between this time and the value of TransformStartTime.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformEndTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE3ArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/transformJobArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE3ArnSSvp">transformJobArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the transform job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV08labelingE3ArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/labelingJobArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV08labelingE3ArnSSSgvp">labelingJobArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the Amazon SageMaker Ground Truth labeling job that created the transform or training job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">labelingJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV14transformInputAB0dH0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/transformInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV14transformInputAB0dH0Vvp">transformInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the dataset to be transformed and the Amazon S3 location where it is stored.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformInput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformInput.html">TransformInput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV9modelNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/modelName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV9modelNameSSvp">modelName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the model used in the transform job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">modelName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE6StatusAB0deH0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/transformJobStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE6StatusAB0deH0Ovp">transformJobStatus</a>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV08labelingE3ArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/labelingJobArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV08labelingE3ArnSSSgvp">labelingJobArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The status of the transform job. If the transform job failed, the reason is returned in the FailureReason field.</p>
+                        <p>The Amazon Resource Name (ARN) of the Amazon SageMaker Ground Truth labeling job that created the transform or training job.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformJobStatus.html">TransformJobStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">labelingJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategyAB05BatchH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/batchStrategy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategyAB05BatchH0OSgvp">batchStrategy</a>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransformss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxConcurrentTransforms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransformss5Int32VSgvp">maxConcurrentTransforms</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,149 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>SingleRecord means only one record was used per a batch. MultiRecord means batches contained as many records that could possibly fit within the MaxPayloadInMB limit.</p>
+                        <p>The maximum number of parallel requests on each instance node that can be launched in a transform job. The default value is 1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">batchStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/BatchStrategy.html">BatchStrategy</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE4NameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/transformJobName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE4NameSSvp">transformJobName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the transform job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV18transformStartTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/transformStartTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV18transformStartTime15AWSSDKSwiftCore0I5StampVSgvp">transformStartTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates when the transform job starts on ML instances. You are billed for the time interval between this time and the value of TransformEndTime.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformStartTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV18transformResourcesAB0dH0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/transformResources" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV18transformResourcesAB0dH0Vvp">transformResources</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the resources, including ML instance types and ML instance count, to use for the transform job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformResources</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformResources.html">TransformResources</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV11environmentSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV11environmentSDyS2SGSgvp">environment</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV15transformOutputAB0dH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/transformOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV15transformOutputAB0dH0VSgvp">transformOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Identifies the Amazon S3 location where you want Amazon SageMaker to save the results from the transform job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformOutput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformOutput.html">TransformOutput</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxConcurrentTransforms</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +766,252 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransforms12creationTime012transformEndK00lE3Arn08labelingeN00L5Input9modelName13failureReason0lE6Status13batchStrategy0leR00l5StartK00L9Resources11environment0L6Output0G11PayloadInMBADs5Int32VSg_15AWSSDKSwiftCore0K5StampVAZSgS2SSgAB0dP0VSSA0_AB0deU0OAB05BatchW0OSgSSA_AB0dY0VSDyS2SGSgAB0D6OutputVSgAWtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(maxConcurrentTransforms:creationTime:transformEndTime:transformJobArn:labelingJobArn:transformInput:modelName:failureReason:transformJobStatus:batchStrategy:transformJobName:transformStartTime:transformResources:environment:transformOutput:maxPayloadInMB:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV23maxConcurrentTransforms12creationTime012transformEndK00lE3Arn08labelingeN00L5Input9modelName13failureReason0lE6Status13batchStrategy0leR00l5StartK00L9Resources11environment0L6Output0G11PayloadInMBADs5Int32VSg_15AWSSDKSwiftCore0K5StampVAZSgS2SSgAB0dP0VSSA0_AB0deU0OAB05BatchW0OSgSSA_AB0dY0VSDyS2SGSgAB0D6OutputVSgAWtcfc">init(maxConcurrentTransforms:creationTime:transformEndTime:transformJobArn:labelingJobArn:transformInput:modelName:failureReason:transformJobStatus:batchStrategy:transformJobName:transformStartTime:transformResources:environment:transformOutput:maxPayloadInMB:)</a>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV9modelNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/modelName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV9modelNameSSvp">modelName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the model used in the transform job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">modelName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV16transformEndTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transformEndTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV16transformEndTime15AWSSDKSwiftCore0I5StampVSgvp">transformEndTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates when the transform job is Completed, Stopped, or Failed. You are billed for the time interval between this time and the value of TransformStartTime.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformEndTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV14transformInputAB0dH0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/transformInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV14transformInputAB0dH0Vvp">transformInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the dataset to be transformed and the Amazon S3 location where it is stored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformInput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformInput.html">TransformInput</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE3ArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/transformJobArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE3ArnSSvp">transformJobArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon Resource Name (ARN) of the transform job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE4NameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/transformJobName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE4NameSSvp">transformJobName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the transform job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE6StatusAB0deH0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/transformJobStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV09transformE6StatusAB0deH0Ovp">transformJobStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The status of the transform job. If the transform job failed, the reason is returned in the FailureReason field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformJobStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformJobStatus.html">TransformJobStatus</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV15transformOutputAB0dH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transformOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV15transformOutputAB0dH0VSgvp">transformOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Identifies the Amazon S3 location where you want Amazon SageMaker to save the results from the transform job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformOutput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformOutput.html">TransformOutput</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV18transformResourcesAB0dH0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/transformResources" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV18transformResourcesAB0dH0Vvp">transformResources</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the resources, including ML instance types and ML instance count, to use for the transform job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformResources</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformResources.html">TransformResources</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV18transformStartTime15AWSSDKSwiftCore0I5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transformStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV18transformStartTime15AWSSDKSwiftCore0I5StampVSgvp">transformStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates when the transform job starts on ML instances. You are billed for the time interval between this time and the value of TransformEndTime.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transformStartTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategy12creationTime11environment13failureReason08labelingE3Arn23maxConcurrentTransforms0P11PayloadInMB9modelName012transformEndJ00X5Input0xeO00xeW00xE6Status0X6Output0X9Resources0x5StartJ0AdB05BatchH0OSg_15AWSSDKSwiftCore0J5StampVSDyS2SGSgSSSgA1_s5Int32VSgA4_SSAZSgAB0dZ0VS2SAB0dE6StatusOAB0D6OutputVSgAB0D9ResourcesVA5_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(batchStrategy:creationTime:environment:failureReason:labelingJobArn:maxConcurrentTransforms:maxPayloadInMB:modelName:transformEndTime:transformInput:transformJobArn:transformJobName:transformJobStatus:transformOutput:transformResources:transformStartTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV28DescribeTransformJobResponseV13batchStrategy12creationTime11environment13failureReason08labelingE3Arn23maxConcurrentTransforms0P11PayloadInMB9modelName012transformEndJ00X5Input0xeO00xeW00xE6Status0X6Output0X9Resources0x5StartJ0AdB05BatchH0OSg_15AWSSDKSwiftCore0J5StampVSDyS2SGSgSSSgA1_s5Int32VSgA4_SSAZSgAB0dZ0VS2SAB0dE6StatusOAB0D6OutputVSgAB0D9ResourcesVA5_tcfc">init(batchStrategy:creationTime:environment:failureReason:labelingJobArn:maxConcurrentTransforms:maxPayloadInMB:modelName:transformEndTime:transformInput:transformJobArn:transformJobName:transformJobStatus:transformOutput:transformResources:transformStartTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,7 +1026,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">maxConcurrentTransforms</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">transformEndTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">labelingJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformInput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformInput.html">TransformInput</a></span><span class="p">,</span> <span class="nv">modelName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">failureReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformJobStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformJobStatus.html">TransformJobStatus</a></span><span class="p">,</span> <span class="nv">batchStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/BatchStrategy.html">BatchStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformJobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">transformStartTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformResources</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformResources.html">TransformResources</a></span><span class="p">,</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformOutput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformOutput.html">TransformOutput</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxPayloadInMB</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">batchStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/BatchStrategy.html">BatchStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">failureReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">labelingJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxConcurrentTransforms</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxPayloadInMB</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">modelName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">transformEndTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformInput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformInput.html">TransformInput</a></span><span class="p">,</span> <span class="nv">transformJobArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">transformJobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">transformJobStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformJobStatus.html">TransformJobStatus</a></span><span class="p">,</span> <span class="nv">transformOutput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformOutput.html">TransformOutput</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transformResources</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/TransformResources.html">TransformResources</a></span><span class="p">,</span> <span class="nv">transformStartTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1038,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

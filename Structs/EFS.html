@@ -14,7 +14,7 @@
     <a title="EFS Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,171 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV10deleteTagsyyAB06DeleteC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV10deleteTagsyyAB06DeleteC7RequestVKF">deleteTags(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes the specified tags from a file system. If the DeleteTags request includes a tag key that does not exist, Amazon EFS ignores it and doesn&rsquo;t cause an error. For more information about tags and related restrictions, see Tag Restrictions in the AWS Billing and Cost Management User Guide. This operation requires permissions for the elasticfilesystem:DeleteTags action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteTagsRequest.html">DeleteTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV20describeMountTargetsyAB08DescribecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeMountTargets(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV20describeMountTargetsyAB08DescribecD8ResponseVAB0ecD7RequestVKF">describeMountTargets(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When requesting all of the current mount targets, the order of mount targets returned in the response is unspecified. This operation requires permissions for the elasticfilesystem:DescribeMountTargets action, on either the file system ID that you specify in FileSystemId, or on the file system of the mount target that you specify in MountTargetId.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMountTargets</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetsRequest.html">DescribeMountTargetsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetsResponse.html">DescribeMountTargetsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV17createMountTargetyAB0cD11DescriptionVAB06CreatecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createMountTarget(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV17createMountTargetyAB0cD11DescriptionVAB06CreatecD7RequestVKF">createMountTarget(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount target. You can create one mount target in each Availability Zone in your VPC. All EC2 instances in a VPC within a given Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount target in order to access their file system. For more information, see Amazon EFS: How it Works.  In the request, you also specify a file system ID for which you are creating the mount target and the file system&rsquo;s lifecycle state must be available. For more information, see DescribeFileSystems. In the request, you also provide a subnet ID, which determines the following:   VPC in which Amazon EFS creates the mount target   Availability Zone in which Amazon EFS creates the mount target   IP address range from which Amazon EFS selects the IP address of the mount target (if you don&rsquo;t specify an IP address in the request)   After creating the mount target, Amazon EFS returns a response that includes, a MountTargetId and an IpAddress. You use this IP address when mounting the file system in an EC2 instance. You can also use the mount target&rsquo;s DNS name when mounting the file system. The EC2 instance on which you mount the file system via the mount target can resolve the mount target&rsquo;s DNS name to its IP address. For more information, see How it Works: Implementation Overview.  Note that you can create mount targets for a file system in only one VPC, and there can be only one mount target per Availability Zone. That is, if the file system already has one or more mount targets created for it, the subnet specified in the request to add another mount target must meet the following requirements:   Must belong to the same VPC as the subnets of the existing mount targets   Must not be in the same Availability Zone as any of the subnets of the existing mount targets   If the request satisfies the requirements, Amazon EFS does the following:   Creates a new mount target in the specified subnet.   Also creates a new network interface in the subnet as follows:   If the request provides an IpAddress, Amazon EFS assigns that IP address to the network interface. Otherwise, Amazon EFS assigns a free address in the subnet (in the same way that the Amazon EC2 CreateNetworkInterface call does when a request does not specify a primary private IP address).   If the request provides SecurityGroups, this network interface is associated with those security groups. Otherwise, it belongs to the default security group for the subnet&rsquo;s VPC.   Assigns the description Mount target fsmt-id for file system fs-id  where  fsmt-id  is the mount target ID, and  fs-id  is the FileSystemId.   Sets the requesterManaged property of the network interface to true, and the requesterId value to EFS.   Each Amazon EFS mount target has one corresponding requester-managed EC2 network interface. After the network interface is created, Amazon EFS sets the NetworkInterfaceId field in the mount target&rsquo;s description to the network interface ID, and the IpAddress field to its address. If network interface creation fails, the entire CreateMountTarget operation fails.    The CreateMountTarget call returns only after creating the network interface, but while the mount target state is still creating, you can check the mount target creation status by calling the DescribeMountTargets operation, which among other things returns the mount target state.  We recommend you create a mount target in each of the Availability Zones. There are cost considerations for using a file system in an Availability Zone through a mount target created in another Availability Zone. For more information, see Amazon EFS. In addition, by always using a mount target local to the instance&rsquo;s Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount target is created goes down, then you won&rsquo;t be able to access your file system through that mount target.  This operation requires permissions for the following action on the file system:    elasticfilesystem:CreateMountTarget    This operation also requires permissions for the following Amazon EC2 actions:    ec2:DescribeSubnets     ec2:DescribeNetworkInterfaces     ec2:CreateNetworkInterface</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createMountTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateMountTargetRequest.html">CreateMountTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/MountTargetDescription.html">MountTargetDescription</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV19describeFileSystemsyAB08DescribecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeFileSystems(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV19describeFileSystemsyAB08DescribecD8ResponseVAB0ecD7RequestVKF">describeFileSystems(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the description of a specific Amazon EFS file system if either the file system CreationToken or the FileSystemId is provided. Otherwise, it returns descriptions of all file systems owned by the caller&rsquo;s AWS account in the AWS Region of the endpoint that you&rsquo;re calling.  When retrieving all file system descriptions, you can optionally specify the MaxItems parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon EFS returns a NextMarker, an opaque token, in the response. In this case, you should send a subsequent request with the Marker request parameter set to the value of NextMarker.  To retrieve a list of your file system descriptions, this operation is used in an iterative process, where DescribeFileSystems is called first without the Marker and then the operation continues to call it with the Marker parameter set to the value of the NextMarker from the previous response until the response has no NextMarker.  The implementation may return fewer than MaxItems file system descriptions while still including a NextMarker value.   The order of file systems returned in the response of one DescribeFileSystems call and the order of file systems returned across the responses of a multi-call iteration is unspecified.   This operation requires permissions for the elasticfilesystem:DescribeFileSystems action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeFileSystems</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeFileSystemsRequest.html">DescribeFileSystemsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/DescribeFileSystemsResponse.html">DescribeFileSystemsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV12describeTagsyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV12describeTagsyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeTags(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the tags associated with a file system. The order of tags returned in the response of one DescribeTags call and the order of tags returned across the responses of a multi-call iteration (when using pagination) is unspecified.   This operation requires permissions for the elasticfilesystem:DescribeTags action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeTagsRequest.html">DescribeTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/DescribeTagsResponse.html">DescribeTagsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV16deleteFileSystemyyAB06DeletecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV16deleteFileSystemyyAB06DeletecD7RequestVKF">deleteFileSystem(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and you can&rsquo;t access any contents of the deleted file system.  You can&rsquo;t delete a file system that is in use. That is, if the file system has any mount targets, you must first delete them. For more information, see DescribeMountTargets and DeleteMountTarget.   The DeleteFileSystem call returns while the file system state is still deleting. You can check the file system deletion status by calling the DescribeFileSystems operation, which returns a list of file systems in your account. If you pass file system ID or creation token for the deleted file system, the DescribeFileSystems returns a 404 FileSystemNotFound error.  This operation requires permissions for the elasticfilesystem:DeleteFileSystem action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteFileSystemRequest.html">DeleteFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV16createFileSystemyAB0cD11DescriptionVAB06CreatecD7RequestVKF"></a>
+                    <a name="/s:3EFSAAV16createFileSystemy3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06CreatecD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV16createFileSystemyAB0cD11DescriptionVAB06CreatecD7RequestVKF">createFileSystem(_:)</a>
+                    <a class="token" href="#/s:3EFSAAV16createFileSystemy3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06CreatecD7RequestVKF">createFileSystem(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateFileSystemRequest.html">CreateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/FileSystemDescription.html">FileSystemDescription</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateFileSystemRequest.html">CreateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/FileSystemDescription.html">FileSystemDescription</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV16updateFileSystemyAB0cD11DescriptionVAB06UpdatecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV16updateFileSystemyAB0cD11DescriptionVAB06UpdatecD7RequestVKF">updateFileSystem(_:)</a>
+                    <a name="/s:3EFSAAV17createMountTargety3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06CreatecD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createMountTarget(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV17createMountTargety3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06CreatecD7RequestVKF">createMountTarget(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates the throughput mode or the amount of provisioned throughput of an existing file system.</p>
+                        <p>Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount target. You can create one mount target in each Availability Zone in your VPC. All EC2 instances in a VPC within a given Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount target in order to access their file system. For more information, see Amazon EFS: How it Works.  In the request, you also specify a file system ID for which you are creating the mount target and the file system&rsquo;s lifecycle state must be available. For more information, see DescribeFileSystems. In the request, you also provide a subnet ID, which determines the following:   VPC in which Amazon EFS creates the mount target   Availability Zone in which Amazon EFS creates the mount target   IP address range from which Amazon EFS selects the IP address of the mount target (if you don&rsquo;t specify an IP address in the request)   After creating the mount target, Amazon EFS returns a response that includes, a MountTargetId and an IpAddress. You use this IP address when mounting the file system in an EC2 instance. You can also use the mount target&rsquo;s DNS name when mounting the file system. The EC2 instance on which you mount the file system via the mount target can resolve the mount target&rsquo;s DNS name to its IP address. For more information, see How it Works: Implementation Overview.  Note that you can create mount targets for a file system in only one VPC, and there can be only one mount target per Availability Zone. That is, if the file system already has one or more mount targets created for it, the subnet specified in the request to add another mount target must meet the following requirements:   Must belong to the same VPC as the subnets of the existing mount targets   Must not be in the same Availability Zone as any of the subnets of the existing mount targets   If the request satisfies the requirements, Amazon EFS does the following:   Creates a new mount target in the specified subnet.   Also creates a new network interface in the subnet as follows:   If the request provides an IpAddress, Amazon EFS assigns that IP address to the network interface. Otherwise, Amazon EFS assigns a free address in the subnet (in the same way that the Amazon EC2 CreateNetworkInterface call does when a request does not specify a primary private IP address).   If the request provides SecurityGroups, this network interface is associated with those security groups. Otherwise, it belongs to the default security group for the subnet&rsquo;s VPC.   Assigns the description Mount target fsmt-id for file system fs-id  where  fsmt-id  is the mount target ID, and  fs-id  is the FileSystemId.   Sets the requesterManaged property of the network interface to true, and the requesterId value to EFS.   Each Amazon EFS mount target has one corresponding requester-managed EC2 network interface. After the network interface is created, Amazon EFS sets the NetworkInterfaceId field in the mount target&rsquo;s description to the network interface ID, and the IpAddress field to its address. If network interface creation fails, the entire CreateMountTarget operation fails.    The CreateMountTarget call returns only after creating the network interface, but while the mount target state is still creating, you can check the mount target creation status by calling the DescribeMountTargets operation, which among other things returns the mount target state.  We recommend you create a mount target in each of the Availability Zones. There are cost considerations for using a file system in an Availability Zone through a mount target created in another Availability Zone. For more information, see Amazon EFS. In addition, by always using a mount target local to the instance&rsquo;s Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount target is created goes down, then you won&rsquo;t be able to access your file system through that mount target.  This operation requires permissions for the following action on the file system:    elasticfilesystem:CreateMountTarget    This operation also requires permissions for the following Amazon EC2 actions:    ec2:DescribeSubnets     ec2:DescribeNetworkInterfaces     ec2:CreateNetworkInterface</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/UpdateFileSystemRequest.html">UpdateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/FileSystemDescription.html">FileSystemDescription</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createMountTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateMountTargetRequest.html">CreateMountTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/MountTargetDescription.html">MountTargetDescription</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV10createTagsyyAB06CreateC7RequestVKF"></a>
+                    <a name="/s:3EFSAAV10createTagsy3NIO15EventLoopFutureCyytGAB06CreateC7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV10createTagsyyAB06CreateC7RequestVKF">createTags(_:)</a>
+                    <a class="token" href="#/s:3EFSAAV10createTagsy3NIO15EventLoopFutureCyytGAB06CreateC7RequestVKF">createTags(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +648,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateTagsRequest.html">CreateTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">createTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/CreateTagsRequest.html">CreateTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +659,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV31modifyMountTargetSecurityGroupsyyAB06ModifycdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/modifyMountTargetSecurityGroups(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV31modifyMountTargetSecurityGroupsyyAB06ModifycdeF7RequestVKF">modifyMountTargetSecurityGroups(_:)</a>
+                    <a name="/s:3EFSAAV16deleteFileSystemy3NIO15EventLoopFutureCyytGAB06DeletecD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteFileSystem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV16deleteFileSystemy3NIO15EventLoopFutureCyytGAB06DeletecD7RequestVKF">deleteFileSystem(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +669,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Modifies the set of security groups in effect for a mount target. When you create a mount target, Amazon EFS also creates a new network interface. For more information, see CreateMountTarget. This operation replaces the security groups in effect for the network interface associated with a mount target, with the SecurityGroups provided in the request. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not deleted.  The operation requires permissions for the following actions:    elasticfilesystem:ModifyMountTargetSecurityGroups action on the mount target&rsquo;s file system.     ec2:ModifyNetworkInterfaceAttribute action on the mount target&rsquo;s network interface.</p>
+                        <p>Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and you can&rsquo;t access any contents of the deleted file system.  You can&rsquo;t delete a file system that is in use. That is, if the file system has any mount targets, you must first delete them. For more information, see DescribeMountTargets and DeleteMountTarget.   The DeleteFileSystem call returns while the file system state is still deleting. You can check the file system deletion status by calling the DescribeFileSystems operation, which returns a list of file systems in your account. If you pass file system ID or creation token for the deleted file system, the DescribeFileSystems returns a 404 FileSystemNotFound error.  This operation requires permissions for the elasticfilesystem:DeleteFileSystem action.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">modifyMountTargetSecurityGroups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/ModifyMountTargetSecurityGroupsRequest.html">ModifyMountTargetSecurityGroupsRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteFileSystemRequest.html">DeleteFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +687,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV17deleteMountTargetyyAB06DeletecD7RequestVKF"></a>
+                    <a name="/s:3EFSAAV17deleteMountTargety3NIO15EventLoopFutureCyytGAB06DeletecD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteMountTarget(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV17deleteMountTargetyyAB06DeletecD7RequestVKF">deleteMountTarget(_:)</a>
+                    <a class="token" href="#/s:3EFSAAV17deleteMountTargety3NIO15EventLoopFutureCyytGAB06DeletecD7RequestVKF">deleteMountTarget(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +704,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteMountTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteMountTargetRequest.html">DeleteMountTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteMountTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteMountTargetRequest.html">DeleteMountTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +715,64 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV33describeMountTargetSecurityGroupsyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF"></a>
+                    <a name="/s:3EFSAAV10deleteTagsy3NIO15EventLoopFutureCyytGAB06DeleteC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteTags(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV10deleteTagsy3NIO15EventLoopFutureCyytGAB06DeleteC7RequestVKF">deleteTags(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes the specified tags from a file system. If the DeleteTags request includes a tag key that does not exist, Amazon EFS ignores it and doesn&rsquo;t cause an error. For more information about tags and related restrictions, see Tag Restrictions in the AWS Billing and Cost Management User Guide. This operation requires permissions for the elasticfilesystem:DeleteTags action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DeleteTagsRequest.html">DeleteTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV19describeFileSystemsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeFileSystems(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV19describeFileSystemsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF">describeFileSystems(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the description of a specific Amazon EFS file system if either the file system CreationToken or the FileSystemId is provided. Otherwise, it returns descriptions of all file systems owned by the caller&rsquo;s AWS account in the AWS Region of the endpoint that you&rsquo;re calling.  When retrieving all file system descriptions, you can optionally specify the MaxItems parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon EFS returns a NextMarker, an opaque token, in the response. In this case, you should send a subsequent request with the Marker request parameter set to the value of NextMarker.  To retrieve a list of your file system descriptions, this operation is used in an iterative process, where DescribeFileSystems is called first without the Marker and then the operation continues to call it with the Marker parameter set to the value of the NextMarker from the previous response until the response has no NextMarker.  The implementation may return fewer than MaxItems file system descriptions while still including a NextMarker value.   The order of file systems returned in the response of one DescribeFileSystems call and the order of file systems returned across the responses of a multi-call iteration is unspecified.   This operation requires permissions for the elasticfilesystem:DescribeFileSystems action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeFileSystems</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeFileSystemsRequest.html">DescribeFileSystemsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/DescribeFileSystemsResponse.html">DescribeFileSystemsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV33describeMountTargetSecurityGroupsy3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/describeMountTargetSecurityGroups(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV33describeMountTargetSecurityGroupsyAB08DescribecdeF8ResponseVAB0gcdeF7RequestVKF">describeMountTargetSecurityGroups(_:)</a>
+                    <a class="token" href="#/s:3EFSAAV33describeMountTargetSecurityGroupsy3NIO15EventLoopFutureCyAB08DescribecdeF8ResponseVGAB0kcdeF7RequestVKF">describeMountTargetSecurityGroups(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +787,116 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMountTargetSecurityGroups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetSecurityGroupsRequest.html">DescribeMountTargetSecurityGroupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetSecurityGroupsResponse.html">DescribeMountTargetSecurityGroupsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMountTargetSecurityGroups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetSecurityGroupsRequest.html">DescribeMountTargetSecurityGroupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/DescribeMountTargetSecurityGroupsResponse.html">DescribeMountTargetSecurityGroupsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV20describeMountTargetsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeMountTargets(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV20describeMountTargetsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF">describeMountTargets(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When requesting all of the current mount targets, the order of mount targets returned in the response is unspecified. This operation requires permissions for the elasticfilesystem:DescribeMountTargets action, on either the file system ID that you specify in FileSystemId, or on the file system of the mount target that you specify in MountTargetId.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMountTargets</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeMountTargetsRequest.html">DescribeMountTargetsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/DescribeMountTargetsResponse.html">DescribeMountTargetsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV12describeTagsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTags(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV12describeTagsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeTags(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the tags associated with a file system. The order of tags returned in the response of one DescribeTags call and the order of tags returned across the responses of a multi-call iteration (when using pagination) is unspecified.   This operation requires permissions for the elasticfilesystem:DescribeTags action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/DescribeTagsRequest.html">DescribeTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/DescribeTagsResponse.html">DescribeTagsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV31modifyMountTargetSecurityGroupsy3NIO15EventLoopFutureCyytGAB06ModifycdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/modifyMountTargetSecurityGroups(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV31modifyMountTargetSecurityGroupsy3NIO15EventLoopFutureCyytGAB06ModifycdeF7RequestVKF">modifyMountTargetSecurityGroups(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Modifies the set of security groups in effect for a mount target. When you create a mount target, Amazon EFS also creates a new network interface. For more information, see CreateMountTarget. This operation replaces the security groups in effect for the network interface associated with a mount target, with the SecurityGroups provided in the request. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not deleted.  The operation requires permissions for the following actions:    elasticfilesystem:ModifyMountTargetSecurityGroups action on the mount target&rsquo;s file system.     ec2:ModifyNetworkInterfaceAttribute action on the mount target&rsquo;s network interface.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">modifyMountTargetSecurityGroups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/ModifyMountTargetSecurityGroupsRequest.html">ModifyMountTargetSecurityGroupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV16updateFileSystemy3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06UpdatecD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateFileSystem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV16updateFileSystemy3NIO15EventLoopFutureCyAB0cD11DescriptionVGAB06UpdatecD7RequestVKF">updateFileSystem(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the throughput mode or the amount of provisioned throughput of an existing file system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/EFS/UpdateFileSystemRequest.html">UpdateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/EFS/FileSystemDescription.html">FileSystemDescription</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -902,62 +907,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV14FileSystemSizeV"></a>
-                    <a name="//apple_ref/swift/Struct/FileSystemSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV14FileSystemSizeV">FileSystemSize</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/FileSystemSize.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemSize</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV27DescribeMountTargetsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeMountTargetsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV27DescribeMountTargetsRequestV">DescribeMountTargetsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeMountTargetsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -980,62 +929,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV20DescribeTagsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTagsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV20DescribeTagsResponseV">DescribeTagsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeTagsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV40DescribeMountTargetSecurityGroupsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeMountTargetSecurityGroupsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV40DescribeMountTargetSecurityGroupsRequestV">DescribeMountTargetSecurityGroupsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeMountTargetSecurityGroupsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetSecurityGroupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1101,146 +994,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV28DescribeMountTargetsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeMountTargetsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV28DescribeMountTargetsResponseV">DescribeMountTargetsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeMountTargetsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV21FileSystemDescriptionV"></a>
-                    <a name="//apple_ref/swift/Struct/FileSystemDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV21FileSystemDescriptionV">FileSystemDescription</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/FileSystemDescription.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV26DescribeFileSystemsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV26DescribeFileSystemsRequestV">DescribeFileSystemsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeFileSystemsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV38ModifyMountTargetSecurityGroupsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ModifyMountTargetSecurityGroupsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV38ModifyMountTargetSecurityGroupsRequestV">ModifyMountTargetSecurityGroupsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/ModifyMountTargetSecurityGroupsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ModifyMountTargetSecurityGroupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV15PerformanceModeO"></a>
-                    <a name="//apple_ref/swift/Enum/PerformanceMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV15PerformanceModeO">PerformanceMode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/PerformanceMode.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PerformanceMode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EFSAAV23DeleteFileSystemRequestV"></a>
                     <a name="//apple_ref/swift/Struct/DeleteFileSystemRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EFSAAV23DeleteFileSystemRequestV">DeleteFileSystemRequest</a>
@@ -1297,90 +1050,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV27DescribeFileSystemsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV27DescribeFileSystemsResponseV">DescribeFileSystemsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/DescribeFileSystemsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV14ThroughputModeO"></a>
-                    <a name="//apple_ref/swift/Enum/ThroughputMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV14ThroughputModeO">ThroughputMode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/ThroughputMode.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ThroughputMode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV22MountTargetDescriptionV"></a>
-                    <a name="//apple_ref/swift/Struct/MountTargetDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV22MountTargetDescriptionV">MountTargetDescription</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/EFS/MountTargetDescription.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MountTargetDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EFSAAV17DeleteTagsRequestV"></a>
                     <a name="//apple_ref/swift/Struct/DeleteTagsRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EFSAAV17DeleteTagsRequestV">DeleteTagsRequest</a>
@@ -1409,9 +1078,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV14LifeCycleStateO"></a>
-                    <a name="//apple_ref/swift/Enum/LifeCycleState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV14LifeCycleStateO">LifeCycleState</a>
+                    <a name="/s:3EFSAAV26DescribeFileSystemsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV26DescribeFileSystemsRequestV">DescribeFileSystemsRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1421,13 +1090,69 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/EFS/LifeCycleState.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/EFS/DescribeFileSystemsRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LifeCycleState</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV27DescribeFileSystemsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV27DescribeFileSystemsResponseV">DescribeFileSystemsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/DescribeFileSystemsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV40DescribeMountTargetSecurityGroupsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeMountTargetSecurityGroupsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV40DescribeMountTargetSecurityGroupsRequestV">DescribeMountTargetSecurityGroupsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/DescribeMountTargetSecurityGroupsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetSecurityGroupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1465,9 +1190,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV3TagV"></a>
-                    <a name="//apple_ref/swift/Struct/Tag" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV3TagV">Tag</a>
+                    <a name="/s:3EFSAAV27DescribeMountTargetsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeMountTargetsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV27DescribeMountTargetsRequestV">DescribeMountTargetsRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1477,13 +1202,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/EFS/Tag.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/EFS/DescribeMountTargetsRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1493,9 +1218,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV23UpdateFileSystemRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateFileSystemRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV23UpdateFileSystemRequestV">UpdateFileSystemRequest</a>
+                    <a name="/s:3EFSAAV28DescribeMountTargetsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeMountTargetsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV28DescribeMountTargetsResponseV">DescribeMountTargetsResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1505,13 +1230,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/EFS/UpdateFileSystemRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/EFS/DescribeMountTargetsResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMountTargetsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1546,12 +1271,292 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV20DescribeTagsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTagsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV20DescribeTagsResponseV">DescribeTagsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/DescribeTagsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV21FileSystemDescriptionV"></a>
+                    <a name="//apple_ref/swift/Struct/FileSystemDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV21FileSystemDescriptionV">FileSystemDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/FileSystemDescription.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV14FileSystemSizeV"></a>
+                    <a name="//apple_ref/swift/Struct/FileSystemSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV14FileSystemSizeV">FileSystemSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/FileSystemSize.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemSize</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV14LifeCycleStateO"></a>
+                    <a name="//apple_ref/swift/Enum/LifeCycleState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV14LifeCycleStateO">LifeCycleState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/LifeCycleState.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LifeCycleState</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV38ModifyMountTargetSecurityGroupsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ModifyMountTargetSecurityGroupsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV38ModifyMountTargetSecurityGroupsRequestV">ModifyMountTargetSecurityGroupsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/ModifyMountTargetSecurityGroupsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ModifyMountTargetSecurityGroupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV22MountTargetDescriptionV"></a>
+                    <a name="//apple_ref/swift/Struct/MountTargetDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV22MountTargetDescriptionV">MountTargetDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/MountTargetDescription.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MountTargetDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV15PerformanceModeO"></a>
+                    <a name="//apple_ref/swift/Enum/PerformanceMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV15PerformanceModeO">PerformanceMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/PerformanceMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PerformanceMode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV3TagV"></a>
+                    <a name="//apple_ref/swift/Struct/Tag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV3TagV">Tag</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/Tag.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV14ThroughputModeO"></a>
+                    <a name="//apple_ref/swift/Enum/ThroughputMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV14ThroughputModeO">ThroughputMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/ThroughputMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ThroughputMode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV23UpdateFileSystemRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateFileSystemRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV23UpdateFileSystemRequestV">UpdateFileSystemRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/EFS/UpdateFileSystemRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

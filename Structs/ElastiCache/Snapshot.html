@@ -14,7 +14,7 @@
     <a title="Snapshot Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV6engineSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV6engineSSSgvp">engine</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgradeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,257 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the cache engine (memcached or redis) used by the source cluster.</p>
+                        <p>This parameter is currently disabled.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV13cacheNodeTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheNodeType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13cacheNodeTypeSSSgvp">cacheNodeType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the compute and memory capacity node type for the source cluster. The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge   R4 node types; cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge       Notes:    All T2 instances are created in an Amazon Virtual Private Cloud (Amazon VPC).   Redis (cluster mode disabled): Redis backup/restore is not supported on T1 and T2 instances.    Redis (cluster mode enabled): Backup/restore is not supported on T1 instances.   Redis Append-only files (AOF) functionality is not supported for T1 or T2 instances.   For a complete listing of node types and specifications, see:    Amazon ElastiCache Product Features and Details     Cache Node Type-Specific Parameters for Memcached     Cache Node Type-Specific Parameters for Redis</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:23:00-mon:01:30</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV13engineVersionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13engineVersionSSSgvp">engineVersion</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The version of the cache engine version that is used by the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV13numNodeGroupss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/numNodeGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13numNodeGroupss5Int32VSgvp">numNodeGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of node groups (shards) in this snapshot. When restoring from a snapshot, the number of node groups (shards) in the snapshot and in the restored replication group must be the same.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV20cacheSubnetGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheSubnetGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV20cacheSubnetGroupNameSSSgvp">cacheSubnetGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the cache subnet group associated with the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV25preferredAvailabilityZoneSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredAvailabilityZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV25preferredAvailabilityZoneSSSgvp">preferredAvailabilityZone</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the Availability Zone in which the source cluster is located.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredAvailabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotStatusSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotStatusSSSgvp">snapshotStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status of the snapshot. Valid values: creating | available | restoring | copying | deleting.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV8topicArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/topicArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV8topicArnSSSgvp">topicArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) for the topic used by the source cluster for publishing notifications.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">topicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV13nodeSnapshotsAB04NodeC4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nodeSnapshots" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13nodeSnapshotsAB04NodeC4ListVSgvp">nodeSnapshots</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of the cache nodes in the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeSnapshots</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeSnapshotList.html">NodeSnapshotList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV14cacheClusterIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheClusterId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14cacheClusterIdSSSgvp">cacheClusterId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The user-supplied identifier of the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11ElastiCacheAAV8SnapshotV22cacheClusterCreateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
                     <a name="//apple_ref/swift/Property/cacheClusterCreateTime" class="dashAnchor"></a>
                     <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV22cacheClusterCreateTime15AWSSDKSwiftCore0G5StampVSgvp">cacheClusterCreateTime</a>
@@ -928,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV22snapshotRetentionLimits5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotRetentionLimit" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV22snapshotRetentionLimits5Int32VSgvp">snapshotRetentionLimit</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV14cacheClusterIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheClusterId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14cacheClusterIdSSSgvp">cacheClusterId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>For an automatic snapshot, the number of days for which ElastiCache retains the snapshot before deleting it. For manual snapshots, this field reflects the SnapshotRetentionLimit for the source cluster when the snapshot was created. This field is otherwise ignored: Manual snapshots do not expire, and can only be deleted using the DeleteSnapshot operation.   Important If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.</p>
+                        <p>The user-supplied identifier of the source cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV5vpcIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vpcId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV5vpcIdSSSgvp">vpcId</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV13cacheNodeTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheNodeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13cacheNodeTypeSSSgvp">cacheNodeType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -965,122 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon Virtual Private Cloud identifier (VPC ID) of the cache subnet group for the source cluster.</p>
+                        <p>The name of the compute and memory capacity node type for the source cluster. The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge   R4 node types; cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge       Notes:    All T2 instances are created in an Amazon Virtual Private Cloud (Amazon VPC).   Redis (cluster mode disabled): Redis backup/restore is not supported on T1 and T2 instances.    Redis (cluster mode enabled): Backup/restore is not supported on T1 instances.   Redis Append-only files (AOF) functionality is not supported for T1 or T2 instances.   For a complete listing of node types and specifications, see:    Amazon ElastiCache Product Features and Details     Cache Node Type-Specific Parameters for Memcached     Cache Node Type-Specific Parameters for Redis</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotWindowSSSgvp">snapshotWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The daily time range during which ElastiCache takes daily snapshots of the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV03numB5Nodess5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/numCacheNodes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV03numB5Nodess5Int32VSgvp">numCacheNodes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of cache nodes in the source cluster. For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 20.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numCacheNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV18replicationGroupIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV18replicationGroupIdSSSgvp">replicationGroupId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The unique identifier of the source replication group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV4ports5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV4ports5Int32VSgvp">port</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The port number used by each cache nodes in the source cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1117,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotSourceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotSource" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotSourceSSSgvp">snapshotSource</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV20cacheSubnetGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheSubnetGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV20cacheSubnetGroupNameSSSgvp">cacheSubnetGroupName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1127,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates whether the snapshot is from an automatic backup (automated) or was created manually (manual).</p>
+                        <p>The name of the cache subnet group associated with the source cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotSource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV12snapshotNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV12snapshotNameSSSgvp">snapshotName</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV6engineSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV6engineSSSgvp">engine</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,14 +776,203 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of a snapshot. For an automatic snapshot, the name is system-generated. For a manual snapshot, this is the user-provided name.</p>
+                        <p>The name of the cache engine (memcached or redis) used by the source cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV13engineVersionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13engineVersionSSSgvp">engineVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The version of the cache engine version that is used by the source cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV13nodeSnapshotsAB04NodeC4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nodeSnapshots" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13nodeSnapshotsAB04NodeC4ListVSgvp">nodeSnapshots</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of the cache nodes in the source cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeSnapshots</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeSnapshotList.html">NodeSnapshotList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV03numB5Nodess5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/numCacheNodes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV03numB5Nodess5Int32VSgvp">numCacheNodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of cache nodes in the source cluster. For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 20.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numCacheNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV13numNodeGroupss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/numNodeGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV13numNodeGroupss5Int32VSgvp">numNodeGroups</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of node groups (shards) in this snapshot. When restoring from a snapshot, the number of node groups (shards) in the snapshot and in the restored replication group must be the same.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV4ports5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV4ports5Int32VSgvp">port</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The port number used by each cache nodes in the source cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV25preferredAvailabilityZoneSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredAvailabilityZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV25preferredAvailabilityZoneSSSgvp">preferredAvailabilityZone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the Availability Zone in which the source cluster is located.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredAvailabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:23:00-mon:01:30</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1198,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgradeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV18replicationGroupIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV18replicationGroupIdSSSgvp">replicationGroupId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1208,14 +1019,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This parameter is currently disabled.</p>
+                        <p>The unique identifier of the source replication group.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,9 +1036,198 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV8SnapshotV6engine13cacheNodeType26preferredMaintenanceWindow0D7Version03numF6Groups0E15SubnetGroupName0H16AvailabilityZone14snapshotStatus8topicArn13nodeSnapshots17automaticFailover0E9ClusterId0E17ClusterCreateTime0S14RetentionLimit5vpcId0sJ00lB5Nodes011replicationO2Id4port0e9ParameteroP00S6Source0sP0011replicationO11Description09autoMinorK7UpgradeADSSSg_A1_A1_A1_s5Int32VSgA1_A1_A1_A1_AB0fC4ListVSgAB09AutomaticzT0OSgA1_15AWSSDKSwiftCore9TimeStampVSgA4_A1_A1_A4_A1_A4_A1_A1_A1_A1_SbSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(engine:cacheNodeType:preferredMaintenanceWindow:engineVersion:numNodeGroups:cacheSubnetGroupName:preferredAvailabilityZone:snapshotStatus:topicArn:nodeSnapshots:automaticFailover:cacheClusterId:cacheClusterCreateTime:snapshotRetentionLimit:vpcId:snapshotWindow:numCacheNodes:replicationGroupId:port:cacheParameterGroupName:snapshotSource:snapshotName:replicationGroupDescription:autoMinorVersionUpgrade:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV6engine13cacheNodeType26preferredMaintenanceWindow0D7Version03numF6Groups0E15SubnetGroupName0H16AvailabilityZone14snapshotStatus8topicArn13nodeSnapshots17automaticFailover0E9ClusterId0E17ClusterCreateTime0S14RetentionLimit5vpcId0sJ00lB5Nodes011replicationO2Id4port0e9ParameteroP00S6Source0sP0011replicationO11Description09autoMinorK7UpgradeADSSSg_A1_A1_A1_s5Int32VSgA1_A1_A1_A1_AB0fC4ListVSgAB09AutomaticzT0OSgA1_15AWSSDKSwiftCore9TimeStampVSgA4_A1_A1_A4_A1_A4_A1_A1_A1_A1_SbSgtcfc">init(engine:cacheNodeType:preferredMaintenanceWindow:engineVersion:numNodeGroups:cacheSubnetGroupName:preferredAvailabilityZone:snapshotStatus:topicArn:nodeSnapshots:automaticFailover:cacheClusterId:cacheClusterCreateTime:snapshotRetentionLimit:vpcId:snapshotWindow:numCacheNodes:replicationGroupId:port:cacheParameterGroupName:snapshotSource:snapshotName:replicationGroupDescription:autoMinorVersionUpgrade:)</a>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV12snapshotNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV12snapshotNameSSSgvp">snapshotName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of a snapshot. For an automatic snapshot, the name is system-generated. For a manual snapshot, this is the user-provided name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV22snapshotRetentionLimits5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotRetentionLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV22snapshotRetentionLimits5Int32VSgvp">snapshotRetentionLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>For an automatic snapshot, the number of days for which ElastiCache retains the snapshot before deleting it. For manual snapshots, this field reflects the SnapshotRetentionLimit for the source cluster when the snapshot was created. This field is otherwise ignored: Manual snapshots do not expire, and can only be deleted using the DeleteSnapshot operation.   Important If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotSourceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotSourceSSSgvp">snapshotSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether the snapshot is from an automatic backup (automated) or was created manually (manual).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotSource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotStatusSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotStatusSSSgvp">snapshotStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The status of the snapshot. Valid values: creating | available | restoring | copying | deleting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV14snapshotWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV14snapshotWindowSSSgvp">snapshotWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The daily time range during which ElastiCache takes daily snapshots of the source cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV8topicArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/topicArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV8topicArnSSSgvp">topicArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon Resource Name (ARN) for the topic used by the source cluster for publishing notifications.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">topicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV5vpcIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vpcId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV5vpcIdSSSgvp">vpcId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon Virtual Private Cloud identifier (VPC ID) of the cache subnet group for the source cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgrade17automaticFailover22cacheClusterCreateTime0jK2Id0J8NodeType0J18ParameterGroupName0j6SubnetrS06engine0uF013nodeSnapshots03numB5Nodes0xO6Groups4port25preferredAvailabilityZone26preferredMaintenanceWindow011replicationR11Description011replicationrN008snapshotS022snapshotRetentionLimit14snapshotSource14snapshotStatus14snapshotWindow8topicArn03vpcN0ADSbSg_AB09AutomaticI6StatusOSg15AWSSDKSwiftCore0M5StampVSgSSSgA9_A9_A9_A9_A9_AB0oC4ListVSgs5Int32VSgA15_A15_A9_A9_A9_A9_A9_A15_A9_A9_A9_A9_A9_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(autoMinorVersionUpgrade:automaticFailover:cacheClusterCreateTime:cacheClusterId:cacheNodeType:cacheParameterGroupName:cacheSubnetGroupName:engine:engineVersion:nodeSnapshots:numCacheNodes:numNodeGroups:port:preferredAvailabilityZone:preferredMaintenanceWindow:replicationGroupDescription:replicationGroupId:snapshotName:snapshotRetentionLimit:snapshotSource:snapshotStatus:snapshotWindow:topicArn:vpcId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV8SnapshotV23autoMinorVersionUpgrade17automaticFailover22cacheClusterCreateTime0jK2Id0J8NodeType0J18ParameterGroupName0j6SubnetrS06engine0uF013nodeSnapshots03numB5Nodes0xO6Groups4port25preferredAvailabilityZone26preferredMaintenanceWindow011replicationR11Description011replicationrN008snapshotS022snapshotRetentionLimit14snapshotSource14snapshotStatus14snapshotWindow8topicArn03vpcN0ADSbSg_AB09AutomaticI6StatusOSg15AWSSDKSwiftCore0M5StampVSgSSSgA9_A9_A9_A9_A9_AB0oC4ListVSgs5Int32VSgA15_A15_A9_A9_A9_A9_A9_A15_A9_A9_A9_A9_A9_tcfc">init(autoMinorVersionUpgrade:automaticFailover:cacheClusterCreateTime:cacheClusterId:cacheNodeType:cacheParameterGroupName:cacheSubnetGroupName:engine:engineVersion:nodeSnapshots:numCacheNodes:numNodeGroups:port:preferredAvailabilityZone:preferredMaintenanceWindow:replicationGroupDescription:replicationGroupId:snapshotName:snapshotRetentionLimit:snapshotSource:snapshotStatus:snapshotWindow:topicArn:vpcId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1242,7 +1242,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredAvailabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">topicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeSnapshots</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeSnapshotList.html">NodeSnapshotList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automaticFailover</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/AutomaticFailoverStatus.html">AutomaticFailoverStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheClusterCreateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numCacheNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotSource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automaticFailover</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/AutomaticFailoverStatus.html">AutomaticFailoverStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheClusterCreateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeSnapshots</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeSnapshotList.html">NodeSnapshotList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numCacheNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredAvailabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotSource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">topicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1254,7 +1254,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

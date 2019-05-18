@@ -14,7 +14,7 @@
     <a title="HlsManifest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MediaPackageAAV11HlsManifestV9adMarkersAB02AdF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/adMarkers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV9adMarkersAB02AdF0OSgvp">adMarkers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This setting controls how ad markers are included in the packaged OriginEndpoint.
+<q>NONE</q> will omit all SCTE-35 ad markers from the output.
+<q>PASSTHROUGH</q> causes the manifest to contain a copy of the SCTE-35 ad
+markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest.
+<q>SCTE35_ENHANCED</q> generates ad markers and blackout tags based on SCTE-35
+messages in the input source.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MediaPackageAAV11HlsManifestV2idSSvp"></a>
                     <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV2idSSvp">id</a>
@@ -595,6 +627,60 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV11HlsManifestV23includeIframeOnlyStreamSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeIframeOnlyStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV23includeIframeOnlyStreamSbSgvp">includeIframeOnlyStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When enabled, an I-Frame only stream will be included in the output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV11HlsManifestV12manifestNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/manifestName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV12manifestNameSSSgvp">manifestName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">manifestName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -633,60 +719,6 @@ entry will be included in the media playlist.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV11HlsManifestV3urlSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV3urlSSSgvp">url</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The URL of the packaged OriginEndpoint for consumption.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MediaPackageAAV11HlsManifestV23includeIframeOnlyStreamSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeIframeOnlyStream" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV23includeIframeOnlyStreamSbSgvp">includeIframeOnlyStream</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When enabled, an I-Frame only stream will be included in the output.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:12MediaPackageAAV11HlsManifestV21playlistWindowSecondss5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/playlistWindowSeconds" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV21playlistWindowSecondss5Int32VSgvp">playlistWindowSeconds</a>
@@ -705,38 +737,6 @@ entry will be included in the media playlist.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MediaPackageAAV11HlsManifestV9adMarkersAB02AdF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/adMarkers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV9adMarkersAB02AdF0OSgvp">adMarkers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This setting controls how ad markers are included in the packaged OriginEndpoint.
-<q>NONE</q> will omit all SCTE-35 ad markers from the output.
-<q>PASSTHROUGH</q> causes the manifest to contain a copy of the SCTE-35 ad
-markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest.
-<q>SCTE35_ENHANCED</q> generates ad markers and blackout tags based on SCTE-35
-messages in the input source.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -781,9 +781,9 @@ it will be passed through to HLS output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV11HlsManifestV12manifestNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/manifestName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV12manifestNameSSSgvp">manifestName</a>
+                    <a name="/s:12MediaPackageAAV11HlsManifestV3urlSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV3urlSSSgvp">url</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -791,14 +791,14 @@ it will be passed through to HLS output.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.</p>
+                        <p>The URL of the packaged OriginEndpoint for consumption.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">manifestName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -808,9 +808,9 @@ it will be passed through to HLS output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV11HlsManifestV2id12playlistType3url23includeIframeOnlyStream0F13WindowSeconds9adMarkers023programDateTimeIntervalN012manifestNameADSS_AB08PlaylistG0OSgSSSgSbSgs5Int32VSgAB02AdP0OSgAtPtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(id:playlistType:url:includeIframeOnlyStream:playlistWindowSeconds:adMarkers:programDateTimeIntervalSeconds:manifestName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV2id12playlistType3url23includeIframeOnlyStream0F13WindowSeconds9adMarkers023programDateTimeIntervalN012manifestNameADSS_AB08PlaylistG0OSgSSSgSbSgs5Int32VSgAB02AdP0OSgAtPtcfc">init(id:playlistType:url:includeIframeOnlyStream:playlistWindowSeconds:adMarkers:programDateTimeIntervalSeconds:manifestName:)</a>
+                    <a name="/s:12MediaPackageAAV11HlsManifestV9adMarkers2id23includeIframeOnlyStream12manifestName12playlistType0N13WindowSeconds023programDateTimeIntervalQ03urlAdB02AdF0OSg_SSSbSgSSSgAB08PlaylistO0OSgs5Int32VSgAwQtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(adMarkers:id:includeIframeOnlyStream:manifestName:playlistType:playlistWindowSeconds:programDateTimeIntervalSeconds:url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV11HlsManifestV9adMarkers2id23includeIframeOnlyStream12manifestName12playlistType0N13WindowSeconds023programDateTimeIntervalQ03urlAdB02AdF0OSg_SSSbSgSSSgAB08PlaylistO0OSgs5Int32VSgAwQtcfc">init(adMarkers:id:includeIframeOnlyStream:manifestName:playlistType:playlistWindowSeconds:programDateTimeIntervalSeconds:url:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -825,7 +825,7 @@ it will be passed through to HLS output.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/PlaylistType.html">PlaylistType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programDateTimeIntervalSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">manifestName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">manifestName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/PlaylistType.html">PlaylistType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programDateTimeIntervalSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -837,7 +837,7 @@ it will be passed through to HLS output.</p>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

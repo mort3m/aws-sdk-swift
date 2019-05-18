@@ -14,7 +14,7 @@
     <a title="PutRecordsRequestEntry Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKeySSvp"></a>
-                    <a name="//apple_ref/swift/Property/partitionKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKeySSvp">partitionKey</a>
+                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV4data10Foundation4DataVvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV4data10Foundation4DataVvp">data</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</p>
+                        <p>The data blob to put into the record, which is base64-encoded when the blob is serialized. When the data blob (the payload before base64-encoding) is added to the partition key size, the total size must not exceed the maximum record size (1 MB).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">partitionKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV4data10Foundation4DataVvp"></a>
-                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV4data10Foundation4DataVvp">data</a>
+                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKeySSvp"></a>
+                    <a name="//apple_ref/swift/Property/partitionKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKeySSvp">partitionKey</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The data blob to put into the record, which is base64-encoded when the blob is serialized. When the data blob (the payload before base64-encoding) is added to the partition key size, the total size must not exceed the maximum record size (1 MB).</p>
+                        <p>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">partitionKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKey012explicitHashG04dataADSS_SSSg10Foundation4DataVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(partitionKey:explicitHashKey:data:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV12partitionKey012explicitHashG04dataADSS_SSSg10Foundation4DataVtcfc">init(partitionKey:explicitHashKey:data:)</a>
+                    <a name="/s:7KinesisAAV22PutRecordsRequestEntryV4data15explicitHashKey09partitionI0AD10Foundation4DataV_SSSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(data:explicitHashKey:partitionKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV22PutRecordsRequestEntryV4data15explicitHashKey09partitionI0AD10Foundation4DataV_SSSgSStcfc">init(data:explicitHashKey:partitionKey:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">partitionKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">explicitHashKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">explicitHashKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">partitionKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

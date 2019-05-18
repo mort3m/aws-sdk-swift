@@ -14,7 +14,7 @@
     <a title="CreateApplicationVersionMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7processSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/process" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7processSbSgvp">process</a>
+                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/applicationName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationNameSSvp">applicationName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Pre-processes and validates the environment manifest (env.yaml) and configuration files (*.config files in the .ebextensions folder) in the source bundle. Validating configuration files can identify issues prior to deploying the application version to an environment. You must turn processing on for application versions that you create using AWS CodeBuild or AWS CodeCommit. For application versions built from a source bundle in Amazon S3, processing is optional.  The Process option validates Elastic Beanstalk configuration files. It doesn&rsquo;t validate your application&rsquo;s configuration files, like proxy server or Docker configuration.</p>
+                        <p>The name of the application. If no application is found with this name, and AutoCreateApplication is false, returns an InvalidParameterValue error.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">process</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/applicationName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationNameSSvp">applicationName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the application. If no application is found with this name, and AutoCreateApplication is false, returns an InvalidParameterValue error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV18buildConfigurationAB05BuildH0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/buildConfiguration" class="dashAnchor"></a>
                     <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV18buildConfigurationAB05BuildH0VSgvp">buildConfiguration</a>
@@ -685,33 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV12versionLabelSSvp"></a>
-                    <a name="//apple_ref/swift/Property/versionLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV12versionLabelSSvp">versionLabel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A label identifying this version. Constraint: Must be unique per application. If an application version already exists with this label for the specified application, AWS Elastic Beanstalk returns an InvalidParameterValue error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">versionLabel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV11descriptionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
                     <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV11descriptionSSSgvp">description</a>
@@ -730,6 +676,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7processSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/process" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7processSbSgvp">process</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pre-processes and validates the environment manifest (env.yaml) and configuration files (*.config files in the .ebextensions folder) in the source bundle. Validating configuration files can identify issues prior to deploying the application version to an environment. You must turn processing on for application versions that you create using AWS CodeBuild or AWS CodeCommit. For application versions built from a source bundle in Amazon S3, processing is optional.  The Process option validates Elastic Beanstalk configuration files. It doesn&rsquo;t validate your application&rsquo;s configuration files, like proxy server or Docker configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">process</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +766,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7process04autocD015applicationName18buildConfiguration12versionLabel11description22sourceBuildInformation0P6BundleADSbSg_AMSSAB0qL0VSgS2SSgAB06SourceqR0VSgAB10S3LocationVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(process:autoCreateApplication:applicationName:buildConfiguration:versionLabel:description:sourceBuildInformation:sourceBundle:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV7process04autocD015applicationName18buildConfiguration12versionLabel11description22sourceBuildInformation0P6BundleADSbSg_AMSSAB0qL0VSgS2SSgAB06SourceqR0VSgAB10S3LocationVSgtcfc">init(process:autoCreateApplication:applicationName:buildConfiguration:versionLabel:description:sourceBuildInformation:sourceBundle:)</a>
+                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV12versionLabelSSvp"></a>
+                    <a name="//apple_ref/swift/Property/versionLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV12versionLabelSSvp">versionLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A label identifying this version. Constraint: Must be unique per application. If an application version already exists with this label for the specified application, AWS Elastic Beanstalk returns an InvalidParameterValue error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">versionLabel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationName04autocD018buildConfiguration11description7process22sourceBuildInformation0N6Bundle12versionLabelADSS_SbSgAB0oK0VSgSSSgAmB06SourceoP0VSgAB10S3LocationVSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(applicationName:autoCreateApplication:buildConfiguration:description:process:sourceBuildInformation:sourceBundle:versionLabel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ElasticBeanstalkAAV31CreateApplicationVersionMessageV15applicationName04autocD018buildConfiguration11description7process22sourceBuildInformation0N6Bundle12versionLabelADSS_SbSgAB0oK0VSgSSSgAmB06SourceoP0VSgAB10S3LocationVSgSStcfc">init(applicationName:autoCreateApplication:buildConfiguration:description:process:sourceBuildInformation:sourceBundle:versionLabel:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">process</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoCreateApplication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">buildConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/BuildConfiguration.html">BuildConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">versionLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceBuildInformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/SourceBuildInformation.html">SourceBuildInformation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceBundle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/S3Location.html">S3Location</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">autoCreateApplication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">buildConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/BuildConfiguration.html">BuildConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">process</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceBuildInformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/SourceBuildInformation.html">SourceBuildInformation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceBundle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticBeanstalk/S3Location.html">S3Location</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">versionLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

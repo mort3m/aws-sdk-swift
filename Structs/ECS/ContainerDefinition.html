@@ -14,7 +14,7 @@
     <a title="ContainerDefinition Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV4userSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/user" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV4userSSSgvp">user</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV7commandSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/command" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7commandSaySSGSgvp">command</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The user name to use inside the container. This parameter maps to User in the Create a container section of the Docker Remote API and the &ndash;user option to docker run.  This parameter is not supported for Windows containers.</p>
+                        <p>The command that is passed to the container. This parameter maps to Cmd in the Create a container section of the Docker Remote API and the COMMAND parameter to docker run. For more information, see <a href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">command</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV7ulimitsSayAB6UlimitVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ulimits" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7ulimitsSayAB6UlimitVGSgvp">ulimits</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV3cpus5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cpu" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV3cpus5Int32VSgvp">cpu</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,365 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of ulimits to set in the container. This parameter maps to Ulimits in the Create a container section of the Docker Remote API and the &ndash;ulimit option to docker run. Valid naming values are displayed in the Ulimit data type. This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log in to your container instance and run the following command: sudo docker version &ndash;format &lsquo;{{.Server.APIVersion}}&rsquo;   This parameter is not supported for Windows containers.</p>
+                        <p>The number of cpu units reserved for the container. This parameter maps to CpuShares in the Create a container section of the Docker Remote API and the &ndash;cpu-shares option to docker run. This field is optional for tasks using the Fargate launch type, and the only requirement is that the total amount of CPU reserved for all containers within a task be lower than the task-level cpu value.  You can determine the number of CPU units that are available per EC2 instance type by multiplying the vCPUs listed for that instance type on the Amazon EC2 Instances detail page by 1,024.  For example, if you run a single-container task on a single-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units. Linux containers share unallocated CPU units with other containers on the container instance with the same ratio as their allocated amount. For example, if you run a single-container task on a single-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units. On Linux container instances, the Docker daemon on the container instance uses the CPU value to calculate the relative CPU share ratios for running containers. For more information, see CPU share constraint in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is 2. However, the CPU parameter is not required, and you can use CPU values below 2 in your container definitions. For CPU values below 2 (including null), the behavior varies based on your Amazon ECS container agent version:    Agent versions less than or equal to 1.1.0: Null and zero CPU values are passed to Docker as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to Docker as 1, which the Linux kernel converts to two CPU shares.    Agent versions greater than or equal to 1.2.0: Null, zero, and CPU values of 1 are passed to Docker as 2.   On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota. Windows containers only have access to the specified amount of CPU that is described in the task definition.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ulimits</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Ulimit.html">Ulimit</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV15linuxParametersAB05LinuxE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/linuxParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV15linuxParametersAB05LinuxE0VSgvp">linuxParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Linux-specific modifications that are applied to the container, such as Linux KernelCapabilities.  This parameter is not supported for Windows containers.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">linuxParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LinuxParameters.html">LinuxParameters</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV22readonlyRootFilesystemSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/readonlyRootFilesystem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV22readonlyRootFilesystemSbSgvp">readonlyRootFilesystem</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When this parameter is true, the container is given read-only access to its root file system. This parameter maps to ReadonlyRootfs in the Create a container section of the Docker Remote API and the &ndash;read-only option to docker run.  This parameter is not supported for Windows containers.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">readonlyRootFilesystem</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV5linksSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/links" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV5linksSaySSGSgvp">links</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The link parameter allows containers to communicate with each other without the need for port mappings. Only supported if the network mode of a task definition is set to bridge. The name:internalName construct is analogous to name:alias in Docker links. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. For more information about linking Docker containers, go to <a href="https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/">https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/</a>. This parameter maps to Links in the Create a container section of the Docker Remote API and the &ndash;link option to  docker run .  This parameter is not supported for Windows containers.   Containers that are collocated on a single container instance may be able to communicate with each other without requiring links or host port mappings. Network isolation is achieved on the container instance using security groups and VPC settings.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">links</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV4nameSSSgvp">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of a container. If you are linking multiple containers together in a task definition, the name of one container can be entered in the links of another container to connect the containers. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. This parameter maps to name in the Create a container section of the Docker Remote API and the &ndash;name option to docker run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV16dnsSearchDomainsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dnsSearchDomains" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16dnsSearchDomainsSaySSGSgvp">dnsSearchDomains</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of DNS search domains that are presented to the container. This parameter maps to DnsSearch in the Create a container section of the Docker Remote API and the &ndash;dns-search option to docker run.  This parameter is not supported for Windows containers.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dnsSearchDomains</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV10extraHostsSayAB9HostEntryVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/extraHosts" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10extraHostsSayAB9HostEntryVGSgvp">extraHosts</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of hostnames and IP address mappings to append to the /etc/hosts file on the container. This parameter maps to ExtraHosts in the Create a container section of the Docker Remote API and the &ndash;add-host option to docker run.  This parameter is not supported for Windows containers or tasks that use the awsvpc network mode.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extraHosts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/HostEntry.html">HostEntry</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV17memoryReservations5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/memoryReservation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV17memoryReservations5Int32VSgvp">memoryReservation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The soft limit (in MiB) of memory to reserve for the container. When system memory is under heavy contention, Docker attempts to keep the container memory to this soft limit. However, your container can consume more memory when it needs to, up to either the hard limit specified with the memory parameter (if applicable), or all of the available memory on the container instance, whichever comes first. This parameter maps to MemoryReservation in the Create a container section of the Docker Remote API and the &ndash;memory-reservation option to docker run. You must specify a non-zero integer for one or both of memory or memoryReservation in container definitions. If you specify both, memory must be greater than memoryReservation. If you specify memoryReservation, then that value is subtracted from the available memory resources for the container instance on which the container is placed. Otherwise, the value of memory is used. For example, if your container normally uses 128 MiB of memory, but occasionally bursts to 256 MiB of memory for short periods of time, you can set a memoryReservation of 128 MiB, and a memory hard limit of 300 MiB. This configuration would allow the container to only reserve 128 MiB of memory from the remaining resources on the container instance, but also allow the container to consume more memory resources when needed. The Docker daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">memoryReservation</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV5imageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/image" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV5imageSSSgvp">image</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker Hub registry are available by default. Other repositories are specified with either  repository-url/image:tag  or  repository-url/image@digest . Up to 255 letters (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs are allowed. This parameter maps to Image in the Create a container section of the Docker Remote API and the IMAGE parameter of docker run.   When a new task starts, the Amazon ECS container agent pulls the latest version of the specified image and tag for the container to use. However, subsequent updates to a repository image are not propagated to already running tasks.   Images in Amazon ECR repositories can be specified by either using the full registry/repository:tag or registry/<a href="mailto:repository@digest">repository@digest</a>. For example, 012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;:latest or 012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;@sha256:94afd1f2e64d908bc90dbca0035a5b567EXAMPLE.    Images in official repositories on Docker Hub use a single name (for example, ubuntu or mongo).   Images in other repositories on Docker Hub are qualified with an organization name (for example, amazon/amazon-ecs-agent).   Images in other online repositories are qualified further by a domain name (for example, quay.io/assemblyline/ubuntu).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV14pseudoTerminalSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pseudoTerminal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV14pseudoTerminalSbSgvp">pseudoTerminal</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When this parameter is true, a TTY is allocated. This parameter maps to Tty in the Create a container section of the Docker Remote API and the &ndash;tty option to docker run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pseudoTerminal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV11environmentSayAB12KeyValuePairVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11environmentSayAB12KeyValuePairVGSgvp">environment</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The environment variables to pass to a container. This parameter maps to Env in the Create a container section of the Docker Remote API and the &ndash;env option to docker run.  We do not recommend using plaintext environment variables for sensitive information, such as credential data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/KeyValuePair.html">KeyValuePair</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV16workingDirectorySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/workingDirectory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16workingDirectorySSSgvp">workingDirectory</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The working directory in which to run commands inside the container. This parameter maps to WorkingDir in the Create a container section of the Docker Remote API and the &ndash;workdir option to docker run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV7secretsSayAB6SecretVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/secrets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7secretsSayAB6SecretVGSgvp">secrets</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The secrets to pass to the container.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">secrets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Secret.html">Secret</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV11healthCheckAB06HealthE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/healthCheck" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11healthCheckAB06HealthE0VSgvp">healthCheck</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The health check command and associated configuration parameters for the container. This parameter maps to HealthCheck in the Create a container section of the Docker Remote API and the HEALTHCHECK parameter of docker run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HealthCheck.html">HealthCheck</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cpu</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV16logConfigurationAB03LogE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/logConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16logConfigurationAB03LogE0VSgvp">logConfiguration</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV16dnsSearchDomainsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dnsSearchDomains" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16dnsSearchDomainsSaySSGSgvp">dnsSearchDomains</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +668,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The log configuration specification for the container. If you are using the Fargate launch type, the only supported value is awslogs. This parameter maps to LogConfig in the Create a container section of the Docker Remote API and the &ndash;log-driver option to docker run. By default, containers use the same logging driver that the Docker daemon uses. However the container may use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance (or on a different log server for remote logging options). For more information on the options for different supported log drivers, see Configure logging drivers in the Docker documentation.  Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon (shown in the LogConfiguration data type). Additional log drivers may be available in future releases of the Amazon ECS container agent.  This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log in to your container instance and run the following command: sudo docker version &ndash;format &lsquo;{{.Server.APIVersion}}&rsquo;   The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the ECS_AVAILABLE_LOGGING_DRIVERS environment variable before containers placed on that instance can use these log configuration options. For more information, see Amazon ECS Container Agent Configuration in the Amazon Elastic Container Service Developer Guide.</p>
+                        <p>A list of DNS search domains that are presented to the container. This parameter maps to DnsSearch in the Create a container section of the Docker Remote API and the &ndash;dns-search option to docker run.  This parameter is not supported for Windows containers.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">logConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LogConfiguration.html">LogConfiguration</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dnsSearchDomains</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV10dnsServersSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dnsServers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10dnsServersSaySSGSgvp">dnsServers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of DNS servers that are presented to the container. This parameter maps to Dns in the Create a container section of the Docker Remote API and the &ndash;dns option to docker run.  This parameter is not supported for Windows containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dnsServers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1090,6 +766,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV10entryPointSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/entryPoint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10entryPointSaySSGSgvp">entryPoint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Early versions of the Amazon ECS container agent do not properly handle entryPoint parameters. If you have problems using entryPoint, update your container agent or enter your commands and arguments as command array items instead.  The entry point that is passed to the container. This parameter maps to Entrypoint in the Create a container section of the Docker Remote API and the &ndash;entrypoint option to docker run. For more information, see <a href="https://docs.docker.com/engine/reference/builder/#entrypoint">https://docs.docker.com/engine/reference/builder/#entrypoint</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">entryPoint</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV11environmentSayAB12KeyValuePairVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11environmentSayAB12KeyValuePairVGSgvp">environment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The environment variables to pass to a container. This parameter maps to Env in the Create a container section of the Docker Remote API and the &ndash;env option to docker run.  We do not recommend using plaintext environment variables for sensitive information, such as credential data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/KeyValuePair.html">KeyValuePair</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3ECSAAV19ContainerDefinitionV9essentialSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/essential" class="dashAnchor"></a>
                     <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV9essentialSbSgvp">essential</a>
@@ -1117,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV3cpus5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cpu" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV3cpus5Int32VSgvp">cpu</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV10extraHostsSayAB9HostEntryVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/extraHosts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10extraHostsSayAB9HostEntryVGSgvp">extraHosts</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1127,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The number of cpu units reserved for the container. This parameter maps to CpuShares in the Create a container section of the Docker Remote API and the &ndash;cpu-shares option to docker run. This field is optional for tasks using the Fargate launch type, and the only requirement is that the total amount of CPU reserved for all containers within a task be lower than the task-level cpu value.  You can determine the number of CPU units that are available per EC2 instance type by multiplying the vCPUs listed for that instance type on the Amazon EC2 Instances detail page by 1,024.  For example, if you run a single-container task on a single-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units. Linux containers share unallocated CPU units with other containers on the container instance with the same ratio as their allocated amount. For example, if you run a single-container task on a single-core instance type with 512 CPU units specified for that container, and that is the only task running on the container instance, that container could use the full 1,024 CPU unit share at any given time. However, if you launched another copy of the same task on that container instance, each task would be guaranteed a minimum of 512 CPU units when needed, and each container could float to higher CPU usage if the other container was not using it, but if both tasks were 100% active all of the time, they would be limited to 512 CPU units. On Linux container instances, the Docker daemon on the container instance uses the CPU value to calculate the relative CPU share ratios for running containers. For more information, see CPU share constraint in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is 2. However, the CPU parameter is not required, and you can use CPU values below 2 in your container definitions. For CPU values below 2 (including null), the behavior varies based on your Amazon ECS container agent version:    Agent versions less than or equal to 1.1.0: Null and zero CPU values are passed to Docker as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to Docker as 1, which the Linux kernel converts to two CPU shares.    Agent versions greater than or equal to 1.2.0: Null, zero, and CPU values of 1 are passed to Docker as 2.   On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota. Windows containers only have access to the specified amount of CPU that is described in the task definition.</p>
+                        <p>A list of hostnames and IP address mappings to append to the /etc/hosts file on the container. This parameter maps to ExtraHosts in the Create a container section of the Docker Remote API and the &ndash;add-host option to docker run.  This parameter is not supported for Windows containers or tasks that use the awsvpc network mode.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cpu</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extraHosts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/HostEntry.html">HostEntry</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV11interactiveSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/interactive" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11interactiveSbSgvp">interactive</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV11healthCheckAB06HealthE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/healthCheck" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11healthCheckAB06HealthE0VSgvp">healthCheck</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,95 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When this parameter is true, this allows you to deploy containerized applications that require stdin or a tty to be allocated. This parameter maps to OpenStdin in the Create a container section of the Docker Remote API and the &ndash;interactive option to docker run.</p>
+                        <p>The health check command and associated configuration parameters for the container. This parameter maps to HealthCheck in the Create a container section of the Docker Remote API and the HEALTHCHECK parameter of docker run.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interactive</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV12portMappingsSayAB11PortMappingVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/portMappings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV12portMappingsSayAB11PortMappingVGSgvp">portMappings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The list of port mappings for the container. Port mappings allow containers to access ports on the host container instance to send or receive traffic. For task definitions that use the awsvpc network mode, you should only specify the containerPort. The hostPort can be left blank or it must be the same value as the containerPort. Port mappings on Windows use the NetNAT gateway address rather than localhost. There is no loopback for port mappings on Windows, so you cannot access a container&rsquo;s mapped port from the host itself.  This parameter maps to PortBindings in the Create a container section of the Docker Remote API and the &ndash;publish option to docker run. If the network mode of a task definition is set to none, then you can&rsquo;t specify port mappings. If the network mode of a task definition is set to host, then host ports must either be undefined or they must match the container port in the port mapping.  After a task reaches the RUNNING status, manual and automatic host and container port assignments are visible in the Network Bindings section of a container description for a selected task in the Amazon ECS console. The assignments are also visible in the networkBindings section DescribeTasks responses.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">portMappings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/PortMapping.html">PortMapping</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV7commandSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/command" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7commandSaySSGSgvp">command</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The command that is passed to the container. This parameter maps to Cmd in the Create a container section of the Docker Remote API and the COMMAND parameter to docker run. For more information, see <a href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">command</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV11mountPointsSayAB10MountPointVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mountPoints" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11mountPointsSayAB10MountPointVGSgvp">mountPoints</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The mount points for data volumes in your container. This parameter maps to Volumes in the Create a container section of the Docker Remote API and the &ndash;volume option to docker run. Windows containers can mount whole directories on the same drive as $env:ProgramData. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mountPoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/MountPoint.html">MountPoint</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HealthCheck.html">HealthCheck</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1279,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV11volumesFromSayAB06VolumeE0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/volumesFrom" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11volumesFromSayAB06VolumeE0VGSgvp">volumesFrom</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV5imageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/image" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV5imageSSSgvp">image</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1289,14 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Data volumes to mount from another container. This parameter maps to VolumesFrom in the Create a container section of the Docker Remote API and the &ndash;volumes-from option to docker run.</p>
+                        <p>The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker Hub registry are available by default. Other repositories are specified with either  repository-url/image:tag  or  repository-url/image@digest . Up to 255 letters (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs are allowed. This parameter maps to Image in the Create a container section of the Docker Remote API and the IMAGE parameter of docker run.   When a new task starts, the Amazon ECS container agent pulls the latest version of the specified image and tag for the container to use. However, subsequent updates to a repository image are not propagated to already running tasks.   Images in Amazon ECR repositories can be specified by either using the full registry/repository:tag or registry/<a href="mailto:repository@digest">repository@digest</a>. For example, 012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;:latest or 012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;@sha256:94afd1f2e64d908bc90dbca0035a5b567EXAMPLE.    Images in official repositories on Docker Hub use a single name (for example, ubuntu or mongo).   Images in other repositories on Docker Hub are qualified with an organization name (for example, amazon/amazon-ecs-agent).   Images in other online repositories are qualified further by a domain name (for example, quay.io/assemblyline/ubuntu).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumesFrom</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/VolumeFrom.html">VolumeFrom</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1306,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV10entryPointSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/entryPoint" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10entryPointSaySSGSgvp">entryPoint</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV11interactiveSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/interactive" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11interactiveSbSgvp">interactive</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1316,14 +965,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Early versions of the Amazon ECS container agent do not properly handle entryPoint parameters. If you have problems using entryPoint, update your container agent or enter your commands and arguments as command array items instead.  The entry point that is passed to the container. This parameter maps to Entrypoint in the Create a container section of the Docker Remote API and the &ndash;entrypoint option to docker run. For more information, see <a href="https://docs.docker.com/engine/reference/builder/#entrypoint">https://docs.docker.com/engine/reference/builder/#entrypoint</a>.</p>
+                        <p>When this parameter is true, this allows you to deploy containerized applications that require stdin or a tty to be allocated. This parameter maps to OpenStdin in the Create a container section of the Docker Remote API and the &ndash;interactive option to docker run.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">entryPoint</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interactive</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV5linksSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/links" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV5linksSaySSGSgvp">links</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The link parameter allows containers to communicate with each other without the need for port mappings. Only supported if the network mode of a task definition is set to bridge. The name:internalName construct is analogous to name:alias in Docker links. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. For more information about linking Docker containers, go to <a href="https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/">https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/</a>. This parameter maps to Links in the Create a container section of the Docker Remote API and the &ndash;link option to  docker run .  This parameter is not supported for Windows containers.   Containers that are collocated on a single container instance may be able to communicate with each other without requiring links or host port mappings. Network isolation is achieved on the container instance using security groups and VPC settings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">links</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV15linuxParametersAB05LinuxE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/linuxParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV15linuxParametersAB05LinuxE0VSgvp">linuxParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Linux-specific modifications that are applied to the container, such as Linux KernelCapabilities.  This parameter is not supported for Windows containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">linuxParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LinuxParameters.html">LinuxParameters</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV16logConfigurationAB03LogE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/logConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16logConfigurationAB03LogE0VSgvp">logConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The log configuration specification for the container. If you are using the Fargate launch type, the only supported value is awslogs. This parameter maps to LogConfig in the Create a container section of the Docker Remote API and the &ndash;log-driver option to docker run. By default, containers use the same logging driver that the Docker daemon uses. However the container may use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance (or on a different log server for remote logging options). For more information on the options for different supported log drivers, see Configure logging drivers in the Docker documentation.  Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon (shown in the LogConfiguration data type). Additional log drivers may be available in future releases of the Amazon ECS container agent.  This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log in to your container instance and run the following command: sudo docker version &ndash;format &lsquo;{{.Server.APIVersion}}&rsquo;   The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the ECS_AVAILABLE_LOGGING_DRIVERS environment variable before containers placed on that instance can use these log configuration options. For more information, see Amazon ECS Container Agent Configuration in the Amazon Elastic Container Service Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">logConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LogConfiguration.html">LogConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1360,9 +1090,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV21repositoryCredentialsAB010RepositoryE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/repositoryCredentials" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV21repositoryCredentialsAB010RepositoryE0VSgvp">repositoryCredentials</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV17memoryReservations5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/memoryReservation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV17memoryReservations5Int32VSgvp">memoryReservation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1370,14 +1100,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The private repository authentication credentials to use.</p>
+                        <p>The soft limit (in MiB) of memory to reserve for the container. When system memory is under heavy contention, Docker attempts to keep the container memory to this soft limit. However, your container can consume more memory when it needs to, up to either the hard limit specified with the memory parameter (if applicable), or all of the available memory on the container instance, whichever comes first. This parameter maps to MemoryReservation in the Create a container section of the Docker Remote API and the &ndash;memory-reservation option to docker run. You must specify a non-zero integer for one or both of memory or memoryReservation in container definitions. If you specify both, memory must be greater than memoryReservation. If you specify memoryReservation, then that value is subtracted from the available memory resources for the container instance on which the container is placed. Otherwise, the value of memory is used. For example, if your container normally uses 128 MiB of memory, but occasionally bursts to 256 MiB of memory for short periods of time, you can set a memoryReservation of 128 MiB, and a memory hard limit of 300 MiB. This configuration would allow the container to only reserve 128 MiB of memory from the remaining resources on the container instance, but also allow the container to consume more memory resources when needed. The Docker daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">repositoryCredentials</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/RepositoryCredentials.html">RepositoryCredentials</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">memoryReservation</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1387,9 +1117,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV14systemControlsSayAB13SystemControlVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/systemControls" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV14systemControlsSayAB13SystemControlVGSgvp">systemControls</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV11mountPointsSayAB10MountPointVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mountPoints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11mountPointsSayAB10MountPointVGSgvp">mountPoints</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1397,14 +1127,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of namespaced kernel parameters to set in the container. This parameter maps to Sysctls in the Create a container section of the Docker Remote API and the &ndash;sysctl option to docker run.  It is not recommended that you specify network-related systemControls parameters for multiple containers in a single task that also uses either the awsvpc or host network modes. For tasks that use the awsvpc network mode, the container that is started last determines which systemControls parameters take effect. For tasks that use the host network mode, it changes the container instance&rsquo;s namespaced kernel parameters as well as the containers.</p>
+                        <p>The mount points for data volumes in your container. This parameter maps to Volumes in the Create a container section of the Docker Remote API and the &ndash;volume option to docker run. Windows containers can mount whole directories on the same drive as $env:ProgramData. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">systemControls</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/SystemControl.html">SystemControl</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mountPoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/MountPoint.html">MountPoint</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of a container. If you are linking multiple containers together in a task definition, the name of one container can be entered in the links of another container to connect the containers. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. This parameter maps to name in the Create a container section of the Docker Remote API and the &ndash;name option to docker run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV12portMappingsSayAB11PortMappingVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/portMappings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV12portMappingsSayAB11PortMappingVGSgvp">portMappings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The list of port mappings for the container. Port mappings allow containers to access ports on the host container instance to send or receive traffic. For task definitions that use the awsvpc network mode, you should only specify the containerPort. The hostPort can be left blank or it must be the same value as the containerPort. Port mappings on Windows use the NetNAT gateway address rather than localhost. There is no loopback for port mappings on Windows, so you cannot access a container&rsquo;s mapped port from the host itself.  This parameter maps to PortBindings in the Create a container section of the Docker Remote API and the &ndash;publish option to docker run. If the network mode of a task definition is set to none, then you can&rsquo;t specify port mappings. If the network mode of a task definition is set to host, then host ports must either be undefined or they must match the container port in the port mapping.  After a task reaches the RUNNING status, manual and automatic host and container port assignments are visible in the Network Bindings section of a container description for a selected task in the Amazon ECS console. The assignments are also visible in the networkBindings section DescribeTasks responses.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">portMappings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/PortMapping.html">PortMapping</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1441,9 +1225,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV10dnsServersSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dnsServers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV10dnsServersSaySSGSgvp">dnsServers</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV14pseudoTerminalSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pseudoTerminal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV14pseudoTerminalSbSgvp">pseudoTerminal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1451,14 +1235,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of DNS servers that are presented to the container. This parameter maps to Dns in the Create a container section of the Docker Remote API and the &ndash;dns option to docker run.  This parameter is not supported for Windows containers.</p>
+                        <p>When this parameter is true, a TTY is allocated. This parameter maps to Tty in the Create a container section of the Docker Remote API and the &ndash;tty option to docker run.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dnsServers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pseudoTerminal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1468,9 +1252,225 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV19ContainerDefinitionV4user7ulimits15linuxParameters22readonlyRootFilesystem5links4name16dnsSearchDomains10extraHosts17memoryReservation5image14pseudoTerminal11environment16workingDirectory7secrets11healthCheck17disableNetworking16logConfiguration12dockerLabels21dockerSecurityOptions9essential3cpu11interactive12portMappings7command11mountPoints8hostname11volumesFrom10entryPoint0R021repositoryCredentials14systemControls10privileged0M7ServersADSSSg_SayAB6UlimitVGSgAB05LinuxG0VSgSbSgSaySSGSgA10_A20_SayAB9HostEntryVGSgs5Int32VSgA10_A18_SayAB12KeyValuePairVGSgA10_SayAB6SecretVGSgAB11HealthCheckVSgA18_AB16LogConfigurationVSgSDyS2SGSgA20_A18_A27_A18_SayAB11PortMappingVGSgA20_SayAB10MountPointVGSgA10_SayAB10VolumeFromVGSgA20_A27_AB21RepositoryCredentialsVSgSayAB13SystemControlVGSgA18_A20_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(user:ulimits:linuxParameters:readonlyRootFilesystem:links:name:dnsSearchDomains:extraHosts:memoryReservation:image:pseudoTerminal:environment:workingDirectory:secrets:healthCheck:disableNetworking:logConfiguration:dockerLabels:dockerSecurityOptions:essential:cpu:interactive:portMappings:command:mountPoints:hostname:volumesFrom:entryPoint:memory:repositoryCredentials:systemControls:privileged:dnsServers:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV4user7ulimits15linuxParameters22readonlyRootFilesystem5links4name16dnsSearchDomains10extraHosts17memoryReservation5image14pseudoTerminal11environment16workingDirectory7secrets11healthCheck17disableNetworking16logConfiguration12dockerLabels21dockerSecurityOptions9essential3cpu11interactive12portMappings7command11mountPoints8hostname11volumesFrom10entryPoint0R021repositoryCredentials14systemControls10privileged0M7ServersADSSSg_SayAB6UlimitVGSgAB05LinuxG0VSgSbSgSaySSGSgA10_A20_SayAB9HostEntryVGSgs5Int32VSgA10_A18_SayAB12KeyValuePairVGSgA10_SayAB6SecretVGSgAB11HealthCheckVSgA18_AB16LogConfigurationVSgSDyS2SGSgA20_A18_A27_A18_SayAB11PortMappingVGSgA20_SayAB10MountPointVGSgA10_SayAB10VolumeFromVGSgA20_A27_AB21RepositoryCredentialsVSgSayAB13SystemControlVGSgA18_A20_tcfc">init(user:ulimits:linuxParameters:readonlyRootFilesystem:links:name:dnsSearchDomains:extraHosts:memoryReservation:image:pseudoTerminal:environment:workingDirectory:secrets:healthCheck:disableNetworking:logConfiguration:dockerLabels:dockerSecurityOptions:essential:cpu:interactive:portMappings:command:mountPoints:hostname:volumesFrom:entryPoint:memory:repositoryCredentials:systemControls:privileged:dnsServers:)</a>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV22readonlyRootFilesystemSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/readonlyRootFilesystem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV22readonlyRootFilesystemSbSgvp">readonlyRootFilesystem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When this parameter is true, the container is given read-only access to its root file system. This parameter maps to ReadonlyRootfs in the Create a container section of the Docker Remote API and the &ndash;read-only option to docker run.  This parameter is not supported for Windows containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">readonlyRootFilesystem</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV21repositoryCredentialsAB010RepositoryE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/repositoryCredentials" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV21repositoryCredentialsAB010RepositoryE0VSgvp">repositoryCredentials</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The private repository authentication credentials to use.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">repositoryCredentials</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/RepositoryCredentials.html">RepositoryCredentials</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV7secretsSayAB6SecretVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/secrets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7secretsSayAB6SecretVGSgvp">secrets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The secrets to pass to the container.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">secrets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Secret.html">Secret</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV14systemControlsSayAB13SystemControlVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/systemControls" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV14systemControlsSayAB13SystemControlVGSgvp">systemControls</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of namespaced kernel parameters to set in the container. This parameter maps to Sysctls in the Create a container section of the Docker Remote API and the &ndash;sysctl option to docker run.  It is not recommended that you specify network-related systemControls parameters for multiple containers in a single task that also uses either the awsvpc or host network modes. For tasks that use the awsvpc network mode, the container that is started last determines which systemControls parameters take effect. For tasks that use the host network mode, it changes the container instance&rsquo;s namespaced kernel parameters as well as the containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">systemControls</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/SystemControl.html">SystemControl</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV7ulimitsSayAB6UlimitVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ulimits" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7ulimitsSayAB6UlimitVGSgvp">ulimits</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of ulimits to set in the container. This parameter maps to Ulimits in the Create a container section of the Docker Remote API and the &ndash;ulimit option to docker run. Valid naming values are displayed in the Ulimit data type. This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log in to your container instance and run the following command: sudo docker version &ndash;format &lsquo;{{.Server.APIVersion}}&rsquo;   This parameter is not supported for Windows containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ulimits</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Ulimit.html">Ulimit</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV4userSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/user" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV4userSSSgvp">user</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The user name to use inside the container. This parameter maps to User in the Create a container section of the Docker Remote API and the &ndash;user option to docker run.  This parameter is not supported for Windows containers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV11volumesFromSayAB06VolumeE0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/volumesFrom" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV11volumesFromSayAB06VolumeE0VGSgvp">volumesFrom</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data volumes to mount from another container. This parameter maps to VolumesFrom in the Create a container section of the Docker Remote API and the &ndash;volumes-from option to docker run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumesFrom</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/VolumeFrom.html">VolumeFrom</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV16workingDirectorySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/workingDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV16workingDirectorySSSgvp">workingDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The working directory in which to run commands inside the container. This parameter maps to WorkingDir in the Create a container section of the Docker Remote API and the &ndash;workdir option to docker run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV19ContainerDefinitionV7command3cpu17disableNetworking16dnsSearchDomains0H7Servers12dockerLabels0L15SecurityOptions10entryPoint11environment9essential10extraHosts11healthCheck8hostname5image11interactive5links15linuxParameters16logConfiguration6memory17memoryReservation11mountPoints4name12portMappings10privileged14pseudoTerminal22readonlyRootFilesystem21repositoryCredentials7secrets14systemControls7ulimits4user11volumesFrom16workingDirectoryADSaySSGSg_s5Int32VSgSbSgA11_A11_SDyS2SGSgA11_A11_SayAB12KeyValuePairVGSgA15_SayAB9HostEntryVGSgAB06HealthW0VSgSSSgA29_A15_A11_AB15LinuxParametersVSgAB16LogConfigurationVSgA14_A14_SayAB05MountQ0VGSgA29_SayAB11PortMappingVGSgA15_A15_A15_AB21RepositoryCredentialsVSgSayAB6SecretVGSgSayAB13SystemControlVGSgSayAB6UlimitVGSgA29_SayAB10VolumeFromVGSgA29_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(command:cpu:disableNetworking:dnsSearchDomains:dnsServers:dockerLabels:dockerSecurityOptions:entryPoint:environment:essential:extraHosts:healthCheck:hostname:image:interactive:links:linuxParameters:logConfiguration:memory:memoryReservation:mountPoints:name:portMappings:privileged:pseudoTerminal:readonlyRootFilesystem:repositoryCredentials:secrets:systemControls:ulimits:user:volumesFrom:workingDirectory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV19ContainerDefinitionV7command3cpu17disableNetworking16dnsSearchDomains0H7Servers12dockerLabels0L15SecurityOptions10entryPoint11environment9essential10extraHosts11healthCheck8hostname5image11interactive5links15linuxParameters16logConfiguration6memory17memoryReservation11mountPoints4name12portMappings10privileged14pseudoTerminal22readonlyRootFilesystem21repositoryCredentials7secrets14systemControls7ulimits4user11volumesFrom16workingDirectoryADSaySSGSg_s5Int32VSgSbSgA11_A11_SDyS2SGSgA11_A11_SayAB12KeyValuePairVGSgA15_SayAB9HostEntryVGSgAB06HealthW0VSgSSSgA29_A15_A11_AB15LinuxParametersVSgAB16LogConfigurationVSgA14_A14_SayAB05MountQ0VGSgA29_SayAB11PortMappingVGSgA15_A15_A15_AB21RepositoryCredentialsVSgSayAB6SecretVGSgSayAB13SystemControlVGSgSayAB6UlimitVGSgA29_SayAB10VolumeFromVGSgA29_tcfc">init(command:cpu:disableNetworking:dnsSearchDomains:dnsServers:dockerLabels:dockerSecurityOptions:entryPoint:environment:essential:extraHosts:healthCheck:hostname:image:interactive:links:linuxParameters:logConfiguration:memory:memoryReservation:mountPoints:name:portMappings:privileged:pseudoTerminal:readonlyRootFilesystem:repositoryCredentials:secrets:systemControls:ulimits:user:volumesFrom:workingDirectory:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1485,7 +1485,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ulimits</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Ulimit.html">Ulimit</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linuxParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LinuxParameters.html">LinuxParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readonlyRootFilesystem</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">links</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dnsSearchDomains</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraHosts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/HostEntry.html">HostEntry</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">memoryReservation</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pseudoTerminal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/KeyValuePair.html">KeyValuePair</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">secrets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Secret.html">Secret</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HealthCheck.html">HealthCheck</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableNetworking</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LogConfiguration.html">LogConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dockerLabels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dockerSecurityOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">essential</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cpu</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">interactive</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">portMappings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/PortMapping.html">PortMapping</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">command</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mountPoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/MountPoint.html">MountPoint</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumesFrom</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/VolumeFrom.html">VolumeFrom</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">entryPoint</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">memory</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">repositoryCredentials</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/RepositoryCredentials.html">RepositoryCredentials</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">systemControls</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/SystemControl.html">SystemControl</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">privileged</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dnsServers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">command</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cpu</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableNetworking</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dnsSearchDomains</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dnsServers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dockerLabels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dockerSecurityOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">entryPoint</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">environment</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/KeyValuePair.html">KeyValuePair</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">essential</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">extraHosts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/HostEntry.html">HostEntry</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HealthCheck.html">HealthCheck</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">interactive</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">links</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">linuxParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LinuxParameters.html">LinuxParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LogConfiguration.html">LogConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">memory</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">memoryReservation</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mountPoints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/MountPoint.html">MountPoint</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">portMappings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/PortMapping.html">PortMapping</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">privileged</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pseudoTerminal</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readonlyRootFilesystem</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">repositoryCredentials</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/RepositoryCredentials.html">RepositoryCredentials</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">secrets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Secret.html">Secret</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">systemControls</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/SystemControl.html">SystemControl</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ulimits</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/Ulimit.html">Ulimit</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumesFrom</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ECS/VolumeFrom.html">VolumeFrom</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1497,7 +1497,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

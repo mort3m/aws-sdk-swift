@@ -14,7 +14,7 @@
     <a title="MigrationHub Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,144 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV26deleteProgressUpdateStreamyAB06DeletedeF6ResultVAB0gdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteProgressUpdateStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV26deleteProgressUpdateStreamyAB06DeletedeF6ResultVAB0gdeF7RequestVKF">deleteProgressUpdateStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for access control. This API has the following traits:   The only parameter needed for DeleteProgressUpdateStream is the stream name (same as a CreateProgressUpdateStream call).   The call will return, and a background process will asynchronously delete the stream and all of its resources (tasks, associated resources, resource attributes, created artifacts).   If the stream takes time to be deleted, it might still show up on a ListProgressUpdateStreams call.    CreateProgressUpdateStream, ImportMigrationTask, NotifyMigrationTaskState, and all Associate[*] APIs realted to the tasks belonging to the stream will throw <q>InvalidInputException</q> if the stream of the same name is in the process of being deleted.   Once the stream and all of its resources are deleted, CreateProgressUpdateStream for a stream of the same name will succeed, and that stream will be an entirely new logical resource (without any resources associated with the old stream).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteProgressUpdateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DeleteProgressUpdateStreamRequest.html">DeleteProgressUpdateStreamRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV32DeleteProgressUpdateStreamResultV">DeleteProgressUpdateStreamResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV30disassociateDiscoveredResourceyAB012DisassociatedE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/disassociateDiscoveredResource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV30disassociateDiscoveredResourceyAB012DisassociatedE6ResultVAB0fdE7RequestVKF">disassociateDiscoveredResource(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Disassociate an Application Discovery Service (ADS) discovered resource from a migration task.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateDiscoveredResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DisassociateDiscoveredResourceRequest.html">DisassociateDiscoveredResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV36DisassociateDiscoveredResourceResultV">DisassociateDiscoveredResourceResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV08describeA4TaskyAB08DescribeaD6ResultVAB0eaD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeMigrationTask(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV08describeA4TaskyAB08DescribeaD6ResultVAB0eaD7RequestVKF">describeMigrationTask(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves a list of all attributes associated with a specific migration task.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMigrationTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeMigrationTaskRequest.html">DescribeMigrationTaskRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeMigrationTaskResult.html">DescribeMigrationTaskResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV24describeApplicationStateyAB08DescribedE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeApplicationState(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV24describeApplicationStateyAB08DescribedE6ResultVAB0fdE7RequestVKF">describeApplicationState(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gets the migration status of an application.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeApplicationState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeApplicationStateRequest.html">DescribeApplicationStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeApplicationStateResult.html">DescribeApplicationStateResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV27associateDiscoveredResourceyAB09AssociatedE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/associateDiscoveredResource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV27associateDiscoveredResourceyAB09AssociatedE6ResultVAB0fdE7RequestVKF">associateDiscoveredResource(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Associates a discovered resource ID from Application Discovery Service (ADS) with a migration task.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateDiscoveredResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/AssociateDiscoveredResourceRequest.html">AssociateDiscoveredResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV33AssociateDiscoveredResourceResultV">AssociateDiscoveredResourceResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV24associateCreatedArtifactyAB09AssociatedE6ResultVAB0fdE7RequestVKF"></a>
+                    <a name="/s:12MigrationHubAAV24associateCreatedArtifacty3NIO15EventLoopFutureCyAB09AssociatedE6ResultVGAB0jdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/associateCreatedArtifact(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV24associateCreatedArtifactyAB09AssociatedE6ResultVAB0fdE7RequestVKF">associateCreatedArtifact(_:)</a>
+                    <a class="token" href="#/s:12MigrationHubAAV24associateCreatedArtifacty3NIO15EventLoopFutureCyAB09AssociatedE6ResultVGAB0jdE7RequestVKF">associateCreatedArtifact(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -729,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateCreatedArtifact</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/AssociateCreatedArtifactRequest.html">AssociateCreatedArtifactRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV30AssociateCreatedArtifactResultV">AssociateCreatedArtifactResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateCreatedArtifact</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/AssociateCreatedArtifactRequest.html">AssociateCreatedArtifactRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/AssociateCreatedArtifactResult.html">AssociateCreatedArtifactResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV21putResourceAttributesyAB03PutdE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/putResourceAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV21putResourceAttributesyAB03PutdE6ResultVAB0fdE7RequestVKF">putResourceAttributes(_:)</a>
+                    <a name="/s:12MigrationHubAAV27associateDiscoveredResourcey3NIO15EventLoopFutureCyAB09AssociatedE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/associateDiscoveredResource(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV27associateDiscoveredResourcey3NIO15EventLoopFutureCyAB09AssociatedE6ResultVGAB0jdE7RequestVKF">associateDiscoveredResource(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery Service (ADS)&lsquo;s repository. This association occurs asynchronously after PutResourceAttributes returns.    Keep in mind that subsequent calls to PutResourceAttributes will override previously stored attributes. For example, if it is first called with a MAC address, but later, it is desired to add an IP address, it will then be required to call it with both the IP and MAC addresses to prevent overiding the MAC address.   Note the instructions regarding the special use case of the  ResourceAttributeList  parameter when specifying any <q>VM</q> related value.      Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an association was found based on the provided details, call ListDiscoveredResources.</p>
+                        <p>Associates a discovered resource ID from Application Discovery Service (ADS) with a migration task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putResourceAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/PutResourceAttributesRequest.html">PutResourceAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV27PutResourceAttributesResultV">PutResourceAttributesResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateDiscoveredResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/AssociateDiscoveredResourceRequest.html">AssociateDiscoveredResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/AssociateDiscoveredResourceResult.html">AssociateDiscoveredResourceResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -766,144 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV23listDiscoveredResourcesyAB04ListdE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listDiscoveredResources(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV23listDiscoveredResourcesyAB04ListdE6ResultVAB0fdE7RequestVKF">listDiscoveredResources(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Lists discovered resources associated with the given MigrationTask.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listDiscoveredResources</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListDiscoveredResourcesRequest.html">ListDiscoveredResourcesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/ListDiscoveredResourcesResult.html">ListDiscoveredResourcesResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV27disassociateCreatedArtifactyAB012DisassociatedE6ResultVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/disassociateCreatedArtifact(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV27disassociateCreatedArtifactyAB012DisassociatedE6ResultVAB0fdE7RequestVKF">disassociateCreatedArtifact(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was previously associated. This API has the following traits:   A migration user can call the DisassociateCreatedArtifacts operation to disassociate a created AWS Artifact from a migration task.   The created artifact name must be provided in ARN (Amazon Resource Name) format which will contain information about type and region; for example: arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b.   Examples of the AWS resource behind the created artifact are, AMI&rsquo;s, EC2 instance, or RDS instance, etc.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateCreatedArtifact</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DisassociateCreatedArtifactRequest.html">DisassociateCreatedArtifactRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV33DisassociateCreatedArtifactResultV">DisassociateCreatedArtifactResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV06notifyA9TaskStateyAB06NotifyadE6ResultVAB0fadE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/notifyMigrationTaskState(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV06notifyA9TaskStateyAB06NotifyadE6ResultVAB0fadE7RequestVKF">notifyMigrationTaskState(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Notifies Migration Hub of the current status, progress, or other detail regarding a migration task. This API has the following traits:   Migration tools will call the NotifyMigrationTaskState API to share the latest progress and status.    MigrationTaskName is used for addressing updates to the correct target.    ProgressUpdateStream is used for access control and to provide a namespace for each migration tool.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifyMigrationTaskState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/NotifyMigrationTaskStateRequest.html">NotifyMigrationTaskStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV06NotifyA15TaskStateResultV">NotifyMigrationTaskStateResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV04listA5TasksyAB04ListaD6ResultVAB0eaD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listMigrationTasks(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV04listA5TasksyAB04ListaD6ResultVAB0eaD7RequestVKF">listMigrationTasks(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Lists all, or filtered by resource name, migration tasks associated with the user account making this call. This API has the following traits:   Can show a summary list of the most recent migration tasks.   Can show a summary list of migration tasks associated with a given discovered resource.   Lists migration tasks in a paginated interface.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listMigrationTasks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListMigrationTasksRequest.html">ListMigrationTasksRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/ListMigrationTasksResult.html">ListMigrationTasksResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV06importA4TaskyAB06ImportaD6ResultVAB0eaD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/importMigrationTask(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV06importA4TaskyAB06ImportaD6ResultVAB0eaD7RequestVKF">importMigrationTask(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration tool. This API is a prerequisite to calling the NotifyMigrationTaskState API as the migration tool must first register the migration task with Migration Hub.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">importMigrationTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ImportMigrationTaskRequest.html">ImportMigrationTaskRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV06ImportA10TaskResultV">ImportMigrationTaskResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV26createProgressUpdateStreamyAB06CreatedeF6ResultVAB0gdeF7RequestVKF"></a>
+                    <a name="/s:12MigrationHubAAV26createProgressUpdateStreamy3NIO15EventLoopFutureCyAB06CreatedeF6ResultVGAB0kdeF7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createProgressUpdateStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV26createProgressUpdateStreamyAB06CreatedeF6ResultVAB0gdeF7RequestVKF">createProgressUpdateStream(_:)</a>
+                    <a class="token" href="#/s:12MigrationHubAAV26createProgressUpdateStreamy3NIO15EventLoopFutureCyAB06CreatedeF6ResultVGAB0kdeF7RequestVKF">createProgressUpdateStream(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -918,7 +648,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createProgressUpdateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/CreateProgressUpdateStreamRequest.html">CreateProgressUpdateStreamRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV32CreateProgressUpdateStreamResultV">CreateProgressUpdateStreamResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createProgressUpdateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/CreateProgressUpdateStreamRequest.html">CreateProgressUpdateStreamRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/CreateProgressUpdateStreamResult.html">CreateProgressUpdateStreamResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV25listProgressUpdateStreamsyAB04ListdeF6ResultVAB0gdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listProgressUpdateStreams(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV25listProgressUpdateStreamsyAB04ListdeF6ResultVAB0gdeF7RequestVKF">listProgressUpdateStreams(_:)</a>
+                    <a name="/s:12MigrationHubAAV26deleteProgressUpdateStreamy3NIO15EventLoopFutureCyAB06DeletedeF6ResultVGAB0kdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteProgressUpdateStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV26deleteProgressUpdateStreamy3NIO15EventLoopFutureCyAB06DeletedeF6ResultVGAB0kdeF7RequestVKF">deleteProgressUpdateStream(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Lists progress update streams associated with the user account making this call.</p>
+                        <p>Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for access control. This API has the following traits:   The only parameter needed for DeleteProgressUpdateStream is the stream name (same as a CreateProgressUpdateStream call).   The call will return, and a background process will asynchronously delete the stream and all of its resources (tasks, associated resources, resource attributes, created artifacts).   If the stream takes time to be deleted, it might still show up on a ListProgressUpdateStreams call.    CreateProgressUpdateStream, ImportMigrationTask, NotifyMigrationTaskState, and all Associate[*] APIs realted to the tasks belonging to the stream will throw <q>InvalidInputException</q> if the stream of the same name is in the process of being deleted.   Once the stream and all of its resources are deleted, CreateProgressUpdateStream for a stream of the same name will succeed, and that stream will be an entirely new logical resource (without any resources associated with the old stream).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listProgressUpdateStreams</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListProgressUpdateStreamsRequest.html">ListProgressUpdateStreamsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/ListProgressUpdateStreamsResult.html">ListProgressUpdateStreamsResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteProgressUpdateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DeleteProgressUpdateStreamRequest.html">DeleteProgressUpdateStreamRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/DeleteProgressUpdateStreamResult.html">DeleteProgressUpdateStreamResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +685,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV20listCreatedArtifactsyAB04ListdE6ResultVAB0fdE7RequestVKF"></a>
+                    <a name="/s:12MigrationHubAAV24describeApplicationStatey3NIO15EventLoopFutureCyAB08DescribedE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeApplicationState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV24describeApplicationStatey3NIO15EventLoopFutureCyAB08DescribedE6ResultVGAB0jdE7RequestVKF">describeApplicationState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the migration status of an application.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeApplicationState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeApplicationStateRequest.html">DescribeApplicationStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/DescribeApplicationStateResult.html">DescribeApplicationStateResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV08describeA4Tasky3NIO15EventLoopFutureCyAB08DescribeaD6ResultVGAB0iaD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeMigrationTask(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV08describeA4Tasky3NIO15EventLoopFutureCyAB08DescribeaD6ResultVGAB0iaD7RequestVKF">describeMigrationTask(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves a list of all attributes associated with a specific migration task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeMigrationTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DescribeMigrationTaskRequest.html">DescribeMigrationTaskRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/DescribeMigrationTaskResult.html">DescribeMigrationTaskResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV27disassociateCreatedArtifacty3NIO15EventLoopFutureCyAB012DisassociatedE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/disassociateCreatedArtifact(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV27disassociateCreatedArtifacty3NIO15EventLoopFutureCyAB012DisassociatedE6ResultVGAB0jdE7RequestVKF">disassociateCreatedArtifact(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was previously associated. This API has the following traits:   A migration user can call the DisassociateCreatedArtifacts operation to disassociate a created AWS Artifact from a migration task.   The created artifact name must be provided in ARN (Amazon Resource Name) format which will contain information about type and region; for example: arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b.   Examples of the AWS resource behind the created artifact are, AMI&rsquo;s, EC2 instance, or RDS instance, etc.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateCreatedArtifact</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DisassociateCreatedArtifactRequest.html">DisassociateCreatedArtifactRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/DisassociateCreatedArtifactResult.html">DisassociateCreatedArtifactResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV30disassociateDiscoveredResourcey3NIO15EventLoopFutureCyAB012DisassociatedE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/disassociateDiscoveredResource(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV30disassociateDiscoveredResourcey3NIO15EventLoopFutureCyAB012DisassociatedE6ResultVGAB0jdE7RequestVKF">disassociateDiscoveredResource(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disassociate an Application Discovery Service (ADS) discovered resource from a migration task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateDiscoveredResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/DisassociateDiscoveredResourceRequest.html">DisassociateDiscoveredResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/DisassociateDiscoveredResourceResult.html">DisassociateDiscoveredResourceResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV06importA4Tasky3NIO15EventLoopFutureCyAB06ImportaD6ResultVGAB0iaD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/importMigrationTask(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV06importA4Tasky3NIO15EventLoopFutureCyAB06ImportaD6ResultVGAB0iaD7RequestVKF">importMigrationTask(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration tool. This API is a prerequisite to calling the NotifyMigrationTaskState API as the migration tool must first register the migration task with Migration Hub.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">importMigrationTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ImportMigrationTaskRequest.html">ImportMigrationTaskRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/ImportMigrationTaskResult.html">ImportMigrationTaskResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV20listCreatedArtifactsy3NIO15EventLoopFutureCyAB04ListdE6ResultVGAB0jdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/listCreatedArtifacts(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV20listCreatedArtifactsyAB04ListdE6ResultVAB0fdE7RequestVKF">listCreatedArtifacts(_:)</a>
+                    <a class="token" href="#/s:12MigrationHubAAV20listCreatedArtifactsy3NIO15EventLoopFutureCyAB04ListdE6ResultVGAB0jdE7RequestVKF">listCreatedArtifacts(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listCreatedArtifacts</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListCreatedArtifactsRequest.html">ListCreatedArtifactsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub/ListCreatedArtifactsResult.html">ListCreatedArtifactsResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listCreatedArtifacts</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListCreatedArtifactsRequest.html">ListCreatedArtifactsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/ListCreatedArtifactsResult.html">ListCreatedArtifactsResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +847,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV22notifyApplicationStateyAB06NotifydE6ResultVAB0fdE7RequestVKF"></a>
+                    <a name="/s:12MigrationHubAAV23listDiscoveredResourcesy3NIO15EventLoopFutureCyAB04ListdE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listDiscoveredResources(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV23listDiscoveredResourcesy3NIO15EventLoopFutureCyAB04ListdE6ResultVGAB0jdE7RequestVKF">listDiscoveredResources(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists discovered resources associated with the given MigrationTask.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listDiscoveredResources</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListDiscoveredResourcesRequest.html">ListDiscoveredResourcesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/ListDiscoveredResourcesResult.html">ListDiscoveredResourcesResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV04listA5Tasksy3NIO15EventLoopFutureCyAB04ListaD6ResultVGAB0iaD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listMigrationTasks(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV04listA5Tasksy3NIO15EventLoopFutureCyAB04ListaD6ResultVGAB0iaD7RequestVKF">listMigrationTasks(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists all, or filtered by resource name, migration tasks associated with the user account making this call. This API has the following traits:   Can show a summary list of the most recent migration tasks.   Can show a summary list of migration tasks associated with a given discovered resource.   Lists migration tasks in a paginated interface.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listMigrationTasks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListMigrationTasksRequest.html">ListMigrationTasksRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/ListMigrationTasksResult.html">ListMigrationTasksResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV25listProgressUpdateStreamsy3NIO15EventLoopFutureCyAB04ListdeF6ResultVGAB0kdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listProgressUpdateStreams(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV25listProgressUpdateStreamsy3NIO15EventLoopFutureCyAB04ListdeF6ResultVGAB0kdeF7RequestVKF">listProgressUpdateStreams(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists progress update streams associated with the user account making this call.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listProgressUpdateStreams</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/ListProgressUpdateStreamsRequest.html">ListProgressUpdateStreamsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/ListProgressUpdateStreamsResult.html">ListProgressUpdateStreamsResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV22notifyApplicationStatey3NIO15EventLoopFutureCyAB06NotifydE6ResultVGAB0jdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/notifyApplicationState(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV22notifyApplicationStateyAB06NotifydE6ResultVAB0fdE7RequestVKF">notifyApplicationState(_:)</a>
+                    <a class="token" href="#/s:12MigrationHubAAV22notifyApplicationStatey3NIO15EventLoopFutureCyAB06NotifydE6ResultVGAB0jdE7RequestVKF">notifyApplicationState(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -999,7 +945,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifyApplicationState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/NotifyApplicationStateRequest.html">NotifyApplicationStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MigrationHub.html#/s:12MigrationHubAAV28NotifyApplicationStateResultV">NotifyApplicationStateResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifyApplicationState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/NotifyApplicationStateRequest.html">NotifyApplicationStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/NotifyApplicationStateResult.html">NotifyApplicationStateResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV06notifyA9TaskStatey3NIO15EventLoopFutureCyAB06NotifyadE6ResultVGAB0jadE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/notifyMigrationTaskState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV06notifyA9TaskStatey3NIO15EventLoopFutureCyAB06NotifyadE6ResultVGAB0jadE7RequestVKF">notifyMigrationTaskState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies Migration Hub of the current status, progress, or other detail regarding a migration task. This API has the following traits:   Migration tools will call the NotifyMigrationTaskState API to share the latest progress and status.    MigrationTaskName is used for addressing updates to the correct target.    ProgressUpdateStream is used for access control and to provide a namespace for each migration tool.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">notifyMigrationTaskState</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/NotifyMigrationTaskStateRequest.html">NotifyMigrationTaskStateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/NotifyMigrationTaskStateResult.html">NotifyMigrationTaskStateResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV21putResourceAttributesy3NIO15EventLoopFutureCyAB03PutdE6ResultVGAB0jdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/putResourceAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV21putResourceAttributesy3NIO15EventLoopFutureCyAB03PutdE6ResultVGAB0jdE7RequestVKF">putResourceAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery Service (ADS)&lsquo;s repository. This association occurs asynchronously after PutResourceAttributes returns.    Keep in mind that subsequent calls to PutResourceAttributes will override previously stored attributes. For example, if it is first called with a MAC address, but later, it is desired to add an IP address, it will then be required to call it with both the IP and MAC addresses to prevent overiding the MAC address.   Note the instructions regarding the special use case of the  ResourceAttributeList  parameter when specifying any <q>VM</q> related value.      Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an association was found based on the provided details, call ListDiscoveredResources.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putResourceAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MigrationHub/PutResourceAttributesRequest.html">PutResourceAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MigrationHub/PutResourceAttributesResult.html">PutResourceAttributesResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1013,9 +1013,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV08DescribeA11TaskRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeMigrationTaskRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV08DescribeA11TaskRequestV">DescribeMigrationTaskRequest</a>
+                    <a name="/s:12MigrationHubAAV17ApplicationStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/ApplicationStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV17ApplicationStatusO">ApplicationStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1025,180 +1025,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/DescribeMigrationTaskRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/ApplicationStatus.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMigrationTaskRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV30ListDiscoveredResourcesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListDiscoveredResourcesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV30ListDiscoveredResourcesRequestV">ListDiscoveredResourcesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ListDiscoveredResourcesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDiscoveredResourcesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV33DeleteProgressUpdateStreamRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteProgressUpdateStreamRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV33DeleteProgressUpdateStreamRequestV">DeleteProgressUpdateStreamRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/DeleteProgressUpdateStreamRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteProgressUpdateStreamRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV29ListDiscoveredResourcesResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ListDiscoveredResourcesResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV29ListDiscoveredResourcesResultV">ListDiscoveredResourcesResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ListDiscoveredResourcesResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDiscoveredResourcesResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV08DescribeA10TaskResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeMigrationTaskResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV08DescribeA10TaskResultV">DescribeMigrationTaskResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/DescribeMigrationTaskResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMigrationTaskResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV06NotifyA15TaskStateResultV"></a>
-                    <a name="//apple_ref/swift/Struct/NotifyMigrationTaskStateResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV06NotifyA15TaskStateResultV">NotifyMigrationTaskStateResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyMigrationTaskStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV29NotifyApplicationStateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/NotifyApplicationStateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV29NotifyApplicationStateRequestV">NotifyApplicationStateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/NotifyApplicationStateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyApplicationStateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ApplicationStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -1236,9 +1069,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV32CreateProgressUpdateStreamResultV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateProgressUpdateStreamResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV32CreateProgressUpdateStreamResultV">CreateProgressUpdateStreamResult</a>
+                    <a name="/s:12MigrationHubAAV30AssociateCreatedArtifactResultV"></a>
+                    <a name="//apple_ref/swift/Struct/AssociateCreatedArtifactResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV30AssociateCreatedArtifactResultV">AssociateCreatedArtifactResult</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1248,95 +1081,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/MigrationHub/AssociateCreatedArtifactResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateProgressUpdateStreamResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV17ResourceAttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/ResourceAttribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV17ResourceAttributeV">ResourceAttribute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ResourceAttribute.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResourceAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV17ApplicationStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/ApplicationStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV17ApplicationStatusO">ApplicationStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ApplicationStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ApplicationStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV33DisassociateCreatedArtifactResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateCreatedArtifactResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV33DisassociateCreatedArtifactResultV">DisassociateCreatedArtifactResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateCreatedArtifactResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AssociateCreatedArtifactResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1374,62 +1125,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV4TaskV"></a>
-                    <a name="//apple_ref/swift/Struct/Task" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV4TaskV">Task</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/Task.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Task</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV31ListProgressUpdateStreamsResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ListProgressUpdateStreamsResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV31ListProgressUpdateStreamsResultV">ListProgressUpdateStreamsResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ListProgressUpdateStreamsResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListProgressUpdateStreamsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:12MigrationHubAAV33AssociateDiscoveredResourceResultV"></a>
                     <a name="//apple_ref/swift/Struct/AssociateDiscoveredResourceResult" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MigrationHubAAV33AssociateDiscoveredResourceResultV">AssociateDiscoveredResourceResult</a>
@@ -1442,6 +1137,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/MigrationHub/AssociateDiscoveredResourceResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1457,9 +1153,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV30DescribeApplicationStateResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeApplicationStateResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV30DescribeApplicationStateResultV">DescribeApplicationStateResult</a>
+                    <a name="/s:12MigrationHubAAV33CreateProgressUpdateStreamRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateProgressUpdateStreamRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV33CreateProgressUpdateStreamRequestV">CreateProgressUpdateStreamRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1469,13 +1165,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/DescribeApplicationStateResult.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/CreateProgressUpdateStreamRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeApplicationStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateProgressUpdateStreamRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1485,9 +1181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV36DisassociateDiscoveredResourceResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateDiscoveredResourceResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV36DisassociateDiscoveredResourceResultV">DisassociateDiscoveredResourceResult</a>
+                    <a name="/s:12MigrationHubAAV32CreateProgressUpdateStreamResultV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateProgressUpdateStreamResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV32CreateProgressUpdateStreamResultV">CreateProgressUpdateStreamResult</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1497,234 +1193,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/MigrationHub/CreateProgressUpdateStreamResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateDiscoveredResourceResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV04ListA11TasksResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ListMigrationTasksResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV04ListA11TasksResultV">ListMigrationTasksResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ListMigrationTasksResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListMigrationTasksResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV37DisassociateDiscoveredResourceRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateDiscoveredResourceRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV37DisassociateDiscoveredResourceRequestV">DisassociateDiscoveredResourceRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/DisassociateDiscoveredResourceRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateDiscoveredResourceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV28NotifyApplicationStateResultV"></a>
-                    <a name="//apple_ref/swift/Struct/NotifyApplicationStateResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV28NotifyApplicationStateResultV">NotifyApplicationStateResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyApplicationStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV06ImportA10TaskResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ImportMigrationTaskResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV06ImportA10TaskResultV">ImportMigrationTaskResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportMigrationTaskResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV34DisassociateCreatedArtifactRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateCreatedArtifactRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV34DisassociateCreatedArtifactRequestV">DisassociateCreatedArtifactRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/DisassociateCreatedArtifactRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateCreatedArtifactRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV0A11TaskSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/MigrationTaskSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV0A11TaskSummaryV">MigrationTaskSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/MigrationTaskSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MigrationTaskSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV6StatusO"></a>
-                    <a name="//apple_ref/swift/Enum/Status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV6StatusO">Status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/Status.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Status</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV06ImportA11TaskRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ImportMigrationTaskRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV06ImportA11TaskRequestV">ImportMigrationTaskRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ImportMigrationTaskRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportMigrationTaskRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateProgressUpdateStreamResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1762,6 +1237,62 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MigrationHubAAV33DeleteProgressUpdateStreamRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteProgressUpdateStreamRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV33DeleteProgressUpdateStreamRequestV">DeleteProgressUpdateStreamRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DeleteProgressUpdateStreamRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteProgressUpdateStreamRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV32DeleteProgressUpdateStreamResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteProgressUpdateStreamResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV32DeleteProgressUpdateStreamResultV">DeleteProgressUpdateStreamResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DeleteProgressUpdateStreamResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteProgressUpdateStreamResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MigrationHubAAV31DescribeApplicationStateRequestV"></a>
                     <a name="//apple_ref/swift/Struct/DescribeApplicationStateRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MigrationHubAAV31DescribeApplicationStateRequestV">DescribeApplicationStateRequest</a>
@@ -1790,9 +1321,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV21ResourceAttributeTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/ResourceAttributeType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV21ResourceAttributeTypeO">ResourceAttributeType</a>
+                    <a name="/s:12MigrationHubAAV30DescribeApplicationStateResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeApplicationStateResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV30DescribeApplicationStateResultV">DescribeApplicationStateResult</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1802,13 +1333,265 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/ResourceAttributeType.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/DescribeApplicationStateResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResourceAttributeType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeApplicationStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV08DescribeA11TaskRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeMigrationTaskRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV08DescribeA11TaskRequestV">DescribeMigrationTaskRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DescribeMigrationTaskRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMigrationTaskRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV08DescribeA10TaskResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeMigrationTaskResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV08DescribeA10TaskResultV">DescribeMigrationTaskResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DescribeMigrationTaskResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeMigrationTaskResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV34DisassociateCreatedArtifactRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateCreatedArtifactRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV34DisassociateCreatedArtifactRequestV">DisassociateCreatedArtifactRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DisassociateCreatedArtifactRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateCreatedArtifactRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV33DisassociateCreatedArtifactResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateCreatedArtifactResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV33DisassociateCreatedArtifactResultV">DisassociateCreatedArtifactResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DisassociateCreatedArtifactResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateCreatedArtifactResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV37DisassociateDiscoveredResourceRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateDiscoveredResourceRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV37DisassociateDiscoveredResourceRequestV">DisassociateDiscoveredResourceRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DisassociateDiscoveredResourceRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateDiscoveredResourceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV36DisassociateDiscoveredResourceResultV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateDiscoveredResourceResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV36DisassociateDiscoveredResourceResultV">DisassociateDiscoveredResourceResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DisassociateDiscoveredResourceResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateDiscoveredResourceResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV18DiscoveredResourceV"></a>
+                    <a name="//apple_ref/swift/Struct/DiscoveredResource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV18DiscoveredResourceV">DiscoveredResource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/DiscoveredResource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DiscoveredResource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV06ImportA11TaskRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ImportMigrationTaskRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV06ImportA11TaskRequestV">ImportMigrationTaskRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ImportMigrationTaskRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportMigrationTaskRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV06ImportA10TaskResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ImportMigrationTaskResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV06ImportA10TaskResultV">ImportMigrationTaskResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ImportMigrationTaskResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportMigrationTaskResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1846,6 +1629,146 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MigrationHubAAV26ListCreatedArtifactsResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ListCreatedArtifactsResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV26ListCreatedArtifactsResultV">ListCreatedArtifactsResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListCreatedArtifactsResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCreatedArtifactsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV30ListDiscoveredResourcesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListDiscoveredResourcesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV30ListDiscoveredResourcesRequestV">ListDiscoveredResourcesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListDiscoveredResourcesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDiscoveredResourcesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV29ListDiscoveredResourcesResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ListDiscoveredResourcesResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV29ListDiscoveredResourcesResultV">ListDiscoveredResourcesResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListDiscoveredResourcesResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListDiscoveredResourcesResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV04ListA12TasksRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListMigrationTasksRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV04ListA12TasksRequestV">ListMigrationTasksRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListMigrationTasksRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListMigrationTasksRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV04ListA11TasksResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ListMigrationTasksResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV04ListA11TasksResultV">ListMigrationTasksResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListMigrationTasksResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListMigrationTasksResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MigrationHubAAV32ListProgressUpdateStreamsRequestV"></a>
                     <a name="//apple_ref/swift/Struct/ListProgressUpdateStreamsRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MigrationHubAAV32ListProgressUpdateStreamsRequestV">ListProgressUpdateStreamsRequest</a>
@@ -1874,6 +1797,146 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MigrationHubAAV31ListProgressUpdateStreamsResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ListProgressUpdateStreamsResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV31ListProgressUpdateStreamsResultV">ListProgressUpdateStreamsResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ListProgressUpdateStreamsResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListProgressUpdateStreamsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV0A4TaskV"></a>
+                    <a name="//apple_ref/swift/Struct/MigrationTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV0A4TaskV">MigrationTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/MigrationTask.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MigrationTask</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV0A11TaskSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/MigrationTaskSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV0A11TaskSummaryV">MigrationTaskSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/MigrationTaskSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MigrationTaskSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV29NotifyApplicationStateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/NotifyApplicationStateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV29NotifyApplicationStateRequestV">NotifyApplicationStateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/NotifyApplicationStateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyApplicationStateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV28NotifyApplicationStateResultV"></a>
+                    <a name="//apple_ref/swift/Struct/NotifyApplicationStateResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV28NotifyApplicationStateResultV">NotifyApplicationStateResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/NotifyApplicationStateResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyApplicationStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MigrationHubAAV06NotifyA16TaskStateRequestV"></a>
                     <a name="//apple_ref/swift/Struct/NotifyMigrationTaskStateRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MigrationHubAAV06NotifyA16TaskStateRequestV">NotifyMigrationTaskStateRequest</a>
@@ -1893,6 +1956,62 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyMigrationTaskStateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV06NotifyA15TaskStateResultV"></a>
+                    <a name="//apple_ref/swift/Struct/NotifyMigrationTaskStateResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV06NotifyA15TaskStateResultV">NotifyMigrationTaskStateResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/NotifyMigrationTaskStateResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NotifyMigrationTaskStateResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MigrationHubAAV27ProgressUpdateStreamSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/ProgressUpdateStreamSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV27ProgressUpdateStreamSummaryV">ProgressUpdateStreamSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MigrationHub/ProgressUpdateStreamSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ProgressUpdateStreamSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1942,6 +2061,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/MigrationHub/PutResourceAttributesResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1957,9 +2077,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV30AssociateCreatedArtifactResultV"></a>
-                    <a name="//apple_ref/swift/Struct/AssociateCreatedArtifactResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV30AssociateCreatedArtifactResultV">AssociateCreatedArtifactResult</a>
+                    <a name="/s:12MigrationHubAAV17ResourceAttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/ResourceAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV17ResourceAttributeV">ResourceAttribute</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1969,12 +2089,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/MigrationHub/ResourceAttribute.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AssociateCreatedArtifactResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResourceAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1984,9 +2105,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV18DiscoveredResourceV"></a>
-                    <a name="//apple_ref/swift/Struct/DiscoveredResource" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV18DiscoveredResourceV">DiscoveredResource</a>
+                    <a name="/s:12MigrationHubAAV21ResourceAttributeTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/ResourceAttributeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV21ResourceAttributeTypeO">ResourceAttributeType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1996,13 +2117,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/DiscoveredResource.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/ResourceAttributeType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DiscoveredResource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResourceAttributeType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -2012,9 +2133,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV26ListCreatedArtifactsResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ListCreatedArtifactsResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV26ListCreatedArtifactsResultV">ListCreatedArtifactsResult</a>
+                    <a name="/s:12MigrationHubAAV6StatusO"></a>
+                    <a name="//apple_ref/swift/Enum/Status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV6StatusO">Status</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2024,13 +2145,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/ListCreatedArtifactsResult.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/Status.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCreatedArtifactsResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Status</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -2040,9 +2161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MigrationHubAAV33CreateProgressUpdateStreamRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateProgressUpdateStreamRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV33CreateProgressUpdateStreamRequestV">CreateProgressUpdateStreamRequest</a>
+                    <a name="/s:12MigrationHubAAV4TaskV"></a>
+                    <a name="//apple_ref/swift/Struct/Task" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MigrationHubAAV4TaskV">Task</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2052,124 +2173,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MigrationHub/CreateProgressUpdateStreamRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MigrationHub/Task.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateProgressUpdateStreamRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV32DeleteProgressUpdateStreamResultV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteProgressUpdateStreamResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV32DeleteProgressUpdateStreamResultV">DeleteProgressUpdateStreamResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteProgressUpdateStreamResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV0A4TaskV"></a>
-                    <a name="//apple_ref/swift/Struct/MigrationTask" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV0A4TaskV">MigrationTask</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/MigrationTask.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MigrationTask</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV27ProgressUpdateStreamSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/ProgressUpdateStreamSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV27ProgressUpdateStreamSummaryV">ProgressUpdateStreamSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ProgressUpdateStreamSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ProgressUpdateStreamSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MigrationHubAAV04ListA12TasksRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListMigrationTasksRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MigrationHubAAV04ListA12TasksRequestV">ListMigrationTasksRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MigrationHub/ListMigrationTasksRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListMigrationTasksRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Task</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2181,7 +2191,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

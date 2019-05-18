@@ -14,7 +14,7 @@
     <a title="FlowLog Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,87 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EC2AAV7FlowLogV12creationTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV12creationTime15AWSSDKSwiftCore0E5StampVSgvp">creationTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time the flow log was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV7FlowLogV23deliverLogsErrorMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deliverLogsErrorMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV23deliverLogsErrorMessageSSSgvp">deliverLogsErrorMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about the error that occurred. Rate limited indicates that CloudWatch Logs throttling has been applied for one or more network interfaces, or that you&rsquo;ve reached the limit on the number of log groups that you can create. Access error indicates that the IAM role associated with the flow log does not have sufficient permissions to publish to CloudWatch Logs. Unknown error indicates an internal error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliverLogsErrorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV7FlowLogV24deliverLogsPermissionArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deliverLogsPermissionArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV24deliverLogsPermissionArnSSSgvp">deliverLogsPermissionArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ARN of the IAM role that posts logs to CloudWatch Logs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliverLogsPermissionArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EC2AAV7FlowLogV17deliverLogsStatusSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/deliverLogsStatus" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV7FlowLogV17deliverLogsStatusSSSgvp">deliverLogsStatus</a>
@@ -595,60 +676,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliverLogsStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV7FlowLogV14logDestinationSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/logDestination" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV14logDestinationSSSgvp">logDestination</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the destination to which the flow log data is published. Flow log data can be published to an CloudWatch Logs log group or an Amazon S3 bucket. If the flow log publishes to CloudWatch Logs, this element indicates the Amazon Resource Name (ARN) of the CloudWatch Logs log group to which the data is published. If the flow log publishes to Amazon S3, this element indicates the ARN of the Amazon S3 bucket to which the data is published.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">logDestination</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV7FlowLogV11trafficTypeAB07TrafficE0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/trafficType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV11trafficTypeAB07TrafficE0OSgvp">trafficType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of traffic captured for the flow log.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">trafficType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TrafficType.html">TrafficType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,6 +739,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EC2AAV7FlowLogV14logDestinationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/logDestination" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV14logDestinationSSSgvp">logDestination</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the destination to which the flow log data is published. Flow log data can be published to an CloudWatch Logs log group or an Amazon S3 bucket. If the flow log publishes to CloudWatch Logs, this element indicates the Amazon Resource Name (ARN) of the CloudWatch Logs log group to which the data is published. If the flow log publishes to Amazon S3, this element indicates the ARN of the Amazon S3 bucket to which the data is published.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">logDestination</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EC2AAV7FlowLogV18logDestinationTypeAB0ceF0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/logDestinationType" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV7FlowLogV18logDestinationTypeAB0ceF0OSgvp">logDestinationType</a>
@@ -766,60 +820,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV7FlowLogV24deliverLogsPermissionArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deliverLogsPermissionArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV24deliverLogsPermissionArnSSSgvp">deliverLogsPermissionArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ARN of the IAM role that posts logs to CloudWatch Logs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliverLogsPermissionArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV7FlowLogV12creationTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV12creationTime15AWSSDKSwiftCore0E5StampVSgvp">creationTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time the flow log was created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EC2AAV7FlowLogV10resourceIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/resourceId" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV7FlowLogV10resourceIdSSSgvp">resourceId</a>
@@ -847,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV7FlowLogV23deliverLogsErrorMessageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deliverLogsErrorMessage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV23deliverLogsErrorMessageSSSgvp">deliverLogsErrorMessage</a>
+                    <a name="/s:3EC2AAV7FlowLogV11trafficTypeAB07TrafficE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/trafficType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV11trafficTypeAB07TrafficE0OSgvp">trafficType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Information about the error that occurred. Rate limited indicates that CloudWatch Logs throttling has been applied for one or more network interfaces, or that you&rsquo;ve reached the limit on the number of log groups that you can create. Access error indicates that the IAM role associated with the flow log does not have sufficient permissions to publish to CloudWatch Logs. Unknown error indicates an internal error.</p>
+                        <p>The type of traffic captured for the flow log.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliverLogsErrorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">trafficType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TrafficType.html">TrafficType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV7FlowLogV17deliverLogsStatus14logDestination11trafficType04flowC2Id0kcF00ghJ00G9GroupName0dE13PermissionArn12creationTime08resourceL00dE12ErrorMessageADSSSg_ApB07TrafficJ0OSgA2pB0chJ0OSgA2P15AWSSDKSwiftCore0R5StampVSgA2Ptcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(deliverLogsStatus:logDestination:trafficType:flowLogId:flowLogStatus:logDestinationType:logGroupName:deliverLogsPermissionArn:creationTime:resourceId:deliverLogsErrorMessage:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV7FlowLogV17deliverLogsStatus14logDestination11trafficType04flowC2Id0kcF00ghJ00G9GroupName0dE13PermissionArn12creationTime08resourceL00dE12ErrorMessageADSSSg_ApB07TrafficJ0OSgA2pB0chJ0OSgA2P15AWSSDKSwiftCore0R5StampVSgA2Ptcfc">init(deliverLogsStatus:logDestination:trafficType:flowLogId:flowLogStatus:logDestinationType:logGroupName:deliverLogsPermissionArn:creationTime:resourceId:deliverLogsErrorMessage:)</a>
+                    <a name="/s:3EC2AAV7FlowLogV12creationTime23deliverLogsErrorMessage0fG13PermissionArn0fG6Status04flowC2Id0mcL014logDestination0oP4Type0O9GroupName08resourceN007trafficQ0AD15AWSSDKSwiftCore0E5StampVSg_SSSgA5tB0cpQ0OSgA2tB07TrafficQ0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(creationTime:deliverLogsErrorMessage:deliverLogsPermissionArn:deliverLogsStatus:flowLogId:flowLogStatus:logDestination:logDestinationType:logGroupName:resourceId:trafficType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV7FlowLogV12creationTime23deliverLogsErrorMessage0fG13PermissionArn0fG6Status04flowC2Id0mcL014logDestination0oP4Type0O9GroupName08resourceN007trafficQ0AD15AWSSDKSwiftCore0E5StampVSg_SSSgA5tB0cpQ0OSgA2tB07TrafficQ0OSgtcfc">init(creationTime:deliverLogsErrorMessage:deliverLogsPermissionArn:deliverLogsStatus:flowLogId:flowLogStatus:logDestination:logDestinationType:logGroupName:resourceId:trafficType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">deliverLogsStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logDestination</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">trafficType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TrafficType.html">TrafficType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">flowLogId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">flowLogStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logDestinationType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LogDestinationType.html">LogDestinationType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliverLogsPermissionArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliverLogsErrorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliverLogsErrorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliverLogsPermissionArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliverLogsStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">flowLogId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">flowLogStatus</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logDestination</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logDestinationType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LogDestinationType.html">LogDestinationType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">trafficType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TrafficType.html">TrafficType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

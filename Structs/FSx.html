@@ -14,7 +14,7 @@
     <a title="FSx Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV12createBackupyAB06CreateC8ResponseVAB0dC7RequestVKF"></a>
+                    <a name="/s:3FSxAAV12createBackupy3NIO15EventLoopFutureCyAB06CreateC8ResponseVGAB0hC7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createBackup(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV12createBackupyAB06CreateC8ResponseVAB0dC7RequestVKF">createBackup(_:)</a>
+                    <a class="token" href="#/s:3FSxAAV12createBackupy3NIO15EventLoopFutureCyAB06CreateC8ResponseVGAB0hC7RequestVKF">createBackup(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -594,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateBackupRequest.html">CreateBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/CreateBackupResponse.html">CreateBackupResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateBackupRequest.html">CreateBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/CreateBackupResponse.html">CreateBackupResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -604,198 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV15describeBackupsyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeBackups(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV15describeBackupsyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeBackups(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the description of specific Amazon FSx for Windows File Server backups, if a BackupIds value is provided for that backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you&rsquo;re calling. When retrieving all backups, you can optionally specify the MaxResults parameter to limit the number of backups in a response. If more backups remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your backups. DescribeBackups is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of backups returned in the response of one DescribeBackups call and the order of backups returned across the responses of a multi-call iteration is unspecified.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeBackups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DescribeBackupsRequest.html">DescribeBackupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/DescribeBackupsResponse.html">DescribeBackupsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV19describeFileSystemsyAB08DescribecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeFileSystems(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV19describeFileSystemsyAB08DescribecD8ResponseVAB0ecD7RequestVKF">describeFileSystems(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the description of specific Amazon FSx file systems, if a FileSystemIds value is provided for that file system. Otherwise, it returns descriptions of all file systems owned by your AWS account in the AWS Region of the endpoint that you&rsquo;re calling. When retrieving all file system descriptions, you can optionally specify the MaxResults parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your file system descriptions. DescribeFileSystems is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of file systems returned in the response of one DescribeFileSystems call and the order of file systems returned across the responses of a multicall iteration is unspecified.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeFileSystems</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DescribeFileSystemsRequest.html">DescribeFileSystemsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/DescribeFileSystemsResponse.html">DescribeFileSystemsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV19listTagsForResourceyAB04ListcdE8ResponseVAB0fcdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listTagsForResource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV19listTagsForResourceyAB04ListcdE8ResponseVAB0fcdE7RequestVKF">listTagsForResource(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Lists tags for an Amazon FSx file systems and backups in the case of Amazon FSx for Windows File Server. When retrieving all tags, you can optionally specify the MaxResults parameter to limit the number of tags in a response. If more tags remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your tags. ListTagsForResource is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of tags returned in the response of one ListTagsForResource call and the order of tags returned across the responses of a multi-call iteration is unspecified.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/ListTagsForResourceRequest.html">ListTagsForResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/ListTagsForResourceResponse.html">ListTagsForResourceResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV16deleteFileSystemyAB06DeletecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV16deleteFileSystemyAB06DeletecD8ResponseVAB0ecD7RequestVKF">deleteFileSystem(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes a file system, deleting its contents. After deletion, the file system no longer exists, and its data is gone. Any existing automatic backups will also be deleted. By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon deletion. This final backup is not subject to the file system&rsquo;s retention policy, and must be manually deleted. The DeleteFileSystem action returns while the file system has the DELETING status. You can check the file system deletion status by calling the DescribeFileSystems action, which returns a list of file systems in your account. If you pass the file system ID for a deleted file system, the DescribeFileSystems returns a FileSystemNotFound error.  The data in a deleted file system is also deleted and can&rsquo;t be recovered by any means.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DeleteFileSystemRequest.html">DeleteFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/DeleteFileSystemResponse.html">DeleteFileSystemResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV12deleteBackupyAB06DeleteC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteBackup(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV12deleteBackupyAB06DeleteC8ResponseVAB0dC7RequestVKF">deleteBackup(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes an Amazon FSx for Windows File Server backup, deleting its contents. After deletion, the backup no longer exists, and its data is gone. The DeleteBackup call returns instantly. The backup will not show up in later DescribeBackups calls.  The data in a deleted backup is also deleted and can&rsquo;t be recovered by any means.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DeleteBackupRequest.html">DeleteBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/DeleteBackupResponse.html">DeleteBackupResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV13untagResourceyAB05UntagC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/untagResource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV13untagResourceyAB05UntagC8ResponseVAB0dC7RequestVKF">untagResource(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This action removes a tag from an Amazon FSx resource.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">untagResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/UntagResourceRequest.html">UntagResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx.html#/s:3FSxAAV21UntagResourceResponseV">UntagResourceResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV26createFileSystemFromBackupyAB06CreatecdeF8ResponseVAB0gcdeF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createFileSystemFromBackup(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV26createFileSystemFromBackupyAB06CreatecdeF8ResponseVAB0gcdeF7RequestVKF">createFileSystemFromBackup(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a new Amazon FSx file system from an existing Amazon FSx for Windows File Server backup. If a file system with the specified client request token exists and the parameters match, this call returns the description of the existing file system. If a client request token specified by the file system exists and the parameters don&rsquo;t match, this call returns IncompatibleParameterError. If a file system with the specified client request token doesn&rsquo;t exist, this operation does the following:   Creates a new Amazon FSx file system from backup with an assigned ID, and an initial lifecycle state of CREATING.   Returns the description of the file system.   Parameters like Active Directory, default share name, automatic backup, and backup settings default to the parameters of the file system that was backed up, unless overridden. You can explicitly supply other settings. By using the idempotent operation, you can retry a CreateFileSystemFromBackup call without the risk of creating an extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If you use the same client request token and the initial call created a file system, the client receives success as long as the parameters are the same.  The CreateFileSystemFromBackup call returns while the file system&rsquo;s lifecycle state is still CREATING. You can check the file-system creation status by calling the DescribeFileSystems operation, which returns the file system state along with other information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystemFromBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemFromBackupRequest.html">CreateFileSystemFromBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemFromBackupResponse.html">CreateFileSystemFromBackupResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV16createFileSystemyAB06CreatecD8ResponseVAB0ecD7RequestVKF"></a>
+                    <a name="/s:3FSxAAV16createFileSystemy3NIO15EventLoopFutureCyAB06CreatecD8ResponseVGAB0icD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV16createFileSystemyAB06CreatecD8ResponseVAB0ecD7RequestVKF">createFileSystem(_:)</a>
+                    <a class="token" href="#/s:3FSxAAV16createFileSystemy3NIO15EventLoopFutureCyAB06CreatecD8ResponseVGAB0icD7RequestVKF">createFileSystem(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +621,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemRequest.html">CreateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemResponse.html">CreateFileSystemResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemRequest.html">CreateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/CreateFileSystemResponse.html">CreateFileSystemResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV16updateFileSystemyAB06UpdatecD8ResponseVAB0ecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateFileSystem(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV16updateFileSystemyAB06UpdatecD8ResponseVAB0ecD7RequestVKF">updateFileSystem(_:)</a>
+                    <a name="/s:3FSxAAV26createFileSystemFromBackupy3NIO15EventLoopFutureCyAB06CreatecdeF8ResponseVGAB0kcdeF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createFileSystemFromBackup(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV26createFileSystemFromBackupy3NIO15EventLoopFutureCyAB06CreatecdeF8ResponseVGAB0kcdeF7RequestVKF">createFileSystemFromBackup(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates a file system configuration.</p>
+                        <p>Creates a new Amazon FSx file system from an existing Amazon FSx for Windows File Server backup. If a file system with the specified client request token exists and the parameters match, this call returns the description of the existing file system. If a client request token specified by the file system exists and the parameters don&rsquo;t match, this call returns IncompatibleParameterError. If a file system with the specified client request token doesn&rsquo;t exist, this operation does the following:   Creates a new Amazon FSx file system from backup with an assigned ID, and an initial lifecycle state of CREATING.   Returns the description of the file system.   Parameters like Active Directory, default share name, automatic backup, and backup settings default to the parameters of the file system that was backed up, unless overridden. You can explicitly supply other settings. By using the idempotent operation, you can retry a CreateFileSystemFromBackup call without the risk of creating an extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If you use the same client request token and the initial call created a file system, the client receives success as long as the parameters are the same.  The CreateFileSystemFromBackup call returns while the file system&rsquo;s lifecycle state is still CREATING. You can check the file-system creation status by calling the DescribeFileSystems operation, which returns the file system state along with other information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/UpdateFileSystemRequest.html">UpdateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx/UpdateFileSystemResponse.html">UpdateFileSystemResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createFileSystemFromBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/CreateFileSystemFromBackupRequest.html">CreateFileSystemFromBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/CreateFileSystemFromBackupResponse.html">CreateFileSystemFromBackupResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +658,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV11tagResourceyAB03TagC8ResponseVAB0dC7RequestVKF"></a>
+                    <a name="/s:3FSxAAV12deleteBackupy3NIO15EventLoopFutureCyAB06DeleteC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteBackup(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV12deleteBackupy3NIO15EventLoopFutureCyAB06DeleteC8ResponseVGAB0hC7RequestVKF">deleteBackup(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes an Amazon FSx for Windows File Server backup, deleting its contents. After deletion, the backup no longer exists, and its data is gone. The DeleteBackup call returns instantly. The backup will not show up in later DescribeBackups calls.  The data in a deleted backup is also deleted and can&rsquo;t be recovered by any means.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DeleteBackupRequest.html">DeleteBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/DeleteBackupResponse.html">DeleteBackupResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV16deleteFileSystemy3NIO15EventLoopFutureCyAB06DeletecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteFileSystem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV16deleteFileSystemy3NIO15EventLoopFutureCyAB06DeletecD8ResponseVGAB0icD7RequestVKF">deleteFileSystem(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes a file system, deleting its contents. After deletion, the file system no longer exists, and its data is gone. Any existing automatic backups will also be deleted. By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon deletion. This final backup is not subject to the file system&rsquo;s retention policy, and must be manually deleted. The DeleteFileSystem action returns while the file system has the DELETING status. You can check the file system deletion status by calling the DescribeFileSystems action, which returns a list of file systems in your account. If you pass the file system ID for a deleted file system, the DescribeFileSystems returns a FileSystemNotFound error.  The data in a deleted file system is also deleted and can&rsquo;t be recovered by any means.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DeleteFileSystemRequest.html">DeleteFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/DeleteFileSystemResponse.html">DeleteFileSystemResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV15describeBackupsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeBackups(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV15describeBackupsy3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeBackups(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the description of specific Amazon FSx for Windows File Server backups, if a BackupIds value is provided for that backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you&rsquo;re calling. When retrieving all backups, you can optionally specify the MaxResults parameter to limit the number of backups in a response. If more backups remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your backups. DescribeBackups is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of backups returned in the response of one DescribeBackups call and the order of backups returned across the responses of a multi-call iteration is unspecified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeBackups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DescribeBackupsRequest.html">DescribeBackupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/DescribeBackupsResponse.html">DescribeBackupsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV19describeFileSystemsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeFileSystems(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV19describeFileSystemsy3NIO15EventLoopFutureCyAB08DescribecD8ResponseVGAB0icD7RequestVKF">describeFileSystems(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the description of specific Amazon FSx file systems, if a FileSystemIds value is provided for that file system. Otherwise, it returns descriptions of all file systems owned by your AWS account in the AWS Region of the endpoint that you&rsquo;re calling. When retrieving all file system descriptions, you can optionally specify the MaxResults parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your file system descriptions. DescribeFileSystems is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of file systems returned in the response of one DescribeFileSystems call and the order of file systems returned across the responses of a multicall iteration is unspecified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeFileSystems</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/DescribeFileSystemsRequest.html">DescribeFileSystemsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/DescribeFileSystemsResponse.html">DescribeFileSystemsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV19listTagsForResourcey3NIO15EventLoopFutureCyAB04ListcdE8ResponseVGAB0jcdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listTagsForResource(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV19listTagsForResourcey3NIO15EventLoopFutureCyAB04ListcdE8ResponseVGAB0jcdE7RequestVKF">listTagsForResource(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists tags for an Amazon FSx file systems and backups in the case of Amazon FSx for Windows File Server. When retrieving all tags, you can optionally specify the MaxResults parameter to limit the number of tags in a response. If more tags remain, Amazon FSx returns a NextToken value in the response. In this case, send a later request with the NextToken request parameter set to the value of NextToken from the last response. This action is used in an iterative process to retrieve a list of your tags. ListTagsForResource is called first without a NextTokenvalue. Then the action continues to be called with the NextToken parameter set to the value of the last NextToken value until a response has no NextToken. When using this action, keep the following in mind:   The implementation might return fewer than MaxResults file system descriptions while still including a NextToken value.   The order of tags returned in the response of one ListTagsForResource call and the order of tags returned across the responses of a multi-call iteration is unspecified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/ListTagsForResourceRequest.html">ListTagsForResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/ListTagsForResourceResponse.html">ListTagsForResourceResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV11tagResourcey3NIO15EventLoopFutureCyAB03TagC8ResponseVGAB0hC7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/tagResource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV11tagResourceyAB03TagC8ResponseVAB0dC7RequestVKF">tagResource(_:)</a>
+                    <a class="token" href="#/s:3FSxAAV11tagResourcey3NIO15EventLoopFutureCyAB03TagC8ResponseVGAB0hC7RequestVKF">tagResource(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +810,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tagResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/TagResourceRequest.html">TagResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FSx.html#/s:3FSxAAV19TagResourceResponseV">TagResourceResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tagResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/TagResourceRequest.html">TagResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/TagResourceResponse.html">TagResourceResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV13untagResourcey3NIO15EventLoopFutureCyAB05UntagC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/untagResource(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV13untagResourcey3NIO15EventLoopFutureCyAB05UntagC8ResponseVGAB0hC7RequestVKF">untagResource(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This action removes a tag from an Amazon FSx resource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">untagResource</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/UntagResourceRequest.html">UntagResourceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/UntagResourceResponse.html">UntagResourceResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV16updateFileSystemy3NIO15EventLoopFutureCyAB06UpdatecD8ResponseVGAB0icD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateFileSystem(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV16updateFileSystemy3NIO15EventLoopFutureCyAB06UpdatecD8ResponseVGAB0icD7RequestVKF">updateFileSystem(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a file system configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateFileSystem</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/FSx/UpdateFileSystemRequest.html">UpdateFileSystemRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/FSx/UpdateFileSystemResponse.html">UpdateFileSystemResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -906,6 +906,62 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3FSxAAV6BackupV"></a>
+                    <a name="//apple_ref/swift/Struct/Backup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV6BackupV">Backup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/Backup.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Backup</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV20BackupFailureDetailsV"></a>
+                    <a name="//apple_ref/swift/Struct/BackupFailureDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV20BackupFailureDetailsV">BackupFailureDetails</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/BackupFailureDetails.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BackupFailureDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3FSxAAV15BackupLifecycleO"></a>
                     <a name="//apple_ref/swift/Enum/BackupLifecycle" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FSxAAV15BackupLifecycleO">BackupLifecycle</a>
@@ -925,34 +981,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BackupLifecycle</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV23CreateFileSystemRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateFileSystemRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV23CreateFileSystemRequestV">CreateFileSystemRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateFileSystemRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -990,9 +1018,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV24FileSystemFailureDetailsV"></a>
-                    <a name="//apple_ref/swift/Struct/FileSystemFailureDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV24FileSystemFailureDetailsV">FileSystemFailureDetails</a>
+                    <a name="/s:3FSxAAV19CreateBackupRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateBackupRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV19CreateBackupRequestV">CreateBackupRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1002,13 +1030,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/FileSystemFailureDetails.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/CreateBackupRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemFailureDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1018,9 +1046,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV31DeleteFileSystemWindowsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteFileSystemWindowsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV31DeleteFileSystemWindowsResponseV">DeleteFileSystemWindowsResponse</a>
+                    <a name="/s:3FSxAAV20CreateBackupResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateBackupResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV20CreateBackupResponseV">CreateBackupResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1030,13 +1058,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/DeleteFileSystemWindowsResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/CreateBackupResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemWindowsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1046,9 +1074,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV10FileSystemV"></a>
-                    <a name="//apple_ref/swift/Struct/FileSystem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV10FileSystemV">FileSystem</a>
+                    <a name="/s:3FSxAAV33CreateFileSystemFromBackupRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateFileSystemFromBackupRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV33CreateFileSystemFromBackupRequestV">CreateFileSystemFromBackupRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1058,69 +1086,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/FileSystem.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/CreateFileSystemFromBackupRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV30FileSystemMaintenanceOperationO"></a>
-                    <a name="//apple_ref/swift/Enum/FileSystemMaintenanceOperation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV30FileSystemMaintenanceOperationO">FileSystemMaintenanceOperation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/FileSystemMaintenanceOperation.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemMaintenanceOperation</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV6FilterV"></a>
-                    <a name="//apple_ref/swift/Struct/Filter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV6FilterV">Filter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/Filter.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Filter</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemFromBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1158,6 +1130,174 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3FSxAAV35CreateFileSystemLustreConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateFileSystemLustreConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV35CreateFileSystemLustreConfigurationV">CreateFileSystemLustreConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/CreateFileSystemLustreConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemLustreConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV23CreateFileSystemRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateFileSystemRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV23CreateFileSystemRequestV">CreateFileSystemRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/CreateFileSystemRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV24CreateFileSystemResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateFileSystemResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV24CreateFileSystemResponseV">CreateFileSystemResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/CreateFileSystemResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV36CreateFileSystemWindowsConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateFileSystemWindowsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV36CreateFileSystemWindowsConfigurationV">CreateFileSystemWindowsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/CreateFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV27DataRepositoryConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/DataRepositoryConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV27DataRepositoryConfigurationV">DataRepositoryConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DataRepositoryConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataRepositoryConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV19DeleteBackupRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteBackupRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV19DeleteBackupRequestV">DeleteBackupRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DeleteBackupRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3FSxAAV20DeleteBackupResponseV"></a>
                     <a name="//apple_ref/swift/Struct/DeleteBackupResponse" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FSxAAV20DeleteBackupResponseV">DeleteBackupResponse</a>
@@ -1186,6 +1326,146 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3FSxAAV23DeleteFileSystemRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteFileSystemRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV23DeleteFileSystemRequestV">DeleteFileSystemRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DeleteFileSystemRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV24DeleteFileSystemResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteFileSystemResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV24DeleteFileSystemResponseV">DeleteFileSystemResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DeleteFileSystemResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV36DeleteFileSystemWindowsConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteFileSystemWindowsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV36DeleteFileSystemWindowsConfigurationV">DeleteFileSystemWindowsConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DeleteFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV31DeleteFileSystemWindowsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteFileSystemWindowsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV31DeleteFileSystemWindowsResponseV">DeleteFileSystemWindowsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DeleteFileSystemWindowsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemWindowsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV22DescribeBackupsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeBackupsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV22DescribeBackupsRequestV">DescribeBackupsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DescribeBackupsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3FSxAAV23DescribeBackupsResponseV"></a>
                     <a name="//apple_ref/swift/Struct/DescribeBackupsResponse" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FSxAAV23DescribeBackupsResponseV">DescribeBackupsResponse</a>
@@ -1205,6 +1485,342 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV26DescribeFileSystemsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV26DescribeFileSystemsRequestV">DescribeFileSystemsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DescribeFileSystemsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV27DescribeFileSystemsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV27DescribeFileSystemsResponseV">DescribeFileSystemsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/DescribeFileSystemsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV10FileSystemV"></a>
+                    <a name="//apple_ref/swift/Struct/FileSystem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV10FileSystemV">FileSystem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FileSystem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystem</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV24FileSystemFailureDetailsV"></a>
+                    <a name="//apple_ref/swift/Struct/FileSystemFailureDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV24FileSystemFailureDetailsV">FileSystemFailureDetails</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FileSystemFailureDetails.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileSystemFailureDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV19FileSystemLifecycleO"></a>
+                    <a name="//apple_ref/swift/Enum/FileSystemLifecycle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV19FileSystemLifecycleO">FileSystemLifecycle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FileSystemLifecycle.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemLifecycle</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV30FileSystemMaintenanceOperationO"></a>
+                    <a name="//apple_ref/swift/Enum/FileSystemMaintenanceOperation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV30FileSystemMaintenanceOperationO">FileSystemMaintenanceOperation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FileSystemMaintenanceOperation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemMaintenanceOperation</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV14FileSystemTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/FileSystemType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV14FileSystemTypeO">FileSystemType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FileSystemType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV6FilterV"></a>
+                    <a name="//apple_ref/swift/Struct/Filter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV6FilterV">Filter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/Filter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Filter</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV10FilterNameO"></a>
+                    <a name="//apple_ref/swift/Enum/FilterName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV10FilterNameO">FilterName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/FilterName.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FilterName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV26ListTagsForResourceRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForResourceRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV26ListTagsForResourceRequestV">ListTagsForResourceRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/ListTagsForResourceRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForResourceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV27ListTagsForResourceResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForResourceResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV27ListTagsForResourceResponseV">ListTagsForResourceResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/ListTagsForResourceResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForResourceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FSxAAV29LustreFileSystemConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/LustreFileSystemConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV29LustreFileSystemConfigurationV">LustreFileSystemConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/FSx/LustreFileSystemConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LustreFileSystemConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1270,258 +1886,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV36CreateFileSystemWindowsConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateFileSystemWindowsConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV36CreateFileSystemWindowsConfigurationV">CreateFileSystemWindowsConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV24UpdateFileSystemResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateFileSystemResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV24UpdateFileSystemResponseV">UpdateFileSystemResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/UpdateFileSystemResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV19DeleteBackupRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteBackupRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV19DeleteBackupRequestV">DeleteBackupRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DeleteBackupRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV33CreateFileSystemFromBackupRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateFileSystemFromBackupRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV33CreateFileSystemFromBackupRequestV">CreateFileSystemFromBackupRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateFileSystemFromBackupRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemFromBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV29LustreFileSystemConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/LustreFileSystemConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV29LustreFileSystemConfigurationV">LustreFileSystemConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/LustreFileSystemConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LustreFileSystemConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV20CreateBackupResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateBackupResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV20CreateBackupResponseV">CreateBackupResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateBackupResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV27DescribeFileSystemsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV27DescribeFileSystemsResponseV">DescribeFileSystemsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DescribeFileSystemsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV27ListTagsForResourceResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForResourceResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV27ListTagsForResourceResponseV">ListTagsForResourceResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/ListTagsForResourceResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForResourceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV36UpdateFileSystemWindowsConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateFileSystemWindowsConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV36UpdateFileSystemWindowsConfigurationV">UpdateFileSystemWindowsConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/UpdateFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3FSxAAV18TagResourceRequestV"></a>
                     <a name="//apple_ref/swift/Struct/TagResourceRequest" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FSxAAV18TagResourceRequestV">TagResourceRequest</a>
@@ -1550,341 +1914,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV36DeleteFileSystemWindowsConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteFileSystemWindowsConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV36DeleteFileSystemWindowsConfigurationV">DeleteFileSystemWindowsConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DeleteFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV19FileSystemLifecycleO"></a>
-                    <a name="//apple_ref/swift/Enum/FileSystemLifecycle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV19FileSystemLifecycleO">FileSystemLifecycle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/FileSystemLifecycle.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemLifecycle</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV23DeleteFileSystemRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteFileSystemRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV23DeleteFileSystemRequestV">DeleteFileSystemRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DeleteFileSystemRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV20BackupFailureDetailsV"></a>
-                    <a name="//apple_ref/swift/Struct/BackupFailureDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV20BackupFailureDetailsV">BackupFailureDetails</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/BackupFailureDetails.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BackupFailureDetails</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV21UntagResourceResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/UntagResourceResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV21UntagResourceResponseV">UntagResourceResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagResourceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV35CreateFileSystemLustreConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateFileSystemLustreConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV35CreateFileSystemLustreConfigurationV">CreateFileSystemLustreConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateFileSystemLustreConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemLustreConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV24CreateFileSystemResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateFileSystemResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV24CreateFileSystemResponseV">CreateFileSystemResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateFileSystemResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV6BackupV"></a>
-                    <a name="//apple_ref/swift/Struct/Backup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV6BackupV">Backup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/Backup.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Backup</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV27DataRepositoryConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/DataRepositoryConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV27DataRepositoryConfigurationV">DataRepositoryConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DataRepositoryConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataRepositoryConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV26DescribeFileSystemsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeFileSystemsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV26DescribeFileSystemsRequestV">DescribeFileSystemsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/DescribeFileSystemsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeFileSystemsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV10FilterNameO"></a>
-                    <a name="//apple_ref/swift/Enum/FilterName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV10FilterNameO">FilterName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/FilterName.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FilterName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV19CreateBackupRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateBackupRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV19CreateBackupRequestV">CreateBackupRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/CreateBackupRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3FSxAAV19TagResourceResponseV"></a>
                     <a name="//apple_ref/swift/Struct/TagResourceResponse" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FSxAAV19TagResourceResponseV">TagResourceResponse</a>
@@ -1897,6 +1926,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/FSx/TagResourceResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1940,9 +1970,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV30WindowsFileSystemConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/WindowsFileSystemConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV30WindowsFileSystemConfigurationV">WindowsFileSystemConfiguration</a>
+                    <a name="/s:3FSxAAV21UntagResourceResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/UntagResourceResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV21UntagResourceResponseV">UntagResourceResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1952,13 +1982,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/WindowsFileSystemConfiguration.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/UntagResourceResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WindowsFileSystemConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagResourceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2024,9 +2054,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV26ListTagsForResourceRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForResourceRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV26ListTagsForResourceRequestV">ListTagsForResourceRequest</a>
+                    <a name="/s:3FSxAAV24UpdateFileSystemResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateFileSystemResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV24UpdateFileSystemResponseV">UpdateFileSystemResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2036,13 +2066,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/ListTagsForResourceRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/UpdateFileSystemResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForResourceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2052,9 +2082,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV24DeleteFileSystemResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteFileSystemResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV24DeleteFileSystemResponseV">DeleteFileSystemResponse</a>
+                    <a name="/s:3FSxAAV36UpdateFileSystemWindowsConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateFileSystemWindowsConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV36UpdateFileSystemWindowsConfigurationV">UpdateFileSystemWindowsConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2064,13 +2094,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/DeleteFileSystemResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/UpdateFileSystemWindowsConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteFileSystemResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateFileSystemWindowsConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2080,9 +2110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FSxAAV22DescribeBackupsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeBackupsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV22DescribeBackupsRequestV">DescribeBackupsRequest</a>
+                    <a name="/s:3FSxAAV30WindowsFileSystemConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/WindowsFileSystemConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FSxAAV30WindowsFileSystemConfigurationV">WindowsFileSystemConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2092,41 +2122,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/FSx/DescribeBackupsRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/FSx/WindowsFileSystemConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FSxAAV14FileSystemTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/FileSystemType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FSxAAV14FileSystemTypeO">FileSystemType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/FSx/FileSystemType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FileSystemType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WindowsFileSystemConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2138,7 +2140,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

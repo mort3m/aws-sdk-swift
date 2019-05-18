@@ -14,7 +14,7 @@
     <a title="ACM Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,63 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV17exportCertificateyAB06ExportC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/exportCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV17exportCertificateyAB06ExportC8ResponseVAB0dC7RequestVKF">exportCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Exports a private certificate issued by a private certificate authority (CA) for use anywhere. You can export the certificate, the certificate chain, and the encrypted private key associated with the public key embedded in the certificate. You must store the private key securely. The private key is a 2048 bit RSA key. You must provide a passphrase for the private key when exporting it. You can use the following OpenSSL command to decrypt it later. Provide the passphrase when prompted.   openssl rsa -in encrypted_key.pem -out decrypted_key.pem</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ExportCertificateRequest.html">ExportCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/ExportCertificateResponse.html">ExportCertificateResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV22listTagsForCertificateyAB04ListcdE8ResponseVAB0fcdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listTagsForCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV22listTagsForCertificateyAB04ListcdE8ResponseVAB0fcdE7RequestVKF">listTagsForCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Lists the tags that have been applied to the ACM certificate. Use the certificate&rsquo;s Amazon Resource Name (ARN) to specify the certificate. To add a tag to an ACM certificate, use the AddTagsToCertificate action. To delete a tag, use the RemoveTagsFromCertificate action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ListTagsForCertificateRequest.html">ListTagsForCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/ListTagsForCertificateResponse.html">ListTagsForCertificateResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV20addTagsToCertificateyyAB03AddcdE7RequestVKF"></a>
+                    <a name="/s:3ACMAAV20addTagsToCertificatey3NIO15EventLoopFutureCyytGAB03AddcdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/addTagsToCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV20addTagsToCertificateyyAB03AddcdE7RequestVKF">addTagsToCertificate(_:)</a>
+                    <a class="token" href="#/s:3ACMAAV20addTagsToCertificatey3NIO15EventLoopFutureCyytGAB03AddcdE7RequestVKF">addTagsToCertificate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -648,7 +594,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTagsToCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/AddTagsToCertificateRequest.html">AddTagsToCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTagsToCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/AddTagsToCertificateRequest.html">AddTagsToCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -658,90 +605,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV25removeTagsFromCertificateyyAB06RemovecdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/removeTagsFromCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV25removeTagsFromCertificateyyAB06RemovecdE7RequestVKF">removeTagsFromCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Remove one or more tags from an ACM certificate. A tag consists of a key-value pair. If you do not specify the value portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the tag is removed only if it is associated with the specified value.  To add tags to a certificate, use the AddTagsToCertificate action. To view all of the tags that have been applied to a specific ACM certificate, use the ListTagsForCertificate action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeTagsFromCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/RemoveTagsFromCertificateRequest.html">RemoveTagsFromCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV16listCertificatesyAB04ListC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/listCertificates(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV16listCertificatesyAB04ListC8ResponseVAB0dC7RequestVKF">listCertificates(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific status be listed. You can also filter by specific attributes of the certificate.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listCertificates</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ListCertificatesRequest.html">ListCertificatesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/ListCertificatesResponse.html">ListCertificatesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV18requestCertificateyAB07RequestC8ResponseVAB0dcD0VKF"></a>
-                    <a name="//apple_ref/swift/Method/requestCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV18requestCertificateyAB07RequestC8ResponseVAB0dcD0VKF">requestCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Requests an ACM certificate for use with other AWS services. To request an ACM certificate, you must specify a fully qualified domain name (FQDN) in the DomainName parameter. You can also specify additional FQDNs in the SubjectAlternativeNames parameter.  If you are requesting a private certificate, domain validation is not required. If you are requesting a public certificate, each domain name that you specify must be validated to verify that you own or control the domain. You can use DNS validation or email validation. We recommend that you use DNS validation. ACM issues public certificates after receiving approval from the domain owner.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/RequestCertificateRequest.html">RequestCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/RequestCertificateResponse.html">RequestCertificateResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV17deleteCertificateyyAB06DeleteC7RequestVKF"></a>
+                    <a name="/s:3ACMAAV17deleteCertificatey3NIO15EventLoopFutureCyytGAB06DeleteC7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV17deleteCertificateyyAB06DeleteC7RequestVKF">deleteCertificate(_:)</a>
+                    <a class="token" href="#/s:3ACMAAV17deleteCertificatey3NIO15EventLoopFutureCyytGAB06DeleteC7RequestVKF">deleteCertificate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +622,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/DeleteCertificateRequest.html">DeleteCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/DeleteCertificateRequest.html">DeleteCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -766,117 +633,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV24updateCertificateOptionsyyAB06UpdatecD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateCertificateOptions(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV24updateCertificateOptionsyyAB06UpdatecD7RequestVKF">updateCertificateOptions(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your certificate in a certificate transparency log. For more information, see  Opting Out of Certificate Transparency Logging.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateCertificateOptions</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/UpdateCertificateOptionsRequest.html">UpdateCertificateOptionsRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV17importCertificateyAB06ImportC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/importCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV17importCertificateyAB06ImportC8ResponseVAB0dC7RequestVKF">importCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that integrated services allow only certificate types and keys they support to be associated with their resources. Further, their support differs depending on whether the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more information about importing certificates into ACM, see Importing Certificates in the AWS Certificate Manager User Guide.   ACM does not provide managed renewal for certificates that you import.  Note the following guidelines when importing third party certificates:   You must enter the private key that matches the certificate you are importing.   The private key must be unencrypted. You cannot import a private key that is protected by a password or a passphrase.   If the certificate you are importing is not self-signed, you must enter its certificate chain.   If a certificate chain is included, the issuer must be the subject of one of the certificates in the chain.   The certificate, private key, and certificate chain must be PEM-encoded.   The current time must be between the Not Before and Not After certificate fields.   The Issuer field must not be empty.   The OCSP authority URL, if present, must not exceed 1000 characters.   To import a new certificate, omit the CertificateArn argument. Include this argument only when you want to replace a previously imported certificate.   When you import a certificate by using the CLI, you must specify the certificate, the certificate chain, and the private key by their file names preceded by file://. For example, you can specify a certificate saved in the C:\temp folder as file://C:\temp\certificate_to_import.pem. If you are making an HTTP or HTTPS Query request, include these arguments as BLOBs.    When you import a certificate by using an SDK, you must specify the certificate, the certificate chain, and the private key files in the manner required by the programming language you&rsquo;re using.    This operation returns the Amazon Resource Name (ARN) of the imported certificate.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">importCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ImportCertificateRequest.html">ImportCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/ImportCertificateResponse.html">ImportCertificateResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV21resendValidationEmailyyAB06ResendcD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/resendValidationEmail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV21resendValidationEmailyyAB06ResendcD7RequestVKF">resendValidationEmail(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Resends the email that requests domain ownership validation. The domain owner or an authorized representative must approve the ACM certificate before it can be issued. The certificate can be approved by clicking a link in the mail to navigate to the Amazon certificate approval website and then clicking I Approve. However, the validation email can be blocked by spam filters. Therefore, if you do not receive the original mail, you can request that the mail be resent within 72 hours of requesting the ACM certificate. If more than 72 hours have elapsed since your original request or since your last attempt to resend validation mail, you must request a new certificate. For more information about setting up your contact email addresses, see Configure Email for your Domain.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resendValidationEmail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ResendValidationEmailRequest.html">ResendValidationEmailRequest</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV14getCertificateyAB03GetC8ResponseVAB0dC7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/getCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV14getCertificateyAB03GetC8ResponseVAB0dC7RequestVKF">getCertificate(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the individual fields, you can use OpenSSL.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/GetCertificateRequest.html">GetCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/GetCertificateResponse.html">GetCertificateResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV19describeCertificateyAB08DescribeC8ResponseVAB0dC7RequestVKF"></a>
+                    <a name="/s:3ACMAAV19describeCertificatey3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/describeCertificate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV19describeCertificateyAB08DescribeC8ResponseVAB0dC7RequestVKF">describeCertificate(_:)</a>
+                    <a class="token" href="#/s:3ACMAAV19describeCertificatey3NIO15EventLoopFutureCyAB08DescribeC8ResponseVGAB0hC7RequestVKF">describeCertificate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +650,253 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/DescribeCertificateRequest.html">DescribeCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ACM/DescribeCertificateResponse.html">DescribeCertificateResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/DescribeCertificateRequest.html">DescribeCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/DescribeCertificateResponse.html">DescribeCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV17exportCertificatey3NIO15EventLoopFutureCyAB06ExportC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/exportCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV17exportCertificatey3NIO15EventLoopFutureCyAB06ExportC8ResponseVGAB0hC7RequestVKF">exportCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exports a private certificate issued by a private certificate authority (CA) for use anywhere. You can export the certificate, the certificate chain, and the encrypted private key associated with the public key embedded in the certificate. You must store the private key securely. The private key is a 2048 bit RSA key. You must provide a passphrase for the private key when exporting it. You can use the following OpenSSL command to decrypt it later. Provide the passphrase when prompted.   openssl rsa -in encrypted_key.pem -out decrypted_key.pem</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ExportCertificateRequest.html">ExportCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/ExportCertificateResponse.html">ExportCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV14getCertificatey3NIO15EventLoopFutureCyAB03GetC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/getCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV14getCertificatey3NIO15EventLoopFutureCyAB03GetC8ResponseVGAB0hC7RequestVKF">getCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the individual fields, you can use OpenSSL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/GetCertificateRequest.html">GetCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/GetCertificateResponse.html">GetCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV17importCertificatey3NIO15EventLoopFutureCyAB06ImportC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/importCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV17importCertificatey3NIO15EventLoopFutureCyAB06ImportC8ResponseVGAB0hC7RequestVKF">importCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that integrated services allow only certificate types and keys they support to be associated with their resources. Further, their support differs depending on whether the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more information about importing certificates into ACM, see Importing Certificates in the AWS Certificate Manager User Guide.   ACM does not provide managed renewal for certificates that you import.  Note the following guidelines when importing third party certificates:   You must enter the private key that matches the certificate you are importing.   The private key must be unencrypted. You cannot import a private key that is protected by a password or a passphrase.   If the certificate you are importing is not self-signed, you must enter its certificate chain.   If a certificate chain is included, the issuer must be the subject of one of the certificates in the chain.   The certificate, private key, and certificate chain must be PEM-encoded.   The current time must be between the Not Before and Not After certificate fields.   The Issuer field must not be empty.   The OCSP authority URL, if present, must not exceed 1000 characters.   To import a new certificate, omit the CertificateArn argument. Include this argument only when you want to replace a previously imported certificate.   When you import a certificate by using the CLI, you must specify the certificate, the certificate chain, and the private key by their file names preceded by file://. For example, you can specify a certificate saved in the C:\temp folder as file://C:\temp\certificate_to_import.pem. If you are making an HTTP or HTTPS Query request, include these arguments as BLOBs.    When you import a certificate by using an SDK, you must specify the certificate, the certificate chain, and the private key files in the manner required by the programming language you&rsquo;re using.    This operation returns the Amazon Resource Name (ARN) of the imported certificate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">importCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ImportCertificateRequest.html">ImportCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/ImportCertificateResponse.html">ImportCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV16listCertificatesy3NIO15EventLoopFutureCyAB04ListC8ResponseVGAB0hC7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listCertificates(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV16listCertificatesy3NIO15EventLoopFutureCyAB04ListC8ResponseVGAB0hC7RequestVKF">listCertificates(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific status be listed. You can also filter by specific attributes of the certificate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listCertificates</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ListCertificatesRequest.html">ListCertificatesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/ListCertificatesResponse.html">ListCertificatesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV22listTagsForCertificatey3NIO15EventLoopFutureCyAB04ListcdE8ResponseVGAB0jcdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/listTagsForCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV22listTagsForCertificatey3NIO15EventLoopFutureCyAB04ListcdE8ResponseVGAB0jcdE7RequestVKF">listTagsForCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists the tags that have been applied to the ACM certificate. Use the certificate&rsquo;s Amazon Resource Name (ARN) to specify the certificate. To add a tag to an ACM certificate, use the AddTagsToCertificate action. To delete a tag, use the RemoveTagsFromCertificate action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ListTagsForCertificateRequest.html">ListTagsForCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/ListTagsForCertificateResponse.html">ListTagsForCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV25removeTagsFromCertificatey3NIO15EventLoopFutureCyytGAB06RemovecdE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/removeTagsFromCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV25removeTagsFromCertificatey3NIO15EventLoopFutureCyytGAB06RemovecdE7RequestVKF">removeTagsFromCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove one or more tags from an ACM certificate. A tag consists of a key-value pair. If you do not specify the value portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the tag is removed only if it is associated with the specified value.  To add tags to a certificate, use the AddTagsToCertificate action. To view all of the tags that have been applied to a specific ACM certificate, use the ListTagsForCertificate action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeTagsFromCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/RemoveTagsFromCertificateRequest.html">RemoveTagsFromCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV18requestCertificatey3NIO15EventLoopFutureCyAB07RequestC8ResponseVGAB0hcH0VKF"></a>
+                    <a name="//apple_ref/swift/Method/requestCertificate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV18requestCertificatey3NIO15EventLoopFutureCyAB07RequestC8ResponseVGAB0hcH0VKF">requestCertificate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests an ACM certificate for use with other AWS services. To request an ACM certificate, you must specify a fully qualified domain name (FQDN) in the DomainName parameter. You can also specify additional FQDNs in the SubjectAlternativeNames parameter.  If you are requesting a private certificate, domain validation is not required. If you are requesting a public certificate, each domain name that you specify must be validated to verify that you own or control the domain. You can use DNS validation or email validation. We recommend that you use DNS validation. ACM issues public certificates after receiving approval from the domain owner.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestCertificate</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/RequestCertificateRequest.html">RequestCertificateRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ACM/RequestCertificateResponse.html">RequestCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV21resendValidationEmaily3NIO15EventLoopFutureCyytGAB06ResendcD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/resendValidationEmail(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV21resendValidationEmaily3NIO15EventLoopFutureCyytGAB06ResendcD7RequestVKF">resendValidationEmail(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resends the email that requests domain ownership validation. The domain owner or an authorized representative must approve the ACM certificate before it can be issued. The certificate can be approved by clicking a link in the mail to navigate to the Amazon certificate approval website and then clicking I Approve. However, the validation email can be blocked by spam filters. Therefore, if you do not receive the original mail, you can request that the mail be resent within 72 hours of requesting the ACM certificate. If more than 72 hours have elapsed since your original request or since your last attempt to resend validation mail, you must request a new certificate. For more information about setting up your contact email addresses, see Configure Email for your Domain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">resendValidationEmail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/ResendValidationEmailRequest.html">ResendValidationEmailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV24updateCertificateOptionsy3NIO15EventLoopFutureCyytGAB06UpdatecD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateCertificateOptions(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV24updateCertificateOptionsy3NIO15EventLoopFutureCyytGAB06UpdatecD7RequestVKF">updateCertificateOptions(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your certificate in a certificate transparency log. For more information, see  Opting Out of Certificate Transparency Logging.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateCertificateOptions</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ACM/UpdateCertificateOptionsRequest.html">UpdateCertificateOptionsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -902,146 +907,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV7FiltersV"></a>
-                    <a name="//apple_ref/swift/Struct/Filters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV7FiltersV">Filters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/Filters.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Filters</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV26RequestCertificateResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/RequestCertificateResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV26RequestCertificateResponseV">RequestCertificateResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/RequestCertificateResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV23ListCertificatesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListCertificatesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV23ListCertificatesRequestV">ListCertificatesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ListCertificatesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCertificatesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV40CertificateTransparencyLoggingPreferenceO"></a>
-                    <a name="//apple_ref/swift/Enum/CertificateTransparencyLoggingPreference" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV40CertificateTransparencyLoggingPreferenceO">CertificateTransparencyLoggingPreference</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/CertificateTransparencyLoggingPreference.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateTransparencyLoggingPreference</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV21GetCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/GetCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV21GetCertificateRequestV">GetCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/GetCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1064,62 +929,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddTagsToCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV15CertificateTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/CertificateType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV15CertificateTypeO">CertificateType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/CertificateType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV13FailureReasonO"></a>
-                    <a name="//apple_ref/swift/Enum/FailureReason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV13FailureReasonO">FailureReason</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/FailureReason.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FailureReason</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -1157,9 +966,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV16RevocationReasonO"></a>
-                    <a name="//apple_ref/swift/Enum/RevocationReason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV16RevocationReasonO">RevocationReason</a>
+                    <a name="/s:3ACMAAV18CertificateOptionsV"></a>
+                    <a name="//apple_ref/swift/Struct/CertificateOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV18CertificateOptionsV">CertificateOptions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1169,13 +978,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/RevocationReason.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/CertificateOptions.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RevocationReason</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CertificateOptions</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1185,9 +994,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV8KeyUsageV"></a>
-                    <a name="//apple_ref/swift/Struct/KeyUsage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV8KeyUsageV">KeyUsage</a>
+                    <a name="/s:3ACMAAV17CertificateStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/CertificateStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV17CertificateStatusO">CertificateStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1197,13 +1006,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/KeyUsage.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/CertificateStatus.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">KeyUsage</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -1213,9 +1022,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV30ListTagsForCertificateResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForCertificateResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV30ListTagsForCertificateResponseV">ListTagsForCertificateResponse</a>
+                    <a name="/s:3ACMAAV18CertificateSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/CertificateSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV18CertificateSummaryV">CertificateSummary</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1225,13 +1034,489 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/ListTagsForCertificateResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/CertificateSummary.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CertificateSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV40CertificateTransparencyLoggingPreferenceO"></a>
+                    <a name="//apple_ref/swift/Enum/CertificateTransparencyLoggingPreference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV40CertificateTransparencyLoggingPreferenceO">CertificateTransparencyLoggingPreference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/CertificateTransparencyLoggingPreference.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateTransparencyLoggingPreference</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV15CertificateTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/CertificateType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV15CertificateTypeO">CertificateType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/CertificateType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV24DeleteCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV24DeleteCertificateRequestV">DeleteCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DeleteCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV26DescribeCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV26DescribeCertificateRequestV">DescribeCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DescribeCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV27DescribeCertificateResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeCertificateResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV27DescribeCertificateResponseV">DescribeCertificateResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DescribeCertificateResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV12DomainStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/DomainStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV12DomainStatusO">DomainStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DomainStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DomainStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV16DomainValidationV"></a>
+                    <a name="//apple_ref/swift/Struct/DomainValidation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV16DomainValidationV">DomainValidation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DomainValidation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainValidation</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV22DomainValidationOptionV"></a>
+                    <a name="//apple_ref/swift/Struct/DomainValidationOption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV22DomainValidationOptionV">DomainValidationOption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/DomainValidationOption.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainValidationOption</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV24ExportCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ExportCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV24ExportCertificateRequestV">ExportCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ExportCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV25ExportCertificateResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ExportCertificateResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV25ExportCertificateResponseV">ExportCertificateResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ExportCertificateResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV16ExtendedKeyUsageV"></a>
+                    <a name="//apple_ref/swift/Struct/ExtendedKeyUsage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV16ExtendedKeyUsageV">ExtendedKeyUsage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ExtendedKeyUsage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExtendedKeyUsage</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV20ExtendedKeyUsageNameO"></a>
+                    <a name="//apple_ref/swift/Enum/ExtendedKeyUsageName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV20ExtendedKeyUsageNameO">ExtendedKeyUsageName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ExtendedKeyUsageName.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ExtendedKeyUsageName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV13FailureReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/FailureReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV13FailureReasonO">FailureReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/FailureReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FailureReason</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV7FiltersV"></a>
+                    <a name="//apple_ref/swift/Struct/Filters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV7FiltersV">Filters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/Filters.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Filters</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV21GetCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/GetCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV21GetCertificateRequestV">GetCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/GetCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV22GetCertificateResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/GetCertificateResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV22GetCertificateResponseV">GetCertificateResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/GetCertificateResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV24ImportCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ImportCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV24ImportCertificateRequestV">ImportCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ImportCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1269,9 +1554,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV17CertificateStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/CertificateStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV17CertificateStatusO">CertificateStatus</a>
+                    <a name="/s:3ACMAAV12KeyAlgorithmO"></a>
+                    <a name="//apple_ref/swift/Enum/KeyAlgorithm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV12KeyAlgorithmO">KeyAlgorithm</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1281,13 +1566,237 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/CertificateStatus.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/KeyAlgorithm.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CertificateStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeyAlgorithm</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV8KeyUsageV"></a>
+                    <a name="//apple_ref/swift/Struct/KeyUsage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV8KeyUsageV">KeyUsage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/KeyUsage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">KeyUsage</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV12KeyUsageNameO"></a>
+                    <a name="//apple_ref/swift/Enum/KeyUsageName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV12KeyUsageNameO">KeyUsageName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/KeyUsageName.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeyUsageName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV23ListCertificatesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListCertificatesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV23ListCertificatesRequestV">ListCertificatesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ListCertificatesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCertificatesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV24ListCertificatesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ListCertificatesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV24ListCertificatesResponseV">ListCertificatesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ListCertificatesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCertificatesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV29ListTagsForCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV29ListTagsForCertificateRequestV">ListTagsForCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ListTagsForCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV30ListTagsForCertificateResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForCertificateResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV30ListTagsForCertificateResponseV">ListTagsForCertificateResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/ListTagsForCertificateResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV10RecordTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/RecordType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV10RecordTypeO">RecordType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/RecordType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RecordType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ACMAAV32RemoveTagsFromCertificateRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RemoveTagsFromCertificateRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV32RemoveTagsFromCertificateRequestV">RemoveTagsFromCertificateRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ACM/RemoveTagsFromCertificateRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsFromCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1353,9 +1862,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV16ValidationMethodO"></a>
-                    <a name="//apple_ref/swift/Enum/ValidationMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV16ValidationMethodO">ValidationMethod</a>
+                    <a name="/s:3ACMAAV14RenewalSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/RenewalSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV14RenewalSummaryV">RenewalSummary</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1365,321 +1874,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/ValidationMethod.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/RenewalSummary.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ValidationMethod</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV25ExportCertificateResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ExportCertificateResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV25ExportCertificateResponseV">ExportCertificateResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ExportCertificateResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV24DeleteCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV24DeleteCertificateRequestV">DeleteCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/DeleteCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV16ExtendedKeyUsageV"></a>
-                    <a name="//apple_ref/swift/Struct/ExtendedKeyUsage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV16ExtendedKeyUsageV">ExtendedKeyUsage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ExtendedKeyUsage.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExtendedKeyUsage</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV24ImportCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ImportCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV24ImportCertificateRequestV">ImportCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ImportCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImportCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV12KeyUsageNameO"></a>
-                    <a name="//apple_ref/swift/Enum/KeyUsageName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV12KeyUsageNameO">KeyUsageName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/KeyUsageName.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeyUsageName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV24ExportCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ExportCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV24ExportCertificateRequestV">ExportCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ExportCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV20ExtendedKeyUsageNameO"></a>
-                    <a name="//apple_ref/swift/Enum/ExtendedKeyUsageName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV20ExtendedKeyUsageNameO">ExtendedKeyUsageName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ExtendedKeyUsageName.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ExtendedKeyUsageName</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV22DomainValidationOptionV"></a>
-                    <a name="//apple_ref/swift/Struct/DomainValidationOption" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV22DomainValidationOptionV">DomainValidationOption</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/DomainValidationOption.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainValidationOption</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV18CertificateSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/CertificateSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV18CertificateSummaryV">CertificateSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/CertificateSummary.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CertificateSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV31UpdateCertificateOptionsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateCertificateOptionsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV31UpdateCertificateOptionsRequestV">UpdateCertificateOptionsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/UpdateCertificateOptionsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateCertificateOptionsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV28ResendValidationEmailRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ResendValidationEmailRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV28ResendValidationEmailRequestV">ResendValidationEmailRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/ResendValidationEmailRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResendValidationEmailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RenewalSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1717,9 +1918,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV18CertificateOptionsV"></a>
-                    <a name="//apple_ref/swift/Struct/CertificateOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV18CertificateOptionsV">CertificateOptions</a>
+                    <a name="/s:3ACMAAV26RequestCertificateResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/RequestCertificateResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV26RequestCertificateResponseV">RequestCertificateResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1729,13 +1930,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/CertificateOptions.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/RequestCertificateResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CertificateOptions</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1745,9 +1946,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV24ListCertificatesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ListCertificatesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV24ListCertificatesResponseV">ListCertificatesResponse</a>
+                    <a name="/s:3ACMAAV28ResendValidationEmailRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ResendValidationEmailRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV28ResendValidationEmailRequestV">ResendValidationEmailRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1757,125 +1958,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/ListCertificatesResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/ResendValidationEmailRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListCertificatesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV22GetCertificateResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/GetCertificateResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV22GetCertificateResponseV">GetCertificateResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/GetCertificateResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV27DescribeCertificateResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCertificateResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV27DescribeCertificateResponseV">DescribeCertificateResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/DescribeCertificateResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCertificateResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV12KeyAlgorithmO"></a>
-                    <a name="//apple_ref/swift/Enum/KeyAlgorithm" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV12KeyAlgorithmO">KeyAlgorithm</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/KeyAlgorithm.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">KeyAlgorithm</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV32RemoveTagsFromCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RemoveTagsFromCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV32RemoveTagsFromCertificateRequestV">RemoveTagsFromCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/RemoveTagsFromCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsFromCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResendValidationEmailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1913,9 +2002,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV16DomainValidationV"></a>
-                    <a name="//apple_ref/swift/Struct/DomainValidation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV16DomainValidationV">DomainValidation</a>
+                    <a name="/s:3ACMAAV16RevocationReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/RevocationReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV16RevocationReasonO">RevocationReason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1925,97 +2014,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/DomainValidation.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/RevocationReason.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DomainValidation</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV12DomainStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/DomainStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV12DomainStatusO">DomainStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/DomainStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DomainStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV10RecordTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/RecordType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV10RecordTypeO">RecordType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/RecordType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RecordType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ACMAAV26DescribeCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV26DescribeCertificateRequestV">DescribeCertificateRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ACM/DescribeCertificateRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RevocationReason</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -2053,9 +2058,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV14RenewalSummaryV"></a>
-                    <a name="//apple_ref/swift/Struct/RenewalSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV14RenewalSummaryV">RenewalSummary</a>
+                    <a name="/s:3ACMAAV31UpdateCertificateOptionsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateCertificateOptionsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV31UpdateCertificateOptionsRequestV">UpdateCertificateOptionsRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2065,13 +2070,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/RenewalSummary.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/UpdateCertificateOptionsRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RenewalSummary</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateCertificateOptionsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2081,9 +2086,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ACMAAV29ListTagsForCertificateRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForCertificateRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ACMAAV29ListTagsForCertificateRequestV">ListTagsForCertificateRequest</a>
+                    <a name="/s:3ACMAAV16ValidationMethodO"></a>
+                    <a name="//apple_ref/swift/Enum/ValidationMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ACMAAV16ValidationMethodO">ValidationMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2093,13 +2098,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ACM/ListTagsForCertificateRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ACM/ValidationMethod.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForCertificateRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ValidationMethod</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -2111,7 +2116,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

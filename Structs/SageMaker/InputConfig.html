@@ -14,7 +14,7 @@
     <a title="InputConfig Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV11InputConfigV5s3UriSSvp"></a>
-                    <a name="//apple_ref/swift/Property/s3Uri" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV5s3UriSSvp">s3Uri</a>
+                    <a name="/s:9SageMakerAAV11InputConfigV04datacD0SSvp"></a>
+                    <a name="//apple_ref/swift/Property/dataInputConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV04datacD0SSvp">dataInputConfig</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).</p>
+                        <p>Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. The data inputs are InputConfig$Framework specific.     TENSORFLOW, MXNET and ONNX: You must specify the name and shape of the expected data inputs in order using a dictionary format for your trained model.   Example of one input: {‘data’:[1,3,1024,1024]}}    Example for two inputs: {‘var1’: [1,1,28,28], ‘var2’:[1,1,28,28]}       PYTORCH: You can either specify the name and shape of expected data inputs in order using a dictionary format for your trained model or you can specify the shape only using a list format.   Example of one input in dictionary format: {‘input0’:[1,3,224,234]}    Example of one input in list format: [1,3,224,224]    Example of two inputs in dictionary format: {‘input0’:[1,3,224,234], &lsquo;input1&rsquo;:[1,3,224,224]}    Example of two inputs in list format: [[1,3,224,224], [1,3,224,224]]       XGBOOST: input data name and shape are not needed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dataInputConfig</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV11InputConfigV04datacD0SSvp"></a>
-                    <a name="//apple_ref/swift/Property/dataInputConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV04datacD0SSvp">dataInputConfig</a>
+                    <a name="/s:9SageMakerAAV11InputConfigV5s3UriSSvp"></a>
+                    <a name="//apple_ref/swift/Property/s3Uri" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV5s3UriSSvp">s3Uri</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. The data inputs are InputConfig$Framework specific.     TENSORFLOW, MXNET and ONNX: You must specify the name and shape of the expected data inputs in order using a dictionary format for your trained model.   Example of one input: {‘data’:[1,3,1024,1024]}}    Example for two inputs: {‘var1’: [1,1,28,28], ‘var2’:[1,1,28,28]}       PYTORCH: You can either specify the name and shape of expected data inputs in order using a dictionary format for your trained model or you can specify the shape only using a list format.   Example of one input in dictionary format: {‘input0’:[1,3,224,234]}    Example of one input in list format: [1,3,224,224]    Example of two inputs in dictionary format: {‘input0’:[1,3,224,234], &lsquo;input1&rsquo;:[1,3,224,224]}    Example of two inputs in list format: [[1,3,224,224], [1,3,224,224]]       XGBOOST: input data name and shape are not needed.</p>
+                        <p>The S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dataInputConfig</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV11InputConfigV5s3Uri9framework04datacD0ADSS_AB9FrameworkOSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(s3Uri:framework:dataInputConfig:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV5s3Uri9framework04datacD0ADSS_AB9FrameworkOSStcfc">init(s3Uri:framework:dataInputConfig:)</a>
+                    <a name="/s:9SageMakerAAV11InputConfigV04datacD09framework5s3UriADSS_AB9FrameworkOSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dataInputConfig:framework:s3Uri:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV11InputConfigV04datacD09framework5s3UriADSS_AB9FrameworkOSStcfc">init(dataInputConfig:framework:s3Uri:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">framework</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/Framework.html">Framework</a></span><span class="p">,</span> <span class="nv">dataInputConfig</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dataInputConfig</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">framework</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/Framework.html">Framework</a></span><span class="p">,</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

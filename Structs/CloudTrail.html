@@ -14,7 +14,7 @@
     <a title="CloudTrail Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,144 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV17getEventSelectorsyAB03GetdE8ResponseVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/getEventSelectors(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV17getEventSelectorsyAB03GetdE8ResponseVAB0fdE7RequestVKF">getEventSelectors(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the settings for the event selectors that you configured for your trail. The information returned for your event selectors includes the following:   If your event selector includes read-only events, write-only events, or all events. This applies to both management events and data events.   If your event selector includes management events.   If your event selector includes data events, the Amazon S3 objects or AWS Lambda functions that you are logging for data events.   For more information, see Logging Data and Management Events for Trails  in the AWS CloudTrail User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getEventSelectors</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/GetEventSelectorsRequest.html">GetEventSelectorsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/GetEventSelectorsResponse.html">GetEventSelectorsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV03getB6StatusyAB03GetbD8ResponseVAB0ebD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/getTrailStatus(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV03getB6StatusyAB03GetbD8ResponseVAB0ebD7RequestVKF">getTrailStatus(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery errors, Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns trail status from a single region. To return trail status from all regions, you must call the operation on each region.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTrailStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/GetTrailStatusRequest.html">GetTrailStatusRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/GetTrailStatusResponse.html">GetTrailStatusResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV17putEventSelectorsyAB03PutdE8ResponseVAB0fdE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/putEventSelectors(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV17putEventSelectorsyAB03PutdE8ResponseVAB0fdE7RequestVKF">putEventSelectors(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Configures an event selector for your trail. Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events.  When an event occurs in your account, CloudTrail evaluates the event selectors in all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&rsquo;t match any event selector, the trail doesn&rsquo;t log the event.  Example   You create an event selector for a trail and specify that you want write-only events.   The EC2 GetConsoleOutput and RunInstances API operations occur in your account.   CloudTrail evaluates whether the events match your event selectors.   The RunInstances is a write-only event and it matches your event selector. The trail logs the event.   The GetConsoleOutput is a read-only event but it doesn&rsquo;t match your event selector. The trail doesn&rsquo;t log the event.    The PutEventSelectors operation must be called from the region in which the trail was created; otherwise, an InvalidHomeRegionException is thrown. You can configure up to five event selectors for each trail. For more information, see Logging Data and Management Events for Trails  and Limits in AWS CloudTrail in the AWS CloudTrail User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putEventSelectors</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/PutEventSelectorsRequest.html">PutEventSelectorsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/PutEventSelectorsResponse.html">PutEventSelectorsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06updateB0yAB06UpdateB8ResponseVAB0dB7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateTrail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06updateB0yAB06UpdateB8ResponseVAB0dB7RequestVKF">updateTrail(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Updates the settings that specify delivery of log files. Changes to a trail do not require stopping the CloudTrail service. Use this action to designate an existing bucket for log delivery. If the existing bucket has previously been a target for CloudTrail log files, an IAM policy exists for the bucket. UpdateTrail must be called from the region in which the trail was created; otherwise, an InvalidHomeRegionException is thrown.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/UpdateTrailRequest.html">UpdateTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/UpdateTrailResponse.html">UpdateTrailResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV14describeTrailsyAB08DescribeD8ResponseVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeTrails(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV14describeTrailsyAB08DescribeD8ResponseVAB0eD7RequestVKF">describeTrails(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves settings for the trail associated with the current region for your account.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrails</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/DescribeTrailsRequest.html">DescribeTrailsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/DescribeTrailsResponse.html">DescribeTrailsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV7addTagsyAB03AddD8ResponseVAB0eD7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV7addTagsy3NIO15EventLoopFutureCyAB03AddD8ResponseVGAB0iD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/addTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV7addTagsyAB03AddD8ResponseVAB0eD7RequestVKF">addTags(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV7addTagsy3NIO15EventLoopFutureCyAB03AddD8ResponseVGAB0iD7RequestVKF">addTags(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -729,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/AddTagsRequest.html">AddTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail.html#/s:10CloudTrailAAV15AddTagsResponseV">AddTagsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/AddTagsRequest.html">AddTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/AddTagsResponse.html">AddTagsResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -739,63 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV11stopLoggingyAB04StopD8ResponseVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/stopLogging(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV11stopLoggingyAB04StopD8ResponseVAB0eD7RequestVKF">stopLogging(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Suspends the recording of AWS API calls and log file delivery for the specified trail. Under most circumstances, there is no need to use this action. You can update a trail without stopping it first. This action is the only way to stop recording. For a trail enabled in all regions, this operation must be called from the region in which the trail was created, or an InvalidHomeRegionException will occur. This operation cannot be called on the shadow trails (replicated trails in other regions) of a trail enabled in all regions.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopLogging</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/StopLoggingRequest.html">StopLoggingRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail.html#/s:10CloudTrailAAV19StopLoggingResponseV">StopLoggingResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV12lookupEventsyAB06LookupD8ResponseVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/lookupEvents(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV12lookupEventsyAB06LookupD8ResponseVAB0eD7RequestVKF">lookupEvents(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Looks up management events captured by CloudTrail. Events for a region can be looked up in that region during the last 90 days. Lookup supports the following attributes:   AWS access key   Event ID   Event name   Event source   Read only   Resource name   Resource type   User name   All attributes are optional. The default number of results returned is 50, with a maximum of 50 possible. The response includes a token that you can use to get the next page of results.  The rate of lookup requests is limited to one per second per account. If this limit is exceeded, a throttling error occurs.   Events that occurred during the selected time range will not be available for lookup if CloudTrail logging was not enabled when the events occurred.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lookupEvents</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/LookupEventsRequest.html">LookupEventsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/LookupEventsResponse.html">LookupEventsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06createB0yAB06CreateB8ResponseVAB0dB7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV06createB0y3NIO15EventLoopFutureCyAB06CreateB8ResponseVGAB0hB7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/createTrail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06createB0yAB06CreateB8ResponseVAB0dB7RequestVKF">createTrail(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV06createB0y3NIO15EventLoopFutureCyAB06CreateB8ResponseVGAB0hB7RequestVKF">createTrail(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +621,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/CreateTrailRequest.html">CreateTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/CreateTrailResponse.html">CreateTrailResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/CreateTrailRequest.html">CreateTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/CreateTrailResponse.html">CreateTrailResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06deleteB0yAB06DeleteB8ResponseVAB0dB7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV06deleteB0y3NIO15EventLoopFutureCyAB06DeleteB8ResponseVGAB0hB7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteTrail(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06deleteB0yAB06DeleteB8ResponseVAB0dB7RequestVKF">deleteTrail(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV06deleteB0y3NIO15EventLoopFutureCyAB06DeleteB8ResponseVGAB0hB7RequestVKF">deleteTrail(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +648,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/DeleteTrailRequest.html">DeleteTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail.html#/s:10CloudTrailAAV06DeleteB8ResponseV">DeleteTrailResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/DeleteTrailRequest.html">DeleteTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/DeleteTrailResponse.html">DeleteTrailResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +658,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV14listPublicKeysyAB04ListdE8ResponseVAB0fdE7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV14describeTrailsy3NIO15EventLoopFutureCyAB08DescribeD8ResponseVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeTrails(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV14describeTrailsy3NIO15EventLoopFutureCyAB08DescribeD8ResponseVGAB0iD7RequestVKF">describeTrails(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves settings for the trail associated with the current region for your account.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeTrails</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/DescribeTrailsRequest.html">DescribeTrailsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/DescribeTrailsResponse.html">DescribeTrailsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV17getEventSelectorsy3NIO0D10LoopFutureCyAB03GetdE8ResponseVGAB0idE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/getEventSelectors(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV17getEventSelectorsy3NIO0D10LoopFutureCyAB03GetdE8ResponseVGAB0idE7RequestVKF">getEventSelectors(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the settings for the event selectors that you configured for your trail. The information returned for your event selectors includes the following:   If your event selector includes read-only events, write-only events, or all events. This applies to both management events and data events.   If your event selector includes management events.   If your event selector includes data events, the Amazon S3 objects or AWS Lambda functions that you are logging for data events.   For more information, see Logging Data and Management Events for Trails  in the AWS CloudTrail User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getEventSelectors</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/GetEventSelectorsRequest.html">GetEventSelectorsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/GetEventSelectorsResponse.html">GetEventSelectorsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV03getB6Statusy3NIO15EventLoopFutureCyAB03GetbD8ResponseVGAB0ibD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/getTrailStatus(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV03getB6Statusy3NIO15EventLoopFutureCyAB03GetbD8ResponseVGAB0ibD7RequestVKF">getTrailStatus(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery errors, Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns trail status from a single region. To return trail status from all regions, you must call the operation on each region.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTrailStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/GetTrailStatusRequest.html">GetTrailStatusRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/GetTrailStatusResponse.html">GetTrailStatusResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV14listPublicKeysy3NIO15EventLoopFutureCyAB04ListdE8ResponseVGAB0jdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/listPublicKeys(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV14listPublicKeysyAB04ListdE8ResponseVAB0fdE7RequestVKF">listPublicKeys(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV14listPublicKeysy3NIO15EventLoopFutureCyAB04ListdE8ResponseVGAB0jdE7RequestVKF">listPublicKeys(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listPublicKeys</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/ListPublicKeysRequest.html">ListPublicKeysRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/ListPublicKeysResponse.html">ListPublicKeysResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listPublicKeys</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/ListPublicKeysRequest.html">ListPublicKeysRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/ListPublicKeysResponse.html">ListPublicKeysResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -874,36 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV10removeTagsyAB06RemoveD8ResponseVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/removeTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV10removeTagsyAB06RemoveD8ResponseVAB0eD7RequestVKF">removeTags(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Removes the specified tags from a trail.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/RemoveTagsRequest.html">RemoveTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail.html#/s:10CloudTrailAAV18RemoveTagsResponseV">RemoveTagsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV8listTagsyAB04ListD8ResponseVAB0eD7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV8listTagsy3NIO15EventLoopFutureCyAB04ListD8ResponseVGAB0iD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/listTags(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV8listTagsyAB04ListD8ResponseVAB0eD7RequestVKF">listTags(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV8listTagsy3NIO15EventLoopFutureCyAB04ListD8ResponseVGAB0iD7RequestVKF">listTags(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -918,7 +783,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/ListTagsRequest.html">ListTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail/ListTagsResponse.html">ListTagsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/ListTagsRequest.html">ListTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/ListTagsResponse.html">ListTagsResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +793,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV12startLoggingyAB05StartD8ResponseVAB0eD7RequestVKF"></a>
+                    <a name="/s:10CloudTrailAAV12lookupEventsy3NIO15EventLoopFutureCyAB06LookupD8ResponseVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/lookupEvents(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV12lookupEventsy3NIO15EventLoopFutureCyAB06LookupD8ResponseVGAB0iD7RequestVKF">lookupEvents(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Looks up management events captured by CloudTrail. Events for a region can be looked up in that region during the last 90 days. Lookup supports the following attributes:   AWS access key   Event ID   Event name   Event source   Read only   Resource name   Resource type   User name   All attributes are optional. The default number of results returned is 50, with a maximum of 50 possible. The response includes a token that you can use to get the next page of results.  The rate of lookup requests is limited to one per second per account. If this limit is exceeded, a throttling error occurs.   Events that occurred during the selected time range will not be available for lookup if CloudTrail logging was not enabled when the events occurred.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lookupEvents</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/LookupEventsRequest.html">LookupEventsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/LookupEventsResponse.html">LookupEventsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV17putEventSelectorsy3NIO0D10LoopFutureCyAB03PutdE8ResponseVGAB0idE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/putEventSelectors(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV17putEventSelectorsy3NIO0D10LoopFutureCyAB03PutdE8ResponseVGAB0idE7RequestVKF">putEventSelectors(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures an event selector for your trail. Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events.  When an event occurs in your account, CloudTrail evaluates the event selectors in all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&rsquo;t match any event selector, the trail doesn&rsquo;t log the event.  Example   You create an event selector for a trail and specify that you want write-only events.   The EC2 GetConsoleOutput and RunInstances API operations occur in your account.   CloudTrail evaluates whether the events match your event selectors.   The RunInstances is a write-only event and it matches your event selector. The trail logs the event.   The GetConsoleOutput is a read-only event but it doesn&rsquo;t match your event selector. The trail doesn&rsquo;t log the event.    The PutEventSelectors operation must be called from the region in which the trail was created; otherwise, an InvalidHomeRegionException is thrown. You can configure up to five event selectors for each trail. For more information, see Logging Data and Management Events for Trails  and Limits in AWS CloudTrail in the AWS CloudTrail User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putEventSelectors</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/PutEventSelectorsRequest.html">PutEventSelectorsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/PutEventSelectorsResponse.html">PutEventSelectorsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV10removeTagsy3NIO15EventLoopFutureCyAB06RemoveD8ResponseVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/removeTags(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV10removeTagsy3NIO15EventLoopFutureCyAB06RemoveD8ResponseVGAB0iD7RequestVKF">removeTags(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the specified tags from a trail.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeTags</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/RemoveTagsRequest.html">RemoveTagsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/RemoveTagsResponse.html">RemoveTagsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV12startLoggingy3NIO15EventLoopFutureCyAB05StartD8ResponseVGAB0iD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/startLogging(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV12startLoggingyAB05StartD8ResponseVAB0eD7RequestVKF">startLogging(_:)</a>
+                    <a class="token" href="#/s:10CloudTrailAAV12startLoggingy3NIO15EventLoopFutureCyAB05StartD8ResponseVGAB0iD7RequestVKF">startLogging(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +891,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startLogging</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/StartLoggingRequest.html">StartLoggingRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CloudTrail.html#/s:10CloudTrailAAV20StartLoggingResponseV">StartLoggingResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startLogging</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/StartLoggingRequest.html">StartLoggingRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/StartLoggingResponse.html">StartLoggingResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV11stopLoggingy3NIO15EventLoopFutureCyAB04StopD8ResponseVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/stopLogging(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV11stopLoggingy3NIO15EventLoopFutureCyAB04StopD8ResponseVGAB0iD7RequestVKF">stopLogging(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Suspends the recording of AWS API calls and log file delivery for the specified trail. Under most circumstances, there is no need to use this action. You can update a trail without stopping it first. This action is the only way to stop recording. For a trail enabled in all regions, this operation must be called from the region in which the trail was created, or an InvalidHomeRegionException will occur. This operation cannot be called on the shadow trails (replicated trails in other regions) of a trail enabled in all regions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopLogging</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/StopLoggingRequest.html">StopLoggingRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/StopLoggingResponse.html">StopLoggingResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06updateB0y3NIO15EventLoopFutureCyAB06UpdateB8ResponseVGAB0hB7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateTrail(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06updateB0y3NIO15EventLoopFutureCyAB06UpdateB8ResponseVGAB0hB7RequestVKF">updateTrail(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the settings that specify delivery of log files. Changes to a trail do not require stopping the CloudTrail service. Use this action to designate an existing bucket for log delivery. If the existing bucket has previously been a target for CloudTrail log files, an IAM policy exists for the bucket. UpdateTrail must be called from the region in which the trail was created; otherwise, an InvalidHomeRegionException is thrown.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateTrail</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/CloudTrail/UpdateTrailRequest.html">UpdateTrailRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CloudTrail/UpdateTrailResponse.html">UpdateTrailResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -956,675 +956,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV19LookupEventsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/LookupEventsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV19LookupEventsRequestV">LookupEventsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/LookupEventsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupEventsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV3TagV"></a>
-                    <a name="//apple_ref/swift/Struct/Tag" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV3TagV">Tag</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/Tag.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV13EventSelectorV"></a>
-                    <a name="//apple_ref/swift/Struct/EventSelector" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV13EventSelectorV">EventSelector</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/EventSelector.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">EventSelector</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB8ResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateTrailResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB8ResponseV">UpdateTrailResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/UpdateTrailResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV25PutEventSelectorsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/PutEventSelectorsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV25PutEventSelectorsResponseV">PutEventSelectorsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/PutEventSelectorsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutEventSelectorsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV9PublicKeyV"></a>
-                    <a name="//apple_ref/swift/Struct/PublicKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV9PublicKeyV">PublicKey</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/PublicKey.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PublicKey</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateTrailRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV">UpdateTrailRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/UpdateTrailRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateTrailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06CreateB8ResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateTrailResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06CreateB8ResponseV">CreateTrailResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/CreateTrailResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV0B0V"></a>
-                    <a name="//apple_ref/swift/Struct/Trail" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV0B0V">Trail</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/Trail.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Trail</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV12DataResourceV"></a>
-                    <a name="//apple_ref/swift/Struct/DataResource" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV12DataResourceV">DataResource</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/DataResource.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataResource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV25GetEventSelectorsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/GetEventSelectorsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV25GetEventSelectorsResponseV">GetEventSelectorsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/GetEventSelectorsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetEventSelectorsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06DeleteB7RequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteTrailRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06DeleteB7RequestV">DeleteTrailRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/DeleteTrailRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteTrailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV24GetEventSelectorsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/GetEventSelectorsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV24GetEventSelectorsRequestV">GetEventSelectorsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/GetEventSelectorsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetEventSelectorsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV19StartLoggingRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/StartLoggingRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV19StartLoggingRequestV">StartLoggingRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/StartLoggingRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartLoggingRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV03GetB13StatusRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/GetTrailStatusRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV03GetB13StatusRequestV">GetTrailStatusRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/GetTrailStatusRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetTrailStatusRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV18LookupAttributeKeyO"></a>
-                    <a name="//apple_ref/swift/Enum/LookupAttributeKey" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV18LookupAttributeKeyO">LookupAttributeKey</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/LookupAttributeKey.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LookupAttributeKey</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV16ListTagsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV16ListTagsResponseV">ListTagsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/ListTagsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV17RemoveTagsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RemoveTagsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV17RemoveTagsRequestV">RemoveTagsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/RemoveTagsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV21ListPublicKeysRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListPublicKeysRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV21ListPublicKeysRequestV">ListPublicKeysRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/ListPublicKeysRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListPublicKeysRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV19StopLoggingResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/StopLoggingResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV19StopLoggingResponseV">StopLoggingResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StopLoggingResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06DeleteB8ResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteTrailResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06DeleteB8ResponseV">DeleteTrailResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV03GetB14StatusResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/GetTrailStatusResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV03GetB14StatusResponseV">GetTrailStatusResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/GetTrailStatusResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetTrailStatusResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV5EventV"></a>
-                    <a name="//apple_ref/swift/Struct/Event" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV5EventV">Event</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/Event.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Event</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV18RemoveTagsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/RemoveTagsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV18RemoveTagsResponseV">RemoveTagsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1647,6 +978,34 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddTagsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV15AddTagsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AddTagsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV15AddTagsResponseV">AddTagsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/AddTagsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1684,9 +1043,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV15ListTagsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV15ListTagsRequestV">ListTagsRequest</a>
+                    <a name="/s:10CloudTrailAAV06CreateB8ResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateTrailResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06CreateB8ResponseV">CreateTrailResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1696,13 +1055,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/CloudTrail/ListTagsRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/CloudTrail/CreateTrailResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1712,9 +1071,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV20LookupEventsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/LookupEventsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV20LookupEventsResponseV">LookupEventsResponse</a>
+                    <a name="/s:10CloudTrailAAV12DataResourceV"></a>
+                    <a name="//apple_ref/swift/Struct/DataResource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV12DataResourceV">DataResource</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1724,13 +1083,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/CloudTrail/LookupEventsResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/CloudTrail/DataResource.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupEventsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataResource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1740,9 +1099,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV8ResourceV"></a>
-                    <a name="//apple_ref/swift/Struct/Resource" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV8ResourceV">Resource</a>
+                    <a name="/s:10CloudTrailAAV06DeleteB7RequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteTrailRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06DeleteB7RequestV">DeleteTrailRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1752,13 +1111,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/CloudTrail/Resource.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/CloudTrail/DeleteTrailRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Resource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteTrailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1768,9 +1127,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV18StopLoggingRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/StopLoggingRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV18StopLoggingRequestV">StopLoggingRequest</a>
+                    <a name="/s:10CloudTrailAAV06DeleteB8ResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteTrailResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06DeleteB8ResponseV">DeleteTrailResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1780,124 +1139,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/CloudTrail/StopLoggingRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/CloudTrail/DeleteTrailResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StopLoggingRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV22ListPublicKeysResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ListPublicKeysResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV22ListPublicKeysResponseV">ListPublicKeysResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/ListPublicKeysResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListPublicKeysResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV22DescribeTrailsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeTrailsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV22DescribeTrailsResponseV">DescribeTrailsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/DescribeTrailsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrailsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV20StartLoggingResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/StartLoggingResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV20StartLoggingResponseV">StartLoggingResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartLoggingResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV15LookupAttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/LookupAttribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV15LookupAttributeV">LookupAttribute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/CloudTrail/LookupAttribute.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1935,9 +1183,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV11ResourceTagV"></a>
-                    <a name="//apple_ref/swift/Struct/ResourceTag" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV11ResourceTagV">ResourceTag</a>
+                    <a name="/s:10CloudTrailAAV22DescribeTrailsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeTrailsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV22DescribeTrailsResponseV">DescribeTrailsResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1947,13 +1195,433 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/CloudTrail/ResourceTag.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/CloudTrail/DescribeTrailsResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResourceTag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeTrailsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV5EventV"></a>
+                    <a name="//apple_ref/swift/Struct/Event" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV5EventV">Event</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/Event.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Event</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV13EventSelectorV"></a>
+                    <a name="//apple_ref/swift/Struct/EventSelector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV13EventSelectorV">EventSelector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/EventSelector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">EventSelector</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV24GetEventSelectorsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/GetEventSelectorsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV24GetEventSelectorsRequestV">GetEventSelectorsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/GetEventSelectorsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetEventSelectorsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV25GetEventSelectorsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/GetEventSelectorsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV25GetEventSelectorsResponseV">GetEventSelectorsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/GetEventSelectorsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetEventSelectorsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV03GetB13StatusRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/GetTrailStatusRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV03GetB13StatusRequestV">GetTrailStatusRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/GetTrailStatusRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetTrailStatusRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV03GetB14StatusResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/GetTrailStatusResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV03GetB14StatusResponseV">GetTrailStatusResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/GetTrailStatusResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetTrailStatusResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV21ListPublicKeysRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListPublicKeysRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV21ListPublicKeysRequestV">ListPublicKeysRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/ListPublicKeysRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListPublicKeysRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV22ListPublicKeysResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ListPublicKeysResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV22ListPublicKeysResponseV">ListPublicKeysResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/ListPublicKeysResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListPublicKeysResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV15ListTagsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV15ListTagsRequestV">ListTagsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/ListTagsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV16ListTagsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV16ListTagsResponseV">ListTagsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/ListTagsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV15LookupAttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/LookupAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV15LookupAttributeV">LookupAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/LookupAttribute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV18LookupAttributeKeyO"></a>
+                    <a name="//apple_ref/swift/Enum/LookupAttributeKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV18LookupAttributeKeyO">LookupAttributeKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/LookupAttributeKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LookupAttributeKey</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV19LookupEventsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/LookupEventsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV19LookupEventsRequestV">LookupEventsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/LookupEventsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupEventsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV20LookupEventsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/LookupEventsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV20LookupEventsResponseV">LookupEventsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/LookupEventsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LookupEventsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV9PublicKeyV"></a>
+                    <a name="//apple_ref/swift/Struct/PublicKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV9PublicKeyV">PublicKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/PublicKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PublicKey</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1991,6 +1659,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10CloudTrailAAV25PutEventSelectorsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/PutEventSelectorsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV25PutEventSelectorsResponseV">PutEventSelectorsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/PutEventSelectorsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutEventSelectorsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10CloudTrailAAV13ReadWriteTypeO"></a>
                     <a name="//apple_ref/swift/Enum/ReadWriteType" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudTrailAAV13ReadWriteTypeO">ReadWriteType</a>
@@ -2019,9 +1715,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV15AddTagsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/AddTagsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV15AddTagsResponseV">AddTagsResponse</a>
+                    <a name="/s:10CloudTrailAAV17RemoveTagsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RemoveTagsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV17RemoveTagsRequestV">RemoveTagsRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2031,12 +1727,321 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/CloudTrail/RemoveTagsRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AddTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV18RemoveTagsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/RemoveTagsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV18RemoveTagsResponseV">RemoveTagsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/RemoveTagsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RemoveTagsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV8ResourceV"></a>
+                    <a name="//apple_ref/swift/Struct/Resource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV8ResourceV">Resource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/Resource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Resource</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV11ResourceTagV"></a>
+                    <a name="//apple_ref/swift/Struct/ResourceTag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV11ResourceTagV">ResourceTag</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/ResourceTag.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResourceTag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV19StartLoggingRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/StartLoggingRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV19StartLoggingRequestV">StartLoggingRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/StartLoggingRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartLoggingRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV20StartLoggingResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/StartLoggingResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV20StartLoggingResponseV">StartLoggingResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/StartLoggingResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartLoggingResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV18StopLoggingRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/StopLoggingRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV18StopLoggingRequestV">StopLoggingRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/StopLoggingRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StopLoggingRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV19StopLoggingResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/StopLoggingResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV19StopLoggingResponseV">StopLoggingResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/StopLoggingResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StopLoggingResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV3TagV"></a>
+                    <a name="//apple_ref/swift/Struct/Tag" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV3TagV">Tag</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/Tag.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tag</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV0B0V"></a>
+                    <a name="//apple_ref/swift/Struct/Trail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV0B0V">Trail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/Trail.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Trail</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateTrailRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV">UpdateTrailRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/UpdateTrailRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateTrailRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06UpdateB8ResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateTrailResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB8ResponseV">UpdateTrailResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/CloudTrail/UpdateTrailResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateTrailResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2048,7 +2053,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

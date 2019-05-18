@@ -14,7 +14,7 @@
     <a title="PutScalingPolicyRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13ConfigurationAB06TargethceI0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/targetTrackingScalingPolicyConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13ConfigurationAB06TargethceI0VSgvp">targetTrackingScalingPolicyConfiguration</a>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/policyName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyNameSSvp">policyName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A target tracking policy. This parameter is required if you are creating a policy and the policy type is TargetTrackingScaling.</p>
+                        <p>The name of the scaling policy.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetTrackingScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html">TargetTrackingScalingPolicyConfiguration</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyTypeAB0eH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/policyType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyTypeAB0eH0OSgvp">policyType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The policy type. This parameter is required if you are creating a policy. For DynamoDB, only TargetTrackingScaling is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both StepScaling and TargetTrackingScaling are supported. For any other service, only StepScaling is supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/PolicyType.html">PolicyType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10resourceIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/resourceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10resourceIdSSvp">resourceId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.   ECS service - The resource type is service and the unique identifier is the cluster name and service name. Example: service/default/sample-webapp.   Spot fleet request - The resource type is spot-fleet-request and the unique identifier is the Spot fleet request ID. Example: spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE.   EMR cluster - The resource type is instancegroup and the unique identifier is the cluster ID and instance group ID. Example: instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0.   AppStream 2.0 fleet - The resource type is fleet and the unique identifier is the fleet name. Example: fleet/sample-fleet.   DynamoDB table - The resource type is table and the unique identifier is the resource ID. Example: table/my-table.   DynamoDB global secondary index - The resource type is index and the unique identifier is the resource ID. Example: table/my-table/index/my-table-index.   Aurora DB cluster - The resource type is cluster and the unique identifier is the cluster name. Example: cluster:my-db-cluster.   Amazon SageMaker endpoint variants - The resource type is variant and the unique identifier is the resource ID. Example: endpoint/my-end-point/variant/KMeansClustering.   Custom resources are not supported with a resource type. This parameter must specify the OutputValue from the CloudFormation template stack used to access the resources. The unique identifier is defined by the service provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,60 +712,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/policyName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyNameSSvp">policyName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the scaling policy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyTypeAB0eH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/policyType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyTypeAB0eH0OSgvp">policyType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The policy type. This parameter is required if you are creating a policy. For DynamoDB, only TargetTrackingScaling is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both StepScaling and TargetTrackingScaling are supported. For any other service, only StepScaling is supported.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/PolicyType.html">PolicyType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV04stepcE13ConfigurationAB04StepceH0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/stepScalingPolicyConfiguration" class="dashAnchor"></a>
                     <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV04stepcE13ConfigurationAB04StepceH0VSgvp">stepScalingPolicyConfiguration</a>
@@ -739,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10resourceIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/resourceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10resourceIdSSvp">resourceId</a>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13ConfigurationAB06TargethceI0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/targetTrackingScalingPolicyConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13ConfigurationAB06TargethceI0VSgvp">targetTrackingScalingPolicyConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.   ECS service - The resource type is service and the unique identifier is the cluster name and service name. Example: service/default/sample-webapp.   Spot fleet request - The resource type is spot-fleet-request and the unique identifier is the Spot fleet request ID. Example: spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE.   EMR cluster - The resource type is instancegroup and the unique identifier is the cluster ID and instance group ID. Example: instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0.   AppStream 2.0 fleet - The resource type is fleet and the unique identifier is the fleet name. Example: fleet/sample-fleet.   DynamoDB table - The resource type is table and the unique identifier is the resource ID. Example: table/my-table.   DynamoDB global secondary index - The resource type is index and the unique identifier is the resource ID. Example: table/my-table/index/my-table-index.   Aurora DB cluster - The resource type is cluster and the unique identifier is the cluster name. Example: cluster:my-db-cluster.   Amazon SageMaker endpoint variants - The resource type is variant and the unique identifier is the resource ID. Example: endpoint/my-end-point/variant/KMeansClustering.   Custom resources are not supported with a resource type. This parameter must specify the OutputValue from the CloudFormation template stack used to access the resources. The unique identifier is defined by the service provider.</p>
+                        <p>A target tracking policy. This parameter is required if you are creating a policy and the policy type is TargetTrackingScaling.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetTrackingScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html">TargetTrackingScalingPolicyConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13Configuration17scalableDimension16serviceNamespace10policyName0N4Type04stepceI010resourceIdAdB06TargethceI0VSg_AB08ScalableK0OAB07ServiceM0OSSAB0eP0OSgAB04StepceI0VSgSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(targetTrackingScalingPolicyConfiguration:scalableDimension:serviceNamespace:policyName:policyType:stepScalingPolicyConfiguration:resourceId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV014targetTrackingcE13Configuration17scalableDimension16serviceNamespace10policyName0N4Type04stepceI010resourceIdAdB06TargethceI0VSg_AB08ScalableK0OAB07ServiceM0OSSAB0eP0OSgAB04StepceI0VSgSStcfc">init(targetTrackingScalingPolicyConfiguration:scalableDimension:serviceNamespace:policyName:policyType:stepScalingPolicyConfiguration:resourceId:)</a>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyName0G4Type10resourceId17scalableDimension16serviceNamespace04stepcE13Configuration014targetTrackingceQ0ADSS_AB0eI0OSgSSAB08ScalableM0OAB07ServiceO0OAB04StepceQ0VSgAB06TargetsceQ0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(policyName:policyType:resourceId:scalableDimension:serviceNamespace:stepScalingPolicyConfiguration:targetTrackingScalingPolicyConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV10policyName0G4Type10resourceId17scalableDimension16serviceNamespace04stepcE13Configuration014targetTrackingceQ0ADSS_AB0eI0OSgSSAB08ScalableM0OAB07ServiceO0OAB04StepceQ0VSgAB06TargetsceQ0VSgtcfc">init(policyName:policyType:resourceId:scalableDimension:serviceNamespace:stepScalingPolicyConfiguration:targetTrackingScalingPolicyConfiguration:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +783,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">targetTrackingScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html">TargetTrackingScalingPolicyConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">policyType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/PolicyType.html">PolicyType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stepScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/StepScalingPolicyConfiguration.html">StepScalingPolicyConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">policyType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/PolicyType.html">PolicyType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">stepScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/StepScalingPolicyConfiguration.html">StepScalingPolicyConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetTrackingScalingPolicyConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html">TargetTrackingScalingPolicyConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -795,7 +795,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

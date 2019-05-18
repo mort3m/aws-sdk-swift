@@ -14,7 +14,7 @@
     <a title="ListGeoLocationsRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCodeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startSubdivisionCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCodeSSSgvp">startSubdivisionCode</a>
+                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV8maxItemsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxItems" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV8maxItemsSSSgvp">maxItems</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The code for the subdivision (for example, state or province) with which you want to start listing locations that Amazon Route 53 supports for geolocation. If Route 53 has already returned a page or more of results, if IsTruncated is true, and if NextSubdivisionCode from the previous response has a value, enter that value in startsubdivisioncode to return the next page of results. To list subdivisions of a country, you must include both startcountrycode and startsubdivisioncode.</p>
+                        <p>(Optional) The maximum number of geolocations to be included in the response body for this request. If more than maxitems geolocations remain to be listed, then the value of the IsTruncated element in the response is true.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startSubdivisionCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV16startCountryCodeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startCountryCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV16startCountryCodeSSSgvp">startCountryCode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The code for the country with which you want to start listing locations that Amazon Route 53 supports for geolocation. If Route 53 has already returned a page or more of results, if IsTruncated is true, and if NextCountryCode from the previous response has a value, enter that value in startcountrycode to return the next page of results. Route 53 uses the two-letter country codes that are specified in ISO standard 3166-1 alpha-2.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startCountryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxItems</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV8maxItemsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxItems" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV8maxItemsSSSgvp">maxItems</a>
+                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV16startCountryCodeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startCountryCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV16startCountryCodeSSSgvp">startCountryCode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>(Optional) The maximum number of geolocations to be included in the response body for this request. If more than maxitems geolocations remain to be listed, then the value of the IsTruncated element in the response is true.</p>
+                        <p>The code for the country with which you want to start listing locations that Amazon Route 53 supports for geolocation. If Route 53 has already returned a page or more of results, if IsTruncated is true, and if NextCountryCode from the previous response has a value, enter that value in startcountrycode to return the next page of results. Route 53 uses the two-letter country codes that are specified in ISO standard 3166-1 alpha-2.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxItems</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startCountryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCode0f7CountryH00f9ContinentH08maxItemsADSSSg_A3Itcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(startSubdivisionCode:startCountryCode:startContinentCode:maxItems:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCode0f7CountryH00f9ContinentH08maxItemsADSSSg_A3Itcfc">init(startSubdivisionCode:startCountryCode:startContinentCode:maxItems:)</a>
+                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCodeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startSubdivisionCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV20startSubdivisionCodeSSSgvp">startSubdivisionCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The code for the subdivision (for example, state or province) with which you want to start listing locations that Amazon Route 53 supports for geolocation. If Route 53 has already returned a page or more of results, if IsTruncated is true, and if NextSubdivisionCode from the previous response has a value, enter that value in startsubdivisioncode to return the next page of results. To list subdivisions of a country, you must include both startcountrycode and startsubdivisioncode.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startSubdivisionCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7Route53AAV23ListGeoLocationsRequestV8maxItems18startContinentCode0h7CountryJ00h11SubdivisionJ0ADSSSg_A3Itcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(maxItems:startContinentCode:startCountryCode:startSubdivisionCode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Route53AAV23ListGeoLocationsRequestV8maxItems18startContinentCode0h7CountryJ00h11SubdivisionJ0ADSSSg_A3Itcfc">init(maxItems:startContinentCode:startCountryCode:startSubdivisionCode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">startSubdivisionCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startCountryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startContinentCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxItems</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">maxItems</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startContinentCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startCountryCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startSubdivisionCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

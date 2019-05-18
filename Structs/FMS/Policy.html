@@ -14,7 +14,7 @@
     <a title="Policy Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,141 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3FMSAAV6PolicyV10excludeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/excludeMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV10excludeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp">excludeMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the AWS account IDs to exclude from the policy. The IncludeMap values are evaluated first, with all of the appropriate account IDs added to the policy. Then the accounts listed in ExcludeMap are removed, resulting in the final list of accounts to add to the policy. The key to the map is ACCOUNT. For example, a valid ExcludeMap would be {“ACCOUNT” : [“accountID1”, “accountID2”]}.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">excludeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FMSAAV6PolicyV19excludeResourceTagsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/excludeResourceTags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV19excludeResourceTagsSbvp">excludeResourceTags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to True, resources with the tags that are specified in the ResourceTag array are not protected by the policy. If set to False, and the ResourceTag array is not null, only resources with the specified tags are associated with the policy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">excludeResourceTags</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FMSAAV6PolicyV10includeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV10includeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp">includeMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the AWS account IDs to include in the policy. If IncludeMap is null, all accounts in the AWS Organization are included in the policy. If IncludeMap is not null, only values listed in IncludeMap will be included in the policy. The key to the map is ACCOUNT. For example, a valid IncludeMap would be {“ACCOUNT” : [“accountID1”, “accountID2”]}.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FMSAAV6PolicyV8policyIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/policyId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV8policyIdSSSgvp">policyId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the AWS Firewall Manager policy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3FMSAAV6PolicyV10policyNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/policyName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV10policyNameSSvp">policyName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The friendly name of the AWS Firewall Manager policy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3FMSAAV6PolicyV17policyUpdateTokenSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/policyUpdateToken" class="dashAnchor"></a>
                     <a class="token" href="#/s:3FMSAAV6PolicyV17policyUpdateTokenSSSgvp">policyUpdateToken</a>
@@ -658,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FMSAAV6PolicyV10policyNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/policyName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV10policyNameSSvp">policyName</a>
+                    <a name="/s:3FMSAAV6PolicyV12resourceTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/resourceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV12resourceTypeSSvp">resourceType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,95 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The friendly name of the AWS Firewall Manager policy.</p>
+                        <p>The type of resource to protect with the policy, either an Application Load Balancer or a CloudFront distribution. This is in the format shown in AWS Resource Types Reference. Valid values are AWS::ElasticLoadBalancingV2::LoadBalancer or AWS::CloudFront::Distribution.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FMSAAV6PolicyV8policyIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/policyId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV8policyIdSSSgvp">policyId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the AWS Firewall Manager policy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FMSAAV6PolicyV19excludeResourceTagsSbvp"></a>
-                    <a name="//apple_ref/swift/Property/excludeResourceTags" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV19excludeResourceTagsSbvp">excludeResourceTags</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If set to True, resources with the tags that are specified in the ResourceTag array are not protected by the policy. If set to False, and the ResourceTag array is not null, only resources with the specified tags are associated with the policy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">excludeResourceTags</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FMSAAV6PolicyV10includeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeMap" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV10includeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp">includeMap</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the AWS account IDs to include in the policy. If IncludeMap is null, all accounts in the AWS Organization are included in the policy. If IncludeMap is not null, only values listed in IncludeMap will be included in the policy. The key to the map is ACCOUNT. For example, a valid IncludeMap would be {“ACCOUNT” : [“accountID1”, “accountID2”]}.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -793,63 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3FMSAAV6PolicyV10excludeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/excludeMap" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV10excludeMapSDyAB08CustomerB11ScopeIdTypeOSaySSGGSgvp">excludeMap</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the AWS account IDs to exclude from the policy. The IncludeMap values are evaluated first, with all of the appropriate account IDs added to the policy. Then the accounts listed in ExcludeMap are removed, resulting in the final list of accounts to add to the policy. The key to the map is ACCOUNT. For example, a valid ExcludeMap would be {“ACCOUNT” : [“accountID1”, “accountID2”]}.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">excludeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FMSAAV6PolicyV12resourceTypeSSvp"></a>
-                    <a name="//apple_ref/swift/Property/resourceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV12resourceTypeSSvp">resourceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of resource to protect with the policy, either an Application Load Balancer or a CloudFront distribution. This is in the format shown in AWS Resource Types Reference. Valid values are AWS::ElasticLoadBalancingV2::LoadBalancer or AWS::CloudFront::Distribution.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3FMSAAV6PolicyV17policyUpdateToken18remediationEnabled12resourceTags0C4Name0C2Id015excludeResourceI010includeMap015securityServiceB4Data0lO00H4TypeADSSSg_SbSayAB0M3TagVGSgSSAOSbSDyAB08Customerb5ScopekS0OSaySSGGSgAB08SecurityqbR0VAXSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(policyUpdateToken:remediationEnabled:resourceTags:policyName:policyId:excludeResourceTags:includeMap:securityServicePolicyData:excludeMap:resourceType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3FMSAAV6PolicyV17policyUpdateToken18remediationEnabled12resourceTags0C4Name0C2Id015excludeResourceI010includeMap015securityServiceB4Data0lO00H4TypeADSSSg_SbSayAB0M3TagVGSgSSAOSbSDyAB08Customerb5ScopekS0OSaySSGGSgAB08SecurityqbR0VAXSStcfc">init(policyUpdateToken:remediationEnabled:resourceTags:policyName:policyId:excludeResourceTags:includeMap:securityServicePolicyData:excludeMap:resourceType:)</a>
+                    <a name="/s:3FMSAAV6PolicyV10excludeMap0C12ResourceTags07includeD08policyId0H4Name0H11UpdateToken18remediationEnabled08resourceF00O4Type015securityServiceB4DataADSDyAB08Customerb5ScopeiP0OSaySSGGSg_SbASSSSgSSATSbSayAB0E3TagVGSgSSAB08SecurityrbS0Vtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(excludeMap:excludeResourceTags:includeMap:policyId:policyName:policyUpdateToken:remediationEnabled:resourceTags:resourceType:securityServicePolicyData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3FMSAAV6PolicyV10excludeMap0C12ResourceTags07includeD08policyId0H4Name0H11UpdateToken18remediationEnabled08resourceF00O4Type015securityServiceB4DataADSDyAB08Customerb5ScopeiP0OSaySSGGSg_SbASSSSgSSATSbSayAB0E3TagVGSgSSAB08SecurityrbS0Vtcfc">init(excludeMap:excludeResourceTags:includeMap:policyId:policyName:policyUpdateToken:remediationEnabled:resourceTags:resourceType:securityServicePolicyData:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">policyUpdateToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">remediationEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">resourceTags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/ResourceTag.html">ResourceTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">policyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">excludeResourceTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">includeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityServicePolicyData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/FMS/SecurityServicePolicyData.html">SecurityServicePolicyData</a></span><span class="p">,</span> <span class="nv">excludeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">excludeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">excludeResourceTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">includeMap</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/CustomerPolicyScopeIdType.html">CustomerPolicyScopeIdType</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">policyUpdateToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">remediationEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">resourceTags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/FMS/ResourceTag.html">ResourceTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">securityServicePolicyData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/FMS/SecurityServicePolicyData.html">SecurityServicePolicyData</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="S3DataSource Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV12S3DataSourceV5s3UriSSvp"></a>
-                    <a name="//apple_ref/swift/Property/s3Uri" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV5s3UriSSvp">s3Uri</a>
+                    <a name="/s:9SageMakerAAV12S3DataSourceV14attributeNamesSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/attributeNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV14attributeNamesSaySSGSgvp">attributeNames</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Depending on the value specified for the S3DataType, identifies either a key name prefix or a manifest. For example:     A key name prefix might look like this: s3://bucketname/exampleprefix.     A manifest might look like this: s3://bucketname/example.manifest   The manifest is an S3 object which is a JSON file with the following format:   [    {<q>prefix</q>: <q>s3://customer_bucket/some/prefix/</q>},    <q>relative/path/to/custdata-1</q>,    <q>relative/path/custdata-2</q>,    &hellip;    ]   The preceding JSON matches the following s3Uris:   s3://customer_bucket/some/prefix/relative/path/to/custdata-1   s3://customer_bucket/some/prefix/relative/path/custdata-1   &hellip;  The complete set of s3uris in this manifest is the input data for the channel for this datasource. The object that each s3uris points to must be readable by the IAM role that Amazon SageMaker uses to perform tasks on your behalf.</p>
+                        <p>A list of one or more attribute names to use that are found in a specified augmented manifest file.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV12S3DataSourceV02s3D4TypeAB0cdG0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/s3DataType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV02s3D4TypeAB0cdG0Ovp">s3DataType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If you choose S3Prefix, S3Uri identifies a key name prefix. Amazon SageMaker uses all objects that match the specified key name prefix for model training.  If you choose ManifestFile, S3Uri identifies an object that is a manifest file containing a list of object keys that you want Amazon SageMaker to use for model training.  If you choose AugmentedManifestFile, S3Uri identifies an object that is an augmented manifest file in JSON lines format. This file contains the data you want to use for model training. AugmentedManifestFile can only be used if the Channel&rsquo;s input mode is Pipe.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3DataType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataType.html">S3DataType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV12S3DataSourceV14attributeNamesSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/attributeNames" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV14attributeNamesSaySSGSgvp">attributeNames</a>
+                    <a name="/s:9SageMakerAAV12S3DataSourceV02s3D4TypeAB0cdG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/s3DataType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV02s3D4TypeAB0cdG0Ovp">s3DataType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of one or more attribute names to use that are found in a specified augmented manifest file.</p>
+                        <p>If you choose S3Prefix, S3Uri identifies a key name prefix. Amazon SageMaker uses all objects that match the specified key name prefix for model training.  If you choose ManifestFile, S3Uri identifies an object that is a manifest file containing a list of object keys that you want Amazon SageMaker to use for model training.  If you choose AugmentedManifestFile, S3Uri identifies an object that is an augmented manifest file in JSON lines format. This file contains the data you want to use for model training. AugmentedManifestFile can only be used if the Channel&rsquo;s input mode is Pipe.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3DataType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataType.html">S3DataType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV12S3DataSourceV5s3Uri0fD4Type0fd12DistributionH014attributeNamesADSS_AB0cdH0OAB0cdI0OSgSaySSGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(s3Uri:s3DataType:s3DataDistributionType:attributeNames:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV5s3Uri0fD4Type0fd12DistributionH014attributeNamesADSS_AB0cdH0OAB0cdI0OSgSaySSGSgtcfc">init(s3Uri:s3DataType:s3DataDistributionType:attributeNames:)</a>
+                    <a name="/s:9SageMakerAAV12S3DataSourceV5s3UriSSvp"></a>
+                    <a name="//apple_ref/swift/Property/s3Uri" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV5s3UriSSvp">s3Uri</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Depending on the value specified for the S3DataType, identifies either a key name prefix or a manifest. For example:     A key name prefix might look like this: s3://bucketname/exampleprefix.     A manifest might look like this: s3://bucketname/example.manifest   The manifest is an S3 object which is a JSON file with the following format:   [    {<q>prefix</q>: <q>s3://customer_bucket/some/prefix/</q>},    <q>relative/path/to/custdata-1</q>,    <q>relative/path/custdata-2</q>,    &hellip;    ]   The preceding JSON matches the following s3Uris:   s3://customer_bucket/some/prefix/relative/path/to/custdata-1   s3://customer_bucket/some/prefix/relative/path/custdata-1   &hellip;  The complete set of s3uris in this manifest is the input data for the channel for this datasource. The object that each s3uris points to must be readable by the IAM role that Amazon SageMaker uses to perform tasks on your behalf.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV12S3DataSourceV14attributeNames02s3D16DistributionType0hdJ00H3UriADSaySSGSg_AB0cdI0OSgAB0cdJ0OSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(attributeNames:s3DataDistributionType:s3DataType:s3Uri:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV12S3DataSourceV14attributeNames02s3D16DistributionType0hdJ00H3UriADSaySSGSg_AB0cdI0OSgAB0cdJ0OSStcfc">init(attributeNames:s3DataDistributionType:s3DataType:s3Uri:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">s3DataType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataType.html">S3DataType</a></span><span class="p">,</span> <span class="nv">s3DataDistributionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataDistribution.html">S3DataDistribution</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">attributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3DataDistributionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataDistribution.html">S3DataDistribution</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3DataType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/S3DataType.html">S3DataType</a></span><span class="p">,</span> <span class="nv">s3Uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

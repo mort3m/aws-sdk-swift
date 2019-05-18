@@ -14,7 +14,7 @@
     <a title="CreateCapacityReservationRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV11endDateTypeAB03EndgH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/endDateType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV11endDateTypeAB03EndgH0OSgvp">endDateType</a>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZoneSSvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZoneSSvp">availabilityZone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates the way in which the Capacity Reservation ends. A Capacity Reservation can have one of the following end types:    unlimited - The Capacity Reservation remains active until you explicitly cancel it. Do not provide an EndDate if the EndDateType is unlimited.    limited - The Capacity Reservation expires automatically at a specified date and time. You must provide an EndDate value if the EndDateType value is limited.</p>
+                        <p>The Availability Zone in which to create the Capacity Reservation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDateType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/EndDateType.html">EndDateType</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV11clientTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV11clientTokenSSSgvp">clientToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see How to Ensure Idempotency. Constraint: Maximum 64 ASCII characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,141 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZoneSSvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZoneSSvp">availabilityZone</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Availability Zone in which to create the Capacity Reservation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16instancePlatformAB0cd8InstanceG0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/instancePlatform" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16instancePlatformAB0cd8InstanceG0Ovp">instancePlatform</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of operating system for which to reserve capacity.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instancePlatform</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationInstancePlatform.html">CapacityReservationInstancePlatform</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16ephemeralStorageSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ephemeralStorage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16ephemeralStorageSbSgvp">ephemeralStorage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ephemeralStorage</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV17tagSpecificationsAB20TagSpecificationListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tagSpecifications" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV17tagSpecificationsAB20TagSpecificationListVSgvp">tagSpecifications</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The tags to apply to the Capacity Reservation during launch.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV12instanceTypeSSvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV12instanceTypeSSvp">instanceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance type for which to reserve capacity. For more information, see Instance Types in the Amazon Elastic Compute Cloud User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EC2AAV32CreateCapacityReservationRequestV12ebsOptimizedSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/ebsOptimized" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV12ebsOptimizedSbSgvp">ebsOptimized</a>
@@ -793,33 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV7tenancyAB0cD7TenancyOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tenancy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV7tenancyAB0cD7TenancyOSgvp">tenancy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can have one of the following tenancy settings:    default - The Capacity Reservation is created on hardware that is shared with other AWS accounts.    dedicated - The Capacity Reservation is created on single-tenant hardware that is dedicated to a single AWS account.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tenancy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationTenancy.html">CapacityReservationTenancy</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EC2AAV32CreateCapacityReservationRequestV7endDate15AWSSDKSwiftCore9TimeStampVSgvp"></a>
                     <a name="//apple_ref/swift/Property/endDate" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV7endDate15AWSSDKSwiftCore9TimeStampVSgvp">endDate</a>
@@ -838,6 +703,60 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV11endDateTypeAB03EndgH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endDateType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV11endDateTypeAB03EndgH0OSgvp">endDateType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates the way in which the Capacity Reservation ends. A Capacity Reservation can have one of the following end types:    unlimited - The Capacity Reservation remains active until you explicitly cancel it. Do not provide an EndDate if the EndDateType is unlimited.    limited - The Capacity Reservation expires automatically at a specified date and time. You must provide an EndDate value if the EndDateType value is limited.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDateType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/EndDateType.html">EndDateType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16ephemeralStorageSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ephemeralStorage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16ephemeralStorageSbSgvp">ephemeralStorage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ephemeralStorage</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV11clientTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV11clientTokenSSSgvp">clientToken</a>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16instancePlatformAB0cd8InstanceG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/instancePlatform" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16instancePlatformAB0cd8InstanceG0Ovp">instancePlatform</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see How to Ensure Idempotency. Constraint: Maximum 64 ASCII characters.</p>
+                        <p>The type of operating system for which to reserve capacity.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instancePlatform</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationInstancePlatform.html">CapacityReservationInstancePlatform</a></span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +847,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV11endDateType6dryRun16availabilityZone16instancePlatform16ephemeralStorage17tagSpecifications0mH012ebsOptimized7tenancy0fG00M5Count0M13MatchCriteria11clientTokenAdB03EndgH0OSg_SbSgSSAB0cd8InstanceN0OAuB20TagSpecificationListVSgSSAuB0cD7TenancyOSg15AWSSDKSwiftCore9TimeStampVSgs5Int32VAB08InstancewX0OSgSSSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(endDateType:dryRun:availabilityZone:instancePlatform:ephemeralStorage:tagSpecifications:instanceType:ebsOptimized:tenancy:endDate:instanceCount:instanceMatchCriteria:clientToken:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV11endDateType6dryRun16availabilityZone16instancePlatform16ephemeralStorage17tagSpecifications0mH012ebsOptimized7tenancy0fG00M5Count0M13MatchCriteria11clientTokenAdB03EndgH0OSg_SbSgSSAB0cd8InstanceN0OAuB20TagSpecificationListVSgSSAuB0cD7TenancyOSg15AWSSDKSwiftCore9TimeStampVSgs5Int32VAB08InstancewX0OSgSSSgtcfc">init(endDateType:dryRun:availabilityZone:instancePlatform:ephemeralStorage:tagSpecifications:instanceType:ebsOptimized:tenancy:endDate:instanceCount:instanceMatchCriteria:clientToken:)</a>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV12instanceTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV12instanceTypeSSvp">instanceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instance type for which to reserve capacity. For more information, see Instance Types in the Amazon Elastic Compute Cloud User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV17tagSpecificationsAB20TagSpecificationListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tagSpecifications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV17tagSpecificationsAB20TagSpecificationListVSgvp">tagSpecifications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The tags to apply to the Capacity Reservation during launch.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV7tenancyAB0cD7TenancyOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tenancy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV7tenancyAB0cD7TenancyOSgvp">tenancy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can have one of the following tenancy settings:    default - The Capacity Reservation is created on hardware that is shared with other AWS accounts.    dedicated - The Capacity Reservation is created on single-tenant hardware that is dedicated to a single AWS account.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tenancy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationTenancy.html">CapacityReservationTenancy</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZone11clientToken6dryRun12ebsOptimized7endDate0nO4Type16ephemeralStorage13instanceCount0S13MatchCriteria0S8Platform0sP017tagSpecifications7tenancyADSS_SSSgSbSgAS15AWSSDKSwiftCore9TimeStampVSgAB03EndoP0OSgASs5Int32VAB08InstanceuV0OSgAB0cd8InstanceW0OSSAB20TagSpecificationListVSgAB0cD7TenancyOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(availabilityZone:clientToken:dryRun:ebsOptimized:endDate:endDateType:ephemeralStorage:instanceCount:instanceMatchCriteria:instancePlatform:instanceType:tagSpecifications:tenancy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV32CreateCapacityReservationRequestV16availabilityZone11clientToken6dryRun12ebsOptimized7endDate0nO4Type16ephemeralStorage13instanceCount0S13MatchCriteria0S8Platform0sP017tagSpecifications7tenancyADSS_SSSgSbSgAS15AWSSDKSwiftCore9TimeStampVSgAB03EndoP0OSgASs5Int32VAB08InstanceuV0OSgAB0cd8InstanceW0OSSAB20TagSpecificationListVSgAB0cD7TenancyOSgtcfc">init(availabilityZone:clientToken:dryRun:ebsOptimized:endDate:endDateType:ephemeralStorage:instanceCount:instanceMatchCriteria:instancePlatform:instanceType:tagSpecifications:tenancy:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +945,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endDateType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/EndDateType.html">EndDateType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">instancePlatform</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationInstancePlatform.html">CapacityReservationInstancePlatform</a></span><span class="p">,</span> <span class="nv">ephemeralStorage</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tenancy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationTenancy.html">CapacityReservationTenancy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">instanceMatchCriteria</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMatchCriteria.html">InstanceMatchCriteria</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endDateType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/EndDateType.html">EndDateType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ephemeralStorage</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">instanceMatchCriteria</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMatchCriteria.html">InstanceMatchCriteria</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instancePlatform</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationInstancePlatform.html">CapacityReservationInstancePlatform</a></span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tenancy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationTenancy.html">CapacityReservationTenancy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -957,7 +957,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

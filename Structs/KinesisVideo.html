@@ -14,7 +14,7 @@
     <a title="KinesisVideo Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -576,198 +576,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV19updateDataRetentionyAB06UpdatedE6OutputVAB0fdE5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateDataRetention(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV19updateDataRetentionyAB06UpdatedE6OutputVAB0fdE5InputVKF">updateDataRetention(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Increases or decreases the stream&rsquo;s data retention period by the value that you specify. To indicate whether you want to increase or decrease the data retention period, specify the Operation parameter in the request body. In the request, you must specify either the StreamName or the StreamARN.   The retention period that you specify replaces the current value.  This operation requires permission for the KinesisVideo:UpdateDataRetention action. Changing the data retention period affects the data in the stream as follows:   If the data retention period is increased, existing data is retained for the new retention period. For example, if the data retention period is increased from one hour to seven hours, all existing data is retained for seven hours.   If the data retention period is decreased, existing data is retained for the new retention period. For example, if the data retention period is decreased from seven hours to one hour, all existing data is retained for one hour, and any data older than one hour is deleted immediately.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateDataRetention</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UpdateDataRetentionInput.html">UpdateDataRetentionInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo.html#/s:12KinesisVideoAAV25UpdateDataRetentionOutputV">UpdateDataRetentionOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV12updateStreamyAB06UpdateD6OutputVAB0eD5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV12updateStreamyAB06UpdateD6OutputVAB0eD5InputVKF">updateStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Updates stream metadata, such as the device name and media type. You must provide the stream name or the Amazon Resource Name (ARN) of the stream. To make sure that you have the latest version of the stream before updating it, you can specify the stream version. Kinesis Video Streams assigns a version to each stream. When you update a stream, Kinesis Video Streams assigns a new version number. To get the latest stream version, use the DescribeStream API.   UpdateStream is an asynchronous operation, and takes time to complete.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UpdateStreamInput.html">UpdateStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo.html#/s:12KinesisVideoAAV18UpdateStreamOutputV">UpdateStreamOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV14describeStreamyAB08DescribeD6OutputVAB0eD5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV14describeStreamyAB08DescribeD6OutputVAB0eD5InputVKF">describeStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the most current information about the specified stream. You must specify either the StreamName or the StreamARN.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/DescribeStreamInput.html">DescribeStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo/DescribeStreamOutput.html">DescribeStreamOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV17listTagsForStreamyAB04ListdeF6OutputVAB0gdeF5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/listTagsForStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV17listTagsForStreamyAB04ListdeF6OutputVAB0gdeF5InputVKF">listTagsForStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a list of tags associated with the specified stream. In the request, you must specify either the StreamName or the StreamARN.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/ListTagsForStreamInput.html">ListTagsForStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo/ListTagsForStreamOutput.html">ListTagsForStreamOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV15getDataEndpointyAB03GetdE6OutputVAB0fdE5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/getDataEndpoint(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV15getDataEndpointyAB03GetdE6OutputVAB0fdE5InputVKF">getDataEndpoint(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gets an endpoint for a specified stream for either reading or writing. Use this endpoint in your application to read from the specified stream (using the GetMedia or GetMediaForFragmentList operations) or write to it (using the PutMedia operation).   The returned endpoint does not have the API name appended. The client needs to add the API name to the returned endpoint.  In the request, specify the stream either by StreamName or StreamARN.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDataEndpoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/GetDataEndpointInput.html">GetDataEndpointInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo/GetDataEndpointOutput.html">GetDataEndpointOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV12deleteStreamyAB06DeleteD6OutputVAB0eD5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV12deleteStreamyAB06DeleteD6OutputVAB0eD5InputVKF">deleteStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes a Kinesis video stream and the data contained in the stream.  This method marks the stream for deletion, and makes the data in the stream inaccessible immediately.    To ensure that you have the latest version of the stream before deleting it, you can specify the stream version. Kinesis Video Streams assigns a version to each stream. When you update a stream, Kinesis Video Streams assigns a new version number. To get the latest stream version, use the DescribeStream API.  This operation requires permission for the KinesisVideo:DeleteStream action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/DeleteStreamInput.html">DeleteStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo.html#/s:12KinesisVideoAAV18DeleteStreamOutputV">DeleteStreamOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV9tagStreamyAB03TagD6OutputVAB0eD5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/tagStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV9tagStreamyAB03TagD6OutputVAB0eD5InputVKF">tagStream(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds one or more tags to a stream. A tag is a key-value pair (the value is optional) that you can define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you specify in the request. For more information, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.  You must provide either the StreamName or the StreamARN. This operation requires permission for the KinesisVideo:TagStream action. Kinesis video streams support up to 50 tags.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tagStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/TagStreamInput.html">TagStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo.html#/s:12KinesisVideoAAV15TagStreamOutputV">TagStreamOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV12createStreamyAB06CreateD6OutputVAB0eD5InputVKF"></a>
+                    <a name="/s:12KinesisVideoAAV12createStreamy3NIO15EventLoopFutureCyAB06CreateD6OutputVGAB0iD5InputVKF"></a>
                     <a name="//apple_ref/swift/Method/createStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV12createStreamyAB06CreateD6OutputVAB0eD5InputVKF">createStream(_:)</a>
+                    <a class="token" href="#/s:12KinesisVideoAAV12createStreamy3NIO15EventLoopFutureCyAB06CreateD6OutputVGAB0iD5InputVKF">createStream(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -782,7 +593,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/CreateStreamInput.html">CreateStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo/CreateStreamOutput.html">CreateStreamOutput</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/CreateStreamInput.html">CreateStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/CreateStreamOutput.html">CreateStreamOutput</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -792,9 +603,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV11untagStreamyAB05UntagD6OutputVAB0eD5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/untagStream(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV11untagStreamyAB05UntagD6OutputVAB0eD5InputVKF">untagStream(_:)</a>
+                    <a name="/s:12KinesisVideoAAV12deleteStreamy3NIO15EventLoopFutureCyAB06DeleteD6OutputVGAB0iD5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV12deleteStreamy3NIO15EventLoopFutureCyAB06DeleteD6OutputVGAB0iD5InputVKF">deleteStream(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -802,14 +613,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes one or more tags from a stream. In the request, specify only a tag key or keys; don&rsquo;t specify the value. If you specify a tag key that does not exist, it&rsquo;s ignored. In the request, you must provide the StreamName or StreamARN.</p>
+                        <p>Deletes a Kinesis video stream and the data contained in the stream.  This method marks the stream for deletion, and makes the data in the stream inaccessible immediately.    To ensure that you have the latest version of the stream before deleting it, you can specify the stream version. Kinesis Video Streams assigns a version to each stream. When you update a stream, Kinesis Video Streams assigns a new version number. To get the latest stream version, use the DescribeStream API.  This operation requires permission for the KinesisVideo:DeleteStream action.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">untagStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UntagStreamInput.html">UntagStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo.html#/s:12KinesisVideoAAV17UntagStreamOutputV">UntagStreamOutput</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/DeleteStreamInput.html">DeleteStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/DeleteStreamOutput.html">DeleteStreamOutput</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -819,9 +630,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV11listStreamsyAB04ListD6OutputVAB0eD5InputVKF"></a>
+                    <a name="/s:12KinesisVideoAAV14describeStreamy3NIO15EventLoopFutureCyAB08DescribeD6OutputVGAB0iD5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV14describeStreamy3NIO15EventLoopFutureCyAB08DescribeD6OutputVGAB0iD5InputVKF">describeStream(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the most current information about the specified stream. You must specify either the StreamName or the StreamARN.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/DescribeStreamInput.html">DescribeStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/DescribeStreamOutput.html">DescribeStreamOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV15getDataEndpointy3NIO15EventLoopFutureCyAB03GetdE6OutputVGAB0jdE5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/getDataEndpoint(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV15getDataEndpointy3NIO15EventLoopFutureCyAB03GetdE6OutputVGAB0jdE5InputVKF">getDataEndpoint(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets an endpoint for a specified stream for either reading or writing. Use this endpoint in your application to read from the specified stream (using the GetMedia or GetMediaForFragmentList operations) or write to it (using the PutMedia operation).   The returned endpoint does not have the API name appended. The client needs to add the API name to the returned endpoint.  In the request, specify the stream either by StreamName or StreamARN.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDataEndpoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/GetDataEndpointInput.html">GetDataEndpointInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/GetDataEndpointOutput.html">GetDataEndpointOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV11listStreamsy3NIO15EventLoopFutureCyAB04ListD6OutputVGAB0iD5InputVKF"></a>
                     <a name="//apple_ref/swift/Method/listStreams(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV11listStreamsyAB04ListD6OutputVAB0eD5InputVKF">listStreams(_:)</a>
+                    <a class="token" href="#/s:12KinesisVideoAAV11listStreamsy3NIO15EventLoopFutureCyAB04ListD6OutputVGAB0iD5InputVKF">listStreams(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -836,7 +701,142 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listStreams</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/ListStreamsInput.html">ListStreamsInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/KinesisVideo/ListStreamsOutput.html">ListStreamsOutput</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listStreams</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/ListStreamsInput.html">ListStreamsInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/ListStreamsOutput.html">ListStreamsOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV17listTagsForStreamy3NIO15EventLoopFutureCyAB04ListdeF6OutputVGAB0kdeF5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/listTagsForStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV17listTagsForStreamy3NIO15EventLoopFutureCyAB04ListdeF6OutputVGAB0kdeF5InputVKF">listTagsForStream(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of tags associated with the specified stream. In the request, you must specify either the StreamName or the StreamARN.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listTagsForStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/ListTagsForStreamInput.html">ListTagsForStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/ListTagsForStreamOutput.html">ListTagsForStreamOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV9tagStreamy3NIO15EventLoopFutureCyAB03TagD6OutputVGAB0iD5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/tagStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV9tagStreamy3NIO15EventLoopFutureCyAB03TagD6OutputVGAB0iD5InputVKF">tagStream(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds one or more tags to a stream. A tag is a key-value pair (the value is optional) that you can define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you specify in the request. For more information, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.  You must provide either the StreamName or the StreamARN. This operation requires permission for the KinesisVideo:TagStream action. Kinesis video streams support up to 50 tags.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tagStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/TagStreamInput.html">TagStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/TagStreamOutput.html">TagStreamOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV11untagStreamy3NIO15EventLoopFutureCyAB05UntagD6OutputVGAB0iD5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/untagStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV11untagStreamy3NIO15EventLoopFutureCyAB05UntagD6OutputVGAB0iD5InputVKF">untagStream(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes one or more tags from a stream. In the request, specify only a tag key or keys; don&rsquo;t specify the value. If you specify a tag key that does not exist, it&rsquo;s ignored. In the request, you must provide the StreamName or StreamARN.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">untagStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UntagStreamInput.html">UntagStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/UntagStreamOutput.html">UntagStreamOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV19updateDataRetentiony3NIO15EventLoopFutureCyAB06UpdatedE6OutputVGAB0jdE5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateDataRetention(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV19updateDataRetentiony3NIO15EventLoopFutureCyAB06UpdatedE6OutputVGAB0jdE5InputVKF">updateDataRetention(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Increases or decreases the stream&rsquo;s data retention period by the value that you specify. To indicate whether you want to increase or decrease the data retention period, specify the Operation parameter in the request body. In the request, you must specify either the StreamName or the StreamARN.   The retention period that you specify replaces the current value.  This operation requires permission for the KinesisVideo:UpdateDataRetention action. Changing the data retention period affects the data in the stream as follows:   If the data retention period is increased, existing data is retained for the new retention period. For example, if the data retention period is increased from one hour to seven hours, all existing data is retained for seven hours.   If the data retention period is decreased, existing data is retained for the new retention period. For example, if the data retention period is decreased from seven hours to one hour, all existing data is retained for one hour, and any data older than one hour is deleted immediately.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateDataRetention</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UpdateDataRetentionInput.html">UpdateDataRetentionInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/UpdateDataRetentionOutput.html">UpdateDataRetentionOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV12updateStreamy3NIO15EventLoopFutureCyAB06UpdateD6OutputVGAB0iD5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateStream(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV12updateStreamy3NIO15EventLoopFutureCyAB06UpdateD6OutputVGAB0iD5InputVKF">updateStream(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates stream metadata, such as the device name and media type. You must provide the stream name or the Amazon Resource Name (ARN) of the stream. To make sure that you have the latest version of the stream before updating it, you can specify the stream version. Kinesis Video Streams assigns a version to each stream. When you update a stream, Kinesis Video Streams assigns a new version number. To get the latest stream version, use the DescribeStream API.   UpdateStream is an asynchronous operation, and takes time to complete.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateStream</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/KinesisVideo/UpdateStreamInput.html">UpdateStreamInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/KinesisVideo/UpdateStreamOutput.html">UpdateStreamOutput</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -847,62 +847,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV19DescribeStreamInputV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeStreamInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV19DescribeStreamInputV">DescribeStreamInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/DescribeStreamInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV16UntagStreamInputV"></a>
-                    <a name="//apple_ref/swift/Struct/UntagStreamInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV16UntagStreamInputV">UntagStreamInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/UntagStreamInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -934,9 +878,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV16ListStreamsInputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListStreamsInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV16ListStreamsInputV">ListStreamsInput</a>
+                    <a name="/s:12KinesisVideoAAV18ComparisonOperatorO"></a>
+                    <a name="//apple_ref/swift/Enum/ComparisonOperator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV18ComparisonOperatorO">ComparisonOperator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -946,13 +890,69 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/KinesisVideo/ListStreamsInput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/KinesisVideo/ComparisonOperator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListStreamsInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ComparisonOperator</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV17CreateStreamInputV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateStreamInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV17CreateStreamInputV">CreateStreamInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/CreateStreamInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV18CreateStreamOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateStreamOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV18CreateStreamOutputV">CreateStreamOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/CreateStreamOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1002,6 +1002,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/KinesisVideo/DeleteStreamOutput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1017,9 +1018,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV24UpdateDataRetentionInputV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateDataRetentionInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV24UpdateDataRetentionInputV">UpdateDataRetentionInput</a>
+                    <a name="/s:12KinesisVideoAAV19DescribeStreamInputV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeStreamInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV19DescribeStreamInputV">DescribeStreamInput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1029,290 +1030,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/KinesisVideo/UpdateDataRetentionInput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/KinesisVideo/DescribeStreamInput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateDataRetentionInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV22ListTagsForStreamInputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForStreamInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV22ListTagsForStreamInputV">ListTagsForStreamInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/ListTagsForStreamInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV17UntagStreamOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/UntagStreamOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV17UntagStreamOutputV">UntagStreamOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV25UpdateDataRetentionOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateDataRetentionOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV25UpdateDataRetentionOutputV">UpdateDataRetentionOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateDataRetentionOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV17CreateStreamInputV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateStreamInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV17CreateStreamInputV">CreateStreamInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/CreateStreamInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV14TagStreamInputV"></a>
-                    <a name="//apple_ref/swift/Struct/TagStreamInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV14TagStreamInputV">TagStreamInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/TagStreamInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TagStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV10StreamInfoV"></a>
-                    <a name="//apple_ref/swift/Struct/StreamInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV10StreamInfoV">StreamInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/StreamInfo.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StreamInfo</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV23ListTagsForStreamOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListTagsForStreamOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV23ListTagsForStreamOutputV">ListTagsForStreamOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/ListTagsForStreamOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV15TagStreamOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/TagStreamOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV15TagStreamOutputV">TagStreamOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TagStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV6StatusO"></a>
-                    <a name="//apple_ref/swift/Enum/Status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV6StatusO">Status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/Status.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Status</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV18ComparisonOperatorO"></a>
-                    <a name="//apple_ref/swift/Enum/ComparisonOperator" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV18ComparisonOperatorO">ComparisonOperator</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/ComparisonOperator.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ComparisonOperator</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1350,9 +1074,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV17ListStreamsOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListStreamsOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV17ListStreamsOutputV">ListStreamsOutput</a>
+                    <a name="/s:12KinesisVideoAAV20GetDataEndpointInputV"></a>
+                    <a name="//apple_ref/swift/Struct/GetDataEndpointInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV20GetDataEndpointInputV">GetDataEndpointInput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1362,13 +1086,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/KinesisVideo/ListStreamsOutput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/KinesisVideo/GetDataEndpointInput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListStreamsOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetDataEndpointInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1406,9 +1130,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV18CreateStreamOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateStreamOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV18CreateStreamOutputV">CreateStreamOutput</a>
+                    <a name="/s:12KinesisVideoAAV16ListStreamsInputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListStreamsInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV16ListStreamsInputV">ListStreamsInput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1418,13 +1142,321 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/KinesisVideo/CreateStreamOutput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/KinesisVideo/ListStreamsInput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListStreamsInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV17ListStreamsOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListStreamsOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV17ListStreamsOutputV">ListStreamsOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/ListStreamsOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListStreamsOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV22ListTagsForStreamInputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForStreamInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV22ListTagsForStreamInputV">ListTagsForStreamInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/ListTagsForStreamInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV23ListTagsForStreamOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListTagsForStreamOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV23ListTagsForStreamOutputV">ListTagsForStreamOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/ListTagsForStreamOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListTagsForStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV6StatusO"></a>
+                    <a name="//apple_ref/swift/Enum/Status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV6StatusO">Status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/Status.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Status</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV10StreamInfoV"></a>
+                    <a name="//apple_ref/swift/Struct/StreamInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV10StreamInfoV">StreamInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/StreamInfo.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StreamInfo</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV19StreamNameConditionV"></a>
+                    <a name="//apple_ref/swift/Struct/StreamNameCondition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV19StreamNameConditionV">StreamNameCondition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/StreamNameCondition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StreamNameCondition</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV14TagStreamInputV"></a>
+                    <a name="//apple_ref/swift/Struct/TagStreamInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV14TagStreamInputV">TagStreamInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/TagStreamInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TagStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV15TagStreamOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/TagStreamOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV15TagStreamOutputV">TagStreamOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/TagStreamOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TagStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV16UntagStreamInputV"></a>
+                    <a name="//apple_ref/swift/Struct/UntagStreamInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV16UntagStreamInputV">UntagStreamInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/UntagStreamInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagStreamInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV17UntagStreamOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/UntagStreamOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV17UntagStreamOutputV">UntagStreamOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/UntagStreamOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UntagStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12KinesisVideoAAV24UpdateDataRetentionInputV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateDataRetentionInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV24UpdateDataRetentionInputV">UpdateDataRetentionInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/KinesisVideo/UpdateDataRetentionInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateDataRetentionInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1462,9 +1494,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV18UpdateStreamOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateStreamOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV18UpdateStreamOutputV">UpdateStreamOutput</a>
+                    <a name="/s:12KinesisVideoAAV25UpdateDataRetentionOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateDataRetentionOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV25UpdateDataRetentionOutputV">UpdateDataRetentionOutput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1474,12 +1506,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/KinesisVideo/UpdateDataRetentionOutput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateDataRetentionOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1517,9 +1550,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12KinesisVideoAAV20GetDataEndpointInputV"></a>
-                    <a name="//apple_ref/swift/Struct/GetDataEndpointInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV20GetDataEndpointInputV">GetDataEndpointInput</a>
+                    <a name="/s:12KinesisVideoAAV18UpdateStreamOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateStreamOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12KinesisVideoAAV18UpdateStreamOutputV">UpdateStreamOutput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1529,41 +1562,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/KinesisVideo/GetDataEndpointInput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/KinesisVideo/UpdateStreamOutput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetDataEndpointInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12KinesisVideoAAV19StreamNameConditionV"></a>
-                    <a name="//apple_ref/swift/Struct/StreamNameCondition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12KinesisVideoAAV19StreamNameConditionV">StreamNameCondition</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/KinesisVideo/StreamNameCondition.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StreamNameCondition</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateStreamOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1575,7 +1580,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

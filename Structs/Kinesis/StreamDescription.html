@@ -14,7 +14,7 @@
     <a title="StreamDescription Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,168 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV13hasMoreShardsSbvp"></a>
-                    <a name="//apple_ref/swift/Property/hasMoreShards" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV13hasMoreShardsSbvp">hasMoreShards</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If set to true, more shards in the stream are available to describe.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hasMoreShards</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV6shardsSayAB5ShardVGvp"></a>
-                    <a name="//apple_ref/swift/Property/shards" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV6shardsSayAB5ShardVGvp">shards</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The shards that comprise the stream.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shards</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/Shard.html">Shard</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV12streamStatusAB0bE0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/streamStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV12streamStatusAB0bE0Ovp">streamStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current status of the stream being described. The stream status is one of the following states:    CREATING - The stream is being created. Kinesis Data Streams immediately returns and sets StreamStatus to CREATING.    DELETING - The stream is being deleted. The specified stream is in the DELETING state until Kinesis Data Streams completes the deletion.    ACTIVE - The stream exists and is ready for read and write operations or deletion. You should perform read and write operations only on an ACTIVE stream.    UPDATING - Shards in the stream are being merged or split. Read and write operations continue to work while the stream is in the UPDATING state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/StreamStatus.html">StreamStatus</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV5keyIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV5keyIdSSSgvp">keyId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified ARN to either an alias or a key, or an alias name prefixed by <q>alias/</q>.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.   Key ARN example: arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012    Alias ARN example: arn:aws:kms:us-east-1:123456789012:alias/MyAliasName    Globally unique key ID example: 12345678-1234-1234-1234-123456789012    Alias name example: alias/MyAliasName    Master key owned by Kinesis Data Streams: alias/aws/kinesis</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV10streamNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/streamName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV10streamNameSSvp">streamName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the stream being described.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVvp"></a>
-                    <a name="//apple_ref/swift/Property/streamCreationTimestamp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVvp">streamCreationTimestamp</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The approximate time that the stream was created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7KinesisAAV17StreamDescriptionV14encryptionTypeAB010EncryptionE0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/encryptionType" class="dashAnchor"></a>
                     <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV14encryptionTypeAB010EncryptionE0OSgvp">encryptionType</a>
@@ -757,33 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryptionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/EncryptionType.html">EncryptionType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV20retentionPeriodHourss5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/retentionPeriodHours" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV20retentionPeriodHourss5Int32Vvp">retentionPeriodHours</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current retention period, in hours.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retentionPeriodHours</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -820,6 +631,114 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV13hasMoreShardsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasMoreShards" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV13hasMoreShardsSbvp">hasMoreShards</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to true, more shards in the stream are available to describe.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hasMoreShards</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV5keyIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV5keyIdSSSgvp">keyId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified ARN to either an alias or a key, or an alias name prefixed by <q>alias/</q>.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.   Key ARN example: arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012    Alias ARN example: arn:aws:kms:us-east-1:123456789012:alias/MyAliasName    Globally unique key ID example: 12345678-1234-1234-1234-123456789012    Alias name example: alias/MyAliasName    Master key owned by Kinesis Data Streams: alias/aws/kinesis</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV20retentionPeriodHourss5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/retentionPeriodHours" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV20retentionPeriodHourss5Int32Vvp">retentionPeriodHours</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current retention period, in hours.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retentionPeriodHours</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV6shardsSayAB5ShardVGvp"></a>
+                    <a name="//apple_ref/swift/Property/shards" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV6shardsSayAB5ShardVGvp">shards</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shards that comprise the stream.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shards</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/Shard.html">Shard</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7KinesisAAV17StreamDescriptionV9streamARNSSvp"></a>
                     <a name="//apple_ref/swift/Property/streamARN" class="dashAnchor"></a>
                     <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV9streamARNSSvp">streamARN</a>
@@ -847,9 +766,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV17StreamDescriptionV13hasMoreShards6shards12streamStatus5keyId0H4Name0H17CreationTimestamp14encryptionType20retentionPeriodHours18enhancedMonitoring0H3ARNADSb_SayAB5ShardVGAB0bI0OSSSgSS15AWSSDKSwiftCore9TimeStampVAB010EncryptionP0OSgs5Int32VSayAB15EnhancedMetricsVGSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(hasMoreShards:shards:streamStatus:keyId:streamName:streamCreationTimestamp:encryptionType:retentionPeriodHours:enhancedMonitoring:streamARN:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV13hasMoreShards6shards12streamStatus5keyId0H4Name0H17CreationTimestamp14encryptionType20retentionPeriodHours18enhancedMonitoring0H3ARNADSb_SayAB5ShardVGAB0bI0OSSSgSS15AWSSDKSwiftCore9TimeStampVAB010EncryptionP0OSgs5Int32VSayAB15EnhancedMetricsVGSStcfc">init(hasMoreShards:shards:streamStatus:keyId:streamName:streamCreationTimestamp:encryptionType:retentionPeriodHours:enhancedMonitoring:streamARN:)</a>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVvp"></a>
+                    <a name="//apple_ref/swift/Property/streamCreationTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVvp">streamCreationTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The approximate time that the stream was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV10streamNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/streamName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV10streamNameSSvp">streamName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the stream being described.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV12streamStatusAB0bE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/streamStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV12streamStatusAB0bE0Ovp">streamStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status of the stream being described. The stream status is one of the following states:    CREATING - The stream is being created. Kinesis Data Streams immediately returns and sets StreamStatus to CREATING.    DELETING - The stream is being deleted. The specified stream is in the DELETING state until Kinesis Data Streams completes the deletion.    ACTIVE - The stream exists and is ready for read and write operations or deletion. You should perform read and write operations only on an ACTIVE stream.    UPDATING - Shards in the stream are being merged or split. Read and write operations continue to work while the stream is in the UPDATING state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/StreamStatus.html">StreamStatus</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV17StreamDescriptionV14encryptionType18enhancedMonitoring13hasMoreShards5keyId20retentionPeriodHours6shards9streamARN0Q17CreationTimestamp0Q4Name0Q6StatusAdB010EncryptionE0OSg_SayAB15EnhancedMetricsVGSbSSSgs5Int32VSayAB5ShardVGSS15AWSSDKSwiftCore9TimeStampVSSAB0bV0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(encryptionType:enhancedMonitoring:hasMoreShards:keyId:retentionPeriodHours:shards:streamARN:streamCreationTimestamp:streamName:streamStatus:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV17StreamDescriptionV14encryptionType18enhancedMonitoring13hasMoreShards5keyId20retentionPeriodHours6shards9streamARN0Q17CreationTimestamp0Q4Name0Q6StatusAdB010EncryptionE0OSg_SayAB15EnhancedMetricsVGSbSSSgs5Int32VSayAB5ShardVGSS15AWSSDKSwiftCore9TimeStampVSSAB0bV0Otcfc">init(encryptionType:enhancedMonitoring:hasMoreShards:keyId:retentionPeriodHours:shards:streamARN:streamCreationTimestamp:streamName:streamStatus:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">hasMoreShards</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">shards</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/Shard.html">Shard</a></span><span class="p">],</span> <span class="nv">streamStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/StreamStatus.html">StreamStatus</a></span><span class="p">,</span> <span class="nv">keyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">encryptionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/EncryptionType.html">EncryptionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retentionPeriodHours</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">enhancedMonitoring</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/EnhancedMetrics.html">EnhancedMetrics</a></span><span class="p">],</span> <span class="nv">streamARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">encryptionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/EncryptionType.html">EncryptionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enhancedMonitoring</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/EnhancedMetrics.html">EnhancedMetrics</a></span><span class="p">],</span> <span class="nv">hasMoreShards</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">keyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retentionPeriodHours</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">shards</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Kinesis/Shard.html">Shard</a></span><span class="p">],</span> <span class="nv">streamARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">streamStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/StreamStatus.html">StreamStatus</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

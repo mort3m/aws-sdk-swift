@@ -14,7 +14,7 @@
     <a title="Authorizer Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV4nameSSSgvp">name</a>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV8authTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV8authTypeSSSgvp">authType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>[Required] The name of the authorizer.</p>
+                        <p>Optional customer-defined field, used in OpenAPI imports and exports without functional impact.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV4typeAB0B4TypeOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV4typeAB0B4TypeOSgvp">type</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The authorizer type. Valid values are TOKEN for a Lambda function using a single authorization token submitted in a custom header, REQUEST for a Lambda function using incoming request parameters, and COGNITO_USER_POOLS for using an Amazon Cognito user pool.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/AuthorizerType.html">AuthorizerType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV28authorizerResultTtlInSecondss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authorizerResultTtlInSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV28authorizerResultTtlInSecondss5Int32VSgvp">authorizerResultTtlInSeconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The TTL in seconds of cached authorizer results. If it equals 0, authorization caching is disabled. If it is greater than 0, API Gateway will cache authorizer responses. If this field is not set, the default value is 300. The maximum value is 3600, or 1 hour.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizerResultTtlInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV28identityValidationExpressionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/identityValidationExpression" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV28identityValidationExpressionSSSgvp">identityValidationExpression</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A validation expression for the incoming identity token. For TOKEN authorizers, this value is a regular expression. API Gateway will match the aud field of the incoming token from the client against the specified regular expression. It will invoke the authorizer&rsquo;s Lambda function when there is a match. Otherwise, it will return a 401 Unauthorized response without calling the Lambda function. The validation expression does not apply to the REQUEST authorizer.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identityValidationExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV2idSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV2idSSSgvp">id</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier for the authorizer resource.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV28authorizerResultTtlInSecondss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authorizerResultTtlInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV28authorizerResultTtlInSecondss5Int32VSgvp">authorizerResultTtlInSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The TTL in seconds of cached authorizer results. If it equals 0, authorization caching is disabled. If it is greater than 0, API Gateway will cache authorizer responses. If this field is not set, the default value is 300. The maximum value is 3600, or 1 hour.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizerResultTtlInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10APIGatewayAAV10AuthorizerV13authorizerUriSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/authorizerUri" class="dashAnchor"></a>
                     <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV13authorizerUriSSSgvp">authorizerUri</a>
@@ -757,6 +676,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizerUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV2idSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV2idSSSgvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier for the authorizer resource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,6 +739,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV28identityValidationExpressionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/identityValidationExpression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV28identityValidationExpressionSSSgvp">identityValidationExpression</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A validation expression for the incoming identity token. For TOKEN authorizers, this value is a regular expression. API Gateway will match the aud field of the incoming token from the client against the specified regular expression. It will invoke the authorizer&rsquo;s Lambda function when there is a match. Otherwise, it will return a 401 Unauthorized response without calling the Lambda function. The validation expression does not apply to the REQUEST authorizer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identityValidationExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[Required] The name of the authorizer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10APIGatewayAAV10AuthorizerV12providerARNsSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/providerARNs" class="dashAnchor"></a>
                     <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV12providerARNsSaySSGSgvp">providerARNs</a>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV8authTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV8authTypeSSSgvp">authType</a>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV4typeAB0B4TypeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV4typeAB0B4TypeOSgvp">type</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Optional customer-defined field, used in OpenAPI imports and exports without functional impact.</p>
+                        <p>The authorizer type. Valid values are TOKEN for a Lambda function using a single authorization token submitted in a custom header, REQUEST for a Lambda function using incoming request parameters, and COGNITO_USER_POOLS for using an Amazon Cognito user pool.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/AuthorizerType.html">AuthorizerType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV10AuthorizerV4name4type28authorizerResultTtlInSeconds28identityValidationExpression2id0E11Credentials0E3Uri0J6Source12providerARNs8authTypeADSSSg_AB0bT0OSgs5Int32VSgA5OSaySSGSgAOtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(name:type:authorizerResultTtlInSeconds:identityValidationExpression:id:authorizerCredentials:authorizerUri:identitySource:providerARNs:authType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV4name4type28authorizerResultTtlInSeconds28identityValidationExpression2id0E11Credentials0E3Uri0J6Source12providerARNs8authTypeADSSSg_AB0bT0OSgs5Int32VSgA5OSaySSGSgAOtcfc">init(name:type:authorizerResultTtlInSeconds:identityValidationExpression:id:authorizerCredentials:authorizerUri:identitySource:providerARNs:authType:)</a>
+                    <a name="/s:10APIGatewayAAV10AuthorizerV8authType21authorizerCredentials0E18ResultTtlInSeconds0E3Uri2id14identitySource0M20ValidationExpression4name12providerARNs4typeADSSSg_AOs5Int32VSgA5OSaySSGSgAB0bD0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(authType:authorizerCredentials:authorizerResultTtlInSeconds:authorizerUri:id:identitySource:identityValidationExpression:name:providerARNs:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV10AuthorizerV8authType21authorizerCredentials0E18ResultTtlInSeconds0E3Uri2id14identitySource0M20ValidationExpression4name12providerARNs4typeADSSSg_AOs5Int32VSgA5OSaySSGSgAB0bD0OSgtcfc">init(authType:authorizerCredentials:authorizerResultTtlInSeconds:authorizerUri:id:identitySource:identityValidationExpression:name:providerARNs:type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/AuthorizerType.html">AuthorizerType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerResultTtlInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">identityValidationExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerCredentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">identitySource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">providerARNs</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">authType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerCredentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerResultTtlInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">identitySource</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">identityValidationExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">providerARNs</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/AuthorizerType.html">AuthorizerType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

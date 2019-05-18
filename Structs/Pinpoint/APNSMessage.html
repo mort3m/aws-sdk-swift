@@ -14,7 +14,7 @@
     <a title="APNSMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV8categorySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/category" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8categorySSSgvp">category</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Provide this key with a string value that represents the notification&rsquo;s type. This value corresponds to the value in the identifier property of one of your app&rsquo;s registered categories.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8PinpointAAV11APNSMessageV6actionAB6ActionOSgvp"></a>
                     <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
                     <a class="token" href="#/s:8PinpointAAV11APNSMessageV6actionAB6ActionOSgvp">action</a>
@@ -631,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV3urlSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV3urlSSSgvp">url</a>
+                    <a name="/s:8PinpointAAV11APNSMessageV5badges5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/badge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5badges5Int32VSgvp">badge</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,176 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The URL to open in the user&rsquo;s mobile browser. Used if the value for Action is URL.</p>
+                        <p>Include this key when you want the system to modify the badge of your app icon. If this key is not included in the dictionary, the badge is not changed. To remove the badge, set the value of this key to 0.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV5titleSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5titleSSSgvp">title</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The message title that displays above the message on the user&rsquo;s device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV10collapseIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/collapseId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV10collapseIdSSSgvp">collapseId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An ID that, if assigned to multiple messages, causes APNs to coalesce the messages into a single push notification instead of delivering each message individually. The value must not exceed 64 bytes. Amazon Pinpoint uses this value to set the apns-collapse-id request header when it sends the message to APNs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">collapseId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV8mediaUrlSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mediaUrl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8mediaUrlSSSgvp">mediaUrl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A URL that refers to the location of an image or video that you want to display in the push notification.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mediaUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV5soundSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sound" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5soundSSSgvp">sound</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Include this key when you want the system to play a sound. The value of this key is the name of a sound file in your app&rsquo;s main bundle or in the Library/Sounds folder of your app&rsquo;s data container. If the sound file cannot be found, or if you specify defaultfor the value, the system plays the default alert sound.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sound</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV10timeToLives5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeToLive" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV10timeToLives5Int32VSgvp">timeToLive</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The length of time (in seconds) that APNs stores and attempts to deliver the message. If the value is 0, APNs does not store the message or attempt to deliver it more than once. Amazon Pinpoint uses this value to set the apns-expiration request header when it sends the message to APNs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV29preferredAuthenticationMethodSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredAuthenticationMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV29preferredAuthenticationMethodSSSgvp">preferredAuthenticationMethod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The preferred authentication method, either <q>CERTIFICATE</q> or <q>TOKEN</q></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredAuthenticationMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">badge</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV8threadIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/threadId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8threadIdSSSgvp">threadId</a>
+                    <a name="/s:8PinpointAAV11APNSMessageV8categorySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/category" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8categorySSSgvp">category</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +668,154 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provide this key with a string value that represents the app-specific identifier for grouping notifications. If you provide a Notification Content app extension, you can use this value to group your notifications together.</p>
+                        <p>Provide this key with a string value that represents the notification&rsquo;s type. This value corresponds to the value in the identifier property of one of your app&rsquo;s registered categories.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">threadId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV10collapseIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/collapseId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV10collapseIdSSSgvp">collapseId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An ID that, if assigned to multiple messages, causes APNs to coalesce the messages into a single push notification instead of delivering each message individually. The value must not exceed 64 bytes. Amazon Pinpoint uses this value to set the apns-collapse-id request header when it sends the message to APNs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">collapseId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV4dataSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV4dataSDyS2SGSgvp">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The data payload used for a silent push. This payload is added to the notifications&rsquo; data.pinpoint.jsonBody&rsquo; object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV8mediaUrlSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mediaUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8mediaUrlSSSgvp">mediaUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A URL that refers to the location of an image or video that you want to display in the push notification.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mediaUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV29preferredAuthenticationMethodSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredAuthenticationMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV29preferredAuthenticationMethodSSSgvp">preferredAuthenticationMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The preferred authentication method, either <q>CERTIFICATE</q> or <q>TOKEN</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredAuthenticationMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV8prioritySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8prioritySSSgvp">priority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The message priority. Amazon Pinpoint uses this value to set the apns-priority request header when it sends the message to APNs. Accepts the following values:
+<q>5</q> - Low priority. Messages might be delayed, delivered in groups, and throttled.
+<q>10</q> - High priority. Messages are sent immediately. High priority messages must cause an alert, sound, or badge on the receiving device.
+The default value is <q>10</q>.
+The equivalent values for FCM or GCM messages are <q>normal</q> and <q>high</q>. Amazon Pinpoint accepts these values for APNs messages and converts them.
+For more information about the apns-priority parameter, see Communicating with APNs in the APNs Local and Remote Notification Programming Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +879,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV8prioritySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8prioritySSSgvp">priority</a>
+                    <a name="/s:8PinpointAAV11APNSMessageV5soundSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5soundSSSgvp">sound</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,73 +889,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The message priority. Amazon Pinpoint uses this value to set the apns-priority request header when it sends the message to APNs. Accepts the following values:
-<q>5</q> - Low priority. Messages might be delayed, delivered in groups, and throttled.
-<q>10</q> - High priority. Messages are sent immediately. High priority messages must cause an alert, sound, or badge on the receiving device.
-The default value is <q>10</q>.
-The equivalent values for FCM or GCM messages are <q>normal</q> and <q>high</q>. Amazon Pinpoint accepts these values for APNs messages and converts them.
-For more information about the apns-priority parameter, see Communicating with APNs in the APNs Local and Remote Notification Programming Guide.</p>
+                        <p>Include this key when you want the system to play a sound. The value of this key is the name of a sound file in your app&rsquo;s main bundle or in the Library/Sounds folder of your app&rsquo;s data container. If the sound file cannot be found, or if you specify defaultfor the value, the system plays the default alert sound.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV5badges5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/badge" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5badges5Int32VSgvp">badge</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Include this key when you want the system to modify the badge of your app icon. If this key is not included in the dictionary, the badge is not changed. To remove the badge, set the value of this key to 0.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">badge</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV4dataSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV4dataSDyS2SGSgvp">data</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The data payload used for a silent push. This payload is added to the notifications&rsquo; data.pinpoint.jsonBody&rsquo; object</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sound</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1041,9 +933,117 @@ For more information about the apns-priority parameter, see Communicating with A
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8PinpointAAV11APNSMessageV8category6action3url5title10collapseId8mediaUrl5sound10timeToLive29preferredAuthenticationMethod4body06threadH010rawContent10silentPush8priority5badge4data13substitutionsADSSSg_AB6ActionOSgA5Vs5Int32VSgA4VSbSgAVA0_SDyS2SGSgSDySSSaySSGGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(category:action:url:title:collapseId:mediaUrl:sound:timeToLive:preferredAuthenticationMethod:body:threadId:rawContent:silentPush:priority:badge:data:substitutions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8category6action3url5title10collapseId8mediaUrl5sound10timeToLive29preferredAuthenticationMethod4body06threadH010rawContent10silentPush8priority5badge4data13substitutionsADSSSg_AB6ActionOSgA5Vs5Int32VSgA4VSbSgAVA0_SDyS2SGSgSDySSSaySSGGSgtcfc">init(category:action:url:title:collapseId:mediaUrl:sound:timeToLive:preferredAuthenticationMethod:body:threadId:rawContent:silentPush:priority:badge:data:substitutions:)</a>
+                    <a name="/s:8PinpointAAV11APNSMessageV8threadIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/threadId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV8threadIdSSSgvp">threadId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provide this key with a string value that represents the app-specific identifier for grouping notifications. If you provide a Notification Content app extension, you can use this value to group your notifications together.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">threadId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV10timeToLives5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeToLive" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV10timeToLives5Int32VSgvp">timeToLive</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of time (in seconds) that APNs stores and attempts to deliver the message. If the value is 0, APNs does not store the message or attempt to deliver it more than once. Amazon Pinpoint uses this value to set the apns-expiration request header when it sends the message to APNs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV5titleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV5titleSSSgvp">title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The message title that displays above the message on the user&rsquo;s device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV3urlSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV3urlSSSgvp">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL to open in the user&rsquo;s mobile browser. Used if the value for Action is URL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8PinpointAAV11APNSMessageV6action5badge4body8category10collapseId4data8mediaUrl29preferredAuthenticationMethod8priority10rawContent10silentPush5sound13substitutions06threadH010timeToLive5title3urlAdB6ActionOSg_s5Int32VSgSSSgA0_A0_SDyS2SGSgA0_A0_A0_A0_SbSgA0_SDySSSaySSGGSgA0_A_A0_A0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(action:badge:body:category:collapseId:data:mediaUrl:preferredAuthenticationMethod:priority:rawContent:silentPush:sound:substitutions:threadId:timeToLive:title:url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8PinpointAAV11APNSMessageV6action5badge4body8category10collapseId4data8mediaUrl29preferredAuthenticationMethod8priority10rawContent10silentPush5sound13substitutions06threadH010timeToLive5title3urlAdB6ActionOSg_s5Int32VSgSSSgA0_A0_SDyS2SGSgA0_A0_A0_A0_SbSgA0_SDySSSaySSGGSgA0_A_A0_A0_tcfc">init(action:badge:body:category:collapseId:data:mediaUrl:preferredAuthenticationMethod:priority:rawContent:silentPush:sound:substitutions:threadId:timeToLive:title:url:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1058,7 +1058,7 @@ For more information about the apns-priority parameter, see Communicating with A
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Pinpoint/Action.html">Action</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collapseId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mediaUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sound</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredAuthenticationMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threadId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rawContent</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">silentPush</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">badge</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">substitutions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Pinpoint/Action.html">Action</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">badge</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collapseId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mediaUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredAuthenticationMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rawContent</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">silentPush</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sound</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">substitutions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threadId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1070,7 +1070,7 @@ For more information about the apns-priority parameter, see Communicating with A
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

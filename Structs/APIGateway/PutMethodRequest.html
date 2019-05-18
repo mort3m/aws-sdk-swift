@@ -14,7 +14,7 @@
     <a title="PutMethodRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV9restApiIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/restApiId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV9restApiIdSSvp">restApiId</a>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequiredSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/apiKeyRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequiredSbSgvp">apiKeyRequired</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,203 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>[Required] The string identifier of the associated RestApi.</p>
+                        <p>Specifies whether the method required a valid ApiKey.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restApiId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">apiKeyRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV19authorizationScopesSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authorizationScopes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV19authorizationScopesSaySSGSgvp">authorizationScopes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of authorization scopes configured on the method. The scopes are used with a COGNITO_USER_POOLS authorizer to authorize the method invocation. The authorization works by matching the method scopes against the scopes parsed from the access token in the incoming request. The method invocation is authorized if any method scopes matches a claimed scope in the access token. Otherwise, the invocation is not authorized. When the method scope is configured, the client must provide an access token instead of an identity token for authorization purposes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizationScopes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV17authorizationTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/authorizationType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV17authorizationTypeSSvp">authorizationType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[Required] The method&rsquo;s authorization type. Valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, CUSTOM for using a custom authorizer, or COGNITO_USER_POOLS for using a Cognito user pool.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizationType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV12authorizerIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authorizerId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV12authorizerIdSSSgvp">authorizerId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the identifier of an Authorizer to use on this Method, if the type is CUSTOM or COGNITO_USER_POOLS. The authorizer identifier is generated by API Gateway when you created the authorizer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV04httpC0SSvp"></a>
+                    <a name="//apple_ref/swift/Property/httpMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV04httpC0SSvp">httpMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[Required] Specifies the method request&rsquo;s HTTP method type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV13operationNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/operationName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV13operationNameSSSgvp">operationName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A human-friendly operation identifier for the method. For example, you can assign the operationName of ListPets for the GET /pets method in PetStore example.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV13requestModelsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requestModels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV13requestModelsSDyS2SGSgvp">requestModels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the Model resources used for the request&rsquo;s content type. Request models are represented as a key/value map, with a content type as the key and a Model name as the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestModels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV17requestParametersSDySSSbGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requestParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV17requestParametersSDySSSbGSgvp">requestParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A key-value map defining required or optional method request parameters that can be accepted by API Gateway. A key defines a method request parameter name matching the pattern of method.request.{location}.{name}, where location is querystring, path, or header and name is a valid and unique parameter name. The value associated with the key is a Boolean flag indicating whether the parameter is required (true) or optional (false). The method request parameter names defined here are available in Integration to be mapped to integration request parameters or body-mapping templates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Bool</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequiredSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/apiKeyRequired" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequiredSbSgvp">apiKeyRequired</a>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV9restApiIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/restApiId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV9restApiIdSSvp">restApiId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies whether the method required a valid ApiKey.</p>
+                        <p>[Required] The string identifier of the associated RestApi.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">apiKeyRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restApiId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -685,198 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV17authorizationTypeSSvp"></a>
-                    <a name="//apple_ref/swift/Property/authorizationType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV17authorizationTypeSSvp">authorizationType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>[Required] The method&rsquo;s authorization type. Valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, CUSTOM for using a custom authorizer, or COGNITO_USER_POOLS for using a Cognito user pool.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizationType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV17requestParametersSDySSSbGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requestParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV17requestParametersSDySSSbGSgvp">requestParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A key-value map defining required or optional method request parameters that can be accepted by API Gateway. A key defines a method request parameter name matching the pattern of method.request.{location}.{name}, where location is querystring, path, or header and name is a valid and unique parameter name. The value associated with the key is a Boolean flag indicating whether the parameter is required (true) or optional (false). The method request parameter names defined here are available in Integration to be mapped to integration request parameters or body-mapping templates.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Bool</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV13operationNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/operationName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV13operationNameSSSgvp">operationName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A human-friendly operation identifier for the method. For example, you can assign the operationName of ListPets for the GET /pets method in PetStore example.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV12authorizerIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authorizerId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV12authorizerIdSSSgvp">authorizerId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the identifier of an Authorizer to use on this Method, if the type is CUSTOM or COGNITO_USER_POOLS. The authorizer identifier is generated by API Gateway when you created the authorizer.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV13requestModelsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requestModels" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV13requestModelsSDyS2SGSgvp">requestModels</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the Model resources used for the request&rsquo;s content type. Request models are represented as a key/value map, with a content type as the key and a Model name as the value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestModels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV04httpC0SSvp"></a>
-                    <a name="//apple_ref/swift/Property/httpMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV04httpC0SSvp">httpMethod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>[Required] Specifies the method request&rsquo;s HTTP method type.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV19authorizationScopesSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authorizationScopes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV19authorizationScopesSaySSGSgvp">authorizationScopes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of authorization scopes configured on the method. The scopes are used with a COGNITO_USER_POOLS authorizer to authorize the method invocation. The authorization works by matching the method scopes against the scopes parsed from the access token in the incoming request. The method invocation is authorized if any method scopes matches a claimed scope in the access token. Otherwise, the invocation is not authorized. When the method scope is configured, the client must provide an access token instead of an identity token for authorization purposes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authorizationScopes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV16PutMethodRequestV9restApiId016requestValidatorG008resourceG014apiKeyRequired17authorizationType0H10Parameters13operationName010authorizerG00H6Models04httpC00N6ScopesADSS_SSSgSSSbSgSSSDySSSbGSgA2PSDyS2SGSgSSSaySSGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(restApiId:requestValidatorId:resourceId:apiKeyRequired:authorizationType:requestParameters:operationName:authorizerId:requestModels:httpMethod:authorizationScopes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV9restApiId016requestValidatorG008resourceG014apiKeyRequired17authorizationType0H10Parameters13operationName010authorizerG00H6Models04httpC00N6ScopesADSS_SSSgSSSbSgSSSDySSSbGSgA2PSDyS2SGSgSSSaySSGSgtcfc">init(restApiId:requestValidatorId:resourceId:apiKeyRequired:authorizationType:requestParameters:operationName:authorizerId:requestModels:httpMethod:authorizationScopes:)</a>
+                    <a name="/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequired19authorizationScopes0H4Type12authorizerId04httpC013operationName13requestModels0P10Parameters0p9ValidatorL008resourceL007restApiL0ADSbSg_SaySSGSgS2SSgSSASSDyS2SGSgSDySSSbGSgASS2Stcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(apiKeyRequired:authorizationScopes:authorizationType:authorizerId:httpMethod:operationName:requestModels:requestParameters:requestValidatorId:resourceId:restApiId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV16PutMethodRequestV14apiKeyRequired19authorizationScopes0H4Type12authorizerId04httpC013operationName13requestModels0P10Parameters0p9ValidatorL008resourceL007restApiL0ADSbSg_SaySSGSgS2SSgSSASSDyS2SGSgSDySSSbGSgASS2Stcfc">init(apiKeyRequired:authorizationScopes:authorizationType:authorizerId:httpMethod:operationName:requestModels:requestParameters:requestValidatorId:resourceId:restApiId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">restApiId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">requestValidatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">apiKeyRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizationType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">operationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestModels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authorizationScopes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">apiKeyRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizationScopes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authorizationType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authorizerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">operationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestModels</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Bool</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestValidatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">restApiId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

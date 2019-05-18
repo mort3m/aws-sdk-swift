@@ -14,7 +14,7 @@
     <a title="MetricDataResult Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,87 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudWatchAAV16MetricDataResultV6valuesSaySdGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/values" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV6valuesSaySdGSgvp">values</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The data points for the metric corresponding to Timestamps. The number of values always matches the number of timestamps and the timestamp for Values[x] is Timestamps[x].</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV16MetricDataResultV10timestampsSay15AWSSDKSwiftCore9TimeStampVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timestamps" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV10timestampsSay15AWSSDKSwiftCore9TimeStampVGSgvp">timestamps</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The timestamps for the data points, formatted in Unix timestamp format. The number of timestamps always matches the number of values and the value for Timestamps[x] is Values[x].</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timestamps</span><span class="p">:</span> <span class="p">[</span><span class="kt">TimeStamp</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV16MetricDataResultV8messagesSayAB07MessageD0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/messages" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV8messagesSayAB07MessageD0VGSgvp">messages</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of messages with additional information about the data returned.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MessageData.html">MessageData</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10CloudWatchAAV16MetricDataResultV2idSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV2idSSSgvp">id</a>
@@ -676,33 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV16MetricDataResultV10statusCodeAB06StatusG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV10statusCodeAB06StatusG0OSgvp">statusCode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status of the returned data. Complete indicates that all data points in the requested time range were returned. PartialData means that an incomplete set of data points were returned. You can use the NextToken value that was returned and repeat your request to get more data points. NextToken is not returned if you are performing a math expression. InternalError indicates that an error occurred. Retry your request using NextToken, if present.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StatusCode.html">StatusCode</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +631,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudWatchAAV16MetricDataResultV6values10timestamps8messages2id10statusCode5labelADSaySdGSg_Say15AWSSDKSwiftCore9TimeStampVGSgSayAB07MessageD0VGSgSSSgAB06StatusK0OSgAVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(values:timestamps:messages:id:statusCode:label:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV6values10timestamps8messages2id10statusCode5labelADSaySdGSg_Say15AWSSDKSwiftCore9TimeStampVGSgSayAB07MessageD0VGSgSSSgAB06StatusK0OSgAVtcfc">init(values:timestamps:messages:id:statusCode:label:)</a>
+                    <a name="/s:10CloudWatchAAV16MetricDataResultV8messagesSayAB07MessageD0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/messages" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV8messagesSayAB07MessageD0VGSgvp">messages</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of messages with additional information about the data returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MessageData.html">MessageData</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV16MetricDataResultV10statusCodeAB06StatusG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV10statusCodeAB06StatusG0OSgvp">statusCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The status of the returned data. Complete indicates that all data points in the requested time range were returned. PartialData means that an incomplete set of data points were returned. You can use the NextToken value that was returned and repeat your request to get more data points. NextToken is not returned if you are performing a math expression. InternalError indicates that an error occurred. Retry your request using NextToken, if present.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StatusCode.html">StatusCode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV16MetricDataResultV10timestampsSay15AWSSDKSwiftCore9TimeStampVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timestamps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV10timestampsSay15AWSSDKSwiftCore9TimeStampVGSgvp">timestamps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The timestamps for the data points, formatted in Unix timestamp format. The number of timestamps always matches the number of values and the value for Timestamps[x] is Values[x].</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timestamps</span><span class="p">:</span> <span class="p">[</span><span class="kt">TimeStamp</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV16MetricDataResultV6valuesSaySdGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/values" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV6valuesSaySdGSgvp">values</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The data points for the metric corresponding to Timestamps. The number of values always matches the number of timestamps and the timestamp for Values[x] is Timestamps[x].</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV16MetricDataResultV2id5label8messages10statusCode10timestamps6valuesADSSSg_AKSayAB07MessageD0VGSgAB06StatusJ0OSgSay15AWSSDKSwiftCore9TimeStampVGSgSaySdGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(id:label:messages:statusCode:timestamps:values:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV16MetricDataResultV2id5label8messages10statusCode10timestamps6valuesADSSSg_AKSayAB07MessageD0VGSgAB06StatusJ0OSgSay15AWSSDKSwiftCore9TimeStampVGSgSaySdGSgtcfc">init(id:label:messages:statusCode:timestamps:values:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timestamps</span><span class="p">:</span> <span class="p">[</span><span class="kt">TimeStamp</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MessageData.html">MessageData</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StatusCode.html">StatusCode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messages</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MessageData.html">MessageData</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StatusCode.html">StatusCode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timestamps</span><span class="p">:</span> <span class="p">[</span><span class="kt">TimeStamp</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

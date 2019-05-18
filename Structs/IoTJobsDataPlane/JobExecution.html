@@ -14,7 +14,7 @@
     <a title="JobExecution Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumbers5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/versionNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumbers5Int64VSgvp">versionNumber</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOuts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/approximateSecondsBeforeTimedOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOuts5Int64VSgvp">approximateSecondsBeforeTimedOut</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The version of the job execution. Job execution versions are incremented each time they are updated by a device.</p>
+                        <p>The estimated number of seconds that remain before the job execution status will be changed to TIMED_OUT.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">versionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">approximateSecondsBeforeTimedOut</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV15executionNumbers5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV15executionNumbers5Int64VSgvp">executionNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A number that identifies a particular job execution on a particular device. It can be used later in commands that return or update job execution information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOuts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/approximateSecondsBeforeTimedOut" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOuts5Int64VSgvp">approximateSecondsBeforeTimedOut</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV5jobIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV5jobIdSSSgvp">jobId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,68 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The estimated number of seconds that remain before the job execution status will be changed to TIMED_OUT.</p>
+                        <p>The unique identifier you assigned to this job when it was created.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">approximateSecondsBeforeTimedOut</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV13statusDetailsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV13statusDetailsSDyS2SGSgvp">statusDetails</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A collection of name/value pairs that describe the status of the job execution.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV9thingNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/thingName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV9thingNameSSSgvp">thingName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the thing that is executing the job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -730,6 +703,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastUpdatedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV8queuedAts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/queuedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV8queuedAts5Int64VSgvp">queuedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time, in milliseconds since the epoch, when the job execution was enqueued.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queuedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV5jobIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV5jobIdSSSgvp">jobId</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV13statusDetailsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV13statusDetailsSDyS2SGSgvp">statusDetails</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The unique identifier you assigned to this job when it was created.</p>
+                        <p>A collection of name/value pairs that describe the status of the job execution.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV8queuedAts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/queuedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV8queuedAts5Int64VSgvp">queuedAt</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV9thingNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/thingName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV9thingNameSSSgvp">thingName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The time, in milliseconds since the epoch, when the job execution was enqueued.</p>
+                        <p>The name of the thing that is executing the job.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queuedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV15executionNumbers5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV15executionNumbers5Int64VSgvp">executionNumber</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumbers5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/versionNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumbers5Int64VSgvp">versionNumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A number that identifies a particular job execution on a particular device. It can be used later in commands that return or update job execution information.</p>
+                        <p>The version of the job execution. Job execution versions are incremented each time they are updated by a device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">versionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumber11jobDocument32approximateSecondsBeforeTimedOut13statusDetails9thingName13lastUpdatedAt07startedV00P00I2Id06queuedV009executionH0ADs5Int64VSg_SSSgARSDyS2SGSgAs2rB0eF6StatusOSgAs2Rtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(versionNumber:jobDocument:approximateSecondsBeforeTimedOut:statusDetails:thingName:lastUpdatedAt:startedAt:status:jobId:queuedAt:executionNumber:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV13versionNumber11jobDocument32approximateSecondsBeforeTimedOut13statusDetails9thingName13lastUpdatedAt07startedV00P00I2Id06queuedV009executionH0ADs5Int64VSg_SSSgARSDyS2SGSgAs2rB0eF6StatusOSgAs2Rtcfc">init(versionNumber:jobDocument:approximateSecondsBeforeTimedOut:statusDetails:thingName:lastUpdatedAt:startedAt:status:jobId:queuedAt:executionNumber:)</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOut15executionNumber11jobDocument0N2Id13lastUpdatedAt06queuedS007startedS06status0V7Details9thingName07versionM0ADs5Int64VSg_ARSSSgAs3rB0eF6StatusOSgSDyS2SGSgAsRtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(approximateSecondsBeforeTimedOut:executionNumber:jobDocument:jobId:lastUpdatedAt:queuedAt:startedAt:status:statusDetails:thingName:versionNumber:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV12JobExecutionV32approximateSecondsBeforeTimedOut15executionNumber11jobDocument0N2Id13lastUpdatedAt06queuedS007startedS06status0V7Details9thingName07versionM0ADs5Int64VSg_ARSSSgAs3rB0eF6StatusOSgSDyS2SGSgAsRtcfc">init(approximateSecondsBeforeTimedOut:executionNumber:jobDocument:jobId:lastUpdatedAt:queuedAt:startedAt:status:statusDetails:thingName:versionNumber:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">versionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobDocument</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">approximateSecondsBeforeTimedOut</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queuedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">approximateSecondsBeforeTimedOut</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobDocument</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queuedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">versionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

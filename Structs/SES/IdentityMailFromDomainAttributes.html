@@ -14,7 +14,7 @@
     <a title="IdentityMailFromDomainAttributes Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6StatusAB06CustomcdH0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/mailFromDomainStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6StatusAB06CustomcdH0Ovp">mailFromDomainStatus</a>
+                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailureAB08BehaviorhI0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/behaviorOnMXFailure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailureAB08BehaviorhI0Ovp">behaviorOnMXFailure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The state that indicates whether Amazon SES has successfully read the MX record required for custom MAIL FROM domain setup. If the state is Success, Amazon SES uses the specified custom MAIL FROM domain when the verified identity sends an email. All other states indicate that Amazon SES takes the action described by BehaviorOnMXFailure.</p>
+                        <p>The action that Amazon SES takes if it cannot successfully read the required MX record when you send an email. A value of UseDefaultValue indicates that if Amazon SES cannot read the required MX record, it uses amazonses.com (or a subdomain of that) as the MAIL FROM domain. A value of RejectMessage indicates that if Amazon SES cannot read the required MX record, Amazon SES returns a MailFromDomainNotVerified error and does not send the email. The custom MAIL FROM setup states that result in this behavior are Pending, Failed, and TemporaryFailure.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mailFromDomainStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/CustomMailFromStatus.html">CustomMailFromStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">behaviorOnMXFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/BehaviorOnMXFailure.html">BehaviorOnMXFailure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailureAB08BehaviorhI0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/behaviorOnMXFailure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailureAB08BehaviorhI0Ovp">behaviorOnMXFailure</a>
+                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6StatusAB06CustomcdH0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/mailFromDomainStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6StatusAB06CustomcdH0Ovp">mailFromDomainStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The action that Amazon SES takes if it cannot successfully read the required MX record when you send an email. A value of UseDefaultValue indicates that if Amazon SES cannot read the required MX record, it uses amazonses.com (or a subdomain of that) as the MAIL FROM domain. A value of RejectMessage indicates that if Amazon SES cannot read the required MX record, Amazon SES returns a MailFromDomainNotVerified error and does not send the email. The custom MAIL FROM setup states that result in this behavior are Pending, Failed, and TemporaryFailure.</p>
+                        <p>The state that indicates whether Amazon SES has successfully read the MX record required for custom MAIL FROM domain setup. If the state is Success, Amazon SES uses the specified custom MAIL FROM domain when the verified identity sends an email. All other states indicate that Amazon SES takes the action described by BehaviorOnMXFailure.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">behaviorOnMXFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/BehaviorOnMXFailure.html">BehaviorOnMXFailure</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mailFromDomainStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/CustomMailFromStatus.html">CustomMailFromStatus</a></span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6Status0gdE019behaviorOnMXFailureAdB06CustomcdH0O_SSAB08BehaviorjK0Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(mailFromDomainStatus:mailFromDomain:behaviorOnMXFailure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV04maildE6Status0gdE019behaviorOnMXFailureAdB06CustomcdH0O_SSAB08BehaviorjK0Otcfc">init(mailFromDomainStatus:mailFromDomain:behaviorOnMXFailure:)</a>
+                    <a name="/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailure04maildE00jdE6StatusAdB08BehaviorhI0O_SSAB06CustomcdK0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(behaviorOnMXFailure:mailFromDomain:mailFromDomainStatus:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV32IdentityMailFromDomainAttributesV19behaviorOnMXFailure04maildE00jdE6StatusAdB08BehaviorhI0O_SSAB06CustomcdK0Otcfc">init(behaviorOnMXFailure:mailFromDomain:mailFromDomainStatus:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">mailFromDomainStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/CustomMailFromStatus.html">CustomMailFromStatus</a></span><span class="p">,</span> <span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">behaviorOnMXFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/BehaviorOnMXFailure.html">BehaviorOnMXFailure</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">behaviorOnMXFailure</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/BehaviorOnMXFailure.html">BehaviorOnMXFailure</a></span><span class="p">,</span> <span class="nv">mailFromDomain</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">mailFromDomainStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/CustomMailFromStatus.html">CustomMailFromStatus</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

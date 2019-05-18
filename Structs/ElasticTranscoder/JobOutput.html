@@ -14,7 +14,7 @@
     <a title="JobOutput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6heights5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/height" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6heights5Int32VSgvp">height</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Height of the output file, in pixels.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17ElasticTranscoderAAV9JobOutputV8albumArtAB0c5AlbumF0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/albumArt" class="dashAnchor"></a>
                     <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8albumArtAB0c5AlbumF0VSgvp">albumArt</a>
@@ -622,6 +595,114 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">albumArt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/JobAlbumArt.html">JobAlbumArt</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV27appliedColorSpaceConversionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/appliedColorSpaceConversion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV27appliedColorSpaceConversionSSSgvp">appliedColorSpaceConversion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If Elastic Transcoder used a preset with a ColorSpaceConversionMode to transcode the output file, the AppliedColorSpaceConversion parameter shows the conversion used. If no ColorSpaceConversionMode was defined in the preset, this parameter is not be included in the job response.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">appliedColorSpaceConversion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8captionsAB8CaptionsVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/captions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8captionsAB8CaptionsVSgvp">captions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can configure Elastic Transcoder to transcode captions, or subtitles, from one format to another. All captions must be in UTF-8. Elastic Transcoder supports two types of captions:    Embedded: Embedded captions are included in the same file as the audio and video. Elastic Transcoder supports only one embedded caption per language, to a maximum of 300 embedded captions per file. Valid input values include: CEA-608 (EIA-608, first non-empty channel only), CEA-708 (EIA-708, first non-empty channel only), and mov-text  Valid outputs include: mov-text  Elastic Transcoder supports a maximum of one embedded format per output.    Sidecar: Sidecar captions are kept in a separate metadata file from the audio and video data. Sidecar captions require a player that is capable of understanding the relationship between the video file and the sidecar file. Elastic Transcoder supports only one sidecar caption per language, to a maximum of 20 sidecar captions per file. Valid input values include: dfxp (first div element only), ebu-tt, scc, smpt, srt, ttml (first div element only), and webvtt  Valid outputs include: dfxp (first div element only), scc, srt, and webvtt.   If you want ttml or smpte-tt compatible captions, specify dfxp as your output format. Elastic Transcoder does not support OCR (Optical Character Recognition), does not accept pictures as a valid input for captions, and is not available for audio-only transcoding. Elastic Transcoder does not preserve text formatting (for example, italics) during the transcoding process. To remove captions or leave the captions empty, set Captions to null. To pass through existing captions unchanged, set the MergePolicy to MergeRetain, and pass in a null CaptionSources array. For more information on embedded files, see the Subtitles Wikipedia page. For more information on sidecar files, see the Extensible Metadata Platform and Sidecar file Wikipedia pages.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">captions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Captions.html">Captions</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV11compositionSayAB4ClipVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/composition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV11compositionSayAB4ClipVGSgvp">composition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can create an output file that contains an excerpt from the input file. This excerpt, called a clip, can come from the beginning, middle, or end of the file. The Composition object contains settings for the clips that make up an output file. For the current release, you can only specify settings for a single clip per output file. The Composition object cannot be null.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">composition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/Clip.html">Clip</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8durations5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8durations5Int64VSgvp">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Duration of the output file, in seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV10watermarksSayAB0C9WatermarkVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/watermarks" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV10watermarksSayAB0C9WatermarkVGSgvp">watermarks</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV10encryptionAB10EncryptionVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encryption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV10encryptionAB10EncryptionVSgvp">encryption</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Information about the watermarks that you want Elastic Transcoder to add to the video during transcoding. You can specify up to four watermarks for each output. Settings for each watermark must be defined in the preset that you specify in Preset for the current output. Watermarks are added to the output video in the sequence in which you list them in the job output—the first watermark in the list is added to the output video first, the second watermark in the list is added next, and so on. As a result, if the settings in a preset cause Elastic Transcoder to place all watermarks in the same location, the second watermark that you add covers the first one, the third one covers the second, and the fourth one covers the third.</p>
+                        <p>The encryption settings, if any, that you want Elastic Transcoder to apply to your output files. If you choose to use encryption, you must specify a mode to use. If you choose not to use encryption, Elastic Transcoder writes an unencrypted file to your Amazon S3 bucket.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">watermarks</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/JobWatermark.html">JobWatermark</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV5widths5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/width" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV5widths5Int32VSgvp">width</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8fileSizes5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fileSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8fileSizes5Int64VSgvp">fileSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +776,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the width of the output file in pixels.</p>
+                        <p>File size of the output file, in bytes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fileSize</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV9frameRateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/frameRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV9frameRateSSSgvp">frameRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Frame rate of the output file, in frames per second.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6heights5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/height" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6heights5Int32VSgvp">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Height of the output file, in pixels.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,60 +901,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6rotateSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/rotate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6rotateSSSgvp">rotate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of degrees clockwise by which you want Elastic Transcoder to rotate the output relative to the input. Enter one of the following values:  auto, 0, 90, 180, 270   The value auto generally works only if the file that you&rsquo;re transcoding contains rotation metadata.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rotate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8captionsAB8CaptionsVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/captions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8captionsAB8CaptionsVSgvp">captions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>You can configure Elastic Transcoder to transcode captions, or subtitles, from one format to another. All captions must be in UTF-8. Elastic Transcoder supports two types of captions:    Embedded: Embedded captions are included in the same file as the audio and video. Elastic Transcoder supports only one embedded caption per language, to a maximum of 300 embedded captions per file. Valid input values include: CEA-608 (EIA-608, first non-empty channel only), CEA-708 (EIA-708, first non-empty channel only), and mov-text  Valid outputs include: mov-text  Elastic Transcoder supports a maximum of one embedded format per output.    Sidecar: Sidecar captions are kept in a separate metadata file from the audio and video data. Sidecar captions require a player that is capable of understanding the relationship between the video file and the sidecar file. Elastic Transcoder supports only one sidecar caption per language, to a maximum of 20 sidecar captions per file. Valid input values include: dfxp (first div element only), ebu-tt, scc, smpt, srt, ttml (first div element only), and webvtt  Valid outputs include: dfxp (first div element only), scc, srt, and webvtt.   If you want ttml or smpte-tt compatible captions, specify dfxp as your output format. Elastic Transcoder does not support OCR (Optical Character Recognition), does not accept pictures as a valid input for captions, and is not available for audio-only transcoding. Elastic Transcoder does not preserve text formatting (for example, italics) during the transcoding process. To remove captions or leave the captions empty, set Captions to null. To pass through existing captions unchanged, set the MergePolicy to MergeRetain, and pass in a null CaptionSources array. For more information on embedded files, see the Subtitles Wikipedia page. For more information on sidecar files, see the Extensible Metadata Platform and Sidecar file Wikipedia pages.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">captions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Captions.html">Captions</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17ElasticTranscoderAAV9JobOutputV8presetIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/presetId" class="dashAnchor"></a>
                     <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8presetIdSSSgvp">presetId</a>
@@ -847,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV11compositionSayAB4ClipVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/composition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV11compositionSayAB4ClipVGSgvp">composition</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6rotateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rotate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6rotateSSSgvp">rotate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,203 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>You can create an output file that contains an excerpt from the input file. This excerpt, called a clip, can come from the beginning, middle, or end of the file. The Composition object contains settings for the clips that make up an output file. For the current release, you can only specify settings for a single clip per output file. The Composition object cannot be null.</p>
+                        <p>The number of degrees clockwise by which you want Elastic Transcoder to rotate the output relative to the input. Enter one of the following values:  auto, 0, 90, 180, 270   The value auto generally works only if the file that you&rsquo;re transcoding contains rotation metadata.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">composition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/Clip.html">Clip</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV16thumbnailPatternSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/thumbnailPattern" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV16thumbnailPatternSSSgvp">thumbnailPattern</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Whether you want Elastic Transcoder to create thumbnails for your videos and, if so, how you want Elastic Transcoder to name the files. If you don&rsquo;t want Elastic Transcoder to create thumbnails, specify &ldquo;&rdquo;. If you do want Elastic Transcoder to create thumbnails, specify the information that you want to include in the file name for each thumbnail. You can specify the following values in any sequence:     {count} (Required): If you want to create thumbnails, you must include {count} in the ThumbnailPattern object. Wherever you specify {count}, Elastic Transcoder adds a five-digit sequence number (beginning with 00001) to thumbnail file names. The number indicates where a given thumbnail appears in the sequence of thumbnails for a transcoded file.   If you specify a literal value and/or {resolution} but you omit {count}, Elastic Transcoder returns a validation error and does not create the job.     Literal values (Optional): You can specify literal values anywhere in the ThumbnailPattern object. For example, you can include them as a file name prefix or as a delimiter between {resolution} and {count}.      {resolution} (Optional): If you want Elastic Transcoder to include the resolution in the file name, include {resolution} in the ThumbnailPattern object.    When creating thumbnails, Elastic Transcoder automatically saves the files in the format (.jpg or .png) that appears in the preset that you specified in the PresetID value of CreateJobOutput. Elastic Transcoder also appends the applicable file name extension.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thumbnailPattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV12statusDetailSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusDetail" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV12statusDetailSSSgvp">statusDetail</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Information that further explains Status.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetail</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6statusSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6statusSSSgvp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status of one output in a job. If you specified only one output for the job, Outputs:Status is always the same as Job:Status. If you specified more than one output:     Job:Status and Outputs:Status for all of the outputs is Submitted until Elastic Transcoder starts to process the first output.   When Elastic Transcoder starts to process the first output, Outputs:Status for that output and Job:Status both change to Progressing. For each output, the value of Outputs:Status remains Submitted until Elastic Transcoder starts to process the output.   Job:Status remains Progressing until all of the outputs reach a terminal status, either Complete or Error.   When all of the outputs reach a terminal status, Job:Status changes to Complete only if Outputs:Status for all of the outputs is Complete. If Outputs:Status for one or more outputs is Error, the terminal status for Job:Status is also Error.   The value of Status is one of the following: Submitted, Progressing, Complete, Canceled, or Error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8durations5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8durations5Int64VSgvp">duration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Duration of the output file, in seconds.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV27appliedColorSpaceConversionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/appliedColorSpaceConversion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV27appliedColorSpaceConversionSSSgvp">appliedColorSpaceConversion</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If Elastic Transcoder used a preset with a ColorSpaceConversionMode to transcode the output file, the AppliedColorSpaceConversion parameter shows the conversion used. If no ColorSpaceConversionMode was defined in the preset, this parameter is not be included in the job response.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">appliedColorSpaceConversion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV10encryptionAB10EncryptionVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encryption" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV10encryptionAB10EncryptionVSgvp">encryption</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The encryption settings, if any, that you want Elastic Transcoder to apply to your output files. If you choose to use encryption, you must specify a mode to use. If you choose not to use encryption, Elastic Transcoder writes an unencrypted file to your Amazon S3 bucket.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV19thumbnailEncryptionAB0F0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/thumbnailEncryption" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV19thumbnailEncryptionAB0F0VSgvp">thumbnailEncryption</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The encryption settings, if any, that you want Elastic Transcoder to apply to your thumbnail.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thumbnailEncryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rotate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1090,9 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV9frameRateSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/frameRate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV9frameRateSSSgvp">frameRate</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6statusSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6statusSSSgvp">status</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1100,14 +992,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Frame rate of the output file, in frames per second.</p>
+                        <p>The status of one output in a job. If you specified only one output for the job, Outputs:Status is always the same as Job:Status. If you specified more than one output:     Job:Status and Outputs:Status for all of the outputs is Submitted until Elastic Transcoder starts to process the first output.   When Elastic Transcoder starts to process the first output, Outputs:Status for that output and Job:Status both change to Progressing. For each output, the value of Outputs:Status remains Submitted until Elastic Transcoder starts to process the output.   Job:Status remains Progressing until all of the outputs reach a terminal status, either Complete or Error.   When all of the outputs reach a terminal status, Job:Status changes to Complete only if Outputs:Status for all of the outputs is Complete. If Outputs:Status for one or more outputs is Error, the terminal status for Job:Status is also Error.   The value of Status is one of the following: Submitted, Progressing, Complete, Canceled, or Error.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1117,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8fileSizes5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/fileSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8fileSizes5Int64VSgvp">fileSize</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV12statusDetailSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusDetail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV12statusDetailSSSgvp">statusDetail</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1127,14 +1019,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>File size of the output file, in bytes.</p>
+                        <p>Information that further explains Status.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fileSize</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetail</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,9 +1036,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV9JobOutputV6height8albumArt14durationMillis10watermarks5width2id3key6rotate8captions8presetId11composition16thumbnailPattern12statusDetail0U00H027appliedColorSpaceConversion10encryption0S10Encryption15segmentDuration9frameRate8fileSizeADs5Int32VSg_AB0c5AlbumG0VSgs5Int64VSgSayAB0C9WatermarkVGSgA0_SSSgA11_A11_AB8CaptionsVSgA11_SayAB4ClipVGSgA11_A11_A11_A6_A11_AB10EncryptionVSgA21_A11_A11_A6_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(height:albumArt:durationMillis:watermarks:width:id:key:rotate:captions:presetId:composition:thumbnailPattern:statusDetail:status:duration:appliedColorSpaceConversion:encryption:thumbnailEncryption:segmentDuration:frameRate:fileSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV6height8albumArt14durationMillis10watermarks5width2id3key6rotate8captions8presetId11composition16thumbnailPattern12statusDetail0U00H027appliedColorSpaceConversion10encryption0S10Encryption15segmentDuration9frameRate8fileSizeADs5Int32VSg_AB0c5AlbumG0VSgs5Int64VSgSayAB0C9WatermarkVGSgA0_SSSgA11_A11_AB8CaptionsVSgA11_SayAB4ClipVGSgA11_A11_A11_A6_A11_AB10EncryptionVSgA21_A11_A11_A6_tcfc">init(height:albumArt:durationMillis:watermarks:width:id:key:rotate:captions:presetId:composition:thumbnailPattern:statusDetail:status:duration:appliedColorSpaceConversion:encryption:thumbnailEncryption:segmentDuration:frameRate:fileSize:)</a>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV19thumbnailEncryptionAB0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/thumbnailEncryption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV19thumbnailEncryptionAB0F0VSgvp">thumbnailEncryption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The encryption settings, if any, that you want Elastic Transcoder to apply to your thumbnail.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thumbnailEncryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV16thumbnailPatternSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/thumbnailPattern" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV16thumbnailPatternSSSgvp">thumbnailPattern</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether you want Elastic Transcoder to create thumbnails for your videos and, if so, how you want Elastic Transcoder to name the files. If you don&rsquo;t want Elastic Transcoder to create thumbnails, specify &ldquo;&rdquo;. If you do want Elastic Transcoder to create thumbnails, specify the information that you want to include in the file name for each thumbnail. You can specify the following values in any sequence:     {count} (Required): If you want to create thumbnails, you must include {count} in the ThumbnailPattern object. Wherever you specify {count}, Elastic Transcoder adds a five-digit sequence number (beginning with 00001) to thumbnail file names. The number indicates where a given thumbnail appears in the sequence of thumbnails for a transcoded file.   If you specify a literal value and/or {resolution} but you omit {count}, Elastic Transcoder returns a validation error and does not create the job.     Literal values (Optional): You can specify literal values anywhere in the ThumbnailPattern object. For example, you can include them as a file name prefix or as a delimiter between {resolution} and {count}.      {resolution} (Optional): If you want Elastic Transcoder to include the resolution in the file name, include {resolution} in the ThumbnailPattern object.    When creating thumbnails, Elastic Transcoder automatically saves the files in the format (.jpg or .png) that appears in the preset that you specified in the PresetID value of CreateJobOutput. Elastic Transcoder also appends the applicable file name extension.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">thumbnailPattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV10watermarksSayAB0C9WatermarkVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/watermarks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV10watermarksSayAB0C9WatermarkVGSgvp">watermarks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about the watermarks that you want Elastic Transcoder to add to the video during transcoding. You can specify up to four watermarks for each output. Settings for each watermark must be defined in the preset that you specify in Preset for the current output. Watermarks are added to the output video in the sequence in which you list them in the job output—the first watermark in the list is added to the output video first, the second watermark in the list is added next, and so on. As a result, if the settings in a preset cause Elastic Transcoder to place all watermarks in the same location, the second watermark that you add covers the first one, the third one covers the second, and the fourth one covers the third.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">watermarks</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/JobWatermark.html">JobWatermark</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV5widths5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/width" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV5widths5Int32VSgvp">width</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the width of the output file in pixels.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV9JobOutputV8albumArt27appliedColorSpaceConversion8captions11composition8duration0M6Millis10encryption8fileSize9frameRate6height2id3key8presetId6rotate15segmentDuration6status12statusDetail19thumbnailEncryption16thumbnailPattern10watermarks5widthAdB0c5AlbumF0VSg_SSSgAB8CaptionsVSgSayAB4ClipVGSgs5Int64VSgA11_AB10EncryptionVSgA11_A1_s5Int32VSgA1_A1_A1_A1_A1_A1_A1_A14_A1_SayAB0C9WatermarkVGSgA17_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(albumArt:appliedColorSpaceConversion:captions:composition:duration:durationMillis:encryption:fileSize:frameRate:height:id:key:presetId:rotate:segmentDuration:status:statusDetail:thumbnailEncryption:thumbnailPattern:watermarks:width:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV9JobOutputV8albumArt27appliedColorSpaceConversion8captions11composition8duration0M6Millis10encryption8fileSize9frameRate6height2id3key8presetId6rotate15segmentDuration6status12statusDetail19thumbnailEncryption16thumbnailPattern10watermarks5widthAdB0c5AlbumF0VSg_SSSgAB8CaptionsVSgSayAB4ClipVGSgs5Int64VSgA11_AB10EncryptionVSgA11_A1_s5Int32VSgA1_A1_A1_A1_A1_A1_A1_A14_A1_SayAB0C9WatermarkVGSgA17_tcfc">init(albumArt:appliedColorSpaceConversion:captions:composition:duration:durationMillis:encryption:fileSize:frameRate:height:id:key:presetId:rotate:segmentDuration:status:statusDetail:thumbnailEncryption:thumbnailPattern:watermarks:width:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1161,7 +1161,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">albumArt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/JobAlbumArt.html">JobAlbumArt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">durationMillis</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">watermarks</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/JobWatermark.html">JobWatermark</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rotate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">captions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Captions.html">Captions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">presetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">composition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/Clip.html">Clip</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thumbnailPattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetail</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">appliedColorSpaceConversion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thumbnailEncryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fileSize</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">albumArt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/JobAlbumArt.html">JobAlbumArt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">appliedColorSpaceConversion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">captions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Captions.html">Captions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">composition</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/Clip.html">Clip</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">durationMillis</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fileSize</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">presetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rotate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentDuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetail</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thumbnailEncryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thumbnailPattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">watermarks</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ElasticTranscoder/JobWatermark.html">JobWatermark</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,7 +1173,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

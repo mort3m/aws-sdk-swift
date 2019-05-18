@@ -14,7 +14,7 @@
     <a title="PatchSource Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV11PatchSourceV8productsSaySSGvp"></a>
-                    <a name="//apple_ref/swift/Property/products" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV11PatchSourceV8productsSaySSGvp">products</a>
+                    <a name="/s:3SSMAAV11PatchSourceV13configurationSSvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV11PatchSourceV13configurationSSvp">configuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The specific operating system versions a patch repository applies to, such as <q>Ubuntu16.04</q>, <q>AmazonLinux2016.09</q>, <q>RedhatEnterpriseLinux7.2</q> or <q>Suse12.7</q>. For lists of supported product values, see PatchFilter.</p>
+                        <p>The value of the yum repo configuration. For example:  cachedir=/var/cache/yum/$basesearch   $releasever   keepcache=0   debuglevel=2</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV11PatchSourceV13configurationSSvp"></a>
-                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV11PatchSourceV13configurationSSvp">configuration</a>
+                    <a name="/s:3SSMAAV11PatchSourceV8productsSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/products" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV11PatchSourceV8productsSaySSGvp">products</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The value of the yum repo configuration. For example:  cachedir=/var/cache/yum/$basesearch   $releasever   keepcache=0   debuglevel=2</p>
+                        <p>The specific operating system versions a patch repository applies to, such as <q>Ubuntu16.04</q>, <q>AmazonLinux2016.09</q>, <q>RedhatEnterpriseLinux7.2</q> or <q>Suse12.7</q>. For lists of supported product values, see PatchFilter.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV11PatchSourceV8products4name13configurationADSaySSG_S2Stcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(products:name:configuration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV11PatchSourceV8products4name13configurationADSaySSG_S2Stcfc">init(products:name:configuration:)</a>
+                    <a name="/s:3SSMAAV11PatchSourceV13configuration4name8productsADSS_SSSaySSGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:name:products:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV11PatchSourceV13configuration4name8productsADSS_SSSaySSGtcfc">init(configuration:name:products:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">products</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

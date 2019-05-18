@@ -14,7 +14,7 @@
     <a title="CreateDeploymentInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailuresSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ignoreApplicationStopFailures" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailuresSbSgvp">ignoreApplicationStopFailures</a>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV15applicationNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/applicationName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV15applicationNameSSvp">applicationName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If set to true, then if the deployment causes the ApplicationStop deployment lifecycle event to an instance to fail, the deployment to that instance will not be considered to have failed at that point and will continue on to the BeforeInstall deployment lifecycle event.   If set to false or not specified, then if the deployment causes the ApplicationStop deployment lifecycle event to fail to an instance, the deployment to that instance will stop, and the deployment to that instance will be considered to have failed.</p>
+                        <p>The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ignoreApplicationStopFailures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV8revisionAB16RevisionLocationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/revision" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV8revisionAB16RevisionLocationVSgvp">revision</a>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV25autoRollbackConfigurationAB04AutogH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/autoRollbackConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV25autoRollbackConfigurationAB04AutogH0VSgvp">autoRollbackConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type and location of the revision to deploy.</p>
+                        <p>Configuration information for an automatic rollback that is added when a deployment is created.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">revision</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/RevisionLocation.html">RevisionLocation</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoRollbackConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/AutoRollbackConfiguration.html">AutoRollbackConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,87 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV15targetInstancesAB06TargetG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/targetInstances" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV15targetInstancesAB06TargetG0VSgvp">targetInstances</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Information about the instances that will belong to the replacement environment in a blue/green deployment.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetInstances</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/TargetInstances.html">TargetInstances</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV25autoRollbackConfigurationAB04AutogH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/autoRollbackConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV25autoRollbackConfigurationAB04AutogH0VSgvp">autoRollbackConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Configuration information for an automatic rollback that is added when a deployment is created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoRollbackConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/AutoRollbackConfiguration.html">AutoRollbackConfiguration</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV15applicationNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/applicationName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV15applicationNameSSvp">applicationName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10CodeDeployAAV21CreateDeploymentInputV11descriptionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV11descriptionSSSgvp">description</a>
@@ -784,33 +703,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV27updateOutdatedInstancesOnlySbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/updateOutdatedInstancesOnly" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV27updateOutdatedInstancesOnlySbSgvp">updateOutdatedInstancesOnly</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether to deploy to all instances or only to instances that are not running the latest application revision.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updateOutdatedInstancesOnly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +739,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailures8revision20deploymentConfigName0k5GroupM015targetInstances25autoRollbackConfiguration011applicationM011description014updateOutdatedP4Only18fileExistsBehaviorADSbSg_AB16RevisionLocationVSgSSSgAsB06TargetP0VSgAB04AutorS0VSgSSAsoB04FileZ8BehaviorOSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(ignoreApplicationStopFailures:revision:deploymentConfigName:deploymentGroupName:targetInstances:autoRollbackConfiguration:applicationName:description:updateOutdatedInstancesOnly:fileExistsBehavior:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailures8revision20deploymentConfigName0k5GroupM015targetInstances25autoRollbackConfiguration011applicationM011description014updateOutdatedP4Only18fileExistsBehaviorADSbSg_AB16RevisionLocationVSgSSSgAsB06TargetP0VSgAB04AutorS0VSgSSAsoB04FileZ8BehaviorOSgtcfc">init(ignoreApplicationStopFailures:revision:deploymentConfigName:deploymentGroupName:targetInstances:autoRollbackConfiguration:applicationName:description:updateOutdatedInstancesOnly:fileExistsBehavior:)</a>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailuresSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ignoreApplicationStopFailures" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV29ignoreApplicationStopFailuresSbSgvp">ignoreApplicationStopFailures</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to true, then if the deployment causes the ApplicationStop deployment lifecycle event to an instance to fail, the deployment to that instance will not be considered to have failed at that point and will continue on to the BeforeInstall deployment lifecycle event.   If set to false or not specified, then if the deployment causes the ApplicationStop deployment lifecycle event to fail to an instance, the deployment to that instance will stop, and the deployment to that instance will be considered to have failed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ignoreApplicationStopFailures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV8revisionAB16RevisionLocationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/revision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV8revisionAB16RevisionLocationVSgvp">revision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type and location of the revision to deploy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">revision</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/RevisionLocation.html">RevisionLocation</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV15targetInstancesAB06TargetG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/targetInstances" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV15targetInstancesAB06TargetG0VSgvp">targetInstances</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about the instances that will belong to the replacement environment in a blue/green deployment.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetInstances</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/TargetInstances.html">TargetInstances</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV27updateOutdatedInstancesOnlySbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/updateOutdatedInstancesOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV27updateOutdatedInstancesOnlySbSgvp">updateOutdatedInstancesOnly</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether to deploy to all instances or only to instances that are not running the latest application revision.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updateOutdatedInstancesOnly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CodeDeployAAV21CreateDeploymentInputV15applicationName25autoRollbackConfiguration016deploymentConfigG00k5GroupG011description18fileExistsBehavior29ignoreApplicationStopFailures8revision15targetInstances014updateOutdatedX4OnlyADSS_AB04AutoiJ0VSgSSSgA2rB04FilepQ0OSgSbSgAB16RevisionLocationVSgAB06TargetX0VSgAVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(applicationName:autoRollbackConfiguration:deploymentConfigName:deploymentGroupName:description:fileExistsBehavior:ignoreApplicationStopFailures:revision:targetInstances:updateOutdatedInstancesOnly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CodeDeployAAV21CreateDeploymentInputV15applicationName25autoRollbackConfiguration016deploymentConfigG00k5GroupG011description18fileExistsBehavior29ignoreApplicationStopFailures8revision15targetInstances014updateOutdatedX4OnlyADSS_AB04AutoiJ0VSgSSSgA2rB04FilepQ0OSgSbSgAB16RevisionLocationVSgAB06TargetX0VSgAVtcfc">init(applicationName:autoRollbackConfiguration:deploymentConfigName:deploymentGroupName:description:fileExistsBehavior:ignoreApplicationStopFailures:revision:targetInstances:updateOutdatedInstancesOnly:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">ignoreApplicationStopFailures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">revision</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/RevisionLocation.html">RevisionLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deploymentConfigName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deploymentGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetInstances</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/TargetInstances.html">TargetInstances</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoRollbackConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/AutoRollbackConfiguration.html">AutoRollbackConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">updateOutdatedInstancesOnly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fileExistsBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/FileExistsBehavior.html">FileExistsBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applicationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">autoRollbackConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/AutoRollbackConfiguration.html">AutoRollbackConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deploymentConfigName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deploymentGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fileExistsBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/FileExistsBehavior.html">FileExistsBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ignoreApplicationStopFailures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">revision</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/RevisionLocation.html">RevisionLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetInstances</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeDeploy/TargetInstances.html">TargetInstances</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">updateOutdatedInstancesOnly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

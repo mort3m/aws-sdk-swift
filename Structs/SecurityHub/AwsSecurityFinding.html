@@ -14,7 +14,7 @@
     <a title="AwsSecurityFinding Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFieldsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/userDefinedFields" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFieldsSDyS2SGSgvp">userDefinedFields</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV12awsAccountIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/awsAccountId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV12awsAccountIdSSvp">awsAccountId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding.</p>
+                        <p>The AWS account ID in which a finding is generated.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userDefinedFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV7malwareSayAB7MalwareVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/malware" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV7malwareSayAB7MalwareVGSgvp">malware</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV10complianceAB10ComplianceVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/compliance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV10complianceAB10ComplianceVSgvp">compliance</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,122 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of malware related to a finding.</p>
+                        <p>This data type is exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard (for example, AWS CIS Foundations). Contains compliance-related finding details.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">malware</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Malware.html">Malware</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV10productArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/productArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV10productArnSSvp">productArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) once this provider&rsquo;s product (solution that generates findings) is registered with Security Hub.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV9updatedAtSSvp"></a>
-                    <a name="//apple_ref/swift/Property/updatedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV9updatedAtSSvp">updatedAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An ISO8601-formatted timestamp that indicates when the finding record was last updated by the security findings provider.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV15firstObservedAtSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/firstObservedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV15firstObservedAtSSSgvp">firstObservedAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was first observed by the security findings provider.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">firstObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV2idSSvp"></a>
-                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV2idSSvp">id</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The security findings provider-specific identifier for a finding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">compliance</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Compliance.html">Compliance</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,6 +658,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV9createdAtSSvp"></a>
+                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV9createdAtSSvp">createdAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was created by the security findings provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:11SecurityHubAAV03AwsA7FindingV11criticalitys5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/criticality" class="dashAnchor"></a>
                     <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11criticalitys5Int32VSgvp">criticality</a>
@@ -793,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV12awsAccountIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/awsAccountId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV12awsAccountIdSSvp">awsAccountId</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11descriptionSSSgvp">description</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +722,203 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The AWS account ID in which a finding is generated.</p>
+                        <p>A finding&rsquo;s description.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV15firstObservedAtSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/firstObservedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV15firstObservedAtSSSgvp">firstObservedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was first observed by the security findings provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">firstObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11generatorIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/generatorId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11generatorIdSSvp">generatorId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security findings provider&rsquo;s solutions, this generator can be called a rule, a check, a detector, a plug-in, etc.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">generatorId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV2idSSvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV2idSSvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The security findings provider-specific identifier for a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV14lastObservedAtSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastObservedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV14lastObservedAtSSSgvp">lastObservedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was most recently observed by the security findings provider.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV7malwareSayAB7MalwareVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/malware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV7malwareSayAB7MalwareVGSgvp">malware</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of malware related to a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">malware</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Malware.html">Malware</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV7networkAB7NetworkVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/network" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV7networkAB7NetworkVSgvp">network</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The details of network-related information about a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">network</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Network.html">Network</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV4noteAB4NoteVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/note" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV4noteAB4NoteVSgvp">note</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A user-defined note added to a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">note</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Note.html">Note</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV5typesSaySSGvp"></a>
-                    <a name="//apple_ref/swift/Property/types" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV5typesSaySSGvp">types</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV10productArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/productArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV10productArnSSvp">productArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +965,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more finding types in the format of &lsquo;namespace/category/classifier&rsquo; that classify a finding. Valid namespace values are: Software and Configuration Checks | TTPs | Effects | Unusual Behaviors | Sensitive Data Identifications</p>
+                        <p>The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) once this provider&rsquo;s product (solution that generates findings) is registered with Security Hub.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV13productFieldsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/productFields" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV13productFieldsSDyS2SGSgvp">productFields</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A data type where security findings providers can include additional solution-specific details that are not part of the defined AwsSecurityFinding format.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11recordStateAB06RecordF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/recordState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11recordStateAB06RecordF0OSgvp">recordState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The record state of a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">recordState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/RecordState.html">RecordState</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV15relatedFindingsSayAB07RelatedD0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/relatedFindings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV15relatedFindingsSayAB07RelatedD0VGSgvp">relatedFindings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of related findings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relatedFindings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/RelatedFinding.html">RelatedFinding</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11remediationAB11RemediationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/remediation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11remediationAB11RemediationVSgvp">remediation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An data type that describes the remediation options for a finding.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">remediation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Remediation.html">Remediation</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,87 +1144,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV13workflowStateAB08WorkflowF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/workflowState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV13workflowStateAB08WorkflowF0OSgvp">workflowState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The workflow state of a finding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workflowState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/WorkflowState.html">WorkflowState</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV9createdAtSSvp"></a>
-                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV9createdAtSSvp">createdAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was created by the security findings provider.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11generatorIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/generatorId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11generatorIdSSvp">generatorId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is the identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security findings provider&rsquo;s solutions, this generator can be called a rule, a check, a detector, a plug-in, etc.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">generatorId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11SecurityHubAAV03AwsA7FindingV8severityAB8SeverityVvp"></a>
                     <a name="//apple_ref/swift/Property/severity" class="dashAnchor"></a>
                     <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV8severityAB8SeverityVvp">severity</a>
@@ -1027,60 +1162,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">severity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Severity.html">Severity</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11remediationAB11RemediationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/remediation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11remediationAB11RemediationVSgvp">remediation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An data type that describes the remediation options for a finding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">remediation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Remediation.html">Remediation</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11descriptionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11descriptionSSSgvp">description</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A finding&rsquo;s description.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,60 +1225,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV7networkAB7NetworkVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/network" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV7networkAB7NetworkVSgvp">network</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The details of network-related information about a finding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">network</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Network.html">Network</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV14lastObservedAtSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/lastObservedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV14lastObservedAtSSSgvp">lastObservedAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An ISO8601-formatted timestamp that indicates when the potential security issue captured by a finding was most recently observed by the security findings provider.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11SecurityHubAAV03AwsA7FindingV5titleSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
                     <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV5titleSSSgvp">title</a>
@@ -1225,9 +1252,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV13productFieldsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/productFields" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV13productFieldsSDyS2SGSgvp">productFields</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV5typesSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/types" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV5typesSaySSGvp">types</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1235,14 +1262,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A data type where security findings providers can include additional solution-specific details that are not part of the defined AwsSecurityFinding format.</p>
+                        <p>One or more finding types in the format of &lsquo;namespace/category/classifier&rsquo; that classify a finding. Valid namespace values are: Software and Configuration Checks | TTPs | Effects | Unusual Behaviors | Sensitive Data Identifications</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1252,9 +1279,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV15relatedFindingsSayAB07RelatedD0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/relatedFindings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV15relatedFindingsSayAB07RelatedD0VGSgvp">relatedFindings</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV9updatedAtSSvp"></a>
+                    <a name="//apple_ref/swift/Property/updatedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV9updatedAtSSvp">updatedAt</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1262,14 +1289,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of related findings.</p>
+                        <p>An ISO8601-formatted timestamp that indicates when the finding record was last updated by the security findings provider.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">relatedFindings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/RelatedFinding.html">RelatedFinding</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1279,9 +1306,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV10complianceAB10ComplianceVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/compliance" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV10complianceAB10ComplianceVSgvp">compliance</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFieldsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userDefinedFields" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFieldsSDyS2SGSgvp">userDefinedFields</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1289,41 +1316,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This data type is exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard (for example, AWS CIS Foundations). Contains compliance-related finding details.</p>
+                        <p>A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">compliance</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Compliance.html">Compliance</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV4noteAB4NoteVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/note" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV4noteAB4NoteVSgvp">note</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A user-defined note added to a finding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">note</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Note.html">Note</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userDefinedFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1360,9 +1360,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV11recordStateAB06RecordF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/recordState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV11recordStateAB06RecordF0OSgvp">recordState</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV13workflowStateAB08WorkflowF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/workflowState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV13workflowStateAB08WorkflowF0OSgvp">workflowState</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1370,14 +1370,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The record state of a finding.</p>
+                        <p>The workflow state of a finding.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">recordState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/RecordState.html">RecordState</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workflowState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/WorkflowState.html">WorkflowState</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1387,9 +1387,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFields7malware10productArn9updatedAt013firstObservedL02id10confidence11criticality12awsAccountId7process5types9resources13schemaVersion13workflowState07createdL009generatorT08severity11remediation11description9sourceUrl21threatIntelIndicators7network04lastnL05title0iG015relatedFindings10compliance4note17verificationState11recordStateADSDyS2SGSg_SayAB7MalwareVGSgS3SSgSSs5Int32VSgA16_SSAB14ProcessDetailsVSgSaySSGSayAB8ResourceVGSSAB13WorkflowStateOSgS2SAB8SeverityVAB11RemediationVSgA13_A13_SayAB20ThreatIntelIndicatorVGSgAB7NetworkVSgA13_A13_A8_SayAB07RelatedD0VGSgAB10ComplianceVSgAB4NoteVSgAB17VerificationStateOSgAB11RecordStateOSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(userDefinedFields:malware:productArn:updatedAt:firstObservedAt:id:confidence:criticality:awsAccountId:process:types:resources:schemaVersion:workflowState:createdAt:generatorId:severity:remediation:description:sourceUrl:threatIntelIndicators:network:lastObservedAt:title:productFields:relatedFindings:compliance:note:verificationState:recordState:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV17userDefinedFields7malware10productArn9updatedAt013firstObservedL02id10confidence11criticality12awsAccountId7process5types9resources13schemaVersion13workflowState07createdL009generatorT08severity11remediation11description9sourceUrl21threatIntelIndicators7network04lastnL05title0iG015relatedFindings10compliance4note17verificationState11recordStateADSDyS2SGSg_SayAB7MalwareVGSgS3SSgSSs5Int32VSgA16_SSAB14ProcessDetailsVSgSaySSGSayAB8ResourceVGSSAB13WorkflowStateOSgS2SAB8SeverityVAB11RemediationVSgA13_A13_SayAB20ThreatIntelIndicatorVGSgAB7NetworkVSgA13_A13_A8_SayAB07RelatedD0VGSgAB10ComplianceVSgAB4NoteVSgAB17VerificationStateOSgAB11RecordStateOSgtcfc">init(userDefinedFields:malware:productArn:updatedAt:firstObservedAt:id:confidence:criticality:awsAccountId:process:types:resources:schemaVersion:workflowState:createdAt:generatorId:severity:remediation:description:sourceUrl:threatIntelIndicators:network:lastObservedAt:title:productFields:relatedFindings:compliance:note:verificationState:recordState:)</a>
+                    <a name="/s:11SecurityHubAAV03AwsA7FindingV12awsAccountId10compliance10confidence9createdAt11criticality11description013firstObservedK009generatorG02id04lastoK07malware7network4note7process10productArn0W6Fields11recordState15relatedFindings11remediation9resources13schemaVersion8severity9sourceUrl21threatIntelIndicators5title5types07updatedK0011userDefinedY017verificationState13workflowStateADSS_AB10ComplianceVSgs5Int32VSgSSA12_SSSgA13_S2SA13_SayAB7MalwareVGSgAB7NetworkVSgAB4NoteVSgAB14ProcessDetailsVSgSSSDyS2SGSgAB11RecordStateOSgSayAB07RelatedD0VGSgAB11RemediationVSgSayAB8ResourceVGSSAB8SeverityVA13_SayAB20ThreatIntelIndicatorVGSgA13_SaySSGSSA28_AB17VerificationStateOSgAB13WorkflowStateOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(awsAccountId:compliance:confidence:createdAt:criticality:description:firstObservedAt:generatorId:id:lastObservedAt:malware:network:note:process:productArn:productFields:recordState:relatedFindings:remediation:resources:schemaVersion:severity:sourceUrl:threatIntelIndicators:title:types:updatedAt:userDefinedFields:verificationState:workflowState:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SecurityHubAAV03AwsA7FindingV12awsAccountId10compliance10confidence9createdAt11criticality11description013firstObservedK009generatorG02id04lastoK07malware7network4note7process10productArn0W6Fields11recordState15relatedFindings11remediation9resources13schemaVersion8severity9sourceUrl21threatIntelIndicators5title5types07updatedK0011userDefinedY017verificationState13workflowStateADSS_AB10ComplianceVSgs5Int32VSgSSA12_SSSgA13_S2SA13_SayAB7MalwareVGSgAB7NetworkVSgAB4NoteVSgAB14ProcessDetailsVSgSSSDyS2SGSgAB11RecordStateOSgSayAB07RelatedD0VGSgAB11RemediationVSgSayAB8ResourceVGSSAB8SeverityVA13_SayAB20ThreatIntelIndicatorVGSgA13_SaySSGSSA28_AB17VerificationStateOSgAB13WorkflowStateOSgtcfc">init(awsAccountId:compliance:confidence:createdAt:criticality:description:firstObservedAt:generatorId:id:lastObservedAt:malware:network:note:process:productArn:productFields:recordState:relatedFindings:remediation:resources:schemaVersion:severity:sourceUrl:threatIntelIndicators:title:types:updatedAt:userDefinedFields:verificationState:workflowState:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1404,7 +1404,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">userDefinedFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">malware</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Malware.html">Malware</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">firstObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">confidence</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">criticality</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">process</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/ProcessDetails.html">ProcessDetails</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">resources</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Resource.html">Resource</a></span><span class="p">],</span> <span class="nv">schemaVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">workflowState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/WorkflowState.html">WorkflowState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">generatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">severity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Severity.html">Severity</a></span><span class="p">,</span> <span class="nv">remediation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Remediation.html">Remediation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threatIntelIndicators</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/ThreatIntelIndicator.html">ThreatIntelIndicator</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">network</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Network.html">Network</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">relatedFindings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/RelatedFinding.html">RelatedFinding</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">compliance</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Compliance.html">Compliance</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">note</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Note.html">Note</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">verificationState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/VerificationState.html">VerificationState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">recordState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/RecordState.html">RecordState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">compliance</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Compliance.html">Compliance</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">confidence</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">criticality</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">firstObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">generatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">lastObservedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">malware</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Malware.html">Malware</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">network</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Network.html">Network</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">note</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Note.html">Note</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">process</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/ProcessDetails.html">ProcessDetails</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">productFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">recordState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/RecordState.html">RecordState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">relatedFindings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/RelatedFinding.html">RelatedFinding</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">remediation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Remediation.html">Remediation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resources</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/Resource.html">Resource</a></span><span class="p">],</span> <span class="nv">schemaVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">severity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/Severity.html">Severity</a></span><span class="p">,</span> <span class="nv">sourceUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threatIntelIndicators</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SecurityHub/ThreatIntelIndicator.html">ThreatIntelIndicator</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userDefinedFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">verificationState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/VerificationState.html">VerificationState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workflowState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SecurityHub/WorkflowState.html">WorkflowState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1416,7 +1416,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

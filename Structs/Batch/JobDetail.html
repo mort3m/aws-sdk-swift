@@ -14,7 +14,7 @@
     <a title="JobDetail Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV9JobDetailV6statusAB0B6StatusOvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV6statusAB0B6StatusOvp">status</a>
+                    <a name="/s:5BatchAAV9JobDetailV15arrayPropertiesAB05ArrayeC0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/arrayProperties" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV15arrayPropertiesAB05ArrayeC0VSgvp">arrayProperties</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,176 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The current status for the job.   If your jobs do not progress to STARTING, see Jobs Stuck in RUNNABLE Status in the troubleshooting section of the AWS Batch User Guide.</p>
+                        <p>The array properties of the job, if it is an array job.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobStatus.html">JobStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayPropertiesDetail.html">ArrayPropertiesDetail</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV8attemptsSayAB07AttemptC0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/attempts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV8attemptsSayAB07AttemptC0VGSgvp">attempts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of job attempts associated with this job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attempts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/AttemptDetail.html">AttemptDetail</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV9containerAB09ContainerC0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/container" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV9containerAB09ContainerC0VSgvp">container</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An object representing the details of the container that is associated with the job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerDetail.html">ContainerDetail</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV9createdAts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV9createdAts5Int64VSgvp">createdAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the SUBMITTED state (at the time SubmitJob was called). For array child jobs, this is when the child job was spawned by its parent and entered the PENDING state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV9dependsOnSayAB0B10DependencyVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dependsOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV9dependsOnSayAB0B10DependencyVGSgvp">dependsOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of job names or IDs on which this job depends.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV13jobDefinitionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/jobDefinition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV13jobDefinitionSSvp">jobDefinition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The job definition that is used by this job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV5jobIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV5jobIdSSvp">jobId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID for the job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,168 +820,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV9JobDetailV15arrayPropertiesAB05ArrayeC0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/arrayProperties" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV15arrayPropertiesAB05ArrayeC0VSgvp">arrayProperties</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The array properties of the job, if it is an array job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayPropertiesDetail.html">ArrayPropertiesDetail</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV9stoppedAts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/stoppedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV9stoppedAts5Int64VSgvp">stoppedAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was stopped (when the job transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stoppedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV9dependsOnSayAB0B10DependencyVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dependsOn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV9dependsOnSayAB0B10DependencyVGSgvp">dependsOn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of job names or IDs on which this job depends.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV13retryStrategyAB05RetryE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/retryStrategy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV13retryStrategyAB05RetryE0VSgvp">retryStrategy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The retry strategy to use for this job if an attempt fails.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV12statusReasonSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusReason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV12statusReasonSSSgvp">statusReason</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A short, human-readable string to provide additional details about the current status of the job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV9containerAB09ContainerC0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/container" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV9containerAB09ContainerC0VSgvp">container</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An object representing the details of the container that is associated with the job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerDetail.html">ContainerDetail</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5BatchAAV9JobDetailV11nodeDetailsAB04NodeE0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/nodeDetails" class="dashAnchor"></a>
                     <a class="token" href="#/s:5BatchAAV9JobDetailV11nodeDetailsAB04NodeE0VSgvp">nodeDetails</a>
@@ -838,141 +838,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeDetails</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeDetails.html">NodeDetails</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV9startedAts5Int64Vvp"></a>
-                    <a name="//apple_ref/swift/Property/startedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV9startedAts5Int64Vvp">startedAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was started (when the job transitioned from the STARTING state to the RUNNING state).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV13jobDefinitionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/jobDefinition" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV13jobDefinitionSSvp">jobDefinition</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The job definition that is used by this job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV9createdAts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV9createdAts5Int64VSgvp">createdAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the SUBMITTED state (at the time SubmitJob was called). For array child jobs, this is when the child job was spawned by its parent and entered the PENDING state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV5jobIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV5jobIdSSvp">jobId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID for the job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV9JobDetailV7timeoutAB0B7TimeoutVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV7timeoutAB0B7TimeoutVSgvp">timeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The timeout configuration for the job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,33 +874,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV9JobDetailV8attemptsSayAB07AttemptC0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/attempts" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV8attemptsSayAB07AttemptC0VGSgvp">attempts</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of job attempts associated with this job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attempts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/AttemptDetail.html">AttemptDetail</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5BatchAAV9JobDetailV10parametersSDyS2SGSgvp"></a>
                     <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
                     <a class="token" href="#/s:5BatchAAV9JobDetailV10parametersSDyS2SGSgvp">parameters</a>
@@ -1063,9 +901,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV9JobDetailV6status7jobName0E5Queue15arrayProperties9stoppedAt9dependsOn13retryStrategy0D6Reason9container11nodeDetails07startedK00E10Definition07createdK00E2Id7timeout0rI08attempts10parametersAdB0B6StatusO_S2SAB05ArrayiC0VSgs5Int64VSgSayAB0B10DependencyVGSgAB05RetryO0VSgSSSgAB09ContainerC0VSgAB04NodeS0VSgA1_SSA2_SSAB0B7TimeoutVSgAB04NodeI0VSgSayAB07AttemptC0VGSgSDyS2SGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(status:jobName:jobQueue:arrayProperties:stoppedAt:dependsOn:retryStrategy:statusReason:container:nodeDetails:startedAt:jobDefinition:createdAt:jobId:timeout:nodeProperties:attempts:parameters:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV9JobDetailV6status7jobName0E5Queue15arrayProperties9stoppedAt9dependsOn13retryStrategy0D6Reason9container11nodeDetails07startedK00E10Definition07createdK00E2Id7timeout0rI08attempts10parametersAdB0B6StatusO_S2SAB05ArrayiC0VSgs5Int64VSgSayAB0B10DependencyVGSgAB05RetryO0VSgSSSgAB09ContainerC0VSgAB04NodeS0VSgA1_SSA2_SSAB0B7TimeoutVSgAB04NodeI0VSgSayAB07AttemptC0VGSgSDyS2SGSgtcfc">init(status:jobName:jobQueue:arrayProperties:stoppedAt:dependsOn:retryStrategy:statusReason:container:nodeDetails:startedAt:jobDefinition:createdAt:jobId:timeout:nodeProperties:attempts:parameters:)</a>
+                    <a name="/s:5BatchAAV9JobDetailV13retryStrategyAB05RetryE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/retryStrategy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV13retryStrategyAB05RetryE0VSgvp">retryStrategy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The retry strategy to use for this job if an attempt fails.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV9startedAts5Int64Vvp"></a>
+                    <a name="//apple_ref/swift/Property/startedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV9startedAts5Int64Vvp">startedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was started (when the job transitioned from the STARTING state to the RUNNING state).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV6statusAB0B6StatusOvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV6statusAB0B6StatusOvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status for the job.   If your jobs do not progress to STARTING, see Jobs Stuck in RUNNABLE Status in the troubleshooting section of the AWS Batch User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobStatus.html">JobStatus</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV12statusReasonSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV12statusReasonSSSgvp">statusReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A short, human-readable string to provide additional details about the current status of the job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV9stoppedAts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/stoppedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV9stoppedAts5Int64VSgvp">stoppedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Unix timestamp (in seconds and milliseconds) for when the job was stopped (when the job transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stoppedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV7timeoutAB0B7TimeoutVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV7timeoutAB0B7TimeoutVSgvp">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The timeout configuration for the job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV9JobDetailV15arrayProperties8attempts9container9createdAt9dependsOn13jobDefinition0L2Id0L4Name0L5Queue11nodeDetails0qE010parameters13retryStrategy07startedI06status0W6Reason07stoppedI07timeoutAdB05ArrayeC0VSg_SayAB07AttemptC0VGSgAB09ContainerC0VSgs5Int64VSgSayAB0B10DependencyVGSgS4SAB04NodeR0VSgAB04NodeE0VSgSDyS2SGSgAB05RetryU0VSgA6_AB0B6StatusOSSSgA7_AB0B7TimeoutVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayProperties:attempts:container:createdAt:dependsOn:jobDefinition:jobId:jobName:jobQueue:nodeDetails:nodeProperties:parameters:retryStrategy:startedAt:status:statusReason:stoppedAt:timeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV9JobDetailV15arrayProperties8attempts9container9createdAt9dependsOn13jobDefinition0L2Id0L4Name0L5Queue11nodeDetails0qE010parameters13retryStrategy07startedI06status0W6Reason07stoppedI07timeoutAdB05ArrayeC0VSg_SayAB07AttemptC0VGSgAB09ContainerC0VSgs5Int64VSgSayAB0B10DependencyVGSgS4SAB04NodeR0VSgAB04NodeE0VSgSDyS2SGSgAB05RetryU0VSgA6_AB0B6StatusOSSSgA7_AB0B7TimeoutVSgtcfc">init(arrayProperties:attempts:container:createdAt:dependsOn:jobDefinition:jobId:jobName:jobQueue:nodeDetails:nodeProperties:parameters:retryStrategy:startedAt:status:statusReason:stoppedAt:timeout:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1080,7 +1080,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobStatus.html">JobStatus</a></span><span class="p">,</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayPropertiesDetail.html">ArrayPropertiesDetail</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stoppedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerDetail.html">ContainerDetail</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeDetails</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeDetails.html">NodeDetails</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeProperties.html">NodeProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attempts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/AttemptDetail.html">AttemptDetail</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayPropertiesDetail.html">ArrayPropertiesDetail</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attempts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/AttemptDetail.html">AttemptDetail</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">container</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerDetail.html">ContainerDetail</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">nodeDetails</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeDetails.html">NodeDetails</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeProperties.html">NodeProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobStatus.html">JobStatus</a></span><span class="p">,</span> <span class="nv">statusReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stoppedAt</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1092,7 +1092,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

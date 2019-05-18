@@ -14,7 +14,7 @@
     <a title="CreateDBClusterMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/globalClusterIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifierSSSgvp">globalClusterIdentifier</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV17availabilityZonesAB012AvailabilityF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV17availabilityZonesAB012AvailabilityF0VSgvp">availabilityZones</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster.</p>
+                        <p>A list of EC2 Availability Zones that instances in the DB cluster can be created in. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones in the Amazon Aurora User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">globalClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/AvailabilityZones.html">AvailabilityZones</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV4ports5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV4ports5Int32VSgvp">port</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV15backtrackWindows5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backtrackWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV15backtrackWindows5Int64VSgvp">backtrackWindow</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,176 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The port number on which the instances in the DB cluster accept connections.  Default: 3306 if engine is set as aurora or 5432 if set to aurora-postgresql.</p>
+                        <p>The target backtrack window, in seconds. To disable backtracking, set this value to 0.  Default: 0 Constraints:   If specified, this value must be set to a number from 0 to 259,200 (72 hours).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). Format: ddd:hh24:mi-ddd:hh24:mi  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week. To see the time blocks available, see  Adjusting the Preferred DB Cluster Maintenance Window in the Amazon Aurora User Guide.  Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Constraints: Minimum 30-minute window.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV17dBSubnetGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBSubnetGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV17dBSubnetGroupNameSSSgvp">dBSubnetGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A DB subnet group to associate with this DB cluster. Constraints: Must match the name of an existing DBSubnetGroup. Must not be default. Example: mySubnetgroup</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV16characterSetNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/characterSetName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV16characterSetNameSSSgvp">characterSetName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A value that indicates that the DB cluster should be associated with the specified CharacterSet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">characterSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV6engineSSvp"></a>
-                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV6engineSSvp">engine</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora), and aurora-postgresql</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV12preSignedUrlSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preSignedUrl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV12preSignedUrlSSSgvp">preSignedUrl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A URL that contains a Signature Version 4 signed request for the CreateDBCluster action to be called in the source AWS Region where the DB cluster is replicated from. You only need to specify PreSignedUrl when you are performing cross-region replication from an encrypted DB cluster. The pre-signed URL must be a valid request for the CreateDBCluster API action that can be executed in the source AWS Region that contains the encrypted DB cluster to be copied. The pre-signed URL request must contain the following parameter values:    KmsKeyId - The AWS KMS key identifier for the key to use to encrypt the copy of the DB cluster in the destination AWS Region. This should refer to the same KMS key for both the CreateDBCluster action that is called in the destination AWS Region, and the action contained in the pre-signed URL.    DestinationRegion - The name of the AWS Region that Aurora Read Replica will be created in.    ReplicationSourceIdentifier - The DB cluster identifier for the encrypted DB cluster to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For example, if you are copying an encrypted DB cluster from the us-west-2 AWS Region, then your ReplicationSourceIdentifier would look like Example: arn:aws:rds:us-west-2:123456789012:cluster:aurora-cluster1.   To learn how to generate a Signature Version 4 signed request, see  Authenticating Requests: Using Query Parameters (AWS Signature Version 4) and  Signature Version 4 Signing Process.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of EC2 VPC security groups to associate with this DB cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backtrackWindow</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV15optionGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV15optionGroupNameSSSgvp">optionGroupName</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV16characterSetNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/characterSetName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV16characterSetNameSSSgvp">characterSetName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A value that indicates that the DB cluster should be associated with the specified option group. Permanent options can&rsquo;t be removed from an option group. The option group can&rsquo;t be removed from a DB cluster once it is associated with a DB cluster.</p>
+                        <p>A value that indicates that the DB cluster should be associated with the specified CharacterSet.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">characterSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV12databaseNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/databaseName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV12databaseNameSSSgvp">databaseName</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV19dBClusterIdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/dBClusterIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV19dBClusterIdentifierSSvp">dBClusterIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name for your database of up to 64 alpha-numeric characters. If you do not provide a name, Amazon RDS will not create a database in the DB cluster you are creating.</p>
+                        <p>The DB cluster identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.   First character must be a letter.   Can&rsquo;t end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">databaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV14masterUsernameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/masterUsername" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV14masterUsernameSSSgvp">masterUsername</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV17dBSubnetGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBSubnetGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV17dBSubnetGroupNameSSSgvp">dBSubnetGroupName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,14 +749,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the master user for the DB cluster. Constraints:   Must be 1 to 16 letters or numbers.   First character must be a letter.   Can&rsquo;t be a reserved word for the chosen database engine.</p>
+                        <p>A DB subnet group to associate with this DB cluster. Constraints: Must match the name of an existing DBSubnetGroup. Must not be default. Example: mySubnetgroup</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUsername</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV12databaseNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/databaseName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV12databaseNameSSSgvp">databaseName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name for your database of up to 64 alpha-numeric characters. If you do not provide a name, Amazon RDS will not create a database in the DB cluster you are creating.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">databaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV18deletionProtectionSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deletionProtection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV18deletionProtectionSbSgvp">deletionProtection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the DB cluster should have deletion protection enabled. The database can&rsquo;t be deleted when this value is set to true. The default is false.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,6 +874,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV6engineSSvp"></a>
+                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV6engineSSvp">engine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora), and aurora-postgresql</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV10engineModeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV10engineModeSSSgvp">engineMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, or global.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineMode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3RDSAAV22CreateDBClusterMessageV13engineVersionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV13engineVersionSSSgvp">engineVersion</a>
@@ -1009,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV21preferredBackupWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredBackupWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV21preferredBackupWindowSSSgvp">preferredBackupWindow</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/globalClusterIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifierSSSgvp">globalClusterIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,95 +965,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region. To see the time blocks available, see  Adjusting the Preferred DB Cluster Maintenance Window in the Amazon Aurora User Guide.  Constraints:   Must be in the format hh24:mi-hh24:mi.   Must be in Universal Coordinated Time (UTC).   Must not conflict with the preferred maintenance window.   Must be at least 30 minutes.</p>
+                        <p>The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV19dBClusterIdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/dBClusterIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV19dBClusterIdentifierSSvp">dBClusterIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The DB cluster identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.   First character must be a letter.   Can&rsquo;t end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV15backtrackWindows5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/backtrackWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV15backtrackWindows5Int64VSgvp">backtrackWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The target backtrack window, in seconds. To disable backtracking, set this value to 0.  Default: 0 Constraints:   If specified, this value must be set to a number from 0 to 259,200 (72 hours).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backtrackWindow</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV27replicationSourceIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/replicationSourceIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV27replicationSourceIdentifierSSSgvp">replicationSourceIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a Read Replica.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationSourceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">globalClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,60 +1009,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV18deletionProtectionSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deletionProtection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV18deletionProtectionSbSgvp">deletionProtection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if the DB cluster should have deletion protection enabled. The database can&rsquo;t be deleted when this value is set to true. The default is false.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV17availabilityZonesAB012AvailabilityF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV17availabilityZonesAB012AvailabilityF0VSgvp">availabilityZones</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of EC2 Availability Zones that instances in the DB cluster can be created in. For information on AWS Regions and Availability Zones, see Choosing the Regions and Availability Zones in the Amazon Aurora User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/AvailabilityZones.html">AvailabilityZones</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3RDSAAV22CreateDBClusterMessageV18masterUserPasswordSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/masterUserPassword" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV18masterUserPasswordSSSgvp">masterUserPassword</a>
@@ -1216,6 +1027,195 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV14masterUsernameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/masterUsername" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV14masterUsernameSSSgvp">masterUsername</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the master user for the DB cluster. Constraints:   Must be 1 to 16 letters or numbers.   First character must be a letter.   Can&rsquo;t be a reserved word for the chosen database engine.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUsername</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV15optionGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV15optionGroupNameSSSgvp">optionGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A value that indicates that the DB cluster should be associated with the specified option group. Permanent options can&rsquo;t be removed from an option group. The option group can&rsquo;t be removed from a DB cluster once it is associated with a DB cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV4ports5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV4ports5Int32VSgvp">port</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The port number on which the instances in the DB cluster accept connections.  Default: 3306 if engine is set as aurora or 5432 if set to aurora-postgresql.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV12preSignedUrlSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preSignedUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV12preSignedUrlSSSgvp">preSignedUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A URL that contains a Signature Version 4 signed request for the CreateDBCluster action to be called in the source AWS Region where the DB cluster is replicated from. You only need to specify PreSignedUrl when you are performing cross-region replication from an encrypted DB cluster. The pre-signed URL must be a valid request for the CreateDBCluster API action that can be executed in the source AWS Region that contains the encrypted DB cluster to be copied. The pre-signed URL request must contain the following parameter values:    KmsKeyId - The AWS KMS key identifier for the key to use to encrypt the copy of the DB cluster in the destination AWS Region. This should refer to the same KMS key for both the CreateDBCluster action that is called in the destination AWS Region, and the action contained in the pre-signed URL.    DestinationRegion - The name of the AWS Region that Aurora Read Replica will be created in.    ReplicationSourceIdentifier - The DB cluster identifier for the encrypted DB cluster to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For example, if you are copying an encrypted DB cluster from the us-west-2 AWS Region, then your ReplicationSourceIdentifier would look like Example: arn:aws:rds:us-west-2:123456789012:cluster:aurora-cluster1.   To learn how to generate a Signature Version 4 signed request, see  Authenticating Requests: Using Query Parameters (AWS Signature Version 4) and  Signature Version 4 Signing Process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV21preferredBackupWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredBackupWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV21preferredBackupWindowSSSgvp">preferredBackupWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region. To see the time blocks available, see  Adjusting the Preferred DB Cluster Maintenance Window in the Amazon Aurora User Guide.  Constraints:   Must be in the format hh24:mi-hh24:mi.   Must be in Universal Coordinated Time (UTC).   Must not conflict with the preferred maintenance window.   Must be at least 30 minutes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). Format: ddd:hh24:mi-ddd:hh24:mi  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week. To see the time blocks available, see  Adjusting the Preferred DB Cluster Maintenance Window in the Amazon Aurora User Guide.  Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Constraints: Minimum 30-minute window.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV27replicationSourceIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/replicationSourceIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV27replicationSourceIdentifierSSSgvp">replicationSourceIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a Read Replica.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationSourceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1279,33 +1279,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV10engineModeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV10engineModeSSSgvp">engineMode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, or global.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineMode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3RDSAAV22CreateDBClusterMessageV4tagsAB7TagListVSgvp"></a>
                     <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV4tagsAB7TagListVSgvp">tags</a>
@@ -1333,9 +1306,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifier4port26preferredMaintenanceWindow17dBSubnetGroupName012characterSetN06engine12preSignedUrl011vpcSecurityM3Ids21backupRetentionPeriod06optionmN008databaseN0018dBClusterParametermN014masterUsername27enableCloudwatchLogsExports31enableIAMDatabaseAuthentication0Q7Version0i6BackupK009dBClusterG009backtrackK0017replicationSourceG08kmsKeyId18deletionProtection17availabilityZones18masterUserPassword20scalingConfiguration16storageEncrypted0Q4Mode4tagsADSSSg_s5Int32VSgA5_A5_A5_SSA5_AB03VpcvM6IdListVSgA8_A5_A5_A5_A5_SaySSGSgSbSgA5_A5_SSs5Int64VSgA5_A5_A14_AB17AvailabilityZonesVSgA5_AB20ScalingConfigurationVSgA14_A5_AB7TagListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(globalClusterIdentifier:port:preferredMaintenanceWindow:dBSubnetGroupName:characterSetName:engine:preSignedUrl:vpcSecurityGroupIds:backupRetentionPeriod:optionGroupName:databaseName:dBClusterParameterGroupName:masterUsername:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engineVersion:preferredBackupWindow:dBClusterIdentifier:backtrackWindow:replicationSourceIdentifier:kmsKeyId:deletionProtection:availabilityZones:masterUserPassword:scalingConfiguration:storageEncrypted:engineMode:tags:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV23globalClusterIdentifier4port26preferredMaintenanceWindow17dBSubnetGroupName012characterSetN06engine12preSignedUrl011vpcSecurityM3Ids21backupRetentionPeriod06optionmN008databaseN0018dBClusterParametermN014masterUsername27enableCloudwatchLogsExports31enableIAMDatabaseAuthentication0Q7Version0i6BackupK009dBClusterG009backtrackK0017replicationSourceG08kmsKeyId18deletionProtection17availabilityZones18masterUserPassword20scalingConfiguration16storageEncrypted0Q4Mode4tagsADSSSg_s5Int32VSgA5_A5_A5_SSA5_AB03VpcvM6IdListVSgA8_A5_A5_A5_A5_SaySSGSgSbSgA5_A5_SSs5Int64VSgA5_A5_A14_AB17AvailabilityZonesVSgA5_AB20ScalingConfigurationVSgA14_A5_AB7TagListVSgtcfc">init(globalClusterIdentifier:port:preferredMaintenanceWindow:dBSubnetGroupName:characterSetName:engine:preSignedUrl:vpcSecurityGroupIds:backupRetentionPeriod:optionGroupName:databaseName:dBClusterParameterGroupName:masterUsername:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engineVersion:preferredBackupWindow:dBClusterIdentifier:backtrackWindow:replicationSourceIdentifier:kmsKeyId:deletionProtection:availabilityZones:masterUserPassword:scalingConfiguration:storageEncrypted:engineMode:tags:)</a>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of EC2 VPC security groups to associate with this DB cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV22CreateDBClusterMessageV17availabilityZones15backtrackWindow21backupRetentionPeriod16characterSetName19dBClusterIdentifier01do14ParameterGroupN008dBSubnetrN008databaseN018deletionProtection27enableCloudwatchLogsExports0W25IAMDatabaseAuthentication6engine10engineMode13engineVersion013globalClusterP08kmsKeyId18masterUserPassword14masterUsername06optionrN04port12preSignedUrl015preferredBackupH0020preferredMaintenanceH0017replicationSourceP020scalingConfiguration16storageEncrypted4tags011vpcSecurityR3IdsAdB012AvailabilityF0VSg_s5Int64VSgs5Int32VSgSSSgSSA14_A14_A14_SbSgSaySSGSgA15_SSA14_A14_A14_A14_A14_A14_A14_A13_A14_A14_A14_A14_AB20ScalingConfigurationVSgA15_AB7TagListVSgAB011VpcSecurityR6IdListVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(availabilityZones:backtrackWindow:backupRetentionPeriod:characterSetName:dBClusterIdentifier:dBClusterParameterGroupName:dBSubnetGroupName:databaseName:deletionProtection:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engine:engineMode:engineVersion:globalClusterIdentifier:kmsKeyId:masterUserPassword:masterUsername:optionGroupName:port:preSignedUrl:preferredBackupWindow:preferredMaintenanceWindow:replicationSourceIdentifier:scalingConfiguration:storageEncrypted:tags:vpcSecurityGroupIds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV22CreateDBClusterMessageV17availabilityZones15backtrackWindow21backupRetentionPeriod16characterSetName19dBClusterIdentifier01do14ParameterGroupN008dBSubnetrN008databaseN018deletionProtection27enableCloudwatchLogsExports0W25IAMDatabaseAuthentication6engine10engineMode13engineVersion013globalClusterP08kmsKeyId18masterUserPassword14masterUsername06optionrN04port12preSignedUrl015preferredBackupH0020preferredMaintenanceH0017replicationSourceP020scalingConfiguration16storageEncrypted4tags011vpcSecurityR3IdsAdB012AvailabilityF0VSg_s5Int64VSgs5Int32VSgSSSgSSA14_A14_A14_SbSgSaySSGSgA15_SSA14_A14_A14_A14_A14_A14_A14_A13_A14_A14_A14_A14_AB20ScalingConfigurationVSgA15_AB7TagListVSgAB011VpcSecurityR6IdListVSgtcfc">init(availabilityZones:backtrackWindow:backupRetentionPeriod:characterSetName:dBClusterIdentifier:dBClusterParameterGroupName:dBSubnetGroupName:databaseName:deletionProtection:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engine:engineMode:engineVersion:globalClusterIdentifier:kmsKeyId:masterUserPassword:masterUsername:optionGroupName:port:preSignedUrl:preferredBackupWindow:preferredMaintenanceWindow:replicationSourceIdentifier:scalingConfiguration:storageEncrypted:tags:vpcSecurityGroupIds:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1350,7 +1350,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">globalClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">characterSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">databaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUsername</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">backtrackWindow</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationSourceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/AvailabilityZones.html">AvailabilityZones</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ScalingConfiguration.html">ScalingConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">storageEncrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineMode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">availabilityZones</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/AvailabilityZones.html">AvailabilityZones</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backtrackWindow</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">characterSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">databaseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">engineMode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">globalClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUsername</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationSourceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ScalingConfiguration.html">ScalingConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">storageEncrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1362,7 +1362,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

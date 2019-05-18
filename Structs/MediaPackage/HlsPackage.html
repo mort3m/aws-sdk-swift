@@ -14,7 +14,7 @@
     <a title="HlsPackage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroupSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/useAudioRenditionGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroupSbSgvp">useAudioRenditionGroup</a>
+                    <a name="/s:12MediaPackageAAV03HlsB0V9adMarkersAB02AdE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/adMarkers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V9adMarkersAB02AdE0OSgvp">adMarkers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,73 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When enabled, audio streams will be placed in rendition groups in the output.</p>
+                        <p>This setting controls how ad markers are included in the packaged OriginEndpoint.
+<q>NONE</q> will omit all SCTE-35 ad markers from the output.
+<q>PASSTHROUGH</q> causes the manifest to contain a copy of the SCTE-35 ad
+markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest.
+<q>SCTE35_ENHANCED</q> generates ad markers and blackout tags based on SCTE-35
+messages in the input source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useAudioRenditionGroup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV03HlsB0V10encryptionAB0C10EncryptionVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encryption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V10encryptionAB0C10EncryptionVSgvp">encryption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/HlsEncryption.html">HlsEncryption</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV03HlsB0V23includeIframeOnlyStreamSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeIframeOnlyStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V23includeIframeOnlyStreamSbSgvp">includeIframeOnlyStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When enabled, an I-Frame only stream will be included in the output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -633,88 +692,6 @@ entry will be included in the media playlist.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V22segmentDurationSecondss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/segmentDurationSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V22segmentDurationSecondss5Int32VSgvp">segmentDurationSeconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Duration (in seconds) of each fragment. Actual fragments will be
-rounded to the nearest multiple of the source fragment duration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentDurationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V23includeIframeOnlyStreamSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeIframeOnlyStream" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V23includeIframeOnlyStreamSbSgvp">includeIframeOnlyStream</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When enabled, an I-Frame only stream will be included in the output.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V15streamSelectionAB06StreamE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/streamSelection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V15streamSelectionAB06StreamE0VSgvp">streamSelection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamSelection</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/StreamSelection.html">StreamSelection</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:12MediaPackageAAV03HlsB0V21playlistWindowSecondss5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/playlistWindowSeconds" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MediaPackageAAV03HlsB0V21playlistWindowSecondss5Int32VSgvp">playlistWindowSeconds</a>
@@ -733,38 +710,6 @@ rounded to the nearest multiple of the source fragment duration.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V9adMarkersAB02AdE0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/adMarkers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V9adMarkersAB02AdE0OSgvp">adMarkers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This setting controls how ad markers are included in the packaged OriginEndpoint.
-<q>NONE</q> will omit all SCTE-35 ad markers from the output.
-<q>PASSTHROUGH</q> causes the manifest to contain a copy of the SCTE-35 ad
-markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest.
-<q>SCTE35_ENHANCED</q> generates ad markers and blackout tags based on SCTE-35
-messages in the input source.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -809,9 +754,9 @@ it will be passed through to HLS output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V10encryptionAB0C10EncryptionVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encryption" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V10encryptionAB0C10EncryptionVSgvp">encryption</a>
+                    <a name="/s:12MediaPackageAAV03HlsB0V22segmentDurationSecondss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/segmentDurationSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V22segmentDurationSecondss5Int32VSgvp">segmentDurationSeconds</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -819,14 +764,15 @@ it will be passed through to HLS output.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Duration (in seconds) of each fragment. Actual fragments will be
+rounded to the nearest multiple of the source fragment duration.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/HlsEncryption.html">HlsEncryption</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentDurationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -836,9 +782,9 @@ it will be passed through to HLS output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroup12playlistType22segmentDurationSeconds23includeIframeOnlyStream15streamSelection0h6WindowL09adMarkers023programDateTimeIntervalL010encryptionADSbSg_AB08PlaylistI0OSgs5Int32VSgAnB0pR0VSgAtB02AdU0OSgAtB0C10EncryptionVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(useAudioRenditionGroup:playlistType:segmentDurationSeconds:includeIframeOnlyStream:streamSelection:playlistWindowSeconds:adMarkers:programDateTimeIntervalSeconds:encryption:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroup12playlistType22segmentDurationSeconds23includeIframeOnlyStream15streamSelection0h6WindowL09adMarkers023programDateTimeIntervalL010encryptionADSbSg_AB08PlaylistI0OSgs5Int32VSgAnB0pR0VSgAtB02AdU0OSgAtB0C10EncryptionVSgtcfc">init(useAudioRenditionGroup:playlistType:segmentDurationSeconds:includeIframeOnlyStream:streamSelection:playlistWindowSeconds:adMarkers:programDateTimeIntervalSeconds:encryption:)</a>
+                    <a name="/s:12MediaPackageAAV03HlsB0V15streamSelectionAB06StreamE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/streamSelection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V15streamSelectionAB06StreamE0VSgvp">streamSelection</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -853,7 +799,61 @@ it will be passed through to HLS output.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">useAudioRenditionGroup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/PlaylistType.html">PlaylistType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentDurationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamSelection</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/StreamSelection.html">StreamSelection</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programDateTimeIntervalSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/HlsEncryption.html">HlsEncryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamSelection</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/StreamSelection.html">StreamSelection</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroupSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/useAudioRenditionGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V22useAudioRenditionGroupSbSgvp">useAudioRenditionGroup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When enabled, audio streams will be placed in rendition groups in the output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useAudioRenditionGroup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MediaPackageAAV03HlsB0V9adMarkers10encryption23includeIframeOnlyStream12playlistType0K13WindowSeconds023programDateTimeIntervalN0015segmentDurationN015streamSelection22useAudioRenditionGroupAdB02AdE0OSg_AB0C10EncryptionVSgSbSgAB08PlaylistL0OSgs5Int32VSgA2zB0jV0VSgATtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(adMarkers:encryption:includeIframeOnlyStream:playlistType:playlistWindowSeconds:programDateTimeIntervalSeconds:segmentDurationSeconds:streamSelection:useAudioRenditionGroup:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MediaPackageAAV03HlsB0V9adMarkers10encryption23includeIframeOnlyStream12playlistType0K13WindowSeconds023programDateTimeIntervalN0015segmentDurationN015streamSelection22useAudioRenditionGroupAdB02AdE0OSg_AB0C10EncryptionVSgSbSgAB08PlaylistL0OSgs5Int32VSgA2zB0jV0VSgATtcfc">init(adMarkers:encryption:includeIframeOnlyStream:playlistType:playlistWindowSeconds:programDateTimeIntervalSeconds:segmentDurationSeconds:streamSelection:useAudioRenditionGroup:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">adMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/AdMarkers.html">AdMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/HlsEncryption.html">HlsEncryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeIframeOnlyStream</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/PlaylistType.html">PlaylistType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">playlistWindowSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programDateTimeIntervalSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentDurationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamSelection</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaPackage/StreamSelection.html">StreamSelection</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useAudioRenditionGroup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -865,7 +865,7 @@ it will be passed through to HLS output.</p>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

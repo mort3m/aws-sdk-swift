@@ -14,7 +14,7 @@
     <a title="ApplicationAutoScaling Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,90 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV22registerScalableTargetyAB08RegistereF8ResponseVAB0geF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/registerScalableTarget(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV22registerScalableTargetyAB08RegistereF8ResponseVAB0geF7RequestVKF">registerScalableTarget(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum values for its scalable dimension. After you register a scalable target, you can create and apply scaling policies using PutScalingPolicy. You can view the scaling policies for a service namespace using DescribeScalableTargets. If you no longer need a scalable target, you can deregister it using DeregisterScalableTarget.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerScalableTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetRequest.html">RegisterScalableTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling.html#/s:22ApplicationAutoScalingAAV30RegisterScalableTargetResponseV">RegisterScalableTargetResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV24deregisterScalableTargetyAB010DeregistereF8ResponseVAB0geF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deregisterScalableTarget(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV24deregisterScalableTargetyAB010DeregistereF8ResponseVAB0geF7RequestVKF">deregisterScalableTarget(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deregisters a scalable target. Deregistering a scalable target deletes the scaling policies that are associated with it. To create a scalable target or update an existing one, see RegisterScalableTarget.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deregisterScalableTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetRequest.html">DeregisterScalableTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling.html#/s:22ApplicationAutoScalingAAV32DeregisterScalableTargetResponseV">DeregisterScalableTargetResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV18putScheduledActionyAB03PuteF8ResponseVAB0geF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/putScheduledAction(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV18putScheduledActionyAB03PuteF8ResponseVAB0geF7RequestVKF">putScheduledAction(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates or updates a scheduled action for an Application Auto Scaling scalable target. Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scheduled action applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you register the scalable target using RegisterScalableTarget. To update an action, specify its name and the parameters that you want to change. If you don&rsquo;t specify start and end times, the old values are deleted. Any other parameters that you don&rsquo;t specify are not changed by this update request. You can view the scheduled actions using DescribeScheduledActions. If you are no longer using a scheduled action, you can delete it using DeleteScheduledAction.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putScheduledAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScheduledActionRequest.html">PutScheduledActionRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling.html#/s:22ApplicationAutoScalingAAV26PutScheduledActionResponseV">PutScheduledActionResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV06deleteC6PolicyyAB06DeletecE8ResponseVAB0fcE7RequestVKF"></a>
+                    <a name="/s:22ApplicationAutoScalingAAV06deleteC6Policyy3NIO15EventLoopFutureCyAB06DeletecE8ResponseVGAB0jcE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteScalingPolicy(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06deleteC6PolicyyAB06DeletecE8ResponseVAB0fcE7RequestVKF">deleteScalingPolicy(_:)</a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06deleteC6Policyy3NIO15EventLoopFutureCyAB06DeletecE8ResponseVGAB0jcE7RequestVKF">deleteScalingPolicy(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteScalingPolicy</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyRequest.html">DeleteScalingPolicyRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling.html#/s:22ApplicationAutoScalingAAV06DeleteC14PolicyResponseV">DeleteScalingPolicyResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteScalingPolicy</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyRequest.html">DeleteScalingPolicyRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyResponse.html">DeleteScalingPolicyResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -685,90 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03putC6PolicyyAB03PutcE8ResponseVAB0fcE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/putScalingPolicy(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03putC6PolicyyAB03PutcE8ResponseVAB0fcE7RequestVKF">putScalingPolicy(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates or updates a policy for an Application Auto Scaling scalable target. Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scaling policy applies to the scalable target identified by those three attributes. You cannot create a scaling policy until you register the scalable target using RegisterScalableTarget. To update a policy, specify its policy name and the parameters that you want to change. Any parameters that you don&rsquo;t specify are not changed by this update request. You can view the scaling policies for a service namespace using DescribeScalingPolicies. If you are no longer using a scaling policy, you can delete it using DeleteScalingPolicy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putScalingPolicy</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScalingPolicyRequest.html">PutScalingPolicyRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScalingPolicyResponse.html">PutScalingPolicyResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV24describeScheduledActionsyAB08DescribeeF8ResponseVAB0geF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeScheduledActions(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV24describeScheduledActionsyAB08DescribeeF8ResponseVAB0geF7RequestVKF">describeScheduledActions(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the scheduled actions for the specified service namespace. You can filter the results using the ResourceId, ScalableDimension, and ScheduledActionNames parameters. To create a scheduled action or update an existing one, see PutScheduledAction. If you are no longer using a scheduled action, you can delete it using DeleteScheduledAction.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScheduledActions</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsRequest.html">DescribeScheduledActionsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsResponse.html">DescribeScheduledActionsResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV08describeC8PoliciesyAB08DescribecE8ResponseVAB0fcE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeScalingPolicies(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08describeC8PoliciesyAB08DescribecE8ResponseVAB0fcE7RequestVKF">describeScalingPolicies(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the scaling policies for the specified service namespace. You can filter the results using the ResourceId, ScalableDimension, and PolicyNames parameters. To create a scaling policy or update an existing one, see PutScalingPolicy. If you are no longer using a scaling policy, you can delete it using DeleteScalingPolicy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalingPolicies</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesRequest.html">DescribeScalingPoliciesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesResponse.html">DescribeScalingPoliciesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV21deleteScheduledActionyAB06DeleteeF8ResponseVAB0geF7RequestVKF"></a>
+                    <a name="/s:22ApplicationAutoScalingAAV21deleteScheduledActiony3NIO15EventLoopFutureCyAB06DeleteeF8ResponseVGAB0keF7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteScheduledAction(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV21deleteScheduledActionyAB06DeleteeF8ResponseVAB0geF7RequestVKF">deleteScheduledAction(_:)</a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV21deleteScheduledActiony3NIO15EventLoopFutureCyAB06DeleteeF8ResponseVGAB0keF7RequestVKF">deleteScheduledAction(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +621,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteScheduledAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScheduledActionRequest.html">DeleteScheduledActionRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling.html#/s:22ApplicationAutoScalingAAV29DeleteScheduledActionResponseV">DeleteScheduledActionResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteScheduledAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScheduledActionRequest.html">DeleteScheduledActionRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DeleteScheduledActionResponse.html">DeleteScheduledActionResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV08describeC10ActivitiesyAB08DescribecE8ResponseVAB0fcE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeScalingActivities(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08describeC10ActivitiesyAB08DescribecE8ResponseVAB0fcE7RequestVKF">describeScalingActivities(_:)</a>
+                    <a name="/s:22ApplicationAutoScalingAAV24deregisterScalableTargety3NIO15EventLoopFutureCyAB010DeregistereF8ResponseVGAB0keF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deregisterScalableTarget(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV24deregisterScalableTargety3NIO15EventLoopFutureCyAB010DeregistereF8ResponseVGAB0keF7RequestVKF">deregisterScalableTarget(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides descriptive information about the scaling activities in the specified namespace from the previous six weeks. You can filter the results using the ResourceId and ScalableDimension parameters. Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling policies for a service namespace, see DescribeScalingPolicies. To create a scaling policy or update an existing one, see PutScalingPolicy.</p>
+                        <p>Deregisters a scalable target. Deregistering a scalable target deletes the scaling policies that are associated with it. To create a scalable target or update an existing one, see RegisterScalableTarget.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalingActivities</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingActivitiesRequest.html">DescribeScalingActivitiesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingActivitiesResponse.html">DescribeScalingActivitiesResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deregisterScalableTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetRequest.html">DeregisterScalableTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetResponse.html">DeregisterScalableTargetResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV23describeScalableTargetsyAB08DescribeeF8ResponseVAB0geF7RequestVKF"></a>
+                    <a name="/s:22ApplicationAutoScalingAAV23describeScalableTargetsy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/describeScalableTargets(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV23describeScalableTargetsyAB08DescribeeF8ResponseVAB0geF7RequestVKF">describeScalableTargets(_:)</a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV23describeScalableTargetsy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF">describeScalableTargets(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +675,169 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalableTargets</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsRequest.html">DescribeScalableTargetsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsResponse.html">DescribeScalableTargetsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalableTargets</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsRequest.html">DescribeScalableTargetsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsResponse.html">DescribeScalableTargetsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV08describeC10Activitiesy3NIO15EventLoopFutureCyAB08DescribecE8ResponseVGAB0jcE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeScalingActivities(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08describeC10Activitiesy3NIO15EventLoopFutureCyAB08DescribecE8ResponseVGAB0jcE7RequestVKF">describeScalingActivities(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides descriptive information about the scaling activities in the specified namespace from the previous six weeks. You can filter the results using the ResourceId and ScalableDimension parameters. Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling policies for a service namespace, see DescribeScalingPolicies. To create a scaling policy or update an existing one, see PutScalingPolicy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalingActivities</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingActivitiesRequest.html">DescribeScalingActivitiesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingActivitiesResponse.html">DescribeScalingActivitiesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV08describeC8Policiesy3NIO15EventLoopFutureCyAB08DescribecE8ResponseVGAB0jcE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeScalingPolicies(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08describeC8Policiesy3NIO15EventLoopFutureCyAB08DescribecE8ResponseVGAB0jcE7RequestVKF">describeScalingPolicies(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the scaling policies for the specified service namespace. You can filter the results using the ResourceId, ScalableDimension, and PolicyNames parameters. To create a scaling policy or update an existing one, see PutScalingPolicy. If you are no longer using a scaling policy, you can delete it using DeleteScalingPolicy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScalingPolicies</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesRequest.html">DescribeScalingPoliciesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesResponse.html">DescribeScalingPoliciesResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV24describeScheduledActionsy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeScheduledActions(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV24describeScheduledActionsy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF">describeScheduledActions(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the scheduled actions for the specified service namespace. You can filter the results using the ResourceId, ScalableDimension, and ScheduledActionNames parameters. To create a scheduled action or update an existing one, see PutScheduledAction. If you are no longer using a scheduled action, you can delete it using DeleteScheduledAction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeScheduledActions</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsRequest.html">DescribeScheduledActionsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsResponse.html">DescribeScheduledActionsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV03putC6Policyy3NIO15EventLoopFutureCyAB03PutcE8ResponseVGAB0jcE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/putScalingPolicy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03putC6Policyy3NIO15EventLoopFutureCyAB03PutcE8ResponseVGAB0jcE7RequestVKF">putScalingPolicy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates or updates a policy for an Application Auto Scaling scalable target. Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scaling policy applies to the scalable target identified by those three attributes. You cannot create a scaling policy until you register the scalable target using RegisterScalableTarget. To update a policy, specify its policy name and the parameters that you want to change. Any parameters that you don&rsquo;t specify are not changed by this update request. You can view the scaling policies for a service namespace using DescribeScalingPolicies. If you are no longer using a scaling policy, you can delete it using DeleteScalingPolicy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putScalingPolicy</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScalingPolicyRequest.html">PutScalingPolicyRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScalingPolicyResponse.html">PutScalingPolicyResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV18putScheduledActiony3NIO15EventLoopFutureCyAB03PuteF8ResponseVGAB0keF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/putScheduledAction(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV18putScheduledActiony3NIO15EventLoopFutureCyAB03PuteF8ResponseVGAB0keF7RequestVKF">putScheduledAction(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates or updates a scheduled action for an Application Auto Scaling scalable target. Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scheduled action applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you register the scalable target using RegisterScalableTarget. To update an action, specify its name and the parameters that you want to change. If you don&rsquo;t specify start and end times, the old values are deleted. Any other parameters that you don&rsquo;t specify are not changed by this update request. You can view the scheduled actions using DescribeScheduledActions. If you are no longer using a scheduled action, you can delete it using DeleteScheduledAction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putScheduledAction</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScheduledActionRequest.html">PutScheduledActionRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/PutScheduledActionResponse.html">PutScheduledActionResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV22registerScalableTargety3NIO15EventLoopFutureCyAB08RegistereF8ResponseVGAB0keF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/registerScalableTarget(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV22registerScalableTargety3NIO15EventLoopFutureCyAB08RegistereF8ResponseVGAB0keF7RequestVKF">registerScalableTarget(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum values for its scalable dimension. After you register a scalable target, you can create and apply scaling policies using PutScalingPolicy. You can view the scaling policies for a service namespace using DescribeScalableTargets. If you no longer need a scalable target, you can deregister it using DeregisterScalableTarget.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerScalableTarget</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetRequest.html">RegisterScalableTargetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetResponse.html">RegisterScalableTargetResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -848,34 +848,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV31DeregisterScalableTargetRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeregisterScalableTargetRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DeregisterScalableTargetRequestV">DeregisterScalableTargetRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeregisterScalableTargetRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -907,9 +879,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV31DescribeScheduledActionsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeScheduledActionsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DescribeScheduledActionsRequestV">DescribeScheduledActionsRequest</a>
+                    <a name="/s:22ApplicationAutoScalingAAV5AlarmV"></a>
+                    <a name="//apple_ref/swift/Struct/Alarm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV5AlarmV">Alarm</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -919,208 +891,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/Alarm.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScheduledActionsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV30RegisterScalableTargetResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/RegisterScalableTargetResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV30RegisterScalableTargetResponseV">RegisterScalableTargetResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterScalableTargetResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV10PolicyTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/PolicyType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV10PolicyTypeO">PolicyType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/PolicyType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PolicyType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV10MetricTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/MetricType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV10MetricTypeO">MetricType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/MetricType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MetricType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV31DescribeScalableTargetsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeScalableTargetsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DescribeScalableTargetsResponseV">DescribeScalableTargetsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalableTargetsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV29RegisterScalableTargetRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RegisterScalableTargetRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29RegisterScalableTargetRequestV">RegisterScalableTargetRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterScalableTargetRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV0C6PolicyV"></a>
-                    <a name="//apple_ref/swift/Struct/ScalingPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C6PolicyV">ScalingPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/ScalingPolicy.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalingPolicy</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV30DescribeScalableTargetsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeScalableTargetsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV30DescribeScalableTargetsRequestV">DescribeScalableTargetsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalableTargetsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Alarm</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1158,9 +935,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV29PredefinedMetricSpecificationV"></a>
-                    <a name="//apple_ref/swift/Struct/PredefinedMetricSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29PredefinedMetricSpecificationV">PredefinedMetricSpecification</a>
+                    <a name="/s:22ApplicationAutoScalingAAV06DeleteC13PolicyRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteScalingPolicyRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06DeleteC13PolicyRequestV">DeleteScalingPolicyRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1170,13 +947,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/PredefinedMetricSpecification.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PredefinedMetricSpecification</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScalingPolicyRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1186,9 +963,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/PutScalingPolicyRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV">PutScalingPolicyRequest</a>
+                    <a name="/s:22ApplicationAutoScalingAAV06DeleteC14PolicyResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteScalingPolicyResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06DeleteC14PolicyResponseV">DeleteScalingPolicyResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1198,97 +975,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/PutScalingPolicyRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScalingPolicyRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV"></a>
-                    <a name="//apple_ref/swift/Struct/ScheduledAction" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV">ScheduledAction</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/ScheduledAction.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScheduledAction</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV32DescribeScheduledActionsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeScheduledActionsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV32DescribeScheduledActionsResponseV">DescribeScheduledActionsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScheduledActionsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV04StepC19PolicyConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/StepScalingPolicyConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV04StepC19PolicyConfigurationV">StepScalingPolicyConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/StepScalingPolicyConfiguration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StepScalingPolicyConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScalingPolicyResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1326,9 +1019,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV0C18ActivityStatusCodeO"></a>
-                    <a name="//apple_ref/swift/Enum/ScalingActivityStatusCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C18ActivityStatusCodeO">ScalingActivityStatusCode</a>
+                    <a name="/s:22ApplicationAutoScalingAAV29DeleteScheduledActionResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteScheduledActionResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29DeleteScheduledActionResponseV">DeleteScheduledActionResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1338,13 +1031,125 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/ScalingActivityStatusCode.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/DeleteScheduledActionResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ScalingActivityStatusCode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScheduledActionResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV31DeregisterScalableTargetRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeregisterScalableTargetRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DeregisterScalableTargetRequestV">DeregisterScalableTargetRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeregisterScalableTargetRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV32DeregisterScalableTargetResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeregisterScalableTargetResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV32DeregisterScalableTargetResponseV">DeregisterScalableTargetResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DeregisterScalableTargetResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeregisterScalableTargetResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV30DescribeScalableTargetsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeScalableTargetsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV30DescribeScalableTargetsRequestV">DescribeScalableTargetsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalableTargetsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV31DescribeScalableTargetsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeScalableTargetsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DescribeScalableTargetsResponseV">DescribeScalableTargetsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DescribeScalableTargetsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalableTargetsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1410,9 +1215,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV17ScalableDimensionO"></a>
-                    <a name="//apple_ref/swift/Enum/ScalableDimension" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV17ScalableDimensionO">ScalableDimension</a>
+                    <a name="/s:22ApplicationAutoScalingAAV08DescribeC15PoliciesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeScalingPoliciesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08DescribeC15PoliciesRequestV">DescribeScalingPoliciesRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1422,13 +1227,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/ScalableDimension.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ScalableDimension</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalingPoliciesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1466,6 +1271,62 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:22ApplicationAutoScalingAAV31DescribeScheduledActionsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeScheduledActionsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV31DescribeScheduledActionsRequestV">DescribeScheduledActionsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScheduledActionsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV32DescribeScheduledActionsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeScheduledActionsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV32DescribeScheduledActionsResponseV">DescribeScheduledActionsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/DescribeScheduledActionsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScheduledActionsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:22ApplicationAutoScalingAAV21MetricAggregationTypeO"></a>
                     <a name="//apple_ref/swift/Enum/MetricAggregationType" class="dashAnchor"></a>
                     <a class="token" href="#/s:22ApplicationAutoScalingAAV21MetricAggregationTypeO">MetricAggregationType</a>
@@ -1485,283 +1346,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MetricAggregationType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV29DeleteScheduledActionResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteScheduledActionResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29DeleteScheduledActionResponseV">DeleteScheduledActionResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScheduledActionResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV06DeleteC14PolicyResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteScalingPolicyResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06DeleteC14PolicyResponseV">DeleteScalingPolicyResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScalingPolicyResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV25PutScheduledActionRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/PutScheduledActionRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV25PutScheduledActionRequestV">PutScheduledActionRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/PutScheduledActionRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScheduledActionRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV03PutC14PolicyResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/PutScalingPolicyResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC14PolicyResponseV">PutScalingPolicyResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/PutScalingPolicyResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScalingPolicyResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV32DeregisterScalableTargetResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeregisterScalableTargetResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV32DeregisterScalableTargetResponseV">DeregisterScalableTargetResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeregisterScalableTargetResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV06DeleteC13PolicyRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteScalingPolicyRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV06DeleteC13PolicyRequestV">DeleteScalingPolicyRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DeleteScalingPolicyRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteScalingPolicyRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV0C8ActivityV"></a>
-                    <a name="//apple_ref/swift/Struct/ScalingActivity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C8ActivityV">ScalingActivity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/ScalingActivity.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalingActivity</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15MetricStatisticO"></a>
-                    <a name="//apple_ref/swift/Enum/MetricStatistic" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15MetricStatisticO">MetricStatistic</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/MetricStatistic.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MetricStatistic</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV08DescribeC15PoliciesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeScalingPoliciesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV08DescribeC15PoliciesRequestV">DescribeScalingPoliciesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/DescribeScalingPoliciesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeScalingPoliciesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV14StepAdjustmentV"></a>
-                    <a name="//apple_ref/swift/Struct/StepAdjustment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV14StepAdjustmentV">StepAdjustment</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/ApplicationAutoScaling/StepAdjustment.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StepAdjustment</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1799,9 +1383,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV5AlarmV"></a>
-                    <a name="//apple_ref/swift/Struct/Alarm" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV5AlarmV">Alarm</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15MetricStatisticO"></a>
+                    <a name="//apple_ref/swift/Enum/MetricStatistic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15MetricStatisticO">MetricStatistic</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1811,13 +1395,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/Alarm.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/MetricStatistic.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Alarm</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MetricStatistic</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -1827,9 +1411,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV014TargetTrackingC19PolicyConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/TargetTrackingScalingPolicyConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV014TargetTrackingC19PolicyConfigurationV">TargetTrackingScalingPolicyConfiguration</a>
+                    <a name="/s:22ApplicationAutoScalingAAV10MetricTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/MetricType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV10MetricTypeO">MetricType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1839,13 +1423,265 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/MetricType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TargetTrackingScalingPolicyConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MetricType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV10PolicyTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/PolicyType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV10PolicyTypeO">PolicyType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PolicyType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PolicyType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV29PredefinedMetricSpecificationV"></a>
+                    <a name="//apple_ref/swift/Struct/PredefinedMetricSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29PredefinedMetricSpecificationV">PredefinedMetricSpecification</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PredefinedMetricSpecification.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PredefinedMetricSpecification</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/PutScalingPolicyRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC13PolicyRequestV">PutScalingPolicyRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PutScalingPolicyRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScalingPolicyRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV03PutC14PolicyResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/PutScalingPolicyResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV03PutC14PolicyResponseV">PutScalingPolicyResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PutScalingPolicyResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScalingPolicyResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV25PutScheduledActionRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/PutScheduledActionRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV25PutScheduledActionRequestV">PutScheduledActionRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PutScheduledActionRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScheduledActionRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV26PutScheduledActionResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/PutScheduledActionResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV26PutScheduledActionResponseV">PutScheduledActionResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/PutScheduledActionResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScheduledActionResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV29RegisterScalableTargetRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RegisterScalableTargetRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV29RegisterScalableTargetRequestV">RegisterScalableTargetRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterScalableTargetRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV30RegisterScalableTargetResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/RegisterScalableTargetResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV30RegisterScalableTargetResponseV">RegisterScalableTargetResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/RegisterScalableTargetResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterScalableTargetResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV17ScalableDimensionO"></a>
+                    <a name="//apple_ref/swift/Enum/ScalableDimension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV17ScalableDimensionO">ScalableDimension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/ScalableDimension.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ScalableDimension</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -1883,9 +1719,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV26PutScheduledActionResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/PutScheduledActionResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV26PutScheduledActionResponseV">PutScheduledActionResponse</a>
+                    <a name="/s:22ApplicationAutoScalingAAV20ScalableTargetActionV"></a>
+                    <a name="//apple_ref/swift/Struct/ScalableTargetAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV20ScalableTargetActionV">ScalableTargetAction</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1895,12 +1731,125 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Structs/ApplicationAutoScaling/ScalableTargetAction.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutScheduledActionResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalableTargetAction</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV0C8ActivityV"></a>
+                    <a name="//apple_ref/swift/Struct/ScalingActivity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C8ActivityV">ScalingActivity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/ScalingActivity.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalingActivity</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV0C18ActivityStatusCodeO"></a>
+                    <a name="//apple_ref/swift/Enum/ScalingActivityStatusCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C18ActivityStatusCodeO">ScalingActivityStatusCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/ScalingActivityStatusCode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ScalingActivityStatusCode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV0C6PolicyV"></a>
+                    <a name="//apple_ref/swift/Struct/ScalingPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV0C6PolicyV">ScalingPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/ScalingPolicy.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalingPolicy</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV"></a>
+                    <a name="//apple_ref/swift/Struct/ScheduledAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV">ScheduledAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/ScheduledAction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScheduledAction</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1938,9 +1887,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV20ScalableTargetActionV"></a>
-                    <a name="//apple_ref/swift/Struct/ScalableTargetAction" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV20ScalableTargetActionV">ScalableTargetAction</a>
+                    <a name="/s:22ApplicationAutoScalingAAV14StepAdjustmentV"></a>
+                    <a name="//apple_ref/swift/Struct/StepAdjustment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV14StepAdjustmentV">StepAdjustment</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1950,13 +1899,69 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/ApplicationAutoScaling/ScalableTargetAction.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/ApplicationAutoScaling/StepAdjustment.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScalableTargetAction</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StepAdjustment</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV04StepC19PolicyConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/StepScalingPolicyConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV04StepC19PolicyConfigurationV">StepScalingPolicyConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/StepScalingPolicyConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StepScalingPolicyConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV014TargetTrackingC19PolicyConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/TargetTrackingScalingPolicyConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV014TargetTrackingC19PolicyConfigurationV">TargetTrackingScalingPolicyConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/ApplicationAutoScaling/TargetTrackingScalingPolicyConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TargetTrackingScalingPolicyConfiguration</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1968,7 +1973,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

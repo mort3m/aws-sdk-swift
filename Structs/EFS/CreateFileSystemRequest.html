@@ -14,7 +14,7 @@
     <a title="CreateFileSystemRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV23CreateFileSystemRequestV14throughputModeAB010ThroughputG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/throughputMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV14throughputModeAB010ThroughputG0OSgvp">throughputMode</a>
+                    <a name="/s:3EFSAAV23CreateFileSystemRequestV9encryptedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV9encryptedSbSgvp">encrypted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The throughput mode for the file system to be created. There are two throughput modes to choose from for your file system: bursting and provisioned. You can decrease your file system&rsquo;s throughput in Provisioned Throughput mode or change between the throughput modes as long as it’s been more than 24 hours since the last decrease or throughput mode change.</p>
+                        <p>A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have the option of specifying a CreateFileSystemRequest$KmsKeyId for an existing AWS Key Management Service (AWS KMS) customer master key (CMK). If you don&rsquo;t specify a CMK, then the default CMK for Amazon EFS, /aws/elasticfilesystem, is used to protect the encrypted file system.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">throughputMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/ThroughputMode.html">ThroughputMode</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,60 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV23CreateFileSystemRequestV28provisionedThroughputInMibpsSdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/provisionedThroughputInMibps" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV28provisionedThroughputInMibpsSdSgvp">provisionedThroughputInMibps</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The throughput, measured in MiB/s, that you want to provision for a file system that you&rsquo;re creating. The limit on throughput is 1024 MiB/s. You can get these limits increased by contacting AWS Support. For more information, see Amazon EFS Limits That You Can Increase in the Amazon EFS User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">provisionedThroughputInMibps</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EFSAAV23CreateFileSystemRequestV9encryptedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV9encryptedSbSgvp">encrypted</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A Boolean value that, if true, creates an encrypted file system. When creating an encrypted file system, you have the option of specifying a CreateFileSystemRequest$KmsKeyId for an existing AWS Key Management Service (AWS KMS) customer master key (CMK). If you don&rsquo;t specify a CMK, then the default CMK for Amazon EFS, /aws/elasticfilesystem, is used to protect the encrypted file system.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EFSAAV23CreateFileSystemRequestV15performanceModeAB011PerformanceG0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/performanceMode" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV15performanceModeAB011PerformanceG0OSgvp">performanceMode</a>
@@ -739,9 +685,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EFSAAV23CreateFileSystemRequestV13creationToken14throughputMode8kmsKeyId28provisionedThroughputInMibps9encrypted011performanceI0ADSS_AB0nI0OSgSSSgSdSgSbSgAB011PerformanceI0OSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(creationToken:throughputMode:kmsKeyId:provisionedThroughputInMibps:encrypted:performanceMode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV13creationToken14throughputMode8kmsKeyId28provisionedThroughputInMibps9encrypted011performanceI0ADSS_AB0nI0OSgSSSgSdSgSbSgAB011PerformanceI0OSgtcfc">init(creationToken:throughputMode:kmsKeyId:provisionedThroughputInMibps:encrypted:performanceMode:)</a>
+                    <a name="/s:3EFSAAV23CreateFileSystemRequestV28provisionedThroughputInMibpsSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/provisionedThroughputInMibps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV28provisionedThroughputInMibpsSdSgvp">provisionedThroughputInMibps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The throughput, measured in MiB/s, that you want to provision for a file system that you&rsquo;re creating. The limit on throughput is 1024 MiB/s. You can get these limits increased by contacting AWS Support. For more information, see Amazon EFS Limits That You Can Increase in the Amazon EFS User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">provisionedThroughputInMibps</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV23CreateFileSystemRequestV14throughputModeAB010ThroughputG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/throughputMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV14throughputModeAB010ThroughputG0OSgvp">throughputMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The throughput mode for the file system to be created. There are two throughput modes to choose from for your file system: bursting and provisioned. You can decrease your file system&rsquo;s throughput in Provisioned Throughput mode or change between the throughput modes as long as it’s been more than 24 hours since the last decrease or throughput mode change.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">throughputMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/ThroughputMode.html">ThroughputMode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EFSAAV23CreateFileSystemRequestV13creationToken9encrypted8kmsKeyId15performanceMode28provisionedThroughputInMibps010throughputM0ADSS_SbSgSSSgAB011PerformanceM0OSgSdSgAB0oM0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(creationToken:encrypted:kmsKeyId:performanceMode:provisionedThroughputInMibps:throughputMode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EFSAAV23CreateFileSystemRequestV13creationToken9encrypted8kmsKeyId15performanceMode28provisionedThroughputInMibps010throughputM0ADSS_SbSgSSSgAB011PerformanceM0OSgSdSgAB0oM0OSgtcfc">init(creationToken:encrypted:kmsKeyId:performanceMode:provisionedThroughputInMibps:throughputMode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">creationToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">throughputMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/ThroughputMode.html">ThroughputMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisionedThroughputInMibps</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">performanceMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/PerformanceMode.html">PerformanceMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">creationToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">performanceMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/PerformanceMode.html">PerformanceMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisionedThroughputInMibps</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">throughputMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EFS/ThroughputMode.html">ThroughputMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

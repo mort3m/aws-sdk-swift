@@ -14,7 +14,7 @@
     <a title="CreateGameSessionInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/idempotencyToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyTokenSSSgvp">idempotencyToken</a>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV7aliasIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/aliasId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV7aliasIdSSSgvp">aliasId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Custom string that uniquely identifies a request for a new game session. Maximum token length is 48 characters. If provided, this string is included in the new game session&rsquo;s ID. (A game session ARN has the following format: arn:aws:gamelift:&lt;region&gt;::gamesession/&lt;fleet ID&gt;/&lt;custom ID string or idempotency token&gt;.) Idempotency tokens remain in use for 30 days after a game session has ended; game session objects are retained for this time period and then deleted.</p>
+                        <p>Unique identifier for an alias associated with the fleet to create a game session in. Each request must reference either a fleet ID or alias ID, but not both.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV04gameD4DataSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/gameSessionData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV04gameD4DataSSSgvp">gameSessionData</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set of custom game session properties, formatted as a single string value. This data is passed to a game server process in the GameSession object with a request to start a new game session (see Start a Game Session).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">gameSessionData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV013maximumPlayerD5Counts5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/maximumPlayerSessionCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV013maximumPlayerD5Counts5Int32Vvp">maximumPlayerSessionCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Maximum number of players that can be connected simultaneously to the game session.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maximumPlayerSessionCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aliasId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -676,33 +622,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV04gameD2IdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/gameSessionId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV04gameD2IdSSSgvp">gameSessionId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This parameter is no longer preferred. Please use IdempotencyToken instead. Custom string that uniquely identifies a request for a new game session. Maximum token length is 48 characters. If provided, this string is included in the new game session&rsquo;s ID. (A game session ARN has the following format: arn:aws:gamelift:&lt;region&gt;::gamesession/&lt;fleet ID&gt;/&lt;custom ID string or idempotency token&gt;.)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">gameSessionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV7aliasIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/aliasId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV7aliasIdSSSgvp">aliasId</a>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV04gameD4DataSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/gameSessionData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV04gameD4DataSSSgvp">gameSessionData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +695,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unique identifier for an alias associated with the fleet to create a game session in. Each request must reference either a fleet ID or alias ID, but not both.</p>
+                        <p>Set of custom game session properties, formatted as a single string value. This data is passed to a game server process in the GameSession object with a request to start a new game session (see Start a Game Session).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aliasId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">gameSessionData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV04gameD2IdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/gameSessionId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV04gameD2IdSSSgvp">gameSessionId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This parameter is no longer preferred. Please use IdempotencyToken instead. Custom string that uniquely identifies a request for a new game session. Maximum token length is 48 characters. If provided, this string is included in the new game session&rsquo;s ID. (A game session ARN has the following format: arn:aws:gamelift:&lt;region&gt;::gamesession/&lt;fleet ID&gt;/&lt;custom ID string or idempotency token&gt;.)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">gameSessionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/idempotencyToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyTokenSSSgvp">idempotencyToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Custom string that uniquely identifies a request for a new game session. Maximum token length is 48 characters. If provided, this string is included in the new game session&rsquo;s ID. (A game session ARN has the following format: arn:aws:gamelift:&lt;region&gt;::gamesession/&lt;fleet ID&gt;/&lt;custom ID string or idempotency token&gt;.) Idempotency tokens remain in use for 30 days after a game session has ended; game session objects are retained for this time period and then deleted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV013maximumPlayerD5Counts5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/maximumPlayerSessionCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV013maximumPlayerD5Counts5Int32Vvp">maximumPlayerSessionCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum number of players that can be connected simultaneously to the game session.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maximumPlayerSessionCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyToken04gameD4Data013maximumPlayerD5Count9creatorId0hdN005fleetN00H10Properties05aliasN04nameADSSSg_ANs5Int32VA3NSayAB0A8PropertyVGSgA2Ntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(idempotencyToken:gameSessionData:maximumPlayerSessionCount:creatorId:gameSessionId:fleetId:gameProperties:aliasId:name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV16idempotencyToken04gameD4Data013maximumPlayerD5Count9creatorId0hdN005fleetN00H10Properties05aliasN04nameADSSSg_ANs5Int32VA3NSayAB0A8PropertyVGSgA2Ntcfc">init(idempotencyToken:gameSessionData:maximumPlayerSessionCount:creatorId:gameSessionId:fleetId:gameProperties:aliasId:name:)</a>
+                    <a name="/s:8GameLiftAAV06CreateA12SessionInputV7aliasId07creatorG005fleetG014gameProperties0jD4Data0jdG016idempotencyToken013maximumPlayerD5Count4nameADSSSg_A2NSayAB0A8PropertyVGSgA3Ns5Int32VANtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(aliasId:creatorId:fleetId:gameProperties:gameSessionData:gameSessionId:idempotencyToken:maximumPlayerSessionCount:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV06CreateA12SessionInputV7aliasId07creatorG005fleetG014gameProperties0jD4Data0jdG016idempotencyToken013maximumPlayerD5Count4nameADSSSg_A2NSayAB0A8PropertyVGSgA3Ns5Int32VANtcfc">init(aliasId:creatorId:fleetId:gameProperties:gameSessionData:gameSessionId:idempotencyToken:maximumPlayerSessionCount:name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameSessionData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maximumPlayerSessionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">creatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameSessionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fleetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/GameProperty.html">GameProperty</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aliasId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">aliasId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creatorId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fleetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/GameProperty.html">GameProperty</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameSessionData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gameSessionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maximumPlayerSessionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="SendBounceRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV17originalMessageIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/originalMessageId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV17originalMessageIdSSvp">originalMessageId</a>
+                    <a name="/s:3SESAAV17SendBounceRequestV12bounceSenderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bounceSender" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV12bounceSenderSSvp">bounceSender</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,95 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The message ID of the message to be bounced.</p>
+                        <p>The address to use in the <q>From</q> header of the bounce message. This must be an identity that you have verified with Amazon SES.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">originalMessageId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV11explanationSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/explanation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV11explanationSSSgvp">explanation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Human-readable text for the bounce message to explain the failure. If not specified, the text will be auto-generated based on the bounced recipient information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">explanation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV24bouncedRecipientInfoListSayAB07BouncedfG0VGvp"></a>
-                    <a name="//apple_ref/swift/Property/bouncedRecipientInfoList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV24bouncedRecipientInfoListSayAB07BouncedfG0VGvp">bouncedRecipientInfoList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of recipients of the bounced message, including the information required to create the Delivery Status Notifications (DSNs) for the recipients. You must specify at least one BouncedRecipientInfo in the list.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bouncedRecipientInfoList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BouncedRecipientInfo.html">BouncedRecipientInfo</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV10messageDsnAB07MessageF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/messageDsn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV10messageDsnAB07MessageF0VSgvp">messageDsn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Message-related DSN fields. If not specified, Amazon SES will choose the values.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageDsn</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/MessageDsn.html">MessageDsn</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bounceSender</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV12bounceSenderSSvp"></a>
-                    <a name="//apple_ref/swift/Property/bounceSender" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV12bounceSenderSSvp">bounceSender</a>
+                    <a name="/s:3SESAAV17SendBounceRequestV24bouncedRecipientInfoListSayAB07BouncedfG0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/bouncedRecipientInfoList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV24bouncedRecipientInfoListSayAB07BouncedfG0VGvp">bouncedRecipientInfoList</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The address to use in the <q>From</q> header of the bounce message. This must be an identity that you have verified with Amazon SES.</p>
+                        <p>A list of recipients of the bounced message, including the information required to create the Delivery Status Notifications (DSNs) for the recipients. You must specify at least one BouncedRecipientInfo in the list.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bounceSender</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bouncedRecipientInfoList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BouncedRecipientInfo.html">BouncedRecipientInfo</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +658,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV17SendBounceRequestV17originalMessageId11explanation24bouncedRecipientInfoList10messageDsn15bounceSenderArn0oP0ADSS_SSSgSayAB07BouncedjK0VGAB0fN0VSgAKSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(originalMessageId:explanation:bouncedRecipientInfoList:messageDsn:bounceSenderArn:bounceSender:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV17originalMessageId11explanation24bouncedRecipientInfoList10messageDsn15bounceSenderArn0oP0ADSS_SSSgSayAB07BouncedjK0VGAB0fN0VSgAKSStcfc">init(originalMessageId:explanation:bouncedRecipientInfoList:messageDsn:bounceSenderArn:bounceSender:)</a>
+                    <a name="/s:3SESAAV17SendBounceRequestV11explanationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/explanation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV11explanationSSSgvp">explanation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Human-readable text for the bounce message to explain the failure. If not specified, the text will be auto-generated based on the bounced recipient information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">explanation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV17SendBounceRequestV10messageDsnAB07MessageF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/messageDsn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV10messageDsnAB07MessageF0VSgvp">messageDsn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Message-related DSN fields. If not specified, Amazon SES will choose the values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageDsn</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/MessageDsn.html">MessageDsn</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV17SendBounceRequestV17originalMessageIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/originalMessageId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV17originalMessageIdSSvp">originalMessageId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The message ID of the message to be bounced.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">originalMessageId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV17SendBounceRequestV12bounceSender0eF3Arn24bouncedRecipientInfoList11explanation10messageDsn17originalMessageIdADSS_SSSgSayAB07BouncediJ0VGAkB0pN0VSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(bounceSender:bounceSenderArn:bouncedRecipientInfoList:explanation:messageDsn:originalMessageId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV17SendBounceRequestV12bounceSender0eF3Arn24bouncedRecipientInfoList11explanation10messageDsn17originalMessageIdADSS_SSSgSayAB07BouncediJ0VGAkB0pN0VSgSStcfc">init(bounceSender:bounceSenderArn:bouncedRecipientInfoList:explanation:messageDsn:originalMessageId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">originalMessageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">explanation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bouncedRecipientInfoList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BouncedRecipientInfo.html">BouncedRecipientInfo</a></span><span class="p">],</span> <span class="nv">messageDsn</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/MessageDsn.html">MessageDsn</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bounceSenderArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bounceSender</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">bounceSender</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bounceSenderArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bouncedRecipientInfoList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BouncedRecipientInfo.html">BouncedRecipientInfo</a></span><span class="p">],</span> <span class="nv">explanation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageDsn</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/MessageDsn.html">MessageDsn</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">originalMessageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

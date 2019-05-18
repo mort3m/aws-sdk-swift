@@ -14,7 +14,7 @@
     <a title="DescribeDimensionKeysRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSecondss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/periodInSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSecondss5Int32VSgvp">periodInSeconds</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV7endTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV7endTime15AWSSDKSwiftCore0G5StampVvp">endTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The granularity, in seconds, of the data points returned from Performance Insights. A period can be as short as one second, or as long as one day (86400 seconds). Valid values are:    1 (one second)    60 (one minute)    300 (five minutes)    3600 (one hour)    86400 (twenty-four hours)   If you don&rsquo;t specify PeriodInSeconds, then Performance Insights will choose a value for you, with a goal of returning roughly 100-200 data points in the response.</p>
+                        <p>The date and time specifying the end of the requested time series data. The value specified is exclusive - data points less than (but not equal to) EndTime will be returned. The value for EndTime must be later than the value for StartTime.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">periodInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV6filterSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/filter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV6filterSDyS2SGSgvp">filter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more filters to apply in the request. Restrictions:   Any number of filters by the same dimension, as specified in the GroupBy or Partition parameters.   A single filter for any other dimension in this dimension group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV9startTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV9startTime15AWSSDKSwiftCore0G5StampVvp">startTime</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV10identifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV10identifierSSvp">identifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date and time specifying the beginning of the requested time series data. You can&rsquo;t specify a StartTime that&rsquo;s earlier than 7 days ago. The value specified is inclusive - data points equal to or greater than StartTime will be returned. The value for StartTime must be earlier than the value for EndTime.</p>
+                        <p>An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data source. To use an Amazon RDS instance as a data source, you specify its DbiResourceId value - for example: db-FAIHNTYBKTGAUSUZQYPDS2GW4A</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV6metricSSvp"></a>
-                    <a name="//apple_ref/swift/Property/metric" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV6metricSSvp">metric</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of a Performance Insights metric to be measured. Valid values for Metric are:    db.load.avg - a scaled representation of the number of active sessions for the database engine.    db.sampledload.avg - the raw number of active sessions for the database engine.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metric</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV11serviceTypeAB07ServiceG0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/serviceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV11serviceTypeAB07ServiceG0Ovp">serviceType</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV6metricSSvp"></a>
+                    <a name="//apple_ref/swift/Property/metric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV6metricSSvp">metric</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The AWS service for which Performance Insights will return metrics. The only valid value for ServiceType is: RDS</p>
+                        <p>The name of a Performance Insights metric to be measured. Valid values for Metric are:    db.load.avg - a scaled representation of the number of active sessions for the database engine.    db.sampledload.avg - the raw number of active sessions for the database engine.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/ServiceType.html">ServiceType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metric</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV7endTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV7endTime15AWSSDKSwiftCore0G5StampVvp">endTime</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSecondss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/periodInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSecondss5Int32VSgvp">periodInSeconds</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date and time specifying the end of the requested time series data. The value specified is exclusive - data points less than (but not equal to) EndTime will be returned. The value for EndTime must be later than the value for StartTime.</p>
+                        <p>The granularity, in seconds, of the data points returned from Performance Insights. A period can be as short as one second, or as long as one day (86400 seconds). Valid values are:    1 (one second)    60 (one minute)    300 (five minutes)    3600 (one hour)    86400 (twenty-four hours)   If you don&rsquo;t specify PeriodInSeconds, then Performance Insights will choose a value for you, with a goal of returning roughly 100-200 data points in the response.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">periodInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV10identifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/identifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV10identifierSSvp">identifier</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV11serviceTypeAB07ServiceG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/serviceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV11serviceTypeAB07ServiceG0Ovp">serviceType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An immutable, AWS Region-unique identifier for a data source. Performance Insights gathers metrics from this data source. To use an Amazon RDS instance as a data source, you specify its DbiResourceId value - for example: db-FAIHNTYBKTGAUSUZQYPDS2GW4A</p>
+                        <p>The AWS service for which Performance Insights will return metrics. The only valid value for ServiceType is: RDS</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/ServiceType.html">ServiceType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV6filterSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/filter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV6filterSDyS2SGSgvp">filter</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV9startTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV9startTime15AWSSDKSwiftCore0G5StampVvp">startTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more filters to apply in the request. Restrictions:   Any number of filters by the same dimension, as specified in the GroupBy or Partition parameters.   A single filter for any other dimension in this dimension group.</p>
+                        <p>The date and time specifying the beginning of the requested time series data. You can&rsquo;t specify a StartTime that&rsquo;s earlier than 7 days ago. The value specified is inclusive - data points equal to or greater than StartTime will be returned. The value for StartTime must be earlier than the value for EndTime.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSeconds7groupBy9startTime6metric10maxResults11serviceType9nextToken09partitionJ003endL010identifier6filterADs5Int32VSg_AB0C5GroupV15AWSSDKSwiftCore0L5StampVSSArB07ServiceQ0OSSSgATSgAWSSSDyS2SGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(periodInSeconds:groupBy:startTime:metric:maxResults:serviceType:nextToken:partitionBy:endTime:identifier:filter:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV15periodInSeconds7groupBy9startTime6metric10maxResults11serviceType9nextToken09partitionJ003endL010identifier6filterADs5Int32VSg_AB0C5GroupV15AWSSDKSwiftCore0L5StampVSSArB07ServiceQ0OSSSgATSgAWSSSDyS2SGSgtcfc">init(periodInSeconds:groupBy:startTime:metric:maxResults:serviceType:nextToken:partitionBy:endTime:identifier:filter:)</a>
+                    <a name="/s:2PIAAV28DescribeDimensionKeysRequestV7endTime6filter7groupBy10identifier10maxResults6metric9nextToken09partitionJ015periodInSeconds11serviceType05startG0AD15AWSSDKSwiftCore0G5StampV_SDyS2SGSgAB0C5GroupVSSs5Int32VSgS2SSgAVSgAyB07ServiceV0OARtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(endTime:filter:groupBy:identifier:maxResults:metric:nextToken:partitionBy:periodInSeconds:serviceType:startTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2PIAAV28DescribeDimensionKeysRequestV7endTime6filter7groupBy10identifier10maxResults6metric9nextToken09partitionJ015periodInSeconds11serviceType05startG0AD15AWSSDKSwiftCore0G5StampV_SDyS2SGSgAB0C5GroupVSSs5Int32VSgS2SSgAVSgAyB07ServiceV0OARtcfc">init(endTime:filter:groupBy:identifier:maxResults:metric:nextToken:partitionBy:periodInSeconds:serviceType:startTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">periodInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/DimensionGroup.html">DimensionGroup</a></span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">metric</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/ServiceType.html">ServiceType</a></span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">partitionBy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/DimensionGroup.html">DimensionGroup</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">filter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">filter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/DimensionGroup.html">DimensionGroup</a></span><span class="p">,</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metric</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">partitionBy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/DimensionGroup.html">DimensionGroup</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">periodInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/PI/ServiceType.html">ServiceType</a></span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

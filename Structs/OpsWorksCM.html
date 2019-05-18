@@ -14,7 +14,7 @@
     <a title="OpsWorksCM Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,198 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV12createBackupyAB06CreateE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createBackup(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12createBackupyAB06CreateE8ResponseVAB0fE7RequestVKF">createBackup(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates an application-level backup of a server. While the server is in the BACKING_UP state, the server cannot be changed, and no additional backup can be created.   Backups can be created for servers in RUNNING, HEALTHY, and UNHEALTHY states. By default, you can create a maximum of 50 manual backups.   This operation is asynchronous.   A LimitExceededException is thrown when the maximum number of manual backups is reached. An InvalidStateException is thrown when the server is not in any of the following states: RUNNING, HEALTHY, or UNHEALTHY. A ResourceNotFoundException is thrown when the server is not found. A ValidationException is thrown when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateBackupRequest.html">CreateBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateBackupResponse.html">CreateBackupResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV25describeAccountAttributesyAB08DescribeeF8ResponseVAB0geF7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeAccountAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV25describeAccountAttributesyAB08DescribeeF8ResponseVAB0geF7RequestVKF">describeAccountAttributes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes your account attributes, and creates requests to increase limits before they are reached or exceeded.   This operation is synchronous.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeAccountAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM.html#/s:10OpsWorksCMAAV32DescribeAccountAttributesRequestV">DescribeAccountAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeAccountAttributesResponse.html">DescribeAccountAttributesResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV12deleteServeryAB06DeleteE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/deleteServer(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12deleteServeryAB06DeleteE8ResponseVAB0fE7RequestVKF">deleteServer(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Deletes the server and the underlying AWS CloudFormation stacks (including the server&rsquo;s EC2 instance). When you run this command, the server state is updated to DELETING. After the server is deleted, it is no longer returned by DescribeServer requests. If the AWS CloudFormation stack cannot be deleted, the server cannot be deleted.   This operation is asynchronous.   An InvalidStateException is thrown when a server deletion is already in progress. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DeleteServerRequest.html">DeleteServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM.html#/s:10OpsWorksCMAAV20DeleteServerResponseV">DeleteServerResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV13restoreServeryAB07RestoreE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/restoreServer(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV13restoreServeryAB07RestoreE8ResponseVAB0fE7RequestVKF">restoreServer(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Restores a backup to a server that is in a CONNECTION_LOST, HEALTHY, RUNNING, UNHEALTHY, or TERMINATED state. When you run RestoreServer, the server&rsquo;s EC2 instance is deleted, and a new EC2 instance is configured. RestoreServer maintains the existing server endpoint, so configuration management of the server&rsquo;s client devices (nodes) should continue to work.   This operation is asynchronous.   An InvalidStateException is thrown when the server is not in a valid state. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">restoreServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/RestoreServerRequest.html">RestoreServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM.html#/s:10OpsWorksCMAAV21RestoreServerResponseV">RestoreServerResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV12createServeryAB06CreateE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/createServer(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12createServeryAB06CreateE8ResponseVAB0fE7RequestVKF">createServer(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates and immedately starts a new server. The server is ready to use when it is in the HEALTHY state. By default, you can create a maximum of 10 servers.   This operation is asynchronous.   A LimitExceededException is thrown when you have created the maximum number of servers (10). A ResourceAlreadyExistsException is thrown when a server with the same name already exists in the account. A ResourceNotFoundException is thrown when you specify a backup ID that is not valid or is for a backup that does not exist. A ValidationException is thrown when parameters of the request are not valid.   If you do not specify a security group by adding the SecurityGroupIds parameter, AWS OpsWorks creates a new security group.   Chef Automate: The default security group opens the Chef server to the world on TCP port 443. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.   Puppet Enterprise: The default security group opens TCP ports 22, 443, 4433, 8140, 8142, 8143, and 8170. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.  By default, your server is accessible from any IP address. We recommend that you update your security group rules to allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the navigation pane of the EC2 management console.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateServerRequest.html">CreateServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateServerResponse.html">CreateServerResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV15describeServersyAB08DescribeE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeServers(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV15describeServersyAB08DescribeE8ResponseVAB0fE7RequestVKF">describeServers(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Lists all configuration management servers that are identified with your account. Only the stored results from Amazon DynamoDB are returned. AWS OpsWorks CM does not query other services.   This operation is synchronous.   A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeServers</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeServersRequest.html">DescribeServersRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeServersResponse.html">DescribeServersResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV29describeNodeAssociationStatusyAB08DescribeefG8ResponseVAB0hefG7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeNodeAssociationStatus(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV29describeNodeAssociationStatusyAB08DescribeefG8ResponseVAB0hefG7RequestVKF">describeNodeAssociationStatus(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the current status of an existing association or disassociation request.   A ResourceNotFoundException is thrown when no recent association or disassociation request with the specified token is found, or when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeNodeAssociationStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusRequest.html">DescribeNodeAssociationStatusRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusResponse.html">DescribeNodeAssociationStatusResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV13associateNodeyAB09AssociateE8ResponseVAB0fE7RequestVKF"></a>
+                    <a name="/s:10OpsWorksCMAAV13associateNodey3NIO15EventLoopFutureCyAB09AssociateE8ResponseVGAB0jE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/associateNode(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV13associateNodeyAB09AssociateE8ResponseVAB0fE7RequestVKF">associateNode(_:)</a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV13associateNodey3NIO15EventLoopFutureCyAB09AssociateE8ResponseVGAB0jE7RequestVKF">associateNode(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateNode</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/AssociateNodeRequest.html">AssociateNodeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/AssociateNodeResponse.html">AssociateNodeResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">associateNode</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/AssociateNodeRequest.html">AssociateNodeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/AssociateNodeResponse.html">AssociateNodeResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +604,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV12deleteBackupyAB06DeleteE8ResponseVAB0fE7RequestVKF"></a>
+                    <a name="/s:10OpsWorksCMAAV12createBackupy3NIO15EventLoopFutureCyAB06CreateE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createBackup(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12createBackupy3NIO15EventLoopFutureCyAB06CreateE8ResponseVGAB0jE7RequestVKF">createBackup(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an application-level backup of a server. While the server is in the BACKING_UP state, the server cannot be changed, and no additional backup can be created.   Backups can be created for servers in RUNNING, HEALTHY, and UNHEALTHY states. By default, you can create a maximum of 50 manual backups.   This operation is asynchronous.   A LimitExceededException is thrown when the maximum number of manual backups is reached. An InvalidStateException is thrown when the server is not in any of the following states: RUNNING, HEALTHY, or UNHEALTHY. A ResourceNotFoundException is thrown when the server is not found. A ValidationException is thrown when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateBackupRequest.html">CreateBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/CreateBackupResponse.html">CreateBackupResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV12createServery3NIO15EventLoopFutureCyAB06CreateE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/createServer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12createServery3NIO15EventLoopFutureCyAB06CreateE8ResponseVGAB0jE7RequestVKF">createServer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates and immedately starts a new server. The server is ready to use when it is in the HEALTHY state. By default, you can create a maximum of 10 servers.   This operation is asynchronous.   A LimitExceededException is thrown when you have created the maximum number of servers (10). A ResourceAlreadyExistsException is thrown when a server with the same name already exists in the account. A ResourceNotFoundException is thrown when you specify a backup ID that is not valid or is for a backup that does not exist. A ValidationException is thrown when parameters of the request are not valid.   If you do not specify a security group by adding the SecurityGroupIds parameter, AWS OpsWorks creates a new security group.   Chef Automate: The default security group opens the Chef server to the world on TCP port 443. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.   Puppet Enterprise: The default security group opens TCP ports 22, 443, 4433, 8140, 8142, 8143, and 8170. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.  By default, your server is accessible from any IP address. We recommend that you update your security group rules to allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the navigation pane of the EC2 management console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/CreateServerRequest.html">CreateServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/CreateServerResponse.html">CreateServerResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV12deleteBackupy3NIO15EventLoopFutureCyAB06DeleteE8ResponseVGAB0jE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteBackup(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12deleteBackupyAB06DeleteE8ResponseVAB0fE7RequestVKF">deleteBackup(_:)</a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12deleteBackupy3NIO15EventLoopFutureCyAB06DeleteE8ResponseVGAB0jE7RequestVKF">deleteBackup(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DeleteBackupRequest.html">DeleteBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM.html#/s:10OpsWorksCMAAV20DeleteBackupResponseV">DeleteBackupResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteBackup</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DeleteBackupRequest.html">DeleteBackupRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DeleteBackupResponse.html">DeleteBackupResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV14describeEventsyAB08DescribeE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeEvents(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV14describeEventsyAB08DescribeE8ResponseVAB0fE7RequestVKF">describeEvents(_:)</a>
+                    <a name="/s:10OpsWorksCMAAV12deleteServery3NIO15EventLoopFutureCyAB06DeleteE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/deleteServer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12deleteServery3NIO15EventLoopFutureCyAB06DeleteE8ResponseVGAB0jE7RequestVKF">deleteServer(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Describes events for a specified server. Results are ordered by time, with newest events first.   This operation is synchronous.   A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+                        <p>Deletes the server and the underlying AWS CloudFormation stacks (including the server&rsquo;s EC2 instance). When you run this command, the server state is updated to DELETING. After the server is deleted, it is no longer returned by DescribeServer requests. If the AWS CloudFormation stack cannot be deleted, the server cannot be deleted.   This operation is asynchronous.   An InvalidStateException is thrown when a server deletion is already in progress. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeEvents</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeEventsRequest.html">DescribeEventsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeEventsResponse.html">DescribeEventsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DeleteServerRequest.html">DeleteServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DeleteServerResponse.html">DeleteServerResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV28updateServerEngineAttributesyAB06UpdateefG8ResponseVAB0hefG7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/updateServerEngineAttributes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV28updateServerEngineAttributesyAB06UpdateefG8ResponseVAB0hefG7RequestVKF">updateServerEngineAttributes(_:)</a>
+                    <a name="/s:10OpsWorksCMAAV25describeAccountAttributesy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeAccountAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV25describeAccountAttributesy3NIO15EventLoopFutureCyAB08DescribeeF8ResponseVGAB0keF7RequestVKF">describeAccountAttributes(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates engine-specific attributes on a specified server. The server enters the MODIFYING state when this operation is in progress. Only one update can occur at a time. You can use this command to reset a Chef server&rsquo;s private key (CHEF_PIVOTAL_KEY), a Chef server&rsquo;s admin password (CHEF_DELIVERY_ADMIN_PASSWORD), or a Puppet server&rsquo;s admin password (PUPPET_ADMIN_PASSWORD).   This operation is asynchronous.   This operation can only be called for servers in HEALTHY or UNHEALTHY states. Otherwise, an InvalidStateException is raised. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+                        <p>Describes your account attributes, and creates requests to increase limits before they are reached or exceeded.   This operation is synchronous.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateServerEngineAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesRequest.html">UpdateServerEngineAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesResponse.html">UpdateServerEngineAttributesResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeAccountAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeAccountAttributesRequest.html">DescribeAccountAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DescribeAccountAttributesResponse.html">DescribeAccountAttributesResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -874,63 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV16disassociateNodeyAB012DisassociateE8ResponseVAB0fE7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/disassociateNode(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV16disassociateNodeyAB012DisassociateE8ResponseVAB0fE7RequestVKF">disassociateNode(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Disassociates a node from an AWS OpsWorks CM server, and removes the node from the server&rsquo;s managed nodes. After a node is disassociated, the node key pair is no longer valid for accessing the configuration manager&rsquo;s API. For more information about how to associate a node, see AssociateNode.  A node can can only be disassociated from a server that is in a HEALTHY state. Otherwise, an InvalidStateException is thrown. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateNode</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DisassociateNodeRequest.html">DisassociateNodeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DisassociateNodeResponse.html">DisassociateNodeResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV27exportServerEngineAttributeyAB06ExportefG8ResponseVAB0hefG7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/exportServerEngineAttribute(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV27exportServerEngineAttributeyAB06ExportefG8ResponseVAB0hefG7RequestVKF">exportServerEngineAttribute(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Exports a specified server engine attribute as a base64-encoded string. For example, you can export user data that you can use in EC2 to associate nodes with a server.   This operation is synchronous.   A ValidationException is raised when parameters of the request are not valid. A ResourceNotFoundException is thrown when the server does not exist. An InvalidStateException is thrown when the server is in any of the following states: CREATING, TERMINATED, FAILED or DELETING.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportServerEngineAttribute</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/ExportServerEngineAttributeRequest.html">ExportServerEngineAttributeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/ExportServerEngineAttributeResponse.html">ExportServerEngineAttributeResponse</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV15describeBackupsyAB08DescribeE8ResponseVAB0fE7RequestVKF"></a>
+                    <a name="/s:10OpsWorksCMAAV15describeBackupsy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/describeBackups(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV15describeBackupsyAB08DescribeE8ResponseVAB0fE7RequestVKF">describeBackups(_:)</a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV15describeBackupsy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF">describeBackups(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeBackups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeBackupsRequest.html">DescribeBackupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeBackupsResponse.html">DescribeBackupsResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeBackups</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeBackupsRequest.html">DescribeBackupsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DescribeBackupsResponse.html">DescribeBackupsResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +766,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV16startMaintenanceyAB05StartE8ResponseVAB0fE7RequestVKF"></a>
+                    <a name="/s:10OpsWorksCMAAV14describeEventsy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeEvents(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV14describeEventsy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF">describeEvents(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes events for a specified server. Results are ordered by time, with newest events first.   This operation is synchronous.   A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeEvents</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeEventsRequest.html">DescribeEventsRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DescribeEventsResponse.html">DescribeEventsResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV29describeNodeAssociationStatusy3NIO15EventLoopFutureCyAB08DescribeefG8ResponseVGAB0lefG7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeNodeAssociationStatus(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV29describeNodeAssociationStatusy3NIO15EventLoopFutureCyAB08DescribeefG8ResponseVGAB0lefG7RequestVKF">describeNodeAssociationStatus(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current status of an existing association or disassociation request.   A ResourceNotFoundException is thrown when no recent association or disassociation request with the specified token is found, or when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeNodeAssociationStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusRequest.html">DescribeNodeAssociationStatusRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusResponse.html">DescribeNodeAssociationStatusResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV15describeServersy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeServers(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV15describeServersy3NIO15EventLoopFutureCyAB08DescribeE8ResponseVGAB0jE7RequestVKF">describeServers(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists all configuration management servers that are identified with your account. Only the stored results from Amazon DynamoDB are returned. AWS OpsWorks CM does not query other services.   This operation is synchronous.   A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeServers</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DescribeServersRequest.html">DescribeServersRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DescribeServersResponse.html">DescribeServersResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV16disassociateNodey3NIO15EventLoopFutureCyAB012DisassociateE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/disassociateNode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV16disassociateNodey3NIO15EventLoopFutureCyAB012DisassociateE8ResponseVGAB0jE7RequestVKF">disassociateNode(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disassociates a node from an AWS OpsWorks CM server, and removes the node from the server&rsquo;s managed nodes. After a node is disassociated, the node key pair is no longer valid for accessing the configuration manager&rsquo;s API. For more information about how to associate a node, see AssociateNode.  A node can can only be disassociated from a server that is in a HEALTHY state. Otherwise, an InvalidStateException is thrown. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disassociateNode</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/DisassociateNodeRequest.html">DisassociateNodeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/DisassociateNodeResponse.html">DisassociateNodeResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV27exportServerEngineAttributey3NIO15EventLoopFutureCyAB06ExportefG8ResponseVGAB0lefG7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/exportServerEngineAttribute(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV27exportServerEngineAttributey3NIO15EventLoopFutureCyAB06ExportefG8ResponseVGAB0lefG7RequestVKF">exportServerEngineAttribute(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exports a specified server engine attribute as a base64-encoded string. For example, you can export user data that you can use in EC2 to associate nodes with a server.   This operation is synchronous.   A ValidationException is raised when parameters of the request are not valid. A ResourceNotFoundException is thrown when the server does not exist. An InvalidStateException is thrown when the server is in any of the following states: CREATING, TERMINATED, FAILED or DELETING.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportServerEngineAttribute</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/ExportServerEngineAttributeRequest.html">ExportServerEngineAttributeRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/ExportServerEngineAttributeResponse.html">ExportServerEngineAttributeResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV13restoreServery3NIO15EventLoopFutureCyAB07RestoreE8ResponseVGAB0jE7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/restoreServer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV13restoreServery3NIO15EventLoopFutureCyAB07RestoreE8ResponseVGAB0jE7RequestVKF">restoreServer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restores a backup to a server that is in a CONNECTION_LOST, HEALTHY, RUNNING, UNHEALTHY, or TERMINATED state. When you run RestoreServer, the server&rsquo;s EC2 instance is deleted, and a new EC2 instance is configured. RestoreServer maintains the existing server endpoint, so configuration management of the server&rsquo;s client devices (nodes) should continue to work.   This operation is asynchronous.   An InvalidStateException is thrown when the server is not in a valid state. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">restoreServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/RestoreServerRequest.html">RestoreServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/RestoreServerResponse.html">RestoreServerResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV16startMaintenancey3NIO15EventLoopFutureCyAB05StartE8ResponseVGAB0jE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/startMaintenance(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV16startMaintenanceyAB05StartE8ResponseVAB0fE7RequestVKF">startMaintenance(_:)</a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV16startMaintenancey3NIO15EventLoopFutureCyAB05StartE8ResponseVGAB0jE7RequestVKF">startMaintenance(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +945,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startMaintenance</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/StartMaintenanceRequest.html">StartMaintenanceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/StartMaintenanceResponse.html">StartMaintenanceResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startMaintenance</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/StartMaintenanceRequest.html">StartMaintenanceRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/StartMaintenanceResponse.html">StartMaintenanceResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV12updateServeryAB06UpdateE8ResponseVAB0fE7RequestVKF"></a>
+                    <a name="/s:10OpsWorksCMAAV12updateServery3NIO15EventLoopFutureCyAB06UpdateE8ResponseVGAB0jE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/updateServer(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12updateServeryAB06UpdateE8ResponseVAB0fE7RequestVKF">updateServer(_:)</a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12updateServery3NIO15EventLoopFutureCyAB06UpdateE8ResponseVGAB0jE7RequestVKF">updateServer(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -999,7 +972,34 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerRequest.html">UpdateServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerResponse.html">UpdateServerResponse</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateServer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerRequest.html">UpdateServerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerResponse.html">UpdateServerResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV28updateServerEngineAttributesy3NIO15EventLoopFutureCyAB06UpdateefG8ResponseVGAB0lefG7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/updateServerEngineAttributes(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV28updateServerEngineAttributesy3NIO15EventLoopFutureCyAB06UpdateefG8ResponseVGAB0lefG7RequestVKF">updateServerEngineAttributes(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates engine-specific attributes on a specified server. The server enters the MODIFYING state when this operation is in progress. Only one update can occur at a time. You can use this command to reset a Chef server&rsquo;s private key (CHEF_PIVOTAL_KEY), a Chef server&rsquo;s admin password (CHEF_DELIVERY_ADMIN_PASSWORD), or a Puppet server&rsquo;s admin password (PUPPET_ADMIN_PASSWORD).   This operation is asynchronous.   This operation can only be called for servers in HEALTHY or UNHEALTHY states. Otherwise, an InvalidStateException is raised. A ResourceNotFoundException is thrown when the server does not exist. A ValidationException is raised when parameters of the request are not valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateServerEngineAttributes</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesRequest.html">UpdateServerEngineAttributesRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesResponse.html">UpdateServerEngineAttributesResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1010,90 +1010,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV23DescribeBackupsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeBackupsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV23DescribeBackupsResponseV">DescribeBackupsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeBackupsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV36UpdateServerEngineAttributesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateServerEngineAttributesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV36UpdateServerEngineAttributesResponseV">UpdateServerEngineAttributesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerEngineAttributesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20UpdateServerResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateServerResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20UpdateServerResponseV">UpdateServerResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/UpdateServerResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1116,230 +1032,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AccountAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV24DisassociateNodeResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateNodeResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV24DisassociateNodeResponseV">DisassociateNodeResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DisassociateNodeResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateNodeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV34ExportServerEngineAttributeRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ExportServerEngineAttributeRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV34ExportServerEngineAttributeRequestV">ExportServerEngineAttributeRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/ExportServerEngineAttributeRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportServerEngineAttributeRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV17MaintenanceStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/MaintenanceStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV17MaintenanceStatusO">MaintenanceStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/MaintenanceStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MaintenanceStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV33DescribeAccountAttributesResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeAccountAttributesResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV33DescribeAccountAttributesResponseV">DescribeAccountAttributesResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeAccountAttributesResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAccountAttributesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19DeleteServerRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteServerRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19DeleteServerRequestV">DeleteServerRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DeleteServerRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV22DescribeEventsResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeEventsResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeEventsResponseV">DescribeEventsResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeEventsResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeEventsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV21AssociateNodeResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/AssociateNodeResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV21AssociateNodeResponseV">AssociateNodeResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/AssociateNodeResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AssociateNodeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV35UpdateServerEngineAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateServerEngineAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV35UpdateServerEngineAttributesRequestV">UpdateServerEngineAttributesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerEngineAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1377,9 +1069,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV23DescribeServersResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeServersResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV23DescribeServersResponseV">DescribeServersResponse</a>
+                    <a name="/s:10OpsWorksCMAAV21AssociateNodeResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AssociateNodeResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV21AssociateNodeResponseV">AssociateNodeResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1389,598 +1081,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/OpsWorksCM/DescribeServersResponse.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/OpsWorksCM/AssociateNodeResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServersResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20CreateBackupResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateBackupResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20CreateBackupResponseV">CreateBackupResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/CreateBackupResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV12BackupStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/BackupStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12BackupStatusO">BackupStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/BackupStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BackupStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV24StartMaintenanceResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/StartMaintenanceResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV24StartMaintenanceResponseV">StartMaintenanceResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/StartMaintenanceResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartMaintenanceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV23DisassociateNodeRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DisassociateNodeRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV23DisassociateNodeRequestV">DisassociateNodeRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DisassociateNodeRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateNodeRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV21RestoreServerResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/RestoreServerResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV21RestoreServerResponseV">RestoreServerResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RestoreServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV32DescribeAccountAttributesRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeAccountAttributesRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV32DescribeAccountAttributesRequestV">DescribeAccountAttributesRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAccountAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateBackupRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateBackupRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateBackupRequestV">CreateBackupRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/CreateBackupRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateServerRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV">CreateServerRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/CreateServerRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV37DescribeNodeAssociationStatusResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeNodeAssociationStatusResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV37DescribeNodeAssociationStatusResponseV">DescribeNodeAssociationStatusResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeNodeAssociationStatusResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20CreateServerResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/CreateServerResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20CreateServerResponseV">CreateServerResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/CreateServerResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV11ServerEventV"></a>
-                    <a name="//apple_ref/swift/Struct/ServerEvent" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV11ServerEventV">ServerEvent</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/ServerEvent.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServerEvent</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV22DescribeBackupsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeBackupsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeBackupsRequestV">DescribeBackupsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeBackupsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19UpdateServerRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/UpdateServerRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19UpdateServerRequestV">UpdateServerRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/UpdateServerRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV23StartMaintenanceRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/StartMaintenanceRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV23StartMaintenanceRequestV">StartMaintenanceRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/StartMaintenanceRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartMaintenanceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV21DescribeEventsRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeEventsRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV21DescribeEventsRequestV">DescribeEventsRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DescribeEventsRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeEventsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20DeleteBackupResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteBackupResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20DeleteBackupResponseV">DeleteBackupResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV35ExportServerEngineAttributeResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/ExportServerEngineAttributeResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV35ExportServerEngineAttributeResponseV">ExportServerEngineAttributeResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/ExportServerEngineAttributeResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportServerEngineAttributeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV21NodeAssociationStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/NodeAssociationStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV21NodeAssociationStatusO">NodeAssociationStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/NodeAssociationStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">NodeAssociationStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19DeleteBackupRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteBackupRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19DeleteBackupRequestV">DeleteBackupRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/DeleteBackupRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20RestoreServerRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RestoreServerRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20RestoreServerRequestV">RestoreServerRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/RestoreServerRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RestoreServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV12ServerStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/ServerStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV12ServerStatusO">ServerStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/ServerStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ServerStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AssociateNodeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2018,9 +1125,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV6ServerV"></a>
-                    <a name="//apple_ref/swift/Struct/Server" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV6ServerV">Server</a>
+                    <a name="/s:10OpsWorksCMAAV12BackupStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/BackupStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12BackupStatusO">BackupStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2030,68 +1137,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/OpsWorksCM/Server.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/OpsWorksCM/BackupStatus.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Server</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV20DeleteServerResponseV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteServerResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV20DeleteServerResponseV">DeleteServerResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV15EngineAttributeV"></a>
-                    <a name="//apple_ref/swift/Struct/EngineAttribute" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV15EngineAttributeV">EngineAttribute</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/OpsWorksCM/EngineAttribute.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">EngineAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BackupStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -2129,9 +1181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV22DescribeServersRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeServersRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeServersRequestV">DescribeServersRequest</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateBackupRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateBackupRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateBackupRequestV">CreateBackupRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2141,13 +1193,377 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/OpsWorksCM/DescribeServersRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/OpsWorksCM/CreateBackupRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServersRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20CreateBackupResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateBackupResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20CreateBackupResponseV">CreateBackupResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/CreateBackupResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateServerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV">CreateServerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/CreateServerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20CreateServerResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CreateServerResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20CreateServerResponseV">CreateServerResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/CreateServerResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CreateServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19DeleteBackupRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteBackupRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19DeleteBackupRequestV">DeleteBackupRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DeleteBackupRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20DeleteBackupResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteBackupResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20DeleteBackupResponseV">DeleteBackupResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DeleteBackupResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteBackupResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19DeleteServerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteServerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19DeleteServerRequestV">DeleteServerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DeleteServerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20DeleteServerResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteServerResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20DeleteServerResponseV">DeleteServerResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DeleteServerResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV32DescribeAccountAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeAccountAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV32DescribeAccountAttributesRequestV">DescribeAccountAttributesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeAccountAttributesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAccountAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV33DescribeAccountAttributesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeAccountAttributesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV33DescribeAccountAttributesResponseV">DescribeAccountAttributesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeAccountAttributesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeAccountAttributesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV22DescribeBackupsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeBackupsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeBackupsRequestV">DescribeBackupsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeBackupsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV23DescribeBackupsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeBackupsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV23DescribeBackupsResponseV">DescribeBackupsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeBackupsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeBackupsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV21DescribeEventsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeEventsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV21DescribeEventsRequestV">DescribeEventsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeEventsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeEventsRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV22DescribeEventsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeEventsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeEventsResponseV">DescribeEventsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeEventsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeEventsResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -2182,12 +1598,600 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV37DescribeNodeAssociationStatusResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeNodeAssociationStatusResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV37DescribeNodeAssociationStatusResponseV">DescribeNodeAssociationStatusResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeNodeAssociationStatusResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeNodeAssociationStatusResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV22DescribeServersRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeServersRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV22DescribeServersRequestV">DescribeServersRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeServersRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServersRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV23DescribeServersResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeServersResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV23DescribeServersResponseV">DescribeServersResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DescribeServersResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeServersResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV23DisassociateNodeRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateNodeRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV23DisassociateNodeRequestV">DisassociateNodeRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DisassociateNodeRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateNodeRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV24DisassociateNodeResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DisassociateNodeResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV24DisassociateNodeResponseV">DisassociateNodeResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/DisassociateNodeResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisassociateNodeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV15EngineAttributeV"></a>
+                    <a name="//apple_ref/swift/Struct/EngineAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV15EngineAttributeV">EngineAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/EngineAttribute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">EngineAttribute</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV34ExportServerEngineAttributeRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ExportServerEngineAttributeRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV34ExportServerEngineAttributeRequestV">ExportServerEngineAttributeRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/ExportServerEngineAttributeRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportServerEngineAttributeRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV35ExportServerEngineAttributeResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ExportServerEngineAttributeResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV35ExportServerEngineAttributeResponseV">ExportServerEngineAttributeResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/ExportServerEngineAttributeResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ExportServerEngineAttributeResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV17MaintenanceStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/MaintenanceStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV17MaintenanceStatusO">MaintenanceStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/MaintenanceStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MaintenanceStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV21NodeAssociationStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/NodeAssociationStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV21NodeAssociationStatusO">NodeAssociationStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/NodeAssociationStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">NodeAssociationStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20RestoreServerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RestoreServerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20RestoreServerRequestV">RestoreServerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/RestoreServerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RestoreServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV21RestoreServerResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/RestoreServerResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV21RestoreServerResponseV">RestoreServerResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/RestoreServerResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RestoreServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV6ServerV"></a>
+                    <a name="//apple_ref/swift/Struct/Server" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV6ServerV">Server</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/Server.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Server</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV11ServerEventV"></a>
+                    <a name="//apple_ref/swift/Struct/ServerEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV11ServerEventV">ServerEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/ServerEvent.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ServerEvent</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV12ServerStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/ServerStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV12ServerStatusO">ServerStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/ServerStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ServerStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV23StartMaintenanceRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/StartMaintenanceRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV23StartMaintenanceRequestV">StartMaintenanceRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/StartMaintenanceRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartMaintenanceRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV24StartMaintenanceResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/StartMaintenanceResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV24StartMaintenanceResponseV">StartMaintenanceResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/StartMaintenanceResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartMaintenanceResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV35UpdateServerEngineAttributesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateServerEngineAttributesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV35UpdateServerEngineAttributesRequestV">UpdateServerEngineAttributesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerEngineAttributesRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV36UpdateServerEngineAttributesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateServerEngineAttributesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV36UpdateServerEngineAttributesResponseV">UpdateServerEngineAttributesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/UpdateServerEngineAttributesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerEngineAttributesResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19UpdateServerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateServerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19UpdateServerRequestV">UpdateServerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/UpdateServerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV20UpdateServerResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/UpdateServerResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV20UpdateServerResponseV">UpdateServerResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/OpsWorksCM/UpdateServerResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UpdateServerResponse</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="InvocationResponse Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6LambdaAAV18InvocationResponseV7payload10Foundation4DataVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/payload" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV7payload10Foundation4DataVSgvp">payload</a>
+                    <a name="/s:6LambdaAAV18InvocationResponseV13functionErrorSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/functionError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV13functionErrorSSSgvp">functionError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>It is the JSON representation of the object returned by the Lambda function. This is present only if the invocation type is RequestResponse.  In the event of a function error this field contains a message describing the error. For the Handled errors the Lambda function will report this message. For Unhandled errors AWS Lambda reports the message.</p>
+                        <p>Indicates whether an error occurred while executing the Lambda function. If an error occurred this field will have one of two values; Handled or Unhandled. Handled errors are errors that are reported by the function while the Unhandled errors are those detected and reported by AWS Lambda. Unhandled errors include out of memory errors and function timeouts. For information about how to report an Handled error, see Programming Model.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">payload</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">functionError</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,6 +685,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:6LambdaAAV18InvocationResponseV7payload10Foundation4DataVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/payload" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV7payload10Foundation4DataVSgvp">payload</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>It is the JSON representation of the object returned by the Lambda function. This is present only if the invocation type is RequestResponse.  In the event of a function error this field contains a message describing the error. For the Handled errors the Lambda function will report this message. For Unhandled errors AWS Lambda reports the message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">payload</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:6LambdaAAV18InvocationResponseV10statusCodes5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/statusCode" class="dashAnchor"></a>
                     <a class="token" href="#/s:6LambdaAAV18InvocationResponseV10statusCodes5Int32VSgvp">statusCode</a>
@@ -712,36 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6LambdaAAV18InvocationResponseV13functionErrorSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/functionError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV13functionErrorSSSgvp">functionError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether an error occurred while executing the Lambda function. If an error occurred this field will have one of two values; Handled or Unhandled. Handled errors are errors that are reported by the function while the Unhandled errors are those detected and reported by AWS Lambda. Unhandled errors include out of memory errors and function timeouts. For information about how to report an Handled error, see Programming Model.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">functionError</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6LambdaAAV18InvocationResponseV15executedVersion7payload9logResult10statusCode13functionErrorADSSSg_10Foundation4DataVSgAJs5Int32VSgAJtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(executedVersion:payload:logResult:statusCode:functionError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV15executedVersion7payload9logResult10statusCode13functionErrorADSSSg_10Foundation4DataVSgAJs5Int32VSgAJtcfc">init(executedVersion:payload:logResult:statusCode:functionError:)</a>
+                    <a name="/s:6LambdaAAV18InvocationResponseV15executedVersion13functionError9logResult7payload10statusCodeADSSSg_A2J10Foundation4DataVSgs5Int32VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(executedVersion:functionError:logResult:payload:statusCode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV18InvocationResponseV15executedVersion13functionError9logResult7payload10statusCodeADSSSg_A2J10Foundation4DataVSgs5Int32VSgtcfc">init(executedVersion:functionError:logResult:payload:statusCode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">executedVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">payload</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logResult</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">functionError</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">executedVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">functionError</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logResult</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">payload</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

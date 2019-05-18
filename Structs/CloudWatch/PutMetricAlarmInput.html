@@ -14,7 +14,7 @@
     <a title="PutMetricAlarmInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabledSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/actionsEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabledSbSgvp">actionsEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">actionsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV12alarmActionsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/alarmActions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV12alarmActionsSaySSGSgvp">alarmActions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The actions to execute when this alarm transitions to the ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">alarmActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV16alarmDescriptionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/alarmDescription" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV16alarmDescriptionSSSgvp">alarmDescription</a>
@@ -631,114 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV7metricsSayAB0D9DataQueryVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/metrics" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV7metricsSayAB0D9DataQueryVGSgvp">metrics</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An array of MetricDataQuery structures that enable you to create an alarm based on the result of a metric math expression. Each item in the Metrics array either retrieves a metric or performs a math expression. If you use the Metrics parameter, you cannot include the MetricName, Dimensions, Period, Namespace, Statistic, or ExtendedStatistic parameters of PutMetricAlarm in the same operation. Instead, you retrieve the metrics you are using in your math expression as part of the Metrics array.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MetricDataQuery.html">MetricDataQuery</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV17evaluationPeriodss5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/evaluationPeriods" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV17evaluationPeriodss5Int32Vvp">evaluationPeriods</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of periods over which data is compared to the specified threshold. If you are setting an alarm that requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that number. If you are setting an <q>M out of N</q> alarm, this value is the N. An alarm&rsquo;s total current evaluation period can be no longer than one day, so this number multiplied by Period cannot be more than 86,400 seconds.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV10metricNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/metricName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV10metricNameSSSgvp">metricName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name for the metric associated with the alarm. If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the Dimensions, Period, Namespace, Statistic, or ExtendedStatistic parameters. Instead, you specify all this information in the Metrics array.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV12alarmActionsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/alarmActions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV12alarmActionsSaySSGSgvp">alarmActions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The actions to execute when this alarm transitions to the ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">alarmActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV18comparisonOperatorAB010ComparisonH0Ovp"></a>
                     <a name="//apple_ref/swift/Property/comparisonOperator" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV18comparisonOperatorAB010ComparisonH0Ovp">comparisonOperator</a>
@@ -757,303 +703,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">comparisonOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/ComparisonOperator.html">ComparisonOperator</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV4unitAB12StandardUnitOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/unit" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV4unitAB12StandardUnitOSgvp">unit</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If you specify a unit, you must use a unit that is appropriate for the metric. Otherwise, the CloudWatch alarm can get stuck in the INSUFFICIENT DATA state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StandardUnit.html">StandardUnit</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9oKActionsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/oKActions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9oKActionsSaySSGSgvp">oKActions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The actions to execute when this alarm transitions to an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:automate:region:ec2:reboot | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">oKActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9statisticAB9StatisticOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statistic" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9statisticAB9StatisticOSgvp">statistic</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The statistic for the metric specified in MetricName, other than percentile. For percentile statistics, use ExtendedStatistic. When you call PutMetricAlarm and specify a MetricName, you must specify either Statistic or ExtendedStatistic, but not both.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/Statistic.html">Statistic</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV16treatMissingDataSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/treatMissingData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV16treatMissingDataSSSgvp">treatMissingData</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets how this alarm is to handle missing data points. If TreatMissingData is omitted, the default behavior of missing is used. For more information, see Configuring How CloudWatch Alarms Treats Missing Data. Valid Values: breaching | notBreaching | ignore | missing</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">treatMissingData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV32evaluateLowSampleCountPercentileSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/evaluateLowSampleCountPercentile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV32evaluateLowSampleCountPercentileSSSgvp">evaluateLowSampleCountPercentile</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used only for alarms based on percentiles. If you specify ignore, the alarm state does not change during periods with too few data points to be statistically significant. If you specify evaluate or omit this parameter, the alarm is always evaluated and possibly changes state no matter how many data points are available. For more information, see Percentile-Based CloudWatch Alarms and Low Data Samples. Valid Values: evaluate | ignore</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluateLowSampleCountPercentile</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9namespaceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9namespaceSSSgvp">namespace</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The namespace for the metric associated specified in MetricName.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV23insufficientDataActionsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/insufficientDataActions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV23insufficientDataActionsSaySSGSgvp">insufficientDataActions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): &gt;arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">insufficientDataActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9thresholdSdvp"></a>
-                    <a name="//apple_ref/swift/Property/threshold" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9thresholdSdvp">threshold</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The value against which the specified statistic is compared.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV17extendedStatisticSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/extendedStatistic" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV17extendedStatisticSSSgvp">extendedStatistic</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The percentile statistic for the metric specified in MetricName. Specify a value between p0.0 and p100. When you call PutMetricAlarm and specify a MetricName, you must specify either Statistic or ExtendedStatistic, but not both.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extendedStatistic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV6periods5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/period" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV6periods5Int32VSgvp">period</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The length, in seconds, used each time the metric specified in MetricName is evaluated. Valid values are 10, 30, and any multiple of 60. Be sure to specify 10 or 30 only for metrics that are stored by a PutMetricData call with a StorageResolution of 1. If you specify a period of 10 or 30 for a metric that does not have sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case, it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm may often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see Amazon CloudWatch Pricing. An alarm&rsquo;s total current evaluation period can be no longer than one day, so Period multiplied by EvaluationPeriods cannot be more than 86,400 seconds.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabledSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/actionsEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabledSbSgvp">actionsEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">actionsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1117,9 +766,360 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV16alarmDescription0G4Name7metrics17evaluationPeriods06metricI00G7Actions18comparisonOperator4unit9oKActions9statistic16treatMissingData32evaluateLowSampleCountPercentile9namespace012insufficientvN09threshold17extendedStatistic6period14actionsEnabled012datapointsToE010dimensionsADSSSg_SSSayAB0dV5QueryVGSgs5Int32VAYSaySSGSgAB010ComparisonP0OAB12StandardUnitOSgA5_AB9StatisticOSgA3YA5_SdAYA3_SgSbSgA14_SayAB9DimensionVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(alarmDescription:alarmName:metrics:evaluationPeriods:metricName:alarmActions:comparisonOperator:unit:oKActions:statistic:treatMissingData:evaluateLowSampleCountPercentile:namespace:insufficientDataActions:threshold:extendedStatistic:period:actionsEnabled:datapointsToAlarm:dimensions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV16alarmDescription0G4Name7metrics17evaluationPeriods06metricI00G7Actions18comparisonOperator4unit9oKActions9statistic16treatMissingData32evaluateLowSampleCountPercentile9namespace012insufficientvN09threshold17extendedStatistic6period14actionsEnabled012datapointsToE010dimensionsADSSSg_SSSayAB0dV5QueryVGSgs5Int32VAYSaySSGSgAB010ComparisonP0OAB12StandardUnitOSgA5_AB9StatisticOSgA3YA5_SdAYA3_SgSbSgA14_SayAB9DimensionVGSgtcfc">init(alarmDescription:alarmName:metrics:evaluationPeriods:metricName:alarmActions:comparisonOperator:unit:oKActions:statistic:treatMissingData:evaluateLowSampleCountPercentile:namespace:insufficientDataActions:threshold:extendedStatistic:period:actionsEnabled:datapointsToAlarm:dimensions:)</a>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV32evaluateLowSampleCountPercentileSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/evaluateLowSampleCountPercentile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV32evaluateLowSampleCountPercentileSSSgvp">evaluateLowSampleCountPercentile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used only for alarms based on percentiles. If you specify ignore, the alarm state does not change during periods with too few data points to be statistically significant. If you specify evaluate or omit this parameter, the alarm is always evaluated and possibly changes state no matter how many data points are available. For more information, see Percentile-Based CloudWatch Alarms and Low Data Samples. Valid Values: evaluate | ignore</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluateLowSampleCountPercentile</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV17evaluationPeriodss5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/evaluationPeriods" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV17evaluationPeriodss5Int32Vvp">evaluationPeriods</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of periods over which data is compared to the specified threshold. If you are setting an alarm that requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that number. If you are setting an <q>M out of N</q> alarm, this value is the N. An alarm&rsquo;s total current evaluation period can be no longer than one day, so this number multiplied by Period cannot be more than 86,400 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV17extendedStatisticSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/extendedStatistic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV17extendedStatisticSSSgvp">extendedStatistic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The percentile statistic for the metric specified in MetricName. Specify a value between p0.0 and p100. When you call PutMetricAlarm and specify a MetricName, you must specify either Statistic or ExtendedStatistic, but not both.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extendedStatistic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV23insufficientDataActionsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/insufficientDataActions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV23insufficientDataActionsSaySSGSgvp">insufficientDataActions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): &gt;arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">insufficientDataActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV10metricNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metricName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV10metricNameSSSgvp">metricName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name for the metric associated with the alarm. If you are creating an alarm based on a math expression, you cannot specify this parameter, or any of the Dimensions, Period, Namespace, Statistic, or ExtendedStatistic parameters. Instead, you specify all this information in the Metrics array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV7metricsSayAB0D9DataQueryVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metrics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV7metricsSayAB0D9DataQueryVGSgvp">metrics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of MetricDataQuery structures that enable you to create an alarm based on the result of a metric math expression. Each item in the Metrics array either retrieves a metric or performs a math expression. If you use the Metrics parameter, you cannot include the MetricName, Dimensions, Period, Namespace, Statistic, or ExtendedStatistic parameters of PutMetricAlarm in the same operation. Instead, you retrieve the metrics you are using in your math expression as part of the Metrics array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MetricDataQuery.html">MetricDataQuery</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9namespaceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9namespaceSSSgvp">namespace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The namespace for the metric associated specified in MetricName.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9oKActionsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/oKActions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9oKActionsSaySSGSgvp">oKActions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The actions to execute when this alarm transitions to an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover | arn:aws:automate:region:ec2:reboot | arn:aws:sns:region:account-id:sns-topic-name  | arn:aws:autoscaling:region:account-id:scalingPolicy:policy-idautoScalingGroupName/group-friendly-name:policyName/policy-friendly-name   Valid Values (for use with IAM roles): arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Reboot/1.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">oKActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV6periods5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/period" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV6periods5Int32VSgvp">period</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length, in seconds, used each time the metric specified in MetricName is evaluated. Valid values are 10, 30, and any multiple of 60. Be sure to specify 10 or 30 only for metrics that are stored by a PutMetricData call with a StorageResolution of 1. If you specify a period of 10 or 30 for a metric that does not have sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case, it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm may often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see Amazon CloudWatch Pricing. An alarm&rsquo;s total current evaluation period can be no longer than one day, so Period multiplied by EvaluationPeriods cannot be more than 86,400 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9statisticAB9StatisticOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statistic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9statisticAB9StatisticOSgvp">statistic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The statistic for the metric specified in MetricName, other than percentile. For percentile statistics, use ExtendedStatistic. When you call PutMetricAlarm and specify a MetricName, you must specify either Statistic or ExtendedStatistic, but not both.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/Statistic.html">Statistic</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV9thresholdSdvp"></a>
+                    <a name="//apple_ref/swift/Property/threshold" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV9thresholdSdvp">threshold</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value against which the specified statistic is compared.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV16treatMissingDataSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/treatMissingData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV16treatMissingDataSSSgvp">treatMissingData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets how this alarm is to handle missing data points. If TreatMissingData is omitted, the default behavior of missing is used. For more information, see Configuring How CloudWatch Alarms Treats Missing Data. Valid Values: breaching | notBreaching | ignore | missing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">treatMissingData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV4unitAB12StandardUnitOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/unit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV4unitAB12StandardUnitOSgvp">unit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If you specify a unit, you must use a unit that is appropriate for the metric. Otherwise, the CloudWatch alarm can get stuck in the INSUFFICIENT DATA state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StandardUnit.html">StandardUnit</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabled12alarmActions0I11Description0I4Name18comparisonOperator012datapointsToE010dimensions32evaluateLowSampleCountPercentile17evaluationPeriods17extendedStatistic016insufficientDataJ006metricL07metrics9namespace9oKActions6period9statistic9threshold16treatMissingData4unitADSbSg_SaySSGSgSSSgSSAB010ComparisonN0Os5Int32VSgSayAB9DimensionVGSgA0_A4_A0_A_A0_SayAB0D9DataQueryVGSgA0_A_A5_AB0Z0OSgSdA0_AB12StandardUnitOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(actionsEnabled:alarmActions:alarmDescription:alarmName:comparisonOperator:datapointsToAlarm:dimensions:evaluateLowSampleCountPercentile:evaluationPeriods:extendedStatistic:insufficientDataActions:metricName:metrics:namespace:oKActions:period:statistic:threshold:treatMissingData:unit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudWatchAAV19PutMetricAlarmInputV14actionsEnabled12alarmActions0I11Description0I4Name18comparisonOperator012datapointsToE010dimensions32evaluateLowSampleCountPercentile17evaluationPeriods17extendedStatistic016insufficientDataJ006metricL07metrics9namespace9oKActions6period9statistic9threshold16treatMissingData4unitADSbSg_SaySSGSgSSSgSSAB010ComparisonN0Os5Int32VSgSayAB9DimensionVGSgA0_A4_A0_A_A0_SayAB0D9DataQueryVGSgA0_A_A5_AB0Z0OSgSdA0_AB12StandardUnitOSgtcfc">init(actionsEnabled:alarmActions:alarmDescription:alarmName:comparisonOperator:datapointsToAlarm:dimensions:evaluateLowSampleCountPercentile:evaluationPeriods:extendedStatistic:insufficientDataActions:metricName:metrics:namespace:oKActions:period:statistic:threshold:treatMissingData:unit:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1134,7 +1134,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">alarmDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alarmName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MetricDataQuery.html">MetricDataQuery</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alarmActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">comparisonOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/ComparisonOperator.html">ComparisonOperator</a></span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StandardUnit.html">StandardUnit</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">oKActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/Statistic.html">Statistic</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">treatMissingData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">evaluateLowSampleCountPercentile</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">insufficientDataActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">extendedStatistic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">actionsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">datapointsToAlarm</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/Dimension.html">Dimension</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">actionsEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alarmActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alarmDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">alarmName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">comparisonOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/ComparisonOperator.html">ComparisonOperator</a></span><span class="p">,</span> <span class="nv">datapointsToAlarm</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/Dimension.html">Dimension</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">evaluateLowSampleCountPercentile</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">extendedStatistic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">insufficientDataActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CloudWatch/MetricDataQuery.html">MetricDataQuery</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">oKActions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/Statistic.html">Statistic</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">treatMissingData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudWatch/StandardUnit.html">StandardUnit</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1146,7 +1146,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

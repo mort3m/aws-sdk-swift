@@ -14,7 +14,7 @@
     <a title="ModifyDBClusterMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPasswordSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/masterUserPassword" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPasswordSSSgvp">masterUserPassword</a>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediatelySbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/applyImmediately" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediatelySbSgvp">applyImmediately</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,176 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The new password for the master database user. This password can contain any printable ASCII character except <q>/</q>, &ldquo;&rdquo;<q>, or</q>@&ldquo;. Constraints: Must contain from 8 to 41 characters.</p>
+                        <p>A value that specifies whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the PreferredMaintenanceWindow setting for the DB cluster. If this parameter is set to false, changes to the DB cluster are applied during the next maintenance window. The ApplyImmediately parameter only affects the NewDBClusterIdentifier and MasterUserPassword values. If you set the ApplyImmediately parameter value to false, then changes to the NewDBClusterIdentifier and MasterUserPassword values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the ApplyImmediately parameter. Default: false</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV27dBClusterParameterGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBClusterParameterGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV27dBClusterParameterGroupNameSSSgvp">dBClusterParameterGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the DB cluster parameter group to use for the DB cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV15optionGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV15optionGroupNameSSSgvp">optionGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A value that indicates that the DB cluster should be associated with the specified option group. Changing this parameter doesn&rsquo;t result in an outage except in the following case, and the change is applied during the next maintenance window unless the ApplyImmediately parameter is set to true for this request. If the parameter change results in an option group that enables OEM, this change can cause a brief (sub-second) period during which new connections are rejected but existing connections are not interrupted.  Permanent options can&rsquo;t be removed from an option group. The option group can&rsquo;t be removed from a DB cluster once it is associated with a DB cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV19dBClusterIdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/dBClusterIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV19dBClusterIdentifierSSvp">dBClusterIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The DB cluster identifier for the cluster being modified. This parameter is not case-sensitive. Constraints:   Must match the identifier of an existing DBCluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of VPC security groups that the DB cluster will belong to.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV13engineVersionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV13engineVersionSSSgvp">engineVersion</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless the ApplyImmediately parameter is set to true. For a list of valid engine versions, see CreateDBInstance, or call DescribeDBEngineVersions.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). Format: ddd:hh24:mi-ddd:hh24:mi  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week.  Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Constraints: Minimum 30-minute window.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV03newC10IdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/newDBClusterIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV03newC10IdentifierSSSgvp">newDBClusterIdentifier</a>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV19dBClusterIdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/dBClusterIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV19dBClusterIdentifierSSvp">dBClusterIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The new DB cluster identifier for the DB cluster when renaming a DB cluster. This value is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens   The first character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-cluster2</p>
+                        <p>The DB cluster identifier for the cluster being modified. This parameter is not case-sensitive. Constraints:   Must match the identifier of an existing DBCluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newDBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediatelySbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/applyImmediately" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediatelySbSgvp">applyImmediately</a>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV27dBClusterParameterGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBClusterParameterGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV27dBClusterParameterGroupNameSSSgvp">dBClusterParameterGroupName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,41 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A value that specifies whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the PreferredMaintenanceWindow setting for the DB cluster. If this parameter is set to false, changes to the DB cluster are applied during the next maintenance window. The ApplyImmediately parameter only affects the NewDBClusterIdentifier and MasterUserPassword values. If you set the ApplyImmediately parameter value to false, then changes to the NewDBClusterIdentifier and MasterUserPassword values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the ApplyImmediately parameter. Default: false</p>
+                        <p>The name of the DB cluster parameter group to use for the DB cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV4ports5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV4ports5Int32VSgvp">port</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The port number on which the DB cluster accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,6 +712,141 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV13engineVersionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV13engineVersionSSSgvp">engineVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless the ApplyImmediately parameter is set to true. For a list of valid engine versions, see CreateDBInstance, or call DescribeDBEngineVersions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPasswordSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/masterUserPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPasswordSSSgvp">masterUserPassword</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The new password for the master database user. This password can contain any printable ASCII character except <q>/</q>, &ldquo;&rdquo;<q>, or</q>@&ldquo;. Constraints: Must contain from 8 to 41 characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV03newC10IdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/newDBClusterIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV03newC10IdentifierSSSgvp">newDBClusterIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The new DB cluster identifier for the DB cluster when renaming a DB cluster. This value is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens   The first character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-cluster2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newDBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV15optionGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV15optionGroupNameSSSgvp">optionGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A value that indicates that the DB cluster should be associated with the specified option group. Changing this parameter doesn&rsquo;t result in an outage except in the following case, and the change is applied during the next maintenance window unless the ApplyImmediately parameter is set to true for this request. If the parameter change results in an option group that enables OEM, this change can cause a brief (sub-second) period during which new connections are rejected but existing connections are not interrupted.  Permanent options can&rsquo;t be removed from an option group. The option group can&rsquo;t be removed from a DB cluster once it is associated with a DB cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV4ports5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV4ports5Int32VSgvp">port</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The port number on which the DB cluster accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV21preferredBackupWindowSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/preferredBackupWindow" class="dashAnchor"></a>
                     <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV21preferredBackupWindowSSSgvp">preferredBackupWindow</a>
@@ -928,9 +874,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPassword27dBClusterParameterGroupName06optionjK001dH10Identifier011vpcSecurityJ3Ids13engineVersion26preferredMaintenanceWindow21backupRetentionPeriod03newcM016applyImmediately4port31enableIAMDatabaseAuthentication0s6BackupU0ADSSSg_A2RSSAB03VpcoJ6IdListVSgA2Rs5Int32VSgARSbSgAxyRtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(masterUserPassword:dBClusterParameterGroupName:optionGroupName:dBClusterIdentifier:vpcSecurityGroupIds:engineVersion:preferredMaintenanceWindow:backupRetentionPeriod:newDBClusterIdentifier:applyImmediately:port:enableIAMDatabaseAuthentication:preferredBackupWindow:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV18masterUserPassword27dBClusterParameterGroupName06optionjK001dH10Identifier011vpcSecurityJ3Ids13engineVersion26preferredMaintenanceWindow21backupRetentionPeriod03newcM016applyImmediately4port31enableIAMDatabaseAuthentication0s6BackupU0ADSSSg_A2RSSAB03VpcoJ6IdListVSgA2Rs5Int32VSgARSbSgAxyRtcfc">init(masterUserPassword:dBClusterParameterGroupName:optionGroupName:dBClusterIdentifier:vpcSecurityGroupIds:engineVersion:preferredMaintenanceWindow:backupRetentionPeriod:newDBClusterIdentifier:applyImmediately:port:enableIAMDatabaseAuthentication:preferredBackupWindow:)</a>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC). Format: ddd:hh24:mi-ddd:hh24:mi  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a random day of the week.  Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Constraints: Minimum 30-minute window.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of VPC security groups that the DB cluster will belong to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediately21backupRetentionPeriod19dBClusterIdentifier01dJ18ParameterGroupName31enableIAMDatabaseAuthentication13engineVersion18masterUserPassword03newcK006optionmN04port21preferredBackupWindow0Z17MaintenanceWindow011vpcSecurityM3IdsADSbSg_s5Int32VSgS2SSgAr4vu2vB011VpcSecurityM6IdListVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(applyImmediately:backupRetentionPeriod:dBClusterIdentifier:dBClusterParameterGroupName:enableIAMDatabaseAuthentication:engineVersion:masterUserPassword:newDBClusterIdentifier:optionGroupName:port:preferredBackupWindow:preferredMaintenanceWindow:vpcSecurityGroupIds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV22ModifyDBClusterMessageV16applyImmediately21backupRetentionPeriod19dBClusterIdentifier01dJ18ParameterGroupName31enableIAMDatabaseAuthentication13engineVersion18masterUserPassword03newcK006optionmN04port21preferredBackupWindow0Z17MaintenanceWindow011vpcSecurityM3IdsADSbSg_s5Int32VSgS2SSgAr4vu2vB011VpcSecurityM6IdListVSgtcfc">init(applyImmediately:backupRetentionPeriod:dBClusterIdentifier:dBClusterParameterGroupName:enableIAMDatabaseAuthentication:engineVersion:masterUserPassword:newDBClusterIdentifier:optionGroupName:port:preferredBackupWindow:preferredMaintenanceWindow:vpcSecurityGroupIds:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -945,7 +945,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newDBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">dBClusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newDBClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -957,7 +957,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

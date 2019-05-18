@@ -14,7 +14,7 @@
     <a title="CreateFleetInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicyAB0hI0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/newGameSessionProtectionPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicyAB0hI0OSgvp">newGameSessionProtectionPolicy</a>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV7buildIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/buildId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV7buildIdSSvp">buildId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Game session protection policy to apply to all instances in this fleet. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&rsquo;s protection policy using UpdateFleetAttributes, but this change will only affect sessions created after the policy change. You can also set protection for individual instances using UpdateGameSession.    NoProtection &ndash; The game session can be terminated during a scale-down event.    FullProtection &ndash; If the game session is in an ACTIVE status, it cannot be terminated during a scale-down event.</p>
+                        <p>Unique identifier for a build to be deployed on the new fleet. The build must have been successfully uploaded to Amazon GameLift and be in a READY status. This fleet setting cannot be changed once the fleet is created.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newGameSessionProtectionPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ProtectionPolicy.html">ProtectionPolicy</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">buildId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV27resourceCreationLimitPolicyAB08ResourceghI0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/resourceCreationLimitPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV27resourceCreationLimitPolicyAB08ResourceghI0VSgvp">resourceCreationLimitPolicy</a>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV11descriptionSSSgvp">description</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Policy that limits the number of game sessions an individual player can create over a span of time for this fleet.</p>
+                        <p>Human-readable description of a fleet.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceCreationLimitPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ResourceCreationLimitPolicy.html">ResourceCreationLimitPolicy</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV21eC2InboundPermissionsSayAB12IpPermissionVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/eC2InboundPermissions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV21eC2InboundPermissionsSayAB12IpPermissionVGSgvp">eC2InboundPermissions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. If no inbound permissions are set, including both IP address range and port range, the server processes in the fleet cannot accept connections. You can specify one or more sets of permissions for a fleet.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">eC2InboundPermissions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/IpPermission.html">IpPermission</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV16serverLaunchPathSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serverLaunchPath" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV16serverLaunchPathSSSgvp">serverLaunchPath</a>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV12metricGroupsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metricGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV12metricGroupsSaySSGSgvp">metricGroups</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,176 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This parameter is no longer used. Instead, specify a server launch path using the RuntimeConfiguration parameter. (Requests that specify a server launch path and launch parameters instead of a run-time configuration will continue to work.)</p>
+                        <p>Name of a metric group to add this fleet to. A metric group tracks metrics across all fleets in the group. Use an existing metric group name to add this fleet to the group, or use a new name to create a new metric group. A fleet can only be included in one metric group at a time.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverLaunchPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV9peerVpcIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/peerVpcId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV9peerVpcIdSSSgvp">peerVpcId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet. The VPC must be in the same region where your fleet is deployed. To get VPC information, including IDs, use the Virtual Private Cloud service tools, including the VPC Dashboard in the AWS Management Console.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">peerVpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV22serverLaunchParametersSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serverLaunchParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV22serverLaunchParametersSSSgvp">serverLaunchParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This parameter is no longer used. Instead, specify server launch parameters in the RuntimeConfiguration parameter. (Requests that specify a server launch path and launch parameters instead of a run-time configuration will continue to work.)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverLaunchParameters</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV21eC2InboundPermissionsSayAB12IpPermissionVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/eC2InboundPermissions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV21eC2InboundPermissionsSayAB12IpPermissionVGSgvp">eC2InboundPermissions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. If no inbound permissions are set, including both IP address range and port range, the server processes in the fleet cannot accept connections. You can specify one or more sets of permissions for a fleet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">eC2InboundPermissions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/IpPermission.html">IpPermission</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV11descriptionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV11descriptionSSSgvp">description</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Human-readable description of a fleet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV19peerVpcAwsAccountIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/peerVpcAwsAccountId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV19peerVpcAwsAccountIdSSSgvp">peerVpcAwsAccountId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with. You can find your Account ID in the AWS Management Console under account settings.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">peerVpcAwsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV7buildIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/buildId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV7buildIdSSvp">buildId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Unique identifier for a build to be deployed on the new fleet. The build must have been successfully uploaded to Amazon GameLift and be in a READY status. This fleet setting cannot be changed once the fleet is created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">buildId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metricGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV12metricGroupsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/metricGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV12metricGroupsSaySSGSgvp">metricGroups</a>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicyAB0hI0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/newGameSessionProtectionPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicyAB0hI0OSgvp">newGameSessionProtectionPolicy</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +803,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Name of a metric group to add this fleet to. A metric group tracks metrics across all fleets in the group. Use an existing metric group name to add this fleet to the group, or use a new name to create a new metric group. A fleet can only be included in one metric group at a time.</p>
+                        <p>Game session protection policy to apply to all instances in this fleet. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&rsquo;s protection policy using UpdateFleetAttributes, but this change will only affect sessions created after the policy change. You can also set protection for individual instances using UpdateGameSession.    NoProtection &ndash; The game session can be terminated during a scale-down event.    FullProtection &ndash; If the game session is in an ACTIVE status, it cannot be terminated during a scale-down event.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">metricGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newGameSessionProtectionPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ProtectionPolicy.html">ProtectionPolicy</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV19peerVpcAwsAccountIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/peerVpcAwsAccountId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV19peerVpcAwsAccountIdSSSgvp">peerVpcAwsAccountId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with. You can find your Account ID in the AWS Management Console under account settings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">peerVpcAwsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV9peerVpcIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/peerVpcId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV9peerVpcIdSSSgvp">peerVpcId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet. The VPC must be in the same region where your fleet is deployed. To get VPC information, including IDs, use the Virtual Private Cloud service tools, including the VPC Dashboard in the AWS Management Console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">peerVpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV27resourceCreationLimitPolicyAB08ResourceghI0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/resourceCreationLimitPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV27resourceCreationLimitPolicyAB08ResourceghI0VSgvp">resourceCreationLimitPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Policy that limits the number of game sessions an individual player can create over a span of time for this fleet.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceCreationLimitPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ResourceCreationLimitPolicy.html">ResourceCreationLimitPolicy</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +928,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicy021resourceCreationLimitI015eC2InstanceType05fleetO08logPaths16serverLaunchPath9peerVpcId0sT10Parameters01eM18InboundPermissions11description0vw10AwsAccountX005buildX04name12metricGroups20runtimeConfigurationAdB0hI0OSg_AB08ResourceklI0VSgAB03EC2nO0OAB0dO0OSgSaySSGSgSSSgA5_A5_SayAB12IpPermissionVGSgA5_A5_S2SA4_AB20RuntimeConfigurationVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(newGameSessionProtectionPolicy:resourceCreationLimitPolicy:eC2InstanceType:fleetType:logPaths:serverLaunchPath:peerVpcId:serverLaunchParameters:eC2InboundPermissions:description:peerVpcAwsAccountId:buildId:name:metricGroups:runtimeConfiguration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV03newA23SessionProtectionPolicy021resourceCreationLimitI015eC2InstanceType05fleetO08logPaths16serverLaunchPath9peerVpcId0sT10Parameters01eM18InboundPermissions11description0vw10AwsAccountX005buildX04name12metricGroups20runtimeConfigurationAdB0hI0OSg_AB08ResourceklI0VSgAB03EC2nO0OAB0dO0OSgSaySSGSgSSSgA5_A5_SayAB12IpPermissionVGSgA5_A5_S2SA4_AB20RuntimeConfigurationVSgtcfc">init(newGameSessionProtectionPolicy:resourceCreationLimitPolicy:eC2InstanceType:fleetType:logPaths:serverLaunchPath:peerVpcId:serverLaunchParameters:eC2InboundPermissions:description:peerVpcAwsAccountId:buildId:name:metricGroups:runtimeConfiguration:)</a>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV22serverLaunchParametersSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serverLaunchParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV22serverLaunchParametersSSSgvp">serverLaunchParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This parameter is no longer used. Instead, specify server launch parameters in the RuntimeConfiguration parameter. (Requests that specify a server launch path and launch parameters instead of a run-time configuration will continue to work.)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverLaunchParameters</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV16serverLaunchPathSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serverLaunchPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV16serverLaunchPathSSSgvp">serverLaunchPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This parameter is no longer used. Instead, specify a server launch path using the RuntimeConfiguration parameter. (Requests that specify a server launch path and launch parameters instead of a run-time configuration will continue to work.)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverLaunchPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8GameLiftAAV16CreateFleetInputV7buildId11description21eC2InboundPermissions01eI12InstanceType05fleetM08logPaths12metricGroups4name03newA23SessionProtectionPolicy017peerVpcAwsAccountG00xyG0021resourceCreationLimitW020runtimeConfiguration22serverLaunchParameters16serverLaunchPathADSS_SSSgSayAB12IpPermissionVGSgAB03EC2lM0OAB0dM0OSgSaySSGSgA3_SSAB0vW0OSgA2tB021ResourceCreationLimitW0VSgAB20RuntimeConfigurationVSgA2Ttcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(buildId:description:eC2InboundPermissions:eC2InstanceType:fleetType:logPaths:metricGroups:name:newGameSessionProtectionPolicy:peerVpcAwsAccountId:peerVpcId:resourceCreationLimitPolicy:runtimeConfiguration:serverLaunchParameters:serverLaunchPath:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8GameLiftAAV16CreateFleetInputV7buildId11description21eC2InboundPermissions01eI12InstanceType05fleetM08logPaths12metricGroups4name03newA23SessionProtectionPolicy017peerVpcAwsAccountG00xyG0021resourceCreationLimitW020runtimeConfiguration22serverLaunchParameters16serverLaunchPathADSS_SSSgSayAB12IpPermissionVGSgAB03EC2lM0OAB0dM0OSgSaySSGSgA3_SSAB0vW0OSgA2tB021ResourceCreationLimitW0VSgAB20RuntimeConfigurationVSgA2Ttcfc">init(buildId:description:eC2InboundPermissions:eC2InstanceType:fleetType:logPaths:metricGroups:name:newGameSessionProtectionPolicy:peerVpcAwsAccountId:peerVpcId:resourceCreationLimitPolicy:runtimeConfiguration:serverLaunchParameters:serverLaunchPath:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -999,7 +999,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">newGameSessionProtectionPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ProtectionPolicy.html">ProtectionPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceCreationLimitPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ResourceCreationLimitPolicy.html">ResourceCreationLimitPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">eC2InstanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/EC2InstanceType.html">EC2InstanceType</a></span><span class="p">,</span> <span class="nv">fleetType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/FleetType.html">FleetType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serverLaunchPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">peerVpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serverLaunchParameters</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">eC2InboundPermissions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/IpPermission.html">IpPermission</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">peerVpcAwsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">buildId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">metricGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">runtimeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/RuntimeConfiguration.html">RuntimeConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">buildId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">eC2InboundPermissions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/GameLift/IpPermission.html">IpPermission</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">eC2InstanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/EC2InstanceType.html">EC2InstanceType</a></span><span class="p">,</span> <span class="nv">fleetType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/FleetType.html">FleetType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metricGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">newGameSessionProtectionPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ProtectionPolicy.html">ProtectionPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">peerVpcAwsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">peerVpcId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceCreationLimitPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/ResourceCreationLimitPolicy.html">ResourceCreationLimitPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">runtimeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/GameLift/RuntimeConfiguration.html">RuntimeConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serverLaunchParameters</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serverLaunchPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,7 +1011,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

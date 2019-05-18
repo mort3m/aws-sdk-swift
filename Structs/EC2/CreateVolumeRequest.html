@@ -14,7 +14,7 @@
     <a title="CreateVolumeRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV10snapshotIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV10snapshotIdSSSgvp">snapshotId</a>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV16availabilityZoneSSvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV16availabilityZoneSSvp">availabilityZone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The snapshot from which to create the volume.</p>
+                        <p>The Availability Zone in which to create the volume. Use DescribeAvailabilityZones to list the Availability Zones that are currently available to you.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV4sizes5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV4sizes5Int32VSgvp">size</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The size of the volume, in GiBs. Constraints: 1-16,384 for gp2, 4-16,384 for io1, 500-16,384 for st1, 500-16,384 for sc1, and 1-1,024 for standard. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size. Default: If you&rsquo;re creating the volume from a snapshot and don&rsquo;t specify a volume size, the default is the snapshot size.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV9encryptedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV9encryptedSbSgvp">encrypted</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether the volume should be encrypted. Encrypted Amazon EBS volumes may only be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are automatically encrypted. There is no way to create an encrypted volume from an unencrypted snapshot or vice versa. If your AMI uses encrypted volumes, you can only launch it on supported instance types. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV10volumeTypeAB0cF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/volumeType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV10volumeTypeAB0cF0OSgvp">volumeType</a>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV9encryptedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV9encryptedSbSgvp">encrypted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,41 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The volume type. This can be gp2 for General Purpose SSD, io1 for Provisioned IOPS SSD, st1 for Throughput Optimized HDD, sc1 for Cold HDD, or standard for Magnetic volumes. Defaults: If no volume type is specified, the default is standard in us-east-1, eu-west-1, eu-central-1, us-west-2, us-west-1, sa-east-1, ap-northeast-1, ap-northeast-2, ap-southeast-1, ap-southeast-2, ap-south-1, us-gov-west-1, and cn-north-1. In all other regions, EBS defaults to gp2.</p>
+                        <p>Specifies whether the volume should be encrypted. Encrypted Amazon EBS volumes may only be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are automatically encrypted. There is no way to create an encrypted volume from an unencrypted snapshot or vice versa. If your AMI uses encrypted volumes, you can only launch it on supported instance types. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/VolumeType.html">VolumeType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV16availabilityZoneSSvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZone" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV16availabilityZoneSSvp">availabilityZone</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Availability Zone in which to create the volume. Use DescribeAvailabilityZones to list the Availability Zones that are currently available to you.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,33 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV17tagSpecificationsAB20TagSpecificationListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tagSpecifications" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV17tagSpecificationsAB20TagSpecificationListVSgvp">tagSpecifications</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The tags to apply to the volume during creation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EC2AAV19CreateVolumeRequestV8kmsKeyIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/kmsKeyId" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV8kmsKeyIdSSSgvp">kmsKeyId</a>
@@ -820,9 +712,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19CreateVolumeRequestV10snapshotId4size9encrypted6dryRun10volumeType16availabilityZone4iops17tagSpecifications06kmsKeyF0ADSSSg_s5Int32VSgSbSgArB0cL0OSgSSAqB20TagSpecificationListVSgANtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(snapshotId:size:encrypted:dryRun:volumeType:availabilityZone:iops:tagSpecifications:kmsKeyId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV10snapshotId4size9encrypted6dryRun10volumeType16availabilityZone4iops17tagSpecifications06kmsKeyF0ADSSSg_s5Int32VSgSbSgArB0cL0OSgSSAqB20TagSpecificationListVSgANtcfc">init(snapshotId:size:encrypted:dryRun:volumeType:availabilityZone:iops:tagSpecifications:kmsKeyId:)</a>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV4sizes5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV4sizes5Int32VSgvp">size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The size of the volume, in GiBs. Constraints: 1-16,384 for gp2, 4-16,384 for io1, 500-16,384 for st1, 500-16,384 for sc1, and 1-1,024 for standard. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size. Default: If you&rsquo;re creating the volume from a snapshot and don&rsquo;t specify a volume size, the default is the snapshot size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV10snapshotIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV10snapshotIdSSSgvp">snapshotId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The snapshot from which to create the volume.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV17tagSpecificationsAB20TagSpecificationListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tagSpecifications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV17tagSpecificationsAB20TagSpecificationListVSgvp">tagSpecifications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The tags to apply to the volume during creation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV10volumeTypeAB0cF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/volumeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV10volumeTypeAB0cF0OSgvp">volumeType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The volume type. This can be gp2 for General Purpose SSD, io1 for Provisioned IOPS SSD, st1 for Throughput Optimized HDD, sc1 for Cold HDD, or standard for Magnetic volumes. Defaults: If no volume type is specified, the default is standard in us-east-1, eu-west-1, eu-central-1, us-west-2, us-west-1, sa-east-1, ap-northeast-1, ap-northeast-2, ap-southeast-1, ap-southeast-2, ap-south-1, us-gov-west-1, and cn-north-1. In all other regions, EBS defaults to gp2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/VolumeType.html">VolumeType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19CreateVolumeRequestV16availabilityZone6dryRun9encrypted4iops8kmsKeyId4size08snapshotM017tagSpecifications10volumeTypeADSS_SbSgANs5Int32VSgSSSgAqrB20TagSpecificationListVSgAB0cS0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(availabilityZone:dryRun:encrypted:iops:kmsKeyId:size:snapshotId:tagSpecifications:volumeType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19CreateVolumeRequestV16availabilityZone6dryRun9encrypted4iops8kmsKeyId4size08snapshotM017tagSpecifications10volumeTypeADSS_SbSgANs5Int32VSgSSSgAqrB20TagSpecificationListVSgAB0cS0OSgtcfc">init(availabilityZone:dryRun:encrypted:iops:kmsKeyId:size:snapshotId:tagSpecifications:volumeType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/VolumeType.html">VolumeType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/VolumeType.html">VolumeType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

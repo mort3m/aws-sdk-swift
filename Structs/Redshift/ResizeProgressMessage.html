@@ -14,7 +14,7 @@
     <a title="ResizeProgressMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytess5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/totalResizeDataInMegaBytes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytess5Int64VSgvp">totalResizeDataInMegaBytes</a>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecondSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/avgResizeRateInMegaBytesPerSecond" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecondSdSgvp">avgResizeRateInMegaBytesPerSecond</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The estimated total amount of data, in megabytes, on the cluster before the resize operation began.</p>
+                        <p>The average rate of the resize operation over the last few minutes, measured in megabytes per second. After the resize operation completes, this value shows the average rate of the entire resize operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalResizeDataInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">avgResizeRateInMegaBytesPerSecond</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV20elapsedTimeInSecondss5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/elapsedTimeInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV20elapsedTimeInSecondss5Int64VSgvp">elapsedTimeInSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of seconds that have elapsed since the resize operation began. After the resize operation completes, this value shows the total actual time, in seconds, for the resize operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elapsedTimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV34estimatedTimeToCompletionInSecondss5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/estimatedTimeToCompletionInSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV34estimatedTimeToCompletionInSecondss5Int64VSgvp">estimatedTimeToCompletionInSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The estimated time remaining, in seconds, until the resize operation is complete. This value is calculated based on the average resize rate and the estimated amount of data remaining to be processed. Once the resize operation is complete, this value will be 0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">estimatedTimeToCompletionInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,6 +685,114 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV014importTablesInC0SaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/importTablesInProgress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV014importTablesInC0SaySSGSgvp">importTablesInProgress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The names of tables that are being currently imported. Valid Values: List of table names.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">importTablesInProgress</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV22importTablesNotStartedSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/importTablesNotStarted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV22importTablesNotStartedSaySSGSgvp">importTablesNotStarted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The names of tables that have not been yet imported. Valid Values: List of table names</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">importTablesNotStarted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV7messageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV7messageSSSgvp">message</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional string to provide additional details about the resize action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV19progressInMegaBytess5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/progressInMegaBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV19progressInMegaBytess5Int64VSgvp">progressInMegaBytes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>While the resize operation is in progress, this value shows the current amount of data, in megabytes, that has been processed so far. When the resize operation is complete, this value shows the total amount of data, in megabytes, on the cluster, which may be more or less than TotalResizeDataInMegaBytes (the estimated total amount of data before resize).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">progressInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8RedshiftAAV21ResizeProgressMessageV10resizeTypeSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/resizeType" class="dashAnchor"></a>
                     <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV10resizeTypeSSSgvp">resizeType</a>
@@ -658,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecondSdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/avgResizeRateInMegaBytesPerSecond" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecondSdSgvp">avgResizeRateInMegaBytesPerSecond</a>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV6statusSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV6statusSSSgvp">status</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The average rate of the resize operation over the last few minutes, measured in megabytes per second. After the resize operation completes, this value shows the average rate of the entire resize operation.</p>
+                        <p>The status of the resize operation. Valid Values: NONE | IN_PROGRESS | FAILED | SUCCEEDED | CANCELLING</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">avgResizeRateInMegaBytesPerSecond</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,87 +901,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV22importTablesNotStartedSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/importTablesNotStarted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV22importTablesNotStartedSaySSGSgvp">importTablesNotStarted</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The names of tables that have not been yet imported. Valid Values: List of table names</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">importTablesNotStarted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV20elapsedTimeInSecondss5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/elapsedTimeInSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV20elapsedTimeInSecondss5Int64VSgvp">elapsedTimeInSeconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The amount of seconds that have elapsed since the resize operation began. After the resize operation completes, this value shows the total actual time, in seconds, for the resize operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elapsedTimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV014importTablesInC0SaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/importTablesInProgress" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV014importTablesInC0SaySSGSgvp">importTablesInProgress</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The names of tables that are being currently imported. Valid Values: List of table names.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">importTablesInProgress</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8RedshiftAAV21ResizeProgressMessageV14targetNodeTypeSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/targetNodeType" class="dashAnchor"></a>
                     <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV14targetNodeTypeSSSgvp">targetNodeType</a>
@@ -838,87 +919,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV34estimatedTimeToCompletionInSecondss5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/estimatedTimeToCompletionInSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV34estimatedTimeToCompletionInSecondss5Int64VSgvp">estimatedTimeToCompletionInSeconds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The estimated time remaining, in seconds, until the resize operation is complete. This value is calculated based on the average resize rate and the estimated amount of data remaining to be processed. Once the resize operation is complete, this value will be 0.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">estimatedTimeToCompletionInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV19progressInMegaBytess5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/progressInMegaBytes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV19progressInMegaBytess5Int64VSgvp">progressInMegaBytes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>While the resize operation is in progress, this value shows the current amount of data, in megabytes, that has been processed so far. When the resize operation is complete, this value shows the total amount of data, in megabytes, on the cluster, which may be more or less than TotalResizeDataInMegaBytes (the estimated total amount of data before resize).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">progressInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV6statusSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV6statusSSSgvp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status of the resize operation. Valid Values: NONE | IN_PROGRESS | FAILED | SUCCEEDED | CANCELLING</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV7messageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV7messageSSSgvp">message</a>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytess5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/totalResizeDataInMegaBytes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytess5Int64VSgvp">totalResizeDataInMegaBytes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -965,14 +965,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An optional string to provide additional details about the resize action.</p>
+                        <p>The estimated total amount of data, in megabytes, on the cluster before the resize operation began.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalResizeDataInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytes21importTablesCompleted10resizeType03avgb4RateghI9PerSecond013targetClusterN00s10EncryptionN00jK10NotStarted011elapsedTimeG7Seconds0jkgC00s4NodeN009estimatedy12ToCompletiongZ008progressghI06status0S13NumberOfNodes7messageADs5Int64VSg_SaySSGSgSSSgSdSgA2yxvxy2vYs5Int32VSgAYtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(totalResizeDataInMegaBytes:importTablesCompleted:resizeType:avgResizeRateInMegaBytesPerSecond:targetClusterType:targetEncryptionType:importTablesNotStarted:elapsedTimeInSeconds:importTablesInProgress:targetNodeType:estimatedTimeToCompletionInSeconds:progressInMegaBytes:status:targetNumberOfNodes:message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV05totalB15DataInMegaBytes21importTablesCompleted10resizeType03avgb4RateghI9PerSecond013targetClusterN00s10EncryptionN00jK10NotStarted011elapsedTimeG7Seconds0jkgC00s4NodeN009estimatedy12ToCompletiongZ008progressghI06status0S13NumberOfNodes7messageADs5Int64VSg_SaySSGSgSSSgSdSgA2yxvxy2vYs5Int32VSgAYtcfc">init(totalResizeDataInMegaBytes:importTablesCompleted:resizeType:avgResizeRateInMegaBytesPerSecond:targetClusterType:targetEncryptionType:importTablesNotStarted:elapsedTimeInSeconds:importTablesInProgress:targetNodeType:estimatedTimeToCompletionInSeconds:progressInMegaBytes:status:targetNumberOfNodes:message:)</a>
+                    <a name="/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecond011elapsedTimeG7Seconds09estimatedm12ToCompletiongN021importTablesCompleted0rsgC00rS10NotStarted7message08progressghI010resizeType6status013targetClusterZ0016targetEncryptionZ0010targetNodeZ019targetNumberOfNodes05totalb4DataghI0ADSdSg_s5Int64VSgAWSaySSGSgA2YSSSgAw5Zs5Int32VSgAWtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(avgResizeRateInMegaBytesPerSecond:elapsedTimeInSeconds:estimatedTimeToCompletionInSeconds:importTablesCompleted:importTablesInProgress:importTablesNotStarted:message:progressInMegaBytes:resizeType:status:targetClusterType:targetEncryptionType:targetNodeType:targetNumberOfNodes:totalResizeDataInMegaBytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV21ResizeProgressMessageV03avgB24RateInMegaBytesPerSecond011elapsedTimeG7Seconds09estimatedm12ToCompletiongN021importTablesCompleted0rsgC00rS10NotStarted7message08progressghI010resizeType6status013targetClusterZ0016targetEncryptionZ0010targetNodeZ019targetNumberOfNodes05totalb4DataghI0ADSdSg_s5Int64VSgAWSaySSGSgA2YSSSgAw5Zs5Int32VSgAWtcfc">init(avgResizeRateInMegaBytesPerSecond:elapsedTimeInSeconds:estimatedTimeToCompletionInSeconds:importTablesCompleted:importTablesInProgress:importTablesNotStarted:message:progressInMegaBytes:resizeType:status:targetClusterType:targetEncryptionType:targetNodeType:targetNumberOfNodes:totalResizeDataInMegaBytes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -999,7 +999,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">totalResizeDataInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesCompleted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resizeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">avgResizeRateInMegaBytesPerSecond</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetClusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetEncryptionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesNotStarted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elapsedTimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesInProgress</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">estimatedTimeToCompletionInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">progressInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetNumberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">avgResizeRateInMegaBytesPerSecond</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elapsedTimeInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">estimatedTimeToCompletionInSeconds</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesCompleted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesInProgress</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">importTablesNotStarted</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">progressInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resizeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetClusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetEncryptionType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetNumberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">totalResizeDataInMegaBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,7 +1011,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

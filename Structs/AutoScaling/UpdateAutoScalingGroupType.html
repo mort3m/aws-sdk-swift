@@ -14,7 +14,7 @@
     <a title="UpdateAutoScalingGroupType Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vPCZoneIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifierSSSgvp">vPCZoneIdentifier</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4NameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/autoScalingGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4NameSSvp">autoScalingGroupName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the subnet, if you are launching into a VPC. You can specify several subnets in a comma-separated list. When you specify VPCZoneIdentifier with AvailabilityZones, ensure that the subnets&rsquo; Availability Zones match the values you specify for AvailabilityZones. For more information, see Launching Auto Scaling Instances in a VPC in the Amazon EC2 Auto Scaling User Guide.</p>
+                        <p>The name of the Auto Scaling group.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vPCZoneIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoScalingGroupName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV32newInstancesProtectedFromScaleInSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/newInstancesProtectedFromScaleIn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV32newInstancesProtectedFromScaleInSbSgvp">newInstancesProtectedFromScaleIn</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV17availabilityZonesSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV17availabilityZonesSaySSGSgvp">availabilityZones</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates whether newly launched instances are protected from termination by Auto Scaling when scaling in.</p>
+                        <p>One or more Availability Zones for the group.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newInstancesProtectedFromScaleIn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV14launchTemplateAB06LaunchG13SpecificationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/launchTemplate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV14launchTemplateAB06LaunchG13SpecificationVSgvp">launchTemplate</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultCooldown" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp">defaultCooldown</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The launch template and version to use to specify the updates. If you specify this parameter, you can&rsquo;t specify a launch configuration or a mixed instances policy.</p>
+                        <p>The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The default is 300. For more information, see Scaling Cooldowns in the Amazon EC2 Auto Scaling User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultCooldown</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV7minSizes5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/minSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV7minSizes5Int32VSgvp">minSize</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV15desiredCapacitys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/desiredCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15desiredCapacitys5Int32VSgvp">desiredCapacity</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The minimum size of the Auto Scaling group.</p>
+                        <p>The number of EC2 instances that should be running in the Auto Scaling group. This number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">desiredCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV22healthCheckGracePeriods5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/healthCheckGracePeriod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV22healthCheckGracePeriods5Int32VSgvp">healthCheckGracePeriod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service. The default is 0. For more information, see Health Checks in the Amazon EC2 Auto Scaling User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">healthCheckGracePeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4NameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/autoScalingGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4NameSSvp">autoScalingGroupName</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV14launchTemplateAB06LaunchG13SpecificationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/launchTemplate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV14launchTemplateAB06LaunchG13SpecificationVSgvp">launchTemplate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +776,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the Auto Scaling group.</p>
+                        <p>The launch template and version to use to specify the updates. If you specify this parameter, you can&rsquo;t specify a launch configuration or a mixed instances policy.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoScalingGroupName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV7maxSizes5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV7maxSizes5Int32VSgvp">maxSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum size of the Auto Scaling group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV7minSizes5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/minSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV7minSizes5Int32VSgvp">minSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The minimum size of the Auto Scaling group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV20mixedInstancesPolicyAB05MixedgH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mixedInstancesPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV20mixedInstancesPolicyAB05MixedgH0VSgvp">mixedInstancesPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The mixed instances policy to use to specify the updates. If you specify this parameter, you can&rsquo;t specify a launch configuration or a launch template.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mixedInstancesPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/MixedInstancesPolicy.html">MixedInstancesPolicy</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV32newInstancesProtectedFromScaleInSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/newInstancesProtectedFromScaleIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV32newInstancesProtectedFromScaleInSbSgvp">newInstancesProtectedFromScaleIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether newly launched instances are protected from termination by Auto Scaling when scaling in.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newInstancesProtectedFromScaleIn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,141 +955,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV22healthCheckGracePeriods5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/healthCheckGracePeriod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV22healthCheckGracePeriods5Int32VSgvp">healthCheckGracePeriod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service. The default is 0. For more information, see Health Checks in the Amazon EC2 Auto Scaling User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">healthCheckGracePeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV7maxSizes5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV7maxSizes5Int32VSgvp">maxSize</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum size of the Auto Scaling group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/defaultCooldown" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp">defaultCooldown</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The default is 300. For more information, see Scaling Cooldowns in the Amazon EC2 Auto Scaling User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultCooldown</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV17availabilityZonesSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV17availabilityZonesSaySSGSgvp">availabilityZones</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more Availability Zones for the group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV15desiredCapacitys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/desiredCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15desiredCapacitys5Int32VSgvp">desiredCapacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of EC2 instances that should be running in the Auto Scaling group. This number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">desiredCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV19terminationPoliciesSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/terminationPolicies" class="dashAnchor"></a>
                     <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV19terminationPoliciesSaySSGSgvp">terminationPolicies</a>
@@ -982,9 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV20mixedInstancesPolicyAB05MixedgH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mixedInstancesPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV20mixedInstancesPolicyAB05MixedgH0VSgvp">mixedInstancesPolicy</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vPCZoneIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifierSSSgvp">vPCZoneIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -992,14 +992,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The mixed instances policy to use to specify the updates. If you specify this parameter, you can&rsquo;t specify a launch configuration or a launch template.</p>
+                        <p>The ID of the subnet, if you are launching into a VPC. You can specify several subnets in a comma-separated list. When you specify VPCZoneIdentifier with AvailabilityZones, ensure that the subnets&rsquo; Availability Zones match the values you specify for AvailabilityZones. For more information, see Launching Auto Scaling Instances in a VPC in the Amazon EC2 Auto Scaling User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mixedInstancesPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/MixedInstancesPolicy.html">MixedInstancesPolicy</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vPCZoneIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifier32newInstancesProtectedFromScaleIn14launchTemplate7minSize011healthCheckE00N17ConfigurationName04autobdU009placementD020serviceLinkedRoleARN0rS11GracePeriod03maxQ015defaultCooldown17availabilityZones15desiredCapacity19terminationPolicies05mixedI6PolicyADSSSg_SbSgAB06LaunchO13SpecificationVSgs5Int32VSgA2USSA2UA0_A0_A0_SaySSGSgA0_A2_AB05MixedI6PolicyVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(vPCZoneIdentifier:newInstancesProtectedFromScaleIn:launchTemplate:minSize:healthCheckType:launchConfigurationName:autoScalingGroupName:placementGroup:serviceLinkedRoleARN:healthCheckGracePeriod:maxSize:defaultCooldown:availabilityZones:desiredCapacity:terminationPolicies:mixedInstancesPolicy:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV17vPCZoneIdentifier32newInstancesProtectedFromScaleIn14launchTemplate7minSize011healthCheckE00N17ConfigurationName04autobdU009placementD020serviceLinkedRoleARN0rS11GracePeriod03maxQ015defaultCooldown17availabilityZones15desiredCapacity19terminationPolicies05mixedI6PolicyADSSSg_SbSgAB06LaunchO13SpecificationVSgs5Int32VSgA2USSA2UA0_A0_A0_SaySSGSgA0_A2_AB05MixedI6PolicyVSgtcfc">init(vPCZoneIdentifier:newInstancesProtectedFromScaleIn:launchTemplate:minSize:healthCheckType:launchConfigurationName:autoScalingGroupName:placementGroup:serviceLinkedRoleARN:healthCheckGracePeriod:maxSize:defaultCooldown:availabilityZones:desiredCapacity:terminationPolicies:mixedInstancesPolicy:)</a>
+                    <a name="/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4Name17availabilityZones15defaultCooldown15desiredCapacity22healthCheckGracePeriod0noE0019launchConfigurationG00R8Template7maxSize03minV020mixedInstancesPolicy03newY20ProtectedFromScaleIn09placementD020serviceLinkedRoleARN19terminationPolicies17vPCZoneIdentifierADSS_SaySSGSgs5Int32VSgA2YSSSgAzB06LaunchT13SpecificationVSgA2yB05MixedyZ0VSgSbSgA2zvZtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(autoScalingGroupName:availabilityZones:defaultCooldown:desiredCapacity:healthCheckGracePeriod:healthCheckType:launchConfigurationName:launchTemplate:maxSize:minSize:mixedInstancesPolicy:newInstancesProtectedFromScaleIn:placementGroup:serviceLinkedRoleARN:terminationPolicies:vPCZoneIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AutoScalingAAV06UpdateaB9GroupTypeV04autobD4Name17availabilityZones15defaultCooldown15desiredCapacity22healthCheckGracePeriod0noE0019launchConfigurationG00R8Template7maxSize03minV020mixedInstancesPolicy03newY20ProtectedFromScaleIn09placementD020serviceLinkedRoleARN19terminationPolicies17vPCZoneIdentifierADSS_SaySSGSgs5Int32VSgA2YSSSgAzB06LaunchT13SpecificationVSgA2yB05MixedyZ0VSgSbSgA2zvZtcfc">init(autoScalingGroupName:availabilityZones:defaultCooldown:desiredCapacity:healthCheckGracePeriod:healthCheckType:launchConfigurationName:launchTemplate:maxSize:minSize:mixedInstancesPolicy:newInstancesProtectedFromScaleIn:placementGroup:serviceLinkedRoleARN:terminationPolicies:vPCZoneIdentifier:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,7 +1026,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">vPCZoneIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newInstancesProtectedFromScaleIn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">minSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheckType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchConfigurationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoScalingGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">placementGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceLinkedRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheckGracePeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/AutoScaling/UpdateAutoScalingGroupType.html#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp">defaultCooldown</a></span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">desiredCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationPolicies</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mixedInstancesPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/MixedInstancesPolicy.html">MixedInstancesPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">autoScalingGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/AutoScaling/UpdateAutoScalingGroupType.html#/s:11AutoScalingAAV06UpdateaB9GroupTypeV15defaultCooldowns5Int32VSgvp">defaultCooldown</a></span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">desiredCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheckGracePeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheckType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchConfigurationName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">minSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mixedInstancesPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScaling/MixedInstancesPolicy.html">MixedInstancesPolicy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newInstancesProtectedFromScaleIn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placementGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceLinkedRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationPolicies</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vPCZoneIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1038,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

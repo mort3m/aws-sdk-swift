@@ -14,7 +14,7 @@
     <a title="RtmpGroupSettings Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,114 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationSchemeAB014AuthenticationG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authenticationScheme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationSchemeAB014AuthenticationG0OSgvp">authenticationScheme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authentication scheme to use when connecting with CDN</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authenticationScheme</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/AuthenticationScheme.html">AuthenticationScheme</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV17cacheFullBehaviorAB0c5CachegH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheFullBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV17cacheFullBehaviorAB0c5CachegH0OSgvp">cacheFullBehavior</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls behavior when content cache fills up. If remote origin server stalls the RTMP connection and does not accept content fast enough the &lsquo;Media Cache&rsquo; will fill up. When the cache reaches the duration specified by cacheLength the cache will stop accepting new content. If set to disconnectImmediately, the RTMP output will force a disconnect. Clear the media cache, and reconnect after restartDelay seconds. If set to waitForServer, the RTMP output will wait up to 5 minutes to allow the origin server to begin accepting data again.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheFullBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCacheFullBehavior.html">RtmpCacheFullBehavior</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV11cacheLengths5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV11cacheLengths5Int32VSgvp">cacheLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cache length, in seconds, is used to calculate buffer size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheLength</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV11captionDataAB0c7CaptionG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/captionData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV11captionDataAB0c7CaptionG0OSgvp">captionData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls the types of data that passes to onCaptionInfo outputs.  If set to &lsquo;all&rsquo; then 608 and 708 carried DTVCC data will be passed.  If set to &lsquo;field1AndField2608&rsquo; then DTVCC data will be stripped out, but 608 data from both fields will be passed. If set to &lsquo;field1608&rsquo; then only the data carried in 608 from field 1 video will be passed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">captionData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCaptionData.html">RtmpCaptionData</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV15inputLossActionAB05Inputgh3ForC3OutOSgvp"></a>
                     <a name="//apple_ref/swift/Property/inputLossAction" class="dashAnchor"></a>
                     <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV15inputLossActionAB05Inputgh3ForC3OutOSgvp">inputLossAction</a>
@@ -636,117 +744,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV11cacheLengths5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheLength" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV11cacheLengths5Int32VSgvp">cacheLength</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Cache length, in seconds, is used to calculate buffer size.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheLength</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV17cacheFullBehaviorAB0c5CachegH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheFullBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV17cacheFullBehaviorAB0c5CachegH0OSgvp">cacheFullBehavior</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Controls behavior when content cache fills up. If remote origin server stalls the RTMP connection and does not accept content fast enough the &lsquo;Media Cache&rsquo; will fill up. When the cache reaches the duration specified by cacheLength the cache will stop accepting new content. If set to disconnectImmediately, the RTMP output will force a disconnect. Clear the media cache, and reconnect after restartDelay seconds. If set to waitForServer, the RTMP output will wait up to 5 minutes to allow the origin server to begin accepting data again.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheFullBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCacheFullBehavior.html">RtmpCacheFullBehavior</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationSchemeAB014AuthenticationG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authenticationScheme" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationSchemeAB014AuthenticationG0OSgvp">authenticationScheme</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Authentication scheme to use when connecting with CDN</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authenticationScheme</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/AuthenticationScheme.html">AuthenticationScheme</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV11captionDataAB0c7CaptionG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/captionData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV11captionDataAB0c7CaptionG0OSgvp">captionData</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Controls the types of data that passes to onCaptionInfo outputs.  If set to &lsquo;all&rsquo; then 608 and 708 carried DTVCC data will be passed.  If set to &lsquo;field1AndField2608&rsquo; then DTVCC data will be stripped out, but 608 data from both fields will be passed. If set to &lsquo;field1608&rsquo; then only the data carried in 608 from field 1 video will be passed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">captionData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCaptionData.html">RtmpCaptionData</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV15inputLossAction12restartDelay11cacheLength0K12FullBehavior20authenticationScheme11captionDataAdB05Inputgh3ForC3OutOSg_s5Int32VSgApB0c5CachemN0OSgAB014AuthenticationP0OSgAB0c7CaptionR0OSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(inputLossAction:restartDelay:cacheLength:cacheFullBehavior:authenticationScheme:captionData:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV15inputLossAction12restartDelay11cacheLength0K12FullBehavior20authenticationScheme11captionDataAdB05Inputgh3ForC3OutOSg_s5Int32VSgApB0c5CachemN0OSgAB014AuthenticationP0OSgAB0c7CaptionR0OSgtcfc">init(inputLossAction:restartDelay:cacheLength:cacheFullBehavior:authenticationScheme:captionData:)</a>
+                    <a name="/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationScheme17cacheFullBehavior0H6Length11captionData15inputLossAction12restartDelayAdB014AuthenticationG0OSg_AB0c5CacheiJ0OSgs5Int32VSgAB0c7CaptionM0OSgAB05Inputop3ForC3OutOSgAStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(authenticationScheme:cacheFullBehavior:cacheLength:captionData:inputLossAction:restartDelay:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV17RtmpGroupSettingsV20authenticationScheme17cacheFullBehavior0H6Length11captionData15inputLossAction12restartDelayAdB014AuthenticationG0OSg_AB0c5CacheiJ0OSgs5Int32VSgAB0c7CaptionM0OSgAB05Inputop3ForC3OutOSgAStcfc">init(authenticationScheme:cacheFullBehavior:cacheLength:captionData:inputLossAction:restartDelay:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -761,7 +761,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">inputLossAction</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/InputLossActionForRtmpOut.html">InputLossActionForRtmpOut</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restartDelay</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheLength</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheFullBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCacheFullBehavior.html">RtmpCacheFullBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authenticationScheme</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/AuthenticationScheme.html">AuthenticationScheme</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">captionData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCaptionData.html">RtmpCaptionData</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">authenticationScheme</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/AuthenticationScheme.html">AuthenticationScheme</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheFullBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCacheFullBehavior.html">RtmpCacheFullBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheLength</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">captionData</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/RtmpCaptionData.html">RtmpCaptionData</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inputLossAction</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/InputLossActionForRtmpOut.html">InputLossActionForRtmpOut</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restartDelay</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -773,7 +773,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="CreateReplicationGroupMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4ports5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4ports5Int32VSgvp">port</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabledSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/atRestEncryptionEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabledSbSgvp">atRestEncryptionEnabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The port number on which each member of the replication group accepts connections.</p>
+                        <p>A flag that enables encryption at rest when set to true. You cannot modify the value of AtRestEncryptionEnabled after the replication group is created. To enable encryption at rest on a replication group you must set AtRestEncryptionEnabled to true when you create the replication group.   Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. Default: false</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">atRestEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE11DescriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/replicationGroupDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE11DescriptionSSvp">replicationGroupDescription</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV9authTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/authToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV9authTokenSSSgvp">authToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A user-created description for the replication group.</p>
+                        <p>Reserved parameter. The password used to access a password protected server.  AuthToken can be specified only on replication groups where TransitEncryptionEnabled is true.  For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup.  Password constraints:   Must be only printable ASCII characters.   Must be at least 16 characters and no more than 128 characters in length.   Cannot contain any of the following characters: &lsquo;/&rsquo;, &lsquo;&ldquo;&rsquo;, or &lsquo;@&rsquo;.    For more information, see AUTH password at <a href="http://redis.io/commands/AUTH">http://redis.io/commands/AUTH</a>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23autoMinorVersionUpgradeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are: Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:23:00-mon:01:30</p>
+                        <p>This parameter is currently disabled.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,33 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE2IdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE2IdSSvp">replicationGroupId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The replication group identifier. This parameter is stored as a lowercase string. Constraints:   A name must contain from 1 to 20 alphanumeric characters or hyphens.   The first character must be a letter.   A name cannot end with a hyphen or contain two consecutive hyphens.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13cacheNodeTypeSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/cacheNodeType" class="dashAnchor"></a>
                     <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13cacheNodeTypeSSSgvp">cacheNodeType</a>
@@ -730,6 +703,60 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV014cacheParameterE4NameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheParameterGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV014cacheParameterE4NameSSSgvp">cacheParameterGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter group, we recommend that you specify the parameter group by name.    To create a Redis (cluster mode disabled) replication group, use CacheParameterGroupName=default.redis3.2.   To create a Redis (cluster mode enabled) replication group, use CacheParameterGroupName=default.redis3.2.cluster.on.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV013cacheSecurityE5NamesAB0bhE8NameListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheSecurityGroupNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV013cacheSecurityE5NamesAB0bhE8NameListVSgvp">cacheSecurityGroupNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of cache security group names to associate with this replication group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheSecurityGroupNames</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/CacheSecurityGroupNameList.html">CacheSecurityGroupNameList</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV08securityE3IdsAB08SecurityeH4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV08securityE3IdsAB08SecurityeH4ListVSgvp">securityGroupIds</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13engineVersionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13engineVersionSSSgvp">engineVersion</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,311 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud (Amazon VPC).</p>
+                        <p>The version number of the cache engine to be used for the clusters in this replication group. To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.  Important: You can upgrade to a newer engine version (see Selecting a Cache Engine and Version) in the ElastiCache User Guide, but you cannot downgrade to an earlier engine version. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SecurityGroupIdsList.html">SecurityGroupIdsList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV013cacheSecurityE5NamesAB0bhE8NameListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheSecurityGroupNames" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV013cacheSecurityE5NamesAB0bhE8NameListVSgvp">cacheSecurityGroupNames</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of cache security group names to associate with this replication group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheSecurityGroupNames</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/CacheSecurityGroupNameList.html">CacheSecurityGroupNameList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV24transitEncryptionEnabledSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/transitEncryptionEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV24transitEncryptionEnabledSbSgvp">transitEncryptionEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set TransitEncryptionEnabled to true when you create a cluster. This parameter is valid only if the Engine parameter is redis, the EngineVersion parameter is 3.2.6 or 4.x, and the cluster is being created in an Amazon VPC. If you enable in-transit encryption, you must also specify a value for CacheSubnetGroup.  Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. Default: false   For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transitEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23autoMinorVersionUpgradeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This parameter is currently disabled.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabledSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/atRestEncryptionEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabledSbSgvp">atRestEncryptionEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A flag that enables encryption at rest when set to true. You cannot modify the value of AtRestEncryptionEnabled after the replication group is created. To enable encryption at rest on a replication group you must set AtRestEncryptionEnabled to true when you create the replication group.   Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. Default: false</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">atRestEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV03numB8Clusterss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/numCacheClusters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV03numB8Clusterss5Int32VSgvp">numCacheClusters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of clusters this replication group initially has. This parameter is not used if there is more than one node group (shard). You should use ReplicasPerNodeGroup instead. If AutomaticFailoverEnabled is true, the value of this parameter must be at least 2. If AutomaticFailoverEnabled is false you can omit this parameter (it will default to 1), or you can explicitly set it to a value between 2 and 6. The maximum permitted value for NumCacheClusters is 6 (1 primary plus 5 replicas).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numCacheClusters</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV16primaryClusterIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/primaryClusterId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV16primaryClusterIdSSSgvp">primaryClusterId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier of the cluster that serves as the primary for this replication group. This cluster must already exist and have a status of available. This parameter is not required if NumCacheClusters, NumNodeGroups, or ReplicasPerNodeGroup is specified.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">primaryClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotNameSSSgvp">snapshotName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of a snapshot from which to restore data into the new replication group. The snapshot status changes to restoring while the new replication group is being created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13numNodeGroupss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/numNodeGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13numNodeGroupss5Int32VSgvp">numNodeGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1. Default: 1</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV20notificationTopicArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/notificationTopicArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV20notificationTopicArnSSSgvp">notificationTopicArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.  The Amazon SNS topic owner must be the same as the cluster owner.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationTopicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV015replicasPerNodeE0s5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/replicasPerNodeGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV015replicasPerNodeE0s5Int32VSgvp">replicasPerNodeGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An optional parameter that specifies the number of replica nodes in each node group (shard). Valid values are 0 to 5.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicasPerNodeGroup</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV22snapshotRetentionLimits5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotRetentionLimit" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV22snapshotRetentionLimits5Int32VSgvp">snapshotRetentionLimit</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of days for which ElastiCache retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted. Default: 0 (i.e., automatic backups are disabled for this cluster).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13engineVersionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13engineVersionSSSgvp">engineVersion</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV20notificationTopicArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/notificationTopicArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV20notificationTopicArnSSSgvp">notificationTopicArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,14 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The version number of the cache engine to be used for the clusters in this replication group. To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.  Important: You can upgrade to a newer engine version (see Selecting a Cache Engine and Version) in the ElastiCache User Guide, but you cannot downgrade to an earlier engine version. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version.</p>
+                        <p>The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.  The Amazon SNS topic owner must be the same as the cluster owner.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationTopicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1171,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotArnsAB08SnapshotH4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotArns" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotArnsAB08SnapshotH4ListVSgvp">snapshotArns</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV03numB8Clusterss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/numCacheClusters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV03numB8Clusterss5Int32VSgvp">numCacheClusters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1181,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfiguration regardless of the number of ARNs specified here. Example of an Amazon S3 ARN: arn:aws:s3:::my_bucket/snapshot1.rdb</p>
+                        <p>The number of clusters this replication group initially has. This parameter is not used if there is more than one node group (shard). You should use ReplicasPerNodeGroup instead. If AutomaticFailoverEnabled is true, the value of this parameter must be at least 2. If AutomaticFailoverEnabled is false you can omit this parameter (it will default to 1), or you can explicitly set it to a value between 2 and 6. The maximum permitted value for NumCacheClusters is 6 (1 primary plus 5 replicas).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotArns</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SnapshotArnsList.html">SnapshotArnsList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numCacheClusters</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1198,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV14snapshotWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV14snapshotWindowSSSgvp">snapshotWindow</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13numNodeGroupss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/numNodeGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV13numNodeGroupss5Int32VSgvp">numNodeGroups</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1208,14 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard). Example: 05:00-09:00  If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range.</p>
+                        <p>An optional parameter that specifies the number of node groups (shards) for this Redis (cluster mode enabled) replication group. For Redis (cluster mode disabled) either omit this parameter or set it to 1. Default: 1</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV9authTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/authToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV9authTokenSSSgvp">authToken</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4ports5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4ports5Int32VSgvp">port</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1235,14 +965,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Reserved parameter. The password used to access a password protected server.  AuthToken can be specified only on replication groups where TransitEncryptionEnabled is true.  For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup.  Password constraints:   Must be only printable ASCII characters.   Must be at least 16 characters and no more than 128 characters in length.   Cannot contain any of the following characters: &lsquo;/&rsquo;, &lsquo;&ldquo;&rsquo;, or &lsquo;@&rsquo;.    For more information, see AUTH password at <a href="http://redis.io/commands/AUTH">http://redis.io/commands/AUTH</a>.</p>
+                        <p>The port number on which each member of the replication group accepts connections.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1279,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV014cacheParameterE4NameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheParameterGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV014cacheParameterE4NameSSSgvp">cacheParameterGroupName</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1289,14 +1019,257 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. If you are running Redis version 3.2.4 or later, only one node group (shard), and want to use a default parameter group, we recommend that you specify the parameter group by name.    To create a Redis (cluster mode disabled) replication group, use CacheParameterGroupName=default.redis3.2.   To create a Redis (cluster mode enabled) replication group, use CacheParameterGroupName=default.redis3.2.cluster.on.</p>
+                        <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are: Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:23:00-mon:01:30</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV16primaryClusterIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/primaryClusterId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV16primaryClusterIdSSSgvp">primaryClusterId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the cluster that serves as the primary for this replication group. This cluster must already exist and have a status of available. This parameter is not required if NumCacheClusters, NumNodeGroups, or ReplicasPerNodeGroup is specified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">primaryClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV015replicasPerNodeE0s5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/replicasPerNodeGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV015replicasPerNodeE0s5Int32VSgvp">replicasPerNodeGroup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional parameter that specifies the number of replica nodes in each node group (shard). Valid values are 0 to 5.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicasPerNodeGroup</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE11DescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/replicationGroupDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE11DescriptionSSvp">replicationGroupDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A user-created description for the replication group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE2IdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV011replicationE2IdSSvp">replicationGroupId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The replication group identifier. This parameter is stored as a lowercase string. Constraints:   A name must contain from 1 to 20 alphanumeric characters or hyphens.   The first character must be a letter.   A name cannot end with a hyphen or contain two consecutive hyphens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV08securityE3IdsAB08SecurityeH4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV08securityE3IdsAB08SecurityeH4ListVSgvp">securityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud (Amazon VPC).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SecurityGroupIdsList.html">SecurityGroupIdsList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotArnsAB08SnapshotH4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotArns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotArnsAB08SnapshotH4ListVSgvp">snapshotArns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of Amazon Resource Names (ARN) that uniquely identify the Redis RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new replication group. The Amazon S3 object name in the ARN cannot contain any commas. The new replication group will have the number of node groups (console: shards) specified by the parameter NumNodeGroups or the number of node groups configured by NodeGroupConfiguration regardless of the number of ARNs specified here. Example of an Amazon S3 ARN: arn:aws:s3:::my_bucket/snapshot1.rdb</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotArns</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SnapshotArnsList.html">SnapshotArnsList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV12snapshotNameSSSgvp">snapshotName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of a snapshot from which to restore data into the new replication group. The snapshot status changes to restoring while the new replication group is being created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV22snapshotRetentionLimits5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotRetentionLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV22snapshotRetentionLimits5Int32VSgvp">snapshotRetentionLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of days for which ElastiCache retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted. Default: 0 (i.e., automatic backups are disabled for this cluster).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV14snapshotWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV14snapshotWindowSSSgvp">snapshotWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard). Example: 05:00-09:00  If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1333,9 +1306,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4port011replicationE11Description26preferredMaintenanceWindow24automaticFailoverEnabled0hE2Id13cacheNodeType0q6SubnetE4Name6engine08securityE3Ids0q8SecurityE5Names017transitEncryptionO023autoMinorVersionUpgrade016atRestEncryptionO003numB8Clusters014primaryClusterP008snapshotU003numR6Groups20notificationTopicArn011replicasPerrE022snapshotRetentionLimit04nodeE13Configuration0V7Version12snapshotArns08snapshotL09authToken0jB10ClusterAZs0q9ParametereU04tagsADs5Int32VSg_S2SSgSbSgSSA8_A8_A8_AB0yeX4ListVSgAB0byeU4ListVSgA9_A9_A9_A7_A8_A8_A7_A8_A7_A7_AB0rE17ConfigurationListVSgA8_AB16SnapshotArnsListVSgA8_A8_AB21AvailabilityZonesListVSgA8_AB7TagListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(port:replicationGroupDescription:preferredMaintenanceWindow:automaticFailoverEnabled:replicationGroupId:cacheNodeType:cacheSubnetGroupName:engine:securityGroupIds:cacheSecurityGroupNames:transitEncryptionEnabled:autoMinorVersionUpgrade:atRestEncryptionEnabled:numCacheClusters:primaryClusterId:snapshotName:numNodeGroups:notificationTopicArn:replicasPerNodeGroup:snapshotRetentionLimit:nodeGroupConfiguration:engineVersion:snapshotArns:snapshotWindow:authToken:preferredCacheClusterAZs:cacheParameterGroupName:tags:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV4port011replicationE11Description26preferredMaintenanceWindow24automaticFailoverEnabled0hE2Id13cacheNodeType0q6SubnetE4Name6engine08securityE3Ids0q8SecurityE5Names017transitEncryptionO023autoMinorVersionUpgrade016atRestEncryptionO003numB8Clusters014primaryClusterP008snapshotU003numR6Groups20notificationTopicArn011replicasPerrE022snapshotRetentionLimit04nodeE13Configuration0V7Version12snapshotArns08snapshotL09authToken0jB10ClusterAZs0q9ParametereU04tagsADs5Int32VSg_S2SSgSbSgSSA8_A8_A8_AB0yeX4ListVSgAB0byeU4ListVSgA9_A9_A9_A7_A8_A8_A7_A8_A7_A7_AB0rE17ConfigurationListVSgA8_AB16SnapshotArnsListVSgA8_A8_AB21AvailabilityZonesListVSgA8_AB7TagListVSgtcfc">init(port:replicationGroupDescription:preferredMaintenanceWindow:automaticFailoverEnabled:replicationGroupId:cacheNodeType:cacheSubnetGroupName:engine:securityGroupIds:cacheSecurityGroupNames:transitEncryptionEnabled:autoMinorVersionUpgrade:atRestEncryptionEnabled:numCacheClusters:primaryClusterId:snapshotName:numNodeGroups:notificationTopicArn:replicasPerNodeGroup:snapshotRetentionLimit:nodeGroupConfiguration:engineVersion:snapshotArns:snapshotWindow:authToken:preferredCacheClusterAZs:cacheParameterGroupName:tags:)</a>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV24transitEncryptionEnabledSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transitEncryptionEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV24transitEncryptionEnabledSbSgvp">transitEncryptionEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set TransitEncryptionEnabled to true when you create a cluster. This parameter is valid only if the Engine parameter is redis, the EngineVersion parameter is 3.2.6 or 4.x, and the cluster is being created in an Amazon VPC. If you enable in-transit encryption, you must also specify a value for CacheSubnetGroup.  Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6 or 4.x. Default: false   For HIPAA compliance, you must specify TransitEncryptionEnabled as true, an AuthToken, and a CacheSubnetGroup.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transitEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabled9authToken23autoMinorVersionUpgrade017automaticFailoverJ013cacheNodeType0s9ParameterE4Name0s8SecurityE5Names0s6SubneteW06engine06engineO004nodeE13Configuration20notificationTopicArn03numB8Clusters03numT6Groups4port09preferredB10ClusterAZs26preferredMaintenanceWindow16primaryClusterId011replicasPertE0011replicationE11Description011replicationE2Id08securityE3Ids12snapshotArns08snapshotW022snapshotRetentionLimit14snapshotWindow4tags07transitiJ0ADSbSg_SSSgA5_A5_A6_A6_AB0bxeW4ListVSgA6_A6_A6_AB0tE17ConfigurationListVSgA6_s5Int32VSgA15_A15_AB21AvailabilityZonesListVSgA6_A6_A15_S2SAB0xE7IdsListVSgAB16SnapshotArnsListVSgA6_A15_A6_AB7TagListVSgA5_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(atRestEncryptionEnabled:authToken:autoMinorVersionUpgrade:automaticFailoverEnabled:cacheNodeType:cacheParameterGroupName:cacheSecurityGroupNames:cacheSubnetGroupName:engine:engineVersion:nodeGroupConfiguration:notificationTopicArn:numCacheClusters:numNodeGroups:port:preferredCacheClusterAZs:preferredMaintenanceWindow:primaryClusterId:replicasPerNodeGroup:replicationGroupDescription:replicationGroupId:securityGroupIds:snapshotArns:snapshotName:snapshotRetentionLimit:snapshotWindow:tags:transitEncryptionEnabled:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV29CreateReplicationGroupMessageV23atRestEncryptionEnabled9authToken23autoMinorVersionUpgrade017automaticFailoverJ013cacheNodeType0s9ParameterE4Name0s8SecurityE5Names0s6SubneteW06engine06engineO004nodeE13Configuration20notificationTopicArn03numB8Clusters03numT6Groups4port09preferredB10ClusterAZs26preferredMaintenanceWindow16primaryClusterId011replicasPertE0011replicationE11Description011replicationE2Id08securityE3Ids12snapshotArns08snapshotW022snapshotRetentionLimit14snapshotWindow4tags07transitiJ0ADSbSg_SSSgA5_A5_A6_A6_AB0bxeW4ListVSgA6_A6_A6_AB0tE17ConfigurationListVSgA6_s5Int32VSgA15_A15_AB21AvailabilityZonesListVSgA6_A6_A15_S2SAB0xE7IdsListVSgAB16SnapshotArnsListVSgA6_A15_A6_AB7TagListVSgA5_tcfc">init(atRestEncryptionEnabled:authToken:autoMinorVersionUpgrade:automaticFailoverEnabled:cacheNodeType:cacheParameterGroupName:cacheSecurityGroupNames:cacheSubnetGroupName:engine:engineVersion:nodeGroupConfiguration:notificationTopicArn:numCacheClusters:numNodeGroups:port:preferredCacheClusterAZs:preferredMaintenanceWindow:primaryClusterId:replicasPerNodeGroup:replicationGroupDescription:replicationGroupId:securityGroupIds:snapshotArns:snapshotName:snapshotRetentionLimit:snapshotWindow:tags:transitEncryptionEnabled:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1350,7 +1350,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automaticFailoverEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SecurityGroupIdsList.html">SecurityGroupIdsList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSecurityGroupNames</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/CacheSecurityGroupNameList.html">CacheSecurityGroupNameList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transitEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">atRestEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numCacheClusters</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">primaryClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationTopicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicasPerNodeGroup</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeGroupConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupConfigurationList.html">NodeGroupConfigurationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotArns</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SnapshotArnsList.html">SnapshotArnsList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredCacheClusterAZs</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/AvailabilityZonesList.html">AvailabilityZonesList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">atRestEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automaticFailoverEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSecurityGroupNames</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/CacheSecurityGroupNameList.html">CacheSecurityGroupNameList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeGroupConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupConfigurationList.html">NodeGroupConfigurationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationTopicArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numCacheClusters</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numNodeGroups</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredCacheClusterAZs</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/AvailabilityZonesList.html">AvailabilityZonesList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">primaryClusterId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicasPerNodeGroup</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SecurityGroupIdsList.html">SecurityGroupIdsList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotArns</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/SnapshotArnsList.html">SnapshotArnsList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotRetentionLimit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transitEncryptionEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1362,7 +1362,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="EnableMFADeviceRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV12serialNumberSSvp"></a>
-                    <a name="//apple_ref/swift/Property/serialNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV12serialNumberSSvp">serialNumber</a>
+                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode1SSvp"></a>
+                    <a name="//apple_ref/swift/Property/authenticationCode1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode1SSvp">authenticationCode1</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@:/-</p>
+                        <p>An authentication code emitted by the device.  The format for this parameter is a string of six digits.  Submit your request immediately after generating the authentication codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device becomes out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can resync the device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authenticationCode1</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode1SSvp"></a>
-                    <a name="//apple_ref/swift/Property/authenticationCode1" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode1SSvp">authenticationCode1</a>
+                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV12serialNumberSSvp"></a>
+                    <a name="//apple_ref/swift/Property/serialNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV12serialNumberSSvp">serialNumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An authentication code emitted by the device.  The format for this parameter is a string of six digits.  Submit your request immediately after generating the authentication codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device becomes out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can resync the device.</p>
+                        <p>The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@:/-</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">authenticationCode1</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV12serialNumber19authenticationCode20G5Code18userNameADSS_S3Stcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(serialNumber:authenticationCode2:authenticationCode1:userName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV12serialNumber19authenticationCode20G5Code18userNameADSS_S3Stcfc">init(serialNumber:authenticationCode2:authenticationCode1:userName:)</a>
+                    <a name="/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode10E5Code212serialNumber8userNameADSS_S3Stcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(authenticationCode1:authenticationCode2:serialNumber:userName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3IAMAAV22EnableMFADeviceRequestV19authenticationCode10E5Code212serialNumber8userNameADSS_S3Stcfc">init(authenticationCode1:authenticationCode2:serialNumber:userName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authenticationCode2</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authenticationCode1</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">authenticationCode1</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">authenticationCode2</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

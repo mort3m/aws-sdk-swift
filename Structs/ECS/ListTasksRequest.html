@@ -14,7 +14,7 @@
     <a title="ListTasksRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV9nextTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nextToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV9nextTokenSSSgvp">nextToken</a>
+                    <a name="/s:3ECSAAV16ListTasksRequestV7clusterSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cluster" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV7clusterSSSgvp">cluster</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The nextToken value returned from a previous paginated ListTasks request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value.  This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes.</p>
+                        <p>The short name or full Amazon Resource Name (ARN) of the cluster that hosts the tasks to list. If you do not specify a cluster, the default cluster is assumed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV10maxResultss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxResults" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV10maxResultss5Int32VSgvp">maxResults</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum number of task results returned by ListTasks in paginated output. When this parameter is used, ListTasks only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another ListTasks request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then ListTasks returns up to 100 results and a nextToken value if applicable.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cluster</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV9startedBySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startedBy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV9startedBySSSgvp">startedBy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The startedBy value with which to filter the task results. Specifying a startedBy value limits the results to tasks that were started with that value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3ECSAAV16ListTasksRequestV13desiredStatusAB07DesiredF0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/desiredStatus" class="dashAnchor"></a>
                     <a class="token" href="#/s:3ECSAAV16ListTasksRequestV13desiredStatusAB07DesiredF0OSgvp">desiredStatus</a>
@@ -703,60 +649,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">desiredStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DesiredStatus.html">DesiredStatus</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV7clusterSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cluster" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV7clusterSSSgvp">cluster</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The short name or full Amazon Resource Name (ARN) of the cluster that hosts the tasks to list. If you do not specify a cluster, the default cluster is assumed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cluster</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV10launchTypeAB06LaunchF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/launchType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV10launchTypeAB06LaunchF0OSgvp">launchType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The launch type for services to list.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LaunchType.html">LaunchType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,6 +685,87 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3ECSAAV16ListTasksRequestV10launchTypeAB06LaunchF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/launchType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV10launchTypeAB06LaunchF0OSgvp">launchType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The launch type for services to list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LaunchType.html">LaunchType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV16ListTasksRequestV10maxResultss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxResults" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV10maxResultss5Int32VSgvp">maxResults</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of task results returned by ListTasks in paginated output. When this parameter is used, ListTasks only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another ListTasks request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then ListTasks returns up to 100 results and a nextToken value if applicable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV16ListTasksRequestV9nextTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nextToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV9nextTokenSSSgvp">nextToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The nextToken value returned from a previous paginated ListTasks request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value.  This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3ECSAAV16ListTasksRequestV11serviceNameSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/serviceName" class="dashAnchor"></a>
                     <a class="token" href="#/s:3ECSAAV16ListTasksRequestV11serviceNameSSSgvp">serviceName</a>
@@ -820,9 +793,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV16ListTasksRequestV9nextToken10maxResults17containerInstance9startedBy13desiredStatus7cluster10launchType6family11serviceNameADSSSg_s5Int32VSgA2nB07DesiredN0OSgAnB06LaunchQ0OSgA2Ntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(nextToken:maxResults:containerInstance:startedBy:desiredStatus:cluster:launchType:family:serviceName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV9nextToken10maxResults17containerInstance9startedBy13desiredStatus7cluster10launchType6family11serviceNameADSSSg_s5Int32VSgA2nB07DesiredN0OSgAnB06LaunchQ0OSgA2Ntcfc">init(nextToken:maxResults:containerInstance:startedBy:desiredStatus:cluster:launchType:family:serviceName:)</a>
+                    <a name="/s:3ECSAAV16ListTasksRequestV9startedBySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startedBy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV9startedBySSSgvp">startedBy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The startedBy value with which to filter the task results. Specifying a startedBy value limits the results to tasks that were started with that value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ECSAAV16ListTasksRequestV7cluster17containerInstance13desiredStatus6family10launchType10maxResults9nextToken11serviceName9startedByADSSSg_AnB07DesiredI0OSgAnB06LaunchL0OSgs5Int32VSgA3Ntcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cluster:containerInstance:desiredStatus:family:launchType:maxResults:nextToken:serviceName:startedBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV16ListTasksRequestV7cluster17containerInstance13desiredStatus6family10launchType10maxResults9nextToken11serviceName9startedByADSSSg_AnB07DesiredI0OSgAnB06LaunchL0OSgs5Int32VSgA3Ntcfc">init(cluster:containerInstance:desiredStatus:family:launchType:maxResults:nextToken:serviceName:startedBy:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerInstance</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">desiredStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DesiredStatus.html">DesiredStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cluster</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LaunchType.html">LaunchType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cluster</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerInstance</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">desiredStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DesiredStatus.html">DesiredStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/LaunchType.html">LaunchType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

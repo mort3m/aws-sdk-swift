@@ -14,7 +14,7 @@
     <a title="UpdateTrailRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/s3BucketName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketNameSSSgvp">s3BucketName</a>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cloudWatchLogsLogGroupArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArnSSSgvp">cloudWatchLogsLogGroupArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,95 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.</p>
+                        <p>Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV014isOrganizationB0SbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/isOrganizationTrail" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV014isOrganizationB0SbSgvp">isOrganizationTrail</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether the trail is applied to all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations. If the trail is not an organization trail and this is set to true, the trail will be created in all AWS accounts that belong to the organization. If the trail is an organization trail and this is set to false, the trail will remain in the current AWS account but be deleted from all member accounts in the organization.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isOrganizationTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV26includeGlobalServiceEventsSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeGlobalServiceEvents" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV26includeGlobalServiceEventsSbSgvp">includeGlobalServiceEvents</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether the trail is publishing events from global services such as IAM to the log files.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeGlobalServiceEvents</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV12snsTopicNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snsTopicName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV12snsTopicNameSSSgvp">snsTopicName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snsTopicName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cloudWatchLogsLogGroupArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV11s3KeyPrefixSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/s3KeyPrefix" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV11s3KeyPrefixSSSgvp">s3KeyPrefix</a>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV23enableLogFileValidationSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/enableLogFileValidation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV23enableLogFileValidationSbSgvp">enableLogFileValidation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +641,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.</p>
+                        <p>Specifies whether log file validation is enabled. The default is false.  When you disable log file integrity validation, the chain of digest files is broken after one hour. CloudTrail will not create digest files for log files that were delivered during a period in which log file integrity validation was disabled. For example, if you enable log file integrity validation at noon on January 1, disable it at noon on January 2, and re-enable it at noon on January 10, digest files will not be created for the log files delivered from noon on January 2 to noon on January 10. The same applies whenever you stop CloudTrail logging or delete a trail.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableLogFileValidation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV26includeGlobalServiceEventsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeGlobalServiceEvents" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV26includeGlobalServiceEventsSbSgvp">includeGlobalServiceEvents</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether the trail is publishing events from global services such as IAM to the log files.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeGlobalServiceEvents</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -757,6 +703,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isMultiRegionTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV014isOrganizationB0SbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/isOrganizationTrail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV014isOrganizationB0SbSgvp">isOrganizationTrail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether the trail is applied to all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations. If the trail is not an organization trail and this is set to true, the trail will be created in all AWS accounts that belong to the organization. If the trail is an organization trail and this is set to false, the trail will remain in the current AWS account but be deleted from all member accounts in the organization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isOrganizationTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV23enableLogFileValidationSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/enableLogFileValidation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV23enableLogFileValidationSbSgvp">enableLogFileValidation</a>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/s3BucketName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketNameSSSgvp">s3BucketName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies whether log file validation is enabled. The default is false.  When you disable log file integrity validation, the chain of digest files is broken after one hour. CloudTrail will not create digest files for log files that were delivered during a period in which log file integrity validation was disabled. For example, if you enable log file integrity validation at noon on January 1, disable it at noon on January 2, and re-enable it at noon on January 10, digest files will not be created for the log files delivered from noon on January 2 to noon on January 10. The same applies whenever you stop CloudTrail logging or delete a trail.</p>
+                        <p>Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableLogFileValidation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cloudWatchLogsLogGroupArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArnSSSgvp">cloudWatchLogsLogGroupArn</a>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV11s3KeyPrefixSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/s3KeyPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV11s3KeyPrefixSSSgvp">s3KeyPrefix</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.</p>
+                        <p>Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cloudWatchLogsLogGroupArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +847,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketName014isOrganizationB026includeGlobalServiceEvents08snsTopicG021cloudWatchLogsRoleArn0E9KeyPrefix0h11MultiRegionB003kmsU2Id4name23enableLogFileValidation0pqr8LogGroupT0ADSSSg_SbSgAq3pqPSSAqPtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(s3BucketName:isOrganizationTrail:includeGlobalServiceEvents:snsTopicName:cloudWatchLogsRoleArn:s3KeyPrefix:isMultiRegionTrail:kmsKeyId:name:enableLogFileValidation:cloudWatchLogsLogGroupArn:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV12s3BucketName014isOrganizationB026includeGlobalServiceEvents08snsTopicG021cloudWatchLogsRoleArn0E9KeyPrefix0h11MultiRegionB003kmsU2Id4name23enableLogFileValidation0pqr8LogGroupT0ADSSSg_SbSgAq3pqPSSAqPtcfc">init(s3BucketName:isOrganizationTrail:includeGlobalServiceEvents:snsTopicName:cloudWatchLogsRoleArn:s3KeyPrefix:isMultiRegionTrail:kmsKeyId:name:enableLogFileValidation:cloudWatchLogsLogGroupArn:)</a>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV12snsTopicNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snsTopicName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV12snsTopicNameSSSgvp">snsTopicName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snsTopicName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArn0efg4RoleJ006enableH14FileValidation26includeGlobalServiceEvents013isMultiRegionB00s12OrganizationB08kmsKeyId4name12s3BucketName02s3X6Prefix12snsTopicNameADSSSg_APSbSgA3qPSSA3Ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cloudWatchLogsLogGroupArn:cloudWatchLogsRoleArn:enableLogFileValidation:includeGlobalServiceEvents:isMultiRegionTrail:isOrganizationTrail:kmsKeyId:name:s3BucketName:s3KeyPrefix:snsTopicName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudTrailAAV06UpdateB7RequestV25cloudWatchLogsLogGroupArn0efg4RoleJ006enableH14FileValidation26includeGlobalServiceEvents013isMultiRegionB00s12OrganizationB08kmsKeyId4name12s3BucketName02s3X6Prefix12snsTopicNameADSSSg_APSbSgA3qPSSA3Ptcfc">init(cloudWatchLogsLogGroupArn:cloudWatchLogsRoleArn:enableLogFileValidation:includeGlobalServiceEvents:isMultiRegionTrail:isOrganizationTrail:kmsKeyId:name:s3BucketName:s3KeyPrefix:snsTopicName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">s3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">isOrganizationTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeGlobalServiceEvents</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snsTopicName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudWatchLogsRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">isMultiRegionTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">enableLogFileValidation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudWatchLogsLogGroupArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cloudWatchLogsLogGroupArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudWatchLogsRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableLogFileValidation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeGlobalServiceEvents</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">isMultiRegionTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">isOrganizationTrail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">s3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snsTopicName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

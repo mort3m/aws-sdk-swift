@@ -14,7 +14,7 @@
     <a title="SendBonusRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16SendBonusRequestV06uniqueD5TokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/uniqueRequestToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV06uniqueD5TokenSSSgvp">uniqueRequestToken</a>
+                    <a name="/s:5MTurkAAV16SendBonusRequestV12assignmentIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/assignmentId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV12assignmentIdSSvp">assignmentId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A unique identifier for this request, which allows you to retry the call on error without granting multiple bonuses. This is useful in cases such as network timeouts where it is unclear whether or not the call succeeded on the server. If the bonus already exists in the system from a previous call using the same UniqueRequestToken, subsequent calls will return an error with a message containing the request ID.</p>
+                        <p>The ID of the assignment for which this bonus is paid.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16SendBonusRequestV6reasonSSvp"></a>
-                    <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV6reasonSSvp">reason</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A message that explains the reason for the bonus payment. The Worker receiving the bonus can see this message.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">assignmentId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,6 +631,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5MTurkAAV16SendBonusRequestV6reasonSSvp"></a>
+                    <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV6reasonSSvp">reason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A message that explains the reason for the bonus payment. The Worker receiving the bonus can see this message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV16SendBonusRequestV06uniqueD5TokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uniqueRequestToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV06uniqueD5TokenSSSgvp">uniqueRequestToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A unique identifier for this request, which allows you to retry the call on error without granting multiple bonuses. This is useful in cases such as network timeouts where it is unclear whether or not the call succeeded on the server. If the bonus already exists in the system from a previous call using the same UniqueRequestToken, subsequent calls will return an error with a message containing the request ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5MTurkAAV16SendBonusRequestV8workerIdSSvp"></a>
                     <a name="//apple_ref/swift/Property/workerId" class="dashAnchor"></a>
                     <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV8workerIdSSvp">workerId</a>
@@ -685,36 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV16SendBonusRequestV12assignmentIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/assignmentId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV12assignmentIdSSvp">assignmentId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the assignment for which this bonus is paid.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">assignmentId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV16SendBonusRequestV06uniqueD5Token6reason11bonusAmount8workerId010assignmentK0ADSSSg_S4Stcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(uniqueRequestToken:reason:bonusAmount:workerId:assignmentId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV06uniqueD5Token6reason11bonusAmount8workerId010assignmentK0ADSSSg_S4Stcfc">init(uniqueRequestToken:reason:bonusAmount:workerId:assignmentId:)</a>
+                    <a name="/s:5MTurkAAV16SendBonusRequestV12assignmentId11bonusAmount6reason06uniqueD5Token06workerF0ADSS_S3SSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(assignmentId:bonusAmount:reason:uniqueRequestToken:workerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV16SendBonusRequestV12assignmentId11bonusAmount6reason06uniqueD5Token06workerF0ADSS_S3SSgSStcfc">init(assignmentId:bonusAmount:reason:uniqueRequestToken:workerId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -729,7 +729,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bonusAmount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">workerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">assignmentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">assignmentId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">bonusAmount</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">uniqueRequestToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -741,7 +741,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="MarketplaceMetering Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:19MarketplaceMeteringAAV15batchMeterUsageyAB05BatchdE6ResultVAB0fdE7RequestVKF"></a>
+                    <a name="/s:19MarketplaceMeteringAAV15batchMeterUsagey3NIO15EventLoopFutureCyAB05BatchdE6ResultVGAB0jdE7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/batchMeterUsage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV15batchMeterUsageyAB05BatchdE6ResultVAB0fdE7RequestVKF">batchMeterUsage(_:)</a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV15batchMeterUsagey3NIO15EventLoopFutureCyAB05BatchdE6ResultVGAB0jdE7RequestVKF">batchMeterUsage(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -594,7 +594,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchMeterUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/BatchMeterUsageRequest.html">BatchMeterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceMetering/BatchMeterUsageResult.html">BatchMeterUsageResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">batchMeterUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/BatchMeterUsageRequest.html">BatchMeterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceMetering/BatchMeterUsageResult.html">BatchMeterUsageResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -604,63 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:19MarketplaceMeteringAAV15resolveCustomeryAB07ResolveD6ResultVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/resolveCustomer(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV15resolveCustomeryAB07ResolveD6ResultVAB0eD7RequestVKF">resolveCustomer(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a CustomerIdentifier and product code.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCustomer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/ResolveCustomerRequest.html">ResolveCustomerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceMetering/ResolveCustomerResult.html">ResolveCustomerResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV13registerUsageyAB08RegisterD6ResultVAB0eD7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/registerUsage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV13registerUsageyAB08RegisterD6ResultVAB0eD7RequestVKF">registerUsage(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service and call the RegisterUsage operation for software entitlement and metering. Calling RegisterUsage from containers running outside of ECS is not currently supported. Free and BYOL products for ECS aren&rsquo;t required to call RegisterUsage, but you may choose to do so if you would like to receive usage data in your seller reports. The sections below explain the behavior of RegisterUsage. RegisterUsage performs two primary functions: metering and entitlement.    Entitlement: RegisterUsage allows you to verify that the customer running your paid software is subscribed to your product on AWS Marketplace, enabling you to guard against unauthorized use. Your container image that integrates with RegisterUsage is only required to guard against unauthorized use at container startup, as such a CustomerNotSubscribedException/PlatformNotSupportedException will only be thrown on the initial call to RegisterUsage. Subsequent calls from the same Amazon ECS task instance (e.g. task-id) will not throw a CustomerNotSubscribedException, even if the customer unsubscribes while the Amazon ECS task is still running.    Metering: RegisterUsage meters software use per ECS task, per hour, with usage prorated to the second. A minimum of 1 minute of usage applies to tasks that are short lived. For example, if a customer has a 10 node ECS cluster and creates an ECS service configured as a Daemon Set, then ECS will launch a task on all 10 cluster nodes and the customer will be charged: (10 * hourly_rate). Metering for software use is automatically handled by the AWS Marketplace Metering Control Plane &ndash; your software is not required to perform any metering specific actions, other than call RegisterUsage once for metering of software use to commence. The AWS Marketplace Metering Control Plane will also continue to bill customers for running ECS tasks, regardless of the customers subscription state, removing the need for your software to perform entitlement checks at runtime.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/RegisterUsageRequest.html">RegisterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceMetering/RegisterUsageResult.html">RegisterUsageResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV10meterUsageyAB05MeterD6ResultVAB0eD7RequestVKF"></a>
+                    <a name="/s:19MarketplaceMeteringAAV10meterUsagey3NIO15EventLoopFutureCyAB05MeterD6ResultVGAB0iD7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/meterUsage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV10meterUsageyAB05MeterD6ResultVAB0eD7RequestVKF">meterUsage(_:)</a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV10meterUsagey3NIO15EventLoopFutureCyAB05MeterD6ResultVGAB0iD7RequestVKF">meterUsage(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +621,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">meterUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/MeterUsageRequest.html">MeterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceMetering/MeterUsageResult.html">MeterUsageResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">meterUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/MeterUsageRequest.html">MeterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceMetering/MeterUsageResult.html">MeterUsageResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV13registerUsagey3NIO15EventLoopFutureCyAB08RegisterD6ResultVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/registerUsage(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV13registerUsagey3NIO15EventLoopFutureCyAB08RegisterD6ResultVGAB0iD7RequestVKF">registerUsage(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service and call the RegisterUsage operation for software entitlement and metering. Calling RegisterUsage from containers running outside of ECS is not currently supported. Free and BYOL products for ECS aren&rsquo;t required to call RegisterUsage, but you may choose to do so if you would like to receive usage data in your seller reports. The sections below explain the behavior of RegisterUsage. RegisterUsage performs two primary functions: metering and entitlement.    Entitlement: RegisterUsage allows you to verify that the customer running your paid software is subscribed to your product on AWS Marketplace, enabling you to guard against unauthorized use. Your container image that integrates with RegisterUsage is only required to guard against unauthorized use at container startup, as such a CustomerNotSubscribedException/PlatformNotSupportedException will only be thrown on the initial call to RegisterUsage. Subsequent calls from the same Amazon ECS task instance (e.g. task-id) will not throw a CustomerNotSubscribedException, even if the customer unsubscribes while the Amazon ECS task is still running.    Metering: RegisterUsage meters software use per ECS task, per hour, with usage prorated to the second. A minimum of 1 minute of usage applies to tasks that are short lived. For example, if a customer has a 10 node ECS cluster and creates an ECS service configured as a Daemon Set, then ECS will launch a task on all 10 cluster nodes and the customer will be charged: (10 * hourly_rate). Metering for software use is automatically handled by the AWS Marketplace Metering Control Plane &ndash; your software is not required to perform any metering specific actions, other than call RegisterUsage once for metering of software use to commence. The AWS Marketplace Metering Control Plane will also continue to bill customers for running ECS tasks, regardless of the customers subscription state, removing the need for your software to perform entitlement checks at runtime.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerUsage</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/RegisterUsageRequest.html">RegisterUsageRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceMetering/RegisterUsageResult.html">RegisterUsageResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV15resolveCustomery3NIO15EventLoopFutureCyAB07ResolveD6ResultVGAB0iD7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/resolveCustomer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV15resolveCustomery3NIO15EventLoopFutureCyAB07ResolveD6ResultVGAB0iD7RequestVKF">resolveCustomer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a CustomerIdentifier and product code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resolveCustomer</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceMetering/ResolveCustomerRequest.html">ResolveCustomerRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceMetering/ResolveCustomerResult.html">ResolveCustomerResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -689,9 +689,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:19MarketplaceMeteringAAV17MeterUsageRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/MeterUsageRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV17MeterUsageRequestV">MeterUsageRequest</a>
+                    <a name="/s:19MarketplaceMeteringAAV22BatchMeterUsageRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/BatchMeterUsageRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV22BatchMeterUsageRequestV">BatchMeterUsageRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -701,237 +701,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MarketplaceMetering/MeterUsageRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MarketplaceMetering/BatchMeterUsageRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV19RegisterUsageResultV"></a>
-                    <a name="//apple_ref/swift/Struct/RegisterUsageResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV19RegisterUsageResultV">RegisterUsageResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/RegisterUsageResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterUsageResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV17UsageRecordResultV"></a>
-                    <a name="//apple_ref/swift/Struct/UsageRecordResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV17UsageRecordResultV">UsageRecordResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/UsageRecordResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UsageRecordResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV20RegisterUsageRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/RegisterUsageRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV20RegisterUsageRequestV">RegisterUsageRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/RegisterUsageRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV22ResolveCustomerRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/ResolveCustomerRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV22ResolveCustomerRequestV">ResolveCustomerRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/ResolveCustomerRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCustomerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV11UsageRecordV"></a>
-                    <a name="//apple_ref/swift/Struct/UsageRecord" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV11UsageRecordV">UsageRecord</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/UsageRecord.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UsageRecord</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV21ResolveCustomerResultV"></a>
-                    <a name="//apple_ref/swift/Struct/ResolveCustomerResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV21ResolveCustomerResultV">ResolveCustomerResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/ResolveCustomerResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCustomerResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV16MeterUsageResultV"></a>
-                    <a name="//apple_ref/swift/Struct/MeterUsageResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV16MeterUsageResultV">MeterUsageResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/MeterUsageResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeterUsageResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:19MarketplaceMeteringAAV23UsageRecordResultStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/UsageRecordResultStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV23UsageRecordResultStatusO">UsageRecordResultStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceMetering/UsageRecordResultStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UsageRecordResultStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BatchMeterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -969,9 +745,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:19MarketplaceMeteringAAV22BatchMeterUsageRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/BatchMeterUsageRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:19MarketplaceMeteringAAV22BatchMeterUsageRequestV">BatchMeterUsageRequest</a>
+                    <a name="/s:19MarketplaceMeteringAAV17MeterUsageRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/MeterUsageRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV17MeterUsageRequestV">MeterUsageRequest</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -981,13 +757,237 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MarketplaceMetering/BatchMeterUsageRequest.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MarketplaceMetering/MeterUsageRequest.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BatchMeterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV16MeterUsageResultV"></a>
+                    <a name="//apple_ref/swift/Struct/MeterUsageResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV16MeterUsageResultV">MeterUsageResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/MeterUsageResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeterUsageResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV20RegisterUsageRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/RegisterUsageRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV20RegisterUsageRequestV">RegisterUsageRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/RegisterUsageRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterUsageRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV19RegisterUsageResultV"></a>
+                    <a name="//apple_ref/swift/Struct/RegisterUsageResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV19RegisterUsageResultV">RegisterUsageResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/RegisterUsageResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RegisterUsageResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV22ResolveCustomerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ResolveCustomerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV22ResolveCustomerRequestV">ResolveCustomerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/ResolveCustomerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCustomerRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV21ResolveCustomerResultV"></a>
+                    <a name="//apple_ref/swift/Struct/ResolveCustomerResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV21ResolveCustomerResultV">ResolveCustomerResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/ResolveCustomerResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResolveCustomerResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV11UsageRecordV"></a>
+                    <a name="//apple_ref/swift/Struct/UsageRecord" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV11UsageRecordV">UsageRecord</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/UsageRecord.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UsageRecord</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV17UsageRecordResultV"></a>
+                    <a name="//apple_ref/swift/Struct/UsageRecordResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV17UsageRecordResultV">UsageRecordResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/UsageRecordResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">UsageRecordResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19MarketplaceMeteringAAV23UsageRecordResultStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/UsageRecordResultStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19MarketplaceMeteringAAV23UsageRecordResultStatusO">UsageRecordResultStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceMetering/UsageRecordResultStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UsageRecordResultStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -999,7 +999,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

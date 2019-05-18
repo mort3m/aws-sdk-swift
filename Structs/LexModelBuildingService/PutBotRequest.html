@@ -14,7 +14,7 @@
     <a title="PutBotRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV4nameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV4nameSSvp">name</a>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatementAB0I0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/abortStatement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatementAB0I0VSgvp">abortStatement</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the bot. The name is not case sensitive.</p>
+                        <p>When Amazon Lex can&rsquo;t understand the user&rsquo;s input in context, it tries to elicit the information a few times. After that, Amazon Lex sends the message defined in abortStatement to the user, and then aborts the conversation. To set the number of retries, use the valueElicitationPrompt field for the slot type.  For example, in a pizza ordering bot, Amazon Lex might ask a user <q>What type of crust would you like?</q> If the user&rsquo;s response is not one of the expected responses (for example, <q>thin crust,</q>deep dish,&ldquo; etc.), Amazon Lex tries to elicit a correct response a few more times.  For example, in a pizza ordering application, OrderPizza might be one of the intents. This intent might require the CrustType slot. You specify the valueElicitationPrompt field when you create the CrustType slot.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV6localeAB6LocaleOvp"></a>
-                    <a name="//apple_ref/swift/Property/locale" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV6localeAB6LocaleOvp">locale</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot.  The default is en-US.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Locale.html">Locale</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">abortStatement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Statement.html">Statement</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV7voiceIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/voiceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV7voiceIdSSSgvp">voiceId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see Available Voices in the Amazon Polly Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">voiceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV13childDirectedSbvp"></a>
                     <a name="//apple_ref/swift/Property/childDirected" class="dashAnchor"></a>
                     <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV13childDirectedSbvp">childDirected</a>
@@ -703,6 +649,87 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">childDirected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV19clarificationPromptAB0I0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clarificationPrompt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV19clarificationPromptAB0I0VSgvp">clarificationPrompt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When Amazon Lex doesn&rsquo;t understand the user&rsquo;s intent, it uses this message to get clarification. To specify how many times Amazon Lex should repeate the clarification prompt, use the maxAttempts field. If Amazon Lex still doesn&rsquo;t understand, it sends the message in the abortStatement field.  When you create a clarification prompt, make sure that it suggests the correct response from the user. for example, for a bot that orders pizza and drinks, you might create this clarification prompt: <q>What would you like to do? You can say &lsquo;Order a pizza&rsquo; or &lsquo;Order a drink.&rsquo;</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clarificationPrompt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Prompt.html">Prompt</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV13createVersionSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV13createVersionSbSgvp">createVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createVersion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A description of the bot.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV11descriptionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV11descriptionSSSgvp">description</a>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV6localeAB6LocaleOvp"></a>
+                    <a name="//apple_ref/swift/Property/locale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV6localeAB6LocaleOvp">locale</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +803,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A description of the bot.</p>
+                        <p>Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot.  The default is en-US.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Locale.html">Locale</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the bot. The name is not case sensitive.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV19clarificationPromptAB0I0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clarificationPrompt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV19clarificationPromptAB0I0VSgvp">clarificationPrompt</a>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV7voiceIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/voiceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV7voiceIdSSSgvp">voiceId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When Amazon Lex doesn&rsquo;t understand the user&rsquo;s intent, it uses this message to get clarification. To specify how many times Amazon Lex should repeate the clarification prompt, use the maxAttempts field. If Amazon Lex still doesn&rsquo;t understand, it sends the message in the abortStatement field.  When you create a clarification prompt, make sure that it suggests the correct response from the user. for example, for a bot that orders pizza and drinks, you might create this clarification prompt: <q>What would you like to do? You can say &lsquo;Order a pizza&rsquo; or &lsquo;Order a drink.&rsquo;</q></p>
+                        <p>The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see Available Voices in the Amazon Polly Developer Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clarificationPrompt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Prompt.html">Prompt</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">voiceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,36 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatementAB0I0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/abortStatement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatementAB0I0VSgvp">abortStatement</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When Amazon Lex can&rsquo;t understand the user&rsquo;s input in context, it tries to elicit the information a few times. After that, Amazon Lex sends the message defined in abortStatement to the user, and then aborts the conversation. To set the number of retries, use the valueElicitationPrompt field for the slot type.  For example, in a pizza ordering bot, Amazon Lex might ask a user <q>What type of crust would you like?</q> If the user&rsquo;s response is not one of the expected responses (for example, <q>thin crust,</q>deep dish,&ldquo; etc.), Amazon Lex tries to elicit a correct response a few more times.  For example, in a pizza ordering application, OrderPizza might be one of the intents. This intent might require the CrustType slot. You specify the valueElicitationPrompt field when you create the CrustType slot.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">abortStatement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Statement.html">Statement</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV13createVersionSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV13createVersionSbSgvp">createVersion</a>
+                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatement8checksum13childDirected19clarificationPrompt13createVersion11description23idleSessionTTLInSeconds7intents6locale4name15processBehavior7voiceIdAdB0I0VSg_SSSgSbAB0N0VSgSbSgATs5Int32VSgSayAB6IntentVGSgAB6LocaleOSSAB07ProcessZ0OSgATtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(abortStatement:checksum:childDirected:clarificationPrompt:createVersion:description:idleSessionTTLInSeconds:intents:locale:name:processBehavior:voiceId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV14abortStatement8checksum13childDirected19clarificationPrompt13createVersion11description23idleSessionTTLInSeconds7intents6locale4name15processBehavior7voiceIdAdB0I0VSg_SSSgSbAB0N0VSgSbSgATs5Int32VSgSayAB6IntentVGSgAB6LocaleOSSAB07ProcessZ0OSgATtcfc">init(abortStatement:checksum:childDirected:clarificationPrompt:createVersion:description:idleSessionTTLInSeconds:intents:locale:name:processBehavior:voiceId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,34 +918,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createVersion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:23LexModelBuildingServiceAAV13PutBotRequestV4name6locale8checksum7voiceId13childDirected23idleSessionTTLInSeconds7intents11description15processBehavior19clarificationPrompt14abortStatement13createVersionADSS_AB6LocaleOSSSgASSbs5Int32VSgSayAB6IntentVGSgAsB07ProcessV0OSgAB0X0VSgAB0Z0VSgSbSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(name:locale:checksum:voiceId:childDirected:idleSessionTTLInSeconds:intents:description:processBehavior:clarificationPrompt:abortStatement:createVersion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23LexModelBuildingServiceAAV13PutBotRequestV4name6locale8checksum7voiceId13childDirected23idleSessionTTLInSeconds7intents11description15processBehavior19clarificationPrompt14abortStatement13createVersionADSS_AB6LocaleOSSSgASSbs5Int32VSgSayAB6IntentVGSgAsB07ProcessV0OSgAB0X0VSgAB0Z0VSgSbSgtcfc">init(name:locale:checksum:voiceId:childDirected:idleSessionTTLInSeconds:intents:description:processBehavior:clarificationPrompt:abortStatement:createVersion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Locale.html">Locale</a></span><span class="p">,</span> <span class="nv">checksum</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">voiceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">childDirected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">idleSessionTTLInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">intents</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/LexModelBuildingService/Intent.html">Intent</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">processBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/ProcessBehavior.html">ProcessBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clarificationPrompt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Prompt.html">Prompt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">abortStatement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Statement.html">Statement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createVersion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">abortStatement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Statement.html">Statement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">checksum</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">childDirected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">clarificationPrompt</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Prompt.html">Prompt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createVersion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">idleSessionTTLInSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">intents</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/LexModelBuildingService/Intent.html">Intent</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/Locale.html">Locale</a></span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">processBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexModelBuildingService/ProcessBehavior.html">ProcessBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">voiceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -930,7 +930,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="ViewerCertificate Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV17ViewerCertificateV11certificateSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/certificate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV11certificateSSSgvp">certificate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This field has been deprecated. Use one of the following fields instead:    ViewerCertificate$ACMCertificateArn     ViewerCertificate$IAMCertificateId     ViewerCertificate$CloudFrontDefaultCertificate</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10CloudFrontAAV17ViewerCertificateV17aCMCertificateArnSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/aCMCertificateArn" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV17aCMCertificateArnSSSgvp">aCMCertificateArn</a>
@@ -631,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV17ViewerCertificateV05cloudb7DefaultD0SbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cloudFrontDefaultCertificate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV05cloudb7DefaultD0SbSgvp">cloudFrontDefaultCertificate</a>
+                    <a name="/s:10CloudFrontAAV17ViewerCertificateV11certificateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/certificate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV11certificateSSSgvp">certificate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>For information about how and when to use CloudFrontDefaultCertificate, see ViewerCertificate.</p>
+                        <p>This field has been deprecated. Use one of the following fields instead:    ViewerCertificate$ACMCertificateArn     ViewerCertificate$IAMCertificateId     ViewerCertificate$CloudFrontDefaultCertificate</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cloudFrontDefaultCertificate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudFrontAAV17ViewerCertificateV16sSLSupportMethodAB010SSLSupportF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sSLSupportMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV16sSLSupportMethodAB010SSLSupportF0OSgvp">sSLSupportMethod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If you specify a value for ViewerCertificate$ACMCertificateArn or for ViewerCertificate$IAMCertificateId, you must also specify how you want CloudFront to serve HTTPS requests: using a method that works for all clients or one that works for most clients:    vip: CloudFront uses dedicated IP addresses for your content and can respond to HTTPS requests from any viewer. However, you will incur additional monthly charges.    sni-only: CloudFront can respond to HTTPS requests from viewers that support Server Name Indication (SNI). All modern browsers support SNI, but some browsers still in use don&rsquo;t support SNI. If some of your users&rsquo; browsers don&rsquo;t support SNI, we recommend that you do one of the following:   Use the vip option (dedicated IP addresses) instead of sni-only.   Use the CloudFront SSL/TLS certificate instead of a custom certificate. This requires that you use the CloudFront domain name of your distribution in the URLs for your objects, for example, <a href="https://d111111abcdef8.cloudfront.net/logo.png">https://d111111abcdef8.cloudfront.net/logo.png</a>.   If you can control which browser your users use, upgrade the browser to one that supports SNI.   Use HTTP instead of HTTPS.     Don&rsquo;t specify a value for SSLSupportMethod if you specified &lt;CloudFrontDefaultCertificate&gt;true&lt;CloudFrontDefaultCertificate&gt;. For more information, see Using Alternate Domain Names and HTTPS in the Amazon CloudFront Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sSLSupportMethod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/SSLSupportMethod.html">SSLSupportMethod</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -703,6 +649,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">certificateSource</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CertificateSource.html">CertificateSource</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudFrontAAV17ViewerCertificateV05cloudb7DefaultD0SbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cloudFrontDefaultCertificate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV05cloudb7DefaultD0SbSgvp">cloudFrontDefaultCertificate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>For information about how and when to use CloudFrontDefaultCertificate, see ViewerCertificate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cloudFrontDefaultCertificate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +739,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV17ViewerCertificateV11certificate17aCMCertificateArn05cloudb7DefaultD016sSLSupportMethod0E6Source16iAMCertificateId22minimumProtocolVersionADSSSg_ALSbSgAB010SSLSupportK0OSgAB0dL0OSgAlB07MinimumpQ0OSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(certificate:aCMCertificateArn:cloudFrontDefaultCertificate:sSLSupportMethod:certificateSource:iAMCertificateId:minimumProtocolVersion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV11certificate17aCMCertificateArn05cloudb7DefaultD016sSLSupportMethod0E6Source16iAMCertificateId22minimumProtocolVersionADSSSg_ALSbSgAB010SSLSupportK0OSgAB0dL0OSgAlB07MinimumpQ0OSgtcfc">init(certificate:aCMCertificateArn:cloudFrontDefaultCertificate:sSLSupportMethod:certificateSource:iAMCertificateId:minimumProtocolVersion:)</a>
+                    <a name="/s:10CloudFrontAAV17ViewerCertificateV16sSLSupportMethodAB010SSLSupportF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sSLSupportMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV16sSLSupportMethodAB010SSLSupportF0OSgvp">sSLSupportMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If you specify a value for ViewerCertificate$ACMCertificateArn or for ViewerCertificate$IAMCertificateId, you must also specify how you want CloudFront to serve HTTPS requests: using a method that works for all clients or one that works for most clients:    vip: CloudFront uses dedicated IP addresses for your content and can respond to HTTPS requests from any viewer. However, you will incur additional monthly charges.    sni-only: CloudFront can respond to HTTPS requests from viewers that support Server Name Indication (SNI). All modern browsers support SNI, but some browsers still in use don&rsquo;t support SNI. If some of your users&rsquo; browsers don&rsquo;t support SNI, we recommend that you do one of the following:   Use the vip option (dedicated IP addresses) instead of sni-only.   Use the CloudFront SSL/TLS certificate instead of a custom certificate. This requires that you use the CloudFront domain name of your distribution in the URLs for your objects, for example, <a href="https://d111111abcdef8.cloudfront.net/logo.png">https://d111111abcdef8.cloudfront.net/logo.png</a>.   If you can control which browser your users use, upgrade the browser to one that supports SNI.   Use HTTP instead of HTTPS.     Don&rsquo;t specify a value for SSLSupportMethod if you specified &lt;CloudFrontDefaultCertificate&gt;true&lt;CloudFrontDefaultCertificate&gt;. For more information, see Using Alternate Domain Names and HTTPS in the Amazon CloudFront Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sSLSupportMethod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/SSLSupportMethod.html">SSLSupportMethod</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudFrontAAV17ViewerCertificateV17aCMCertificateArn11certificate0G6Source05cloudb7DefaultD016iAMCertificateId22minimumProtocolVersion16sSLSupportMethodADSSSg_AlB0dH0OSgSbSgAlB07MinimumnO0OSgAB010SSLSupportQ0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(aCMCertificateArn:certificate:certificateSource:cloudFrontDefaultCertificate:iAMCertificateId:minimumProtocolVersion:sSLSupportMethod:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV17ViewerCertificateV17aCMCertificateArn11certificate0G6Source05cloudb7DefaultD016iAMCertificateId22minimumProtocolVersion16sSLSupportMethodADSSSg_AlB0dH0OSgSbSgAlB07MinimumnO0OSgAB010SSLSupportQ0OSgtcfc">init(aCMCertificateArn:certificate:certificateSource:cloudFrontDefaultCertificate:iAMCertificateId:minimumProtocolVersion:sSLSupportMethod:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +783,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aCMCertificateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudFrontDefaultCertificate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sSLSupportMethod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/SSLSupportMethod.html">SSLSupportMethod</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">certificateSource</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CertificateSource.html">CertificateSource</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iAMCertificateId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">minimumProtocolVersion</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/MinimumProtocolVersion.html">MinimumProtocolVersion</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">aCMCertificateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">certificateSource</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CertificateSource.html">CertificateSource</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudFrontDefaultCertificate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iAMCertificateId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">minimumProtocolVersion</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/MinimumProtocolVersion.html">MinimumProtocolVersion</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sSLSupportMethod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/SSLSupportMethod.html">SSLSupportMethod</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -795,7 +795,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

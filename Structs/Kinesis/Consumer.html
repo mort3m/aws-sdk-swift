@@ -14,7 +14,7 @@
     <a title="Consumer Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV8ConsumerV12consumerNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/consumerName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV8ConsumerV12consumerNameSSvp">consumerName</a>
+                    <a name="/s:7KinesisAAV8ConsumerV11consumerARNSSvp"></a>
+                    <a name="//apple_ref/swift/Property/consumerARN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV8ConsumerV11consumerARNSSvp">consumerARN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the consumer is something you choose when you register the consumer.</p>
+                        <p>When you register a consumer, Kinesis Data Streams generates an ARN for it. You need this ARN to be able to call SubscribeToShard. If you delete a consumer and then create a new one with the same name, it won&rsquo;t have the same ARN. That&rsquo;s because consumer ARNs contain the creation timestamp. This is important to keep in mind if you have IAM policies that reference consumer ARNs.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consumerName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consumerARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7KinesisAAV8ConsumerV12consumerNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/consumerName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV8ConsumerV12consumerNameSSvp">consumerName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the consumer is something you choose when you register the consumer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consumerName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7KinesisAAV8ConsumerV14consumerStatusAB0bD0Ovp"></a>
                     <a name="//apple_ref/swift/Property/consumerStatus" class="dashAnchor"></a>
                     <a class="token" href="#/s:7KinesisAAV8ConsumerV14consumerStatusAB0bD0Ovp">consumerStatus</a>
@@ -658,36 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV8ConsumerV11consumerARNSSvp"></a>
-                    <a name="//apple_ref/swift/Property/consumerARN" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV8ConsumerV11consumerARNSSvp">consumerARN</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When you register a consumer, Kinesis Data Streams generates an ARN for it. You need this ARN to be able to call SubscribeToShard. If you delete a consumer and then create a new one with the same name, it won&rsquo;t have the same ARN. That&rsquo;s because consumer ARNs contain the creation timestamp. This is important to keep in mind if you have IAM policies that reference consumer ARNs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consumerARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV8ConsumerV12consumerName0C17CreationTimestamp0C6Status0C3ARNADSS_15AWSSDKSwiftCore9TimeStampVAB0bG0OSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(consumerName:consumerCreationTimestamp:consumerStatus:consumerARN:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV8ConsumerV12consumerName0C17CreationTimestamp0C6Status0C3ARNADSS_15AWSSDKSwiftCore9TimeStampVAB0bG0OSStcfc">init(consumerName:consumerCreationTimestamp:consumerStatus:consumerARN:)</a>
+                    <a name="/s:7KinesisAAV8ConsumerV11consumerARN0C17CreationTimestamp0C4Name0C6StatusADSS_15AWSSDKSwiftCore9TimeStampVSSAB0bH0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(consumerARN:consumerCreationTimestamp:consumerName:consumerStatus:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV8ConsumerV11consumerARN0C17CreationTimestamp0C4Name0C6StatusADSS_15AWSSDKSwiftCore9TimeStampVSSAB0bH0Otcfc">init(consumerARN:consumerCreationTimestamp:consumerName:consumerStatus:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">consumerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">consumerCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">consumerStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/ConsumerStatus.html">ConsumerStatus</a></span><span class="p">,</span> <span class="nv">consumerARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">consumerARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">consumerCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">consumerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">consumerStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Kinesis/ConsumerStatus.html">ConsumerStatus</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

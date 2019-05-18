@@ -14,7 +14,7 @@
     <a title="ProvisionedProductDetail Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV13statusMessageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV13statusMessageSSSgvp">statusMessage</a>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV11createdTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createdTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV11createdTime15AWSSDKSwiftCore0G5StampVSgvp">createdTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The current status message of the provisioned product.</p>
+                        <p>The UTC time stamp of the creation time.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV6statusAB0cD6StatusOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV6statusAB0cD6StatusOSgvp">status</a>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV16idempotencyTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/idempotencyToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV16idempotencyTokenSSSgvp">idempotencyToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The current status of the provisioned product.    AVAILABLE - Stable state, ready to perform any operation. The most recent operation succeeded and completed.    UNDER_CHANGE - Transitive state, operations performed might not have valid results. Wait for an AVAILABLE status before performing operations.    TAINTED - Stable state, ready to perform any operation. The stack has completed the requested operation but is not exactly what was requested. For example, a request to update to a new version failed and the stack rolled back to the current version.    ERROR - An unexpected error occurred, the provisioned product exists but the stack is not running. For example, CloudFormation received a parameter value that was not valid and could not launch the stack.</p>
+                        <p>A unique identifier that you provide to ensure idempotency. If multiple requests differ only by the idempotency token, the same response is returned for each repeated request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ServiceCatalog/ProvisionedProductStatus.html">ProvisionedProductStatus</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV16idempotencyTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/idempotencyToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV16idempotencyTokenSSSgvp">idempotencyToken</a>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV4nameSSSgvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,41 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A unique identifier that you provide to ensure idempotency. If multiple requests differ only by the idempotency token, the same response is returned for each repeated request.</p>
+                        <p>The user-friendly name of the provisioned product.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV11createdTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createdTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV11createdTime15AWSSDKSwiftCore0G5StampVSgvp">createdTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The UTC time stamp of the creation time.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,6 +793,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV6statusAB0cD6StatusOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV6statusAB0cD6StatusOSgvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status of the provisioned product.    AVAILABLE - Stable state, ready to perform any operation. The most recent operation succeeded and completed.    UNDER_CHANGE - Transitive state, operations performed might not have valid results. Wait for an AVAILABLE status before performing operations.    TAINTED - Stable state, ready to perform any operation. The stack has completed the requested operation but is not exactly what was requested. For example, a request to update to a new version failed and the stack rolled back to the current version.    ERROR - An unexpected error occurred, the provisioned product exists but the stack is not running. For example, CloudFormation received a parameter value that was not valid and could not launch the stack.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ServiceCatalog/ProvisionedProductStatus.html">ProvisionedProductStatus</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV13statusMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV13statusMessageSSSgvp">statusMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status message of the provisioned product.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV4typeSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
                     <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV4typeSSSgvp">type</a>
@@ -847,36 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV4nameSSSgvp">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The user-friendly name of the provisioned product.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV3arn13statusMessage2id0G012lastRecordId16idempotencyToken11createdTime07productL0020provisioningArtifactL04type4nameADSSSg_A2pB0cD6StatusOSgA2P15AWSSDKSwiftCore0P5StampVSgA4Ptcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(arn:statusMessage:id:status:lastRecordId:idempotencyToken:createdTime:productId:provisioningArtifactId:type:name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV3arn13statusMessage2id0G012lastRecordId16idempotencyToken11createdTime07productL0020provisioningArtifactL04type4nameADSSSg_A2pB0cD6StatusOSgA2P15AWSSDKSwiftCore0P5StampVSgA4Ptcfc">init(arn:statusMessage:id:status:lastRecordId:idempotencyToken:createdTime:productId:provisioningArtifactId:type:name:)</a>
+                    <a name="/s:14ServiceCatalogAAV24ProvisionedProductDetailV3arn11createdTime2id16idempotencyToken12lastRecordId4name07productN0020provisioningArtifactN06status0S7Message4typeADSSSg_15AWSSDKSwiftCore0H5StampVSgA6pB0cD6StatusOSgA2Ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arn:createdTime:id:idempotencyToken:lastRecordId:name:productId:provisioningArtifactId:status:statusMessage:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14ServiceCatalogAAV24ProvisionedProductDetailV3arn11createdTime2id16idempotencyToken12lastRecordId4name07productN0020provisioningArtifactN06status0S7Message4typeADSSSg_15AWSSDKSwiftCore0H5StampVSgA6pB0cD6StatusOSgA2Ptcfc">init(arn:createdTime:id:idempotencyToken:lastRecordId:name:productId:provisioningArtifactId:status:statusMessage:type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ServiceCatalog/ProvisionedProductStatus.html">ProvisionedProductStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastRecordId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisioningArtifactId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">idempotencyToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastRecordId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisioningArtifactId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ServiceCatalog/ProvisionedProductStatus.html">ProvisionedProductStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="QueryInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV20projectionExpressionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/projectionExpression" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV20projectionExpressionSSSgvp">projectionExpression</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV15attributesToGetSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/attributesToGet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV15attributesToGetSaySSGSgvp">attributesToGet</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the expression must be separated by commas. If no attribute names are specified, then all attributes will be returned. If any of the requested attributes are not found, they will not appear in the result. For more information, see Accessing Item Attributes in the Amazon DynamoDB Developer Guide.</p>
+                        <p>This is a legacy parameter. Use ProjectionExpression instead. For more information, see AttributesToGet in the Amazon DynamoDB Developer Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">projectionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV13keyConditionsSDySSAB9ConditionVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyConditions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV13keyConditionsSDySSAB9ConditionVGSgvp">keyConditions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is a legacy parameter. Use KeyConditionExpression instead. For more information, see KeyConditions in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyConditions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attributesToGet</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV9tableNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/tableName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV9tableNameSSvp">tableName</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV14consistentReadSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/consistentRead" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV14consistentReadSbSgvp">consistentRead</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,68 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the table containing the requested items.</p>
+                        <p>Determines the read consistency model: If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. Strongly consistent reads are not supported on global secondary indexes. If you query a global secondary index with ConsistentRead set to true, you will receive a ValidationException.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV6selectAB6SelectOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/select" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV6selectAB6SelectOSgvp">select</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The attributes to be returned in the result. You can retrieve all item attributes, specific item attributes, the count of matching items, or in the case of an index, some or all of the attributes projected into the index.    ALL_ATTRIBUTES - Returns all of the item attributes from the specified table or index. If you query a local secondary index, then for each matching item in the index DynamoDB will fetch the entire item from the parent table. If the index is configured to project all item attributes, then all of the data can be obtained from the local secondary index, and no fetching is required.    ALL_PROJECTED_ATTRIBUTES - Allowed only when querying an index. Retrieves all attributes that have been projected into the index. If the index is configured to project all attributes, this return value is equivalent to specifying ALL_ATTRIBUTES.    COUNT - Returns the number of matching items, rather than the matching items themselves.    SPECIFIC_ATTRIBUTES - Returns only the attributes listed in AttributesToGet. This return value is equivalent to specifying AttributesToGet without specifying any value for Select. If you query or scan a local secondary index and request only attributes that are projected into that index, the operation will read only the index and not the table. If any of the requested attributes are not projected into the local secondary index, DynamoDB will fetch each of these attributes from the parent table. This extra fetching incurs additional throughput cost and latency. If you query or scan a global secondary index, you can only request attributes that are projected into the index. Global secondary index queries cannot fetch attributes from the parent table.   If neither Select nor AttributesToGet are specified, DynamoDB defaults to ALL_ATTRIBUTES when accessing a table, and ALL_PROJECTED_ATTRIBUTES when accessing an index. You cannot use both Select and AttributesToGet together in a single request, unless the value for Select is SPECIFIC_ATTRIBUTES. (This usage is equivalent to specifying AttributesToGet without any value for Select.)  If you use the ProjectionExpression parameter, then the value for Select can only be SPECIFIC_ATTRIBUTES. Any other value for Select will return an error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">select</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Select.html">Select</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV22keyConditionExpressionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyConditionExpression" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV22keyConditionExpressionSSSgvp">keyConditionExpression</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The condition that specifies the key value(s) for items to be retrieved by the Query action. The condition must perform an equality test on a single partition key value. The condition can optionally perform one of several comparison tests on a single sort key value. This allows Query to retrieve one item with a given partition key value and sort key value, or several items that have the same partition key value but different sort key values. The partition key equality test is required, and must be specified in the following format:  partitionKeyName = :partitionkeyval  If you also want to provide a condition for the sort key, it must be combined using AND with the condition for the sort key. Following is an example, using the = comparison operator for the sort key:  partitionKeyName = :partitionkeyval AND sortKeyName = :sortkeyval  Valid comparisons for the sort key condition are as follows:    sortKeyName = :sortkeyval - true if the sort key value is equal to :sortkeyval.    sortKeyName &lt; :sortkeyval - true if the sort key value is less than :sortkeyval.    sortKeyName &lt;= :sortkeyval - true if the sort key value is less than or equal to :sortkeyval.    sortKeyName &gt; :sortkeyval - true if the sort key value is greater than :sortkeyval.    sortKeyName &gt;=  :sortkeyval - true if the sort key value is greater than or equal to :sortkeyval.    sortKeyName BETWEEN :sortkeyval1 AND :sortkeyval2 - true if the sort key value is greater than or equal to :sortkeyval1, and less than or equal to :sortkeyval2.    begins_with ( sortKeyName, :sortkeyval ) - true if the sort key value begins with a particular operand. (You cannot use this function with a sort key that is of type Number.) Note that the function name begins_with is case-sensitive.   Use the ExpressionAttributeValues parameter to replace tokens such as :partitionval and :sortval with actual values at runtime. You can optionally use the ExpressionAttributeNames parameter to replace the names of the partition key and sort key with placeholder tokens. This option might be necessary if an attribute name conflicts with a DynamoDB reserved word. For example, the following KeyConditionExpression parameter causes an error because Size is a reserved word:    Size = :myval    To work around this, define a placeholder (such a #S) to represent the attribute name Size. KeyConditionExpression then is as follows:    #S = :myval    For a list of reserved words, see Reserved Words in the Amazon DynamoDB Developer Guide. For more information on ExpressionAttributeNames and ExpressionAttributeValues, see Using Placeholders for Attribute Names and Values in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyConditionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consistentRead</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV9indexNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/indexName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV9indexNameSSSgvp">indexName</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV24expressionAttributeNamesSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/expressionAttributeNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV24expressionAttributeNamesSDyS2SGSgvp">expressionAttributeNames</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,68 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of an index to query. This index can be any local secondary index or global secondary index on the table. Note that if you use the IndexName parameter, you must also provide TableName.</p>
+                        <p>One or more substitution tokens for attribute names in an expression. The following are some use cases for using ExpressionAttributeNames:   To access an attribute whose name conflicts with a DynamoDB reserved word.   To create a placeholder for repeating occurrences of an attribute name in an expression.   To prevent special characters in an attribute name from being misinterpreted in an expression.   Use the # character in an expression to dereference an attribute name. For example, consider the following attribute name:    Percentile    The name of this attribute conflicts with a reserved word, so it cannot be used directly in an expression. (For the complete list of reserved words, see Reserved Words in the Amazon DynamoDB Developer Guide). To work around this, you could specify the following for ExpressionAttributeNames:    {<q>#P</q>:<q>Percentile</q>}    You could then use this substitution in an expression, as in this example:    #P = :val     Tokens that begin with the : character are expression attribute values, which are placeholders for the actual value at runtime.  For more information on expression attribute names, see Accessing Item Attributes in the Amazon DynamoDB Developer Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV15attributesToGetSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/attributesToGet" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV15attributesToGetSaySSGSgvp">attributesToGet</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is a legacy parameter. Use ProjectionExpression instead. For more information, see AttributesToGet in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">attributesToGet</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV11queryFilterSDySSAB9ConditionVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/queryFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV11queryFilterSDySSAB9ConditionVGSgvp">queryFilter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This is a legacy parameter. Use FilterExpression instead. For more information, see QueryFilter in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queryFilter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expressionAttributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,60 +739,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV24expressionAttributeNamesSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/expressionAttributeNames" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV24expressionAttributeNamesSDyS2SGSgvp">expressionAttributeNames</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more substitution tokens for attribute names in an expression. The following are some use cases for using ExpressionAttributeNames:   To access an attribute whose name conflicts with a DynamoDB reserved word.   To create a placeholder for repeating occurrences of an attribute name in an expression.   To prevent special characters in an attribute name from being misinterpreted in an expression.   Use the # character in an expression to dereference an attribute name. For example, consider the following attribute name:    Percentile    The name of this attribute conflicts with a reserved word, so it cannot be used directly in an expression. (For the complete list of reserved words, see Reserved Words in the Amazon DynamoDB Developer Guide). To work around this, you could specify the following for ExpressionAttributeNames:    {<q>#P</q>:<q>Percentile</q>}    You could then use this substitution in an expression, as in this example:    #P = :val     Tokens that begin with the : character are expression attribute values, which are placeholders for the actual value at runtime.  For more information on expression attribute names, see Accessing Item Attributes in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expressionAttributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV22returnConsumedCapacityAB06ReturnfG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/returnConsumedCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV22returnConsumedCapacityAB06ReturnfG0OSgvp">returnConsumedCapacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">returnConsumedCapacity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ReturnConsumedCapacity.html">ReturnConsumedCapacity</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8DynamoDBAAV10QueryInputV16filterExpressionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/filterExpression" class="dashAnchor"></a>
                     <a class="token" href="#/s:8DynamoDBAAV10QueryInputV16filterExpressionSSSgvp">filterExpression</a>
@@ -955,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV14consistentReadSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/consistentRead" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV14consistentReadSbSgvp">consistentRead</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV9indexNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/indexName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV9indexNameSSSgvp">indexName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -965,14 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Determines the read consistency model: If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. Strongly consistent reads are not supported on global secondary indexes. If you query a global secondary index with ConsistentRead set to true, you will receive a ValidationException.</p>
+                        <p>The name of an index to query. This index can be any local secondary index or global secondary index on the table. Note that if you use the IndexName parameter, you must also provide TableName.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">consistentRead</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV16scanIndexForwardSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scanIndexForward" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV16scanIndexForwardSbSgvp">scanIndexForward</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV22keyConditionExpressionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyConditionExpression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV22keyConditionExpressionSSSgvp">keyConditionExpression</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -992,14 +803,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the order for index traversal: If true (default), the traversal is performed in ascending order; if false, the traversal is performed in descending order.  Items with the same partition key value are stored in sorted order by sort key. If the sort key data type is Number, the results are stored in numeric order. For type String, the results are stored in order of UTF-8 bytes. For type Binary, DynamoDB treats each byte of the binary data as unsigned. If ScanIndexForward is true, DynamoDB returns the results in the order in which they are stored (by sort key value). This is the default behavior. If ScanIndexForward is false, DynamoDB reads the results in reverse order by sort key value, and then returns the results to the client.</p>
+                        <p>The condition that specifies the key value(s) for items to be retrieved by the Query action. The condition must perform an equality test on a single partition key value. The condition can optionally perform one of several comparison tests on a single sort key value. This allows Query to retrieve one item with a given partition key value and sort key value, or several items that have the same partition key value but different sort key values. The partition key equality test is required, and must be specified in the following format:  partitionKeyName = :partitionkeyval  If you also want to provide a condition for the sort key, it must be combined using AND with the condition for the sort key. Following is an example, using the = comparison operator for the sort key:  partitionKeyName = :partitionkeyval AND sortKeyName = :sortkeyval  Valid comparisons for the sort key condition are as follows:    sortKeyName = :sortkeyval - true if the sort key value is equal to :sortkeyval.    sortKeyName &lt; :sortkeyval - true if the sort key value is less than :sortkeyval.    sortKeyName &lt;= :sortkeyval - true if the sort key value is less than or equal to :sortkeyval.    sortKeyName &gt; :sortkeyval - true if the sort key value is greater than :sortkeyval.    sortKeyName &gt;=  :sortkeyval - true if the sort key value is greater than or equal to :sortkeyval.    sortKeyName BETWEEN :sortkeyval1 AND :sortkeyval2 - true if the sort key value is greater than or equal to :sortkeyval1, and less than or equal to :sortkeyval2.    begins_with ( sortKeyName, :sortkeyval ) - true if the sort key value begins with a particular operand. (You cannot use this function with a sort key that is of type Number.) Note that the function name begins_with is case-sensitive.   Use the ExpressionAttributeValues parameter to replace tokens such as :partitionval and :sortval with actual values at runtime. You can optionally use the ExpressionAttributeNames parameter to replace the names of the partition key and sort key with placeholder tokens. This option might be necessary if an attribute name conflicts with a DynamoDB reserved word. For example, the following KeyConditionExpression parameter causes an error because Size is a reserved word:    Size = :myval    To work around this, define a placeholder (such a #S) to represent the attribute name Size. KeyConditionExpression then is as follows:    #S = :myval    For a list of reserved words, see Reserved Words in the Amazon DynamoDB Developer Guide. For more information on ExpressionAttributeNames and ExpressionAttributeValues, see Using Placeholders for Attribute Names and Values in the Amazon DynamoDB Developer Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scanIndexForward</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyConditionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV13keyConditionsSDySSAB9ConditionVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyConditions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV13keyConditionsSDySSAB9ConditionVGSgvp">keyConditions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a legacy parameter. Use KeyConditionExpression instead. For more information, see KeyConditions in the Amazon DynamoDB Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyConditions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,9 +874,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV10QueryInputV20projectionExpression13keyConditions19conditionalOperator9tableName6select0g9ConditionF017exclusiveStartKey05indexL015attributesToGet11queryFilter25expressionAttributeValues0xY5Names22returnConsumedCapacity06filterF014consistentRead16scanIndexForward5limitADSSSg_SDySSAB0N0VGSgAB011ConditionalJ0OSgSSAB6SelectOSgAVSDySSAB0Y5ValueCGSgAVSaySSGSgAZA8_SDyS2SGSgAB22ReturnConsumedCapacityOSgAVSbSgA16_s5Int32VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(projectionExpression:keyConditions:conditionalOperator:tableName:select:keyConditionExpression:exclusiveStartKey:indexName:attributesToGet:queryFilter:expressionAttributeValues:expressionAttributeNames:returnConsumedCapacity:filterExpression:consistentRead:scanIndexForward:limit:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV20projectionExpression13keyConditions19conditionalOperator9tableName6select0g9ConditionF017exclusiveStartKey05indexL015attributesToGet11queryFilter25expressionAttributeValues0xY5Names22returnConsumedCapacity06filterF014consistentRead16scanIndexForward5limitADSSSg_SDySSAB0N0VGSgAB011ConditionalJ0OSgSSAB6SelectOSgAVSDySSAB0Y5ValueCGSgAVSaySSGSgAZA8_SDyS2SGSgAB22ReturnConsumedCapacityOSgAVSbSgA16_s5Int32VSgtcfc">init(projectionExpression:keyConditions:conditionalOperator:tableName:select:keyConditionExpression:exclusiveStartKey:indexName:attributesToGet:queryFilter:expressionAttributeValues:expressionAttributeNames:returnConsumedCapacity:filterExpression:consistentRead:scanIndexForward:limit:)</a>
+                    <a name="/s:8DynamoDBAAV10QueryInputV20projectionExpressionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/projectionExpression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV20projectionExpressionSSSgvp">projectionExpression</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the expression must be separated by commas. If no attribute names are specified, then all attributes will be returned. If any of the requested attributes are not found, they will not appear in the result. For more information, see Accessing Item Attributes in the Amazon DynamoDB Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">projectionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV11queryFilterSDySSAB9ConditionVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/queryFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV11queryFilterSDySSAB9ConditionVGSgvp">queryFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a legacy parameter. Use FilterExpression instead. For more information, see QueryFilter in the Amazon DynamoDB Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">queryFilter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV22returnConsumedCapacityAB06ReturnfG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/returnConsumedCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV22returnConsumedCapacityAB06ReturnfG0OSgvp">returnConsumedCapacity</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1053,7 +945,115 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">projectionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyConditions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">conditionalOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ConditionalOperator.html">ConditionalOperator</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">select</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Select.html">Select</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyConditionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">exclusiveStartKey</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/AttributeValue.html">AttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attributesToGet</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queryFilter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expressionAttributeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/AttributeValue.html">AttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expressionAttributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnConsumedCapacity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ReturnConsumedCapacity.html">ReturnConsumedCapacity</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filterExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">consistentRead</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scanIndexForward</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">returnConsumedCapacity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ReturnConsumedCapacity.html">ReturnConsumedCapacity</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV16scanIndexForwardSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scanIndexForward" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV16scanIndexForwardSbSgvp">scanIndexForward</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the order for index traversal: If true (default), the traversal is performed in ascending order; if false, the traversal is performed in descending order.  Items with the same partition key value are stored in sorted order by sort key. If the sort key data type is Number, the results are stored in numeric order. For type String, the results are stored in order of UTF-8 bytes. For type Binary, DynamoDB treats each byte of the binary data as unsigned. If ScanIndexForward is true, DynamoDB returns the results in the order in which they are stored (by sort key value). This is the default behavior. If ScanIndexForward is false, DynamoDB reads the results in reverse order by sort key value, and then returns the results to the client.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scanIndexForward</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV6selectAB6SelectOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/select" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV6selectAB6SelectOSgvp">select</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The attributes to be returned in the result. You can retrieve all item attributes, specific item attributes, the count of matching items, or in the case of an index, some or all of the attributes projected into the index.    ALL_ATTRIBUTES - Returns all of the item attributes from the specified table or index. If you query a local secondary index, then for each matching item in the index DynamoDB will fetch the entire item from the parent table. If the index is configured to project all item attributes, then all of the data can be obtained from the local secondary index, and no fetching is required.    ALL_PROJECTED_ATTRIBUTES - Allowed only when querying an index. Retrieves all attributes that have been projected into the index. If the index is configured to project all attributes, this return value is equivalent to specifying ALL_ATTRIBUTES.    COUNT - Returns the number of matching items, rather than the matching items themselves.    SPECIFIC_ATTRIBUTES - Returns only the attributes listed in AttributesToGet. This return value is equivalent to specifying AttributesToGet without specifying any value for Select. If you query or scan a local secondary index and request only attributes that are projected into that index, the operation will read only the index and not the table. If any of the requested attributes are not projected into the local secondary index, DynamoDB will fetch each of these attributes from the parent table. This extra fetching incurs additional throughput cost and latency. If you query or scan a global secondary index, you can only request attributes that are projected into the index. Global secondary index queries cannot fetch attributes from the parent table.   If neither Select nor AttributesToGet are specified, DynamoDB defaults to ALL_ATTRIBUTES when accessing a table, and ALL_PROJECTED_ATTRIBUTES when accessing an index. You cannot use both Select and AttributesToGet together in a single request, unless the value for Select is SPECIFIC_ATTRIBUTES. (This usage is equivalent to specifying AttributesToGet without any value for Select.)  If you use the ProjectionExpression parameter, then the value for Select can only be SPECIFIC_ATTRIBUTES. Any other value for Select will return an error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">select</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Select.html">Select</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV9tableNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/tableName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV9tableNameSSvp">tableName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the table containing the requested items.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV10QueryInputV15attributesToGet19conditionalOperator14consistentRead17exclusiveStartKey24expressionAttributeNames0oP6Values16filterExpression9indexName012keyConditionT00W10Conditions5limit010projectionT011queryFilter22returnConsumedCapacity16scanIndexForward6select05tableV0ADSaySSGSg_AB011ConditionalI0OSgSbSgSDySSAB0P5ValueCGSgSDyS2SGSgA3_SSSgA6_A6_SDySSAB0X0VGSgs5Int32VSgA6_A10_AB22ReturnConsumedCapacityOSgA_AB6SelectOSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(attributesToGet:conditionalOperator:consistentRead:exclusiveStartKey:expressionAttributeNames:expressionAttributeValues:filterExpression:indexName:keyConditionExpression:keyConditions:limit:projectionExpression:queryFilter:returnConsumedCapacity:scanIndexForward:select:tableName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV10QueryInputV15attributesToGet19conditionalOperator14consistentRead17exclusiveStartKey24expressionAttributeNames0oP6Values16filterExpression9indexName012keyConditionT00W10Conditions5limit010projectionT011queryFilter22returnConsumedCapacity16scanIndexForward6select05tableV0ADSaySSGSg_AB011ConditionalI0OSgSbSgSDySSAB0P5ValueCGSgSDyS2SGSgA3_SSSgA6_A6_SDySSAB0X0VGSgs5Int32VSgA6_A10_AB22ReturnConsumedCapacityOSgA_AB6SelectOSgSStcfc">init(attributesToGet:conditionalOperator:consistentRead:exclusiveStartKey:expressionAttributeNames:expressionAttributeValues:filterExpression:indexName:keyConditionExpression:keyConditions:limit:projectionExpression:queryFilter:returnConsumedCapacity:scanIndexForward:select:tableName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">attributesToGet</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">conditionalOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ConditionalOperator.html">ConditionalOperator</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">consistentRead</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">exclusiveStartKey</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/AttributeValue.html">AttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expressionAttributeNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expressionAttributeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/AttributeValue.html">AttributeValue</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filterExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyConditionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyConditions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">projectionExpression</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">queryFilter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Condition.html">Condition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnConsumedCapacity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ReturnConsumedCapacity.html">ReturnConsumedCapacity</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scanIndexForward</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">select</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/Select.html">Select</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,7 +1065,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

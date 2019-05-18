@@ -14,7 +14,7 @@
     <a title="ListOpenWorkflowExecutionsInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domainSSvp"></a>
+                    <a name="//apple_ref/swift/Property/domain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domainSSvp">domain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the domain that contains the workflow executions to list.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15executionFilterAB0d9ExecutionH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15executionFilterAB0d9ExecutionH0VSgvp">executionFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If specified, only workflow executions matching the workflow ID specified in the filter are returned.   executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowExecutionFilter.html">WorkflowExecutionFilter</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15maximumPageSizes5Int32VSgvp"></a>
                     <a name="//apple_ref/swift/Property/maximumPageSize" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15maximumPageSizes5Int32VSgvp">maximumPageSize</a>
@@ -604,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15startTimeFilterAB09ExecutionhI0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/startTimeFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15startTimeFilterAB09ExecutionhI0Vvp">startTimeFilter</a>
+                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV13nextPageTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nextPageToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV13nextPageTokenSSSgvp">nextPageToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Workflow executions are included in the returned results based on whether their start times are within the range specified by this filter.</p>
+                        <p>If a NextPageToken was returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in nextPageToken. Keep all other arguments unchanged. The configured maximumPageSize determines how many results can be returned in a single call.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTimeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ExecutionTimeFilter.html">ExecutionTimeFilter</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -649,6 +703,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reverseOrder</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15startTimeFilterAB09ExecutionhI0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/startTimeFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15startTimeFilterAB09ExecutionhI0Vvp">startTimeFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Workflow executions are included in the returned results based on whether their start times are within the range specified by this filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTimeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ExecutionTimeFilter.html">ExecutionTimeFilter</a></span></code></pre>
 
                         </div>
                       </div>
@@ -712,90 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV13nextPageTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nextPageToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV13nextPageTokenSSSgvp">nextPageToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If a NextPageToken was returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in nextPageToken. Keep all other arguments unchanged. The configured maximumPageSize determines how many results can be returned in a single call.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domainSSvp"></a>
-                    <a name="//apple_ref/swift/Property/domain" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domainSSvp">domain</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the domain that contains the workflow executions to list.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15executionFilterAB0d9ExecutionH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15executionFilterAB0d9ExecutionH0VSgvp">executionFilter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If specified, only workflow executions matching the workflow ID specified in the filter are returned.   executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowExecutionFilter.html">WorkflowExecutionFilter</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15maximumPageSize15startTimeFilter12reverseOrder03tagL004typeL004nextH5Token6domain09executionL0ADs5Int32VSg_AB09ExecutionkL0VSbSgAB03TagL0VSgAB0d4TypeL0VSgSSSgSSAB0dvL0VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(maximumPageSize:startTimeFilter:reverseOrder:tagFilter:typeFilter:nextPageToken:domain:executionFilter:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV15maximumPageSize15startTimeFilter12reverseOrder03tagL004typeL004nextH5Token6domain09executionL0ADs5Int32VSg_AB09ExecutionkL0VSbSgAB03TagL0VSgAB0d4TypeL0VSgSSSgSSAB0dvL0VSgtcfc">init(maximumPageSize:startTimeFilter:reverseOrder:tagFilter:typeFilter:nextPageToken:domain:executionFilter:)</a>
+                    <a name="/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domain15executionFilter15maximumPageSize04nextK5Token12reverseOrder09startTimeI003tagI004typeI0ADSS_AB0d9ExecutionI0VSgs5Int32VSgSSSgSbSgAB0urI0VAB03TagI0VSgAB0d4TypeI0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(domain:executionFilter:maximumPageSize:nextPageToken:reverseOrder:startTimeFilter:tagFilter:typeFilter:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV31ListOpenWorkflowExecutionsInputV6domain15executionFilter15maximumPageSize04nextK5Token12reverseOrder09startTimeI003tagI004typeI0ADSS_AB0d9ExecutionI0VSgs5Int32VSgSSSgSbSgAB0urI0VAB03TagI0VSgAB0d4TypeI0VSgtcfc">init(domain:executionFilter:maximumPageSize:nextPageToken:reverseOrder:startTimeFilter:tagFilter:typeFilter:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">maximumPageSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTimeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ExecutionTimeFilter.html">ExecutionTimeFilter</a></span><span class="p">,</span> <span class="nv">reverseOrder</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TagFilter.html">TagFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">typeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowTypeFilter.html">WorkflowTypeFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">executionFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowExecutionFilter.html">WorkflowExecutionFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">executionFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowExecutionFilter.html">WorkflowExecutionFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maximumPageSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reverseOrder</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTimeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ExecutionTimeFilter.html">ExecutionTimeFilter</a></span><span class="p">,</span> <span class="nv">tagFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TagFilter.html">TagFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">typeFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowTypeFilter.html">WorkflowTypeFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

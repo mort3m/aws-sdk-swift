@@ -14,7 +14,7 @@
     <a title="MarketplaceCommerceAnalytics Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,36 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV22startSupportDataExportyAB05StartefG6ResultVAB0hefG7RequestVKF"></a>
-                    <a name="//apple_ref/swift/Method/startSupportDataExport(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV22startSupportDataExportyAB05StartefG6ResultVAB0hefG7RequestVKF">startSupportDataExport(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Given a data set type and a from date, asynchronously publishes the requested customer support data to the specified S3 bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values (CSV) format with the file name {data_set_type}_YYYY-MM-DD&rsquo;T&#39;HH-mm-ss&#39;Z&rsquo;.csv. If a file with the same name already exists (e.g. if the same data set is requested twice), the original file will be overwritten by the new file. Requires a Role with an attached permissions policy providing Allow permissions for the following actions: s3:PutObject, s3:GetBucketLocation, sns:GetTopicAttributes, sns:Publish, iam:GetRolePolicy.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startSupportDataExport</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportRequest.html">StartSupportDataExportRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportResult.html">StartSupportDataExportResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV15generateDataSetyAB08GenerateeF6ResultVAB0geF7RequestVKF"></a>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV15generateDataSety3NIO15EventLoopFutureCyAB08GenerateeF6ResultVGAB0keF7RequestVKF"></a>
                     <a name="//apple_ref/swift/Method/generateDataSet(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV15generateDataSetyAB08GenerateeF6ResultVAB0geF7RequestVKF">generateDataSet(_:)</a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV15generateDataSety3NIO15EventLoopFutureCyAB08GenerateeF6ResultVGAB0keF7RequestVKF">generateDataSet(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -621,7 +594,34 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">generateDataSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetRequest.html">GenerateDataSetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetResult.html">GenerateDataSetResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">generateDataSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetRequest.html">GenerateDataSetRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetResult.html">GenerateDataSetResult</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV22startSupportDataExporty3NIO15EventLoopFutureCyAB05StartefG6ResultVGAB0lefG7RequestVKF"></a>
+                    <a name="//apple_ref/swift/Method/startSupportDataExport(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV22startSupportDataExporty3NIO15EventLoopFutureCyAB05StartefG6ResultVGAB0lefG7RequestVKF">startSupportDataExport(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Given a data set type and a from date, asynchronously publishes the requested customer support data to the specified S3 bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values (CSV) format with the file name {data_set_type}_YYYY-MM-DD&rsquo;T&#39;HH-mm-ss&#39;Z&rsquo;.csv. If a file with the same name already exists (e.g. if the same data set is requested twice), the original file will be overwritten by the new file. Requires a Role with an attached permissions policy providing Allow permissions for the following actions: s3:PutObject, s3:GetBucketLocation, sns:GetTopicAttributes, sns:Publish, iam:GetRolePolicy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startSupportDataExport</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportRequest.html">StartSupportDataExportRequest</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportResult.html">StartSupportDataExportResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -635,9 +635,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV21GenerateDataSetResultV"></a>
-                    <a name="//apple_ref/swift/Struct/GenerateDataSetResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV21GenerateDataSetResultV">GenerateDataSetResult</a>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV11DataSetTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/DataSetType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV11DataSetTypeO">DataSetType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -647,69 +647,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetResult.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/MarketplaceCommerceAnalytics/DataSetType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GenerateDataSetResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV28StartSupportDataExportResultV"></a>
-                    <a name="//apple_ref/swift/Struct/StartSupportDataExportResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV28StartSupportDataExportResultV">StartSupportDataExportResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSupportDataExportResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV29StartSupportDataExportRequestV"></a>
-                    <a name="//apple_ref/swift/Struct/StartSupportDataExportRequest" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV29StartSupportDataExportRequestV">StartSupportDataExportRequest</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportRequest.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSupportDataExportRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataSetType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -747,6 +691,90 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV21GenerateDataSetResultV"></a>
+                    <a name="//apple_ref/swift/Struct/GenerateDataSetResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV21GenerateDataSetResultV">GenerateDataSetResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceCommerceAnalytics/GenerateDataSetResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GenerateDataSetResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV29StartSupportDataExportRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/StartSupportDataExportRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV29StartSupportDataExportRequestV">StartSupportDataExportRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSupportDataExportRequest</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:28MarketplaceCommerceAnalyticsAAV28StartSupportDataExportResultV"></a>
+                    <a name="//apple_ref/swift/Struct/StartSupportDataExportResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV28StartSupportDataExportResultV">StartSupportDataExportResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/MarketplaceCommerceAnalytics/StartSupportDataExportResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSupportDataExportResult</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:28MarketplaceCommerceAnalyticsAAV18SupportDataSetTypeO"></a>
                     <a name="//apple_ref/swift/Enum/SupportDataSetType" class="dashAnchor"></a>
                     <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV18SupportDataSetTypeO">SupportDataSetType</a>
@@ -772,40 +800,12 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:28MarketplaceCommerceAnalyticsAAV11DataSetTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/DataSetType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:28MarketplaceCommerceAnalyticsAAV11DataSetTypeO">DataSetType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/MarketplaceCommerceAnalytics/DataSetType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataSetType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

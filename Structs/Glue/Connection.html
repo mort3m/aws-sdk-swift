@@ -14,7 +14,7 @@
     <a title="Connection Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV10ConnectionV08physicalB12RequirementsAB08PhysicalbD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/physicalConnectionRequirements" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV10ConnectionV08physicalB12RequirementsAB08PhysicalbD0VSgvp">physicalConnectionRequirements</a>
+                    <a name="/s:4GlueAAV10ConnectionV20connectionPropertiesSDyAB0B11PropertyKeyOSSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/connectionProperties" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV10ConnectionV20connectionPropertiesSDyAB0B11PropertyKeyOSSGSgvp">connectionProperties</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A map of physical connection requirements, such as VPC and SecurityGroup, needed for making this connection successfully.</p>
+                        <p>These key-value pairs define parameters for the connection:    HOST - The host URI: either the fully qualified domain name (FQDN) or the IPv4 address of the database host.    PORT - The port number, between 1024 and 65535, of the port on which the database host is listening for database connections.    USER_NAME - The name under which to log in to the database. The value string for USER_NAME is <q>USERNAME</q>.    PASSWORD - A password, if one is used, for the user name.    JDBC_DRIVER_JAR_URI - The S3 path of the a jar file that contains the JDBC driver to use.    JDBC_DRIVER_CLASS_NAME - The class name of the JDBC driver to use.    JDBC_ENGINE - The name of the JDBC engine to use.    JDBC_ENGINE_VERSION - The version of the JDBC engine to use.    CONFIG_FILES - (Reserved for future use).    INSTANCE_ID - The instance ID to use.    JDBC_CONNECTION_URL - The URL for the JDBC connection.    JDBC_ENFORCE_SSL - A Boolean string (true, false) specifying whether SSL with hostname matching will be enforced for the JDBC connection on the client. The default is false.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">physicalConnectionRequirements</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/PhysicalConnectionRequirements.html">PhysicalConnectionRequirements</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV10ConnectionV15lastUpdatedTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/lastUpdatedTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV10ConnectionV15lastUpdatedTime15AWSSDKSwiftCore0E5StampVSgvp">lastUpdatedTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The last time this connection definition was updated.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastUpdatedTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectionProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/ConnectionPropertyKey.html">ConnectionPropertyKey</a></span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -649,6 +622,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/ConnectionType.html">ConnectionType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV10ConnectionV12creationTime15AWSSDKSwiftCore0D5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV10ConnectionV12creationTime15AWSSDKSwiftCore0D5StampVSgvp">creationTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time this connection definition was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,6 +712,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4GlueAAV10ConnectionV15lastUpdatedTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastUpdatedTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV10ConnectionV15lastUpdatedTime15AWSSDKSwiftCore0E5StampVSgvp">lastUpdatedTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last time this connection definition was updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastUpdatedTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4GlueAAV10ConnectionV13matchCriteriaSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/matchCriteria" class="dashAnchor"></a>
                     <a class="token" href="#/s:4GlueAAV10ConnectionV13matchCriteriaSaySSGSgvp">matchCriteria</a>
@@ -730,33 +757,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">matchCriteria</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV10ConnectionV12creationTime15AWSSDKSwiftCore0D5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV10ConnectionV12creationTime15AWSSDKSwiftCore0D5StampVSgvp">creationTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The time this connection definition was created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV10ConnectionV20connectionPropertiesSDyAB0B11PropertyKeyOSSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/connectionProperties" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV10ConnectionV20connectionPropertiesSDyAB0B11PropertyKeyOSSGSgvp">connectionProperties</a>
+                    <a name="/s:4GlueAAV10ConnectionV08physicalB12RequirementsAB08PhysicalbD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/physicalConnectionRequirements" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV10ConnectionV08physicalB12RequirementsAB08PhysicalbD0VSgvp">physicalConnectionRequirements</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>These key-value pairs define parameters for the connection:    HOST - The host URI: either the fully qualified domain name (FQDN) or the IPv4 address of the database host.    PORT - The port number, between 1024 and 65535, of the port on which the database host is listening for database connections.    USER_NAME - The name under which to log in to the database. The value string for USER_NAME is <q>USERNAME</q>.    PASSWORD - A password, if one is used, for the user name.    JDBC_DRIVER_JAR_URI - The S3 path of the a jar file that contains the JDBC driver to use.    JDBC_DRIVER_CLASS_NAME - The class name of the JDBC driver to use.    JDBC_ENGINE - The name of the JDBC engine to use.    JDBC_ENGINE_VERSION - The version of the JDBC engine to use.    CONFIG_FILES - (Reserved for future use).    INSTANCE_ID - The instance ID to use.    JDBC_CONNECTION_URL - The URL for the JDBC connection.    JDBC_ENFORCE_SSL - A Boolean string (true, false) specifying whether SSL with hostname matching will be enforced for the JDBC connection on the client. The default is false.</p>
+                        <p>A map of physical connection requirements, such as VPC and SecurityGroup, needed for making this connection successfully.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectionProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/ConnectionPropertyKey.html">ConnectionPropertyKey</a></span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">physicalConnectionRequirements</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/PhysicalConnectionRequirements.html">PhysicalConnectionRequirements</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV10ConnectionV08physicalB12Requirements15lastUpdatedTime14connectionType11description0eF2By13matchCriteria08creationG04name0H10PropertiesAdB08PhysicalbD0VSg_15AWSSDKSwiftCore0G5StampVSgAB0bI0OSgSSSgAXSaySSGSgAtXSDyAB0B11PropertyKeyOSSGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(physicalConnectionRequirements:lastUpdatedTime:connectionType:description:lastUpdatedBy:matchCriteria:creationTime:name:connectionProperties:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV10ConnectionV08physicalB12Requirements15lastUpdatedTime14connectionType11description0eF2By13matchCriteria08creationG04name0H10PropertiesAdB08PhysicalbD0VSg_15AWSSDKSwiftCore0G5StampVSgAB0bI0OSgSSSgAXSaySSGSgAtXSDyAB0B11PropertyKeyOSSGSgtcfc">init(physicalConnectionRequirements:lastUpdatedTime:connectionType:description:lastUpdatedBy:matchCriteria:creationTime:name:connectionProperties:)</a>
+                    <a name="/s:4GlueAAV10ConnectionV20connectionProperties0C4Type12creationTime11description13lastUpdatedBy0ijG013matchCriteria4name08physicalB12RequirementsADSDyAB0B11PropertyKeyOSSGSg_AB0bE0OSg15AWSSDKSwiftCore0G5StampVSgSSSgAyXSaySSGSgAyB08PhysicalbP0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(connectionProperties:connectionType:creationTime:description:lastUpdatedBy:lastUpdatedTime:matchCriteria:name:physicalConnectionRequirements:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV10ConnectionV20connectionProperties0C4Type12creationTime11description13lastUpdatedBy0ijG013matchCriteria4name08physicalB12RequirementsADSDyAB0B11PropertyKeyOSSGSg_AB0bE0OSg15AWSSDKSwiftCore0G5StampVSgSSSgAyXSaySSGSgAyB08PhysicalbP0VSgtcfc">init(connectionProperties:connectionType:creationTime:description:lastUpdatedBy:lastUpdatedTime:matchCriteria:name:physicalConnectionRequirements:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">physicalConnectionRequirements</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/PhysicalConnectionRequirements.html">PhysicalConnectionRequirements</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/ConnectionType.html">ConnectionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">matchCriteria</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/ConnectionPropertyKey.html">ConnectionPropertyKey</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">connectionProperties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/ConnectionPropertyKey.html">ConnectionPropertyKey</a></span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/ConnectionType.html">ConnectionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedBy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">matchCriteria</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">physicalConnectionRequirements</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/PhysicalConnectionRequirements.html">PhysicalConnectionRequirements</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="ScheduledAction Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimensionAB08ScalableG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scalableDimension" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimensionAB08ScalableG0OSgvp">scalableDimension</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime15AWSSDKSwiftCore0G5StampVvp">creationTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The scalable dimension. This string consists of the service namespace, resource type, and scaling property.    ecs:service:DesiredCount - The desired task count of an ECS service.    ec2:spot-fleet-request:TargetCapacity - The target capacity of a Spot fleet request.    elasticmapreduce:instancegroup:InstanceCount - The instance count of an EMR Instance Group.    appstream:fleet:DesiredCapacity - The desired capacity of an AppStream 2.0 fleet.    dynamodb:table:ReadCapacityUnits - The provisioned read capacity for a DynamoDB table.    dynamodb:table:WriteCapacityUnits - The provisioned write capacity for a DynamoDB table.    dynamodb:index:ReadCapacityUnits - The provisioned read capacity for a DynamoDB global secondary index.    dynamodb:index:WriteCapacityUnits - The provisioned write capacity for a DynamoDB global secondary index.    rds:cluster:ReadReplicaCount - The count of Aurora Replicas in an Aurora DB cluster. Available for Aurora MySQL-compatible edition.    sagemaker:variant:DesiredInstanceCount - The number of EC2 instances for an Amazon SageMaker model endpoint variant.    custom-resource:ResourceType:Property - The scalable dimension for a custom resource provided by your own application or service.</p>
+                        <p>The date and time that the scheduled action was created.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV16serviceNamespaceAB07ServiceG0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/serviceNamespace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV16serviceNamespaceAB07ServiceG0Ovp">serviceNamespace</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The namespace of the AWS service that provides the resource or custom-resource for a resource provided by your own application or service. For more information, see AWS Service Namespaces in the Amazon Web Services General Reference.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV8scheduleSSvp"></a>
-                    <a name="//apple_ref/swift/Property/schedule" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV8scheduleSSvp">schedule</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The schedule for this action. The following formats are supported:   At expressions - at(yyyy-mm-ddThh:mm:ss)    Rate expressions - rate(value unit)    Cron expressions - cron(fields)    At expressions are useful for one-time schedules. Specify the time, in UTC. For rate expressions, value is a positive integer and unit is minute | minutes | hour | hours | day | days. For more information about cron expressions, see Cron Expressions in the Amazon CloudWatch Events User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">schedule</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV9startTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV9startTime15AWSSDKSwiftCore0G5StampVSgvp">startTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time that the action is scheduled to begin.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE4NameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/scheduledActionName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE4NameSSvp">scheduledActionName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the scheduled action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheduledActionName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE3ARNSSvp"></a>
-                    <a name="//apple_ref/swift/Property/scheduledActionARN" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE3ARNSSvp">scheduledActionARN</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV10resourceIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/resourceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV10resourceIdSSvp">resourceId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +641,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the scheduled action.</p>
+                        <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.   ECS service - The resource type is service and the unique identifier is the cluster name and service name. Example: service/default/sample-webapp.   Spot fleet request - The resource type is spot-fleet-request and the unique identifier is the Spot fleet request ID. Example: spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE.   EMR cluster - The resource type is instancegroup and the unique identifier is the cluster ID and instance group ID. Example: instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0.   AppStream 2.0 fleet - The resource type is fleet and the unique identifier is the fleet name. Example: fleet/sample-fleet.   DynamoDB table - The resource type is table and the unique identifier is the resource ID. Example: table/my-table.   DynamoDB global secondary index - The resource type is index and the unique identifier is the resource ID. Example: table/my-table/index/my-table-index.   Aurora DB cluster - The resource type is cluster and the unique identifier is the cluster name. Example: cluster:my-db-cluster.   Amazon SageMaker endpoint variants - The resource type is variant and the unique identifier is the resource ID. Example: endpoint/my-end-point/variant/KMeansClustering.   Custom resources are not supported with a resource type. This parameter must specify the OutputValue from the CloudFormation template stack used to access the resources. The unique identifier is defined by the service provider.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheduledActionARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimensionAB08ScalableG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scalableDimension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimensionAB08ScalableG0OSgvp">scalableDimension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The scalable dimension. This string consists of the service namespace, resource type, and scaling property.    ecs:service:DesiredCount - The desired task count of an ECS service.    ec2:spot-fleet-request:TargetCapacity - The target capacity of a Spot fleet request.    elasticmapreduce:instancegroup:InstanceCount - The instance count of an EMR Instance Group.    appstream:fleet:DesiredCapacity - The desired capacity of an AppStream 2.0 fleet.    dynamodb:table:ReadCapacityUnits - The provisioned read capacity for a DynamoDB table.    dynamodb:table:WriteCapacityUnits - The provisioned write capacity for a DynamoDB table.    dynamodb:index:ReadCapacityUnits - The provisioned read capacity for a DynamoDB global secondary index.    dynamodb:index:WriteCapacityUnits - The provisioned write capacity for a DynamoDB global secondary index.    rds:cluster:ReadReplicaCount - The count of Aurora Replicas in an Aurora DB cluster. Available for Aurora MySQL-compatible edition.    sagemaker:variant:DesiredInstanceCount - The number of EC2 instances for an Amazon SageMaker model endpoint variant.    custom-resource:ResourceType:Property - The scalable dimension for a custom resource provided by your own application or service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/creationTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime15AWSSDKSwiftCore0G5StampVvp">creationTime</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV8scheduleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/schedule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV8scheduleSSvp">schedule</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date and time that the scheduled action was created.</p>
+                        <p>The schedule for this action. The following formats are supported:   At expressions - at(yyyy-mm-ddThh:mm:ss)    Rate expressions - rate(value unit)    Cron expressions - cron(fields)    At expressions are useful for one-time schedules. Specify the time, in UTC. For rate expressions, value is a positive integer and unit is minute | minutes | hour | hours | day | days. For more information about cron expressions, see Cron Expressions in the Amazon CloudWatch Events User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">schedule</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV10resourceIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/resourceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV10resourceIdSSvp">resourceId</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE3ARNSSvp"></a>
+                    <a name="//apple_ref/swift/Property/scheduledActionARN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE3ARNSSvp">scheduledActionARN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.   ECS service - The resource type is service and the unique identifier is the cluster name and service name. Example: service/default/sample-webapp.   Spot fleet request - The resource type is spot-fleet-request and the unique identifier is the Spot fleet request ID. Example: spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE.   EMR cluster - The resource type is instancegroup and the unique identifier is the cluster ID and instance group ID. Example: instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0.   AppStream 2.0 fleet - The resource type is fleet and the unique identifier is the fleet name. Example: fleet/sample-fleet.   DynamoDB table - The resource type is table and the unique identifier is the resource ID. Example: table/my-table.   DynamoDB global secondary index - The resource type is index and the unique identifier is the resource ID. Example: table/my-table/index/my-table-index.   Aurora DB cluster - The resource type is cluster and the unique identifier is the cluster name. Example: cluster:my-db-cluster.   Amazon SageMaker endpoint variants - The resource type is variant and the unique identifier is the resource ID. Example: endpoint/my-end-point/variant/KMeansClustering.   Custom resources are not supported with a resource type. This parameter must specify the OutputValue from the CloudFormation template stack used to access the resources. The unique identifier is defined by the service provider.</p>
+                        <p>The Amazon Resource Name (ARN) of the scheduled action.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheduledActionARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +766,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimension16serviceNamespace8schedule9startTime09scheduledE4Name03endL00mE3ARN0f6TargetE008creationL010resourceIdAdB08ScalableG0OSg_AB07ServiceI0OSS15AWSSDKSwiftCore0L5StampVSgSSAWSSAB0uqE0VSgAVSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(scalableDimension:serviceNamespace:schedule:startTime:scheduledActionName:endTime:scheduledActionARN:scalableTargetAction:creationTime:resourceId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV17scalableDimension16serviceNamespace8schedule9startTime09scheduledE4Name03endL00mE3ARN0f6TargetE008creationL010resourceIdAdB08ScalableG0OSg_AB07ServiceI0OSS15AWSSDKSwiftCore0L5StampVSgSSAWSSAB0uqE0VSgAVSStcfc">init(scalableDimension:serviceNamespace:schedule:startTime:scheduledActionName:endTime:scheduledActionARN:scalableTargetAction:creationTime:resourceId:)</a>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE4NameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/scheduledActionName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV09scheduledE4NameSSvp">scheduledActionName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the scheduled action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheduledActionName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV16serviceNamespaceAB07ServiceG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/serviceNamespace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV16serviceNamespaceAB07ServiceG0Ovp">serviceNamespace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The namespace of the AWS service that provides the resource or custom-resource for a resource provided by your own application or service. For more information, see AWS Service Namespaces in the Amazon Web Services General Reference.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV9startTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV9startTime15AWSSDKSwiftCore0G5StampVSgvp">startTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time that the action is scheduled to begin.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime03endG010resourceId17scalableDimension0k6TargetE08schedule09scheduledE3ARN0oE4Name16serviceNamespace05startG0AD15AWSSDKSwiftCore0G5StampV_AQSgSSAB08ScalableL0OSgAB0xmE0VSgS3SAB07ServiceS0OARtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(creationTime:endTime:resourceId:scalableDimension:scalableTargetAction:schedule:scheduledActionARN:scheduledActionName:serviceNamespace:startTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22ApplicationAutoScalingAAV15ScheduledActionV12creationTime03endG010resourceId17scalableDimension0k6TargetE08schedule09scheduledE3ARN0oE4Name16serviceNamespace05startG0AD15AWSSDKSwiftCore0G5StampV_AQSgSSAB08ScalableL0OSgAB0xmE0VSgS3SAB07ServiceS0OARtcfc">init(creationTime:endTime:resourceId:scalableDimension:scalableTargetAction:schedule:scheduledActionARN:scheduledActionName:serviceNamespace:startTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheduledActionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheduledActionARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scalableTargetAction</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableTargetAction.html">ScalableTargetAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">creationTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableDimension.html">ScalableDimension</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalableTargetAction</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ScalableTargetAction.html">ScalableTargetAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">schedule</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scheduledActionARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scheduledActionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ApplicationAutoScaling/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

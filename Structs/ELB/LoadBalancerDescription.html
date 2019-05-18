@@ -14,7 +14,7 @@
     <a title="LoadBalancerDescription Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV7subnetsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/subnets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV7subnetsSaySSGSgvp">subnets</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZonesSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZonesSaySSGSgvp">availabilityZones</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The IDs of the subnets for the load balancer.</p>
+                        <p>The Availability Zones for the load balancer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnets</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV6schemeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scheme" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV6schemeSSSgvp">scheme</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV25backendServerDescriptionsSayAB07BackendfD0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backendServerDescriptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV25backendServerDescriptionsSayAB07BackendfD0VGSgvp">backendServerDescriptions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of load balancer. Valid only for load balancers in a VPC. If Scheme is internet-facing, the load balancer has a public DNS name that resolves to a public IP address. If Scheme is internal, the load balancer has a public DNS name that resolves to a private IP address.</p>
+                        <p>Information about your EC2 instances.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backendServerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/BackendServerDescription.html">BackendServerDescription</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV23canonicalHostedZoneNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/canonicalHostedZoneName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV23canonicalHostedZoneNameSSSgvp">canonicalHostedZoneName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The DNS name of the load balancer. For more information, see Configure a Custom Domain Name in the Classic Load Balancers Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">canonicalHostedZoneName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV25canonicalHostedZoneNameIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/canonicalHostedZoneNameID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV25canonicalHostedZoneNameIDSSSgvp">canonicalHostedZoneNameID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the Amazon Route 53 hosted zone for the load balancer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">canonicalHostedZoneNameID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV11createdTime15AWSSDKSwiftCore0F5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createdTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV11createdTime15AWSSDKSwiftCore0F5StampVSgvp">createdTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time the load balancer was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV7dNSNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dNSName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV7dNSNameSSSgvp">dNSName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The DNS name of the load balancer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dNSName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -649,33 +757,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/HealthCheck.html">HealthCheck</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV04loadC4NameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/loadBalancerName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV04loadC4NameSSSgvp">loadBalancerName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the load balancer.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">loadBalancerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV11createdTime15AWSSDKSwiftCore0F5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createdTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV11createdTime15AWSSDKSwiftCore0F5StampVSgvp">createdTime</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV04loadC4NameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loadBalancerName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV04loadC4NameSSSgvp">loadBalancerName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,95 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date and time the load balancer was created.</p>
+                        <p>The name of the load balancer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV25canonicalHostedZoneNameIDSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/canonicalHostedZoneNameID" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV25canonicalHostedZoneNameIDSSSgvp">canonicalHostedZoneNameID</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the Amazon Route 53 hosted zone for the load balancer.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">canonicalHostedZoneNameID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV19sourceSecurityGroupAB06SourcefG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceSecurityGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV19sourceSecurityGroupAB06SourcefG0VSgvp">sourceSecurityGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The security group for the load balancer, which you can use as part of your inbound rules for your registered instances. To only allow traffic from load balancers, add a security group rule that specifies this source security group as the inbound source.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceSecurityGroup</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/SourceSecurityGroup.html">SourceSecurityGroup</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV14securityGroupsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV14securityGroupsSaySSGSgvp">securityGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The security groups for the load balancer. Valid only for load balancers in a VPC.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">loadBalancerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV23canonicalHostedZoneNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/canonicalHostedZoneName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV23canonicalHostedZoneNameSSSgvp">canonicalHostedZoneName</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV6schemeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scheme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV6schemeSSSgvp">scheme</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -884,14 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The DNS name of the load balancer. For more information, see Configure a Custom Domain Name in the Classic Load Balancers Guide.</p>
+                        <p>The type of load balancer. Valid only for load balancers in a VPC. If Scheme is internet-facing, the load balancer has a public DNS name that resolves to a public IP address. If Scheme is internal, the load balancer has a public DNS name that resolves to a private IP address.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">canonicalHostedZoneName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZonesSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/availabilityZones" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZonesSaySSGSgvp">availabilityZones</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV14securityGroupsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV14securityGroupsSaySSGSgvp">securityGroups</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Availability Zones for the load balancer.</p>
+                        <p>The security groups for the load balancer. Valid only for load balancers in a VPC.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV25backendServerDescriptionsSayAB07BackendfD0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/backendServerDescriptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV25backendServerDescriptionsSayAB07BackendfD0VGSgvp">backendServerDescriptions</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV19sourceSecurityGroupAB06SourcefG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceSecurityGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV19sourceSecurityGroupAB06SourcefG0VSgvp">sourceSecurityGroup</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Information about your EC2 instances.</p>
+                        <p>The security group for the load balancer, which you can use as part of your inbound rules for your registered instances. To only allow traffic from load balancers, add a security group rule that specifies this source security group as the inbound source.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backendServerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/BackendServerDescription.html">BackendServerDescription</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceSecurityGroup</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/SourceSecurityGroup.html">SourceSecurityGroup</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV7dNSNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dNSName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV7dNSNameSSSgvp">dNSName</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV7subnetsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/subnets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV7subnetsSaySSGSgvp">subnets</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -965,14 +965,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The DNS name of the load balancer.</p>
+                        <p>The IDs of the subnets for the load balancer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dNSName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnets</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV7subnets6scheme11healthCheck04loadC4Name9instances20listenerDescriptions11createdTime019canonicalHostedZoneJ2ID19sourceSecurityGroup14securityGroups8policies0pqrJ017availabilityZones013backendServerM07dNSName5vPCIdADSaySSGSg_SSSgAB06HealthH0VSgAWSayAB8InstanceVGSgSayAB08ListenerD0VGSg15AWSSDKSwiftCore0O5StampVSgAwB06SourceuV0VSgAvB8PoliciesVSgAwVSayAB013BackendServerD0VGSgA2Wtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(subnets:scheme:healthCheck:loadBalancerName:instances:listenerDescriptions:createdTime:canonicalHostedZoneNameID:sourceSecurityGroup:securityGroups:policies:canonicalHostedZoneName:availabilityZones:backendServerDescriptions:dNSName:vPCId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV7subnets6scheme11healthCheck04loadC4Name9instances20listenerDescriptions11createdTime019canonicalHostedZoneJ2ID19sourceSecurityGroup14securityGroups8policies0pqrJ017availabilityZones013backendServerM07dNSName5vPCIdADSaySSGSg_SSSgAB06HealthH0VSgAWSayAB8InstanceVGSgSayAB08ListenerD0VGSg15AWSSDKSwiftCore0O5StampVSgAwB06SourceuV0VSgAvB8PoliciesVSgAwVSayAB013BackendServerD0VGSgA2Wtcfc">init(subnets:scheme:healthCheck:loadBalancerName:instances:listenerDescriptions:createdTime:canonicalHostedZoneNameID:sourceSecurityGroup:securityGroups:policies:canonicalHostedZoneName:availabilityZones:backendServerDescriptions:dNSName:vPCId:)</a>
+                    <a name="/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZones25backendServerDescriptions23canonicalHostedZoneName0jklM2ID11createdTime7dNSName11healthCheck9instances08listenerI004loadcM08policies6scheme14securityGroups19sourceSecurityGroup7subnets5vPCIdADSaySSGSg_SayAB07BackendhD0VGSgSSSgA_15AWSSDKSwiftCore0P5StampVSgA_AB06HealthS0VSgSayAB8InstanceVGSgSayAB08ListenerD0VGSgA_AB8PoliciesVSgA_AvB19SourceSecurityGroupVSgAVA_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(availabilityZones:backendServerDescriptions:canonicalHostedZoneName:canonicalHostedZoneNameID:createdTime:dNSName:healthCheck:instances:listenerDescriptions:loadBalancerName:policies:scheme:securityGroups:sourceSecurityGroup:subnets:vPCId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ELBAAV23LoadBalancerDescriptionV17availabilityZones25backendServerDescriptions23canonicalHostedZoneName0jklM2ID11createdTime7dNSName11healthCheck9instances08listenerI004loadcM08policies6scheme14securityGroups19sourceSecurityGroup7subnets5vPCIdADSaySSGSg_SayAB07BackendhD0VGSgSSSgA_15AWSSDKSwiftCore0P5StampVSgA_AB06HealthS0VSgSayAB8InstanceVGSgSayAB08ListenerD0VGSgA_AB8PoliciesVSgA_AvB19SourceSecurityGroupVSgAVA_tcfc">init(availabilityZones:backendServerDescriptions:canonicalHostedZoneName:canonicalHostedZoneNameID:createdTime:dNSName:healthCheck:instances:listenerDescriptions:loadBalancerName:policies:scheme:securityGroups:sourceSecurityGroup:subnets:vPCId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,7 +1026,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">subnets</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/HealthCheck.html">HealthCheck</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">loadBalancerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instances</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/Instance.html">Instance</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">listenerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/ListenerDescription.html">ListenerDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">canonicalHostedZoneNameID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceSecurityGroup</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/SourceSecurityGroup.html">SourceSecurityGroup</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policies</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/Policies.html">Policies</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">canonicalHostedZoneName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backendServerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/BackendServerDescription.html">BackendServerDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dNSName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vPCId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">availabilityZones</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backendServerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/BackendServerDescription.html">BackendServerDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">canonicalHostedZoneName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">canonicalHostedZoneNameID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dNSName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">healthCheck</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/HealthCheck.html">HealthCheck</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instances</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/Instance.html">Instance</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">listenerDescriptions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/ELB/ListenerDescription.html">ListenerDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">loadBalancerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policies</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/Policies.html">Policies</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheme</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceSecurityGroup</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ELB/SourceSecurityGroup.html">SourceSecurityGroup</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnets</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vPCId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1038,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

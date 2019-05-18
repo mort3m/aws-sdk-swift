@@ -14,7 +14,7 @@
     <a title="ModifyClusterMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPasswordSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/masterUserPassword" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPasswordSSSgvp">masterUserPassword</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgradeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/allowVersionUpgrade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgradeSbSgvp">allowVersionUpgrade</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The new password for the cluster master user. This change is asynchronously applied as soon as possible. Between the time of the request and the completion of the request, the MasterUserPassword element exists in the PendingModifiedValues element of the operation response.   Operations never return the password, so this operation provides a way to regain access to the master user account for a cluster if the password is lost.  Default: Uses existing setting. Constraints:   Must be between 8 and 64 characters in length.   Must contain at least one uppercase letter.   Must contain at least one lowercase letter.   Must contain one number.   Can be any printable ASCII character (ASCII code 33 to 126) except &lsquo; (single quote), &ldquo; (double quote), \, /, @, or space.</p>
+                        <p>If true, major version upgrades will be applied automatically to the cluster during the maintenance window.  Default: false</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">allowVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV9encryptedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV9encryptedSbSgvp">encrypted</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV32automatedSnapshotRetentionPeriods5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/automatedSnapshotRetentionPeriod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV32automatedSnapshotRetentionPeriods5Int32VSgvp">automatedSnapshotRetentionPeriod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,284 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates whether the cluster is encrypted. If the cluster is encrypted and you provide a value for the KmsKeyId parameter, we will encrypt the cluster with the provided KmsKeyId. If you don&rsquo;t provide a KmsKeyId, we will encrypt with the default key. In the China region we will use legacy encryption if you specify that the cluster is encrypted.</p>
+                        <p>The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with CreateClusterSnapshot.  If you decrease the automated snapshot retention period from its current value, existing automated snapshots that fall outside of the new retention period will be immediately deleted. Default: Uses existing setting. Constraints: Must be a value from 0 to 35.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18publiclyAccessibleSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/publiclyAccessible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18publiclyAccessibleSbSgvp">publiclyAccessible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If true, the cluster can be accessed from a public network. Only clusters in VPCs can be set to be publicly available.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV29manualSnapshotRetentionPeriods5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/manualSnapshotRetentionPeriod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV29manualSnapshotRetentionPeriods5Int32VSgvp">manualSnapshotRetentionPeriod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The default for number of days that a newly created manual snapshot is retained. If the value is -1, the manual snapshot is retained indefinitely. This value doesn&rsquo;t retroactively change the retention periods of existing manual snapshots. The value must be either -1 or an integer between 1 and 3,653. The default value is -1.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">manualSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV11clusterTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clusterType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV11clusterTypeSSSgvp">clusterType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The new cluster type. When you submit your cluster resize request, your existing cluster goes into a read-only mode. After Amazon Redshift provisions a new cluster based on your resize requirements, there will be outage for a period while the old cluster is deleted and your connection is switched to the new cluster. You can use DescribeResize to track the progress of the resize request.  Valid Values:  multi-node | single-node</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of virtual private cloud (VPC) security groups to be associated with the cluster. This change is asynchronously applied as soon as possible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The weekly time range (in UTC) during which system maintenance can occur, if necessary. If system maintenance is necessary during the window, it may result in an outage. This maintenance window change is made immediately. If the new maintenance window indicates the current time, there must be at least 120 minutes between the current time and end of the window in order to ensure that pending changes are applied. Default: Uses existing setting. Format: ddd:hh24:mi-ddd:hh24:mi, for example wed:07:30-wed:08:00. Valid Days: Mon | Tue | Wed | Thu | Fri | Sat | Sun Constraints: Must be at least 30 minutes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV20maintenanceTrackNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maintenanceTrackName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV20maintenanceTrackNameSSSgvp">maintenanceTrackName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maintenanceTrackName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV13numberOfNodess5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/numberOfNodes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV13numberOfNodess5Int32VSgvp">numberOfNodes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The new number of nodes of the cluster. If you specify a new number of nodes, you must also specify the node type parameter. When you submit your request to resize a cluster, Amazon Redshift sets access permissions for the cluster to read-only. After Amazon Redshift provisions a new cluster according to your resize requirements, there will be a temporary outage while the old cluster is deleted and your connection is switched to the new cluster. When the new connection is complete, the original access permissions for the cluster are restored. You can use DescribeResize to track the progress of the resize request.  Valid Values: Integer greater than 0.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV30hsmClientCertificateIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/hsmClientCertificateIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV30hsmClientCertificateIdentifierSSSgvp">hsmClientCertificateIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hsmClientCertificateIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18enhancedVpcRoutingSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/enhancedVpcRouting" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18enhancedVpcRoutingSbSgvp">enhancedVpcRouting</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide. If this option is true, enhanced VPC routing is enabled.  Default: false</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enhancedVpcRouting</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV21clusterSecurityGroupsAB0cF13GroupNameListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clusterSecurityGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV21clusterSecurityGroupsAB0cF13GroupNameListVSgvp">clusterSecurityGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of cluster security groups to be authorized on this cluster. This change is asynchronously applied as soon as possible. Security groups currently associated with the cluster, and not in the list of groups to apply, will be revoked from the cluster. Constraints:   Must be 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterSecurityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/ClusterSecurityGroupNameList.html">ClusterSecurityGroupNameList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">automatedSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,6 +658,87 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV25clusterParameterGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clusterParameterGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV25clusterParameterGroupNameSSSgvp">clusterParameterGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the cluster parameter group to apply to this cluster. This change is applied only after the cluster is rebooted. To reboot a cluster use RebootCluster.  Default: Uses existing setting. Constraints: The cluster parameter group must be in the same parameter group family that matches the cluster version.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV21clusterSecurityGroupsAB0cF13GroupNameListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clusterSecurityGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV21clusterSecurityGroupsAB0cF13GroupNameListVSgvp">clusterSecurityGroups</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of cluster security groups to be authorized on this cluster. This change is asynchronously applied as soon as possible. Security groups currently associated with the cluster, and not in the list of groups to apply, will be revoked from the cluster. Constraints:   Must be 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterSecurityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/ClusterSecurityGroupNameList.html">ClusterSecurityGroupNameList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV11clusterTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clusterType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV11clusterTypeSSSgvp">clusterType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The new cluster type. When you submit your cluster resize request, your existing cluster goes into a read-only mode. After Amazon Redshift provisions a new cluster based on your resize requirements, there will be outage for a period while the old cluster is deleted and your connection is switched to the new cluster. You can use DescribeResize to track the progress of the resize request.  Valid Values:  multi-node | single-node</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8RedshiftAAV20ModifyClusterMessageV14clusterVersionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/clusterVersion" class="dashAnchor"></a>
                     <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV14clusterVersionSSSgvp">clusterVersion</a>
@@ -946,6 +757,114 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV9elasticIpSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/elasticIp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV9elasticIpSSSgvp">elasticIp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Elastic IP (EIP) address for the cluster. Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For more information about provisioning clusters in EC2-VPC, go to Supported Platforms to Launch Your Cluster in the Amazon Redshift Cluster Management Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elasticIp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV9encryptedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV9encryptedSbSgvp">encrypted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether the cluster is encrypted. If the cluster is encrypted and you provide a value for the KmsKeyId parameter, we will encrypt the cluster with the provided KmsKeyId. If you don&rsquo;t provide a KmsKeyId, we will encrypt with the default key. In the China region we will use legacy encryption if you specify that the cluster is encrypted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18enhancedVpcRoutingSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/enhancedVpcRouting" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18enhancedVpcRoutingSbSgvp">enhancedVpcRouting</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide. If this option is true, enhanced VPC routing is enabled.  Default: false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enhancedVpcRouting</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV30hsmClientCertificateIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hsmClientCertificateIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV30hsmClientCertificateIdentifierSSSgvp">hsmClientCertificateIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hsmClientCertificateIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV8nodeTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nodeType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV8nodeTypeSSSgvp">nodeType</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV20maintenanceTrackNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maintenanceTrackName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV20maintenanceTrackNameSSSgvp">maintenanceTrackName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The new node type of the cluster. If you specify a new node type, you must also specify the number of nodes parameter. When you submit your request to resize a cluster, Amazon Redshift sets access permissions for the cluster to read-only. After Amazon Redshift provisions a new cluster according to your resize requirements, there will be a temporary outage while the old cluster is deleted and your connection is switched to the new cluster. When the new connection is complete, the original access permissions for the cluster are restored. You can use DescribeResize to track the progress of the resize request.  Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge</p>
+                        <p>The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maintenanceTrackName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV25clusterParameterGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clusterParameterGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV25clusterParameterGroupNameSSSgvp">clusterParameterGroupName</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV29manualSnapshotRetentionPeriods5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/manualSnapshotRetentionPeriod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV29manualSnapshotRetentionPeriods5Int32VSgvp">manualSnapshotRetentionPeriod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1046,14 +965,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the cluster parameter group to apply to this cluster. This change is applied only after the cluster is rebooted. To reboot a cluster use RebootCluster.  Default: Uses existing setting. Constraints: The cluster parameter group must be in the same parameter group family that matches the cluster version.</p>
+                        <p>The default for number of days that a newly created manual snapshot is retained. If the value is -1, the manual snapshot is retained indefinitely. This value doesn&rsquo;t retroactively change the retention periods of existing manual snapshots. The value must be either -1 or an integer between 1 and 3,653. The default value is -1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">manualSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1063,9 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgradeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/allowVersionUpgrade" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgradeSbSgvp">allowVersionUpgrade</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPasswordSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/masterUserPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPasswordSSSgvp">masterUserPassword</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1073,41 +992,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If true, major version upgrades will be applied automatically to the cluster during the maintenance window.  Default: false</p>
+                        <p>The new password for the cluster master user. This change is asynchronously applied as soon as possible. Between the time of the request and the completion of the request, the MasterUserPassword element exists in the PendingModifiedValues element of the operation response.   Operations never return the password, so this operation provides a way to regain access to the master user account for a cluster if the password is lost.  Default: Uses existing setting. Constraints:   Must be between 8 and 64 characters in length.   Must contain at least one uppercase letter.   Must contain at least one lowercase letter.   Must contain one number.   Can be any printable ASCII character (ASCII code 33 to 126) except &lsquo; (single quote), &ldquo; (double quote), \, /, @, or space.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">allowVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV32automatedSnapshotRetentionPeriods5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/automatedSnapshotRetentionPeriod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV32automatedSnapshotRetentionPeriods5Int32VSgvp">automatedSnapshotRetentionPeriod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with CreateClusterSnapshot.  If you decrease the automated snapshot retention period from its current value, existing automated snapshots that fall outside of the new retention period will be immediately deleted. Default: Uses existing setting. Constraints: Must be a value from 0 to 35.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">automatedSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,9 +1036,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV9elasticIpSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/elasticIp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV9elasticIpSSSgvp">elasticIp</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV8nodeTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nodeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV8nodeTypeSSSgvp">nodeType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1154,14 +1046,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Elastic IP (EIP) address for the cluster. Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For more information about provisioning clusters in EC2-VPC, go to Supported Platforms to Launch Your Cluster in the Amazon Redshift Cluster Management Guide.</p>
+                        <p>The new node type of the cluster. If you specify a new node type, you must also specify the number of nodes parameter. When you submit your request to resize a cluster, Amazon Redshift sets access permissions for the cluster to read-only. After Amazon Redshift provisions a new cluster according to your resize requirements, there will be a temporary outage while the old cluster is deleted and your connection is switched to the new cluster. When the new connection is complete, the original access permissions for the cluster are restored. You can use DescribeResize to track the progress of the resize request.  Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elasticIp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1171,9 +1063,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPassword9encrypted18publiclyAccessible29manualSnapshotRetentionPeriod11clusterType19vpcSecurityGroupIds26preferredMaintenanceWindow20maintenanceTrackName13numberOfNodes30hsmClientCertificateIdentifier18enhancedVpcRouting0oR6Groups0O10Identifier0O7Version26hsmConfigurationIdentifier8kmsKeyId04nodeP00o9ParametersZ019allowVersionUpgrade09automatedlmN003newC10Identifier9elasticIpADSSSg_SbSgA0_s5Int32VSgA_AB03VpcrS6IdListVSgA_A_A3_A_A0_AB0crsZ4ListVSgSSA_A_A_A_A_A0_A3_A_A_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(masterUserPassword:encrypted:publiclyAccessible:manualSnapshotRetentionPeriod:clusterType:vpcSecurityGroupIds:preferredMaintenanceWindow:maintenanceTrackName:numberOfNodes:hsmClientCertificateIdentifier:enhancedVpcRouting:clusterSecurityGroups:clusterIdentifier:clusterVersion:hsmConfigurationIdentifier:kmsKeyId:nodeType:clusterParameterGroupName:allowVersionUpgrade:automatedSnapshotRetentionPeriod:newClusterIdentifier:elasticIp:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18masterUserPassword9encrypted18publiclyAccessible29manualSnapshotRetentionPeriod11clusterType19vpcSecurityGroupIds26preferredMaintenanceWindow20maintenanceTrackName13numberOfNodes30hsmClientCertificateIdentifier18enhancedVpcRouting0oR6Groups0O10Identifier0O7Version26hsmConfigurationIdentifier8kmsKeyId04nodeP00o9ParametersZ019allowVersionUpgrade09automatedlmN003newC10Identifier9elasticIpADSSSg_SbSgA0_s5Int32VSgA_AB03VpcrS6IdListVSgA_A_A3_A_A0_AB0crsZ4ListVSgSSA_A_A_A_A_A0_A3_A_A_tcfc">init(masterUserPassword:encrypted:publiclyAccessible:manualSnapshotRetentionPeriod:clusterType:vpcSecurityGroupIds:preferredMaintenanceWindow:maintenanceTrackName:numberOfNodes:hsmClientCertificateIdentifier:enhancedVpcRouting:clusterSecurityGroups:clusterIdentifier:clusterVersion:hsmConfigurationIdentifier:kmsKeyId:nodeType:clusterParameterGroupName:allowVersionUpgrade:automatedSnapshotRetentionPeriod:newClusterIdentifier:elasticIp:)</a>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV13numberOfNodess5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/numberOfNodes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV13numberOfNodess5Int32VSgvp">numberOfNodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The new number of nodes of the cluster. If you specify a new number of nodes, you must also specify the node type parameter. When you submit your request to resize a cluster, Amazon Redshift sets access permissions for the cluster to read-only. After Amazon Redshift provisions a new cluster according to your resize requirements, there will be a temporary outage while the old cluster is deleted and your connection is switched to the new cluster. When the new connection is complete, the original access permissions for the cluster are restored. You can use DescribeResize to track the progress of the resize request.  Valid Values: Integer greater than 0.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">numberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The weekly time range (in UTC) during which system maintenance can occur, if necessary. If system maintenance is necessary during the window, it may result in an outage. This maintenance window change is made immediately. If the new maintenance window indicates the current time, there must be at least 120 minutes between the current time and end of the window in order to ensure that pending changes are applied. Default: Uses existing setting. Format: ddd:hh24:mi-ddd:hh24:mi, for example wed:07:30-wed:08:00. Valid Days: Mon | Tue | Wed | Thu | Fri | Sat | Sun Constraints: Must be at least 30 minutes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV18publiclyAccessibleSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/publiclyAccessible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV18publiclyAccessibleSbSgvp">publiclyAccessible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If true, the cluster can be accessed from a public network. Only clusters in VPCs can be set to be publicly available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV19vpcSecurityGroupIdsAB03VpcfG6IdListVSgvp">vpcSecurityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of virtual private cloud (VPC) security groups to be associated with the cluster. This change is asynchronously applied as soon as possible.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgrade32automatedSnapshotRetentionPeriod17clusterIdentifier0L18ParameterGroupName0L14SecurityGroups0L4Type0lF09elasticIp9encrypted18enhancedVpcRouting020hsmClientCertificateM00z13ConfigurationM08kmsKeyId016maintenanceTrackP006manualijK018masterUserPassword03newcM004nodeS013numberOfNodes26preferredMaintenanceWindow18publiclyAccessible03vpcqO3IdsADSbSg_s5Int32VSgS2SSgAB0cqoP4ListVSgA3_A3_A3_A_A_A3_A3_A3_A3_A2_A3_A3_A3_A2_A3_A_AB0xqO6IdListVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(allowVersionUpgrade:automatedSnapshotRetentionPeriod:clusterIdentifier:clusterParameterGroupName:clusterSecurityGroups:clusterType:clusterVersion:elasticIp:encrypted:enhancedVpcRouting:hsmClientCertificateIdentifier:hsmConfigurationIdentifier:kmsKeyId:maintenanceTrackName:manualSnapshotRetentionPeriod:masterUserPassword:newClusterIdentifier:nodeType:numberOfNodes:preferredMaintenanceWindow:publiclyAccessible:vpcSecurityGroupIds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8RedshiftAAV20ModifyClusterMessageV19allowVersionUpgrade32automatedSnapshotRetentionPeriod17clusterIdentifier0L18ParameterGroupName0L14SecurityGroups0L4Type0lF09elasticIp9encrypted18enhancedVpcRouting020hsmClientCertificateM00z13ConfigurationM08kmsKeyId016maintenanceTrackP006manualijK018masterUserPassword03newcM004nodeS013numberOfNodes26preferredMaintenanceWindow18publiclyAccessible03vpcqO3IdsADSbSg_s5Int32VSgS2SSgAB0cqoP4ListVSgA3_A3_A3_A_A_A3_A3_A3_A3_A2_A3_A3_A3_A2_A3_A_AB0xqO6IdListVSgtcfc">init(allowVersionUpgrade:automatedSnapshotRetentionPeriod:clusterIdentifier:clusterParameterGroupName:clusterSecurityGroups:clusterType:clusterVersion:elasticIp:encrypted:enhancedVpcRouting:hsmClientCertificateIdentifier:hsmConfigurationIdentifier:kmsKeyId:maintenanceTrackName:manualSnapshotRetentionPeriod:masterUserPassword:newClusterIdentifier:nodeType:numberOfNodes:preferredMaintenanceWindow:publiclyAccessible:vpcSecurityGroupIds:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1188,7 +1188,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">manualSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maintenanceTrackName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hsmClientCertificateIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enhancedVpcRouting</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterSecurityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/ClusterSecurityGroupNameList.html">ClusterSecurityGroupNameList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clusterVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hsmConfigurationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">allowVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automatedSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticIp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">allowVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">automatedSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clusterParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterSecurityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/ClusterSecurityGroupNameList.html">ClusterSecurityGroupNameList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clusterVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticIp</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enhancedVpcRouting</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hsmClientCertificateIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hsmConfigurationIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maintenanceTrackName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">manualSnapshotRetentionPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterUserPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newClusterIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">numberOfNodes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Redshift/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1200,7 +1200,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="CopyDBSnapshotMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupNameSSSgvp">optionGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of an option group to associate with the copy of the snapshot. Specify this option if you are copying a snapshot from one AWS Region to another, and your DB instance uses a nondefault option group. If your source DB instance uses Transparent Data Encryption for Oracle or Microsoft SQL Server, you must specify this option when copying across AWS Regions. For more information, see Option Group Considerations in the Amazon RDS User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3RDSAAV21CopyDBSnapshotMessageV8copyTagsSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/copyTags" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV8copyTagsSbSgvp">copyTags</a>
@@ -622,60 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">copyTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV12preSignedUrlSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preSignedUrl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV12preSignedUrlSSSgvp">preSignedUrl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The URL that contains a Signature Version 4 signed request for the CopyDBSnapshot API action in the source AWS Region that contains the source DB snapshot to copy.  You must specify this parameter when you copy an encrypted DB snapshot from another AWS Region by using the Amazon RDS API. You can specify the &ndash;source-region option instead of this parameter when you copy an encrypted DB snapshot from another AWS Region by using the AWS CLI.  The presigned URL must be a valid request for the CopyDBSnapshot API action that can be executed in the source AWS Region that contains the encrypted DB snapshot to be copied. The presigned URL request must contain the following parameter values:     DestinationRegion - The AWS Region that the encrypted DB snapshot is copied to. This AWS Region is the same one where the CopyDBSnapshot action is called that contains this presigned URL.  For example, if you copy an encrypted DB snapshot from the us-west-2 AWS Region to the us-east-1 AWS Region, then you call the CopyDBSnapshot action in the us-east-1 AWS Region and provide a presigned URL that contains a call to the CopyDBSnapshot action in the us-west-2 AWS Region. For this example, the DestinationRegion in the presigned URL must be set to the us-east-1 AWS Region.     KmsKeyId - The AWS KMS key identifier for the key to use to encrypt the copy of the DB snapshot in the destination AWS Region. This is the same identifier for both the CopyDBSnapshot action that is called in the destination AWS Region, and the action contained in the presigned URL.     SourceDBSnapshotIdentifier - The DB snapshot identifier for the encrypted snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For example, if you are copying an encrypted DB snapshot from the us-west-2 AWS Region, then your SourceDBSnapshotIdentifier looks like the following example: arn:aws:rds:us-west-2:123456789012:snapshot:mysql-instance1-snapshot-20161115.    To learn how to generate a Signature Version 4 signed request, see Authenticating Requests: Using Query Parameters (AWS Signature Version 4) and Signature Version 4 Signing Process.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV06targetC10IdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/targetDBSnapshotIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV06targetC10IdentifierSSvp">targetDBSnapshotIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier for the copy of the snapshot.  Constraints:   Can&rsquo;t be null, empty, or blank   Must contain from 1 to 255 letters, numbers, or hyphens   First character must be a letter   Can&rsquo;t end with a hyphen or contain two consecutive hyphens   Example: my-db-snapshot</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV4tagsAB7TagListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV4tagsAB7TagListVSgvp">tags</a>
+                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupNameSSSgvp">optionGroupName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +641,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The name of an option group to associate with the copy of the snapshot. Specify this option if you are copying a snapshot from one AWS Region to another, and your DB instance uses a nondefault option group. If your source DB instance uses Transparent Data Encryption for Oracle or Microsoft SQL Server, you must specify this option when copying across AWS Regions. For more information, see Option Group Considerations in the Amazon RDS User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV12preSignedUrlSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preSignedUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV12preSignedUrlSSSgvp">preSignedUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL that contains a Signature Version 4 signed request for the CopyDBSnapshot API action in the source AWS Region that contains the source DB snapshot to copy.  You must specify this parameter when you copy an encrypted DB snapshot from another AWS Region by using the Amazon RDS API. You can specify the &ndash;source-region option instead of this parameter when you copy an encrypted DB snapshot from another AWS Region by using the AWS CLI.  The presigned URL must be a valid request for the CopyDBSnapshot API action that can be executed in the source AWS Region that contains the encrypted DB snapshot to be copied. The presigned URL request must contain the following parameter values:     DestinationRegion - The AWS Region that the encrypted DB snapshot is copied to. This AWS Region is the same one where the CopyDBSnapshot action is called that contains this presigned URL.  For example, if you copy an encrypted DB snapshot from the us-west-2 AWS Region to the us-east-1 AWS Region, then you call the CopyDBSnapshot action in the us-east-1 AWS Region and provide a presigned URL that contains a call to the CopyDBSnapshot action in the us-west-2 AWS Region. For this example, the DestinationRegion in the presigned URL must be set to the us-east-1 AWS Region.     KmsKeyId - The AWS KMS key identifier for the key to use to encrypt the copy of the DB snapshot in the destination AWS Region. This is the same identifier for both the CopyDBSnapshot action that is called in the destination AWS Region, and the action contained in the presigned URL.     SourceDBSnapshotIdentifier - The DB snapshot identifier for the encrypted snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For example, if you are copying an encrypted DB snapshot from the us-west-2 AWS Region, then your SourceDBSnapshotIdentifier looks like the following example: arn:aws:rds:us-west-2:123456789012:snapshot:mysql-instance1-snapshot-20161115.    To learn how to generate a Signature Version 4 signed request, see Authenticating Requests: Using Query Parameters (AWS Signature Version 4) and Signature Version 4 Signing Process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupName8copyTags12preSignedUrl06targetC10Identifier8kmsKeyId4tags06sourcecN0ADSSSg_SbSgALSSAlB7TagListVSgSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(optionGroupName:copyTags:preSignedUrl:targetDBSnapshotIdentifier:kmsKeyId:tags:sourceDBSnapshotIdentifier:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV15optionGroupName8copyTags12preSignedUrl06targetC10Identifier8kmsKeyId4tags06sourcecN0ADSSSg_SbSgALSSAlB7TagListVSgSStcfc">init(optionGroupName:copyTags:preSignedUrl:targetDBSnapshotIdentifier:kmsKeyId:tags:sourceDBSnapshotIdentifier:)</a>
+                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV4tagsAB7TagListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV4tagsAB7TagListVSgvp">tags</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +729,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">copyTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV06targetC10IdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/targetDBSnapshotIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV06targetC10IdentifierSSvp">targetDBSnapshotIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier for the copy of the snapshot.  Constraints:   Can&rsquo;t be null, empty, or blank   Must contain from 1 to 255 letters, numbers, or hyphens   First character must be a letter   Can&rsquo;t end with a hyphen or contain two consecutive hyphens   Example: my-db-snapshot</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV21CopyDBSnapshotMessageV8copyTags8kmsKeyId15optionGroupName12preSignedUrl06sourceC10Identifier4tags06targetcQ0ADSbSg_SSSgA2MSSAB7TagListVSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(copyTags:kmsKeyId:optionGroupName:preSignedUrl:sourceDBSnapshotIdentifier:tags:targetDBSnapshotIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV21CopyDBSnapshotMessageV8copyTags8kmsKeyId15optionGroupName12preSignedUrl06sourceC10Identifier4tags06targetcQ0ADSbSg_SSSgA2MSSAB7TagListVSgSStcfc">init(copyTags:kmsKeyId:optionGroupName:preSignedUrl:sourceDBSnapshotIdentifier:tags:targetDBSnapshotIdentifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">copyTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -795,7 +795,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="TableDescription Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV15latestStreamArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/latestStreamArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV15latestStreamArnSSSgvp">latestStreamArn</a>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV18billingModeSummaryAB07BillingfG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/billingModeSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV18billingModeSummaryAB07BillingfG0VSgvp">billingModeSummary</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) that uniquely identifies the latest stream for this table.</p>
+                        <p>Contains the details for the read/write capacity mode.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">latestStreamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">billingModeSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/BillingModeSummary.html">BillingModeSummary</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV16creationDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/creationDateTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV16creationDateTime15AWSSDKSwiftCore0G5StampVSgvp">creationDateTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time when the table was created, in UNIX epoch time format.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV9tableNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tableName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9tableNameSSSgvp">tableName</a>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV9itemCounts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/itemCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9itemCounts5Int64VSgvp">itemCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +695,230 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the table.</p>
+                        <p>The number of items in the specified table. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV9keySchemaSayAB03KeyF7ElementVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keySchema" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9keySchemaSayAB03KeyF7ElementVGSgvp">keySchema</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The primary key structure for the table. Each KeySchemaElement consists of:    AttributeName - The name of the attribute.    KeyType - The role of the attribute:    HASH - partition key    RANGE - sort key    The partition key of an item is also known as its hash attribute. The term <q>hash attribute</q> derives from DynamoDB&rsquo; usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values. The sort key of an item is also known as its range attribute. The term <q>range attribute</q> derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value.    For more information about primary keys, see Primary Key in the Amazon DynamoDB Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keySchema</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/KeySchemaElement.html">KeySchemaElement</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV15latestStreamArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/latestStreamArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV15latestStreamArnSSSgvp">latestStreamArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon Resource Name (ARN) that uniquely identifies the latest stream for this table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">latestStreamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV17latestStreamLabelSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/latestStreamLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV17latestStreamLabelSSSgvp">latestStreamLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A timestamp, in ISO 8601 format, for this stream. Note that LatestStreamLabel is not a unique identifier for the stream, because it is possible that a stream from another table might have the same timestamp. However, the combination of the following three elements is guaranteed to be unique:   the AWS customer ID.   the table name.   the StreamLabel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">latestStreamLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV21localSecondaryIndexesSayAB05Localf5IndexD0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/localSecondaryIndexes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV21localSecondaryIndexesSayAB05Localf5IndexD0VGSgvp">localSecondaryIndexes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents one or more local secondary indexes on the table. Each index is scoped to a given partition key value. Tables with one or more local secondary indexes are subject to an item collection size limit, where the amount of data within a given item collection cannot exceed 10 GB. Each element is composed of:    IndexName - The name of the local secondary index.    KeySchema - Specifies the complete index key schema. The attribute names in the key schema must be between 1 and 255 characters (inclusive). The key schema must begin with the same partition key as the table.    Projection - Specifies attributes that are copied (projected) from the table into the index. These are in addition to the primary key attributes and index key attributes, which are automatically projected. Each attribute specification is composed of:    ProjectionType - One of the following:    KEYS_ONLY - Only the index and primary keys are projected into the index.    INCLUDE - Only the specified table attributes are projected into the index. The list of projected attributes are in NonKeyAttributes.    ALL - All of the table attributes are projected into the index.      NonKeyAttributes - A list of one or more non-key attribute names that are projected into the secondary index. The total count of attributes provided in NonKeyAttributes, summed across all of the secondary indexes, must not exceed 20. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total.      IndexSizeBytes - Represents the total size of the index, in bytes. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.    ItemCount - Represents the number of items in the index. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.   If the table is in the DELETING state, no information about indexes will be returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/LocalSecondaryIndexDescription.html">LocalSecondaryIndexDescription</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV21provisionedThroughputAB011ProvisionedfD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/provisionedThroughput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV21provisionedThroughputAB011ProvisionedfD0VSgvp">provisionedThroughput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The provisioned throughput settings for the table, consisting of read and write capacity units, along with data about increases and decreases.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">provisionedThroughput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ProvisionedThroughputDescription.html">ProvisionedThroughputDescription</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV14restoreSummaryAB07RestoreF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/restoreSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV14restoreSummaryAB07RestoreF0VSgvp">restoreSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Contains details for the restore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restoreSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/RestoreSummary.html">RestoreSummary</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV14sSEDescriptionAB14SSEDescriptionVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sSEDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV14sSEDescriptionAB14SSEDescriptionVSgvp">sSEDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The description of the server-side encryption status on the specified table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sSEDescription</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/SSEDescription.html">SSEDescription</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV19streamSpecificationAB06StreamF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/streamSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV19streamSpecificationAB06StreamF0VSgvp">streamSpecification</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current DynamoDB Streams configuration for the table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/StreamSpecification.html">StreamSpecification</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV18billingModeSummaryAB07BillingfG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/billingModeSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV18billingModeSummaryAB07BillingfG0VSgvp">billingModeSummary</a>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV9tableNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tableName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9tableNameSSSgvp">tableName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,203 +992,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Contains the details for the read/write capacity mode.</p>
+                        <p>The name of the table.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">billingModeSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/BillingModeSummary.html">BillingModeSummary</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV9keySchemaSayAB03KeyF7ElementVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keySchema" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9keySchemaSayAB03KeyF7ElementVGSgvp">keySchema</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The primary key structure for the table. Each KeySchemaElement consists of:    AttributeName - The name of the attribute.    KeyType - The role of the attribute:    HASH - partition key    RANGE - sort key    The partition key of an item is also known as its hash attribute. The term <q>hash attribute</q> derives from DynamoDB&rsquo; usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values. The sort key of an item is also known as its range attribute. The term <q>range attribute</q> derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value.    For more information about primary keys, see Primary Key in the Amazon DynamoDB Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keySchema</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/KeySchemaElement.html">KeySchemaElement</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV21localSecondaryIndexesSayAB05Localf5IndexD0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/localSecondaryIndexes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV21localSecondaryIndexesSayAB05Localf5IndexD0VGSgvp">localSecondaryIndexes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Represents one or more local secondary indexes on the table. Each index is scoped to a given partition key value. Tables with one or more local secondary indexes are subject to an item collection size limit, where the amount of data within a given item collection cannot exceed 10 GB. Each element is composed of:    IndexName - The name of the local secondary index.    KeySchema - Specifies the complete index key schema. The attribute names in the key schema must be between 1 and 255 characters (inclusive). The key schema must begin with the same partition key as the table.    Projection - Specifies attributes that are copied (projected) from the table into the index. These are in addition to the primary key attributes and index key attributes, which are automatically projected. Each attribute specification is composed of:    ProjectionType - One of the following:    KEYS_ONLY - Only the index and primary keys are projected into the index.    INCLUDE - Only the specified table attributes are projected into the index. The list of projected attributes are in NonKeyAttributes.    ALL - All of the table attributes are projected into the index.      NonKeyAttributes - A list of one or more non-key attribute names that are projected into the secondary index. The total count of attributes provided in NonKeyAttributes, summed across all of the secondary indexes, must not exceed 20. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total.      IndexSizeBytes - Represents the total size of the index, in bytes. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.    ItemCount - Represents the number of items in the index. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.   If the table is in the DELETING state, no information about indexes will be returned.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/LocalSecondaryIndexDescription.html">LocalSecondaryIndexDescription</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV11tableStatusAB0cF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tableStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV11tableStatusAB0cF0OSgvp">tableStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current state of the table:    CREATING - The table is being created.    UPDATING - The table is being updated.    DELETING - The table is being deleted.    ACTIVE - The table is ready for use.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/TableStatus.html">TableStatus</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV19streamSpecificationAB06StreamF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/streamSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV19streamSpecificationAB06StreamF0VSgvp">streamSpecification</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current DynamoDB Streams configuration for the table.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/StreamSpecification.html">StreamSpecification</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV16creationDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/creationDateTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV16creationDateTime15AWSSDKSwiftCore0G5StampVSgvp">creationDateTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time when the table was created, in UNIX epoch time format.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV14restoreSummaryAB07RestoreF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/restoreSummary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV14restoreSummaryAB07RestoreF0VSgvp">restoreSummary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Contains details for the restore.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restoreSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/RestoreSummary.html">RestoreSummary</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV9itemCounts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/itemCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV9itemCounts5Int64VSgvp">itemCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of items in the specified table. DynamoDB updates this value approximately every six hours. Recent changes might not be reflected in this value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +1036,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV17latestStreamLabelSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/latestStreamLabel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV17latestStreamLabelSSSgvp">latestStreamLabel</a>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV11tableStatusAB0cF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tableStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV11tableStatusAB0cF0OSgvp">tableStatus</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -992,14 +1046,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A timestamp, in ISO 8601 format, for this stream. Note that LatestStreamLabel is not a unique identifier for the stream, because it is possible that a stream from another table might have the same timestamp. However, the combination of the following three elements is guaranteed to be unique:   the AWS customer ID.   the table name.   the StreamLabel.</p>
+                        <p>The current state of the table:    CREATING - The table is being created.    UPDATING - The table is being updated.    DELETING - The table is being deleted.    ACTIVE - The table is ready for use.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">latestStreamLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tableStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/TableStatus.html">TableStatus</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,63 +1063,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV21provisionedThroughputAB011ProvisionedfD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/provisionedThroughput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV21provisionedThroughputAB011ProvisionedfD0VSgvp">provisionedThroughput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The provisioned throughput settings for the table, consisting of read and write capacity units, along with data about increases and decreases.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">provisionedThroughput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ProvisionedThroughputDescription.html">ProvisionedThroughputDescription</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV14sSEDescriptionAB14SSEDescriptionVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sSEDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV14sSEDescriptionAB14SSEDescriptionVSgvp">sSEDescription</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The description of the server-side encryption status on the specified table.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sSEDescription</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/SSEDescription.html">SSEDescription</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DynamoDBAAV16TableDescriptionV20attributeDefinitions15latestStreamArn22globalSecondaryIndexes9tableName0mI00M2Id18billingModeSummary9keySchema05localkL00M6Status19streamSpecification16creationDateTime07restoreR09itemCount0M9SizeBytes0gH5Label21provisionedThroughput14sSEDescriptionADSayAB19AttributeDefinitionVGSg_SSSgSayAB06Globalk5IndexD0VGSgA_A_A_AB07BillingqR0VSgSayAB03KeyT7ElementVGSgSayAB05Localk5IndexD0VGSgAB0cV0OSgAB0hX0VSg15AWSSDKSwiftCore9TimeStampVSgAB07RestoreR0VSgs5Int64VSgA30_A_AB021ProvisionedThroughputD0VSgAB14SSEDescriptionVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(attributeDefinitions:latestStreamArn:globalSecondaryIndexes:tableName:tableArn:tableId:billingModeSummary:keySchema:localSecondaryIndexes:tableStatus:streamSpecification:creationDateTime:restoreSummary:itemCount:tableSizeBytes:latestStreamLabel:provisionedThroughput:sSEDescription:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV20attributeDefinitions15latestStreamArn22globalSecondaryIndexes9tableName0mI00M2Id18billingModeSummary9keySchema05localkL00M6Status19streamSpecification16creationDateTime07restoreR09itemCount0M9SizeBytes0gH5Label21provisionedThroughput14sSEDescriptionADSayAB19AttributeDefinitionVGSg_SSSgSayAB06Globalk5IndexD0VGSgA_A_A_AB07BillingqR0VSgSayAB03KeyT7ElementVGSgSayAB05Localk5IndexD0VGSgAB0cV0OSgAB0hX0VSg15AWSSDKSwiftCore9TimeStampVSgAB07RestoreR0VSgs5Int64VSgA30_A_AB021ProvisionedThroughputD0VSgAB14SSEDescriptionVSgtcfc">init(attributeDefinitions:latestStreamArn:globalSecondaryIndexes:tableName:tableArn:tableId:billingModeSummary:keySchema:localSecondaryIndexes:tableStatus:streamSpecification:creationDateTime:restoreSummary:itemCount:tableSizeBytes:latestStreamLabel:provisionedThroughput:sSEDescription:)</a>
+                    <a name="/s:8DynamoDBAAV16TableDescriptionV20attributeDefinitions18billingModeSummary16creationDateTime22globalSecondaryIndexes9itemCount9keySchema15latestStreamArn0tU5Label05localnO021provisionedThroughput07restoreI014sSEDescription19streamSpecification05tableV07tableId9tableName14tableSizeBytes11tableStatusADSayAB19AttributeDefinitionVGSg_AB07BillinghI0VSg15AWSSDKSwiftCore0L5StampVSgSayAB06Globaln5IndexD0VGSgs5Int64VSgSayAB03KeyS7ElementVGSgSSSgA17_SayAB05Localn5IndexD0VGSgAB011ProvisionedzD0VSgAB07RestoreI0VSgAB14SSEDescriptionVSgAB0U13SpecificationVSgA17_A17_A17_A12_AB0C6StatusOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(attributeDefinitions:billingModeSummary:creationDateTime:globalSecondaryIndexes:itemCount:keySchema:latestStreamArn:latestStreamLabel:localSecondaryIndexes:provisionedThroughput:restoreSummary:sSEDescription:streamSpecification:tableArn:tableId:tableName:tableSizeBytes:tableStatus:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DynamoDBAAV16TableDescriptionV20attributeDefinitions18billingModeSummary16creationDateTime22globalSecondaryIndexes9itemCount9keySchema15latestStreamArn0tU5Label05localnO021provisionedThroughput07restoreI014sSEDescription19streamSpecification05tableV07tableId9tableName14tableSizeBytes11tableStatusADSayAB19AttributeDefinitionVGSg_AB07BillinghI0VSg15AWSSDKSwiftCore0L5StampVSgSayAB06Globaln5IndexD0VGSgs5Int64VSgSayAB03KeyS7ElementVGSgSSSgA17_SayAB05Localn5IndexD0VGSgAB011ProvisionedzD0VSgAB07RestoreI0VSgAB14SSEDescriptionVSgAB0U13SpecificationVSgA17_A17_A17_A12_AB0C6StatusOSgtcfc">init(attributeDefinitions:billingModeSummary:creationDateTime:globalSecondaryIndexes:itemCount:keySchema:latestStreamArn:latestStreamLabel:localSecondaryIndexes:provisionedThroughput:restoreSummary:sSEDescription:streamSpecification:tableArn:tableId:tableName:tableSizeBytes:tableStatus:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1080,7 +1080,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">attributeDefinitions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/AttributeDefinition.html">AttributeDefinition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">latestStreamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">globalSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/GlobalSecondaryIndexDescription.html">GlobalSecondaryIndexDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">billingModeSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/BillingModeSummary.html">BillingModeSummary</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keySchema</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/KeySchemaElement.html">KeySchemaElement</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">localSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/LocalSecondaryIndexDescription.html">LocalSecondaryIndexDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/TableStatus.html">TableStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/StreamSpecification.html">StreamSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/RestoreSummary.html">RestoreSummary</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableSizeBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">latestStreamLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisionedThroughput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ProvisionedThroughputDescription.html">ProvisionedThroughputDescription</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sSEDescription</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/SSEDescription.html">SSEDescription</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">attributeDefinitions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/AttributeDefinition.html">AttributeDefinition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">billingModeSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/BillingModeSummary.html">BillingModeSummary</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">globalSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/GlobalSecondaryIndexDescription.html">GlobalSecondaryIndexDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keySchema</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/KeySchemaElement.html">KeySchemaElement</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">latestStreamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">latestStreamLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">localSecondaryIndexes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DynamoDB/LocalSecondaryIndexDescription.html">LocalSecondaryIndexDescription</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">provisionedThroughput</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/ProvisionedThroughputDescription.html">ProvisionedThroughputDescription</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreSummary</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/RestoreSummary.html">RestoreSummary</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sSEDescription</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/SSEDescription.html">SSEDescription</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/StreamSpecification.html">StreamSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableSizeBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tableStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DynamoDB/TableStatus.html">TableStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1092,7 +1092,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

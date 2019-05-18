@@ -14,7 +14,7 @@
     <a title="CreateServerRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/serviceRoleArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArnSSvp">serviceRoleArn</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddressSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/associatePublicIpAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddressSbSgvp">associatePublicIpAddress</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The service role that the AWS OpsWorks CM service backend uses to work with your account. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation template, located at <a href="https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml">https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml</a>. This template creates a CloudFormation stack that includes the service role and instance profile that you need.</p>
+                        <p>Associate a public IP address with a server that you are launching. Valid values are true or false. The default value is true.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV18instanceProfileArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceProfileArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV18instanceProfileArnSSvp">instanceProfileArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ARN of the instance profile that your Amazon EC2 instances use. Although the AWS OpsWorks console typically creates the instance profile for you, if you are using API commands instead, run the service-role-creation.yaml AWS CloudFormation template, located at <a href="https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml">https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml</a>. This template creates a CloudFormation stack that includes the instance profile you need.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceProfileArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV6engineSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV6engineSSSgvp">engine</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The configuration management engine to use. Valid values include Chef and Puppet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">associatePublicIpAddress</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV26preferredMaintenanceWindowSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV20backupRetentionCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backupRetentionCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV20backupRetentionCounts5Int32VSgvp">backupRetentionCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,203 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The start time for a one-hour period each week during which AWS OpsWorks CM performs maintenance on the instance. Valid values must be specified in the following format: DDD:HH:MM. The specified time is in coordinated universal time (UTC). The default value is a random one-hour period on Tuesday, Wednesday, or Friday. See TimeWindowDefinition for more information.   Example: Mon:08:00, which represents a start time of every Monday at 08:00 UTC. (8:00 a.m.)</p>
+                        <p>The number of automated backups that you want to keep. Whenever a new backup is created, AWS OpsWorks CM deletes the oldest backups if this number is exceeded. The default value is 1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV13engineVersionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV13engineVersionSSSgvp">engineVersion</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The major release version of the engine that you want to use. For a Chef server, the valid value for EngineVersion is currently 12. For a Puppet server, the valid value is 2017.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV9subnetIdsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/subnetIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV9subnetIdsSaySSGSgvp">subnetIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The IDs of subnets in which to launch the server EC2 instance.   Amazon EC2-Classic customers: This field is required. All servers must run within a VPC. The VPC must have <q>Auto Assign Public IP</q> enabled.   EC2-VPC customers: This field is optional. If you do not specify subnet IDs, your EC2 instances are created in a default subnet that is selected by Amazon EC2. If you specify subnet IDs, the VPC must have <q>Auto Assign Public IP</q> enabled.  For more information about supported Amazon EC2 platforms, see Supported Platforms.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV16securityGroupIdsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV16securityGroupIdsSaySSGSgvp">securityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of security group IDs to attach to the Amazon EC2 instance. If you add this parameter, the specified security groups must be within the VPC that is specified by SubnetIds.   If you do not specify this parameter, AWS OpsWorks CM creates one new security group that uses TCP ports 22 and 443, open to 0.0.0.0/0 (everyone).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV12instanceTypeSSvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV12instanceTypeSSvp">instanceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon EC2 instance type to use. For example, m4.large. Recommended instance types include t2.medium and greater, m4.*, or c4.xlarge and greater.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV10serverNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/serverName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV10serverNameSSvp">serverName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the server. The server name must be unique within your AWS account, within each region. Server names must start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40 characters.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV7keyPairSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyPair" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV7keyPairSSSgvp">keyPair</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon EC2 key pair to set for the instance. This parameter is optional; if desired, you may specify this parameter to connect to your instances by using SSH.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyPair</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV11engineModelSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engineModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV11engineModelSSSgvp">engineModel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The engine model of the server. Valid values in this release include Monolithic for Puppet and Single for Chef.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backupRetentionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddressSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/associatePublicIpAddress" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddressSbSgvp">associatePublicIpAddress</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV6engineSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV6engineSSSgvp">engine</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Associate a public IP address with a server that you are launching. Valid values are true or false. The default value is true.</p>
+                        <p>The configuration management engine to use. Valid values include Chef and Puppet.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">associatePublicIpAddress</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,6 +739,141 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV11engineModelSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV11engineModelSSSgvp">engineModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The engine model of the server. Valid values in this release include Monolithic for Puppet and Single for Chef.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV13engineVersionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engineVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV13engineVersionSSSgvp">engineVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The major release version of the engine that you want to use. For a Chef server, the valid value for EngineVersion is currently 12. For a Puppet server, the valid value is 2017.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV18instanceProfileArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceProfileArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV18instanceProfileArnSSvp">instanceProfileArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ARN of the instance profile that your Amazon EC2 instances use. Although the AWS OpsWorks console typically creates the instance profile for you, if you are using API commands instead, run the service-role-creation.yaml AWS CloudFormation template, located at <a href="https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml">https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml</a>. This template creates a CloudFormation stack that includes the instance profile you need.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceProfileArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV12instanceTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV12instanceTypeSSvp">instanceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon EC2 instance type to use. For example, m4.large. Recommended instance types include t2.medium and greater, m4.*, or c4.xlarge and greater.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV7keyPairSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyPair" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV7keyPairSSSgvp">keyPair</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Amazon EC2 key pair to set for the instance. This parameter is optional; if desired, you may specify this parameter to connect to your instances by using SSH.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyPair</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10OpsWorksCMAAV19CreateServerRequestV21preferredBackupWindowSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/preferredBackupWindow" class="dashAnchor"></a>
                     <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV21preferredBackupWindowSSSgvp">preferredBackupWindow</a>
@@ -1009,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV20backupRetentionCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/backupRetentionCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV20backupRetentionCounts5Int32VSgvp">backupRetentionCount</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV26preferredMaintenanceWindowSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredMaintenanceWindow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV26preferredMaintenanceWindowSSSgvp">preferredMaintenanceWindow</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The number of automated backups that you want to keep. Whenever a new backup is created, AWS OpsWorks CM deletes the oldest backups if this number is exceeded. The default value is 1.</p>
+                        <p>The start time for a one-hour period each week during which AWS OpsWorks CM performs maintenance on the instance. Valid values must be specified in the following format: DDD:HH:MM. The specified time is in coordinated universal time (UTC). The default value is a random one-hour period on Tuesday, Wednesday, or Friday. See TimeWindowDefinition for more information.   Example: Mon:08:00, which represents a start time of every Monday at 08:00 UTC. (8:00 a.m.)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">backupRetentionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,9 +928,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArn015instanceProfileI06engine8backupId26preferredMaintenanceWindow0L7Version9subnetIds013securityGroupT00J4Type10serverName7keyPair0L5Model22disableAutomatedBackup24associatePublicIpAddress0L10Attributes0o6BackupQ00M14RetentionCountADSS_S2SSgA3VSaySSGSgAXS2SA2VSbSgAYSayAB15EngineAttributeVGSgAVs5Int32VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(serviceRoleArn:instanceProfileArn:engine:backupId:preferredMaintenanceWindow:engineVersion:subnetIds:securityGroupIds:instanceType:serverName:keyPair:engineModel:disableAutomatedBackup:associatePublicIpAddress:engineAttributes:preferredBackupWindow:backupRetentionCount:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArn015instanceProfileI06engine8backupId26preferredMaintenanceWindow0L7Version9subnetIds013securityGroupT00J4Type10serverName7keyPair0L5Model22disableAutomatedBackup24associatePublicIpAddress0L10Attributes0o6BackupQ00M14RetentionCountADSS_S2SSgA3VSaySSGSgAXS2SA2VSbSgAYSayAB15EngineAttributeVGSgAVs5Int32VSgtcfc">init(serviceRoleArn:instanceProfileArn:engine:backupId:preferredMaintenanceWindow:engineVersion:subnetIds:securityGroupIds:instanceType:serverName:keyPair:engineModel:disableAutomatedBackup:associatePublicIpAddress:engineAttributes:preferredBackupWindow:backupRetentionCount:)</a>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV16securityGroupIdsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV16securityGroupIdsSaySSGSgvp">securityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of security group IDs to attach to the Amazon EC2 instance. If you add this parameter, the specified security groups must be within the VPC that is specified by SubnetIds.   If you do not specify this parameter, AWS OpsWorks CM creates one new security group that uses TCP ports 22 and 443, open to 0.0.0.0/0 (everyone).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV10serverNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/serverName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV10serverNameSSvp">serverName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the server. The server name must be unique within your AWS account, within each region. Server names must start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40 characters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serverName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/serviceRoleArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV14serviceRoleArnSSvp">serviceRoleArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The service role that the AWS OpsWorks CM service backend uses to work with your account. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation template, located at <a href="https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml">https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml</a>. This template creates a CloudFormation stack that includes the service role and instance profile that you need.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV9subnetIdsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/subnetIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV9subnetIdsSaySSGSgvp">subnetIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IDs of subnets in which to launch the server EC2 instance.   Amazon EC2-Classic customers: This field is required. All servers must run within a VPC. The VPC must have <q>Auto Assign Public IP</q> enabled.   EC2-VPC customers: This field is optional. If you do not specify subnet IDs, your EC2 instances are created in a default subnet that is selected by Amazon EC2. If you specify subnet IDs, the VPC must have <q>Auto Assign Public IP</q> enabled.  For more information about supported Amazon EC2 platforms, see Supported Platforms.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddress8backupId0K14RetentionCount22disableAutomatedBackup6engine0R10Attributes0R5Model0R7Version18instanceProfileArn0V4Type7keyPair09preferredQ6Window26preferredMaintenanceWindow16securityGroupIds10serverName011serviceRoleX09subnetIdsADSbSg_SSSgs5Int32VSgAvWSayAB15EngineAttributeVGSgA2WS2SA3WSaySSGSgS2SA4_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(associatePublicIpAddress:backupId:backupRetentionCount:disableAutomatedBackup:engine:engineAttributes:engineModel:engineVersion:instanceProfileArn:instanceType:keyPair:preferredBackupWindow:preferredMaintenanceWindow:securityGroupIds:serverName:serviceRoleArn:subnetIds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10OpsWorksCMAAV19CreateServerRequestV24associatePublicIpAddress8backupId0K14RetentionCount22disableAutomatedBackup6engine0R10Attributes0R5Model0R7Version18instanceProfileArn0V4Type7keyPair09preferredQ6Window26preferredMaintenanceWindow16securityGroupIds10serverName011serviceRoleX09subnetIdsADSbSg_SSSgs5Int32VSgAvWSayAB15EngineAttributeVGSgA2WS2SA3WSaySSGSgS2SA4_tcfc">init(associatePublicIpAddress:backupId:backupRetentionCount:disableAutomatedBackup:engine:engineAttributes:engineModel:engineVersion:instanceProfileArn:instanceType:keyPair:preferredBackupWindow:preferredMaintenanceWindow:securityGroupIds:serverName:serviceRoleArn:subnetIds:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1053,7 +1053,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">instanceProfileArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serverName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">keyPair</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableAutomatedBackup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">associatePublicIpAddress</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/OpsWorksCM/EngineAttribute.html">EngineAttribute</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">associatePublicIpAddress</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backupRetentionCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableAutomatedBackup</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/OpsWorksCM/EngineAttribute.html">EngineAttribute</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engineVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceProfileArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">keyPair</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredBackupWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preferredMaintenanceWindow</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serverName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,7 +1065,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="WorkflowExecutionContinuedAsNewEventAttributes Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5inputSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/input" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5inputSSSgvp">input</a>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicyAB05ChildJ0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/childPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicyAB05ChildJ0Ovp">childPolicy</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The input provided to the new workflow execution.</p>
+                        <p>The policy to use for the child workflow executions of the new execution if it is terminated by calling the TerminateWorkflowExecution action explicitly or due to an expired timeout. The supported child policies are:    TERMINATE – The child executions are terminated.    REQUEST_CANCEL – A request to cancel is attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.    ABANDON – No action is taken. The child executions continue to run.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV28executionStartToCloseTimeoutSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionStartToCloseTimeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV28executionStartToCloseTimeoutSSSgvp">executionStartToCloseTimeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The total duration allowed for the new workflow execution. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12taskPrioritySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/taskPriority" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12taskPrioritySSSgvp">taskPriority</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The priority of the task to use for the decisions of the new (continued) workflow execution.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskPriority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">childPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12workflowTypeAB0bJ0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/workflowType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12workflowTypeAB0bJ0Vvp">workflowType</a>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV28executionStartToCloseTimeoutSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionStartToCloseTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV28executionStartToCloseTimeoutSSSgvp">executionStartToCloseTimeout</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The workflow type of this execution.</p>
+                        <p>The total duration allowed for the new workflow execution. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workflowType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowType.html">WorkflowType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV8taskListAB04TaskJ0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/taskList" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV8taskListAB04TaskJ0Vvp">taskList</a>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5inputSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/input" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5inputSSSgvp">input</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,95 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The task list to use for the decisions of the new (continued) workflow execution.</p>
+                        <p>The input provided to the new workflow execution.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV03newC5RunIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/newExecutionRunId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV03newC5RunIdSSvp">newExecutionRunId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The runId of the new workflow execution.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newExecutionRunId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV23taskStartToCloseTimeoutSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/taskStartToCloseTimeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV23taskStartToCloseTimeoutSSSgvp">taskStartToCloseTimeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum duration of decision tasks for the new workflow execution. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicyAB05ChildJ0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/childPolicy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicyAB05ChildJ0Ovp">childPolicy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The policy to use for the child workflow executions of the new execution if it is terminated by calling the TerminateWorkflowExecution action explicitly or due to an expired timeout. The supported child policies are:    TERMINATE – The child executions are terminated.    REQUEST_CANCEL – A request to cancel is attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.    ABANDON – No action is taken. The child executions continue to run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">childPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,6 +712,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV03newC5RunIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/newExecutionRunId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV03newC5RunIdSSvp">newExecutionRunId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The runId of the new workflow execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">newExecutionRunId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV7tagListSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/tagList" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV7tagListSaySSGSgvp">tagList</a>
@@ -874,9 +766,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5input28executionStartToCloseTimeout12taskPriority021decisionTaskCompletedG2Id12workflowType0O4List03newc3RunT00oklmN011childPolicy10lambdaRole03tagW0ADSSSg_A2Ps5Int64VAB0bV0VAB0rW0VSSApB11ChildPolicyOAPSaySSGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(input:executionStartToCloseTimeout:taskPriority:decisionTaskCompletedEventId:workflowType:taskList:newExecutionRunId:taskStartToCloseTimeout:childPolicy:lambdaRole:tagList:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV5input28executionStartToCloseTimeout12taskPriority021decisionTaskCompletedG2Id12workflowType0O4List03newc3RunT00oklmN011childPolicy10lambdaRole03tagW0ADSSSg_A2Ps5Int64VAB0bV0VAB0rW0VSSApB11ChildPolicyOAPSaySSGSgtcfc">init(input:executionStartToCloseTimeout:taskPriority:decisionTaskCompletedEventId:workflowType:taskList:newExecutionRunId:taskStartToCloseTimeout:childPolicy:lambdaRole:tagList:)</a>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV8taskListAB04TaskJ0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/taskList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV8taskListAB04TaskJ0Vvp">taskList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The task list to use for the decisions of the new (continued) workflow execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12taskPrioritySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/taskPriority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12taskPrioritySSSgvp">taskPriority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The priority of the task to use for the decisions of the new (continued) workflow execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskPriority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV23taskStartToCloseTimeoutSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/taskStartToCloseTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV23taskStartToCloseTimeoutSSSgvp">taskStartToCloseTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum duration of decision tasks for the new workflow execution. The duration is specified in seconds, an integer greater than or equal to 0. You can use NONE to specify unlimited duration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12workflowTypeAB0bJ0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/workflowType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV12workflowTypeAB0bJ0Vvp">workflowType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The workflow type of this execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">workflowType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowType.html">WorkflowType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicy021decisionTaskCompletedG2Id28executionStartToCloseTimeout5input10lambdaRole03newc3RunN07tagList04taskZ012taskPriority04taskpqrS012workflowTypeAdB05ChildJ0O_s5Int64VSSSgA2TSSSaySSGSgAB0lZ0VA2tB0B4TypeVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(childPolicy:decisionTaskCompletedEventId:executionStartToCloseTimeout:input:lambdaRole:newExecutionRunId:tagList:taskList:taskPriority:taskStartToCloseTimeout:workflowType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SWFAAV46WorkflowExecutionContinuedAsNewEventAttributesV11childPolicy021decisionTaskCompletedG2Id28executionStartToCloseTimeout5input10lambdaRole03newc3RunN07tagList04taskZ012taskPriority04taskpqrS012workflowTypeAdB05ChildJ0O_s5Int64VSSSgA2TSSSaySSGSgAB0lZ0VA2tB0B4TypeVtcfc">init(childPolicy:decisionTaskCompletedEventId:executionStartToCloseTimeout:input:lambdaRole:newExecutionRunId:tagList:taskList:taskPriority:taskStartToCloseTimeout:workflowType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">input</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskPriority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">decisionTaskCompletedEventId</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">workflowType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowType.html">WorkflowType</a></span><span class="p">,</span> <span class="nv">taskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">,</span> <span class="nv">newExecutionRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">taskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">childPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">,</span> <span class="nv">lambdaRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">childPolicy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/ChildPolicy.html">ChildPolicy</a></span><span class="p">,</span> <span class="nv">decisionTaskCompletedEventId</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">executionStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lambdaRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">newExecutionRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tagList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskList</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/TaskList.html">TaskList</a></span><span class="p">,</span> <span class="nv">taskPriority</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskStartToCloseTimeout</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workflowType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SWF/WorkflowType.html">WorkflowType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

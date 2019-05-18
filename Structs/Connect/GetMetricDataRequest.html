@@ -14,7 +14,7 @@
     <a title="GetMetricDataRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV9startTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV9startTime15AWSSDKSwiftCore0G5StampVvp">startTime</a>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV7endTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV7endTime15AWSSDKSwiftCore0G5StampVvp">endTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of historical metrics data. The time must be specified using a multiple of 5 minutes, such as 10:05, 10:10, 10:15.  StartTime cannot be earlier than 24 hours before the time of the request. Historical metrics are available in Amazon Connect only for 24 hours.</p>
+                        <p>The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical metrics data. The time must be specified using an interval of 5 minutes, such as 11:00, 11:05, 11:10, and must be later than the StartTime timestamp. The time range between StartTime and EndTime must be less than 24 hours.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV7filtersAB7FiltersVvp"></a>
+                    <a name="//apple_ref/swift/Property/filters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV7filtersAB7FiltersVvp">filters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Filters object that contains a list of queue IDs or queue ARNs, up to 100, or a list of Channels to use to filter the metrics returned in the response. Metric data is retrieved only for the resources associated with the IDs, ARNs, or Channels included in the filter. You can use both IDs and ARNs together in a request. Only VOICE is supported for Channel. To find the ARN for a queue, open the queue you want to use in the Amazon Connect Queue editor. The ARN for the queue is displayed in the address bar as part of the URL. For example, the queue ARN is the set of characters at the end of the URL, after &lsquo;id=&rsquo; such as arn:aws:connect:us-east-1:270923740243:instance/78fb859d-1b7d-44b1-8aa3-12f0835c5855/queue/1d1a4575-9618-40ab-bbeb-81e45795fe61. The queue ID is also included in the URL, and is the string after &lsquo;queue/&rsquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Connect/Filters.html">Filters</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV9groupingsSayAB8GroupingOGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/groupings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV9groupingsSayAB8GroupingOGSgvp">groupings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The grouping applied to the metrics returned. For example, when results are grouped by queueId, the metrics returned are grouped by queue. The values returned apply to the metrics for each queue rather than aggregated for all queues. The current version supports grouping by Queue If no Grouping is included in the request, a summary of HistoricalMetrics for all queues is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">groupings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/Grouping.html">Grouping</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV17historicalMetricsSayAB010HistoricalC0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/historicalMetrics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV17historicalMetricsSayAB010HistoricalC0VGvp">historicalMetrics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of HistoricalMetric objects that contain the metrics to retrieve with the request. A HistoricalMetric object contains: HistoricalMetricName, Statistic, Threshold, and Unit. For each historical metric you include in the request, you must include a Unit and a Statistic.  The following historical metrics are available:  CONTACTS_QUEUED  Unit: COUNT Statistic: SUM  CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CONTACTS_ABANDONED  Unit: COUNT Statistics: SUM  CONTACTS_CONSULTED  Unit: COUNT Statistics: SUM  CONTACTS_AGENT_HUNG_UP_FIRST  Unit: COUNT Statistics: SUM  CONTACTS_HANDLED_INCOMING  Unit: COUNT Statistics: SUM  CONTACTS_HANDLED_OUTBOUND  Unit: COUNT Statistics: SUM  CONTACTS_HOLD_ABANDONS  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_IN  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_OUT  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_IN_FROM_QUEUE  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_OUT_FROM_QUEUE  Unit: COUNT Statistics: SUM  CALLBACK_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CALLBACK_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  API_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CONTACTS_MISSED  Unit: COUNT Statistics: SUM  OCCUPANCY  Unit: PERCENT Statistics: AVG  HANDLE_TIME  Unit: SECONDS Statistics: AVG  AFTER_CONTACT_WORK_TIME  Unit: SECONDS Statistics: AVG  QUEUED_TIME  Unit: SECONDS Statistics: MAX  ABANDON_TIME  Unit: COUNT Statistics: SUM  QUEUE_ANSWER_TIME  Unit: SECONDS Statistics: AVG  HOLD_TIME  Unit: SECONDS Statistics: AVG  INTERACTION_TIME  Unit: SECONDS Statistics: AVG  INTERACTION_AND_HOLD_TIME  Unit: SECONDS Statistics: AVG  SERVICE_LEVEL  Unit: PERCENT Statistics: AVG Threshold: Only <q>Less than</q> comparisons are supported, with the following service level thresholds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, 600</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">historicalMetrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/HistoricalMetric.html">HistoricalMetric</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV10instanceIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV10instanceIdSSvp">instanceId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier for your Amazon Connect instance. To find the ID of your instance, open the AWS console and select Amazon Connect. Select the alias of the instance in the Instance alias column. The instance ID is displayed in the Overview section of your instance settings. For example, the instance ID is the set of characters at the end of the instance ARN, after instance/, such as 10a4c4eb-f57e-4d4c-b602-bf39176ced07.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV10instanceIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV10instanceIdSSvp">instanceId</a>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV9startTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV9startTime15AWSSDKSwiftCore0G5StampVvp">startTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identifier for your Amazon Connect instance. To find the ID of your instance, open the AWS console and select Amazon Connect. Select the alias of the instance in the Instance alias column. The instance ID is displayed in the Overview section of your instance settings. For example, the instance ID is the set of characters at the end of the instance ARN, after instance/, such as 10a4c4eb-f57e-4d4c-b602-bf39176ced07.</p>
+                        <p>The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of historical metrics data. The time must be specified using a multiple of 5 minutes, such as 10:05, 10:10, 10:15.  StartTime cannot be earlier than 24 hours before the time of the request. Historical metrics are available in Amazon Connect only for 24 hours.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
 
                         </div>
                       </div>
@@ -685,117 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV17historicalMetricsSayAB010HistoricalC0VGvp"></a>
-                    <a name="//apple_ref/swift/Property/historicalMetrics" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV17historicalMetricsSayAB010HistoricalC0VGvp">historicalMetrics</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of HistoricalMetric objects that contain the metrics to retrieve with the request. A HistoricalMetric object contains: HistoricalMetricName, Statistic, Threshold, and Unit. For each historical metric you include in the request, you must include a Unit and a Statistic.  The following historical metrics are available:  CONTACTS_QUEUED  Unit: COUNT Statistic: SUM  CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CONTACTS_ABANDONED  Unit: COUNT Statistics: SUM  CONTACTS_CONSULTED  Unit: COUNT Statistics: SUM  CONTACTS_AGENT_HUNG_UP_FIRST  Unit: COUNT Statistics: SUM  CONTACTS_HANDLED_INCOMING  Unit: COUNT Statistics: SUM  CONTACTS_HANDLED_OUTBOUND  Unit: COUNT Statistics: SUM  CONTACTS_HOLD_ABANDONS  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_IN  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_OUT  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_IN_FROM_QUEUE  Unit: COUNT Statistics: SUM  CONTACTS_TRANSFERRED_OUT_FROM_QUEUE  Unit: COUNT Statistics: SUM  CALLBACK_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CALLBACK_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  API_CONTACTS_HANDLED  Unit: COUNT Statistics: SUM  CONTACTS_MISSED  Unit: COUNT Statistics: SUM  OCCUPANCY  Unit: PERCENT Statistics: AVG  HANDLE_TIME  Unit: SECONDS Statistics: AVG  AFTER_CONTACT_WORK_TIME  Unit: SECONDS Statistics: AVG  QUEUED_TIME  Unit: SECONDS Statistics: MAX  ABANDON_TIME  Unit: COUNT Statistics: SUM  QUEUE_ANSWER_TIME  Unit: SECONDS Statistics: AVG  HOLD_TIME  Unit: SECONDS Statistics: AVG  INTERACTION_TIME  Unit: SECONDS Statistics: AVG  INTERACTION_AND_HOLD_TIME  Unit: SECONDS Statistics: AVG  SERVICE_LEVEL  Unit: PERCENT Statistics: AVG Threshold: Only <q>Less than</q> comparisons are supported, with the following service level thresholds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, 600</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">historicalMetrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/HistoricalMetric.html">HistoricalMetric</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV7endTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV7endTime15AWSSDKSwiftCore0G5StampVvp">endTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical metrics data. The time must be specified using an interval of 5 minutes, such as 11:00, 11:05, 11:10, and must be later than the StartTime timestamp. The time range between StartTime and EndTime must be less than 24 hours.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV9groupingsSayAB8GroupingOGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/groupings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV9groupingsSayAB8GroupingOGSgvp">groupings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The grouping applied to the metrics returned. For example, when results are grouped by queueId, the metrics returned are grouped by queue. The values returned apply to the metrics for each queue rather than aggregated for all queues. The current version supports grouping by Queue If no Grouping is included in the request, a summary of HistoricalMetrics for all queues is returned.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">groupings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/Grouping.html">Grouping</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV7filtersAB7FiltersVvp"></a>
-                    <a name="//apple_ref/swift/Property/filters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV7filtersAB7FiltersVvp">filters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A Filters object that contains a list of queue IDs or queue ARNs, up to 100, or a list of Channels to use to filter the metrics returned in the response. Metric data is retrieved only for the resources associated with the IDs, ARNs, or Channels included in the filter. You can use both IDs and ARNs together in a request. Only VOICE is supported for Channel. To find the ARN for a queue, open the queue you want to use in the Amazon Connect Queue editor. The ARN for the queue is displayed in the address bar as part of the URL. For example, the queue ARN is the set of characters at the end of the URL, after &lsquo;id=&rsquo; such as arn:aws:connect:us-east-1:270923740243:instance/78fb859d-1b7d-44b1-8aa3-12f0835c5855/queue/1d1a4575-9618-40ab-bbeb-81e45795fe61. The queue ID is also included in the URL, and is the string after &lsquo;queue/&rsquo;.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Connect/Filters.html">Filters</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7ConnectAAV20GetMetricDataRequestV9startTime10maxResults9nextToken10instanceId17historicalMetrics03endG09groupings7filtersAD15AWSSDKSwiftCore0G5StampV_s5Int32VSgSSSgSSSayAB010HistoricalC0VGAOSayAB8GroupingOGSgAB7FiltersVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(startTime:maxResults:nextToken:instanceId:historicalMetrics:endTime:groupings:filters:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV9startTime10maxResults9nextToken10instanceId17historicalMetrics03endG09groupings7filtersAD15AWSSDKSwiftCore0G5StampV_s5Int32VSgSSSgSSSayAB010HistoricalC0VGAOSayAB8GroupingOGSgAB7FiltersVtcfc">init(startTime:maxResults:nextToken:instanceId:historicalMetrics:endTime:groupings:filters:)</a>
+                    <a name="/s:7ConnectAAV20GetMetricDataRequestV7endTime7filters9groupings17historicalMetrics10instanceId10maxResults9nextToken05startG0AD15AWSSDKSwiftCore0G5StampV_AB7FiltersVSayAB8GroupingOGSgSayAB010HistoricalC0VGSSs5Int32VSgSSSgAOtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(endTime:filters:groupings:historicalMetrics:instanceId:maxResults:nextToken:startTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7ConnectAAV20GetMetricDataRequestV7endTime7filters9groupings17historicalMetrics10instanceId10maxResults9nextToken05startG0AD15AWSSDKSwiftCore0G5StampV_AB7FiltersVSayAB8GroupingOGSgSayAB010HistoricalC0VGSSs5Int32VSgSSSgAOtcfc">init(endTime:filters:groupings:historicalMetrics:instanceId:maxResults:nextToken:startTime:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">historicalMetrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/HistoricalMetric.html">HistoricalMetric</a></span><span class="p">],</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">groupings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/Grouping.html">Grouping</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Connect/Filters.html">Filters</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Connect/Filters.html">Filters</a></span><span class="p">,</span> <span class="nv">groupings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/Grouping.html">Grouping</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">historicalMetrics</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Connect/HistoricalMetric.html">HistoricalMetric</a></span><span class="p">],</span> <span class="nv">instanceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

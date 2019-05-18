@@ -14,7 +14,7 @@
     <a title="Polly Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,225 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5PollyAAV10putLexiconyAB03PutC6OutputVAB0dC5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/putLexicon(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV10putLexiconyAB03PutC6OutputVAB0dC5InputVKF">putLexicon(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stores a pronunciation lexicon in an AWS Region. If a lexicon with the same name already exists in the region, it is overwritten by the new lexicon. Lexicon operations have eventual consistency, therefore, it might take some time before the lexicon is available to the SynthesizeSpeech operation. For more information, see Managing Lexicons.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/PutLexiconInput.html">PutLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly.html#/s:5PollyAAV16PutLexiconOutputV">PutLexiconOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV14describeVoicesyAB08DescribeC6OutputVAB0dC5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/describeVoices(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV14describeVoicesyAB08DescribeC6OutputVAB0dC5InputVKF">describeVoices(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.  When synthesizing speech ( SynthesizeSpeech ), you provide the voice ID for the voice you want from the list of voices returned by DescribeVoices. For example, you want your news reader application to read news in a specific language, but giving a user the option to choose the voice. Using the DescribeVoices operation you can provide the user with a list of available voices to select from.  You can optionally specify a language code to filter the available voices. For example, if you specify en-US, the operation returns a list of all available US English voices.  This operation requires permissions to perform the polly:DescribeVoices action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeVoices</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/DescribeVoicesInput.html">DescribeVoicesInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/DescribeVoicesOutput.html">DescribeVoicesOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV16synthesizeSpeechyAB010SynthesizeC6OutputVAB0dC5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/synthesizeSpeech(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV16synthesizeSpeechyAB010SynthesizeC6OutputVAB0dC5InputVKF">synthesizeSpeech(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices) unless phoneme mapping is used. For more information, see How it Works.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">synthesizeSpeech</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/SynthesizeSpeechInput.html">SynthesizeSpeechInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/SynthesizeSpeechOutput.html">SynthesizeSpeechOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV24listSpeechSynthesisTasksyAB04ListcdE6OutputVAB0fcdE5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/listSpeechSynthesisTasks(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV24listSpeechSynthesisTasksyAB04ListcdE6OutputVAB0fcdE5InputVKF">listSpeechSynthesisTasks(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a list of SpeechSynthesisTask objects ordered by their creation date. This operation can filter the tasks by their status, for example, allowing users to list only tasks that are completed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listSpeechSynthesisTasks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/ListSpeechSynthesisTasksInput.html">ListSpeechSynthesisTasksInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/ListSpeechSynthesisTasksOutput.html">ListSpeechSynthesisTasksOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV10getLexiconyAB03GetC6OutputVAB0dC5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/getLexicon(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV10getLexiconyAB03GetC6OutputVAB0dC5InputVKF">getLexicon(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see Managing Lexicons.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/GetLexiconInput.html">GetLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/GetLexiconOutput.html">GetLexiconOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV12listLexiconsyAB04ListC6OutputVAB0dC5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/listLexicons(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV12listLexiconsyAB04ListC6OutputVAB0dC5InputVKF">listLexicons(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see Managing Lexicons.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listLexicons</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/ListLexiconsInput.html">ListLexiconsInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/ListLexiconsOutput.html">ListLexiconsOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV24startSpeechSynthesisTaskyAB05StartcdE6OutputVAB0fcdE5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/startSpeechSynthesisTask(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV24startSpeechSynthesisTaskyAB05StartcdE6OutputVAB0fcdE5InputVKF">startSpeechSynthesisTask(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows the creation of an asynchronous synthesis task, by starting a new SpeechSynthesisTask. This operation requires all the standard information needed for speech synthesis, plus the name of an Amazon S3 bucket for the service to store the output of the synthesis task and two optional parameters (OutputS3KeyPrefix and SnsTopicArn). Once the synthesis task is created, this operation will return a SpeechSynthesisTask object, which will include an identifier of this task as well as the current status.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startSpeechSynthesisTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/StartSpeechSynthesisTaskInput.html">StartSpeechSynthesisTaskInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/StartSpeechSynthesisTaskOutput.html">StartSpeechSynthesisTaskOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV22getSpeechSynthesisTaskyAB03GetcdE6OutputVAB0fcdE5InputVKF"></a>
-                    <a name="//apple_ref/swift/Method/getSpeechSynthesisTask(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV22getSpeechSynthesisTaskyAB03GetcdE6OutputVAB0fcdE5InputVKF">getSpeechSynthesisTask(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Retrieves a specific SpeechSynthesisTask object based on its TaskID. This object contains information about the given speech synthesis task, including the status of the task, and a link to the S3 bucket containing the output of the task.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSpeechSynthesisTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/GetSpeechSynthesisTaskInput.html">GetSpeechSynthesisTaskInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly/GetSpeechSynthesisTaskOutput.html">GetSpeechSynthesisTaskOutput</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV13deleteLexiconyAB06DeleteC6OutputVAB0dC5InputVKF"></a>
+                    <a name="/s:5PollyAAV13deleteLexicony3NIO15EventLoopFutureCyAB06DeleteC6OutputVGAB0hC5InputVKF"></a>
                     <a name="//apple_ref/swift/Method/deleteLexicon(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV13deleteLexiconyAB06DeleteC6OutputVAB0dC5InputVKF">deleteLexicon(_:)</a>
+                    <a class="token" href="#/s:5PollyAAV13deleteLexicony3NIO15EventLoopFutureCyAB06DeleteC6OutputVGAB0hC5InputVKF">deleteLexicon(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +594,223 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/DeleteLexiconInput.html">DeleteLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Polly.html#/s:5PollyAAV19DeleteLexiconOutputV">DeleteLexiconOutput</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/DeleteLexiconInput.html">DeleteLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/DeleteLexiconOutput.html">DeleteLexiconOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV14describeVoicesy3NIO15EventLoopFutureCyAB08DescribeC6OutputVGAB0hC5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/describeVoices(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV14describeVoicesy3NIO15EventLoopFutureCyAB08DescribeC6OutputVGAB0hC5InputVKF">describeVoices(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.  When synthesizing speech ( SynthesizeSpeech ), you provide the voice ID for the voice you want from the list of voices returned by DescribeVoices. For example, you want your news reader application to read news in a specific language, but giving a user the option to choose the voice. Using the DescribeVoices operation you can provide the user with a list of available voices to select from.  You can optionally specify a language code to filter the available voices. For example, if you specify en-US, the operation returns a list of all available US English voices.  This operation requires permissions to perform the polly:DescribeVoices action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describeVoices</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/DescribeVoicesInput.html">DescribeVoicesInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/DescribeVoicesOutput.html">DescribeVoicesOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV10getLexicony3NIO15EventLoopFutureCyAB03GetC6OutputVGAB0hC5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/getLexicon(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV10getLexicony3NIO15EventLoopFutureCyAB03GetC6OutputVGAB0hC5InputVKF">getLexicon(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see Managing Lexicons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/GetLexiconInput.html">GetLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/GetLexiconOutput.html">GetLexiconOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV22getSpeechSynthesisTasky3NIO15EventLoopFutureCyAB03GetcdE6OutputVGAB0jcdE5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/getSpeechSynthesisTask(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV22getSpeechSynthesisTasky3NIO15EventLoopFutureCyAB03GetcdE6OutputVGAB0jcdE5InputVKF">getSpeechSynthesisTask(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves a specific SpeechSynthesisTask object based on its TaskID. This object contains information about the given speech synthesis task, including the status of the task, and a link to the S3 bucket containing the output of the task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSpeechSynthesisTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/GetSpeechSynthesisTaskInput.html">GetSpeechSynthesisTaskInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/GetSpeechSynthesisTaskOutput.html">GetSpeechSynthesisTaskOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV12listLexiconsy3NIO15EventLoopFutureCyAB04ListC6OutputVGAB0hC5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/listLexicons(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV12listLexiconsy3NIO15EventLoopFutureCyAB04ListC6OutputVGAB0hC5InputVKF">listLexicons(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see Managing Lexicons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listLexicons</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/ListLexiconsInput.html">ListLexiconsInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/ListLexiconsOutput.html">ListLexiconsOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV24listSpeechSynthesisTasksy3NIO15EventLoopFutureCyAB04ListcdE6OutputVGAB0jcdE5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/listSpeechSynthesisTasks(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV24listSpeechSynthesisTasksy3NIO15EventLoopFutureCyAB04ListcdE6OutputVGAB0jcdE5InputVKF">listSpeechSynthesisTasks(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of SpeechSynthesisTask objects ordered by their creation date. This operation can filter the tasks by their status, for example, allowing users to list only tasks that are completed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listSpeechSynthesisTasks</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/ListSpeechSynthesisTasksInput.html">ListSpeechSynthesisTasksInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/ListSpeechSynthesisTasksOutput.html">ListSpeechSynthesisTasksOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV10putLexicony3NIO15EventLoopFutureCyAB03PutC6OutputVGAB0hC5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/putLexicon(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV10putLexicony3NIO15EventLoopFutureCyAB03PutC6OutputVGAB0hC5InputVKF">putLexicon(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stores a pronunciation lexicon in an AWS Region. If a lexicon with the same name already exists in the region, it is overwritten by the new lexicon. Lexicon operations have eventual consistency, therefore, it might take some time before the lexicon is available to the SynthesizeSpeech operation. For more information, see Managing Lexicons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putLexicon</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/PutLexiconInput.html">PutLexiconInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/PutLexiconOutput.html">PutLexiconOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV24startSpeechSynthesisTasky3NIO15EventLoopFutureCyAB05StartcdE6OutputVGAB0jcdE5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/startSpeechSynthesisTask(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV24startSpeechSynthesisTasky3NIO15EventLoopFutureCyAB05StartcdE6OutputVGAB0jcdE5InputVKF">startSpeechSynthesisTask(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows the creation of an asynchronous synthesis task, by starting a new SpeechSynthesisTask. This operation requires all the standard information needed for speech synthesis, plus the name of an Amazon S3 bucket for the service to store the output of the synthesis task and two optional parameters (OutputS3KeyPrefix and SnsTopicArn). Once the synthesis task is created, this operation will return a SpeechSynthesisTask object, which will include an identifier of this task as well as the current status.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startSpeechSynthesisTask</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/StartSpeechSynthesisTaskInput.html">StartSpeechSynthesisTaskInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/StartSpeechSynthesisTaskOutput.html">StartSpeechSynthesisTaskOutput</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV16synthesizeSpeechy3NIO15EventLoopFutureCyAB010SynthesizeC6OutputVGAB0hC5InputVKF"></a>
+                    <a name="//apple_ref/swift/Method/synthesizeSpeech(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV16synthesizeSpeechy3NIO15EventLoopFutureCyAB010SynthesizeC6OutputVGAB0hC5InputVKF">synthesizeSpeech(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices) unless phoneme mapping is used. For more information, see How it Works.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">synthesizeSpeech</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polly/SynthesizeSpeechInput.html">SynthesizeSpeechInput</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Polly/SynthesizeSpeechOutput.html">SynthesizeSpeechOutput</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -821,453 +821,6 @@
             </div>
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV13SynthesisTaskV"></a>
-                    <a name="//apple_ref/swift/Struct/SynthesisTask" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV13SynthesisTaskV">SynthesisTask</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/SynthesisTask.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesisTask</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV19DeleteLexiconOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/DeleteLexiconOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV19DeleteLexiconOutputV">DeleteLexiconOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV18ListLexiconsOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListLexiconsOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV18ListLexiconsOutputV">ListLexiconsOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/ListLexiconsOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListLexiconsOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV20DescribeVoicesOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/DescribeVoicesOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV20DescribeVoicesOutputV">DescribeVoicesOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/DescribeVoicesOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeVoicesOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV16GetLexiconOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/GetLexiconOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV16GetLexiconOutputV">GetLexiconOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/GetLexiconOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV12LanguageCodeO"></a>
-                    <a name="//apple_ref/swift/Enum/LanguageCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV12LanguageCodeO">LanguageCode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/LanguageCode.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LanguageCode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV14SpeechMarkTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/SpeechMarkType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV14SpeechMarkTypeO">SpeechMarkType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/SpeechMarkType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SpeechMarkType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV22SynthesizeSpeechOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/SynthesizeSpeechOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV22SynthesizeSpeechOutputV">SynthesizeSpeechOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/SynthesizeSpeechOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesizeSpeechOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV29StartSpeechSynthesisTaskInputV"></a>
-                    <a name="//apple_ref/swift/Struct/StartSpeechSynthesisTaskInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV29StartSpeechSynthesisTaskInputV">StartSpeechSynthesisTaskInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/StartSpeechSynthesisTaskInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSpeechSynthesisTaskInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV15PutLexiconInputV"></a>
-                    <a name="//apple_ref/swift/Struct/PutLexiconInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV15PutLexiconInputV">PutLexiconInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/PutLexiconInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutLexiconInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV5VoiceV"></a>
-                    <a name="//apple_ref/swift/Struct/Voice" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV5VoiceV">Voice</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/Voice.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Voice</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV17LexiconAttributesV"></a>
-                    <a name="//apple_ref/swift/Struct/LexiconAttributes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV17LexiconAttributesV">LexiconAttributes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/LexiconAttributes.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LexiconAttributes</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV28GetSpeechSynthesisTaskOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/GetSpeechSynthesisTaskOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV28GetSpeechSynthesisTaskOutputV">GetSpeechSynthesisTaskOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/GetSpeechSynthesisTaskOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetSpeechSynthesisTaskOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV17ListLexiconsInputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListLexiconsInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV17ListLexiconsInputV">ListLexiconsInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/ListLexiconsInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListLexiconsInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV10TaskStatusO"></a>
-                    <a name="//apple_ref/swift/Enum/TaskStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV10TaskStatusO">TaskStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/TaskStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TaskStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV21SynthesizeSpeechInputV"></a>
-                    <a name="//apple_ref/swift/Struct/SynthesizeSpeechInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV21SynthesizeSpeechInputV">SynthesizeSpeechInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/SynthesizeSpeechInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesizeSpeechInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1299,9 +852,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5PollyAAV27GetSpeechSynthesisTaskInputV"></a>
-                    <a name="//apple_ref/swift/Struct/GetSpeechSynthesisTaskInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV27GetSpeechSynthesisTaskInputV">GetSpeechSynthesisTaskInput</a>
+                    <a name="/s:5PollyAAV19DeleteLexiconOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/DeleteLexiconOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV19DeleteLexiconOutputV">DeleteLexiconOutput</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1311,208 +864,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="../Structs/Polly/GetSpeechSynthesisTaskInput.html" class="slightly-smaller">See more</a>
+                        <a href="../Structs/Polly/DeleteLexiconOutput.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetSpeechSynthesisTaskInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV30StartSpeechSynthesisTaskOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/StartSpeechSynthesisTaskOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV30StartSpeechSynthesisTaskOutputV">StartSpeechSynthesisTaskOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/StartSpeechSynthesisTaskOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSpeechSynthesisTaskOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV8TextTypeO"></a>
-                    <a name="//apple_ref/swift/Enum/TextType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV8TextTypeO">TextType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/TextType.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TextType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV7LexiconV"></a>
-                    <a name="//apple_ref/swift/Struct/Lexicon" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV7LexiconV">Lexicon</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/Lexicon.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Lexicon</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV30ListSpeechSynthesisTasksOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListSpeechSynthesisTasksOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV30ListSpeechSynthesisTasksOutputV">ListSpeechSynthesisTasksOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/ListSpeechSynthesisTasksOutput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListSpeechSynthesisTasksOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV15GetLexiconInputV"></a>
-                    <a name="//apple_ref/swift/Struct/GetLexiconInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV15GetLexiconInputV">GetLexiconInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/GetLexiconInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetLexiconInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV16PutLexiconOutputV"></a>
-                    <a name="//apple_ref/swift/Struct/PutLexiconOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV16PutLexiconOutputV">PutLexiconOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV6GenderO"></a>
-                    <a name="//apple_ref/swift/Enum/Gender" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV6GenderO">Gender</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/Gender.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Gender</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeleteLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1550,6 +908,258 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5PollyAAV20DescribeVoicesOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/DescribeVoicesOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV20DescribeVoicesOutputV">DescribeVoicesOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/DescribeVoicesOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DescribeVoicesOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV6GenderO"></a>
+                    <a name="//apple_ref/swift/Enum/Gender" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV6GenderO">Gender</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/Gender.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Gender</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV15GetLexiconInputV"></a>
+                    <a name="//apple_ref/swift/Struct/GetLexiconInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV15GetLexiconInputV">GetLexiconInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/GetLexiconInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetLexiconInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV16GetLexiconOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/GetLexiconOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV16GetLexiconOutputV">GetLexiconOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/GetLexiconOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV27GetSpeechSynthesisTaskInputV"></a>
+                    <a name="//apple_ref/swift/Struct/GetSpeechSynthesisTaskInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV27GetSpeechSynthesisTaskInputV">GetSpeechSynthesisTaskInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/GetSpeechSynthesisTaskInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetSpeechSynthesisTaskInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV28GetSpeechSynthesisTaskOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/GetSpeechSynthesisTaskOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV28GetSpeechSynthesisTaskOutputV">GetSpeechSynthesisTaskOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/GetSpeechSynthesisTaskOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">GetSpeechSynthesisTaskOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV12LanguageCodeO"></a>
+                    <a name="//apple_ref/swift/Enum/LanguageCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV12LanguageCodeO">LanguageCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/LanguageCode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LanguageCode</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV7LexiconV"></a>
+                    <a name="//apple_ref/swift/Struct/Lexicon" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV7LexiconV">Lexicon</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/Lexicon.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Lexicon</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV17LexiconAttributesV"></a>
+                    <a name="//apple_ref/swift/Struct/LexiconAttributes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV17LexiconAttributesV">LexiconAttributes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/LexiconAttributes.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LexiconAttributes</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5PollyAAV18LexiconDescriptionV"></a>
                     <a name="//apple_ref/swift/Struct/LexiconDescription" class="dashAnchor"></a>
                     <a class="token" href="#/s:5PollyAAV18LexiconDescriptionV">LexiconDescription</a>
@@ -1569,6 +1179,118 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LexiconDescription</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV17ListLexiconsInputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListLexiconsInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV17ListLexiconsInputV">ListLexiconsInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/ListLexiconsInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListLexiconsInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV18ListLexiconsOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListLexiconsOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV18ListLexiconsOutputV">ListLexiconsOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/ListLexiconsOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListLexiconsOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV29ListSpeechSynthesisTasksInputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListSpeechSynthesisTasksInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV29ListSpeechSynthesisTasksInputV">ListSpeechSynthesisTasksInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/ListSpeechSynthesisTasksInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListSpeechSynthesisTasksInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV30ListSpeechSynthesisTasksOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/ListSpeechSynthesisTasksOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV30ListSpeechSynthesisTasksOutputV">ListSpeechSynthesisTasksOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/ListSpeechSynthesisTasksOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListSpeechSynthesisTasksOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
 
                         </div>
                       </div>
@@ -1606,6 +1328,314 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5PollyAAV15PutLexiconInputV"></a>
+                    <a name="//apple_ref/swift/Struct/PutLexiconInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV15PutLexiconInputV">PutLexiconInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/PutLexiconInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutLexiconInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV16PutLexiconOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/PutLexiconOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV16PutLexiconOutputV">PutLexiconOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/PutLexiconOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PutLexiconOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV14SpeechMarkTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/SpeechMarkType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV14SpeechMarkTypeO">SpeechMarkType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/SpeechMarkType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SpeechMarkType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV29StartSpeechSynthesisTaskInputV"></a>
+                    <a name="//apple_ref/swift/Struct/StartSpeechSynthesisTaskInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV29StartSpeechSynthesisTaskInputV">StartSpeechSynthesisTaskInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/StartSpeechSynthesisTaskInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSpeechSynthesisTaskInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV30StartSpeechSynthesisTaskOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/StartSpeechSynthesisTaskOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV30StartSpeechSynthesisTaskOutputV">StartSpeechSynthesisTaskOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/StartSpeechSynthesisTaskOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StartSpeechSynthesisTaskOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV13SynthesisTaskV"></a>
+                    <a name="//apple_ref/swift/Struct/SynthesisTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV13SynthesisTaskV">SynthesisTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/SynthesisTask.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesisTask</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV21SynthesizeSpeechInputV"></a>
+                    <a name="//apple_ref/swift/Struct/SynthesizeSpeechInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV21SynthesizeSpeechInputV">SynthesizeSpeechInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/SynthesizeSpeechInput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesizeSpeechInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV22SynthesizeSpeechOutputV"></a>
+                    <a name="//apple_ref/swift/Struct/SynthesizeSpeechOutput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV22SynthesizeSpeechOutputV">SynthesizeSpeechOutput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/SynthesizeSpeechOutput.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SynthesizeSpeechOutput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV10TaskStatusO"></a>
+                    <a name="//apple_ref/swift/Enum/TaskStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV10TaskStatusO">TaskStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/TaskStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TaskStatus</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV8TextTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/TextType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV8TextTypeO">TextType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/TextType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TextType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5PollyAAV5VoiceV"></a>
+                    <a name="//apple_ref/swift/Struct/Voice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5PollyAAV5VoiceV">Voice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Structs/Polly/Voice.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Voice</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5PollyAAV7VoiceIdO"></a>
                     <a name="//apple_ref/swift/Enum/VoiceId" class="dashAnchor"></a>
                     <a class="token" href="#/s:5PollyAAV7VoiceIdO">VoiceId</a>
@@ -1631,40 +1661,12 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5PollyAAV29ListSpeechSynthesisTasksInputV"></a>
-                    <a name="//apple_ref/swift/Struct/ListSpeechSynthesisTasksInput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5PollyAAV29ListSpeechSynthesisTasksInputV">ListSpeechSynthesisTasksInput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Structs/Polly/ListSpeechSynthesisTasksInput.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ListSpeechSynthesisTasksInput</span> <span class="p">:</span> <span class="kt">AWSShape</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

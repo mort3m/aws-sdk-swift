@@ -14,7 +14,7 @@
     <a title="BatchPrediction Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV9outputUriSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/outputUri" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9outputUriSSSgvp">outputUri</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/batchPredictionDataSourceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceIdSSSgvp">batchPredictionDataSourceId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The location of an Amazon S3 bucket or directory to receive the operation results. The following substrings are not allowed in the s3 key portion of the outputURI field: &lsquo;:&rsquo;, &lsquo;//&rsquo;, &lsquo;/./&rsquo;, &lsquo;/../&rsquo;.</p>
+                        <p>The ID of the DataSource that points to the group of observations to predict.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV9createdAt15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9createdAt15AWSSDKSwiftCore9TimeStampVSgvp">createdAt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The time that the BatchPrediction was created. The time is expressed in epoch time.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">batchPredictionDataSourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV9mLModelIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mLModelId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9mLModelIdSSSgvp">mLModelId</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV11computeTimes5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/computeTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV11computeTimes5Int64VSgvp">computeTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +641,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the MLModel that generated predictions for the BatchPrediction request.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mLModelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">computeTime</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV9createdAt15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createdAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9createdAt15AWSSDKSwiftCore9TimeStampVSgvp">createdAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time that the BatchPrediction was created. The time is expressed in epoch time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV16createdByIamUserSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/createdByIamUser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV16createdByIamUserSSSgvp">createdByIamUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The AWS user account that invoked the BatchPrediction. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdByIamUser</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV10finishedAt15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/finishedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV10finishedAt15AWSSDKSwiftCore9TimeStampVSgvp">finishedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">finishedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV19inputDataLocationS3SSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/inputDataLocationS3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV19inputDataLocationS3SSSgvp">inputDataLocationS3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">inputDataLocationS3</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV10finishedAt15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/finishedAt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV10finishedAt15AWSSDKSwiftCore9TimeStampVSgvp">finishedAt</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV9mLModelIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mLModelId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9mLModelIdSSSgvp">mLModelId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The ID of the MLModel that generated predictions for the BatchPrediction request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">finishedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mLModelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV16totalRecordCounts5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/totalRecordCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV16totalRecordCounts5Int64VSgvp">totalRecordCount</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV7messageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV7messageSSSgvp">message</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A description of the most recent details about processing the batch prediction request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/batchPredictionDataSourceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceIdSSSgvp">batchPredictionDataSourceId</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV4nameSSSgvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the DataSource that points to the group of observations to predict.</p>
+                        <p>A user-supplied name or description of the BatchPrediction.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">batchPredictionDataSourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV16createdByIamUserSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/createdByIamUser" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV16createdByIamUserSSSgvp">createdByIamUser</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV9outputUriSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/outputUri" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9outputUriSSSgvp">outputUri</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The AWS user account that invoked the BatchPrediction. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+                        <p>The location of an Amazon S3 bucket or directory to receive the operation results. The following substrings are not allowed in the s3 key portion of the outputURI field: &lsquo;:&rsquo;, &lsquo;//&rsquo;, &lsquo;/./&rsquo;, &lsquo;/../&rsquo;.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">createdByIamUser</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,63 +982,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV4nameSSSgvp">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A user-supplied name or description of the BatchPrediction.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV7messageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV7messageSSSgvp">message</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A description of the most recent details about processing the batch prediction request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV11computeTimes5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/computeTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV11computeTimes5Int64VSgvp">computeTime</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV16totalRecordCounts5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/totalRecordCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV16totalRecordCounts5Int64VSgvp">totalRecordCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +999,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">computeTime</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">totalRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,36 +1009,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV19inputDataLocationS3SSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/inputDataLocationS3" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV19inputDataLocationS3SSSgvp">inputDataLocationS3</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">inputDataLocationS3</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15MachineLearningAAV15BatchPredictionV9outputUri9createdAt05batchD2Id07mLModelJ018invalidRecordCount011lastUpdatedH008finishedH005totalmN00id10DataSourceJ00G9ByIamUser07startedH06status4name7message11computeTime05inputS10LocationS3ADSSSg_15AWSSDKSwiftCore9TimeStampVSgA2Us5Int64VSgA2YA0_A2uyB12EntityStatusOSgA2UA0_AUtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(outputUri:createdAt:batchPredictionId:mLModelId:invalidRecordCount:lastUpdatedAt:finishedAt:totalRecordCount:batchPredictionDataSourceId:createdByIamUser:startedAt:status:name:message:computeTime:inputDataLocationS3:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV9outputUri9createdAt05batchD2Id07mLModelJ018invalidRecordCount011lastUpdatedH008finishedH005totalmN00id10DataSourceJ00G9ByIamUser07startedH06status4name7message11computeTime05inputS10LocationS3ADSSSg_15AWSSDKSwiftCore9TimeStampVSgA2Us5Int64VSgA2YA0_A2uyB12EntityStatusOSgA2UA0_AUtcfc">init(outputUri:createdAt:batchPredictionId:mLModelId:invalidRecordCount:lastUpdatedAt:finishedAt:totalRecordCount:batchPredictionDataSourceId:createdByIamUser:startedAt:status:name:message:computeTime:inputDataLocationS3:)</a>
+                    <a name="/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceId0edH011computeTime9createdAt0K9ByIamUser08finishedL005inputF10LocationS318invalidRecordCount011lastUpdatedL007mLModelH07message4name9outputUri07startedL06status05totaluV0ADSSSg_AUs5Int64VSg15AWSSDKSwiftCore0J5StampVSgAUA0_AuXA0_A4UA0_AB12EntityStatusOSgAXtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(batchPredictionDataSourceId:batchPredictionId:computeTime:createdAt:createdByIamUser:finishedAt:inputDataLocationS3:invalidRecordCount:lastUpdatedAt:mLModelId:message:name:outputUri:startedAt:status:totalRecordCount:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15MachineLearningAAV15BatchPredictionV05batchD12DataSourceId0edH011computeTime9createdAt0K9ByIamUser08finishedL005inputF10LocationS318invalidRecordCount011lastUpdatedL007mLModelH07message4name9outputUri07startedL06status05totaluV0ADSSSg_AUs5Int64VSg15AWSSDKSwiftCore0J5StampVSgAUA0_AuXA0_A4UA0_AB12EntityStatusOSgAXtcfc">init(batchPredictionDataSourceId:batchPredictionId:computeTime:createdAt:createdByIamUser:finishedAt:inputDataLocationS3:invalidRecordCount:lastUpdatedAt:mLModelId:message:name:outputUri:startedAt:status:totalRecordCount:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,7 +1026,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">outputUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">batchPredictionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mLModelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">invalidRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">finishedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">totalRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">batchPredictionDataSourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdByIamUser</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MachineLearning/EntityStatus.html">EntityStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">computeTime</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inputDataLocationS3</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">batchPredictionDataSourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">batchPredictionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">computeTime</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">createdByIamUser</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">finishedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inputDataLocationS3</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">invalidRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastUpdatedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">mLModelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputUri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedAt</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MachineLearning/EntityStatus.html">EntityStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">totalRecordCount</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,7 +1038,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

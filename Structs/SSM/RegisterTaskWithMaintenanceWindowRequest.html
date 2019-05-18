@@ -14,7 +14,7 @@
     <a title="RegisterTaskWithMaintenanceWindowRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/windowId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowIdSSvp">windowId</a>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientTokenSSSgvp">clientToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,95 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the Maintenance Window the task should be added to.</p>
+                        <p>User-provided idempotency token.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">windowId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11loggingInfoAB07LoggingI0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/loggingInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11loggingInfoAB07LoggingI0VSgvp">loggingInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A structure containing information about an Amazon S3 bucket to write instance-level logs to.    LoggingInfo has been deprecated. To specify an S3 bucket to contain logs, instead use the OutputS3BucketName and OutputS3KeyPrefix options in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see MaintenanceWindowTaskInvocationParameters.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">loggingInfo</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/LoggingInfo.html">LoggingInfo</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14taskParametersSDySSAB0efC24ParameterValueExpressionVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/taskParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14taskParametersSDySSAB0efC24ParameterValueExpressionVGSgvp">taskParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The parameters that should be passed to the task when it is executed.   TaskParameters has been deprecated. To specify parameters to pass to a task when it runs, instead use the Parameters option in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see MaintenanceWindowTaskInvocationParameters.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskParameterValueExpression.html">MaintenanceWindowTaskParameterValueExpression</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7targetsSayAB6TargetVGvp"></a>
-                    <a name="//apple_ref/swift/Property/targets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7targetsSayAB6TargetVGvp">targets</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The targets (either instances or Maintenance Window targets). Specify instances using the following format:   Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;  Specify Maintenance Window targets using the following format:  Key=&lt;WindowTargetIds&gt;,Values=&lt;window-target-id-1&gt;,&lt;window-target-id-2&gt;</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8taskTypeAB0efcI0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/taskType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8taskTypeAB0efcI0Ovp">taskType</a>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11loggingInfoAB07LoggingI0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loggingInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11loggingInfoAB07LoggingI0VSgvp">loggingInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,122 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of task being registered.</p>
+                        <p>A structure containing information about an Amazon S3 bucket to write instance-level logs to.    LoggingInfo has been deprecated. To specify an S3 bucket to contain logs, instead use the OutputS3BucketName and OutputS3KeyPrefix options in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see MaintenanceWindowTaskInvocationParameters.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskType.html">MaintenanceWindowTaskType</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7taskArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/taskArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7taskArnSSvp">taskArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ARN of the task to execute</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8prioritys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8prioritys5Int32VSgvp">priority</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV4nameSSSgvp">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An optional name for the task.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientTokenSSSgvp">clientToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>User-provided idempotency token.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">loggingInfo</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/LoggingInfo.html">LoggingInfo</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,6 +685,87 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV9maxErrorsSSvp"></a>
+                    <a name="//apple_ref/swift/Property/maxErrors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV9maxErrorsSSvp">maxErrors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of errors allowed before this task stops being scheduled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional name for the task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8prioritys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8prioritys5Int32VSgvp">priority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14serviceRoleArnSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/serviceRoleArn" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14serviceRoleArnSSSgvp">serviceRoleArn</a>
@@ -892,6 +784,60 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7targetsSayAB6TargetVGvp"></a>
+                    <a name="//apple_ref/swift/Property/targets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7targetsSayAB6TargetVGvp">targets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The targets (either instances or Maintenance Window targets). Specify instances using the following format:   Key=InstanceIds,Values=&lt;instance-id-1&gt;,&lt;instance-id-2&gt;  Specify Maintenance Window targets using the following format:  Key=&lt;WindowTargetIds&gt;,Values=&lt;window-target-id-1&gt;,&lt;window-target-id-2&gt;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7taskArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/taskArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV7taskArnSSvp">taskArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ARN of the task to execute</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV9maxErrorsSSvp"></a>
-                    <a name="//apple_ref/swift/Property/maxErrors" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV9maxErrorsSSvp">maxErrors</a>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14taskParametersSDySSAB0efC24ParameterValueExpressionVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/taskParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV14taskParametersSDySSAB0efC24ParameterValueExpressionVGSgvp">taskParameters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +884,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The maximum number of errors allowed before this task stops being scheduled.</p>
+                        <p>The parameters that should be passed to the task when it is executed.   TaskParameters has been deprecated. To specify parameters to pass to a task when it runs, instead use the Parameters option in the TaskInvocationParameters structure. For information about how Systems Manager handles these options for the supported Maintenance Window task types, see MaintenanceWindowTaskInvocationParameters.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskParameterValueExpression.html">MaintenanceWindowTaskParameterValueExpression</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +901,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowId11loggingInfo14taskParameters7targets11description0L4Type0L3Arn8priority4name11clientToken14maxConcurrency011serviceRoleQ00l10InvocationM00V6ErrorsADSS_AB07LoggingK0VSgSDySSAB0efC24ParameterValueExpressionVGSgSayAB6TargetVGSSSgAB0efcP0OSSs5Int32VSgA1_A1_SSA1_AB0efczM0VSgSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(windowId:loggingInfo:taskParameters:targets:description:taskType:taskArn:priority:name:clientToken:maxConcurrency:serviceRoleArn:taskInvocationParameters:maxErrors:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowId11loggingInfo14taskParameters7targets11description0L4Type0L3Arn8priority4name11clientToken14maxConcurrency011serviceRoleQ00l10InvocationM00V6ErrorsADSS_AB07LoggingK0VSgSDySSAB0efC24ParameterValueExpressionVGSgSayAB6TargetVGSSSgAB0efcP0OSSs5Int32VSgA1_A1_SSA1_AB0efczM0VSgSStcfc">init(windowId:loggingInfo:taskParameters:targets:description:taskType:taskArn:priority:name:clientToken:maxConcurrency:serviceRoleArn:taskInvocationParameters:maxErrors:)</a>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8taskTypeAB0efcI0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/taskType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8taskTypeAB0efcI0Ovp">taskType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of task being registered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">taskType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskType.html">MaintenanceWindowTaskType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/windowId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV8windowIdSSvp">windowId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the Maintenance Window the task should be added to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">windowId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientToken11description11loggingInfo14maxConcurrency0M6Errors4name8priority14serviceRoleArn7targets04taskT00V20InvocationParameters0vX00V4Type8windowIdADSSSg_AsB07LoggingL0VSgS2SASs5Int32VSgASSayAB6TargetVGSSAB0efcwX0VSgSDySSAB0efC24ParameterValueExpressionVGSgAB0efcY0OSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(clientToken:description:loggingInfo:maxConcurrency:maxErrors:name:priority:serviceRoleArn:targets:taskArn:taskInvocationParameters:taskParameters:taskType:windowId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV40RegisterTaskWithMaintenanceWindowRequestV11clientToken11description11loggingInfo14maxConcurrency0M6Errors4name8priority14serviceRoleArn7targets04taskT00V20InvocationParameters0vX00V4Type8windowIdADSSSg_AsB07LoggingL0VSgS2SASs5Int32VSgASSayAB6TargetVGSSAB0efcwX0VSgSDySSAB0efC24ParameterValueExpressionVGSgAB0efcY0OSStcfc">init(clientToken:description:loggingInfo:maxConcurrency:maxErrors:name:priority:serviceRoleArn:targets:taskArn:taskInvocationParameters:taskParameters:taskType:windowId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +972,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">windowId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">loggingInfo</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/LoggingInfo.html">LoggingInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskParameterValueExpression.html">MaintenanceWindowTaskParameterValueExpression</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">],</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskType.html">MaintenanceWindowTaskType</a></span><span class="p">,</span> <span class="nv">taskArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxConcurrency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskInvocationParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskInvocationParameters.html">MaintenanceWindowTaskInvocationParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">loggingInfo</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/LoggingInfo.html">LoggingInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxConcurrency</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceRoleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">],</span> <span class="nv">taskArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">taskInvocationParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskInvocationParameters.html">MaintenanceWindowTaskInvocationParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskParameterValueExpression.html">MaintenanceWindowTaskParameterValueExpression</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">taskType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/MaintenanceWindowTaskType.html">MaintenanceWindowTaskType</a></span><span class="p">,</span> <span class="nv">windowId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +984,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="StackSetOperation Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV17executionRoleNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionRoleName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV17executionRoleNameSSSgvp">executionRoleName</a>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV6actionAB0cdE6ActionOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV6actionAB0cdE6ActionOSgvp">action</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the IAM execution role used to create or update the stack set. Use customized execution roles to control which stack resources users and groups can include in their stack sets.</p>
+                        <p>The type of stack set operation: CREATE, UPDATE, or DELETE. Create and delete operations affect only the specified stack set instances that are associated with the specified stack set. Update operations affect both the stack set itself, as well as all associated stack set instances.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationAction.html">StackSetOperationAction</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV12endTimestamp15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/endTimestamp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV12endTimestamp15AWSSDKSwiftCore9TimeStampVSgvp">endTimestamp</a>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV21administrationRoleARNSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/administrationRoleARN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV21administrationRoleARNSSSgvp">administrationRoleARN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,41 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The time at which the stack set operation ended, across all accounts and regions specified. Note that this doesn&rsquo;t necessarily mean that the stack set operation was successful, or even attempted, in each account or region.</p>
+                        <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.  Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see Define Permissions for Multiple Administrators in the AWS CloudFormation User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV20operationPreferencesAB0cdeG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/operationPreferences" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV20operationPreferencesAB0cdeG0VSgvp">operationPreferences</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The preferences for how AWS CloudFormation performs this stack set operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationPreferences</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationPreferences.html">StackSetOperationPreferences</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">administrationRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV6actionAB0cdE6ActionOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV6actionAB0cdE6ActionOSgvp">action</a>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV12endTimestamp15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV12endTimestamp15AWSSDKSwiftCore9TimeStampVSgvp">endTimestamp</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +668,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of stack set operation: CREATE, UPDATE, or DELETE. Create and delete operations affect only the specified stack set instances that are associated with the specified stack set. Update operations affect both the stack set itself, as well as all associated stack set instances.</p>
+                        <p>The time at which the stack set operation ended, across all accounts and regions specified. Note that this doesn&rsquo;t necessarily mean that the stack set operation was successful, or even attempted, in each account or region.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationAction.html">StackSetOperationAction</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV17executionRoleNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionRoleName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV17executionRoleNameSSSgvp">executionRoleName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the IAM execution role used to create or update the stack set. Use customized execution roles to control which stack resources users and groups can include in their stack sets.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV11operationIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/operationId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV11operationIdSSSgvp">operationId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique ID of a stack set operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV20operationPreferencesAB0cdeG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/operationPreferences" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV20operationPreferencesAB0cdeG0VSgvp">operationPreferences</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The preferences for how AWS CloudFormation performs this stack set operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationPreferences</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationPreferences.html">StackSetOperationPreferences</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV12retainStacksSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/retainStacks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV12retainStacksSbSgvp">retainStacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>For stack set operations of action type DELETE, specifies whether to remove the stack instances from the specified stack set, but doesn&rsquo;t delete the stacks. You can&rsquo;t reassociate a retained stack, or add an existing, saved stack to a new stack set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retainStacks</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,90 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV12retainStacksSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/retainStacks" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV12retainStacksSbSgvp">retainStacks</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>For stack set operations of action type DELETE, specifies whether to remove the stack instances from the specified stack set, but doesn&rsquo;t delete the stacks. You can&rsquo;t reassociate a retained stack, or add an existing, saved stack to a new stack set.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retainStacks</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV11operationIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/operationId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV11operationIdSSSgvp">operationId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The unique ID of a stack set operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">operationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV21administrationRoleARNSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/administrationRoleARN" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV21administrationRoleARNSSSgvp">administrationRoleARN</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.  Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see Define Permissions for Multiple Administrators in the AWS CloudFormation User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">administrationRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:14CloudFormationAAV17StackSetOperationV17executionRoleName12endTimestamp20operationPreferences08creationJ06action05stackD2Id6status12retainStacks0kP0014administrationG3ARNADSSSg_15AWSSDKSwiftCore9TimeStampVSgAB0cdeL0VSgAsB0cdE6ActionOSgAoB0cdE6StatusOSgSbSgA2Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(executionRoleName:endTimestamp:operationPreferences:creationTimestamp:action:stackSetId:status:retainStacks:operationId:administrationRoleARN:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV17executionRoleName12endTimestamp20operationPreferences08creationJ06action05stackD2Id6status12retainStacks0kP0014administrationG3ARNADSSSg_15AWSSDKSwiftCore9TimeStampVSgAB0cdeL0VSgAsB0cdE6ActionOSgAoB0cdE6StatusOSgSbSgA2Otcfc">init(executionRoleName:endTimestamp:operationPreferences:creationTimestamp:action:stackSetId:status:retainStacks:operationId:administrationRoleARN:)</a>
+                    <a name="/s:14CloudFormationAAV17StackSetOperationV6action21administrationRoleARN17creationTimestamp03endK009executionH4Name11operationId0O11Preferences12retainStacks05stackdP06statusAdB0cdE6ActionOSg_SSSg15AWSSDKSwiftCore9TimeStampVSgAv2rB0cdeQ0VSgSbSgArB0cdE6StatusOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(action:administrationRoleARN:creationTimestamp:endTimestamp:executionRoleName:operationId:operationPreferences:retainStacks:stackSetId:status:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14CloudFormationAAV17StackSetOperationV6action21administrationRoleARN17creationTimestamp03endK009executionH4Name11operationId0O11Preferences12retainStacks05stackdP06statusAdB0cdE6ActionOSg_SSSg15AWSSDKSwiftCore9TimeStampVSgAv2rB0cdeQ0VSgSbSgArB0cdE6StatusOSgtcfc">init(action:administrationRoleARN:creationTimestamp:endTimestamp:executionRoleName:operationId:operationPreferences:retainStacks:stackSetId:status:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">executionRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">operationPreferences</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationPreferences.html">StackSetOperationPreferences</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationAction.html">StackSetOperationAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stackSetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationStatus.html">StackSetOperationStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retainStacks</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">operationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">administrationRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationAction.html">StackSetOperationAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">administrationRoleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">endTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">operationId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">operationPreferences</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationPreferences.html">StackSetOperationPreferences</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retainStacks</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stackSetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFormation/StackSetOperationStatus.html">StackSetOperationStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

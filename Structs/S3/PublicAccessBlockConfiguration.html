@@ -14,7 +14,7 @@
     <a title="PublicAccessBlockConfiguration Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7BucketsSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/restrictPublicBuckets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7BucketsSbSgvp">restrictPublicBuckets</a>
+                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4AclsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/blockPublicAcls" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4AclsSbSgvp">blockPublicAcls</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy. Enabling this setting doesn&rsquo;t affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.</p>
+                        <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:   PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.   PUT Object calls fail if the request includes a public ACL.   Enabling this setting doesn&rsquo;t affect existing policies or ACLs.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restrictPublicBuckets</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockPublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4AclsSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/blockPublicAcls" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4AclsSbSgvp">blockPublicAcls</a>
+                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7BucketsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/restrictPublicBuckets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7BucketsSbSgvp">restrictPublicBuckets</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to TRUE causes the following behavior:   PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.   PUT Object calls fail if the request includes a public ACL.   Enabling this setting doesn&rsquo;t affect existing policies or ACLs.</p>
+                        <p>Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to TRUE restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy. Enabling this setting doesn&rsquo;t affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockPublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restrictPublicBuckets</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7Buckets05blockB6Policy06ignoreB4Acls0hbK0ADSbSg_A3Itcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(restrictPublicBuckets:blockPublicPolicy:ignorePublicAcls:blockPublicAcls:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV08restrictB7Buckets05blockB6Policy06ignoreB4Acls0hbK0ADSbSg_A3Itcfc">init(restrictPublicBuckets:blockPublicPolicy:ignorePublicAcls:blockPublicAcls:)</a>
+                    <a name="/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4Acls0fB6Policy06ignorebG008restrictB7BucketsADSbSg_A3Itcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(blockPublicAcls:blockPublicPolicy:ignorePublicAcls:restrictPublicBuckets:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:2S3AAV30PublicAccessBlockConfigurationV05blockB4Acls0fB6Policy06ignorebG008restrictB7BucketsADSbSg_A3Itcfc">init(blockPublicAcls:blockPublicPolicy:ignorePublicAcls:restrictPublicBuckets:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">restrictPublicBuckets</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockPublicPolicy</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ignorePublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockPublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">blockPublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockPublicPolicy</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ignorePublicAcls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restrictPublicBuckets</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

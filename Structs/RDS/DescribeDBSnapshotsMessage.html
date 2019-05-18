@@ -14,7 +14,7 @@
     <a title="DescribeDBSnapshotsMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV6markerSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/marker" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV6markerSSSgvp">marker</a>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBInstanceIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifierSSSgvp">dBInstanceIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,95 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An optional pagination token provided by a previous DescribeDBSnapshots request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.</p>
+                        <p>The ID of the DB instance to retrieve the list of DB snapshots for. This parameter can&rsquo;t be used in conjunction with DBSnapshotIdentifier. This parameter is not case-sensitive.  Constraints:   If supplied, must match the identifier of an existing DBInstance.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV12snapshotTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV12snapshotTypeSSSgvp">snapshotType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The type of snapshots to be returned. You can specify one of the following values:    automated - Return all DB snapshots that have been automatically taken by Amazon RDS for my AWS account.    manual - Return all DB snapshots that have been taken by my AWS account.    shared - Return all manual DB snapshots that have been shared to my AWS account.    public - Return all DB snapshots that have been marked as public.   If you don&rsquo;t specify a SnapshotType value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not included in the returned results by default. You can include shared snapshots with these results by setting the IncludeShared parameter to true. You can include public snapshots with these results by setting the IncludePublic parameter to true. The IncludeShared and IncludePublic parameters don&rsquo;t apply for SnapshotType values of manual or automated. The IncludePublic parameter doesn&rsquo;t apply when SnapshotType is set to shared. The IncludeShared parameter doesn&rsquo;t apply when SnapshotType is set to public.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV13includeSharedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeShared" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV13includeSharedSbSgvp">includeShared</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>True to include shared manual DB snapshots from other AWS accounts that this AWS account has been given permission to copy or restore, and otherwise false. The default is false. You can give an AWS account permission to restore a manual DB snapshot from another AWS account by using the ModifyDBSnapshotAttribute API action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeShared</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV10maxRecordss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxRecords" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV10maxRecordss5Int32VSgvp">maxRecords</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -703,6 +622,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV13dbiResourceIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dbiResourceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV13dbiResourceIdSSSgvp">dbiResourceId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A specific DB resource ID to describe.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBInstanceIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifierSSSgvp">dBInstanceIdentifier</a>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV13includeSharedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeShared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV13includeSharedSbSgvp">includeShared</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the DB instance to retrieve the list of DB snapshots for. This parameter can&rsquo;t be used in conjunction with DBSnapshotIdentifier. This parameter is not case-sensitive.  Constraints:   If supplied, must match the identifier of an existing DBInstance.</p>
+                        <p>True to include shared manual DB snapshots from other AWS accounts that this AWS account has been given permission to copy or restore, and otherwise false. The default is false. You can give an AWS account permission to restore a manual DB snapshot from another AWS account by using the ModifyDBSnapshotAttribute API action.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeShared</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV13dbiResourceIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dbiResourceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV13dbiResourceIdSSSgvp">dbiResourceId</a>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV6markerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/marker" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV6markerSSSgvp">marker</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A specific DB resource ID to describe.</p>
+                        <p>An optional pagination token provided by a previous DescribeDBSnapshots request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +766,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV6marker12snapshotType13includeShared10maxRecords20dBSnapshotIdentifier7filters0H6Public010dBInstanceM013dbiResourceIdADSSSg_ANSbSgs5Int32VSgAnB10FilterListVSgAo2Ntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(marker:snapshotType:includeShared:maxRecords:dBSnapshotIdentifier:filters:includePublic:dBInstanceIdentifier:dbiResourceId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV6marker12snapshotType13includeShared10maxRecords20dBSnapshotIdentifier7filters0H6Public010dBInstanceM013dbiResourceIdADSSSg_ANSbSgs5Int32VSgAnB10FilterListVSgAo2Ntcfc">init(marker:snapshotType:includeShared:maxRecords:dBSnapshotIdentifier:filters:includePublic:dBInstanceIdentifier:dbiResourceId:)</a>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV10maxRecordss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxRecords" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV10maxRecordss5Int32VSgvp">maxRecords</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV12snapshotTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV12snapshotTypeSSSgvp">snapshotType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of snapshots to be returned. You can specify one of the following values:    automated - Return all DB snapshots that have been automatically taken by Amazon RDS for my AWS account.    manual - Return all DB snapshots that have been taken by my AWS account.    shared - Return all manual DB snapshots that have been shared to my AWS account.    public - Return all DB snapshots that have been marked as public.   If you don&rsquo;t specify a SnapshotType value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not included in the returned results by default. You can include shared snapshots with these results by setting the IncludeShared parameter to true. You can include public snapshots with these results by setting the IncludePublic parameter to true. The IncludeShared and IncludePublic parameters don&rsquo;t apply for SnapshotType values of manual or automated. The IncludePublic parameter doesn&rsquo;t apply when SnapshotType is set to shared. The IncludeShared parameter doesn&rsquo;t apply when SnapshotType is set to public.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifier010dBSnapshotF013dbiResourceId7filters13includePublic0L6Shared6marker10maxRecords12snapshotTypeADSSSg_A2nB10FilterListVSgSbSgArNs5Int32VSgANtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dBInstanceIdentifier:dBSnapshotIdentifier:dbiResourceId:filters:includePublic:includeShared:marker:maxRecords:snapshotType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV26DescribeDBSnapshotsMessageV20dBInstanceIdentifier010dBSnapshotF013dbiResourceId7filters13includePublic0L6Shared6marker10maxRecords12snapshotTypeADSSSg_A2nB10FilterListVSgSbSgArNs5Int32VSgANtcfc">init(dBInstanceIdentifier:dBSnapshotIdentifier:dbiResourceId:filters:includePublic:includeShared:marker:maxRecords:snapshotType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeShared</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/FilterList.html">FilterList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includePublic</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/FilterList.html">FilterList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includePublic</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeShared</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

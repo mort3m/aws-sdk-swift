@@ -14,7 +14,7 @@
     <a title="M2tsSettings Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12fragmentTimeSdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/fragmentTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12fragmentTimeSdSgvp">fragmentTime</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehaviorAB0c6AbsentfgH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/absentInputAudioBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehaviorAB0c6AbsentfgH0OSgvp">absentInputAudioBehavior</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,205 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The length in seconds of each fragment. Only used with EBP markers.</p>
+                        <p>When set to drop, output audio streams will be removed from the program if the selected input audio stream is removed from the input. This allows the output audio configuration to dynamically change based on input configuration. If this is set to encodeSilence, all output audio streams will output encoded silence when not connected to an active input stream.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fragmentTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17segmentationStyleAB0c12SegmentationF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/segmentationStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17segmentationStyleAB0c12SegmentationF0OSgvp">segmentationStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The segmentation style parameter controls how segmentation markers are inserted into the transport stream. With avails, it is possible that segments may be truncated, which can influence where future segmentation markers are inserted.
-When a segmentation style of <q>resetCadence</q> is selected and a segment is truncated due to an avail, we will reset the segmentation cadence. This means the subsequent segment will have a duration of $segmentationTime seconds.
-When a segmentation style of <q>maintainCadence</q> is selected and a segment is truncated due to an avail, we will not reset the segmentation cadence. This means the subsequent segment will likely be truncated as well. However, all segments after that will have a duration of $segmentationTime seconds. Note that EBP lookahead is a slight exception to this rule.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationStyle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationStyle.html">M2tsSegmentationStyle</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16audioBufferModelAB0c5AudiofG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/audioBufferModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16audioBufferModelAB0c5AudiofG0OSgvp">audioBufferModel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When set to dvb, uses DVB buffer model for Dolby Digital audio.  When set to atsc, the ATSC model is used.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioBufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioBufferModel.html">M2tsAudioBufferModel</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11esRateInPesAB0c2EsfgH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/esRateInPes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11esRateInPesAB0c2EsfgH0OSgvp">esRateInPes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Include or exclude the ES Rate field in the PES header.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">esRateInPes</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEsRateInPes.html">M2tsEsRateInPes</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16segmentationTimeSdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/segmentationTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16segmentationTimeSdSgvp">segmentationTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The length in seconds of each segment. Required unless markers is set to None_.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV6pmtPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pmtPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV6pmtPidSSSgvp">pmtPid</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) for the Program Map Table (PMT) in the transport stream. Can be entered as a decimal or hexadecimal value. Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pmtPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12ccDescriptorAB0c2CcF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ccDescriptor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12ccDescriptorAB0c2CcF0OSgvp">ccDescriptor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When set to enabled, generates captionServiceDescriptor in PMT.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ccDescriptor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsCcDescriptor.html">M2tsCcDescriptor</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV21timedMetadataBehaviorAB0c5TimedfG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timedMetadataBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV21timedMetadataBehaviorAB0c5TimedfG0OSgvp">timedMetadataBehavior</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When set to passthrough, timed metadata will be passed through from input to output.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timedMetadataBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsTimedMetadataBehavior.html">M2tsTimedMetadataBehavior</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">absentInputAudioBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAbsentInputAudioBehavior.html">M2tsAbsentInputAudioBehavior</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -822,6 +631,33 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV15aribCaptionsPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/aribCaptionsPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV15aribCaptionsPidSSSgvp">aribCaptionsPid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) for ARIB Captions in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aribCaptionsPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9MediaLiveAAV12M2tsSettingsV22aribCaptionsPidControlAB0c4AribfgH0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/aribCaptionsPidControl" class="dashAnchor"></a>
                     <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV22aribCaptionsPidControlAB0c4AribfgH0OSgvp">aribCaptionsPidControl</a>
@@ -849,9 +685,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehaviorAB0c6AbsentfgH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/absentInputAudioBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehaviorAB0c6AbsentfgH0OSgvp">absentInputAudioBehavior</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16audioBufferModelAB0c5AudiofG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/audioBufferModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16audioBufferModelAB0c5AudiofG0OSgvp">audioBufferModel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -859,14 +695,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When set to drop, output audio streams will be removed from the program if the selected input audio stream is removed from the input. This allows the output audio configuration to dynamically change based on input configuration. If this is set to encodeSilence, all output audio streams will output encoded silence when not connected to an active input stream.</p>
+                        <p>When set to dvb, uses DVB buffer model for Dolby Digital audio.  When set to atsc, the ATSC model is used.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">absentInputAudioBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAbsentInputAudioBehavior.html">M2tsAbsentInputAudioBehavior</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioBufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioBufferModel.html">M2tsAudioBufferModel</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -876,9 +712,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9scte35PidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scte35Pid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9scte35PidSSSgvp">scte35Pid</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17audioFramesPerPess5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/audioFramesPerPes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17audioFramesPerPess5Int32VSgvp">audioFramesPerPes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -886,14 +722,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Packet Identifier (PID) of the SCTE-35 stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+                        <p>The number of audio frames to insert for each PES packet.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte35Pid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioFramesPerPes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -903,9 +739,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12etvSignalPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/etvSignalPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12etvSignalPidSSSgvp">etvSignalPid</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9audioPidsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/audioPids" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9audioPidsSSSgvp">audioPids</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -913,14 +749,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Packet Identifier (PID) for input source ETV Signal data to this output. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+                        <p>Packet Identifier (PID) of the elementary audio stream(s) in the transport stream. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values. Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">etvSignalPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -930,9 +766,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12ebpPlacementAB0c3EbpF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ebpPlacement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12ebpPlacementAB0c3EbpF0OSgvp">ebpPlacement</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV15audioStreamTypeAB0c5AudiofG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/audioStreamType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV15audioStreamTypeAB0c5AudiofG0OSgvp">audioStreamType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -940,14 +776,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Controls placement of EBP on Audio PIDs. If set to videoAndAudioPids, EBP markers will be placed on the video PID and all audio PIDs.  If set to videoPid, EBP markers will be placed on only the video PID.</p>
+                        <p>When set to atsc, uses stream type = 0x81 for AC3 and stream type = 0x87 for EAC3. When set to dvb, uses stream type = 0x06.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ebpPlacement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbpPlacement.html">M2tsEbpPlacement</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioStreamType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioStreamType.html">M2tsAudioStreamType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -957,9 +793,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV6pcrPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pcrPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV6pcrPidSSSgvp">pcrPid</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV7bitrates5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bitrate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV7bitrates5Int32VSgvp">bitrate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -967,14 +803,176 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Packet Identifier (PID) of the Program Clock Reference (PCR) in the transport stream. When no value is given, the encoder will assign the same value as the Video PID. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+                        <p>The output bitrate of the transport stream in bits per second. Setting to 0 lets the muxer automatically determine the appropriate bitrate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bitrate</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11bufferModelAB0c6BufferF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bufferModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11bufferModelAB0c6BufferF0OSgvp">bufferModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to multiplex, use multiplex buffer model for accurate interleaving.  Setting to bufferModel to none can lead to lower latency, but low-memory devices may not be able to play back the stream without interruptions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsBufferModel.html">M2tsBufferModel</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12ccDescriptorAB0c2CcF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ccDescriptor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12ccDescriptorAB0c2CcF0OSgvp">ccDescriptor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to enabled, generates captionServiceDescriptor in PMT.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ccDescriptor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsCcDescriptor.html">M2tsCcDescriptor</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbNitD0AB03DvbfD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dvbNitSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbNitD0AB03DvbfD0VSgvp">dvbNitSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inserts DVB Network Information Table (NIT) at the specified table repetition interval.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbNitSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbNitSettings.html">DvbNitSettings</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbSdtD0AB03DvbfD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dvbSdtSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbSdtD0AB03DvbfD0VSgvp">dvbSdtSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inserts DVB Service Description Table (SDT) at the specified table repetition interval.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbSdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSdtSettings.html">DvbSdtSettings</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10dvbSubPidsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dvbSubPids" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10dvbSubPidsSSSgvp">dvbSubPids</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) for input source DVB Subtitle data to this output. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values.  Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbSubPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbTdtD0AB03DvbfD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dvbTdtSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbTdtD0AB03DvbfD0VSgvp">dvbTdtSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inserts DVB Time and Date Table (TDT) at the specified table repetition interval.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbTdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbTdtSettings.html">DvbTdtSettings</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,60 +1009,6 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9pcrPeriods5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pcrPeriod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9pcrPeriods5Int32VSgvp">pcrPeriod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Maximum time in milliseconds between Program Clock Reference (PCRs) inserted into the transport stream.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11patIntervals5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/patInterval" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11patIntervals5Int32VSgvp">patInterval</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of milliseconds between instances of this table in the output transport stream.  Valid values are 0, 10..1000.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">patInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:9MediaLiveAAV12M2tsSettingsV4ebifAB0C11EbifControlOSgvp"></a>
                     <a name="//apple_ref/swift/Property/ebif" class="dashAnchor"></a>
                     <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV4ebifAB0C11EbifControlOSgvp">ebif</a>
@@ -1083,33 +1027,6 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ebif</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbifControl.html">M2tsEbifControl</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbNitD0AB03DvbfD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dvbNitSettings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbNitD0AB03DvbfD0VSgvp">dvbNitSettings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Inserts DVB Network Information Table (NIT) at the specified table repetition interval.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbNitSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbNitSettings.html">DvbNitSettings</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,9 +1090,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV8videoPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/videoPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV8videoPidSSSgvp">videoPid</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12ebpPlacementAB0c3EbpF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ebpPlacement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12ebpPlacementAB0c3EbpF0OSgvp">ebpPlacement</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1183,284 +1100,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Packet Identifier (PID) of the elementary video stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+                        <p>Controls placement of EBP on Audio PIDs. If set to videoAndAudioPids, EBP markers will be placed on the video PID and all audio PIDs.  If set to videoPid, EBP markers will be placed on only the video PID.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">videoPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17audioFramesPerPess5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/audioFramesPerPes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17audioFramesPerPess5Int32VSgvp">audioFramesPerPes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of audio frames to insert for each PES packet.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioFramesPerPes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV14etvPlatformPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/etvPlatformPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV14etvPlatformPidSSSgvp">etvPlatformPid</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) for input source ETV Platform data to this output. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">etvPlatformPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10scte27PidsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scte27Pids" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10scte27PidsSSSgvp">scte27Pids</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) for input source SCTE-27 data to this output. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values.  Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte27Pids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbTdtD0AB03DvbfD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dvbTdtSettings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbTdtD0AB03DvbfD0VSgvp">dvbTdtSettings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Inserts DVB Time and Date Table (TDT) at the specified table repetition interval.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbTdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbTdtSettings.html">DvbTdtSettings</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10dvbSubPidsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dvbSubPids" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10dvbSubPidsSSSgvp">dvbSubPids</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) for input source DVB Subtitle data to this output. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values.  Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbSubPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV8rateModeAB0c4RateF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/rateMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV8rateModeAB0c4RateF0OSgvp">rateMode</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When vbr, does not insert null packets into transport stream to fill specified bitrate. The bitrate setting acts as the maximum bitrate when vbr is set.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rateMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsRateMode.html">M2tsRateMode</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10pcrControlAB0c3PcrF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pcrControl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10pcrControlAB0c3PcrF0OSgvp">pcrControl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When set to pcrEveryPesPacket, a Program Clock Reference value is inserted for every Packetized Elementary Stream (PES) header. This parameter is effective only when the PCR PID is the same as the video or audio elementary stream.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsPcrControl.html">M2tsPcrControl</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV15aribCaptionsPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/aribCaptionsPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV15aribCaptionsPidSSSgvp">aribCaptionsPid</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) for ARIB Captions in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aribCaptionsPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11pmtIntervals5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/pmtInterval" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11pmtIntervals5Int32VSgvp">pmtInterval</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of milliseconds between instances of this table in the output transport stream. Valid values are 0, 10..1000.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pmtInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16timedMetadataPidSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timedMetadataPid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16timedMetadataPidSSSgvp">timedMetadataPid</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Packet Identifier (PID) of the timed metadata stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timedMetadataPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ebpPlacement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbpPlacement.html">M2tsEbpPlacement</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1497,9 +1144,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11bufferModelAB0c6BufferF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/bufferModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11bufferModelAB0c6BufferF0OSgvp">bufferModel</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11esRateInPesAB0c2EsfgH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/esRateInPes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11esRateInPesAB0c2EsfgH0OSgvp">esRateInPes</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1507,14 +1154,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If set to multiplex, use multiplex buffer model for accurate interleaving.  Setting to bufferModel to none can lead to lower latency, but low-memory devices may not be able to play back the stream without interruptions.</p>
+                        <p>Include or exclude the ES Rate field in the PES header.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsBufferModel.html">M2tsBufferModel</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">esRateInPes</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEsRateInPes.html">M2tsEsRateInPes</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1524,9 +1171,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9audioPidsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/audioPids" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9audioPidsSSSgvp">audioPids</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV14etvPlatformPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/etvPlatformPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV14etvPlatformPidSSSgvp">etvPlatformPid</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1534,14 +1181,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Packet Identifier (PID) of the elementary audio stream(s) in the transport stream. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values. Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
+                        <p>Packet Identifier (PID) for input source ETV Platform data to this output. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">etvPlatformPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1551,9 +1198,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV19segmentationMarkersAB0c12SegmentationF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/segmentationMarkers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV19segmentationMarkersAB0c12SegmentationF0OSgvp">segmentationMarkers</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12etvSignalPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/etvSignalPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12etvSignalPidSSSgvp">etvSignalPid</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1561,14 +1208,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Inserts segmentation markers at each segmentationTime period. raiSegstart sets the Random Access Indicator bit in the adaptation field. raiAdapt sets the RAI bit and adds the current timecode in the private data bytes. psiSegstart inserts PAT and PMT tables at the start of segments. ebp adds Encoder Boundary Point information to the adaptation field as per OpenCable specification OC-SP-EBP-I01-130118. ebpLegacy adds Encoder Boundary Point information to the adaptation field using a legacy proprietary format.</p>
+                        <p>Packet Identifier (PID) for input source ETV Signal data to this output. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationMarkers.html">M2tsSegmentationMarkers</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">etvSignalPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1578,9 +1225,9 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV7bitrates5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/bitrate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV7bitrates5Int32VSgvp">bitrate</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12fragmentTimeSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fragmentTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12fragmentTimeSdSgvp">fragmentTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1588,14 +1235,14 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The output bitrate of the transport stream in bits per second. Setting to 0 lets the muxer automatically determine the appropriate bitrate.</p>
+                        <p>The length in seconds of each fragment. Only used with EBP markers.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bitrate</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">fragmentTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1623,141 +1270,6 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">klv</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsKlv.html">M2tsKlv</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV13scte35ControlAB0c6Scte35F0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scte35Control" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV13scte35ControlAB0c6Scte35F0OSgvp">scte35Control</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Optionally pass SCTE-35 signals from the input source to this output.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte35Control</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsScte35Control.html">M2tsScte35Control</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10programNums5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/programNum" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10programNums5Int32VSgvp">programNum</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The value of the program number field in the Program Map Table.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">programNum</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV06dvbSdtD0AB03DvbfD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dvbSdtSettings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV06dvbSdtD0AB03DvbfD0VSgvp">dvbSdtSettings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Inserts DVB Service Description Table (SDT) at the specified table repetition interval.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dvbSdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSdtSettings.html">DvbSdtSettings</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17transportStreamIds5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/transportStreamId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17transportStreamIds5Int32VSgvp">transportStreamId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The value of the transport stream ID field in the Program Map Table.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transportStreamId</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV15audioStreamTypeAB0c5AudiofG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/audioStreamType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV15audioStreamTypeAB0c5AudiofG0OSgvp">audioStreamType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When set to atsc, uses stream type = 0x81 for AC3 and stream type = 0x87 for EAC3. When set to dvb, uses stream type = 0x06.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">audioStreamType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioStreamType.html">M2tsAudioStreamType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1821,9 +1333,497 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9MediaLiveAAV12M2tsSettingsV12fragmentTime17segmentationStyle16audioBufferModel11esRateInPes0gF06pmtPid12ccDescriptor21timedMetadataBehavior4arib0w8CaptionsQ7Control016absentInputAudioV006scte35Q009etvSignalQ012ebpPlacement03pcrQ0011dvbTeletextQ09pcrPeriod11patInterval4ebif06dvbNitD016ebpAudioInterval14ebpLookaheadMs05videoQ00i9FramesPerO0011etvPlatformQ010scte27Pids06dvbTdtD010dvbSubPids8rateMode03pcrY00wxQ00P8Interval0tuQ003ecmQ006bufferK00I4Pids0G7Markers7bitrate3klv06scte35Y010programNum06dvbSdtD017transportStreamId0I10StreamType11klvDataPids17nullPacketBitrateADSdSg_AB0c12SegmentationH0OSgAB0c5AudiojK0OSgAB0c2EsmnO0OSgA23_SSSgAB0c2CcS0OSgAB0c5TimeduV0OSgAB0C4AribOSgAB0c4AribxqY0OSgAB0c16AbsentInputAudioV0OSgA33_A33_AB0C12EbpPlacementOSgA33_A33_s5Int32VSgA54_AB0c4EbifY0OSgAB06DvbNitD0VSgAB0C13AudioIntervalOSgA54_A33_A54_A33_A33_AB06DvbTdtD0VSgA33_AB0cM4ModeOSgAB0c3PcrY0OSgA33_A54_A33_A33_AB0cjK0OSgA33_AB0C19SegmentationMarkersOSgA54_AB0C3KlvOSgAB0c6Scte35Y0OSgA54_AB06DvbSdtD0VSgA54_AB0C15AudioStreamTypeOSgA33_A23_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(fragmentTime:segmentationStyle:audioBufferModel:esRateInPes:segmentationTime:pmtPid:ccDescriptor:timedMetadataBehavior:arib:aribCaptionsPidControl:absentInputAudioBehavior:scte35Pid:etvSignalPid:ebpPlacement:pcrPid:dvbTeletextPid:pcrPeriod:patInterval:ebif:dvbNitSettings:ebpAudioInterval:ebpLookaheadMs:videoPid:audioFramesPerPes:etvPlatformPid:scte27Pids:dvbTdtSettings:dvbSubPids:rateMode:pcrControl:aribCaptionsPid:pmtInterval:timedMetadataPid:ecmPid:bufferModel:audioPids:segmentationMarkers:bitrate:klv:scte35Control:programNum:dvbSdtSettings:transportStreamId:audioStreamType:klvDataPids:nullPacketBitrate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV12fragmentTime17segmentationStyle16audioBufferModel11esRateInPes0gF06pmtPid12ccDescriptor21timedMetadataBehavior4arib0w8CaptionsQ7Control016absentInputAudioV006scte35Q009etvSignalQ012ebpPlacement03pcrQ0011dvbTeletextQ09pcrPeriod11patInterval4ebif06dvbNitD016ebpAudioInterval14ebpLookaheadMs05videoQ00i9FramesPerO0011etvPlatformQ010scte27Pids06dvbTdtD010dvbSubPids8rateMode03pcrY00wxQ00P8Interval0tuQ003ecmQ006bufferK00I4Pids0G7Markers7bitrate3klv06scte35Y010programNum06dvbSdtD017transportStreamId0I10StreamType11klvDataPids17nullPacketBitrateADSdSg_AB0c12SegmentationH0OSgAB0c5AudiojK0OSgAB0c2EsmnO0OSgA23_SSSgAB0c2CcS0OSgAB0c5TimeduV0OSgAB0C4AribOSgAB0c4AribxqY0OSgAB0c16AbsentInputAudioV0OSgA33_A33_AB0C12EbpPlacementOSgA33_A33_s5Int32VSgA54_AB0c4EbifY0OSgAB06DvbNitD0VSgAB0C13AudioIntervalOSgA54_A33_A54_A33_A33_AB06DvbTdtD0VSgA33_AB0cM4ModeOSgAB0c3PcrY0OSgA33_A54_A33_A33_AB0cjK0OSgA33_AB0C19SegmentationMarkersOSgA54_AB0C3KlvOSgAB0c6Scte35Y0OSgA54_AB06DvbSdtD0VSgA54_AB0C15AudioStreamTypeOSgA33_A23_tcfc">init(fragmentTime:segmentationStyle:audioBufferModel:esRateInPes:segmentationTime:pmtPid:ccDescriptor:timedMetadataBehavior:arib:aribCaptionsPidControl:absentInputAudioBehavior:scte35Pid:etvSignalPid:ebpPlacement:pcrPid:dvbTeletextPid:pcrPeriod:patInterval:ebif:dvbNitSettings:ebpAudioInterval:ebpLookaheadMs:videoPid:audioFramesPerPes:etvPlatformPid:scte27Pids:dvbTdtSettings:dvbSubPids:rateMode:pcrControl:aribCaptionsPid:pmtInterval:timedMetadataPid:ecmPid:bufferModel:audioPids:segmentationMarkers:bitrate:klv:scte35Control:programNum:dvbSdtSettings:transportStreamId:audioStreamType:klvDataPids:nullPacketBitrate:)</a>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11patIntervals5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/patInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11patIntervals5Int32VSgvp">patInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of milliseconds between instances of this table in the output transport stream.  Valid values are 0, 10..1000.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">patInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10pcrControlAB0c3PcrF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pcrControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10pcrControlAB0c3PcrF0OSgvp">pcrControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to pcrEveryPesPacket, a Program Clock Reference value is inserted for every Packetized Elementary Stream (PES) header. This parameter is effective only when the PCR PID is the same as the video or audio elementary stream.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsPcrControl.html">M2tsPcrControl</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9pcrPeriods5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pcrPeriod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9pcrPeriods5Int32VSgvp">pcrPeriod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum time in milliseconds between Program Clock Reference (PCRs) inserted into the transport stream.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV6pcrPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pcrPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV6pcrPidSSSgvp">pcrPid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) of the Program Clock Reference (PCR) in the transport stream. When no value is given, the encoder will assign the same value as the Video PID. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pcrPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV11pmtIntervals5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pmtInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV11pmtIntervals5Int32VSgvp">pmtInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of milliseconds between instances of this table in the output transport stream. Valid values are 0, 10..1000.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pmtInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV6pmtPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/pmtPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV6pmtPidSSSgvp">pmtPid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) for the Program Map Table (PMT) in the transport stream. Can be entered as a decimal or hexadecimal value. Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">pmtPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10programNums5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/programNum" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10programNums5Int32VSgvp">programNum</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value of the program number field in the Program Map Table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">programNum</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV8rateModeAB0c4RateF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rateMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV8rateModeAB0c4RateF0OSgvp">rateMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When vbr, does not insert null packets into transport stream to fill specified bitrate. The bitrate setting acts as the maximum bitrate when vbr is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rateMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsRateMode.html">M2tsRateMode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV10scte27PidsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scte27Pids" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV10scte27PidsSSSgvp">scte27Pids</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) for input source SCTE-27 data to this output. Multiple values are accepted, and can be entered in ranges and/or by comma separation. Can be entered as decimal or hexadecimal values.  Each PID specified must be in the range of 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte27Pids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV13scte35ControlAB0c6Scte35F0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scte35Control" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV13scte35ControlAB0c6Scte35F0OSgvp">scte35Control</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optionally pass SCTE-35 signals from the input source to this output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte35Control</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsScte35Control.html">M2tsScte35Control</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV9scte35PidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scte35Pid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV9scte35PidSSSgvp">scte35Pid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) of the SCTE-35 stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scte35Pid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV19segmentationMarkersAB0c12SegmentationF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/segmentationMarkers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV19segmentationMarkersAB0c12SegmentationF0OSgvp">segmentationMarkers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inserts segmentation markers at each segmentationTime period. raiSegstart sets the Random Access Indicator bit in the adaptation field. raiAdapt sets the RAI bit and adds the current timecode in the private data bytes. psiSegstart inserts PAT and PMT tables at the start of segments. ebp adds Encoder Boundary Point information to the adaptation field as per OpenCable specification OC-SP-EBP-I01-130118. ebpLegacy adds Encoder Boundary Point information to the adaptation field using a legacy proprietary format.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationMarkers.html">M2tsSegmentationMarkers</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17segmentationStyleAB0c12SegmentationF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/segmentationStyle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17segmentationStyleAB0c12SegmentationF0OSgvp">segmentationStyle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The segmentation style parameter controls how segmentation markers are inserted into the transport stream. With avails, it is possible that segments may be truncated, which can influence where future segmentation markers are inserted.
+When a segmentation style of <q>resetCadence</q> is selected and a segment is truncated due to an avail, we will reset the segmentation cadence. This means the subsequent segment will have a duration of $segmentationTime seconds.
+When a segmentation style of <q>maintainCadence</q> is selected and a segment is truncated due to an avail, we will not reset the segmentation cadence. This means the subsequent segment will likely be truncated as well. However, all segments after that will have a duration of $segmentationTime seconds. Note that EBP lookahead is a slight exception to this rule.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationStyle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationStyle.html">M2tsSegmentationStyle</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16segmentationTimeSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/segmentationTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16segmentationTimeSdSgvp">segmentationTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length in seconds of each segment. Required unless markers is set to None_.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">segmentationTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV21timedMetadataBehaviorAB0c5TimedfG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timedMetadataBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV21timedMetadataBehaviorAB0c5TimedfG0OSgvp">timedMetadataBehavior</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to passthrough, timed metadata will be passed through from input to output.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timedMetadataBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsTimedMetadataBehavior.html">M2tsTimedMetadataBehavior</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV16timedMetadataPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timedMetadataPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV16timedMetadataPidSSSgvp">timedMetadataPid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) of the timed metadata stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timedMetadataPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV17transportStreamIds5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transportStreamId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV17transportStreamIds5Int32VSgvp">transportStreamId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value of the transport stream ID field in the Program Map Table.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">transportStreamId</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV8videoPidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/videoPid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV8videoPidSSSgvp">videoPid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Packet Identifier (PID) of the elementary video stream in the transport stream. Can be entered as a decimal or hexadecimal value.  Valid values are 32 (or 0x20)..8182 (or 0x1ff6).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">videoPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehavior4arib0I11CaptionsPid0ijK7Control16audioBufferModel0M12FramesPerPes0M4Pids0M10StreamType7bitrate06bufferO012ccDescriptor06dvbNitD00z3SdtD00z3SubS00z3TdtD00z8TeletextK04ebif03ebpG8Interval14ebpLookaheadMs12ebpPlacement03ecmK008esRateInR0011etvPlatformK009etvSignalK012fragmentTime3klv07klvDataS017nullPacketBitrate11patInterval03pcrL09pcrPeriod03pcrK011pmtInterval03pmtK010programNum8rateMode06scte27S006scte35L006scte35K019segmentationMarkers17segmentationStyle16segmentationTime013timedMetadataH0013timedMetadataK009transportT2Id05videoK0AdB0c6AbsentfgH0OSg_AB0C4AribOSgSSSgAB0c4AribjkL0OSgAB0cgnO0OSgs5Int32VSgA29_AB0cgtU0OSgA38_AB0cnO0OSgAB0c2CcY0OSgAB06DvbNitD0VSgAB06DvbSdtD0VSgA29_AB06DvbTdtD0VSgA29_AB0c4EbifL0OSgAB0cG8IntervalOSgA38_AB0C12EbpPlacementOSgA29_AB0c8EsRateInR0OSgA29_A29_SdSgAB0C3KlvOSgA29_A69_A38_AB0c3PcrL0OSgA38_A29_A38_A29_A38_AB0C8RateModeOSgA29_AB0c6Scte35L0OSgA29_AB0C19SegmentationMarkersOSgAB0C17SegmentationStyleOSgA69_AB0c13TimedMetadataH0OSgA29_A38_A29_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(absentInputAudioBehavior:arib:aribCaptionsPid:aribCaptionsPidControl:audioBufferModel:audioFramesPerPes:audioPids:audioStreamType:bitrate:bufferModel:ccDescriptor:dvbNitSettings:dvbSdtSettings:dvbSubPids:dvbTdtSettings:dvbTeletextPid:ebif:ebpAudioInterval:ebpLookaheadMs:ebpPlacement:ecmPid:esRateInPes:etvPlatformPid:etvSignalPid:fragmentTime:klv:klvDataPids:nullPacketBitrate:patInterval:pcrControl:pcrPeriod:pcrPid:pmtInterval:pmtPid:programNum:rateMode:scte27Pids:scte35Control:scte35Pid:segmentationMarkers:segmentationStyle:segmentationTime:timedMetadataBehavior:timedMetadataPid:transportStreamId:videoPid:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9MediaLiveAAV12M2tsSettingsV24absentInputAudioBehavior4arib0I11CaptionsPid0ijK7Control16audioBufferModel0M12FramesPerPes0M4Pids0M10StreamType7bitrate06bufferO012ccDescriptor06dvbNitD00z3SdtD00z3SubS00z3TdtD00z8TeletextK04ebif03ebpG8Interval14ebpLookaheadMs12ebpPlacement03ecmK008esRateInR0011etvPlatformK009etvSignalK012fragmentTime3klv07klvDataS017nullPacketBitrate11patInterval03pcrL09pcrPeriod03pcrK011pmtInterval03pmtK010programNum8rateMode06scte27S006scte35L006scte35K019segmentationMarkers17segmentationStyle16segmentationTime013timedMetadataH0013timedMetadataK009transportT2Id05videoK0AdB0c6AbsentfgH0OSg_AB0C4AribOSgSSSgAB0c4AribjkL0OSgAB0cgnO0OSgs5Int32VSgA29_AB0cgtU0OSgA38_AB0cnO0OSgAB0c2CcY0OSgAB06DvbNitD0VSgAB06DvbSdtD0VSgA29_AB06DvbTdtD0VSgA29_AB0c4EbifL0OSgAB0cG8IntervalOSgA38_AB0C12EbpPlacementOSgA29_AB0c8EsRateInR0OSgA29_A29_SdSgAB0C3KlvOSgA29_A69_A38_AB0c3PcrL0OSgA38_A29_A38_A29_A38_AB0C8RateModeOSgA29_AB0c6Scte35L0OSgA29_AB0C19SegmentationMarkersOSgAB0C17SegmentationStyleOSgA69_AB0c13TimedMetadataH0OSgA29_A38_A29_tcfc">init(absentInputAudioBehavior:arib:aribCaptionsPid:aribCaptionsPidControl:audioBufferModel:audioFramesPerPes:audioPids:audioStreamType:bitrate:bufferModel:ccDescriptor:dvbNitSettings:dvbSdtSettings:dvbSubPids:dvbTdtSettings:dvbTeletextPid:ebif:ebpAudioInterval:ebpLookaheadMs:ebpPlacement:ecmPid:esRateInPes:etvPlatformPid:etvSignalPid:fragmentTime:klv:klvDataPids:nullPacketBitrate:patInterval:pcrControl:pcrPeriod:pcrPid:pmtInterval:pmtPid:programNum:rateMode:scte27Pids:scte35Control:scte35Pid:segmentationMarkers:segmentationStyle:segmentationTime:timedMetadataBehavior:timedMetadataPid:transportStreamId:videoPid:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1838,7 +1838,7 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fragmentTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationStyle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationStyle.html">M2tsSegmentationStyle</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioBufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioBufferModel.html">M2tsAudioBufferModel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">esRateInPes</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEsRateInPes.html">M2tsEsRateInPes</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pmtPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ccDescriptor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsCcDescriptor.html">M2tsCcDescriptor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timedMetadataBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsTimedMetadataBehavior.html">M2tsTimedMetadataBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arib</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsArib.html">M2tsArib</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aribCaptionsPidControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAribCaptionsPidControl.html">M2tsAribCaptionsPidControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">absentInputAudioBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAbsentInputAudioBehavior.html">M2tsAbsentInputAudioBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte35Pid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">etvSignalPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpPlacement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbpPlacement.html">M2tsEbpPlacement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbTeletextPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">patInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebif</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbifControl.html">M2tsEbifControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbNitSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbNitSettings.html">DvbNitSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpAudioInterval</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioInterval.html">M2tsAudioInterval</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpLookaheadMs</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">videoPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioFramesPerPes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">etvPlatformPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte27Pids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbTdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbTdtSettings.html">DvbTdtSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbSubPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rateMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsRateMode.html">M2tsRateMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsPcrControl.html">M2tsPcrControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aribCaptionsPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pmtInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timedMetadataPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ecmPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsBufferModel.html">M2tsBufferModel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationMarkers.html">M2tsSegmentationMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bitrate</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">klv</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsKlv.html">M2tsKlv</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte35Control</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsScte35Control.html">M2tsScte35Control</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programNum</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbSdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSdtSettings.html">DvbSdtSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transportStreamId</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioStreamType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioStreamType.html">M2tsAudioStreamType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">klvDataPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nullPacketBitrate</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">absentInputAudioBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAbsentInputAudioBehavior.html">M2tsAbsentInputAudioBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arib</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsArib.html">M2tsArib</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aribCaptionsPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aribCaptionsPidControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAribCaptionsPidControl.html">M2tsAribCaptionsPidControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioBufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioBufferModel.html">M2tsAudioBufferModel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioFramesPerPes</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">audioStreamType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioStreamType.html">M2tsAudioStreamType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bitrate</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bufferModel</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsBufferModel.html">M2tsBufferModel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ccDescriptor</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsCcDescriptor.html">M2tsCcDescriptor</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbNitSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbNitSettings.html">DvbNitSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbSdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbSdtSettings.html">DvbSdtSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbSubPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbTdtSettings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/DvbTdtSettings.html">DvbTdtSettings</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dvbTeletextPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebif</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbifControl.html">M2tsEbifControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpAudioInterval</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsAudioInterval.html">M2tsAudioInterval</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpLookaheadMs</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebpPlacement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEbpPlacement.html">M2tsEbpPlacement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ecmPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">esRateInPes</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsEsRateInPes.html">M2tsEsRateInPes</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">etvPlatformPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">etvSignalPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fragmentTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">klv</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsKlv.html">M2tsKlv</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">klvDataPids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nullPacketBitrate</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">patInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrControl</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsPcrControl.html">M2tsPcrControl</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrPeriod</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pcrPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pmtInterval</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">pmtPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">programNum</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rateMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsRateMode.html">M2tsRateMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte27Pids</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte35Control</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsScte35Control.html">M2tsScte35Control</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scte35Pid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationMarkers</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationMarkers.html">M2tsSegmentationMarkers</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationStyle</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsSegmentationStyle.html">M2tsSegmentationStyle</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">segmentationTime</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timedMetadataBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MediaLive/M2tsTimedMetadataBehavior.html">M2tsTimedMetadataBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timedMetadataPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">transportStreamId</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">videoPid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1850,7 +1850,7 @@ When a segmentation style of <q>maintainCadence</q> is selected and a segment is
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="JobFlowInstancesConfig Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/masterInstanceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceTypeSSSgvp">masterInstanceType</a>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroupsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/additionalMasterSecurityGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroupsSaySSGSgvp">additionalMasterSecurityGroups</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The EC2 instance type of the master node.</p>
+                        <p>A list of additional Amazon EC2 security group IDs for the master node.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">additionalMasterSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV13hadoopVersionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/hadoopVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV13hadoopVersionSSSgvp">hadoopVersion</a>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV10ec2KeyNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ec2KeyName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV10ec2KeyNameSSSgvp">ec2KeyName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,230 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Applies only to Amazon EMR release versions earlier than 4.0. The Hadoop version for the cluster. Valid inputs are <q>0.18</q> (deprecated), <q>0.20</q> (deprecated), <q>0.20.205</q> (deprecated), <q>1.0.3</q>, <q>2.2.0</q>, or <q>2.4.0</q>. If you do not set this value, the default of 0.18 is used, unless the AmiVersion parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used.</p>
+                        <p>The name of the EC2 key pair that can be used to ssh to the master node as the user called <q>hadoop.</q></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hadoopVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV04keepbC16AliveWhenNoStepsSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keepJobFlowAliveWhenNoSteps" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV04keepbC16AliveWhenNoStepsSbSgvp">keepJobFlowAliveWhenNoSteps</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether the cluster should remain available after completing all steps.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keepJobFlowAliveWhenNoSteps</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroupsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/additionalMasterSecurityGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroupsSaySSGSgvp">additionalMasterSecurityGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of additional Amazon EC2 security group IDs for the master node.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">additionalMasterSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV9placementAB13PlacementTypeVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/placement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV9placementAB13PlacementTypeVSgvp">placement</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The Availability Zone in which the cluster runs.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/PlacementType.html">PlacementType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV20terminationProtectedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/terminationProtected" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV20terminationProtectedSbSgvp">terminationProtected</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether to lock the cluster to prevent the Amazon EC2 instances from being terminated by API call, user intervention, or in the event of a job-flow error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">terminationProtected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV26serviceAccessSecurityGroupSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serviceAccessSecurityGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV26serviceAccessSecurityGroupSSSgvp">serviceAccessSecurityGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceAccessSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV13instanceCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV13instanceCounts5Int32VSgvp">instanceCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of EC2 instances in the cluster.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV28emrManagedSlaveSecurityGroupSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/emrManagedSlaveSecurityGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV28emrManagedSlaveSecurityGroupSSSgvp">emrManagedSlaveSecurityGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier of the Amazon EC2 security group for the slave nodes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">emrManagedSlaveSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV12ec2SubnetIdsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ec2SubnetIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV12ec2SubnetIdsSaySSGSgvp">ec2SubnetIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Applies to clusters that use the instance fleet configuration. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet.  The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ec2SubnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ec2KeyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV17slaveInstanceTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/slaveInstanceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV17slaveInstanceTypeSSSgvp">slaveInstanceType</a>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV12ec2SubnetIdsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ec2SubnetIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV12ec2SubnetIdsSaySSGSgvp">ec2SubnetIds</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,68 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The EC2 instance type of the slave nodes.</p>
+                        <p>Applies to clusters that use the instance fleet configuration. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet.  The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slaveInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV10ec2KeyNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ec2KeyName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV10ec2KeyNameSSSgvp">ec2KeyName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the EC2 key pair that can be used to ssh to the master node as the user called <q>hadoop.</q></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ec2KeyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV14instanceFleetsSayAB013InstanceFleetE0VGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceFleets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV14instanceFleetsSayAB013InstanceFleetE0VGSgvp">instanceFleets</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.  Describes the EC2 instances and instance configurations for clusters that use the instance fleet configuration.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceFleets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceFleetConfig.html">InstanceFleetConfig</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ec2SubnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,6 +739,114 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV28emrManagedSlaveSecurityGroupSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/emrManagedSlaveSecurityGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV28emrManagedSlaveSecurityGroupSSSgvp">emrManagedSlaveSecurityGroup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the Amazon EC2 security group for the slave nodes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">emrManagedSlaveSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV13hadoopVersionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hadoopVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV13hadoopVersionSSSgvp">hadoopVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies only to Amazon EMR release versions earlier than 4.0. The Hadoop version for the cluster. Valid inputs are <q>0.18</q> (deprecated), <q>0.20</q> (deprecated), <q>0.20.205</q> (deprecated), <q>1.0.3</q>, <q>2.2.0</q>, or <q>2.4.0</q>. If you do not set this value, the default of 0.18 is used, unless the AmiVersion parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hadoopVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV13instanceCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV13instanceCounts5Int32VSgvp">instanceCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of EC2 instances in the cluster.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV14instanceFleetsSayAB013InstanceFleetE0VGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceFleets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV14instanceFleetsSayAB013InstanceFleetE0VGSgvp">instanceFleets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.  Describes the EC2 instances and instance configurations for clusters that use the instance fleet configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceFleets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceFleetConfig.html">InstanceFleetConfig</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EMRAAV22JobFlowInstancesConfigV14instanceGroupsSayAB013InstanceGroupE0VGSgvp"></a>
                     <a name="//apple_ref/swift/Property/instanceGroups" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV14instanceGroupsSayAB013InstanceGroupE0VGSgvp">instanceGroups</a>
@@ -1036,9 +874,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceType29additionalSlaveSecurityGroups13hadoopVersion04keepbC16AliveWhenNoSteps0i6MasterkL09placement20terminationProtected013serviceAccessK5Group13instanceCount010emrManagedjkZ012ec2SubnetIds11ec2SubnetId05slavegH010ec2KeyName14instanceFleets010emrManagedtkZ008instanceL0ADSSSg_SaySSGSgAVSbSgAxB09PlacementH0VSgAyVs5Int32VSgAvx3VSayAB0g5FleetE0VGSgAVSayAB0gzE0VGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(masterInstanceType:additionalSlaveSecurityGroups:hadoopVersion:keepJobFlowAliveWhenNoSteps:additionalMasterSecurityGroups:placement:terminationProtected:serviceAccessSecurityGroup:instanceCount:emrManagedSlaveSecurityGroup:ec2SubnetIds:ec2SubnetId:slaveInstanceType:ec2KeyName:instanceFleets:emrManagedMasterSecurityGroup:instanceGroups:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceType29additionalSlaveSecurityGroups13hadoopVersion04keepbC16AliveWhenNoSteps0i6MasterkL09placement20terminationProtected013serviceAccessK5Group13instanceCount010emrManagedjkZ012ec2SubnetIds11ec2SubnetId05slavegH010ec2KeyName14instanceFleets010emrManagedtkZ008instanceL0ADSSSg_SaySSGSgAVSbSgAxB09PlacementH0VSgAyVs5Int32VSgAvx3VSayAB0g5FleetE0VGSgAVSayAB0gzE0VGSgtcfc">init(masterInstanceType:additionalSlaveSecurityGroups:hadoopVersion:keepJobFlowAliveWhenNoSteps:additionalMasterSecurityGroups:placement:terminationProtected:serviceAccessSecurityGroup:instanceCount:emrManagedSlaveSecurityGroup:ec2SubnetIds:ec2SubnetId:slaveInstanceType:ec2KeyName:instanceFleets:emrManagedMasterSecurityGroup:instanceGroups:)</a>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV04keepbC16AliveWhenNoStepsSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keepJobFlowAliveWhenNoSteps" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV04keepbC16AliveWhenNoStepsSbSgvp">keepJobFlowAliveWhenNoSteps</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether the cluster should remain available after completing all steps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keepJobFlowAliveWhenNoSteps</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/masterInstanceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV18masterInstanceTypeSSSgvp">masterInstanceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The EC2 instance type of the master node.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">masterInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV9placementAB13PlacementTypeVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/placement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV9placementAB13PlacementTypeVSgvp">placement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Availability Zone in which the cluster runs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/PlacementType.html">PlacementType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV26serviceAccessSecurityGroupSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serviceAccessSecurityGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV26serviceAccessSecurityGroupSSSgvp">serviceAccessSecurityGroup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceAccessSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV17slaveInstanceTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/slaveInstanceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV17slaveInstanceTypeSSSgvp">slaveInstanceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The EC2 instance type of the slave nodes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slaveInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV20terminationProtectedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/terminationProtected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV20terminationProtectedSbSgvp">terminationProtected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether to lock the cluster to prevent the Amazon EC2 instances from being terminated by API call, user intervention, or in the event of a job-flow error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">terminationProtected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroups0f5SlavehI010ec2KeyName0K8SubnetId0kN3Ids010emrManagedgH5Group0qrjhS013hadoopVersion13instanceCount0V6Fleets0vI004keepbC16AliveWhenNoSteps18masterInstanceType9placement013serviceAccesshS017slaveInstanceType20terminationProtectedADSaySSGSg_AWSSSgAxw3Xs5Int32VSgSayAB013InstanceFleetE0VGSgSayAB08InstancesE0VGSgSbSgAxB13PlacementTypeVSgA2XA8_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(additionalMasterSecurityGroups:additionalSlaveSecurityGroups:ec2KeyName:ec2SubnetId:ec2SubnetIds:emrManagedMasterSecurityGroup:emrManagedSlaveSecurityGroup:hadoopVersion:instanceCount:instanceFleets:instanceGroups:keepJobFlowAliveWhenNoSteps:masterInstanceType:placement:serviceAccessSecurityGroup:slaveInstanceType:terminationProtected:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV22JobFlowInstancesConfigV30additionalMasterSecurityGroups0f5SlavehI010ec2KeyName0K8SubnetId0kN3Ids010emrManagedgH5Group0qrjhS013hadoopVersion13instanceCount0V6Fleets0vI004keepbC16AliveWhenNoSteps18masterInstanceType9placement013serviceAccesshS017slaveInstanceType20terminationProtectedADSaySSGSg_AWSSSgAxw3Xs5Int32VSgSayAB013InstanceFleetE0VGSgSayAB08InstancesE0VGSgSbSgAxB13PlacementTypeVSgA2XA8_tcfc">init(additionalMasterSecurityGroups:additionalSlaveSecurityGroups:ec2KeyName:ec2SubnetId:ec2SubnetIds:emrManagedMasterSecurityGroup:emrManagedSlaveSecurityGroup:hadoopVersion:instanceCount:instanceFleets:instanceGroups:keepJobFlowAliveWhenNoSteps:masterInstanceType:placement:serviceAccessSecurityGroup:slaveInstanceType:terminationProtected:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1053,7 +1053,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">masterInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">additionalSlaveSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hadoopVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keepJobFlowAliveWhenNoSteps</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">additionalMasterSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/PlacementType.html">PlacementType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationProtected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceAccessSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emrManagedSlaveSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2SubnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2SubnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">slaveInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2KeyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceFleets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceFleetConfig.html">InstanceFleetConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emrManagedMasterSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceGroupConfig.html">InstanceGroupConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">additionalMasterSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">additionalSlaveSecurityGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2KeyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2SubnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ec2SubnetIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emrManagedMasterSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">emrManagedSlaveSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hadoopVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceFleets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceFleetConfig.html">InstanceFleetConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceGroups</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/InstanceGroupConfig.html">InstanceGroupConfig</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keepJobFlowAliveWhenNoSteps</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">masterInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/PlacementType.html">PlacementType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceAccessSecurityGroup</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">slaveInstanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationProtected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,7 +1065,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="ListShardsInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,87 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV15ListShardsInputV9nextTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nextToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV9nextTokenSSSgvp">nextToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When the number of shards in the data stream is greater than the default value for the MaxResults parameter, or if you explicitly specify a value for MaxResults that is less than the number of shards in the data stream, the response includes a pagination token named NextToken. You can specify this NextToken value in a subsequent call to ListShards to list the next set of shards. Don&rsquo;t specify StreamName or StreamCreationTimestamp if you specify NextToken because the latter unambiguously identifies the stream. You can optionally specify a value for the MaxResults parameter when you specify NextToken. If you specify a MaxResults value that is less than the number of shards that the operation returns if you don&rsquo;t specify MaxResults, the response will contain a new NextToken value. You can use the new NextToken value in a subsequent call to the ListShards operation.  Tokens expire after 300 seconds. When you obtain a value for NextToken in the response to a call to ListShards, you have 300 seconds to use that value. If you specify an expired token in a call to ListShards, you get ExpiredNextTokenException.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV15ListShardsInputV10streamNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/streamName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV10streamNameSSSgvp">streamName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the data stream whose shards you want to list.  You cannot specify this parameter if you specify the NextToken parameter.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7KinesisAAV15ListShardsInputV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/streamCreationTimestamp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVSgvp">streamCreationTimestamp</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specify this input parameter to distinguish data streams that have the same name. For example, if you create a data stream and then delete it, and you later create another data stream with the same name, you can use this input parameter to specify which of the two streams you want to list the shards for. You cannot specify this parameter if you specify the NextToken parameter.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7KinesisAAV15ListShardsInputV21exclusiveStartShardIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/exclusiveStartShardId" class="dashAnchor"></a>
                     <a class="token" href="#/s:7KinesisAAV15ListShardsInputV21exclusiveStartShardIdSSSgvp">exclusiveStartShardId</a>
@@ -712,9 +631,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7KinesisAAV15ListShardsInputV9nextToken10streamName0G17CreationTimestamp21exclusiveStartShardId10maxResultsADSSSg_AJ15AWSSDKSwiftCore9TimeStampVSgAJs5Int32VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(nextToken:streamName:streamCreationTimestamp:exclusiveStartShardId:maxResults:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV9nextToken10streamName0G17CreationTimestamp21exclusiveStartShardId10maxResultsADSSSg_AJ15AWSSDKSwiftCore9TimeStampVSgAJs5Int32VSgtcfc">init(nextToken:streamName:streamCreationTimestamp:exclusiveStartShardId:maxResults:)</a>
+                    <a name="/s:7KinesisAAV15ListShardsInputV9nextTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nextToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV9nextTokenSSSgvp">nextToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When the number of shards in the data stream is greater than the default value for the MaxResults parameter, or if you explicitly specify a value for MaxResults that is less than the number of shards in the data stream, the response includes a pagination token named NextToken. You can specify this NextToken value in a subsequent call to ListShards to list the next set of shards. Don&rsquo;t specify StreamName or StreamCreationTimestamp if you specify NextToken because the latter unambiguously identifies the stream. You can optionally specify a value for the MaxResults parameter when you specify NextToken. If you specify a MaxResults value that is less than the number of shards that the operation returns if you don&rsquo;t specify MaxResults, the response will contain a new NextToken value. You can use the new NextToken value in a subsequent call to the ListShards operation.  Tokens expire after 300 seconds. When you obtain a value for NextToken in the response to a call to ListShards, you have 300 seconds to use that value. If you specify an expired token in a call to ListShards, you get ExpiredNextTokenException.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV15ListShardsInputV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/streamCreationTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV23streamCreationTimestamp15AWSSDKSwiftCore9TimeStampVSgvp">streamCreationTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specify this input parameter to distinguish data streams that have the same name. For example, if you create a data stream and then delete it, and you later create another data stream with the same name, you can use this input parameter to specify which of the two streams you want to list the shards for. You cannot specify this parameter if you specify the NextToken parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV15ListShardsInputV10streamNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/streamName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV10streamNameSSSgvp">streamName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the data stream whose shards you want to list.  You cannot specify this parameter if you specify the NextToken parameter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7KinesisAAV15ListShardsInputV21exclusiveStartShardId10maxResults9nextToken23streamCreationTimestamp0M4NameADSSSg_s5Int32VSgAJ15AWSSDKSwiftCore9TimeStampVSgAJtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exclusiveStartShardId:maxResults:nextToken:streamCreationTimestamp:streamName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7KinesisAAV15ListShardsInputV21exclusiveStartShardId10maxResults9nextToken23streamCreationTimestamp0M4NameADSSSg_s5Int32VSgAJ15AWSSDKSwiftCore9TimeStampVSgAJtcfc">init(exclusiveStartShardId:maxResults:nextToken:streamCreationTimestamp:streamName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -729,7 +729,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">exclusiveStartShardId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">exclusiveStartShardId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxResults</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamCreationTimestamp</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -741,7 +741,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

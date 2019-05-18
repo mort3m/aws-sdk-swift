@@ -14,7 +14,7 @@
     <a title="SecondaryStatusTransition Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessageSSSgvp">statusMessage</a>
+                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime15AWSSDKSwiftCore0G5StampVSgvp">endTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,41 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A detailed description of the progress within a secondary status.  Amazon SageMaker provides secondary statuses and status messages that apply to each of them:  Starting    Starting the training job.   Launching requested ML instances.   Insufficient capacity error from EC2 while launching instances, retrying!   Launched instance was unhealthy, replacing it!   Preparing the instances for training.    Training    Downloading the training image.   Training image download completed. Training in progress.      Status messages are subject to change. Therefore, we recommend not including them in code that programmatically initiates actions. For examples, don&rsquo;t use status messages in if statements.  To have an overview of your training job&rsquo;s progress, view TrainingJobStatus and SecondaryStatus in DescribeTrainingJobResponse, and StatusMessage together. For example, at the start of a training job, you might see the following:    TrainingJobStatus - InProgress    SecondaryStatus - Training    StatusMessage - Downloading the training image</p>
+                        <p>A timestamp that shows when the training job transitioned out of this secondary status state into another secondary status state or when the training job has ended.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV6statusAB0cD0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV6statusAB0cD0Ovp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Contains a secondary status information from a training job. Status might be one of the following secondary statuses:  InProgress     Starting - Starting the training job.    Downloading - An optional stage for algorithms that support File training input mode. It indicates that data is being downloaded to the ML storage volumes.    Training - Training is in progress.    Uploading - Training is complete and the model artifacts are being uploaded to the S3 location.    Completed     Completed - The training job has completed.    Failed     Failed - The training job has failed. The reason for the failure is returned in the FailureReason field of DescribeTrainingJobResponse.    Stopped     MaxRuntimeExceeded - The job stopped because it exceeded the maximum allowed runtime.    Stopped - The training job has stopped.    Stopping     Stopping - Stopping the training job.     We no longer support the following secondary statuses:    LaunchingMLInstances     PreparingTrainingStack     DownloadingTrainingImage</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/SecondaryStatus.html">SecondaryStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/endTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime15AWSSDKSwiftCore0G5StampVSgvp">endTime</a>
+                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV6statusAB0cD0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV6statusAB0cD0Ovp">status</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A timestamp that shows when the training job transitioned out of this secondary status state into another secondary status state or when the training job has ended.</p>
+                        <p>Contains a secondary status information from a training job. Status might be one of the following secondary statuses:  InProgress     Starting - Starting the training job.    Downloading - An optional stage for algorithms that support File training input mode. It indicates that data is being downloaded to the ML storage volumes.    Training - Training is in progress.    Uploading - Training is complete and the model artifacts are being uploaded to the S3 location.    Completed     Completed - The training job has completed.    Failed     Failed - The training job has failed. The reason for the failure is returned in the FailureReason field of DescribeTrainingJobResponse.    Stopped     MaxRuntimeExceeded - The job stopped because it exceeded the maximum allowed runtime.    Stopped - The training job has stopped.    Stopping     Stopping - Stopping the training job.     We no longer support the following secondary statuses:    LaunchingMLInstances     PreparingTrainingStack     DownloadingTrainingImage</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/SecondaryStatus.html">SecondaryStatus</a></span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessage0F09startTime03endI0ADSSSg_AB0cD0O15AWSSDKSwiftCore0I5StampVANSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(statusMessage:status:startTime:endTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessage0F09startTime03endI0ADSSSg_AB0cD0O15AWSSDKSwiftCore0I5StampVANSgtcfc">init(statusMessage:status:startTime:endTime:)</a>
+                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV13statusMessageSSSgvp">statusMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A detailed description of the progress within a secondary status.  Amazon SageMaker provides secondary statuses and status messages that apply to each of them:  Starting    Starting the training job.   Launching requested ML instances.   Insufficient capacity error from EC2 while launching instances, retrying!   Launched instance was unhealthy, replacing it!   Preparing the instances for training.    Training    Downloading the training image.   Training image download completed. Training in progress.      Status messages are subject to change. Therefore, we recommend not including them in code that programmatically initiates actions. For examples, don&rsquo;t use status messages in if statements.  To have an overview of your training job&rsquo;s progress, view TrainingJobStatus and SecondaryStatus in DescribeTrainingJobResponse, and StatusMessage together. For example, at the start of a training job, you might see the following:    TrainingJobStatus - InProgress    SecondaryStatus - Training    StatusMessage - Downloading the training image</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime05startG06status0I7MessageAD15AWSSDKSwiftCore0G5StampVSg_AkB0cD0OSSSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(endTime:startTime:status:statusMessage:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SageMakerAAV25SecondaryStatusTransitionV7endTime05startG06status0I7MessageAD15AWSSDKSwiftCore0G5StampVSg_AkB0cD0OSSSgtcfc">init(endTime:startTime:status:statusMessage:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/SecondaryStatus.html">SecondaryStatus</a></span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SageMaker/SecondaryStatus.html">SecondaryStatus</a></span><span class="p">,</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

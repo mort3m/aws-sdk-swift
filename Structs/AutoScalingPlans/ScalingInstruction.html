@@ -14,7 +14,7 @@
     <a title="ScalingInstruction Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurationsSayAB06TargetF13ConfigurationVGvp"></a>
-                    <a name="//apple_ref/swift/Property/targetTrackingConfigurations" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurationsSayAB06TargetF13ConfigurationVGvp">targetTrackingConfigurations</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecificationAB010CustomizedfgH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/customizedLoadMetricSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecificationAB010CustomizedfgH0VSgvp">customizedLoadMetricSpecification</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The structure that defines new target tracking configurations (up to 10). Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.  With predictive scaling and dynamic scaling, the resource scales based on the target tracking configuration that provides the largest capacity for both scale in and scale out.  Condition: The scaling metric must be unique across target tracking configurations.</p>
+                        <p>The customized load metric to use for predictive scaling. This parameter or a PredefinedLoadMetricSpecification is required when configuring predictive scaling, and cannot be used otherwise.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetTrackingConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/AutoScalingPlans/TargetTrackingConfiguration.html">TargetTrackingConfiguration</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">customizedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/CustomizedLoadMetricSpecification.html">CustomizedLoadMetricSpecification</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV014disableDynamicB0SbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/disableDynamicScaling" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV014disableDynamicB0SbSgvp">disableDynamicScaling</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Controls whether dynamic scaling by AWS Auto Scaling is disabled. When dynamic scaling is enabled, AWS Auto Scaling creates target tracking scaling policies based on the specified target tracking configurations.  The default is enabled (false).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">disableDynamicScaling</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV11maxCapacitys5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/maxCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV11maxCapacitys5Int32Vvp">maxCapacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for PredictiveScalingMaxCapacityBehavior.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxCapacity</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV11minCapacitys5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/minCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV11minCapacitys5Int32Vvp">minCapacity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The minimum capacity of the resource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minCapacity</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV33predefinedLoadMetricSpecificationAB010PredefinedfgH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/predefinedLoadMetricSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV33predefinedLoadMetricSpecificationAB010PredefinedfgH0VSgvp">predefinedLoadMetricSpecification</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The predefined load metric to use for predictive scaling. This parameter or a CustomizedLoadMetricSpecification is required when configuring predictive scaling, and cannot be used otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predefinedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredefinedLoadMetricSpecification.html">PredefinedLoadMetricSpecification</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV27scalingPolicyUpdateBehaviorAB0bfgH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/scalingPolicyUpdateBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV27scalingPolicyUpdateBehaviorAB0bfgH0OSgvp">scalingPolicyUpdateBehavior</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV010predictiveB4ModeAB010PredictivebF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/predictiveScalingMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV010predictiveB4ModeAB010PredictivebF0OSgvp">predictiveScalingMode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,68 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Controls whether a resource&rsquo;s externally created scaling policies are kept or replaced.  The default value is KeepExternalPolicies. If the parameter is set to ReplaceExternalPolicies, any scaling policies that are external to AWS Auto Scaling are deleted and new target tracking scaling policies created.  Only valid when configuring dynamic scaling.  Condition: The number of existing policies to be replaced must be less than or equal to 50. If there are more than 50 policies to be replaced, AWS Auto Scaling keeps all existing policies and does not create new ones.</p>
+                        <p>The predictive scaling mode. The default value is ForecastAndScale. Otherwise, AWS Auto Scaling forecasts capacity but does not create any scheduled scaling actions based on the capacity forecast.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalingPolicyUpdateBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalingPolicyUpdateBehavior.html">ScalingPolicyUpdateBehavior</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV17scalableDimensionAB08ScalableF0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/scalableDimension" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV17scalableDimensionAB08ScalableF0Ovp">scalableDimension</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The scalable dimension associated with the resource.    autoscaling:autoScalingGroup:DesiredCapacity - The desired capacity of an Auto Scaling group.    ecs:service:DesiredCount - The desired task count of an ECS service.    ec2:spot-fleet-request:TargetCapacity - The target capacity of a Spot Fleet request.    dynamodb:table:ReadCapacityUnits - The provisioned read capacity for a DynamoDB table.    dynamodb:table:WriteCapacityUnits - The provisioned write capacity for a DynamoDB table.    dynamodb:index:ReadCapacityUnits - The provisioned read capacity for a DynamoDB global secondary index.    dynamodb:index:WriteCapacityUnits - The provisioned write capacity for a DynamoDB global secondary index.    rds:cluster:ReadReplicaCount - The count of Aurora Replicas in an Aurora DB cluster. Available for Aurora MySQL-compatible edition.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalableDimension.html">ScalableDimension</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecificationAB010CustomizedfgH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/customizedLoadMetricSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecificationAB010CustomizedfgH0VSgvp">customizedLoadMetricSpecification</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The customized load metric to use for predictive scaling. This parameter or a PredefinedLoadMetricSpecification is required when configuring predictive scaling, and cannot be used otherwise.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">customizedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/CustomizedLoadMetricSpecification.html">CustomizedLoadMetricSpecification</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predictiveScalingMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMode.html">PredictiveScalingMode</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV11minCapacitys5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/minCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV11minCapacitys5Int32Vvp">minCapacity</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV17scalableDimensionAB08ScalableF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/scalableDimension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV17scalableDimensionAB08ScalableF0Ovp">scalableDimension</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The minimum capacity of the resource.</p>
+                        <p>The scalable dimension associated with the resource.    autoscaling:autoScalingGroup:DesiredCapacity - The desired capacity of an Auto Scaling group.    ecs:service:DesiredCount - The desired task count of an ECS service.    ec2:spot-fleet-request:TargetCapacity - The target capacity of a Spot Fleet request.    dynamodb:table:ReadCapacityUnits - The provisioned read capacity for a DynamoDB table.    dynamodb:table:WriteCapacityUnits - The provisioned write capacity for a DynamoDB table.    dynamodb:index:ReadCapacityUnits - The provisioned read capacity for a DynamoDB global secondary index.    dynamodb:index:WriteCapacityUnits - The provisioned write capacity for a DynamoDB global secondary index.    rds:cluster:ReadReplicaCount - The count of Aurora Replicas in an Aurora DB cluster. Available for Aurora MySQL-compatible edition.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minCapacity</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalableDimension.html">ScalableDimension</a></span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV11maxCapacitys5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/maxCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV11maxCapacitys5Int32Vvp">maxCapacity</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV27scalingPolicyUpdateBehaviorAB0bfgH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scalingPolicyUpdateBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV27scalingPolicyUpdateBehaviorAB0bfgH0OSgvp">scalingPolicyUpdateBehavior</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,68 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for PredictiveScalingMaxCapacityBehavior.</p>
+                        <p>Controls whether a resource&rsquo;s externally created scaling policies are kept or replaced.  The default value is KeepExternalPolicies. If the parameter is set to ReplaceExternalPolicies, any scaling policies that are external to AWS Auto Scaling are deleted and new target tracking scaling policies created.  Only valid when configuring dynamic scaling.  Condition: The number of existing policies to be replaced must be less than or equal to 50. If there are more than 50 policies to be replaced, AWS Auto Scaling keeps all existing policies and does not create new ones.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxCapacity</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV33predefinedLoadMetricSpecificationAB010PredefinedfgH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/predefinedLoadMetricSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV33predefinedLoadMetricSpecificationAB010PredefinedfgH0VSgvp">predefinedLoadMetricSpecification</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The predefined load metric to use for predictive scaling. This parameter or a CustomizedLoadMetricSpecification is required when configuring predictive scaling, and cannot be used otherwise.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predefinedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredefinedLoadMetricSpecification.html">PredefinedLoadMetricSpecification</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV16serviceNamespaceAB07ServiceF0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/serviceNamespace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV16serviceNamespaceAB07ServiceF0Ovp">serviceNamespace</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The namespace of the AWS service.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ServiceNamespace.html">ServiceNamespace</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scalingPolicyUpdateBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalingPolicyUpdateBehavior.html">ScalingPolicyUpdateBehavior</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV010predictiveB4ModeAB010PredictivebF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/predictiveScalingMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV010predictiveB4ModeAB010PredictivebF0OSgvp">predictiveScalingMode</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV16serviceNamespaceAB07ServiceF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/serviceNamespace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV16serviceNamespaceAB07ServiceF0Ovp">serviceNamespace</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,14 +911,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The predictive scaling mode. The default value is ForecastAndScale. Otherwise, AWS Auto Scaling forecasts capacity but does not create any scheduled scaling actions based on the capacity forecast.</p>
+                        <p>The namespace of the AWS service.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predictiveScalingMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMode.html">PredictiveScalingMode</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ServiceNamespace.html">ServiceNamespace</a></span></code></pre>
 
                         </div>
                       </div>
@@ -928,9 +928,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV014disableDynamicB0SbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/disableDynamicScaling" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV014disableDynamicB0SbSgvp">disableDynamicScaling</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurationsSayAB06TargetF13ConfigurationVGvp"></a>
+                    <a name="//apple_ref/swift/Property/targetTrackingConfigurations" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurationsSayAB06TargetF13ConfigurationVGvp">targetTrackingConfigurations</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -938,14 +938,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Controls whether dynamic scaling by AWS Auto Scaling is disabled. When dynamic scaling is enabled, AWS Auto Scaling creates target tracking scaling policies based on the specified target tracking configurations.  The default is enabled (false).</p>
+                        <p>The structure that defines new target tracking configurations (up to 10). Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.  With predictive scaling and dynamic scaling, the resource scales based on the target tracking configuration that provides the largest capacity for both scale in and scale out.  Condition: The scaling metric must be unique across target tracking configurations.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">disableDynamicScaling</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetTrackingConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/AutoScalingPlans/TargetTrackingConfiguration.html">TargetTrackingConfiguration</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +955,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurations010predictiveB19MaxCapacityBehavior0hbiJ6Buffer019scalingPolicyUpdateK017scalableDimension33customizedLoadMetricSpecification10resourceId03minJ003maxJ0010predefinedstU016serviceNamespace015scheduledActionL4Time0hB4Mode014disableDynamicB0ADSayAB06TargetF13ConfigurationVG_AB010PredictivebijK0OSgs5Int32VSgAB0bnoK0OSgAB08ScalableQ0OAB010CustomizedstU0VSgSSA2zB010PredefinedstU0VSgAB16ServiceNamespaceOA_AB010PredictiveB4ModeOSgSbSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(targetTrackingConfigurations:predictiveScalingMaxCapacityBehavior:predictiveScalingMaxCapacityBuffer:scalingPolicyUpdateBehavior:scalableDimension:customizedLoadMetricSpecification:resourceId:minCapacity:maxCapacity:predefinedLoadMetricSpecification:serviceNamespace:scheduledActionBufferTime:predictiveScalingMode:disableDynamicScaling:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV28targetTrackingConfigurations010predictiveB19MaxCapacityBehavior0hbiJ6Buffer019scalingPolicyUpdateK017scalableDimension33customizedLoadMetricSpecification10resourceId03minJ003maxJ0010predefinedstU016serviceNamespace015scheduledActionL4Time0hB4Mode014disableDynamicB0ADSayAB06TargetF13ConfigurationVG_AB010PredictivebijK0OSgs5Int32VSgAB0bnoK0OSgAB08ScalableQ0OAB010CustomizedstU0VSgSSA2zB010PredefinedstU0VSgAB16ServiceNamespaceOA_AB010PredictiveB4ModeOSgSbSgtcfc">init(targetTrackingConfigurations:predictiveScalingMaxCapacityBehavior:predictiveScalingMaxCapacityBuffer:scalingPolicyUpdateBehavior:scalableDimension:customizedLoadMetricSpecification:resourceId:minCapacity:maxCapacity:predefinedLoadMetricSpecification:serviceNamespace:scheduledActionBufferTime:predictiveScalingMode:disableDynamicScaling:)</a>
+                    <a name="/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecification014disableDynamicB011maxCapacity03minL0010predefinedfgH0010predictiveb3MaxL8Behavior0obpL6Buffer0oB4Mode10resourceId17scalableDimension019scalingPolicyUpdateQ0015scheduledActionR4Time16serviceNamespace28targetTrackingConfigurationsAdB010CustomizedfgH0VSg_SbSgs5Int32VAxB010PredefinedfgH0VSgAB010PredictivebplQ0OSgAXSgAB010PredictivebS0OSgSSAB08ScalableW0OAB0byzQ0OSgA3_AB16ServiceNamespaceOSayAB27TargetTrackingConfigurationVGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(customizedLoadMetricSpecification:disableDynamicScaling:maxCapacity:minCapacity:predefinedLoadMetricSpecification:predictiveScalingMaxCapacityBehavior:predictiveScalingMaxCapacityBuffer:predictiveScalingMode:resourceId:scalableDimension:scalingPolicyUpdateBehavior:scheduledActionBufferTime:serviceNamespace:targetTrackingConfigurations:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16AutoScalingPlansAAV0B11InstructionV33customizedLoadMetricSpecification014disableDynamicB011maxCapacity03minL0010predefinedfgH0010predictiveb3MaxL8Behavior0obpL6Buffer0oB4Mode10resourceId17scalableDimension019scalingPolicyUpdateQ0015scheduledActionR4Time16serviceNamespace28targetTrackingConfigurationsAdB010CustomizedfgH0VSg_SbSgs5Int32VAxB010PredefinedfgH0VSgAB010PredictivebplQ0OSgAXSgAB010PredictivebS0OSgSSAB08ScalableW0OAB0byzQ0OSgA3_AB16ServiceNamespaceOSayAB27TargetTrackingConfigurationVGtcfc">init(customizedLoadMetricSpecification:disableDynamicScaling:maxCapacity:minCapacity:predefinedLoadMetricSpecification:predictiveScalingMaxCapacityBehavior:predictiveScalingMaxCapacityBuffer:predictiveScalingMode:resourceId:scalableDimension:scalingPolicyUpdateBehavior:scheduledActionBufferTime:serviceNamespace:targetTrackingConfigurations:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +972,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">targetTrackingConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/AutoScalingPlans/TargetTrackingConfiguration.html">TargetTrackingConfiguration</a></span><span class="p">],</span> <span class="nv">predictiveScalingMaxCapacityBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMaxCapacityBehavior.html">PredictiveScalingMaxCapacityBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predictiveScalingMaxCapacityBuffer</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalingPolicyUpdateBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalingPolicyUpdateBehavior.html">ScalingPolicyUpdateBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalableDimension.html">ScalableDimension</a></span><span class="p">,</span> <span class="nv">customizedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/CustomizedLoadMetricSpecification.html">CustomizedLoadMetricSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">minCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">maxCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">predefinedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredefinedLoadMetricSpecification.html">PredefinedLoadMetricSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">scheduledActionBufferTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predictiveScalingMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMode.html">PredictiveScalingMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableDynamicScaling</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">customizedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/CustomizedLoadMetricSpecification.html">CustomizedLoadMetricSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableDynamicScaling</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">minCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">predefinedLoadMetricSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredefinedLoadMetricSpecification.html">PredefinedLoadMetricSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predictiveScalingMaxCapacityBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMaxCapacityBehavior.html">PredictiveScalingMaxCapacityBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predictiveScalingMaxCapacityBuffer</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predictiveScalingMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/PredictiveScalingMode.html">PredictiveScalingMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">scalableDimension</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalableDimension.html">ScalableDimension</a></span><span class="p">,</span> <span class="nv">scalingPolicyUpdateBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ScalingPolicyUpdateBehavior.html">ScalingPolicyUpdateBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">scheduledActionBufferTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceNamespace</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AutoScalingPlans/ServiceNamespace.html">ServiceNamespace</a></span><span class="p">,</span> <span class="nv">targetTrackingConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/AutoScalingPlans/TargetTrackingConfiguration.html">TargetTrackingConfiguration</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +984,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

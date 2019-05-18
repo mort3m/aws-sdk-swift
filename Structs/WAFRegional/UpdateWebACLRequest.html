@@ -14,7 +14,7 @@
     <a title="UpdateWebACLRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV7updatesSayAB0C9ACLUpdateVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/updates" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV7updatesSayAB0C9ACLUpdateVGSgvp">updates</a>
+                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeTokenSSvp"></a>
+                    <a name="//apple_ref/swift/Property/changeToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeTokenSSvp">changeToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An array of updates to make to the WebACL. An array of WebACLUpdate objects that you want to insert into or delete from a WebACL. For more information, see the applicable data types:    WebACLUpdate: Contains Action and ActivatedRule     ActivatedRule: Contains Action, OverrideAction, Priority, RuleId, and Type. ActivatedRule|OverrideAction applies only when updating or adding a RuleGroup to a WebACL. In this case you do not use ActivatedRule|Action. For all other update requests, ActivatedRule|Action is used instead of ActivatedRule|OverrideAction.     WafAction: Contains Type</p>
+                        <p>The value returned by the most recent call to GetChangeToken.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updates</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/WAFRegional/WebACLUpdate.html">WebACLUpdate</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">changeToken</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV7updatesSayAB0C9ACLUpdateVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/updates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV7updatesSayAB0C9ACLUpdateVGSgvp">updates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of updates to make to the WebACL. An array of WebACLUpdate objects that you want to insert into or delete from a WebACL. For more information, see the applicable data types:    WebACLUpdate: Contains Action and ActivatedRule     ActivatedRule: Contains Action, OverrideAction, Priority, RuleId, and Type. ActivatedRule|OverrideAction applies only when updating or adding a RuleGroup to a WebACL. In this case you do not use ActivatedRule|Action. For all other update requests, ActivatedRule|Action is used instead of ActivatedRule|OverrideAction.     WafAction: Contains Type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">updates</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/WAFRegional/WebACLUpdate.html">WebACLUpdate</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV8webACLIdSSvp"></a>
                     <a name="//apple_ref/swift/Property/webACLId" class="dashAnchor"></a>
                     <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV8webACLIdSSvp">webACLId</a>
@@ -658,36 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeTokenSSvp"></a>
-                    <a name="//apple_ref/swift/Property/changeToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeTokenSSvp">changeToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The value returned by the most recent call to GetChangeToken.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">changeToken</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV7updates13defaultAction8webACLId11changeTokenADSayAB0C9ACLUpdateVGSg_AB03WafG0VSgS2Stcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(updates:defaultAction:webACLId:changeToken:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV7updates13defaultAction8webACLId11changeTokenADSayAB0C9ACLUpdateVGSg_AB03WafG0VSgS2Stcfc">init(updates:defaultAction:webACLId:changeToken:)</a>
+                    <a name="/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeToken13defaultAction7updates8webACLIdADSS_AB03WafH0VSgSayAB0C9ACLUpdateVGSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(changeToken:defaultAction:updates:webACLId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11WAFRegionalAAV19UpdateWebACLRequestV11changeToken13defaultAction7updates8webACLIdADSS_AB03WafH0VSgSayAB0C9ACLUpdateVGSgSStcfc">init(changeToken:defaultAction:updates:webACLId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">updates</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/WAFRegional/WebACLUpdate.html">WebACLUpdate</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/WAFRegional/UpdateWebACLRequest.html#/s:11WAFRegionalAAV19UpdateWebACLRequestV13defaultActionAB03WafF0VSgvp">defaultAction</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAFRegional/WafAction.html">WafAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">webACLId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">changeToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">changeToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n"><a href="../../Structs/WAFRegional/UpdateWebACLRequest.html#/s:11WAFRegionalAAV19UpdateWebACLRequestV13defaultActionAB03WafF0VSgvp">defaultAction</a></span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAFRegional/WafAction.html">WafAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">updates</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/WAFRegional/WebACLUpdate.html">WebACLUpdate</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">webACLId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

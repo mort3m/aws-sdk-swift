@@ -14,7 +14,7 @@
     <a title="Volume Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV6VolumeV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV6VolumeV4nameSSSgvp">name</a>
+                    <a name="/s:3ECSAAV6VolumeV06dockerB13ConfigurationAB06DockerbD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dockerVolumeConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV6VolumeV06dockerB13ConfigurationAB06DockerbD0VSgvp">dockerVolumeConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the volume. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. This name is referenced in the sourceVolume parameter of container definition mountPoints.</p>
+                        <p>This parameter is specified when you are using Docker volumes. Docker volumes are only supported when you are using the EC2 launch type. Windows containers only support the use of the local driver. To use bind mounts, specify a host instead.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dockerVolumeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DockerVolumeConfiguration.html">DockerVolumeConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV6VolumeV06dockerB13ConfigurationAB06DockerbD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dockerVolumeConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV6VolumeV06dockerB13ConfigurationAB06DockerbD0VSgvp">dockerVolumeConfiguration</a>
+                    <a name="/s:3ECSAAV6VolumeV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV6VolumeV4nameSSSgvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This parameter is specified when you are using Docker volumes. Docker volumes are only supported when you are using the EC2 launch type. Windows containers only support the use of the local driver. To use bind mounts, specify a host instead.</p>
+                        <p>The name of the volume. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. This name is referenced in the sourceVolume parameter of container definition mountPoints.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dockerVolumeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DockerVolumeConfiguration.html">DockerVolumeConfiguration</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3ECSAAV6VolumeV4name4host06dockerB13ConfigurationADSSSg_AB04HostB10PropertiesVSgAB06DockerbF0VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(name:host:dockerVolumeConfiguration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3ECSAAV6VolumeV4name4host06dockerB13ConfigurationADSSSg_AB04HostB10PropertiesVSgAB06DockerbF0VSgtcfc">init(name:host:dockerVolumeConfiguration:)</a>
+                    <a name="/s:3ECSAAV6VolumeV06dockerB13Configuration4host4nameAdB06DockerbD0VSg_AB04HostB10PropertiesVSgSSSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dockerVolumeConfiguration:host:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3ECSAAV6VolumeV06dockerB13Configuration4host4nameAdB06DockerbD0VSg_AB04HostB10PropertiesVSgSSSgtcfc">init(dockerVolumeConfiguration:host:name:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -675,7 +675,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">host</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HostVolumeProperties.html">HostVolumeProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dockerVolumeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DockerVolumeConfiguration.html">DockerVolumeConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dockerVolumeConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/DockerVolumeConfiguration.html">DockerVolumeConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">host</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ECS/HostVolumeProperties.html">HostVolumeProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -687,7 +687,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

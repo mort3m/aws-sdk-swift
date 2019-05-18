@@ -14,7 +14,7 @@
     <a title="IndexFacesRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,60 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11RekognitionAAV17IndexFacesRequestV5imageAB5ImageVvp"></a>
-                    <a name="//apple_ref/swift/Property/image" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV5imageAB5ImageVvp">image</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The input image as base64-encoded bytes or an S3 object. If you use the AWS CLI to call Amazon Rekognition operations, passing base64-encoded image bytes isn&rsquo;t supported.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/Image.html">Image</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11RekognitionAAV17IndexFacesRequestV13qualityFilterAB07QualityF0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/qualityFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV13qualityFilterAB07QualityF0OSgvp">qualityFilter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A filter that specifies how much filtering is done to identify faces that are detected with low quality. Filtered faces aren&rsquo;t indexed. If you specify AUTO, filtering prioritizes the identification of faces that don’t meet the required quality bar chosen by Amazon Rekognition. The quality bar is based on a variety of common use cases. Low-quality detections can occur for a number of reasons. Some examples are an object that&rsquo;s misidentified as a face, a face that&rsquo;s too blurry, or a face with a pose that&rsquo;s too extreme to use. If you specify NONE, no filtering is performed. The default value is AUTO. To use quality filtering, the collection you are using must be associated with version 3 of the face model.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualityFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/QualityFilter.html">QualityFilter</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11RekognitionAAV17IndexFacesRequestV12collectionIdSSvp"></a>
                     <a name="//apple_ref/swift/Property/collectionId" class="dashAnchor"></a>
                     <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV12collectionIdSSvp">collectionId</a>
@@ -649,60 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">collectionId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11RekognitionAAV17IndexFacesRequestV03maxC0s5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/maxFaces" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV03maxC0s5Int32VSgvp">maxFaces</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum number of faces to index. The value of MaxFaces must be greater than or equal to 1. IndexFaces returns no more than 100 detected faces in an image, even if you specify a larger value for MaxFaces. If IndexFaces detects more faces than the value of MaxFaces, the faces with the lowest quality are filtered out first. If there are still more faces than the value of MaxFaces, the faces with the smallest bounding boxes are filtered out (up to the number that&rsquo;s needed to satisfy the value of MaxFaces). Information about the unindexed faces is available in the UnindexedFaces array.  The faces that are returned by IndexFaces are sorted by the largest face bounding box size to the smallest size, in descending order.  MaxFaces can be used with a collection associated with any version of the face model.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxFaces</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11RekognitionAAV17IndexFacesRequestV15externalImageIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/externalImageId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV15externalImageIdSSSgvp">externalImageId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID you want to assign to all the faces detected in the image.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">externalImageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +631,117 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11RekognitionAAV17IndexFacesRequestV5image13qualityFilter12collectionId03maxC0013externalImageI019detectionAttributesAdB0L0V_AB07QualityG0OSgSSs5Int32VSgSSSgSayAB9AttributeOGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(image:qualityFilter:collectionId:maxFaces:externalImageId:detectionAttributes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV5image13qualityFilter12collectionId03maxC0013externalImageI019detectionAttributesAdB0L0V_AB07QualityG0OSgSSs5Int32VSgSSSgSayAB9AttributeOGSgtcfc">init(image:qualityFilter:collectionId:maxFaces:externalImageId:detectionAttributes:)</a>
+                    <a name="/s:11RekognitionAAV17IndexFacesRequestV15externalImageIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/externalImageId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV15externalImageIdSSSgvp">externalImageId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID you want to assign to all the faces detected in the image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">externalImageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11RekognitionAAV17IndexFacesRequestV5imageAB5ImageVvp"></a>
+                    <a name="//apple_ref/swift/Property/image" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV5imageAB5ImageVvp">image</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The input image as base64-encoded bytes or an S3 object. If you use the AWS CLI to call Amazon Rekognition operations, passing base64-encoded image bytes isn&rsquo;t supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/Image.html">Image</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11RekognitionAAV17IndexFacesRequestV03maxC0s5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxFaces" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV03maxC0s5Int32VSgvp">maxFaces</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of faces to index. The value of MaxFaces must be greater than or equal to 1. IndexFaces returns no more than 100 detected faces in an image, even if you specify a larger value for MaxFaces. If IndexFaces detects more faces than the value of MaxFaces, the faces with the lowest quality are filtered out first. If there are still more faces than the value of MaxFaces, the faces with the smallest bounding boxes are filtered out (up to the number that&rsquo;s needed to satisfy the value of MaxFaces). Information about the unindexed faces is available in the UnindexedFaces array.  The faces that are returned by IndexFaces are sorted by the largest face bounding box size to the smallest size, in descending order.  MaxFaces can be used with a collection associated with any version of the face model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxFaces</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11RekognitionAAV17IndexFacesRequestV13qualityFilterAB07QualityF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/qualityFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV13qualityFilterAB07QualityF0OSgvp">qualityFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A filter that specifies how much filtering is done to identify faces that are detected with low quality. Filtered faces aren&rsquo;t indexed. If you specify AUTO, filtering prioritizes the identification of faces that don’t meet the required quality bar chosen by Amazon Rekognition. The quality bar is based on a variety of common use cases. Low-quality detections can occur for a number of reasons. Some examples are an object that&rsquo;s misidentified as a face, a face that&rsquo;s too blurry, or a face with a pose that&rsquo;s too extreme to use. If you specify NONE, no filtering is performed. The default value is AUTO. To use quality filtering, the collection you are using must be associated with version 3 of the face model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualityFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/QualityFilter.html">QualityFilter</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11RekognitionAAV17IndexFacesRequestV12collectionId19detectionAttributes013externalImageF05image03maxC013qualityFilterADSS_SayAB9AttributeOGSgSSSgAB0J0Vs5Int32VSgAB07QualityN0OSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(collectionId:detectionAttributes:externalImageId:image:maxFaces:qualityFilter:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11RekognitionAAV17IndexFacesRequestV12collectionId19detectionAttributes013externalImageF05image03maxC013qualityFilterADSS_SayAB9AttributeOGSgSSSgAB0J0Vs5Int32VSgAB07QualityN0OSgtcfc">init(collectionId:detectionAttributes:externalImageId:image:maxFaces:qualityFilter:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/Image.html">Image</a></span><span class="p">,</span> <span class="nv">qualityFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/QualityFilter.html">QualityFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">maxFaces</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">externalImageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">detectionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Rekognition/Attribute.html">Attribute</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">collectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">detectionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Rekognition/Attribute.html">Attribute</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">externalImageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/Image.html">Image</a></span><span class="p">,</span> <span class="nv">maxFaces</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualityFilter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Rekognition/QualityFilter.html">QualityFilter</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

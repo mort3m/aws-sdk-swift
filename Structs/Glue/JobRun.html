@@ -14,7 +14,7 @@
     <a title="JobRun Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV6JobRunV7timeouts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV7timeouts5Int32VSgvp">timeout</a>
+                    <a name="/s:4GlueAAV6JobRunV17allocatedCapacitys5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/allocatedCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV17allocatedCapacitys5Int32VSgvp">allocatedCapacity</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The JobRun timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated and enters TIMEOUT status. The default is 2,880 minutes (48 hours). This overrides the timeout value set in the parent job.</p>
+                        <p>The number of AWS Glue data processing units (DPUs) allocated to this JobRun. From 2 to 100 DPUs can be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the AWS Glue pricing page.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">allocatedCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV6JobRunV14lastModifiedOn15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/lastModifiedOn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV14lastModifiedOn15AWSSDKSwiftCore9TimeStampVSgvp">lastModifiedOn</a>
+                    <a name="/s:4GlueAAV6JobRunV9argumentsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/arguments" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV9argumentsSDyS2SGSgvp">arguments</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,149 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The last time this job run was modified.</p>
+                        <p>The job arguments associated with this run. These override equivalent default arguments set for the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastModifiedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV13executionTimes5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV13executionTimes5Int32VSgvp">executionTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The amount of time (in seconds) that the job run consumed resources.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV03jobC5StateAB0bcE0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/jobRunState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV03jobC5StateAB0bcE0OSgvp">jobRunState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current state of the job run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobRunState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/JobRunState.html">JobRunState</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV20notificationPropertyAB012NotificationE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/notificationProperty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV20notificationPropertyAB012NotificationE0VSgvp">notificationProperty</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies configuration properties of a job run notification.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationProperty</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/NotificationProperty.html">NotificationProperty</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV9startedOn15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startedOn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV9startedOn15AWSSDKSwiftCore9TimeStampVSgvp">startedOn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time at which this job run was started.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV2idSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV2idSSSgvp">id</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of this job run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,168 +685,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV6JobRunV7jobNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/jobName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV7jobNameSSSgvp">jobName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the job definition being used in this run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV17allocatedCapacitys5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/allocatedCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV17allocatedCapacitys5Int32VSgvp">allocatedCapacity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of AWS Glue data processing units (DPUs) allocated to this JobRun. From 2 to 100 DPUs can be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the AWS Glue pricing page.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">allocatedCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV21securityConfigurationSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV21securityConfigurationSSSgvp">securityConfiguration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the SecurityConfiguration structure to be used with this job run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityConfiguration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV08previousC2IdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/previousRunId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV08previousC2IdSSSgvp">previousRunId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the previous run of this job. For example, the JobRunId specified in the StartJobRun action.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">previousRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV11triggerNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/triggerName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV11triggerNameSSSgvp">triggerName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the trigger that started this job run.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">triggerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4GlueAAV6JobRunV9argumentsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/arguments" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV9argumentsSDyS2SGSgvp">arguments</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The job arguments associated with this run. These override equivalent default arguments set for the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:4GlueAAV6JobRunV12errorMessageSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/errorMessage" class="dashAnchor"></a>
                     <a class="token" href="#/s:4GlueAAV6JobRunV12errorMessageSSSgvp">errorMessage</a>
@@ -1009,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV6JobRunV15predecessorRunsSayAB11PredecessorVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/predecessorRuns" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV15predecessorRunsSayAB11PredecessorVGSgvp">predecessorRuns</a>
+                    <a name="/s:4GlueAAV6JobRunV13executionTimes5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV13executionTimes5Int32VSgvp">executionTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +722,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of predecessors to this job run.</p>
+                        <p>The amount of time (in seconds) that the job run consumed resources.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predecessorRuns</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/Predecessor.html">Predecessor</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV2idSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV2idSSSgvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of this job run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV7jobNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/jobName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV7jobNameSSSgvp">jobName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the job definition being used in this run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV03jobC5StateAB0bcE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/jobRunState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV03jobC5StateAB0bcE0OSgvp">jobRunState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current state of the job run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobRunState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/JobRunState.html">JobRunState</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV14lastModifiedOn15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastModifiedOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV14lastModifiedOn15AWSSDKSwiftCore9TimeStampVSgvp">lastModifiedOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last time this job run was modified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastModifiedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1063,9 +874,198 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4GlueAAV6JobRunV7timeout14lastModifiedOn13executionTime03jobC5State20notificationProperty07startedG02id7attempt09completedG00J4Name17allocatedCapacity21securityConfiguration08previousC2Id07triggerR09arguments12errorMessage15predecessorRuns08logGroupR0ADs5Int32VSg_15AWSSDKSwiftCore0I5StampVSgAyB0bcK0OSgAB012NotificationM0VSgA1_SSSgAYA1_A8_AYA8_A8_A8_SDyS2SGSgA8_SayAB11PredecessorVGSgA8_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(timeout:lastModifiedOn:executionTime:jobRunState:notificationProperty:startedOn:id:attempt:completedOn:jobName:allocatedCapacity:securityConfiguration:previousRunId:triggerName:arguments:errorMessage:predecessorRuns:logGroupName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4GlueAAV6JobRunV7timeout14lastModifiedOn13executionTime03jobC5State20notificationProperty07startedG02id7attempt09completedG00J4Name17allocatedCapacity21securityConfiguration08previousC2Id07triggerR09arguments12errorMessage15predecessorRuns08logGroupR0ADs5Int32VSg_15AWSSDKSwiftCore0I5StampVSgAyB0bcK0OSgAB012NotificationM0VSgA1_SSSgAYA1_A8_AYA8_A8_A8_SDyS2SGSgA8_SayAB11PredecessorVGSgA8_tcfc">init(timeout:lastModifiedOn:executionTime:jobRunState:notificationProperty:startedOn:id:attempt:completedOn:jobName:allocatedCapacity:securityConfiguration:previousRunId:triggerName:arguments:errorMessage:predecessorRuns:logGroupName:)</a>
+                    <a name="/s:4GlueAAV6JobRunV20notificationPropertyAB012NotificationE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/notificationProperty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV20notificationPropertyAB012NotificationE0VSgvp">notificationProperty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies configuration properties of a job run notification.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationProperty</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/NotificationProperty.html">NotificationProperty</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV15predecessorRunsSayAB11PredecessorVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/predecessorRuns" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV15predecessorRunsSayAB11PredecessorVGSgvp">predecessorRuns</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of predecessors to this job run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">predecessorRuns</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/Predecessor.html">Predecessor</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV08previousC2IdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/previousRunId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV08previousC2IdSSSgvp">previousRunId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the previous run of this job. For example, the JobRunId specified in the StartJobRun action.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">previousRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV21securityConfigurationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV21securityConfigurationSSSgvp">securityConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the SecurityConfiguration structure to be used with this job run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityConfiguration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV9startedOn15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startedOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV9startedOn15AWSSDKSwiftCore9TimeStampVSgvp">startedOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time at which this job run was started.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV7timeouts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV7timeouts5Int32VSgvp">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The JobRun timeout in minutes. This is the maximum time that a job run can consume resources before it is terminated and enters TIMEOUT status. The default is 2,880 minutes (48 hours). This overrides the timeout value set in the parent job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV11triggerNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/triggerName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV11triggerNameSSSgvp">triggerName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the trigger that started this job run.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">triggerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4GlueAAV6JobRunV17allocatedCapacity9arguments7attempt11completedOn12errorMessage13executionTime2id7jobName0oC5State012lastModifiedI008logGroupP020notificationProperty15predecessorRuns08previousC2Id21securityConfiguration07startedI07timeout07triggerP0ADs5Int32VSg_SDyS2SGSgAY15AWSSDKSwiftCore0M5StampVSgSSSgAYA4_A4_AB0bcQ0OSgA3_A4_AB012NotificationW0VSgSayAB11PredecessorVGSgA4_A4_A3_AYA4_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(allocatedCapacity:arguments:attempt:completedOn:errorMessage:executionTime:id:jobName:jobRunState:lastModifiedOn:logGroupName:notificationProperty:predecessorRuns:previousRunId:securityConfiguration:startedOn:timeout:triggerName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4GlueAAV6JobRunV17allocatedCapacity9arguments7attempt11completedOn12errorMessage13executionTime2id7jobName0oC5State012lastModifiedI008logGroupP020notificationProperty15predecessorRuns08previousC2Id21securityConfiguration07startedI07timeout07triggerP0ADs5Int32VSg_SDyS2SGSgAY15AWSSDKSwiftCore0M5StampVSgSSSgAYA4_A4_AB0bcQ0OSgA3_A4_AB012NotificationW0VSgSayAB11PredecessorVGSgA4_A4_A3_AYA4_tcfc">init(allocatedCapacity:arguments:attempt:completedOn:errorMessage:executionTime:id:jobName:jobRunState:lastModifiedOn:logGroupName:notificationProperty:predecessorRuns:previousRunId:securityConfiguration:startedOn:timeout:triggerName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1080,7 +1080,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastModifiedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobRunState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/JobRunState.html">JobRunState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationProperty</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/NotificationProperty.html">NotificationProperty</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attempt</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">allocatedCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityConfiguration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">previousRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">triggerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predecessorRuns</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/Predecessor.html">Predecessor</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">allocatedCapacity</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attempt</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionTime</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobRunState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/JobRunState.html">JobRunState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastModifiedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">logGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationProperty</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glue/NotificationProperty.html">NotificationProperty</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">predecessorRuns</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Glue/Predecessor.html">Predecessor</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">previousRunId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityConfiguration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startedOn</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">triggerName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1092,7 +1092,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

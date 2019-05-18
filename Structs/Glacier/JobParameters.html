@@ -14,7 +14,7 @@
     <a title="JobParameters Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7GlacierAAV13JobParametersV18retrievalByteRangeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/retrievalByteRange" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV18retrievalByteRangeSSSgvp">retrievalByteRange</a>
+                    <a name="/s:7GlacierAAV13JobParametersV9archiveIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/archiveId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV9archiveIdSSSgvp">archiveId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,95 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The byte range to retrieve for an archive retrieval. in the form <q>StartByteValue-EndByteValue</q> If not specified, the whole archive is retrieved. If specified, the byte range must be megabyte (1024*1024) aligned which means that StartByteValue must be divisible by 1 MB and EndByteValue plus 1 must be divisible by 1 MB or be the end of the archive specified as the archive byte size value minus 1. If RetrievalByteRange is not megabyte aligned, this operation returns a 400 response.  An error occurs if you specify this field for an inventory retrieval job request.</p>
+                        <p>The ID of the archive that you want to retrieve. This field is required only if Type is set to select or archive-retrievalcode&gt;. An error occurs if you specify this request parameter for an inventory retrieval job request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retrievalByteRange</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7GlacierAAV13JobParametersV4tierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV4tierSSSgvp">tier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The tier to use for a select or an archive retrieval job. Valid values are Expedited, Standard, or Bulk. Standard is the default.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7GlacierAAV13JobParametersV6formatSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/format" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV6formatSSSgvp">format</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When initiating a job to retrieve a vault inventory, you can optionally add this parameter to your request to specify the output format. If you are initiating an inventory job and do not specify a Format field, JSON is the default format. Valid values are <q>CSV</q> and <q>JSON</q>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7GlacierAAV13JobParametersV06selectC0AB06SelectC0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/selectParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV06selectC0AB06SelectC0VSgvp">selectParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Contains the parameters that define a job.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">selectParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/SelectParameters.html">SelectParameters</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">archiveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -703,6 +622,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7GlacierAAV13JobParametersV6formatSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/format" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV6formatSSSgvp">format</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When initiating a job to retrieve a vault inventory, you can optionally add this parameter to your request to specify the output format. If you are initiating an inventory job and do not specify a Format field, JSON is the default format. Valid values are <q>CSV</q> and <q>JSON</q>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7GlacierAAV13JobParametersV4typeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV4typeSSSgvp">type</a>
+                    <a name="/s:7GlacierAAV13JobParametersV18retrievalByteRangeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/retrievalByteRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV18retrievalByteRangeSSSgvp">retrievalByteRange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,41 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The job type. You can initiate a job to perform a select query on an archive, retrieve an archive, or get an inventory of a vault. Valid values are <q>select</q>, <q>archive-retrieval</q> and <q>inventory-retrieval</q>.</p>
+                        <p>The byte range to retrieve for an archive retrieval. in the form <q>StartByteValue-EndByteValue</q> If not specified, the whole archive is retrieved. If specified, the byte range must be megabyte (1024*1024) aligned which means that StartByteValue must be divisible by 1 MB and EndByteValue plus 1 must be divisible by 1 MB or be the end of the archive specified as the archive byte size value minus 1. If RetrievalByteRange is not megabyte aligned, this operation returns a 400 response.  An error occurs if you specify this field for an inventory retrieval job request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7GlacierAAV13JobParametersV9archiveIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/archiveId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV9archiveIdSSSgvp">archiveId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the archive that you want to retrieve. This field is required only if Type is set to select or archive-retrievalcode&gt;. An error occurs if you specify this request parameter for an inventory retrieval job request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">archiveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retrievalByteRange</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +766,90 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7GlacierAAV13JobParametersV18retrievalByteRange4tier6format06selectC011description018inventoryRetrievalC014outputLocation4type9archiveId8sNSTopicADSSSg_A2oB06SelectC0VSgAoB09InventorylB5InputVSgAB06OutputN0VSgA3Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(retrievalByteRange:tier:format:selectParameters:description:inventoryRetrievalParameters:outputLocation:type:archiveId:sNSTopic:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7GlacierAAV13JobParametersV18retrievalByteRange4tier6format06selectC011description018inventoryRetrievalC014outputLocation4type9archiveId8sNSTopicADSSSg_A2oB06SelectC0VSgAoB09InventorylB5InputVSgAB06OutputN0VSgA3Otcfc">init(retrievalByteRange:tier:format:selectParameters:description:inventoryRetrievalParameters:outputLocation:type:archiveId:sNSTopic:)</a>
+                    <a name="/s:7GlacierAAV13JobParametersV06selectC0AB06SelectC0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/selectParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV06selectC0AB06SelectC0VSgvp">selectParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Contains the parameters that define a job.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">selectParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/SelectParameters.html">SelectParameters</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7GlacierAAV13JobParametersV4tierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV4tierSSSgvp">tier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The tier to use for a select or an archive retrieval job. Valid values are Expedited, Standard, or Bulk. Standard is the default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7GlacierAAV13JobParametersV4typeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV4typeSSSgvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The job type. You can initiate a job to perform a select query on an archive, retrieve an archive, or get an inventory of a vault. Valid values are <q>select</q>, <q>archive-retrieval</q> and <q>inventory-retrieval</q>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7GlacierAAV13JobParametersV9archiveId11description6format018inventoryRetrievalC014outputLocation18retrievalByteRange8sNSTopic06selectC04tier4typeADSSSg_A2oB09InventoryiB5InputVSgAB06OutputK0VSgA2oB06SelectC0VSgA2Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(archiveId:description:format:inventoryRetrievalParameters:outputLocation:retrievalByteRange:sNSTopic:selectParameters:tier:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7GlacierAAV13JobParametersV9archiveId11description6format018inventoryRetrievalC014outputLocation18retrievalByteRange8sNSTopic06selectC04tier4typeADSSSg_A2oB09InventoryiB5InputVSgAB06OutputK0VSgA2oB06SelectC0VSgA2Otcfc">init(archiveId:description:format:inventoryRetrievalParameters:outputLocation:retrievalByteRange:sNSTopic:selectParameters:tier:type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">retrievalByteRange</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">selectParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/SelectParameters.html">SelectParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inventoryRetrievalParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/InventoryRetrievalJobInput.html">InventoryRetrievalJobInput</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputLocation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/OutputLocation.html">OutputLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">archiveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sNSTopic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">archiveId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inventoryRetrievalParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/InventoryRetrievalJobInput.html">InventoryRetrievalJobInput</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputLocation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/OutputLocation.html">OutputLocation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retrievalByteRange</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sNSTopic</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">selectParameters</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Glacier/SelectParameters.html">SelectParameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

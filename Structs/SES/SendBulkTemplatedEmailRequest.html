@@ -14,7 +14,7 @@
     <a title="SendBulkTemplatedEmailRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinationsSayAB0cE11DestinationVGvp"></a>
-                    <a name="//apple_ref/swift/Property/destinations" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinationsSayAB0cE11DestinationVGvp">destinations</a>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/configurationSetName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetNameSSSgvp">configurationSetName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more Destination objects. All of the recipients in a Destination will receive the same version of the email. You can specify up to 50 Destination objects within a Destinations array.</p>
+                        <p>The name of the configuration set to use when you send an email using SendBulkTemplatedEmail.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BulkEmailDestination.html">BulkEmailDestination</a></span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV6sourceSSvp"></a>
-                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV6sourceSSvp">source</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The email address that is sending the email. This email address must be either individually verified with Amazon SES, or from a domain that has been verified with Amazon SES. For information about verifying identities, see the Amazon SES Developer Guide. If you are sending on behalf of another user and have been permitted to do so by a sending authorization policy, then you must also specify the SourceArn parameter. For more information about sending authorization, see the Amazon SES Developer Guide.  Amazon SES does not support the SMTPUTF8 extension, as described in RFC6531. For this reason, the local part of a source email address (the part of the email address that precedes the @ sign) may only contain 7-bit ASCII characters. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in RFC3492. The sender name (also known as the friendly name) may contain non-ASCII characters. These characters must be encoded using MIME encoded-word syntax, as described in RFC 2047. MIME encoded-word syntax uses the following form: =?charset?encoding?encoded-text?=.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV8templateSSvp"></a>
-                    <a name="//apple_ref/swift/Property/template" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV8templateSSvp">template</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The template to use when sending this email.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -676,6 +622,60 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/MessageTag.html">MessageTag</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultTemplateData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp">defaultTemplateData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of replacement values to apply to the template when replacement data is not specified in a Destination object. These values act as a default or fallback option when no other data is available. The template data is a JSON object, typically consisting of key-value pairs in which the keys correspond to replacement tags in the email template.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTemplateData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinationsSayAB0cE11DestinationVGvp"></a>
+                    <a name="//apple_ref/swift/Property/destinations" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinationsSayAB0cE11DestinationVGvp">destinations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more Destination objects. All of the recipients in a Destination will receive the same version of the email. You can specify up to 50 Destination objects within a Destinations array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BulkEmailDestination.html">BulkEmailDestination</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV11templateArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/templateArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV11templateArnSSSgvp">templateArn</a>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV13returnPathArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/returnPathArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV13returnPathArnSSSgvp">returnPathArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +749,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ARN of the template to use when sending this email.</p>
+                        <p>This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to use the email address specified in the ReturnPath parameter. For example, if the owner of example.com (which has ARN arn:aws:ses:us-east-1:123456789012:identity/example.com) attaches a policy to it that authorizes you to use <a href="mailto:feedback@example.com">feedback@example.com</a>, then you would specify the ReturnPathArn to be arn:aws:ses:us-east-1:123456789012:identity/example.com, and the ReturnPath to be <a href="mailto:feedback@example.com">feedback@example.com</a>. For more information about sending authorization, see the Amazon SES Developer Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">templateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV6sourceSSvp"></a>
+                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV6sourceSSvp">source</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The email address that is sending the email. This email address must be either individually verified with Amazon SES, or from a domain that has been verified with Amazon SES. For information about verifying identities, see the Amazon SES Developer Guide. If you are sending on behalf of another user and have been permitted to do so by a sending authorization policy, then you must also specify the SourceArn parameter. For more information about sending authorization, see the Amazon SES Developer Guide.  Amazon SES does not support the SMTPUTF8 extension, as described in RFC6531. For this reason, the local part of a source email address (the part of the email address that precedes the @ sign) may only contain 7-bit ASCII characters. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in RFC3492. The sender name (also known as the friendly name) may contain non-ASCII characters. These characters must be encoded using MIME encoded-word syntax, as described in RFC 2047. MIME encoded-word syntax uses the following form: =?charset?encoding?encoded-text?=.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV13returnPathArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/returnPathArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV13returnPathArnSSSgvp">returnPathArn</a>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV8templateSSvp"></a>
+                    <a name="//apple_ref/swift/Property/template" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV8templateSSvp">template</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to use the email address specified in the ReturnPath parameter. For example, if the owner of example.com (which has ARN arn:aws:ses:us-east-1:123456789012:identity/example.com) attaches a policy to it that authorizes you to use <a href="mailto:feedback@example.com">feedback@example.com</a>, then you would specify the ReturnPathArn to be arn:aws:ses:us-east-1:123456789012:identity/example.com, and the ReturnPath to be <a href="mailto:feedback@example.com">feedback@example.com</a>. For more information about sending authorization, see the Amazon SES Developer Guide.</p>
+                        <p>The template to use when sending this email.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/defaultTemplateData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp">defaultTemplateData</a>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV11templateArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/templateArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV11templateArnSSSgvp">templateArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of replacement values to apply to the template when replacement data is not specified in a Destination object. These values act as a default or fallback option when no other data is available. The template data is a JSON object, typically consisting of key-value pairs in which the keys correspond to replacement tags in the email template.</p>
+                        <p>The ARN of the template to use when sending this email.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultTemplateData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">templateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,36 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/configurationSetName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetNameSSSgvp">configurationSetName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the configuration set to use when you send an email using SendBulkTemplatedEmail.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinations6source8template11defaultTags16replyToAddresses10returnPath0I3Arn0hQ00opQ00J12TemplateData20configurationSetNameADSayAB0cE11DestinationVG_S2SSayAB10MessageTagVGSgSaySSGSgSSSgA5Ytcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(destinations:source:template:defaultTags:replyToAddresses:returnPath:templateArn:sourceArn:returnPathArn:defaultTemplateData:configurationSetName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV12destinations6source8template11defaultTags16replyToAddresses10returnPath0I3Arn0hQ00opQ00J12TemplateData20configurationSetNameADSayAB0cE11DestinationVG_S2SSayAB10MessageTagVGSgSaySSGSgSSSgA5Ytcfc">init(destinations:source:template:defaultTags:replyToAddresses:returnPath:templateArn:sourceArn:returnPathArn:defaultTemplateData:configurationSetName:)</a>
+                    <a name="/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetName11defaultTags0J12TemplateData12destinations16replyToAddresses10returnPath0rS3Arn6source0uT08template0vT0ADSSSg_SayAB10MessageTagVGSgAPSayAB0cE11DestinationVGSaySSGSgA2PSSAPSSAPtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configurationSetName:defaultTags:defaultTemplateData:destinations:replyToAddresses:returnPath:returnPathArn:source:sourceArn:template:templateArn:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV29SendBulkTemplatedEmailRequestV20configurationSetName11defaultTags0J12TemplateData12destinations16replyToAddresses10returnPath0rS3Arn6source0uT08template0vT0ADSSSg_SayAB10MessageTagVGSgAPSayAB0cE11DestinationVGSaySSGSgA2PSSAPSSAPtcfc">init(configurationSetName:defaultTags:defaultTemplateData:destinations:replyToAddresses:returnPath:returnPathArn:source:sourceArn:template:templateArn:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BulkEmailDestination.html">BulkEmailDestination</a></span><span class="p">],</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n"><a href="../../Structs/SES/SendBulkTemplatedEmailRequest.html#/s:3SESAAV29SendBulkTemplatedEmailRequestV11defaultTagsSayAB10MessageTagVGSgvp">defaultTags</a></span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/MessageTag.html">MessageTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replyToAddresses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">templateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SES/SendBulkTemplatedEmailRequest.html#/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp">defaultTemplateData</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SES/SendBulkTemplatedEmailRequest.html#/s:3SESAAV29SendBulkTemplatedEmailRequestV11defaultTagsSayAB10MessageTagVGSgvp">defaultTags</a></span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/MessageTag.html">MessageTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n"><a href="../../Structs/SES/SendBulkTemplatedEmailRequest.html#/s:3SESAAV29SendBulkTemplatedEmailRequestV19defaultTemplateDataSSSgvp">defaultTemplateData</a></span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/BulkEmailDestination.html">BulkEmailDestination</a></span><span class="p">],</span> <span class="nv">replyToAddresses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">templateArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

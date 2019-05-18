@@ -14,7 +14,7 @@
     <a title="ModifyReplicationGroupShardConfigurationMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2IdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2IdSSvp">replicationGroupId</a>
+                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediatelySbvp"></a>
+                    <a name="//apple_ref/swift/Property/applyImmediately" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediatelySbvp">applyImmediately</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the Redis (cluster mode enabled) cluster (replication group) on which the shards are to be configured.</p>
+                        <p>Indicates that the shard reconfiguration process begins immediately. At present, the only permitted value for this parameter is true. Value: true</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV010reshardingG0AB010ReshardingG4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/reshardingConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV010reshardingG0AB010ReshardingG4ListVSgvp">reshardingConfiguration</a>
+                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV18nodeGroupsToRemoveAB04NodejkL4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nodeGroupsToRemove" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV18nodeGroupsToRemoveAB04NodejkL4ListVSgvp">nodeGroupsToRemove</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies the preferred availability zones for each node group in the cluster. If the value of NodeGroupCount is greater than the current number of node groups (shards), you can use this parameter to specify the preferred availability zones of the cluster&rsquo;s shards. If you omit this parameter ElastiCache selects availability zones for you. You can specify this parameter only if the value of NodeGroupCount is greater than the current number of node groups (shards).</p>
+                        <p>If the value of NodeGroupCount is less than the current number of node groups (shards), the NodeGroupsToRemove or NodeGroupsToRetain is a required list of node group ids to remove from or retain in the cluster. ElastiCache for Redis will attempt to remove all node groups listed by NodeGroupsToRemove from the cluster.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reshardingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/ReshardingConfigurationList.html">ReshardingConfigurationList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediatelySbvp"></a>
-                    <a name="//apple_ref/swift/Property/applyImmediately" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediatelySbvp">applyImmediately</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates that the shard reconfiguration process begins immediately. At present, the only permitted value for this parameter is true. Value: true</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeGroupsToRemove</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRemoveList.html">NodeGroupsToRemoveList</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV18nodeGroupsToRemoveAB04NodejkL4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nodeGroupsToRemove" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV18nodeGroupsToRemoveAB04NodejkL4ListVSgvp">nodeGroupsToRemove</a>
+                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2IdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/replicationGroupId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2IdSSvp">replicationGroupId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If the value of NodeGroupCount is less than the current number of node groups (shards), the NodeGroupsToRemove or NodeGroupsToRetain is a required list of node group ids to remove from or retain in the cluster. ElastiCache for Redis will attempt to remove all node groups listed by NodeGroupsToRemove from the cluster.</p>
+                        <p>The name of the Redis (cluster mode enabled) cluster (replication group) on which the shards are to be configured.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeGroupsToRemove</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRemoveList.html">NodeGroupsToRemoveList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2Id04nodeE5Count010reshardingG016applyImmediately0K14GroupsToRetain0kpQ6RemoveADSS_s5Int32VAB010ReshardingG4ListVSgSbAB04NodepqrV0VSgAB0wpqsV0VSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(replicationGroupId:nodeGroupCount:reshardingConfiguration:applyImmediately:nodeGroupsToRetain:nodeGroupsToRemove:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV011replicationE2Id04nodeE5Count010reshardingG016applyImmediately0K14GroupsToRetain0kpQ6RemoveADSS_s5Int32VAB010ReshardingG4ListVSgSbAB04NodepqrV0VSgAB0wpqsV0VSgtcfc">init(replicationGroupId:nodeGroupCount:reshardingConfiguration:applyImmediately:nodeGroupsToRetain:nodeGroupsToRemove:)</a>
+                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV010reshardingG0AB010ReshardingG4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/reshardingConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV010reshardingG0AB010ReshardingG4ListVSgvp">reshardingConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the preferred availability zones for each node group in the cluster. If the value of NodeGroupCount is greater than the current number of node groups (shards), you can use this parameter to specify the preferred availability zones of the cluster&rsquo;s shards. If you omit this parameter ElastiCache selects availability zones for you. You can specify this parameter only if the value of NodeGroupCount is greater than the current number of node groups (shards).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reshardingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/ReshardingConfigurationList.html">ReshardingConfigurationList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediately04nodeE5Count0K14GroupsToRemove0kmN6Retain011replicationE2Id010reshardingG0ADSb_s5Int32VAB04NodemnO4ListVSgAB0umnpV0VSgSSAB010ReshardinggV0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(applyImmediately:nodeGroupCount:nodeGroupsToRemove:nodeGroupsToRetain:replicationGroupId:reshardingConfiguration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV47ModifyReplicationGroupShardConfigurationMessageV16applyImmediately04nodeE5Count0K14GroupsToRemove0kmN6Retain011replicationE2Id010reshardingG0ADSb_s5Int32VAB04NodemnO4ListVSgAB0umnpV0VSgSSAB010ReshardinggV0VSgtcfc">init(applyImmediately:nodeGroupCount:nodeGroupsToRemove:nodeGroupsToRetain:replicationGroupId:reshardingConfiguration:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">nodeGroupCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">reshardingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/ReshardingConfigurationList.html">ReshardingConfigurationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">nodeGroupsToRetain</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRetainList.html">NodeGroupsToRetainList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeGroupsToRemove</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRemoveList.html">NodeGroupsToRemoveList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">applyImmediately</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">nodeGroupCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">nodeGroupsToRemove</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRemoveList.html">NodeGroupsToRemoveList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeGroupsToRetain</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/NodeGroupsToRetainList.html">NodeGroupsToRetainList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">replicationGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">reshardingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElastiCache/ReshardingConfigurationList.html">ReshardingConfigurationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

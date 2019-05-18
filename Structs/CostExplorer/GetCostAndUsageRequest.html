@@ -14,7 +14,7 @@
     <a title="GetCostAndUsageRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nextPageToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageTokenSSSgvp">nextPageToken</a>
+                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV6filterAB10ExpressionCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/filter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV6filterAB10ExpressionCSgvp">filter</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,68 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The token to retrieve the next set of results. AWS provides the token when the response from a previous call has more results than the maximum page size.</p>
+                        <p>Filters AWS costs by different dimensions. For example, you can specify SERVICE and LINKED_ACCOUNT and get the costs that are associated with that account&rsquo;s usage of that service. You can nest Expression objects to define any combination of dimension filters. For more information, see Expression.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV7groupBySayAB15GroupDefinitionVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/groupBy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV7groupBySayAB15GroupDefinitionVGSgvp">groupBy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>You can group AWS costs using up to two different groups, either dimensions, tag keys, or both. When you group by tag key, you get all tag values, including empty strings. Valid values are AZ, INSTANCE_TYPE, LEGAL_ENTITY_NAME, LINKED_ACCOUNT, OPERATION, PLATFORM, PURCHASE_TYPE, SERVICE, TAGS, TENANCY, and USAGE_TYPE.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CostExplorer/GroupDefinition.html">GroupDefinition</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV10timePeriodAB12DateIntervalVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timePeriod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV10timePeriodAB12DateIntervalVSgvp">timePeriod</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the start and end dates for retrieving AWS costs. The start date is inclusive, but the end date is exclusive. For example, if start is 2017-01-01 and end is 2017-05-01, then the cost and usage data is retrieved from 2017-01-01 up to and including 2017-04-30 but not including 2017-05-01.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timePeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/DateInterval.html">DateInterval</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Expression.html">Expression</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV7groupBySayAB15GroupDefinitionVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/groupBy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV7groupBySayAB15GroupDefinitionVGSgvp">groupBy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can group AWS costs using up to two different groups, either dimensions, tag keys, or both. When you group by tag key, you get all tag values, including empty strings. Valid values are AZ, INSTANCE_TYPE, LEGAL_ENTITY_NAME, LINKED_ACCOUNT, OPERATION, PLATFORM, PURCHASE_TYPE, SERVICE, TAGS, TENANCY, and USAGE_TYPE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CostExplorer/GroupDefinition.html">GroupDefinition</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV7metricsSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/metrics" class="dashAnchor"></a>
                     <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV7metricsSaySSGSgvp">metrics</a>
@@ -712,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV6filterAB10ExpressionCSgvp"></a>
-                    <a name="//apple_ref/swift/Property/filter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV6filterAB10ExpressionCSgvp">filter</a>
+                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nextPageToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageTokenSSSgvp">nextPageToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Filters AWS costs by different dimensions. For example, you can specify SERVICE and LINKED_ACCOUNT and get the costs that are associated with that account&rsquo;s usage of that service. You can nest Expression objects to define any combination of dimension filters. For more information, see Expression.</p>
+                        <p>The token to retrieve the next set of results. AWS provides the token when the response from a previous call has more results than the maximum page size.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Expression.html">Expression</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageToken7groupBy10timePeriod11granularity7metrics6filterADSSSg_SayAB15GroupDefinitionVGSgAB12DateIntervalVSgAB11GranularityOSgSaySSGSgAB10ExpressionCSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(nextPageToken:groupBy:timePeriod:granularity:metrics:filter:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV13nextPageToken7groupBy10timePeriod11granularity7metrics6filterADSSSg_SayAB15GroupDefinitionVGSgAB12DateIntervalVSgAB11GranularityOSgSaySSGSgAB10ExpressionCSgtcfc">init(nextPageToken:groupBy:timePeriod:granularity:metrics:filter:)</a>
+                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV10timePeriodAB12DateIntervalVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timePeriod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV10timePeriodAB12DateIntervalVSgvp">timePeriod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the start and end dates for retrieving AWS costs. The start date is inclusive, but the end date is exclusive. For example, if start is 2017-01-01 and end is 2017-05-01, then the cost and usage data is retrieved from 2017-01-01 up to and including 2017-04-30 but not including 2017-05-01.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timePeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/DateInterval.html">DateInterval</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12CostExplorerAAV03GetA15AndUsageRequestV6filter11granularity7groupBy7metrics13nextPageToken10timePeriodAdB10ExpressionCSg_AB11GranularityOSgSayAB15GroupDefinitionVGSgSaySSGSgSSSgAB12DateIntervalVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(filter:granularity:groupBy:metrics:nextPageToken:timePeriod:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12CostExplorerAAV03GetA15AndUsageRequestV6filter11granularity7groupBy7metrics13nextPageToken10timePeriodAdB10ExpressionCSg_AB11GranularityOSgSayAB15GroupDefinitionVGSgSaySSGSgSSSgAB12DateIntervalVSgtcfc">init(filter:granularity:groupBy:metrics:nextPageToken:timePeriod:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CostExplorer/GroupDefinition.html">GroupDefinition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timePeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/DateInterval.html">DateInterval</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">granularity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Granularity.html">Granularity</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Expression.html">Expression</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Expression.html">Expression</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">granularity</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/Granularity.html">Granularity</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">groupBy</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CostExplorer/GroupDefinition.html">GroupDefinition</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metrics</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nextPageToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timePeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CostExplorer/DateInterval.html">DateInterval</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

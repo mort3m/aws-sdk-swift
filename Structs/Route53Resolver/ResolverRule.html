@@ -14,7 +14,7 @@
     <a title="ResolverRule Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV11shareStatusAB05ShareE0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/shareStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV11shareStatusAB05ShareE0OSgvp">shareStatus</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV3arnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/arn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV3arnSSSgvp">arn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.</p>
+                        <p>The ARN (Amazon Resource Name) for the resolver rule specified by Id.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shareStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ShareStatus.html">ShareStatus</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV13statusMessageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV13statusMessageSSSgvp">statusMessage</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV16creatorRequestIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/creatorRequestId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV16creatorRequestIdSSSgvp">creatorRequestId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A detailed description of the status of a resolver rule.</p>
+                        <p>A unique string that you specified when you created the resolver rule. CreatorRequestIdidentifies the request and allows failed requests to be retried without the risk of executing the operation twice.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creatorRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV10domainNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/domainName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV10domainNameSSSgvp">domainName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps. If a query matches multiple resolver rules (example.com and <a href="http://www.example.com">www.example.com</a>), the query is routed using the resolver rule that contains the most specific domain name (<a href="http://www.example.com">www.example.com</a>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV8ruleTypeAB0cE6OptionOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ruleType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV8ruleTypeAB0cE6OptionOSgvp">ruleType</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV4nameSSSgvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This value is always FORWARD. Other resolver rule types aren&rsquo;t supported.</p>
+                        <p>The name for the resolver rule, which you specified when you created the resolver rule.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ruleType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/RuleTypeOption.html">RuleTypeOption</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV3arnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/arn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV3arnSSSgvp">arn</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV8ruleTypeAB0cE6OptionOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ruleType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV8ruleTypeAB0cE6OptionOSgvp">ruleType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +776,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ARN (Amazon Resource Name) for the resolver rule specified by Id.</p>
+                        <p>This value is always FORWARD. Other resolver rule types aren&rsquo;t supported.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ruleType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/RuleTypeOption.html">RuleTypeOption</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV11shareStatusAB05ShareE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/shareStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV11shareStatusAB05ShareE0OSgvp">shareStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">shareStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ShareStatus.html">ShareStatus</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV10domainNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/domainName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV10domainNameSSSgvp">domainName</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV13statusMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV13statusMessageSSSgvp">statusMessage</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +857,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps. If a query matches multiple resolver rules (example.com and <a href="http://www.example.com">www.example.com</a>), the query is routed using the resolver rule that contains the most specific domain name (<a href="http://www.example.com">www.example.com</a>).</p>
+                        <p>A detailed description of the status of a resolver rule.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,63 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV16creatorRequestIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/creatorRequestId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV16creatorRequestIdSSSgvp">creatorRequestId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A unique string that you specified when you created the resolver rule. CreatorRequestIdidentifies the request and allows failed requests to be retried without the risk of executing the operation twice.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creatorRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV4nameSSSgvp">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name for the resolver rule, which you specified when you created the resolver rule.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:15Route53ResolverAAV0B4RuleV11shareStatus13statusMessage2id8ruleType7ownerId016resolverEndpointL03arn0F010domainName9targetIps014creatorRequestL04nameAdB05ShareE0OSg_SSSgAtB0cJ6OptionOSgA3tB0bcE0OSgATSayAB13TargetAddressVGSgA2Ttcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(shareStatus:statusMessage:id:ruleType:ownerId:resolverEndpointId:arn:status:domainName:targetIps:creatorRequestId:name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV11shareStatus13statusMessage2id8ruleType7ownerId016resolverEndpointL03arn0F010domainName9targetIps014creatorRequestL04nameAdB05ShareE0OSg_SSSgAtB0cJ6OptionOSgA3tB0bcE0OSgATSayAB13TargetAddressVGSgA2Ttcfc">init(shareStatus:statusMessage:id:ruleType:ownerId:resolverEndpointId:arn:status:domainName:targetIps:creatorRequestId:name:)</a>
+                    <a name="/s:15Route53ResolverAAV0B4RuleV3arn16creatorRequestId10domainName2id4name05ownerG0016resolverEndpointG08ruleType11shareStatus6status0S7Message9targetIpsADSSSg_A6qB0cP6OptionOSgAB05ShareR0OSgAB0bcR0OSgAQSayAB13TargetAddressVGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arn:creatorRequestId:domainName:id:name:ownerId:resolverEndpointId:ruleType:shareStatus:status:statusMessage:targetIps:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15Route53ResolverAAV0B4RuleV3arn16creatorRequestId10domainName2id4name05ownerG0016resolverEndpointG08ruleType11shareStatus6status0S7Message9targetIpsADSSSg_A6qB0cP6OptionOSgAB05ShareR0OSgAB0bcR0OSgAQSayAB13TargetAddressVGSgtcfc">init(arn:creatorRequestId:domainName:id:name:ownerId:resolverEndpointId:ruleType:shareStatus:status:statusMessage:targetIps:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -918,7 +918,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">shareStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ShareStatus.html">ShareStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ruleType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/RuleTypeOption.html">RuleTypeOption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resolverEndpointId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ResolverRuleStatus.html">ResolverRuleStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetIps</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Route53Resolver/TargetAddress.html">TargetAddress</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creatorRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creatorRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resolverEndpointId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ruleType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/RuleTypeOption.html">RuleTypeOption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">shareStatus</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ShareStatus.html">ShareStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Route53Resolver/ResolverRuleStatus.html">ResolverRuleStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetIps</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Route53Resolver/TargetAddress.html">TargetAddress</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -930,7 +930,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

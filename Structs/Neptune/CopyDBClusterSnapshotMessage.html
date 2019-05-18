@@ -14,7 +14,7 @@
     <a title="CopyDBClusterSnapshotMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/kmsKeyId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyIdSSSgvp">kmsKeyId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The AWS AWS KMS key ID for an encrypted DB cluster snapshot. The KMS key ID is the Amazon Resource Name (ARN), KMS key identifier, or the KMS key alias for the KMS encryption key.  If you copy an unencrypted DB cluster snapshot and specify a value for the KmsKeyId parameter, Amazon Neptune encrypts the target DB cluster snapshot using the specified KMS encryption key.  If you copy an encrypted DB cluster snapshot from your AWS account, you can specify a value for KmsKeyId to encrypt the copy with a new KMS encryption key. If you don&rsquo;t specify a value for KmsKeyId, then the copy of the DB cluster snapshot is encrypted with the same KMS key as the source DB cluster snapshot.  If you copy an encrypted DB cluster snapshot that is shared from another AWS account, then you must specify a value for KmsKeyId.  To copy an encrypted DB cluster snapshot to another AWS Region, you must set KmsKeyId to the KMS key ID you want to use to encrypt the copy of the DB cluster snapshot in the destination AWS Region. KMS encryption keys are specific to the AWS Region that they are created in, and you can&rsquo;t use encryption keys from one AWS Region in another AWS Region.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8copyTagsSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/copyTags" class="dashAnchor"></a>
                     <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8copyTagsSbSgvp">copyTags</a>
@@ -631,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06sourcecD10IdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceDBClusterSnapshotIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06sourcecD10IdentifierSSvp">sourceDBClusterSnapshotIdentifier</a>
+                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/kmsKeyId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyIdSSSgvp">kmsKeyId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identifier of the DB cluster snapshot to copy. This parameter is not case-sensitive. You can&rsquo;t copy an encrypted, shared DB cluster snapshot from one AWS Region to another. Constraints:   Must specify a valid system snapshot in the <q>available</q> state.   If the source snapshot is in the same AWS Region as the copy, specify a valid DB snapshot identifier.   If the source snapshot is in a different AWS Region than the copy, specify a valid DB cluster snapshot ARN.    Example: my-cluster-snapshot1</p>
+                        <p>The AWS AWS KMS key ID for an encrypted DB cluster snapshot. The KMS key ID is the Amazon Resource Name (ARN), KMS key identifier, or the KMS key alias for the KMS encryption key.  If you copy an unencrypted DB cluster snapshot and specify a value for the KmsKeyId parameter, Amazon Neptune encrypts the target DB cluster snapshot using the specified KMS encryption key.  If you copy an encrypted DB cluster snapshot from your AWS account, you can specify a value for KmsKeyId to encrypt the copy with a new KMS encryption key. If you don&rsquo;t specify a value for KmsKeyId, then the copy of the DB cluster snapshot is encrypted with the same KMS key as the source DB cluster snapshot.  If you copy an encrypted DB cluster snapshot that is shared from another AWS account, then you must specify a value for KmsKeyId.  To copy an encrypted DB cluster snapshot to another AWS Region, you must set KmsKeyId to the KMS key ID you want to use to encrypt the copy of the DB cluster snapshot in the destination AWS Region. KMS encryption keys are specific to the AWS Region that they are created in, and you can&rsquo;t use encryption keys from one AWS Region in another AWS Region.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06targetcD10IdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/targetDBClusterSnapshotIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06targetcD10IdentifierSSvp">targetDBClusterSnapshotIdentifier</a>
+                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06sourcecD10IdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceDBClusterSnapshotIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06sourcecD10IdentifierSSvp">sourceDBClusterSnapshotIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identifier of the new DB cluster snapshot to create from the source DB cluster snapshot. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster-snapshot2</p>
+                        <p>The identifier of the DB cluster snapshot to copy. This parameter is not case-sensitive. You can&rsquo;t copy an encrypted, shared DB cluster snapshot from one AWS Region to another. Constraints:   Must specify a valid system snapshot in the <q>available</q> state.   If the source snapshot is in the same AWS Region as the copy, specify a valid DB snapshot identifier.   If the source snapshot is in a different AWS Region than the copy, specify a valid DB cluster snapshot ARN.    Example: my-cluster-snapshot1</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyId8copyTags06sourcecD10Identifier12preSignedUrl06targetcdL04tagsADSSSg_SbSgSSAKSSAB7TagListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(kmsKeyId:copyTags:sourceDBClusterSnapshotIdentifier:preSignedUrl:targetDBClusterSnapshotIdentifier:tags:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8kmsKeyId8copyTags06sourcecD10Identifier12preSignedUrl06targetcdL04tagsADSSSg_SbSgSSAKSSAB7TagListVSgtcfc">init(kmsKeyId:copyTags:sourceDBClusterSnapshotIdentifier:preSignedUrl:targetDBClusterSnapshotIdentifier:tags:)</a>
+                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06targetcD10IdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/targetDBClusterSnapshotIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV06targetcD10IdentifierSSvp">targetDBClusterSnapshotIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the new DB cluster snapshot to create from the source DB cluster snapshot. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster-snapshot2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8copyTags8kmsKeyId12preSignedUrl06sourcecD10Identifier4tags06targetcdO0ADSbSg_SSSgALSSAB7TagListVSgSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(copyTags:kmsKeyId:preSignedUrl:sourceDBClusterSnapshotIdentifier:tags:targetDBClusterSnapshotIdentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7NeptuneAAV28CopyDBClusterSnapshotMessageV8copyTags8kmsKeyId12preSignedUrl06sourcecD10Identifier4tags06targetcdO0ADSbSg_SSSgALSSAB7TagListVSgSStcfc">init(copyTags:kmsKeyId:preSignedUrl:sourceDBClusterSnapshotIdentifier:tags:targetDBClusterSnapshotIdentifier:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">copyTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">copyTags</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preSignedUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Neptune/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBClusterSnapshotIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

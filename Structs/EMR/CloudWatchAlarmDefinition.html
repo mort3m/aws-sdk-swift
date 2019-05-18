@@ -14,7 +14,7 @@
     <a title="CloudWatchAlarmDefinition Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV6periods5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/period" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV6periods5Int32Vvp">period</a>
+                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV17evaluationPeriodss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/evaluationPeriods" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV17evaluationPeriodss5Int32VSgvp">evaluationPeriods</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The period, in seconds, over which the statistic is applied. EMR CloudWatch metrics are emitted every five minutes (300 seconds), so if an EMR CloudWatch metric is specified, specify 300.</p>
+                        <p>The number of periods, expressed in seconds using Period, during which the alarm condition must exist before the alarm triggers automatic scaling activity. The default value is 1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV17evaluationPeriodss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/evaluationPeriods" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV17evaluationPeriodss5Int32VSgvp">evaluationPeriods</a>
+                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV9namespaceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV9namespaceSSSgvp">namespace</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +695,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The number of periods, expressed in seconds using Period, during which the alarm condition must exist before the alarm triggers automatic scaling activity. The default value is 1.</p>
+                        <p>The namespace for the CloudWatch metric. The default is AWS/ElasticMapReduce.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV6periods5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/period" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV6periods5Int32Vvp">period</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The period, in seconds, over which the statistic is applied. EMR CloudWatch metrics are emitted every five minutes (300 seconds), so if an EMR CloudWatch metric is specified, specify 300.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV9statisticAB9StatisticOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statistic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV9statisticAB9StatisticOSgvp">statistic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The statistic to apply to the metric associated with the alarm. The default is AVERAGE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Statistic.html">Statistic</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,63 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV9namespaceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV9namespaceSSSgvp">namespace</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The namespace for the CloudWatch metric. The default is AWS/ElasticMapReduce.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV9statisticAB9StatisticOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statistic" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV9statisticAB9StatisticOSgvp">statistic</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The statistic to apply to the metric associated with the alarm. The default is AVERAGE.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Statistic.html">Statistic</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV18comparisonOperator10dimensions6period10metricName17evaluationPeriods9threshold4unit9namespace9statisticAdB010ComparisonG0O_SayAB15MetricDimensionVGSgs5Int32VSSAUSgSdAB4UnitOSgSSSgAB9StatisticOSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(comparisonOperator:dimensions:period:metricName:evaluationPeriods:threshold:unit:namespace:statistic:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV18comparisonOperator10dimensions6period10metricName17evaluationPeriods9threshold4unit9namespace9statisticAdB010ComparisonG0O_SayAB15MetricDimensionVGSgs5Int32VSSAUSgSdAB4UnitOSgSSSgAB9StatisticOSgtcfc">init(comparisonOperator:dimensions:period:metricName:evaluationPeriods:threshold:unit:namespace:statistic:)</a>
+                    <a name="/s:3EMRAAV25CloudWatchAlarmDefinitionV18comparisonOperator10dimensions17evaluationPeriods10metricName9namespace6period9statistic9threshold4unitAdB010ComparisonG0O_SayAB15MetricDimensionVGSgs5Int32VSgS2SSgAuB9StatisticOSgSdAB4UnitOSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(comparisonOperator:dimensions:evaluationPeriods:metricName:namespace:period:statistic:threshold:unit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV25CloudWatchAlarmDefinitionV18comparisonOperator10dimensions17evaluationPeriods10metricName9namespace6period9statistic9threshold4unitAdB010ComparisonG0O_SayAB15MetricDimensionVGSgs5Int32VSgS2SSgAuB9StatisticOSgSdAB4UnitOSgtcfc">init(comparisonOperator:dimensions:evaluationPeriods:metricName:namespace:period:statistic:threshold:unit:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">comparisonOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/ComparisonOperator.html">ComparisonOperator</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/MetricDimension.html">MetricDimension</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Unit.html">Unit</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Statistic.html">Statistic</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">comparisonOperator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/ComparisonOperator.html">ComparisonOperator</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/EMR/MetricDimension.html">MetricDimension</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">evaluationPeriods</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">metricName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">period</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">statistic</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Statistic.html">Statistic</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">threshold</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/Unit.html">Unit</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

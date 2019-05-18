@@ -14,7 +14,7 @@
     <a title="Origin Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV6OriginV02s3C6ConfigAB02S3cE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/s3OriginConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV6OriginV02s3C6ConfigAB02S3cE0VSgvp">s3OriginConfig</a>
+                    <a name="/s:10CloudFrontAAV6OriginV06customC6ConfigAB06CustomcE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/customOriginConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV6OriginV06customC6ConfigAB06CustomcE0VSgvp">customOriginConfig</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A complex type that contains information about the Amazon S3 origin. If the origin is a custom origin, use the CustomOriginConfig element instead.</p>
+                        <p>A complex type that contains information about a custom origin. If the origin is an Amazon S3 bucket, use the S3OriginConfig element instead.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3OriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/S3OriginConfig.html">S3OriginConfig</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">customOriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomOriginConfig.html">CustomOriginConfig</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,60 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV6OriginV10originPathSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/originPath" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV6OriginV10originPathSSSgvp">originPath</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin. When you include the OriginPath element, specify the directory name, beginning with a /. CloudFront appends the directory name to the value of DomainName, for example, example.com/production. Do not include a / at the end of the directory name. For example, suppose you&rsquo;ve specified the following values for your distribution:    DomainName: An Amazon S3 bucket named myawsbucket.    OriginPath: /production     CNAME: example.com    When a user enters example.com/index.html in a browser, CloudFront sends a request to Amazon S3 for myawsbucket/production/index.html. When a user enters example.com/acme/index.html in a browser, CloudFront sends a request to Amazon S3 for myawsbucket/production/acme/index.html.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">originPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10CloudFrontAAV6OriginV06customC6ConfigAB06CustomcE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/customOriginConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV6OriginV06customC6ConfigAB06CustomcE0VSgvp">customOriginConfig</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A complex type that contains information about a custom origin. If the origin is an Amazon S3 bucket, use the S3OriginConfig element instead.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">customOriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomOriginConfig.html">CustomOriginConfig</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10CloudFrontAAV6OriginV2idSSvp"></a>
                     <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
                     <a class="token" href="#/s:10CloudFrontAAV6OriginV2idSSvp">id</a>
@@ -739,9 +685,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10CloudFrontAAV6OriginV13customHeaders02s3C6Config10domainName10originPath0dcG02idAdB06CustomE0VSg_AB02S3cG0VSgS2SSgAB0mcG0VSgSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(customHeaders:s3OriginConfig:domainName:originPath:customOriginConfig:id:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10CloudFrontAAV6OriginV13customHeaders02s3C6Config10domainName10originPath0dcG02idAdB06CustomE0VSg_AB02S3cG0VSgS2SSgAB0mcG0VSgSStcfc">init(customHeaders:s3OriginConfig:domainName:originPath:customOriginConfig:id:)</a>
+                    <a name="/s:10CloudFrontAAV6OriginV10originPathSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/originPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV6OriginV10originPathSSSgvp">originPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin. When you include the OriginPath element, specify the directory name, beginning with a /. CloudFront appends the directory name to the value of DomainName, for example, example.com/production. Do not include a / at the end of the directory name. For example, suppose you&rsquo;ve specified the following values for your distribution:    DomainName: An Amazon S3 bucket named myawsbucket.    OriginPath: /production     CNAME: example.com    When a user enters example.com/index.html in a browser, CloudFront sends a request to Amazon S3 for myawsbucket/production/index.html. When a user enters example.com/acme/index.html in a browser, CloudFront sends a request to Amazon S3 for myawsbucket/production/acme/index.html.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">originPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudFrontAAV6OriginV02s3C6ConfigAB02S3cE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/s3OriginConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV6OriginV02s3C6ConfigAB02S3cE0VSgvp">s3OriginConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A complex type that contains information about the Amazon S3 origin. If the origin is a custom origin, use the CustomOriginConfig element instead.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3OriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/S3OriginConfig.html">S3OriginConfig</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10CloudFrontAAV6OriginV13customHeaders0dC6Config10domainName2id10originPath02s3cF0AdB06CustomE0VSg_AB0mcF0VSgS3SSgAB02S3cF0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(customHeaders:customOriginConfig:domainName:id:originPath:s3OriginConfig:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10CloudFrontAAV6OriginV13customHeaders0dC6Config10domainName2id10originPath02s3cF0AdB06CustomE0VSg_AB0mcF0VSgS3SSgAB02S3cF0VSgtcfc">init(customHeaders:customOriginConfig:domainName:id:originPath:s3OriginConfig:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">customHeaders</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomHeaders.html">CustomHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3OriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/S3OriginConfig.html">S3OriginConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">originPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">customOriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomOriginConfig.html">CustomOriginConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">customHeaders</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomHeaders.html">CustomHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">customOriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/CustomOriginConfig.html">CustomOriginConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">originPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3OriginConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CloudFront/S3OriginConfig.html">S3OriginConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

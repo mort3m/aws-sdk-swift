@@ -14,7 +14,7 @@
     <a title="ByteMatchTuple Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3WAFAAV14ByteMatchTupleV18textTransformationAB04TextF0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/textTransformation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV18textTransformationAB04TextF0Ovp">textTransformation</a>
+                    <a name="/s:3WAFAAV14ByteMatchTupleV20positionalConstraintAB010PositionalF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/positionalConstraint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV20positionalConstraintAB010PositionalF0Ovp">positionalConstraint</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on TargetString before inspecting a request for a match. You can only specify a single type of TextTransformation.  CMD_LINE  When you&rsquo;re concerned that attackers are injecting an operating system command line command and using unusual formatting to disguise some or all of the command, use this option to perform the following transformations:   Delete the following characters: \ <q>&lsquo; ^   Delete spaces before the following characters: / (   Replace the following characters with a space: , ;   Replace multiple spaces with one space   Convert uppercase letters (A-Z) to lowercase (a-z)    COMPRESS_WHITE_SPACE  Use this option to replace the following characters with a space character (decimal 32):   \f, formfeed, decimal 12   \t, tab, decimal 9   \n, newline, decimal 10   \r, carriage return, decimal 13   \v, vertical tab, decimal 11   non-breaking space, decimal 160    COMPRESS_WHITE_SPACE also replaces multiple spaces with one space.  HTML_ENTITY_DECODE  Use this option to replace HTML-encoded characters with unencoded characters. HTML_ENTITY_DECODE performs the following operations:   Replaces (ampersand)quot; with</q>    Replaces (ampersand)nbsp; with a non-breaking space, decimal 160   Replaces (ampersand)lt; with a <q>less than</q> symbol   Replaces (ampersand)gt; with &gt;    Replaces characters that are represented in hexadecimal format, (ampersand)#xhhhh;, with the corresponding characters   Replaces characters that are represented in decimal format, (ampersand)#nnnn;, with the corresponding characters    LOWERCASE  Use this option to convert uppercase letters (A-Z) to lowercase (a-z).  URL_DECODE  Use this option to decode a URL-encoded value.  NONE  Specify NONE if you don&rsquo;t want to perform any text transformations.</p>
+                        <p>Within the portion of a web request that you want to search (for example, in the query string, if any), specify where you want AWS WAF to search. Valid values include the following:  CONTAINS  The specified part of the web request must include the value of TargetString, but the location doesn&rsquo;t matter.  CONTAINS_WORD  The specified part of the web request must include the value of TargetString, and TargetString must contain only alphanumeric characters or underscore (A-Z, a-z, 0-9, or <em>). In addition, TargetString must be a word, which means one of the following:    TargetString exactly matches the value of the specified part of the web request, such as the value of a header.    TargetString is at the beginning of the specified part of the web request and is followed by a character other than an alphanumeric character or underscore (</em>), for example, BadBot;.    TargetString is at the end of the specified part of the web request and is preceded by a character other than an alphanumeric character or underscore (<em>), for example, ;BadBot.    TargetString is in the middle of the specified part of the web request and is preceded and followed by characters other than alphanumeric characters or underscore (</em>), for example, -BadBot;.    EXACTLY  The value of the specified part of the web request must exactly match the value of TargetString.  STARTS_WITH  The value of TargetString must appear at the beginning of the specified part of the web request.  ENDS_WITH  The value of TargetString must appear at the end of the specified part of the web request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">textTransformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/TextTransformation.html">TextTransformation</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">positionalConstraint</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/PositionalConstraint.html">PositionalConstraint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3WAFAAV14ByteMatchTupleV20positionalConstraintAB010PositionalF0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/positionalConstraint" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV20positionalConstraintAB010PositionalF0Ovp">positionalConstraint</a>
+                    <a name="/s:3WAFAAV14ByteMatchTupleV18textTransformationAB04TextF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/textTransformation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV18textTransformationAB04TextF0Ovp">textTransformation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Within the portion of a web request that you want to search (for example, in the query string, if any), specify where you want AWS WAF to search. Valid values include the following:  CONTAINS  The specified part of the web request must include the value of TargetString, but the location doesn&rsquo;t matter.  CONTAINS_WORD  The specified part of the web request must include the value of TargetString, and TargetString must contain only alphanumeric characters or underscore (A-Z, a-z, 0-9, or <em>). In addition, TargetString must be a word, which means one of the following:    TargetString exactly matches the value of the specified part of the web request, such as the value of a header.    TargetString is at the beginning of the specified part of the web request and is followed by a character other than an alphanumeric character or underscore (</em>), for example, BadBot;.    TargetString is at the end of the specified part of the web request and is preceded by a character other than an alphanumeric character or underscore (<em>), for example, ;BadBot.    TargetString is in the middle of the specified part of the web request and is preceded and followed by characters other than alphanumeric characters or underscore (</em>), for example, -BadBot;.    EXACTLY  The value of the specified part of the web request must exactly match the value of TargetString.  STARTS_WITH  The value of TargetString must appear at the beginning of the specified part of the web request.  ENDS_WITH  The value of TargetString must appear at the end of the specified part of the web request.</p>
+                        <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on TargetString before inspecting a request for a match. You can only specify a single type of TextTransformation.  CMD_LINE  When you&rsquo;re concerned that attackers are injecting an operating system command line command and using unusual formatting to disguise some or all of the command, use this option to perform the following transformations:   Delete the following characters: \ <q>&lsquo; ^   Delete spaces before the following characters: / (   Replace the following characters with a space: , ;   Replace multiple spaces with one space   Convert uppercase letters (A-Z) to lowercase (a-z)    COMPRESS_WHITE_SPACE  Use this option to replace the following characters with a space character (decimal 32):   \f, formfeed, decimal 12   \t, tab, decimal 9   \n, newline, decimal 10   \r, carriage return, decimal 13   \v, vertical tab, decimal 11   non-breaking space, decimal 160    COMPRESS_WHITE_SPACE also replaces multiple spaces with one space.  HTML_ENTITY_DECODE  Use this option to replace HTML-encoded characters with unencoded characters. HTML_ENTITY_DECODE performs the following operations:   Replaces (ampersand)quot; with</q>    Replaces (ampersand)nbsp; with a non-breaking space, decimal 160   Replaces (ampersand)lt; with a <q>less than</q> symbol   Replaces (ampersand)gt; with &gt;    Replaces characters that are represented in hexadecimal format, (ampersand)#xhhhh;, with the corresponding characters   Replaces characters that are represented in decimal format, (ampersand)#nnnn;, with the corresponding characters    LOWERCASE  Use this option to convert uppercase letters (A-Z) to lowercase (a-z).  URL_DECODE  Use this option to decode a URL-encoded value.  NONE  Specify NONE if you don&rsquo;t want to perform any text transformations.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">positionalConstraint</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/PositionalConstraint.html">PositionalConstraint</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">textTransformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/TextTransformation.html">TextTransformation</a></span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3WAFAAV14ByteMatchTupleV07fieldToC018textTransformation12targetString20positionalConstraintAdB05FieldfC0V_AB04TextH0O10Foundation4DataVAB010PositionalL0Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(fieldToMatch:textTransformation:targetString:positionalConstraint:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV07fieldToC018textTransformation12targetString20positionalConstraintAdB05FieldfC0V_AB04TextH0O10Foundation4DataVAB010PositionalL0Otcfc">init(fieldToMatch:textTransformation:targetString:positionalConstraint:)</a>
+                    <a name="/s:3WAFAAV14ByteMatchTupleV07fieldToC020positionalConstraint12targetString18textTransformationAdB05FieldfC0V_AB010PositionalH0O10Foundation4DataVAB04TextL0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(fieldToMatch:positionalConstraint:targetString:textTransformation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3WAFAAV14ByteMatchTupleV07fieldToC020positionalConstraint12targetString18textTransformationAdB05FieldfC0V_AB010PositionalH0O10Foundation4DataVAB04TextL0Otcfc">init(fieldToMatch:positionalConstraint:targetString:textTransformation:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fieldToMatch</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/FieldToMatch.html">FieldToMatch</a></span><span class="p">,</span> <span class="nv">textTransformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/TextTransformation.html">TextTransformation</a></span><span class="p">,</span> <span class="nv">targetString</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">positionalConstraint</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/PositionalConstraint.html">PositionalConstraint</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fieldToMatch</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/FieldToMatch.html">FieldToMatch</a></span><span class="p">,</span> <span class="nv">positionalConstraint</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/PositionalConstraint.html">PositionalConstraint</a></span><span class="p">,</span> <span class="nv">targetString</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">textTransformation</span><span class="p">:</span> <span class="kt"><a href="../../Structs/WAF/TextTransformation.html">TextTransformation</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

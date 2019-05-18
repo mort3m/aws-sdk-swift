@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (45% documented)</p>
+        <p><a href="index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -546,23 +546,28 @@ This library doesn&rsquo;t depend on Objective-C Runtime, So you can use this wi
 <tr>
 <th></th>
 <th style="text-align: center"><strong>Swift 4.2</strong></th>
+<th style="text-align: center"><strong>Swift 5.0</strong></th>
 </tr>
 </thead><tbody>
 <tr>
 <td><strong>macOS</strong></td>
 <td style="text-align: center">○</td>
+<td style="text-align: center">○</td>
 </tr>
 <tr>
 <td><strong>Ubuntu 14.04</strong></td>
+<td style="text-align: center">○</td>
 <td style="text-align: center">○</td>
 </tr>
 <tr>
 <td><strong>Ubuntu 16.04</strong></td>
 <td style="text-align: center">○</td>
+<td style="text-align: center">○</td>
 </tr>
 <tr>
 <td><strong>Ubuntu 18.04</strong></td>
 <td style="text-align: center">○</td>
+<td style="text-align: center"></td>
 </tr>
 </tbody></table>
 <h2 id='documentation' class='heading'>Documentation</h2>
@@ -577,7 +582,7 @@ This library doesn&rsquo;t depend on Objective-C Runtime, So you can use this wi
 <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">name</span><span class="p">:</span> <span class="s">"MyAWSApp"</span><span class="p">,</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/swift-aws/aws-sdk-swift.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.2"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/swift-aws/aws-sdk-swift.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"3.0.0"</span><span class="p">)</span>
     <span class="p">],</span>
     <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
       <span class="o">.</span><span class="nf">target</span><span class="p">(</span>
@@ -643,6 +648,50 @@ AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 <span class="p">)</span>
 </code></pre>
 <h2 id='using-the-code-aws-sdk-swift-code' class='heading'>Using the <code>aws-sdk-swift</code></h2>
+
+<p>AWS Swift Modules can be imported into any swift project. Each module provides a struct that can be initialized, with instance methods to call aws services. See documentation for details on specific services.</p>
+
+<p>The underlying aws-sdk-swift httpclient returns a <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html">swift-nio EventLoopFuture object</a>. An EvenLoopFuture <em>is not</em> the response, but rather a container object that will be populated with the response sometime later. In this manner calls to aws do not block the main thread.</p>
+
+<p>However, operations that require inspection or use of the response require code to be written in a slightly different manner that equivalent synchronous logic. There are numerous references available online to aid in understanding this concept.</p>
+
+<p>The recommended manner to interact with futures is chaining.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">S3</span> <span class="c1">//ensure this module is specified as a dependency in your package.swift</span>
+<span class="kd">import</span> <span class="kt">NIO</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">bucket</span> <span class="o">=</span> <span class="s">"my-bucket"</span>
+
+    <span class="k">let</span> <span class="nv">s3</span> <span class="o">=</span> <span class="kt">S3</span><span class="p">(</span>
+        <span class="nv">accessKeyId</span><span class="p">:</span> <span class="s">"Your-Access-Key"</span><span class="p">,</span>
+        <span class="nv">secretAccessKey</span><span class="p">:</span> <span class="s">"Your-Secret-Key"</span><span class="p">,</span>
+        <span class="nv">region</span><span class="p">:</span> <span class="o">.</span><span class="n">uswest2</span>
+    <span class="p">)</span>
+
+    <span class="c1">// Create Bucket, Put an Object, Get the Object</span>
+    <span class="k">let</span> <span class="nv">createBucketRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">CreateBucketRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">)</span>
+
+    <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">createBucket</span><span class="p">(</span><span class="n">createBucketRequest</span><span class="p">)</span><span class="o">.</span><span class="n">thenThrowing</span> <span class="p">{</span> <span class="n">response</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">S3</span><span class="o">.</span><span class="kt">PutObjectOutput</span><span class="o">&gt;</span> <span class="k">in</span>
+        <span class="c1">// Upload text file to the s3</span>
+        <span class="k">let</span> <span class="nv">bodyData</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
+        <span class="k">let</span> <span class="nv">putObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">PutObjectRequest</span><span class="p">(</span><span class="nv">acl</span><span class="p">:</span> <span class="o">.</span><span class="n">publicRead</span><span class="p">,</span> <span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">,</span> <span class="nv">contentLength</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">(</span><span class="n">bodyData</span><span class="o">.</span><span class="n">count</span><span class="p">),</span> <span class="nv">body</span><span class="p">:</span> <span class="n">bodyData</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">putObject</span><span class="p">(</span><span class="n">putObjectRequest</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">thenThrowing</span> <span class="p">{</span> <span class="n">response</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">S3</span><span class="o">.</span><span class="kt">GetObjectOutput</span><span class="o">&gt;</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">getObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">GetObjectRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">getObject</span><span class="p">(</span><span class="n">getObjectRequest</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">futureResponse</span> <span class="k">in</span>
+        <span class="n">futureResponse</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+          <span class="k">if</span> <span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">{</span>
+              <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">body</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">))</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Or you can use the nested method</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">S3</span> <span class="c1">//ensure this module is specified as a dependency in your package.swift</span>
 
 <span class="k">do</span> <span class="p">{</span>
@@ -651,27 +700,96 @@ AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
     <span class="k">let</span> <span class="nv">s3</span> <span class="o">=</span> <span class="kt">S3</span><span class="p">(</span>
         <span class="nv">accessKeyId</span><span class="p">:</span> <span class="s">"Your-Access-Key"</span><span class="p">,</span>
         <span class="nv">secretAccessKey</span><span class="p">:</span> <span class="s">"Your-Secret-Key"</span><span class="p">,</span>
-        <span class="nv">region</span><span class="p">:</span> <span class="o">.</span><span class="n">apnortheast1</span>
+        <span class="nv">region</span><span class="p">:</span> <span class="o">.</span><span class="n">uswest1</span>
     <span class="p">)</span>
 
-    <span class="c1">// Create Bucket</span>
+    <span class="c1">// Create Bucket, Put an Object, Get the Object</span>
     <span class="k">let</span> <span class="nv">createBucketRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">CreateBucketRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">)</span>
-    <span class="n">_</span> <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">createBucket</span><span class="p">(</span><span class="n">createBucketRequest</span><span class="p">)</span>
 
-    <span class="c1">// Upload text file to the s3</span>
-    <span class="k">let</span> <span class="nv">bodyData</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
-    <span class="k">let</span> <span class="nv">putObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">PutObjectRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">,</span> <span class="nv">contentLength</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">(</span><span class="n">bodyData</span><span class="o">.</span><span class="n">count</span><span class="p">),</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="n">bodyData</span><span class="p">,</span> <span class="nv">acl</span><span class="p">:</span> <span class="o">.</span><span class="n">publicRead</span><span class="p">)</span>
-    <span class="n">_</span> <span class="o">=</span> <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">putObject</span><span class="p">(</span><span class="n">putObjectRequest</span><span class="p">)</span>
+    <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">createBucket</span><span class="p">(</span><span class="n">createBucketRequest</span><span class="p">)</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">bodyData</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span>
+            <span class="k">let</span> <span class="nv">putObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">PutObjectRequest</span><span class="p">(</span><span class="nv">acl</span><span class="p">:</span> <span class="o">.</span><span class="n">publicRead</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="n">bodyData</span><span class="p">,</span> <span class="nv">contentLength</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">(</span><span class="n">bodyData</span><span class="o">.</span><span class="n">count</span><span class="p">),</span> <span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">)</span>
 
-    <span class="c1">// Get text file from s3</span>
-    <span class="k">let</span> <span class="nv">getObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">GetObjectRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">)</span>
-    <span class="k">let</span> <span class="nv">getObjectOutput</span> <span class="o">=</span> <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">getObject</span><span class="p">(</span><span class="n">getObjectRequest</span><span class="p">)</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="n">getObjectOutput</span><span class="o">.</span><span class="n">body</span> <span class="p">{</span>
-      <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">body</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">))</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+            <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">putObject</span><span class="p">(</span><span class="n">putObjectRequest</span><span class="p">)</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+                <span class="k">do</span> <span class="p">{</span>
+                    <span class="k">let</span> <span class="nv">getObjectRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">GetObjectRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"hello.txt"</span><span class="p">)</span>
+                    <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">getObject</span><span class="p">(</span><span class="n">getObjectRequest</span><span class="p">)</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+                        <span class="k">if</span> <span class="k">let</span> <span class="nv">body</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">{</span>
+                            <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">body</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">))</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">}</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">}</span>
+     <span class="p">}</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">}</span>
+</code></pre>
+<h2 id='using-the-code-aws-sdk-swift-code-with-vapor' class='heading'>Using the <code>aws-sdk-swift</code> with Vapor</h2>
+
+<p>Integration with vapor is pretty straight forward.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Vapor</span>
+<span class="kd">import</span> <span class="kt">HTTP</span>
+<span class="kd">import</span> <span class="kt">SES</span>
+
+<span class="kd">final</span> <span class="kd">class</span> <span class="kt">MyController</span> <span class="p">{</span>
+
+     <span class="kd">func</span> <span class="nf">sendUserEmailFromJSON</span><span class="p">(</span><span class="n">_</span> <span class="nv">req</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">HTTPStatus</span><span class="o">&gt;</span> <span class="p">{</span>
+
+          <span class="k">return</span> <span class="k">try</span> <span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">EmailData</span><span class="o">.</span><span class="k">self</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">emailData</span> <span class="k">in</span>
+              <span class="k">return</span> <span class="n">emailData</span>
+          <span class="p">}</span><span class="o">.</span><span class="nf">flatMap</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="kt">HTTPStatus</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">emailData</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">HTTPStatus</span><span class="o">&gt;</span> <span class="k">in</span>
+              <span class="k">do</span> <span class="p">{</span>
+                  <span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="kt">SES</span><span class="p">(</span>
+                      <span class="nv">accessKeyId</span><span class="p">:</span> <span class="s">"Your-Access-Key"</span><span class="p">,</span>
+                      <span class="nv">secretAccessKey</span><span class="p">:</span> <span class="s">"Your-Secret-Key"</span><span class="p">,</span>
+                      <span class="nv">region</span><span class="p">:</span> <span class="o">.</span><span class="n">uswest1</span>
+                  <span class="p">)</span>
+
+                  <span class="k">let</span> <span class="nv">sendEmailRequest</span> <span class="o">=</span> <span class="kt">SES</span><span class="o">.</span><span class="kt">SendEmailRequest</span><span class="p">(</span>
+                      <span class="nv">destination</span><span class="p">:</span> <span class="n">emailData</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+                      <span class="nv">message</span><span class="p">:</span> <span class="n">emailData</span><span class="o">.</span><span class="n">message</span>
+                  <span class="p">)</span>
+
+                  <span class="k">return</span> <span class="k">try</span> <span class="n">client</span><span class="o">.</span><span class="nf">sendEmail</span><span class="p">(</span><span class="n">sendEmailRequest</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">hopTo</span><span class="p">(</span><span class="nv">eventLoop</span><span class="p">:</span> <span class="n">req</span><span class="o">.</span><span class="n">eventLoop</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">response</span> <span class="o">-&gt;</span> <span class="kt">HTTPResponseStatus</span> <span class="k">in</span>
+                      <span class="c1">// print(response)</span>
+                      <span class="k">return</span> <span class="kt">HTTPStatus</span><span class="o">.</span><span class="n">ok</span>
+                  <span class="p">}</span>
+              <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+                  <span class="c1">// print(error)</span>
+                  <span class="k">return</span> <span class="n">req</span><span class="o">.</span><span class="n">eventLoop</span><span class="o">.</span><span class="nf">newSucceededFuture</span><span class="p">(</span><span class="nv">result</span><span class="p">:</span> <span class="kt">HTTPStatus</span><span class="o">.</span><span class="n">internalServerError</span><span class="p">)</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+     <span class="p">}</span>
 <span class="p">}</span>
+</code></pre>
+<h2 id='using-the-code-aws-sdk-swift-code-with-the-swift-repl-os-x' class='heading'>Using the <code>aws-sdk-swift</code> with the swift REPL (os X)</h2>
+<pre class="highlight swift"><code>
+<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">libressl</span>
+<span class="err">$</span> <span class="n">swift</span> <span class="o">-</span><span class="kt">I</span> <span class="o">.</span><span class="n">build</span><span class="o">/</span><span class="n">debug</span> <span class="o">-</span><span class="kt">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="kt">Cellar</span><span class="o">/</span><span class="n">libressl</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">lssl</span> <span class="o">-</span><span class="n">lcrypto</span> <span class="o">-</span><span class="kt">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="kt">Cellar</span><span class="o">/</span><span class="n">libressl</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">include</span>
+<span class="mi">1</span><span class="o">&gt;</span> <span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="mi">2</span><span class="o">&gt;</span> <span class="kd">import</span> <span class="kt">S3</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">bucket</span> <span class="o">=</span> <span class="s">"my-bucket"</span>
+
+    <span class="k">let</span> <span class="nv">s3</span> <span class="o">=</span> <span class="kt">S3</span><span class="p">(</span>
+        <span class="nv">accessKeyId</span><span class="p">:</span> <span class="s">"Your-Access-Key"</span><span class="p">,</span>
+        <span class="nv">secretAccessKey</span><span class="p">:</span> <span class="s">"Your-Secret-Key"</span><span class="p">,</span>
+        <span class="nv">region</span><span class="p">:</span> <span class="o">.</span><span class="n">uswest1</span>
+    <span class="p">)</span>
+
+    <span class="c1">// Create Bucket, Put an Object, Get the Object</span>
+    <span class="k">let</span> <span class="nv">createBucketRequest</span> <span class="o">=</span> <span class="kt">S3</span><span class="o">.</span><span class="kt">CreateBucketRequest</span><span class="p">(</span><span class="nv">bucket</span><span class="p">:</span> <span class="n">bucket</span><span class="p">)</span>
+
+    <span class="k">try</span> <span class="n">s3</span><span class="o">.</span><span class="nf">createBucket</span><span class="p">(</span><span class="n">createBucketRequest</span><span class="p">)</span><span class="o">.</span><span class="n">whenSuccess</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">}</span>
+
 </code></pre>
 <h2 id='speed-up-compilation' class='heading'>Speed Up Compilation</h2>
 
@@ -685,7 +803,7 @@ AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

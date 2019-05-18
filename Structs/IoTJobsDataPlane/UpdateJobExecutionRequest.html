@@ -14,7 +14,7 @@
     <a title="UpdateJobExecutionRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,6 +577,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumbers5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/executionNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumbers5Int64VSgvp">executionNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional. A number that identifies a particular job execution on a particular device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15expectedVersions5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/expectedVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15expectedVersions5Int64VSgvp">expectedVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional. The expected current version of the job execution. Each time you update the job execution, its version is incremented. If the version of the job execution stored in Jobs does not match, the update is rejected with a VersionMismatch error, and an ErrorResponse that contains the current job execution status data is returned. (This makes it unnecessary to perform a separate DescribeJobExecution request in order to obtain the job execution status data.)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expectedVersion</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includeF8DocumentSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/includeJobDocument" class="dashAnchor"></a>
                     <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includeF8DocumentSbSgvp">includeJobDocument</a>
@@ -595,6 +649,114 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeJobDocument</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includefG5StateSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/includeJobExecutionState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includefG5StateSbSgvp">includeJobExecutionState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional. When included and set to true, the response contains the JobExecutionState data. The default is false.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeJobExecutionState</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV5jobIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV5jobIdSSvp">jobId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique identifier assigned to this job when it was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV6statusAB0fG6StatusOvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV6statusAB0fG6StatusOvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The new status for the job execution (IN_PROGRESS, FAILED, SUCCESS, or REJECTED). This must be specified on every update.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV13statusDetailsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV13statusDetailsSDyS2SGSgvp">statusDetails</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional. A collection of name/value pairs that describe the status of the job execution. If not specified, the statusDetails are unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,171 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV5jobIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/jobId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV5jobIdSSvp">jobId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The unique identifier assigned to this job when it was created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV13statusDetailsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV13statusDetailsSDyS2SGSgvp">statusDetails</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Optional. A collection of name/value pairs that describe the status of the job execution. If not specified, the statusDetails are unchanged.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includefG5StateSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/includeJobExecutionState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includefG5StateSbSgvp">includeJobExecutionState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Optional. When included and set to true, the response contains the JobExecutionState data. The default is false.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">includeJobExecutionState</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV6statusAB0fG6StatusOvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV6statusAB0fG6StatusOvp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The new status for the job execution (IN_PROGRESS, FAILED, SUCCESS, or REJECTED). This must be specified on every update.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15expectedVersions5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/expectedVersion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15expectedVersions5Int64VSgvp">expectedVersion</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Optional. The expected current version of the job execution. Each time you update the job execution, its version is incremented. If the version of the job execution stored in Jobs does not match, the update is rejected with a VersionMismatch error, and an ErrorResponse that contains the current job execution status data is returned. (This makes it unnecessary to perform a separate DescribeJobExecution request in order to obtain the job execution status data.)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expectedVersion</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumbers5Int64VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/executionNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumbers5Int64VSgvp">executionNumber</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Optional. A number that identifies a particular job execution on a particular device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includeF8Document20stepTimeoutInMinutes9thingName5jobId13statusDetails0ifG5State0S015expectedVersion15executionNumberADSbSg_s5Int64VSgS2SSDyS2SGSgAnB0fG6StatusOA2Qtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(includeJobDocument:stepTimeoutInMinutes:thingName:jobId:statusDetails:includeJobExecutionState:status:expectedVersion:executionNumber:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV07includeF8Document20stepTimeoutInMinutes9thingName5jobId13statusDetails0ifG5State0S015expectedVersion15executionNumberADSbSg_s5Int64VSgS2SSDyS2SGSgAnB0fG6StatusOA2Qtcfc">init(includeJobDocument:stepTimeoutInMinutes:thingName:jobId:statusDetails:includeJobExecutionState:status:expectedVersion:executionNumber:)</a>
+                    <a name="/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumber15expectedVersion07includeF8Document0mfG5State5jobId6status0R7Details20stepTimeoutInMinutes9thingNameADs5Int64VSg_APSbSgAQSSAB0fG6StatusOSDyS2SGSgAPSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(executionNumber:expectedVersion:includeJobDocument:includeJobExecutionState:jobId:status:statusDetails:stepTimeoutInMinutes:thingName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16IoTJobsDataPlaneAAV25UpdateJobExecutionRequestV15executionNumber15expectedVersion07includeF8Document0mfG5State5jobId6status0R7Details20stepTimeoutInMinutes9thingNameADs5Int64VSg_APSbSgAQSSAB0fG6StatusOSDyS2SGSgAPSStcfc">init(executionNumber:expectedVersion:includeJobDocument:includeJobExecutionState:jobId:status:statusDetails:stepTimeoutInMinutes:thingName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">includeJobDocument</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stepTimeoutInMinutes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeJobExecutionState</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span><span class="p">,</span> <span class="nv">expectedVersion</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">executionNumber</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expectedVersion</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeJobDocument</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">includeJobExecutionState</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/IoTJobsDataPlane/JobExecutionStatus.html">JobExecutionStatus</a></span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stepTimeoutInMinutes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">thingName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

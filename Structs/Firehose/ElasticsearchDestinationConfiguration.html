@@ -14,7 +14,7 @@
     <a title="ElasticsearchDestinationConfiguration Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/indexName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexNameSSvp">indexName</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHintsAB0b9BufferingF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bufferingHints" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHintsAB0b9BufferingF0VSgvp">bufferingHints</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Elasticsearch index name.</p>
+                        <p>The buffering options. If no value is specified, the default values for ElasticsearchBufferingHints are used.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bufferingHints</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchBufferingHints.html">ElasticsearchBufferingHints</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV010processingD0AB010ProcessingD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/processingConfiguration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV010processingD0AB010ProcessingD0VSgvp">processingConfiguration</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9domainARNSSvp"></a>
+                    <a name="//apple_ref/swift/Property/domainARN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9domainARNSSvp">domainARN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The data processing configuration.</p>
+                        <p>The ARN of the Amazon ES domain. The IAM role must have permissions for DescribeElasticsearchDomain, DescribeElasticsearchDomains, and DescribeElasticsearchDomainConfig after assuming the role specified in RoleARN. For more information, see Amazon Resource Names (ARNs) and AWS Service Namespaces.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">processingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ProcessingConfiguration.html">ProcessingConfiguration</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV7roleARNSSvp"></a>
-                    <a name="//apple_ref/swift/Property/roleARN" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV7roleARNSSvp">roleARN</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/indexName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexNameSSvp">indexName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,41 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the IAM role to be assumed by Kinesis Data Firehose for calling the Amazon ES Configuration API and for indexing documents. For more information, see Grant Kinesis Data Firehose Access to an Amazon S3 Destination and Amazon Resource Names (ARNs) and AWS Service Namespaces.</p>
+                        <p>The Elasticsearch index name.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">roleARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV12retryOptionsAB0b5RetryF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/retryOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV12retryOptionsAB0b5RetryF0VSgvp">retryOptions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The retry behavior in case Kinesis Data Firehose is unable to deliver documents to Amazon ES. The default value is 300 (5 minutes).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchRetryOptions.html">ElasticsearchRetryOptions</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9domainARNSSvp"></a>
-                    <a name="//apple_ref/swift/Property/domainARN" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9domainARNSSvp">domainARN</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV010processingD0AB010ProcessingD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/processingConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV010processingD0AB010ProcessingD0VSgvp">processingConfiguration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ARN of the Amazon ES domain. The IAM role must have permissions for DescribeElasticsearchDomain, DescribeElasticsearchDomains, and DescribeElasticsearchDomainConfig after assuming the role specified in RoleARN. For more information, see Amazon Resource Names (ARNs) and AWS Service Namespaces.</p>
+                        <p>The data processing configuration.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">processingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ProcessingConfiguration.html">ProcessingConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV8typeNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/typeName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV8typeNameSSvp">typeName</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV12retryOptionsAB0b5RetryF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/retryOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV12retryOptionsAB0b5RetryF0VSgvp">retryOptions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Elasticsearch type name. For Elasticsearch 6.x, there can be only one type per index. If you try to specify a new type for an existing index that already has another type, Kinesis Data Firehose returns an error during run time.</p>
+                        <p>The retry behavior in case Kinesis Data Firehose is unable to deliver documents to Amazon ES. The default value is 300 (5 minutes).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">typeName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchRetryOptions.html">ElasticsearchRetryOptions</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV02s3D0AB02S3cD0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/s3Configuration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV02s3D0AB02S3cD0Vvp">s3Configuration</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV7roleARNSSvp"></a>
+                    <a name="//apple_ref/swift/Property/roleARN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV7roleARNSSvp">roleARN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,41 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The configuration for the backup Amazon S3 location.</p>
+                        <p>The Amazon Resource Name (ARN) of the IAM role to be assumed by Kinesis Data Firehose for calling the Amazon ES Configuration API and for indexing documents. For more information, see Grant Kinesis Data Firehose Access to an Amazon S3 Destination and Amazon Resource Names (ARNs) and AWS Service Namespaces.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Configuration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationConfiguration.html">S3DestinationConfiguration</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHintsAB0b9BufferingF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/bufferingHints" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHintsAB0b9BufferingF0VSgvp">bufferingHints</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The buffering options. If no value is specified, the default values for ElasticsearchBufferingHints are used.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bufferingHints</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchBufferingHints.html">ElasticsearchBufferingHints</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">roleARN</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +820,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexName24cloudWatchLoggingOptions010processingD07roleARN05retryJ00E14RotationPeriod06domainM004typeF002s3D014bufferingHints0S10BackupModeADSS_AB05CloudhiJ0VSgAB010ProcessingD0VSgSSAB0b5RetryJ0VSgAB0b5IndexoP0OSgS2SAB02S3cD0VAB0b9BufferingU0VSgAB0b2S3vW0OSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(indexName:cloudWatchLoggingOptions:processingConfiguration:roleARN:retryOptions:indexRotationPeriod:domainARN:typeName:s3Configuration:bufferingHints:s3BackupMode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV9indexName24cloudWatchLoggingOptions010processingD07roleARN05retryJ00E14RotationPeriod06domainM004typeF002s3D014bufferingHints0S10BackupModeADSS_AB05CloudhiJ0VSgAB010ProcessingD0VSgSSAB0b5RetryJ0VSgAB0b5IndexoP0OSgS2SAB02S3cD0VAB0b9BufferingU0VSgAB0b2S3vW0OSgtcfc">init(indexName:cloudWatchLoggingOptions:processingConfiguration:roleARN:retryOptions:indexRotationPeriod:domainARN:typeName:s3Configuration:bufferingHints:s3BackupMode:)</a>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV02s3D0AB02S3cD0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/s3Configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV02s3D0AB02S3cD0Vvp">s3Configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The configuration for the backup Amazon S3 location.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">s3Configuration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationConfiguration.html">S3DestinationConfiguration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV8typeNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/typeName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV8typeNameSSvp">typeName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Elasticsearch type name. For Elasticsearch 6.x, there can be only one type per index. If you try to specify a new type for an existing index that already has another type, Kinesis Data Firehose returns an error during run time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">typeName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHints24cloudWatchLoggingOptions9domainARN9indexName0M14RotationPeriod010processingD005retryJ004roleL012s3BackupMode0tD004typeN0AdB0b9BufferingF0VSg_AB05CloudhiJ0VSgS2SAB0b5IndexoP0OSgAB010ProcessingD0VSgAB0b5RetryJ0VSgSSAB0b2S3uV0OSgAB02S3cD0VSStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(bufferingHints:cloudWatchLoggingOptions:domainARN:indexName:indexRotationPeriod:processingConfiguration:retryOptions:roleARN:s3BackupMode:s3Configuration:typeName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8FirehoseAAV37ElasticsearchDestinationConfigurationV14bufferingHints24cloudWatchLoggingOptions9domainARN9indexName0M14RotationPeriod010processingD005retryJ004roleL012s3BackupMode0tD004typeN0AdB0b9BufferingF0VSg_AB05CloudhiJ0VSgS2SAB0b5IndexoP0OSgAB010ProcessingD0VSgAB0b5RetryJ0VSgSSAB0b2S3uV0OSgAB02S3cD0VSStcfc">init(bufferingHints:cloudWatchLoggingOptions:domainARN:indexName:indexRotationPeriod:processingConfiguration:retryOptions:roleARN:s3BackupMode:s3Configuration:typeName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -891,7 +891,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">cloudWatchLoggingOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/CloudWatchLoggingOptions.html">CloudWatchLoggingOptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">processingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ProcessingConfiguration.html">ProcessingConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">roleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">retryOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchRetryOptions.html">ElasticsearchRetryOptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">indexRotationPeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchIndexRotationPeriod.html">ElasticsearchIndexRotationPeriod</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">typeName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">s3Configuration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationConfiguration.html">S3DestinationConfiguration</a></span><span class="p">,</span> <span class="nv">bufferingHints</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchBufferingHints.html">ElasticsearchBufferingHints</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3BackupMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchS3BackupMode.html">ElasticsearchS3BackupMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">bufferingHints</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchBufferingHints.html">ElasticsearchBufferingHints</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudWatchLoggingOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/CloudWatchLoggingOptions.html">CloudWatchLoggingOptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">indexName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">indexRotationPeriod</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchIndexRotationPeriod.html">ElasticsearchIndexRotationPeriod</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">processingConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ProcessingConfiguration.html">ProcessingConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retryOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchRetryOptions.html">ElasticsearchRetryOptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">roleARN</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">s3BackupMode</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/ElasticsearchS3BackupMode.html">ElasticsearchS3BackupMode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">s3Configuration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Firehose/S3DestinationConfiguration.html">S3DestinationConfiguration</a></span><span class="p">,</span> <span class="nv">typeName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -903,7 +903,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

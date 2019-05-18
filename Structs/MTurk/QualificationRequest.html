@@ -14,7 +14,7 @@
     <a title="QualificationRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV20QualificationRequestV19qualificationTypeIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/qualificationTypeId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV19qualificationTypeIdSSSgvp">qualificationTypeId</a>
+                    <a name="/s:5MTurkAAV20QualificationRequestV6answerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/answer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV6answerSSSgvp">answer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the Qualification type the Worker is requesting, as returned by the CreateQualificationType operation.</p>
+                        <p>The Worker&rsquo;s answers for the Qualification type&rsquo;s test contained in a QuestionFormAnswers document, if the type has a test and the Worker has submitted answers. If the Worker does not provide any answers, Answer may be empty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV20QualificationRequestV6answerSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/answer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV6answerSSSgvp">answer</a>
+                    <a name="/s:5MTurkAAV20QualificationRequestV19qualificationTypeIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/qualificationTypeId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV19qualificationTypeIdSSSgvp">qualificationTypeId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Worker&rsquo;s answers for the Qualification type&rsquo;s test contained in a QuestionFormAnswers document, if the type has a test and the Worker has submitted answers. If the Worker does not provide any answers, Answer may be empty.</p>
+                        <p>The ID of the Qualification type the Worker is requesting, as returned by the CreateQualificationType operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV20QualificationRequestV10submitTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/submitTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV10submitTime15AWSSDKSwiftCore0E5StampVSgvp">submitTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time the Qualification request had a status of Submitted. This is either the time the Worker submitted answers for a Qualification test, or the time the Worker requested the Qualification if the Qualification type does not have a test.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">submitTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,36 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV20QualificationRequestV10submitTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/submitTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV10submitTime15AWSSDKSwiftCore0E5StampVSgvp">submitTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time the Qualification request had a status of Submitted. This is either the time the Worker submitted answers for a Qualification test, or the time the Worker requested the Qualification if the Qualification type does not have a test.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">submitTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5MTurkAAV20QualificationRequestV19qualificationTypeId0dcF06answer4test06workerF010submitTimeADSSSg_A4K15AWSSDKSwiftCore0K5StampVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(qualificationTypeId:qualificationRequestId:answer:test:workerId:submitTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV19qualificationTypeId0dcF06answer4test06workerF010submitTimeADSSSg_A4K15AWSSDKSwiftCore0K5StampVSgtcfc">init(qualificationTypeId:qualificationRequestId:answer:test:workerId:submitTime:)</a>
+                    <a name="/s:5MTurkAAV20QualificationRequestV6answer013qualificationC2Id0e4TypeF010submitTime4test06workerF0ADSSSg_A2K15AWSSDKSwiftCore0I5StampVSgA2Ktcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(answer:qualificationRequestId:qualificationTypeId:submitTime:test:workerId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV20QualificationRequestV6answer013qualificationC2Id0e4TypeF010submitTime4test06workerF0ADSSSg_A2K15AWSSDKSwiftCore0I5StampVSgA2Ktcfc">init(answer:qualificationRequestId:qualificationTypeId:submitTime:test:workerId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualificationRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">test</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">submitTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">answer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualificationRequestId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">submitTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">test</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">workerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

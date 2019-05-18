@@ -14,7 +14,7 @@
     <a title="SubmitJobRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV7jobNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/jobName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV7jobNameSSvp">jobName</a>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV15arrayPropertiesAB05ArrayF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/arrayProperties" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV15arrayPropertiesAB05ArrayF0VSgvp">arrayProperties</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the job. The first character must be alphanumeric, and up to 128 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.</p>
+                        <p>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. For more information, see Array Jobs in the AWS Batch User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayProperties.html">ArrayProperties</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,60 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV15arrayPropertiesAB05ArrayF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/arrayProperties" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV15arrayPropertiesAB05ArrayF0VSgvp">arrayProperties</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. For more information, see Array Jobs in the AWS Batch User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayProperties.html">ArrayProperties</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV10parametersSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV10parametersSDyS2SGSgvp">parameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Additional parameters passed to the job that replace parameter substitution placeholders that are set in the job definition. Parameters are specified as a key and value pair mapping. Parameters in a SubmitJob request override any corresponding parameter defaults from the job definition.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5BatchAAV16SubmitJobRequestV9dependsOnSayAB0C10DependencyVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/dependsOn" class="dashAnchor"></a>
                     <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV9dependsOnSayAB0C10DependencyVGSgvp">dependsOn</a>
@@ -703,114 +649,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV8jobQueueSSvp"></a>
-                    <a name="//apple_ref/swift/Property/jobQueue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV8jobQueueSSvp">jobQueue</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The job queue into which the job is submitted. You can specify either the name or the Amazon Resource Name (ARN) of the queue.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV7timeoutAB0C7TimeoutVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV7timeoutAB0C7TimeoutVSgvp">timeout</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The timeout configuration for this SubmitJob operation. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished. If a job is terminated due to a timeout, it is not retried. The minimum value for the timeout is 60 seconds. This configuration overrides any timeout configuration specified in the job definition. For array jobs, child jobs have the same timeout configuration as the parent job. For more information, see Job Timeouts in the Amazon Elastic Container Service Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV13retryStrategyAB05RetryF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/retryStrategy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV13retryStrategyAB05RetryF0VSgvp">retryStrategy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The retry strategy to use for failed jobs from this SubmitJob operation. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV13nodeOverridesAB04NodeF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/nodeOverrides" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV13nodeOverridesAB04NodeF0VSgvp">nodeOverrides</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of node overrides in JSON format that specify the node range to target and the container overrides for that node range.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeOverrides.html">NodeOverrides</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +685,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5BatchAAV16SubmitJobRequestV7jobName18containerOverrides15arrayProperties10parameters9dependsOn0E5Queue7timeout13retryStrategy04nodeH00E10DefinitionADSS_AB09ContainerH0VSgAB05ArrayJ0VSgSDyS2SGSgSayAB0C10DependencyVGSgSSAB0C7TimeoutVSgAB05RetryQ0VSgAB04NodeH0VSgSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(jobName:containerOverrides:arrayProperties:parameters:dependsOn:jobQueue:timeout:retryStrategy:nodeOverrides:jobDefinition:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV7jobName18containerOverrides15arrayProperties10parameters9dependsOn0E5Queue7timeout13retryStrategy04nodeH00E10DefinitionADSS_AB09ContainerH0VSgAB05ArrayJ0VSgSDyS2SGSgSayAB0C10DependencyVGSgSSAB0C7TimeoutVSgAB05RetryQ0VSgAB04NodeH0VSgSStcfc">init(jobName:containerOverrides:arrayProperties:parameters:dependsOn:jobQueue:timeout:retryStrategy:nodeOverrides:jobDefinition:)</a>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV7jobNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/jobName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV7jobNameSSvp">jobName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the job. The first character must be alphanumeric, and up to 128 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV8jobQueueSSvp"></a>
+                    <a name="//apple_ref/swift/Property/jobQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV8jobQueueSSvp">jobQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The job queue into which the job is submitted. You can specify either the name or the Amazon Resource Name (ARN) of the queue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV13nodeOverridesAB04NodeF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nodeOverrides" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV13nodeOverridesAB04NodeF0VSgvp">nodeOverrides</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of node overrides in JSON format that specify the node range to target and the container overrides for that node range.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nodeOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeOverrides.html">NodeOverrides</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV10parametersSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV10parametersSDyS2SGSgvp">parameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Additional parameters passed to the job that replace parameter substitution placeholders that are set in the job definition. Parameters are specified as a key and value pair mapping. Parameters in a SubmitJob request override any corresponding parameter defaults from the job definition.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV13retryStrategyAB05RetryF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/retryStrategy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV13retryStrategyAB05RetryF0VSgvp">retryStrategy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The retry strategy to use for failed jobs from this SubmitJob operation. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV7timeoutAB0C7TimeoutVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV7timeoutAB0C7TimeoutVSgvp">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The timeout configuration for this SubmitJob operation. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished. If a job is terminated due to a timeout, it is not retried. The minimum value for the timeout is 60 seconds. This configuration overrides any timeout configuration specified in the job definition. For array jobs, child jobs have the same timeout configuration as the parent job. For more information, see Job Timeouts in the Amazon Elastic Container Service Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5BatchAAV16SubmitJobRequestV15arrayProperties18containerOverrides9dependsOn13jobDefinition0K4Name0K5Queue04nodeH010parameters13retryStrategy7timeoutAdB05ArrayF0VSg_AB09ContainerH0VSgSayAB0C10DependencyVGSgS3SAB04NodeH0VSgSDyS2SGSgAB05RetryR0VSgAB0C7TimeoutVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayProperties:containerOverrides:dependsOn:jobDefinition:jobName:jobQueue:nodeOverrides:parameters:retryStrategy:timeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5BatchAAV16SubmitJobRequestV15arrayProperties18containerOverrides9dependsOn13jobDefinition0K4Name0K5Queue04nodeH010parameters13retryStrategy7timeoutAdB05ArrayF0VSg_AB09ContainerH0VSgSayAB0C10DependencyVGSgS3SAB04NodeH0VSgSDyS2SGSgAB05RetryR0VSgAB0C7TimeoutVSgtcfc">init(arrayProperties:containerOverrides:dependsOn:jobDefinition:jobName:jobQueue:nodeOverrides:parameters:retryStrategy:timeout:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">containerOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerOverrides.html">ContainerOverrides</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayProperties.html">ArrayProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">nodeOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeOverrides.html">NodeOverrides</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arrayProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ArrayProperties.html">ArrayProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">containerOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/ContainerOverrides.html">ContainerOverrides</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dependsOn</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Batch/JobDependency.html">JobDependency</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">jobDefinition</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">jobQueue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">nodeOverrides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/NodeOverrides.html">NodeOverrides</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">retryStrategy</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/RetryStrategy.html">RetryStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Batch/JobTimeout.html">JobTimeout</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

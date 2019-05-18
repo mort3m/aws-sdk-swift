@@ -14,7 +14,7 @@
     <a title="RestoreDBInstanceToPointInTimeMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4ports5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4ports5Int32VSgvp">port</a>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgradeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The port number on which the database accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB instance.</p>
+                        <p>Indicates that minor version upgrades are applied automatically to the DB instance during the maintenance window.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4iopss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/iops" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4iopss5Int32VSgvp">iops</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB instance. Constraints: Must be an integer greater than 1000.  SQL Server  Setting the IOPS value for the SQL Server database engine is not supported.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17dBSubnetGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBSubnetGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17dBSubnetGroupNameSSSgvp">dBSubnetGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The DB subnet group name to use for the new instance. Constraints: If supplied, must match the name of an existing DBSubnetGroup. Example: mySubnetgroup</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6engineSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6engineSSSgvp">engine</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The database engine to use for the new instance. Default: The same as source Constraint: Must be compatible with the engine of the source Valid Values:    mariadb     mysql     oracle-ee     oracle-se2     oracle-se1     oracle-se     postgres     sqlserver-ee     sqlserver-se     sqlserver-ex     sqlserver-web</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV20dBParameterGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBParameterGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV20dBParameterGroupNameSSSgvp">dBParameterGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the DB parameter group to associate with this DB instance. If this argument is omitted, the default DBParameterGroup for the specified engine is used. Constraints:   If supplied, must match the name of an existing DBParameterGroup.   Must be 1 to 255 letters, numbers, or hyphens.   First character must be a letter.   Can&rsquo;t end with a hyphen or contain two consecutive hyphens.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,168 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19vpcSecurityGroupIdsAB03VpcjK6IdListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19vpcSecurityGroupIdsAB03VpcjK6IdListVSgvp">vpcSecurityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of EC2 VPC security groups to associate with this DB instance.   Default: The default EC2 VPC security group for the DB subnet group&rsquo;s VPC.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6domainSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/domain" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6domainSSSgvp">domain</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specify the Active Directory Domain to restore the instance in.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV15optionGroupNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV15optionGroupNameSSSgvp">optionGroupName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the option group to be used for the restored DB instance. Permanent options, such as the TDE option for Oracle Advanced Security TDE, can&rsquo;t be removed from an option group, and that option group can&rsquo;t be removed from a DB instance once it is associated with a DB instance</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06targetC10IdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/targetDBInstanceIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06targetC10IdentifierSSvp">targetDBInstanceIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the new DB instance to be created. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens   First character must be a letter   Can&rsquo;t end with a hyphen or contain two consecutive hyphens</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06sourceC10IdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceDBInstanceIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06sourceC10IdentifierSSSgvp">sourceDBInstanceIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identifier of the source DB instance from which to restore. Constraints:   Must match the identifier of an existing DB instance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgradeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/autoMinorVersionUpgrade" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgradeSbSgvp">autoMinorVersionUpgrade</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates that minor version upgrades are applied automatically to the DB instance during the maintenance window.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV08copyTagsD8SnapshotSbSgvp"></a>
                     <a name="//apple_ref/swift/Property/copyTagsToSnapshot" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV08copyTagsD8SnapshotSbSgvp">copyTagsToSnapshot</a>
@@ -919,411 +649,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">copyTagsToSnapshot</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV7multiAZSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/multiAZ" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV7multiAZSbSgvp">multiAZ</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies if the DB instance is a Multi-AZ deployment. Constraint: You can&rsquo;t specify the AvailabilityZone parameter if the MultiAZ parameter is set to true.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">multiAZ</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV21tdeCredentialPasswordSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tdeCredentialPassword" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV21tdeCredentialPasswordSSSgvp">tdeCredentialPassword</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The password for the given ARN from the key store in order to access the device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tdeCredentialPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27enableCloudwatchLogsExportsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/enableCloudwatchLogsExports" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27enableCloudwatchLogsExportsSaySSGSgvp">enableCloudwatchLogsExports</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs in the Amazon RDS User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27useDefaultProcessorFeaturesSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/useDefaultProcessorFeatures" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27useDefaultProcessorFeaturesSbSgvp">useDefaultProcessorFeatures</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A value that specifies that the DB instance class of the DB instance uses its default processor features.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useDefaultProcessorFeatures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19sourceDbiResourceIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceDbiResourceId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19sourceDbiResourceIdSSSgvp">sourceDbiResourceId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The resource ID of the source DB instance from which to restore.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV019useLatestRestorableG0SbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/useLatestRestorableTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV019useLatestRestorableG0SbSgvp">useLatestRestorableTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies whether (true) or not (false) the DB instance is restored from the latest backup time.  Default: false  Constraints: Can&rsquo;t be specified if RestoreTime parameter is provided.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV31enableIAMDatabaseAuthenticationSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/enableIAMDatabaseAuthentication" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV31enableIAMDatabaseAuthenticationSbSgvp">enableIAMDatabaseAuthentication</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>True to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts, and otherwise false. You can enable IAM database authentication for the following database engines   For MySQL 5.6, minor version 5.6.34 or higher   For MySQL 5.7, minor version 5.7.16 or higher   Default: false</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6dBNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dBName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6dBNameSSSgvp">dBName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The database name for the restored DB instance.  This parameter is not used for the MySQL or MariaDB engines.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV16tdeCredentialArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tdeCredentialArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV16tdeCredentialArnSSSgvp">tdeCredentialArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ARN from the key store with which to associate the instance for TDE encryption.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tdeCredentialArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17processorFeaturesAB20ProcessorFeatureListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/processorFeatures" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17processorFeaturesAB20ProcessorFeatureListVSgvp">processorFeatures</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">processorFeatures</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ProcessorFeatureList.html">ProcessorFeatureList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV12licenseModelSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/licenseModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV12licenseModelSSSgvp">licenseModel</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>License model information for the restored DB instance. Default: Same as source.  Valid values: license-included | bring-your-own-license | general-public-license</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">licenseModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17domainIAMRoleNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/domainIAMRoleName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17domainIAMRoleNameSSSgvp">domainIAMRoleName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainIAMRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18publiclyAccessibleSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/publiclyAccessible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18publiclyAccessibleSbSgvp">publiclyAccessible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the accessibility options for the DB instance. A value of true specifies an Internet-facing instance with a publicly resolvable DNS name, which resolves to a public IP address. A value of false specifies an internal instance with a DNS name that resolves to a private IP address. For more information, see CreateDBInstance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18deletionProtectionSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deletionProtection" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18deletionProtectionSbSgvp">deletionProtection</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if the DB instance should have deletion protection enabled. The database can&rsquo;t be deleted when this value is set to true. The default is false. For more information, see  Deleting a DB Instance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV11storageTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/storageType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV11storageTypeSSSgvp">storageType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the storage type to be associated with the DB instance.  Valid values: standard | gp2 | io1   If you specify io1, you must also include a value for the Iops parameter.   Default: io1 if the Iops parameter is specified, otherwise standard</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">storageType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1360,6 +685,438 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6dBNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6dBNameSSSgvp">dBName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The database name for the restored DB instance.  This parameter is not used for the MySQL or MariaDB engines.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV20dBParameterGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBParameterGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV20dBParameterGroupNameSSSgvp">dBParameterGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the DB parameter group to associate with this DB instance. If this argument is omitted, the default DBParameterGroup for the specified engine is used. Constraints:   If supplied, must match the name of an existing DBParameterGroup.   Must be 1 to 255 letters, numbers, or hyphens.   First character must be a letter.   Can&rsquo;t end with a hyphen or contain two consecutive hyphens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17dBSubnetGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dBSubnetGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17dBSubnetGroupNameSSSgvp">dBSubnetGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The DB subnet group name to use for the new instance. Constraints: If supplied, must match the name of an existing DBSubnetGroup. Example: mySubnetgroup</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18deletionProtectionSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deletionProtection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18deletionProtectionSbSgvp">deletionProtection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if the DB instance should have deletion protection enabled. The database can&rsquo;t be deleted when this value is set to true. The default is false. For more information, see  Deleting a DB Instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6domainSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/domain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6domainSSSgvp">domain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specify the Active Directory Domain to restore the instance in.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17domainIAMRoleNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/domainIAMRoleName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17domainIAMRoleNameSSSgvp">domainIAMRoleName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">domainIAMRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27enableCloudwatchLogsExportsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/enableCloudwatchLogsExports" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27enableCloudwatchLogsExportsSaySSGSgvp">enableCloudwatchLogsExports</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list depend on the DB engine being used. For more information, see Publishing Database Logs to Amazon CloudWatch Logs in the Amazon RDS User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV31enableIAMDatabaseAuthenticationSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/enableIAMDatabaseAuthentication" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV31enableIAMDatabaseAuthenticationSbSgvp">enableIAMDatabaseAuthentication</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts, and otherwise false. You can enable IAM database authentication for the following database engines   For MySQL 5.6, minor version 5.6.34 or higher   For MySQL 5.7, minor version 5.7.16 or higher   Default: false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6engineSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/engine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV6engineSSSgvp">engine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The database engine to use for the new instance. Default: The same as source Constraint: Must be compatible with the engine of the source Valid Values:    mariadb     mysql     oracle-ee     oracle-se2     oracle-se1     oracle-se     postgres     sqlserver-ee     sqlserver-se     sqlserver-ex     sqlserver-web</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4iopss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iops" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4iopss5Int32VSgvp">iops</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB instance. Constraints: Must be an integer greater than 1000.  SQL Server  Setting the IOPS value for the SQL Server database engine is not supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV12licenseModelSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/licenseModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV12licenseModelSSSgvp">licenseModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>License model information for the restored DB instance. Default: Same as source.  Valid values: license-included | bring-your-own-license | general-public-license</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">licenseModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV7multiAZSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/multiAZ" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV7multiAZSbSgvp">multiAZ</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies if the DB instance is a Multi-AZ deployment. Constraint: You can&rsquo;t specify the AvailabilityZone parameter if the MultiAZ parameter is set to true.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">multiAZ</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV15optionGroupNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/optionGroupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV15optionGroupNameSSSgvp">optionGroupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the option group to be used for the restored DB instance. Permanent options, such as the TDE option for Oracle Advanced Security TDE, can&rsquo;t be removed from an option group, and that option group can&rsquo;t be removed from a DB instance once it is associated with a DB instance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4ports5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/port" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4ports5Int32VSgvp">port</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The port number on which the database accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17processorFeaturesAB20ProcessorFeatureListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/processorFeatures" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV17processorFeaturesAB20ProcessorFeatureListVSgvp">processorFeatures</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">processorFeatures</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ProcessorFeatureList.html">ProcessorFeatureList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18publiclyAccessibleSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/publiclyAccessible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV18publiclyAccessibleSbSgvp">publiclyAccessible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the accessibility options for the DB instance. A value of true specifies an Internet-facing instance with a publicly resolvable DNS name, which resolves to a public IP address. A value of false specifies an internal instance with a DNS name that resolves to a private IP address. For more information, see CreateDBInstance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV07restoreG015AWSSDKSwiftCore0G5StampVSgvp"></a>
                     <a name="//apple_ref/swift/Property/restoreTime" class="dashAnchor"></a>
                     <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV07restoreG015AWSSDKSwiftCore0G5StampVSgvp">restoreTime</a>
@@ -1378,6 +1135,87 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06sourceC10IdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceDBInstanceIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06sourceC10IdentifierSSSgvp">sourceDBInstanceIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identifier of the source DB instance from which to restore. Constraints:   Must match the identifier of an existing DB instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19sourceDbiResourceIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceDbiResourceId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19sourceDbiResourceIdSSSgvp">sourceDbiResourceId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The resource ID of the source DB instance from which to restore.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceDbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV11storageTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/storageType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV11storageTypeSSSgvp">storageType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the storage type to be associated with the DB instance.  Valid values: standard | gp2 | io1   If you specify io1, you must also include a value for the Iops parameter.   Default: io1 if the Iops parameter is specified, otherwise standard</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">storageType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1414,9 +1252,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4port4iops17dBSubnetGroupName6engine011dBParameterlM016availabilityZone011vpcSecurityL3Ids6domain06optionlM006targetC10Identifier06sourcecX023autoMinorVersionUpgrade08copyTagsD8Snapshot7multiAZ21tdeCredentialPassword27enableCloudwatchLogsExports27useDefaultProcessorFeatures0Y13DbiResourceId019useLatestRestorableG031enableIAMDatabaseAuthentication6dBName16tdeCredentialArn17processorFeatures12licenseModel0u7IAMRoleM018publiclyAccessible18deletionProtection11storageType15dBInstanceClass07restoreG04tagsADs5Int32VSg_A10_SSSgA11_A11_A11_AB03VpcsL6IdListVSgA11_A11_SSA11_SbSgA15_A15_A11_SaySSGSgA15_A11_A15_A15_A11_A11_AB20ProcessorFeatureListVSgA11_A11_A15_A15_A11_A11_15AWSSDKSwiftCore0G5StampVSgAB7TagListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(port:iops:dBSubnetGroupName:engine:dBParameterGroupName:availabilityZone:vpcSecurityGroupIds:domain:optionGroupName:targetDBInstanceIdentifier:sourceDBInstanceIdentifier:autoMinorVersionUpgrade:copyTagsToSnapshot:multiAZ:tdeCredentialPassword:enableCloudwatchLogsExports:useDefaultProcessorFeatures:sourceDbiResourceId:useLatestRestorableTime:enableIAMDatabaseAuthentication:dBName:tdeCredentialArn:processorFeatures:licenseModel:domainIAMRoleName:publiclyAccessible:deletionProtection:storageType:dBInstanceClass:restoreTime:tags:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV4port4iops17dBSubnetGroupName6engine011dBParameterlM016availabilityZone011vpcSecurityL3Ids6domain06optionlM006targetC10Identifier06sourcecX023autoMinorVersionUpgrade08copyTagsD8Snapshot7multiAZ21tdeCredentialPassword27enableCloudwatchLogsExports27useDefaultProcessorFeatures0Y13DbiResourceId019useLatestRestorableG031enableIAMDatabaseAuthentication6dBName16tdeCredentialArn17processorFeatures12licenseModel0u7IAMRoleM018publiclyAccessible18deletionProtection11storageType15dBInstanceClass07restoreG04tagsADs5Int32VSg_A10_SSSgA11_A11_A11_AB03VpcsL6IdListVSgA11_A11_SSA11_SbSgA15_A15_A11_SaySSGSgA15_A11_A15_A15_A11_A11_AB20ProcessorFeatureListVSgA11_A11_A15_A15_A11_A11_15AWSSDKSwiftCore0G5StampVSgAB7TagListVSgtcfc">init(port:iops:dBSubnetGroupName:engine:dBParameterGroupName:availabilityZone:vpcSecurityGroupIds:domain:optionGroupName:targetDBInstanceIdentifier:sourceDBInstanceIdentifier:autoMinorVersionUpgrade:copyTagsToSnapshot:multiAZ:tdeCredentialPassword:enableCloudwatchLogsExports:useDefaultProcessorFeatures:sourceDbiResourceId:useLatestRestorableTime:enableIAMDatabaseAuthentication:dBName:tdeCredentialArn:processorFeatures:licenseModel:domainIAMRoleName:publiclyAccessible:deletionProtection:storageType:dBInstanceClass:restoreTime:tags:)</a>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06targetC10IdentifierSSvp"></a>
+                    <a name="//apple_ref/swift/Property/targetDBInstanceIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV06targetC10IdentifierSSvp">targetDBInstanceIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the new DB instance to be created. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens   First character must be a letter   Can&rsquo;t end with a hyphen or contain two consecutive hyphens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV16tdeCredentialArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tdeCredentialArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV16tdeCredentialArnSSSgvp">tdeCredentialArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ARN from the key store with which to associate the instance for TDE encryption.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tdeCredentialArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV21tdeCredentialPasswordSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tdeCredentialPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV21tdeCredentialPasswordSSSgvp">tdeCredentialPassword</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The password for the given ARN from the key store in order to access the device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tdeCredentialPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27useDefaultProcessorFeaturesSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/useDefaultProcessorFeatures" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV27useDefaultProcessorFeaturesSbSgvp">useDefaultProcessorFeatures</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A value that specifies that the DB instance class of the DB instance uses its default processor features.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useDefaultProcessorFeatures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV019useLatestRestorableG0SbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/useLatestRestorableTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV019useLatestRestorableG0SbSgvp">useLatestRestorableTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies whether (true) or not (false) the DB instance is restored from the latest backup time.  Default: false  Constraints: Can&rsquo;t be specified if RestoreTime parameter is provided.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19vpcSecurityGroupIdsAB03VpcjK6IdListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vpcSecurityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV19vpcSecurityGroupIdsAB03VpcjK6IdListVSgvp">vpcSecurityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of EC2 VPC security groups to associate with this DB instance.   Default: The default EC2 VPC security group for the DB subnet group&rsquo;s VPC.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgrade16availabilityZone08copyTagsD8Snapshot15dBInstanceClass6dBName20dBParameterGroupName08dBSubnetvW018deletionProtection6domain013domainIAMRoleW027enableCloudwatchLogsExports31enableIAMDatabaseAuthentication6engine4iops12licenseModel7multiAZ06optionvW04port17processorFeatures18publiclyAccessible07restoreG006sourceC10Identifier19sourceDbiResourceId11storageType4tags06targetC10Identifier16tdeCredentialArn21tdeCredentialPassword27useDefaultProcessorFeatures019useLatestRestorableG0011vpcSecurityV3IdsADSbSg_SSSgA8_A9_A9_A9_A9_A8_A9_A9_SaySSGSgA8_A9_s5Int32VSgA9_A8_A9_A14_AB20ProcessorFeatureListVSgA8_15AWSSDKSwiftCore0G5StampVSgA9_A9_A9_AB7TagListVSgSSA9_A9_A8_A8_AB011VpcSecurityV6IdListVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(autoMinorVersionUpgrade:availabilityZone:copyTagsToSnapshot:dBInstanceClass:dBName:dBParameterGroupName:dBSubnetGroupName:deletionProtection:domain:domainIAMRoleName:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engine:iops:licenseModel:multiAZ:optionGroupName:port:processorFeatures:publiclyAccessible:restoreTime:sourceDBInstanceIdentifier:sourceDbiResourceId:storageType:tags:targetDBInstanceIdentifier:tdeCredentialArn:tdeCredentialPassword:useDefaultProcessorFeatures:useLatestRestorableTime:vpcSecurityGroupIds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3RDSAAV37RestoreDBInstanceToPointInTimeMessageV23autoMinorVersionUpgrade16availabilityZone08copyTagsD8Snapshot15dBInstanceClass6dBName20dBParameterGroupName08dBSubnetvW018deletionProtection6domain013domainIAMRoleW027enableCloudwatchLogsExports31enableIAMDatabaseAuthentication6engine4iops12licenseModel7multiAZ06optionvW04port17processorFeatures18publiclyAccessible07restoreG006sourceC10Identifier19sourceDbiResourceId11storageType4tags06targetC10Identifier16tdeCredentialArn21tdeCredentialPassword27useDefaultProcessorFeatures019useLatestRestorableG0011vpcSecurityV3IdsADSbSg_SSSgA8_A9_A9_A9_A9_A8_A9_A9_SaySSGSgA8_A9_s5Int32VSgA9_A8_A9_A14_AB20ProcessorFeatureListVSgA8_15AWSSDKSwiftCore0G5StampVSgA9_A9_A9_AB7TagListVSgSSA9_A9_A8_A8_AB011VpcSecurityV6IdListVSgtcfc">init(autoMinorVersionUpgrade:availabilityZone:copyTagsToSnapshot:dBInstanceClass:dBName:dBParameterGroupName:dBSubnetGroupName:deletionProtection:domain:domainIAMRoleName:enableCloudwatchLogsExports:enableIAMDatabaseAuthentication:engine:iops:licenseModel:multiAZ:optionGroupName:port:processorFeatures:publiclyAccessible:restoreTime:sourceDBInstanceIdentifier:sourceDbiResourceId:storageType:tags:targetDBInstanceIdentifier:tdeCredentialArn:tdeCredentialPassword:useDefaultProcessorFeatures:useLatestRestorableTime:vpcSecurityGroupIds:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1431,7 +1431,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sourceDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">copyTagsToSnapshot</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">multiAZ</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tdeCredentialPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useDefaultProcessorFeatures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tdeCredentialArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">processorFeatures</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ProcessorFeatureList.html">ProcessorFeatureList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainIAMRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">storageType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBInstanceClass</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">autoMinorVersionUpgrade</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">availabilityZone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">copyTagsToSnapshot</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBInstanceClass</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBParameterGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dBSubnetGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deletionProtection</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domain</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">domainIAMRoleName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableCloudwatchLogsExports</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">enableIAMDatabaseAuthentication</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">engine</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iops</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseModel</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">multiAZ</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">optionGroupName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">processorFeatures</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/ProcessorFeatureList.html">ProcessorFeatureList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">publiclyAccessible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">restoreTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceDbiResourceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">storageType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetDBInstanceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tdeCredentialArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tdeCredentialPassword</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useDefaultProcessorFeatures</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">useLatestRestorableTime</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">vpcSecurityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/RDS/VpcSecurityGroupIdList.html">VpcSecurityGroupIdList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1443,7 +1443,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

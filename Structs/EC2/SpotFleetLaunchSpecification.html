@@ -14,7 +14,7 @@
     <a title="SpotFleetLaunchSpecification Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV8subnetIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/subnetId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV8subnetIdSSSgvp">subnetId</a>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV19blockDeviceMappingsAB05BlockG11MappingListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/blockDeviceMappings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV19blockDeviceMappingsAB05BlockG11MappingListVSgvp">blockDeviceMappings</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the subnet in which to launch the instances. To specify multiple subnets, separate them using commas; for example, <q>subnet-a61dafcf, subnet-65ea5f08</q>.</p>
+                        <p>One or more block device mapping entries. You can&rsquo;t specify both a snapshot ID and an encryption value. This is because only blank volumes can be encrypted on creation. If a snapshot is the basis for a volume, it is not blank and its encryption status is used for the volume encryption status.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingList.html">BlockDeviceMappingList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV12ebsOptimizedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ebsOptimized" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV12ebsOptimizedSbSgvp">ebsOptimized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether the instances are optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn&rsquo;t available with all instance types. Additional usage charges apply when using an EBS Optimized instance. Default: false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV18iamInstanceProfileAB03IamghE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iamInstanceProfile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV18iamInstanceProfileAB03IamghE0VSgvp">iamInstanceProfile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IAM instance profile.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,6 +712,114 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV12instanceTypeAB08InstanceG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV12instanceTypeAB08InstanceG0OSgvp">instanceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instance type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV8kernelIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/kernelId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV8kernelIdSSSgvp">kernelId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the kernel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV7keyNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV7keyNameSSSgvp">keyName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the key pair.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV10monitoringAB0bC10MonitoringVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/monitoring" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV10monitoringAB0bC10MonitoringVSgvp">monitoring</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable or disable monitoring for the instances.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetMonitoring.html">SpotFleetMonitoring</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV17networkInterfacesAB024InstanceNetworkInterfaceE4ListVSgvp"></a>
                     <a name="//apple_ref/swift/Property/networkInterfaces" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV17networkInterfacesAB024InstanceNetworkInterfaceE4ListVSgvp">networkInterfaces</a>
@@ -685,9 +847,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV16weightedCapacitySdSgvp"></a>
-                    <a name="//apple_ref/swift/Property/weightedCapacity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV16weightedCapacitySdSgvp">weightedCapacity</a>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9placementAB0B9PlacementVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/placement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9placementAB0B9PlacementVSgvp">placement</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +857,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The number of units provided by the specified instance type. These are the same units that you chose to set the target capacity in terms (instances or a performance characteristic such as vCPUs, memory, or I/O). If the target capacity divided by this value is not a whole number, we round the number of instances to the next whole number. If this value is not specified, the default is 1.</p>
+                        <p>The placement information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">weightedCapacity</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotPlacement.html">SpotPlacement</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9ramdiskIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ramdiskId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9ramdiskIdSSSgvp">ramdiskId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the RAM disk.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV14securityGroupsAB19GroupIdentifierListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV14securityGroupsAB19GroupIdentifierListVSgvp">securityGroups</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/GroupIdentifierList.html">GroupIdentifierList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9spotPriceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/spotPrice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9spotPriceSSSgvp">spotPrice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If this value is not specified, the default is the Spot price specified for the fleet. To determine the Spot price per unit hour, divide the Spot price by the value of WeightedCapacity.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">spotPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV8subnetIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/subnetId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV8subnetIdSSSgvp">subnetId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the subnet in which to launch the instances. To specify multiple subnets, separate them using commas; for example, <q>subnet-a61dafcf, subnet-65ea5f08</q>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +1036,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9ramdiskIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ramdiskId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9ramdiskIdSSSgvp">ramdiskId</a>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV16weightedCapacitySdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/weightedCapacity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV16weightedCapacitySdSgvp">weightedCapacity</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +1046,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the RAM disk.</p>
+                        <p>The number of units provided by the specified instance type. These are the same units that you chose to set the target capacity in terms (instances or a performance characteristic such as vCPUs, memory, or I/O). If the target capacity divided by this value is not a whole number, we round the number of instances to the next whole number. If this value is not specified, the default is 1.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">weightedCapacity</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -793,279 +1063,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV12instanceTypeAB08InstanceG0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV12instanceTypeAB08InstanceG0OSgvp">instanceType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance type.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9placementAB0B9PlacementVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/placement" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9placementAB0B9PlacementVSgvp">placement</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The placement information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotPlacement.html">SpotPlacement</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV14securityGroupsAB19GroupIdentifierListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV14securityGroupsAB19GroupIdentifierListVSgvp">securityGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/GroupIdentifierList.html">GroupIdentifierList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV12ebsOptimizedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ebsOptimized" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV12ebsOptimizedSbSgvp">ebsOptimized</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether the instances are optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn&rsquo;t available with all instance types. Additional usage charges apply when using an EBS Optimized instance. Default: false</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV7keyNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV7keyNameSSSgvp">keyName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the key pair.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV8kernelIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/kernelId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV8kernelIdSSSgvp">kernelId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the kernel.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV10monitoringAB0bC10MonitoringVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/monitoring" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV10monitoringAB0bC10MonitoringVSgvp">monitoring</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Enable or disable monitoring for the instances.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetMonitoring.html">SpotFleetMonitoring</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV18iamInstanceProfileAB03IamghE0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/iamInstanceProfile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV18iamInstanceProfileAB03IamghE0VSgvp">iamInstanceProfile</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The IAM instance profile.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV9spotPriceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/spotPrice" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV9spotPriceSSSgvp">spotPrice</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If this value is not specified, the default is the Spot price specified for the fleet. To determine the Spot price per unit hour, divide the Spot price by the value of WeightedCapacity.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">spotPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV19blockDeviceMappingsAB05BlockG11MappingListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/blockDeviceMappings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV19blockDeviceMappingsAB05BlockG11MappingListVSgvp">blockDeviceMappings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more block device mapping entries. You can&rsquo;t specify both a snapshot ID and an encryption value. This is because only blank volumes can be encrypted on creation. If a snapshot is the basis for a volume, it is not blank and its encryption status is used for the volume encryption status.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingList.html">BlockDeviceMappingList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV14addressingType8subnetId05imageI017networkInterfaces16weightedCapacity17tagSpecifications8userData07ramdiskI008instanceG09placement14securityGroups12ebsOptimized7keyName06kernelI010monitoring18iamInstanceProfile9spotPrice19blockDeviceMappingsADSSSg_A2wB024InstanceNetworkInterfaceE4ListVSgSdSgAB0bc3TagE4ListVSgA2wB08InstanceG0OSgAB0B9PlacementVSgAB19GroupIdentifierListVSgSbSgA2wB0bC10MonitoringVSgAB018IamInstanceProfileE0VSgAwB22BlockDeviceMappingListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(addressingType:subnetId:imageId:networkInterfaces:weightedCapacity:tagSpecifications:userData:ramdiskId:instanceType:placement:securityGroups:ebsOptimized:keyName:kernelId:monitoring:iamInstanceProfile:spotPrice:blockDeviceMappings:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV14addressingType8subnetId05imageI017networkInterfaces16weightedCapacity17tagSpecifications8userData07ramdiskI008instanceG09placement14securityGroups12ebsOptimized7keyName06kernelI010monitoring18iamInstanceProfile9spotPrice19blockDeviceMappingsADSSSg_A2wB024InstanceNetworkInterfaceE4ListVSgSdSgAB0bc3TagE4ListVSgA2wB08InstanceG0OSgAB0B9PlacementVSgAB19GroupIdentifierListVSgSbSgA2wB0bC10MonitoringVSgAB018IamInstanceProfileE0VSgAwB22BlockDeviceMappingListVSgtcfc">init(addressingType:subnetId:imageId:networkInterfaces:weightedCapacity:tagSpecifications:userData:ramdiskId:instanceType:placement:securityGroups:ebsOptimized:keyName:kernelId:monitoring:iamInstanceProfile:spotPrice:blockDeviceMappings:)</a>
+                    <a name="/s:3EC2AAV28SpotFleetLaunchSpecificationV14addressingType19blockDeviceMappings12ebsOptimized18iamInstanceProfile7imageId08instanceG006kernelQ07keyName10monitoring17networkInterfaces9placement07ramdiskQ014securityGroups9spotPrice06subnetQ017tagSpecifications8userData16weightedCapacityADSSSg_AB05BlockI11MappingListVSgSbSgAB03IamnoE0VSgAwB0nG0OSgA2wB0bC10MonitoringVSgAB0n16NetworkInterfaceE4ListVSgAB0B9PlacementVSgAwB19GroupIdentifierListVSgA2wB0bc3TagE4ListVSgAWSdSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(addressingType:blockDeviceMappings:ebsOptimized:iamInstanceProfile:imageId:instanceType:kernelId:keyName:monitoring:networkInterfaces:placement:ramdiskId:securityGroups:spotPrice:subnetId:tagSpecifications:userData:weightedCapacity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV28SpotFleetLaunchSpecificationV14addressingType19blockDeviceMappings12ebsOptimized18iamInstanceProfile7imageId08instanceG006kernelQ07keyName10monitoring17networkInterfaces9placement07ramdiskQ014securityGroups9spotPrice06subnetQ017tagSpecifications8userData16weightedCapacityADSSSg_AB05BlockI11MappingListVSgSbSgAB03IamnoE0VSgAwB0nG0OSgA2wB0bC10MonitoringVSgAB0n16NetworkInterfaceE4ListVSgAB0B9PlacementVSgAwB19GroupIdentifierListVSgA2wB0bc3TagE4ListVSgAWSdSgtcfc">init(addressingType:blockDeviceMappings:ebsOptimized:iamInstanceProfile:imageId:instanceType:kernelId:keyName:monitoring:networkInterfaces:placement:ramdiskId:securityGroups:spotPrice:subnetId:tagSpecifications:userData:weightedCapacity:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1080,7 +1080,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">addressingType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">weightedCapacity</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetTagSpecificationList.html">SpotFleetTagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotPlacement.html">SpotPlacement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/GroupIdentifierList.html">GroupIdentifierList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetMonitoring.html">SpotFleetMonitoring</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">spotPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingList.html">BlockDeviceMappingList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">addressingType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingList.html">BlockDeviceMappingList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetMonitoring.html">SpotFleetMonitoring</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotPlacement.html">SpotPlacement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/GroupIdentifierList.html">GroupIdentifierList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">spotPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SpotFleetTagSpecificationList.html">SpotFleetTagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">weightedCapacity</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1092,7 +1092,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

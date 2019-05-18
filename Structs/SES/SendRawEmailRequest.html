@@ -14,7 +14,7 @@
     <a title="SendRawEmailRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -631,60 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV19SendRawEmailRequestV6sourceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV6sourceSSSgvp">source</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The identity&rsquo;s email address. If you do not provide a value for this parameter, you must specify a <q>From</q> address in the raw text of the message. (You can also specify both.)  Amazon SES does not support the SMTPUTF8 extension, as described inRFC6531. For this reason, the local part of a source email address (the part of the email address that precedes the @ sign) may only contain 7-bit ASCII characters. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in RFC3492. The sender name (also known as the friendly name) may contain non-ASCII characters. These characters must be encoded using MIME encoded-word syntax, as described in RFC 2047. MIME encoded-word syntax uses the following form: =?charset?encoding?encoded-text?=.  If you specify the Source parameter and have feedback forwarding enabled, then bounces and complaints will be sent to this email address. This takes precedence over any Return-Path header that you might include in the raw text of the message.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SESAAV19SendRawEmailRequestV9sourceArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sourceArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV9sourceArnSSSgvp">sourceArn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to send for the email address specified in the Source parameter. For example, if the owner of example.com (which has ARN arn:aws:ses:us-east-1:123456789012:identity/example.com) attaches a policy to it that authorizes you to send from <a href="mailto:user@example.com">user@example.com</a>, then you would specify the SourceArn to be arn:aws:ses:us-east-1:123456789012:identity/example.com, and the Source to be <a href="mailto:user@example.com">user@example.com</a>. Instead of using this parameter, you can use the X-header X-SES-SOURCE-ARN in the raw message of the email. If you use both the SourceArn parameter and the corresponding X-header, Amazon SES uses the value of the SourceArn parameter.  For information about when to use this parameter, see the description of SendRawEmail in this guide, or see the Amazon SES Developer Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3SESAAV19SendRawEmailRequestV7fromArnSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/fromArn" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV7fromArnSSSgvp">fromArn</a>
@@ -766,6 +712,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SESAAV19SendRawEmailRequestV6sourceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV6sourceSSSgvp">source</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The identity&rsquo;s email address. If you do not provide a value for this parameter, you must specify a <q>From</q> address in the raw text of the message. (You can also specify both.)  Amazon SES does not support the SMTPUTF8 extension, as described inRFC6531. For this reason, the local part of a source email address (the part of the email address that precedes the @ sign) may only contain 7-bit ASCII characters. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in RFC3492. The sender name (also known as the friendly name) may contain non-ASCII characters. These characters must be encoded using MIME encoded-word syntax, as described in RFC 2047. MIME encoded-word syntax uses the following form: =?charset?encoding?encoded-text?=.  If you specify the Source parameter and have feedback forwarding enabled, then bounces and complaints will be sent to this email address. This takes precedence over any Return-Path header that you might include in the raw text of the message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SESAAV19SendRawEmailRequestV9sourceArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV9sourceArnSSSgvp">sourceArn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to send for the email address specified in the Source parameter. For example, if the owner of example.com (which has ARN arn:aws:ses:us-east-1:123456789012:identity/example.com) attaches a policy to it that authorizes you to send from <a href="mailto:user@example.com">user@example.com</a>, then you would specify the SourceArn to be arn:aws:ses:us-east-1:123456789012:identity/example.com, and the Source to be <a href="mailto:user@example.com">user@example.com</a>. Instead of using this parameter, you can use the X-header X-SES-SOURCE-ARN in the raw message of the email. If you use both the SourceArn parameter and the corresponding X-header, Amazon SES uses the value of the SourceArn parameter.  For information about when to use this parameter, see the description of SendRawEmail in this guide, or see the Amazon SES Developer Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SESAAV19SendRawEmailRequestV4tagsSayAB10MessageTagVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV4tagsSayAB10MessageTagVGSgvp">tags</a>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SESAAV19SendRawEmailRequestV20configurationSetName12destinations6source0J3Arn04fromK010rawMessage010returnPathK04tagsADSSSg_SaySSGSgA3mB0cN0VAMSayAB0N3TagVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(configurationSetName:destinations:source:sourceArn:fromArn:rawMessage:returnPathArn:tags:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV20configurationSetName12destinations6source0J3Arn04fromK010rawMessage010returnPathK04tagsADSSSg_SaySSGSgA3mB0cN0VAMSayAB0N3TagVGSgtcfc">init(configurationSetName:destinations:source:sourceArn:fromArn:rawMessage:returnPathArn:tags:)</a>
+                    <a name="/s:3SESAAV19SendRawEmailRequestV20configurationSetName12destinations7fromArn10rawMessage010returnPathK06source0pK04tagsADSSSg_SaySSGSgAmB0cM0VA3MSayAB0M3TagVGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configurationSetName:destinations:fromArn:rawMessage:returnPathArn:source:sourceArn:tags:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SESAAV19SendRawEmailRequestV20configurationSetName12destinations7fromArn10rawMessage010returnPathK06source0pK04tagsADSSSg_SaySSGSgAmB0cM0VA3MSayAB0M3TagVGSgtcfc">init(configurationSetName:destinations:fromArn:rawMessage:returnPathArn:source:sourceArn:tags:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fromArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rawMessage</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/RawMessage.html">RawMessage</a></span><span class="p">,</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/MessageTag.html">MessageTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configurationSetName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fromArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">rawMessage</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SES/RawMessage.html">RawMessage</a></span><span class="p">,</span> <span class="nv">returnPathArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sourceArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SES/MessageTag.html">MessageTag</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

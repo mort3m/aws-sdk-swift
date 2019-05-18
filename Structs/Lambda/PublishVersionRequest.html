@@ -14,7 +14,7 @@
     <a title="PublishVersionRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6LambdaAAV21PublishVersionRequestV12functionNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/functionName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV12functionNameSSvp">functionName</a>
+                    <a name="/s:6LambdaAAV21PublishVersionRequestV10codeSha256SSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/codeSha256" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV10codeSha256SSSgvp">codeSha256</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the lambda function.  Name formats     Function name - MyFunction.    Function ARN - arn:aws:lambda:us-west-2:123456789012:function:MyFunction.    Partial ARN - 123456789012:function:MyFunction.   The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
+                        <p>The SHA256 hash of the deployment package you want to publish. This provides validation on the code you are publishing. If you provide this parameter, the value must match the SHA256 of the $LATEST version for the publication to succeed. You can use the DryRun parameter of UpdateFunctionCode to verify the hash value that will be returned before publishing your new version.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">codeSha256</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:6LambdaAAV21PublishVersionRequestV12functionNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/functionName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV12functionNameSSvp">functionName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the lambda function.  Name formats     Function name - MyFunction.    Function ARN - arn:aws:lambda:us-west-2:123456789012:function:MyFunction.    Partial ARN - 123456789012:function:MyFunction.   The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:6LambdaAAV21PublishVersionRequestV10revisionIdSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/revisionId" class="dashAnchor"></a>
                     <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV10revisionIdSSSgvp">revisionId</a>
@@ -658,36 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6LambdaAAV21PublishVersionRequestV10codeSha256SSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/codeSha256" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV10codeSha256SSSgvp">codeSha256</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The SHA256 hash of the deployment package you want to publish. This provides validation on the code you are publishing. If you provide this parameter, the value must match the SHA256 of the $LATEST version for the publication to succeed. You can use the DryRun parameter of UpdateFunctionCode to verify the hash value that will be returned before publishing your new version.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">codeSha256</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6LambdaAAV21PublishVersionRequestV12functionName11description10revisionId10codeSha256ADSS_SSSgA2Itcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(functionName:description:revisionId:codeSha256:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV12functionName11description10revisionId10codeSha256ADSS_SSSgA2Itcfc">init(functionName:description:revisionId:codeSha256:)</a>
+                    <a name="/s:6LambdaAAV21PublishVersionRequestV10codeSha25611description12functionName10revisionIdADSSSg_AISSAItcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(codeSha256:description:functionName:revisionId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6LambdaAAV21PublishVersionRequestV10codeSha25611description12functionName10revisionIdADSSSg_AISSAItcfc">init(codeSha256:description:functionName:revisionId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">revisionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">codeSha256</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">codeSha256</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">functionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">revisionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

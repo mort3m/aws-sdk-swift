@@ -14,7 +14,7 @@
     <a title="RegisterUserRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV8userRoleAB0dG0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/userRole" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV8userRoleAB0dG0Ovp">userRole</a>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV12awsAccountIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/awsAccountId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV12awsAccountIdSSvp">awsAccountId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon QuickSight role of the user. The user role can be one of the following:    READER: A user who has read-only access to dashboards.    AUTHOR: A user who can create data sources, data sets, analyses, and dashboards.    ADMIN: A user who is an author, who can also manage Amazon QuickSight settings.</p>
+                        <p>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/UserRole.html">UserRole</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV12awsAccountIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/awsAccountId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV12awsAccountIdSSvp">awsAccountId</a>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV6iamArnSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iamArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV6iamArnSSSgvp">iamArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,68 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</p>
+                        <p>The ARN of the IAM user or role that you are registering with Amazon QuickSight.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV11sessionNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sessionName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV11sessionNameSSSgvp">sessionName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the session with the assumed IAM role. By using this parameter, you can register multiple users with the same IAM role, provided that each has a different session name. For more information on assuming IAM roles, see  assume-role  in the AWS CLI Reference.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV9namespaceSSvp"></a>
-                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV9namespaceSSvp">namespace</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The namespace. Currently, you should set this to default.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,6 +685,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV9namespaceSSvp"></a>
+                    <a name="//apple_ref/swift/Property/namespace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV9namespaceSSvp">namespace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The namespace. Currently, you should set this to default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV11sessionNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sessionName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV11sessionNameSSSgvp">sessionName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the session with the assumed IAM role. By using this parameter, you can register multiple users with the same IAM role, provided that each has a different session name. For more information on assuming IAM roles, see  assume-role  in the AWS CLI Reference.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10QuickSightAAV19RegisterUserRequestV8userNameSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/userName" class="dashAnchor"></a>
                     <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV8userNameSSSgvp">userName</a>
@@ -766,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV6iamArnSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/iamArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV6iamArnSSSgvp">iamArn</a>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV8userRoleAB0dG0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/userRole" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV8userRoleAB0dG0Ovp">userRole</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -776,14 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ARN of the IAM user or role that you are registering with Amazon QuickSight.</p>
+                        <p>The Amazon QuickSight role of the user. The user role can be one of the following:    READER: A user who has read-only access to dashboards.    AUTHOR: A user who can create data sources, data sets, analyses, and dashboards.    ADMIN: A user who is an author, who can also manage Amazon QuickSight settings.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/UserRole.html">UserRole</a></span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10QuickSightAAV19RegisterUserRequestV8userRole5email12awsAccountId11sessionName9namespace12identityType0fM06iamArnAdB0dG0O_S3SSgSSAB08IdentityP0OA2Otcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(userRole:email:awsAccountId:sessionName:namespace:identityType:userName:iamArn:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV8userRole5email12awsAccountId11sessionName9namespace12identityType0fM06iamArnAdB0dG0O_S3SSgSSAB08IdentityP0OA2Otcfc">init(userRole:email:awsAccountId:sessionName:namespace:identityType:userName:iamArn:)</a>
+                    <a name="/s:10QuickSightAAV19RegisterUserRequestV12awsAccountId5email6iamArn12identityType9namespace11sessionName04userP00Q4RoleADSS_S2SSgAB08IdentityM0OSSA2mB0dR0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(awsAccountId:email:iamArn:identityType:namespace:sessionName:userName:userRole:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10QuickSightAAV19RegisterUserRequestV12awsAccountId5email6iamArn12identityType9namespace11sessionName04userP00Q4RoleADSS_S2SSgAB08IdentityM0OSSA2mB0dR0Otcfc">init(awsAccountId:email:iamArn:identityType:namespace:sessionName:userName:userRole:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">userRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/UserRole.html">UserRole</a></span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">identityType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/IdentityType.html">IdentityType</a></span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">awsAccountId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">iamArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">identityType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/IdentityType.html">IdentityType</a></span><span class="p">,</span> <span class="nv">namespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/QuickSight/UserRole.html">UserRole</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

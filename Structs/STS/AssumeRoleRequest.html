@@ -14,7 +14,7 @@
     <a title="AssumeRoleRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3STSAAV17AssumeRoleRequestV7roleArnSSvp"></a>
-                    <a name="//apple_ref/swift/Property/roleArn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV7roleArnSSvp">roleArn</a>
+                    <a name="/s:3STSAAV17AssumeRoleRequestV15durationSecondss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/durationSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV15durationSecondss5Int32VSgvp">durationSeconds</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Amazon Resource Name (ARN) of the role to assume.</p>
+                        <p>The duration, in seconds, of the role session. The value can range from 900 seconds (15 minutes) up to the maximum session duration setting for the role. This setting can have a value from 1 hour to 12 hours. If you specify a value higher than this setting, the operation fails. For example, if you specify a session duration of 12 hours, but your administrator set the maximum session duration to 6 hours, your operation fails. To learn how to view the maximum value for your role, see View the Maximum Session Duration Setting for a Role in the IAM User Guide. By default, the value is set to 3600 seconds.   The DurationSeconds parameter is separate from the duration of a console session that you might request using the returned credentials. The request to the federation endpoint for a console sign-in token takes a SessionDuration parameter that specifies the maximum length of the console session. For more information, see Creating a URL that Enables Federated Users to Access the AWS Management Console in the IAM User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">roleArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3STSAAV17AssumeRoleRequestV15durationSecondss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/durationSeconds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV15durationSecondss5Int32VSgvp">durationSeconds</a>
+                    <a name="/s:3STSAAV17AssumeRoleRequestV6policySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/policy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV6policySSSgvp">policy</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The duration, in seconds, of the role session. The value can range from 900 seconds (15 minutes) up to the maximum session duration setting for the role. This setting can have a value from 1 hour to 12 hours. If you specify a value higher than this setting, the operation fails. For example, if you specify a session duration of 12 hours, but your administrator set the maximum session duration to 6 hours, your operation fails. To learn how to view the maximum value for your role, see View the Maximum Session Duration Setting for a Role in the IAM User Guide. By default, the value is set to 3600 seconds.   The DurationSeconds parameter is separate from the duration of a console session that you might request using the returned credentials. The request to the federation endpoint for a console sign-in token takes a SessionDuration parameter that specifies the maximum length of the console session. For more information, see Creating a URL that Enables Federated Users to Access the AWS Management Console in the IAM User Guide.</p>
+                        <p>An IAM policy in JSON format. This parameter is optional. If you pass a policy, the temporary security credentials that are returned by the operation have the permissions that are allowed by both (the intersection of) the access policy of the role that is being assumed, and the policy that you pass. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use the passed policy to grant permissions that are in excess of those allowed by the access policy of the role that is being assumed. For more information, see Permissions for AssumeRole, AssumeRoleWithSAML, and AssumeRoleWithWebIdentity in the IAM User Guide. The format for this parameter, as described by its regex pattern, is a string of characters up to 2048 characters in length. The characters can be any ASCII character from the space character to the end of the valid character list (\u0020-\u00FF). It can also include the tab (\u0009), linefeed (\u000A), and carriage return (\u000D) characters.  The policy plain text must be 2048 bytes or shorter. However, an internal conversion compresses it into a packed binary format with a separate limit. The PackedPolicySize response element indicates by percentage how close to the upper size limit the policy is, with 100% equaling the maximum allowed size.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3STSAAV17AssumeRoleRequestV12serialNumberSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serialNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV12serialNumberSSSgvp">serialNumber</a>
+                    <a name="/s:3STSAAV17AssumeRoleRequestV7roleArnSSvp"></a>
+                    <a name="//apple_ref/swift/Property/roleArn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV7roleArnSSvp">roleArn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The identification number of the MFA device that is associated with the user who is making the AssumeRole call. Specify this value if the trust policy of the role being assumed includes a condition that requires MFA authentication. The value is either the serial number for a hardware device (such as GAHT12345678) or an Amazon Resource Name (ARN) for a virtual device (such as arn:aws:iam::123456789012:mfa/user). The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@-</p>
+                        <p>The Amazon Resource Name (ARN) of the role to assume.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">roleArn</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3STSAAV17AssumeRoleRequestV6policySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/policy" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV6policySSSgvp">policy</a>
+                    <a name="/s:3STSAAV17AssumeRoleRequestV12serialNumberSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serialNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV12serialNumberSSSgvp">serialNumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An IAM policy in JSON format. This parameter is optional. If you pass a policy, the temporary security credentials that are returned by the operation have the permissions that are allowed by both (the intersection of) the access policy of the role that is being assumed, and the policy that you pass. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use the passed policy to grant permissions that are in excess of those allowed by the access policy of the role that is being assumed. For more information, see Permissions for AssumeRole, AssumeRoleWithSAML, and AssumeRoleWithWebIdentity in the IAM User Guide. The format for this parameter, as described by its regex pattern, is a string of characters up to 2048 characters in length. The characters can be any ASCII character from the space character to the end of the valid character list (\u0020-\u00FF). It can also include the tab (\u0009), linefeed (\u000A), and carriage return (\u000D) characters.  The policy plain text must be 2048 bytes or shorter. However, an internal conversion compresses it into a packed binary format with a separate limit. The PackedPolicySize response element indicates by percentage how close to the upper size limit the policy is, with 100% equaling the maximum allowed size.</p>
+                        <p>The identification number of the MFA device that is associated with the user who is making the AssumeRole call. Specify this value if the trust policy of the role being assumed includes a condition that requires MFA authentication. The value is either the serial number for a hardware device (such as GAHT12345678) or an Amazon Resource Name (ARN) for a virtual device (such as arn:aws:iam::123456789012:mfa/user). The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@-</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3STSAAV17AssumeRoleRequestV7roleArn10externalId15durationSeconds12serialNumber0E11SessionName6policy9tokenCodeADSS_SSSgs5Int32VSgALSSA2Ltcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(roleArn:externalId:durationSeconds:serialNumber:roleSessionName:policy:tokenCode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV7roleArn10externalId15durationSeconds12serialNumber0E11SessionName6policy9tokenCodeADSS_SSSgs5Int32VSgALSSA2Ltcfc">init(roleArn:externalId:durationSeconds:serialNumber:roleSessionName:policy:tokenCode:)</a>
+                    <a name="/s:3STSAAV17AssumeRoleRequestV15durationSeconds10externalId6policy7roleArn0J11SessionName12serialNumber9tokenCodeADs5Int32VSg_SSSgAOS2SA2Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(durationSeconds:externalId:policy:roleArn:roleSessionName:serialNumber:tokenCode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3STSAAV17AssumeRoleRequestV15durationSeconds10externalId6policy7roleArn0J11SessionName12serialNumber9tokenCodeADs5Int32VSg_SSSgAOS2SA2Otcfc">init(durationSeconds:externalId:policy:roleArn:roleSessionName:serialNumber:tokenCode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +783,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">roleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">externalId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">roleSessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tokenCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">externalId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">roleArn</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">roleSessionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">serialNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tokenCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -795,7 +795,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

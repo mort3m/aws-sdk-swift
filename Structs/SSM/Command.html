@@ -14,7 +14,7 @@
     <a title="Command Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,195 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV7CommandV9commandIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/commandId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV9commandIdSSSgvp">commandId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A unique identifier for this command.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">commandId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV11serviceRoleSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/serviceRole" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV11serviceRoleSSSgvp">serviceRole</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The IAM service role that Run Command uses to act on your behalf when sending notifications about command status changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV17outputS3KeyPrefixSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/outputS3KeyPrefix" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV17outputS3KeyPrefixSSSgvp">outputS3KeyPrefix</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The S3 directory path inside the bucket where the responses to the command executions should be stored. This was requested when issuing the command.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV13statusDetailsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV13statusDetailsSSSgvp">statusDetails</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A detailed status of the command execution. StatusDetails includes more information than Status because it includes states resulting from error and concurrency control parameters. StatusDetails can show different results than Status. For more information about these statuses, see Understanding Command Statuses in the AWS Systems Manager User Guide. StatusDetails can be one of the following values:   Pending: The command has not been sent to any instances.   In Progress: The command has been sent to at least one instance but has not reached a final state on all instances.   Success: The command successfully executed on all invocations. This is a terminal state.   Delivery Timed Out: The value of MaxErrors or more command invocations shows a status of Delivery Timed Out. This is a terminal state.   Execution Timed Out: The value of MaxErrors or more command invocations shows a status of Execution Timed Out. This is a terminal state.   Failed: The value of MaxErrors or more command invocations shows a status of Failed. This is a terminal state.   Incomplete: The command was attempted on all instances and one or more invocations does not have a value of Success but not enough invocations failed for the status to be Failed. This is a terminal state.   Canceled: The command was terminated before it was completed. This is a terminal state.   Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending invocations. The system has canceled the command before executing it on any instance. This is a terminal state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV18notificationConfigAB012NotificationD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/notificationConfig" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV18notificationConfigAB012NotificationD0VSgvp">notificationConfig</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Configurations for sending notifications about command status changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/NotificationConfig.html">NotificationConfig</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV12documentNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/documentName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV12documentNameSSSgvp">documentName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the document requested for execution.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">documentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV14outputS3RegionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/outputS3Region" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV14outputS3RegionSSSgvp">outputS3Region</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>(Deprecated) You can no longer specify this parameter. The system ignores it. Instead, Systems Manager automatically determines the Amazon S3 bucket region.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3Region</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3SSMAAV7CommandV22cloudWatchOutputConfigAB05ClouddeF0VSgvp"></a>
                     <a name="//apple_ref/swift/Property/cloudWatchOutputConfig" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SSMAAV7CommandV22cloudWatchOutputConfigAB05ClouddeF0VSgvp">cloudWatchOutputConfig</a>
@@ -793,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV7CommandV10parametersSDySSSaySSGGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV10parametersSDySSSaySSGGSgvp">parameters</a>
+                    <a name="/s:3SSMAAV7CommandV9commandIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/commandId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV9commandIdSSSgvp">commandId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,230 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The parameter values to be inserted in the document when executing the command.</p>
+                        <p>A unique identifier for this command.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV12expiresAfter15AWSSDKSwiftCore9TimeStampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/expiresAfter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV12expiresAfter15AWSSDKSwiftCore9TimeStampVSgvp">expiresAfter</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If this time is reached and the command has not already started executing, it will not run. Calculated based on the ExpiresAfter user input provided as part of the SendCommand API.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expiresAfter</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV14completedCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/completedCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV14completedCounts5Int32VSgvp">completedCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of targets for which the command invocation reached a terminal state. Terminal states include the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">completedCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV7targetsSayAB6TargetVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/targets" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV7targetsSayAB6TargetVGSgvp">targets</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is required if you don&rsquo;t provide one or more instance IDs in the call.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV10errorCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/errorCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV10errorCounts5Int32VSgvp">errorCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of targets for which the status is Failed or Execution Timed Out.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">errorCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV21deliveryTimedOutCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/deliveryTimedOutCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV21deliveryTimedOutCounts5Int32VSgvp">deliveryTimedOutCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of targets for which the status is Delivery Timed Out.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliveryTimedOutCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV11targetCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/targetCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV11targetCounts5Int32VSgvp">targetCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The number of targets for the command.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV11instanceIdsSaySSGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV11instanceIdsSaySSGSgvp">instanceIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The instance IDs against which this command was requested.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3SSMAAV7CommandV6statusAB0B6StatusOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV6statusAB0B6StatusOSgvp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status of the command.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CommandStatus.html">CommandStatus</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">commandId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1063,6 +658,87 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3SSMAAV7CommandV14completedCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/completedCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV14completedCounts5Int32VSgvp">completedCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of targets for which the command invocation reached a terminal state. Terminal states include the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">completedCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV21deliveryTimedOutCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deliveryTimedOutCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV21deliveryTimedOutCounts5Int32VSgvp">deliveryTimedOutCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of targets for which the status is Delivery Timed Out.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">deliveryTimedOutCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV12documentNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/documentName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV12documentNameSSSgvp">documentName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the document requested for execution.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">documentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3SSMAAV7CommandV15documentVersionSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/documentVersion" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SSMAAV7CommandV15documentVersionSSSgvp">documentVersion</a>
@@ -1090,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV7CommandV18outputS3BucketNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/outputS3BucketName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV18outputS3BucketNameSSSgvp">outputS3BucketName</a>
+                    <a name="/s:3SSMAAV7CommandV10errorCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV10errorCounts5Int32VSgvp">errorCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1100,14 +776,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The S3 bucket where the responses to the command executions should be stored. This was requested when issuing the command.</p>
+                        <p>The number of targets for which the status is Failed or Execution Timed Out.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">errorCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV12expiresAfter15AWSSDKSwiftCore9TimeStampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/expiresAfter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV12expiresAfter15AWSSDKSwiftCore9TimeStampVSgvp">expiresAfter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If this time is reached and the command has not already started executing, it will not run. Calculated based on the ExpiresAfter user input provided as part of the SendCommand API.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">expiresAfter</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV11instanceIdsSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV11instanceIdsSaySSGSgvp">instanceIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The instance IDs against which this command was requested.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,33 +874,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV7CommandV17requestedDateTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requestedDateTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV17requestedDateTime15AWSSDKSwiftCore0E5StampVSgvp">requestedDateTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date and time the command was requested.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestedDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3SSMAAV7CommandV9maxErrorsSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/maxErrors" class="dashAnchor"></a>
                     <a class="token" href="#/s:3SSMAAV7CommandV9maxErrorsSSSgvp">maxErrors</a>
@@ -1198,9 +901,306 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3SSMAAV7CommandV9commandId11serviceRole17outputS3KeyPrefix13statusDetails18notificationConfig12documentName0gH6Region016cloudWatchOutputN010parameters12expiresAfter14completedCount7targets05errorY0016deliveryTimedOutY006targetY011instanceIds0K07comment0O7Version0gh6BucketP014maxConcurrency17requestedDateTime9maxErrorsADSSSg_A0_A0_A0_AB012NotificationN0VSgA0_A0_AB05CloudstN0VSgSDySSSaySSGGSg15AWSSDKSwiftCore9TimeStampVSgs5Int32VSgSayAB6TargetVGSgA16_A16_A16_A7_SgAB0B6StatusOSgA0_A0_A0_A0_A13_A0_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(commandId:serviceRole:outputS3KeyPrefix:statusDetails:notificationConfig:documentName:outputS3Region:cloudWatchOutputConfig:parameters:expiresAfter:completedCount:targets:errorCount:deliveryTimedOutCount:targetCount:instanceIds:status:comment:documentVersion:outputS3BucketName:maxConcurrency:requestedDateTime:maxErrors:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3SSMAAV7CommandV9commandId11serviceRole17outputS3KeyPrefix13statusDetails18notificationConfig12documentName0gH6Region016cloudWatchOutputN010parameters12expiresAfter14completedCount7targets05errorY0016deliveryTimedOutY006targetY011instanceIds0K07comment0O7Version0gh6BucketP014maxConcurrency17requestedDateTime9maxErrorsADSSSg_A0_A0_A0_AB012NotificationN0VSgA0_A0_AB05CloudstN0VSgSDySSSaySSGGSg15AWSSDKSwiftCore9TimeStampVSgs5Int32VSgSayAB6TargetVGSgA16_A16_A16_A7_SgAB0B6StatusOSgA0_A0_A0_A0_A13_A0_tcfc">init(commandId:serviceRole:outputS3KeyPrefix:statusDetails:notificationConfig:documentName:outputS3Region:cloudWatchOutputConfig:parameters:expiresAfter:completedCount:targets:errorCount:deliveryTimedOutCount:targetCount:instanceIds:status:comment:documentVersion:outputS3BucketName:maxConcurrency:requestedDateTime:maxErrors:)</a>
+                    <a name="/s:3SSMAAV7CommandV18notificationConfigAB012NotificationD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/notificationConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV18notificationConfigAB012NotificationD0VSgvp">notificationConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configurations for sending notifications about command status changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">notificationConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/NotificationConfig.html">NotificationConfig</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV18outputS3BucketNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/outputS3BucketName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV18outputS3BucketNameSSSgvp">outputS3BucketName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The S3 bucket where the responses to the command executions should be stored. This was requested when issuing the command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV17outputS3KeyPrefixSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/outputS3KeyPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV17outputS3KeyPrefixSSSgvp">outputS3KeyPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The S3 directory path inside the bucket where the responses to the command executions should be stored. This was requested when issuing the command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV14outputS3RegionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/outputS3Region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV14outputS3RegionSSSgvp">outputS3Region</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(Deprecated) You can no longer specify this parameter. The system ignores it. Instead, Systems Manager automatically determines the Amazon S3 bucket region.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">outputS3Region</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV10parametersSDySSSaySSGGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV10parametersSDySSSaySSGGSgvp">parameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The parameter values to be inserted in the document when executing the command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV17requestedDateTime15AWSSDKSwiftCore0E5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requestedDateTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV17requestedDateTime15AWSSDKSwiftCore0E5StampVSgvp">requestedDateTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date and time the command was requested.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestedDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV11serviceRoleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serviceRole" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV11serviceRoleSSSgvp">serviceRole</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IAM service role that Run Command uses to act on your behalf when sending notifications about command status changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">serviceRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV6statusAB0B6StatusOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV6statusAB0B6StatusOSgvp">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The status of the command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CommandStatus.html">CommandStatus</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV13statusDetailsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/statusDetails" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV13statusDetailsSSSgvp">statusDetails</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A detailed status of the command execution. StatusDetails includes more information than Status because it includes states resulting from error and concurrency control parameters. StatusDetails can show different results than Status. For more information about these statuses, see Understanding Command Statuses in the AWS Systems Manager User Guide. StatusDetails can be one of the following values:   Pending: The command has not been sent to any instances.   In Progress: The command has been sent to at least one instance but has not reached a final state on all instances.   Success: The command successfully executed on all invocations. This is a terminal state.   Delivery Timed Out: The value of MaxErrors or more command invocations shows a status of Delivery Timed Out. This is a terminal state.   Execution Timed Out: The value of MaxErrors or more command invocations shows a status of Execution Timed Out. This is a terminal state.   Failed: The value of MaxErrors or more command invocations shows a status of Failed. This is a terminal state.   Incomplete: The command was attempted on all instances and one or more invocations does not have a value of Success but not enough invocations failed for the status to be Failed. This is a terminal state.   Canceled: The command was terminated before it was completed. This is a terminal state.   Rate Exceeded: The number of instances targeted by the command exceeded the account limit for pending invocations. The system has canceled the command before executing it on any instance. This is a terminal state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV11targetCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/targetCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV11targetCounts5Int32VSgvp">targetCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of targets for the command.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targetCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV7targetsSayAB6TargetVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/targets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV7targetsSayAB6TargetVGSgvp">targets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of search criteria that targets instances using a Key,Value combination that you specify. Targets is required if you don&rsquo;t provide one or more instance IDs in the call.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3SSMAAV7CommandV22cloudWatchOutputConfig9commandId7comment14completedCount016deliveryTimedOutK012documentName0O7Version05errorK012expiresAfter11instanceIds14maxConcurrency0W6Errors012notificationF0014outputS3BucketP017outputS3KeyPrefix14outputS3Region10parameters17requestedDateTime11serviceRole6status13statusDetails06targetK07targetsAdB05ClouddeF0VSg_SSSgA3_s5Int32VSgA6_A3_A3_A6_15AWSSDKSwiftCore9TimeStampVSgSaySSGSgA3_A3_AB012NotificationF0VSgA3_A3_A3_SDySSA11_GSgA10_A3_AB0B6StatusOSgA3_A6_SayAB6TargetVGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cloudWatchOutputConfig:commandId:comment:completedCount:deliveryTimedOutCount:documentName:documentVersion:errorCount:expiresAfter:instanceIds:maxConcurrency:maxErrors:notificationConfig:outputS3BucketName:outputS3KeyPrefix:outputS3Region:parameters:requestedDateTime:serviceRole:status:statusDetails:targetCount:targets:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3SSMAAV7CommandV22cloudWatchOutputConfig9commandId7comment14completedCount016deliveryTimedOutK012documentName0O7Version05errorK012expiresAfter11instanceIds14maxConcurrency0W6Errors012notificationF0014outputS3BucketP017outputS3KeyPrefix14outputS3Region10parameters17requestedDateTime11serviceRole6status13statusDetails06targetK07targetsAdB05ClouddeF0VSg_SSSgA3_s5Int32VSgA6_A3_A3_A6_15AWSSDKSwiftCore9TimeStampVSgSaySSGSgA3_A3_AB012NotificationF0VSgA3_A3_A3_SDySSA11_GSgA10_A3_AB0B6StatusOSgA3_A6_SayAB6TargetVGSgtcfc">init(cloudWatchOutputConfig:commandId:comment:completedCount:deliveryTimedOutCount:documentName:documentVersion:errorCount:expiresAfter:instanceIds:maxConcurrency:maxErrors:notificationConfig:outputS3BucketName:outputS3KeyPrefix:outputS3Region:parameters:requestedDateTime:serviceRole:status:statusDetails:targetCount:targets:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1215,7 +1215,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">commandId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/NotificationConfig.html">NotificationConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">documentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3Region</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cloudWatchOutputConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CloudWatchOutputConfig.html">CloudWatchOutputConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expiresAfter</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completedCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">errorCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliveryTimedOutCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CommandStatus.html">CommandStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">documentVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxConcurrency</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestedDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cloudWatchOutputConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CloudWatchOutputConfig.html">CloudWatchOutputConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">commandId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completedCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">deliveryTimedOutCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">documentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">documentVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">errorCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">expiresAfter</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceIds</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxConcurrency</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxErrors</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">notificationConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/NotificationConfig.html">NotificationConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3BucketName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3KeyPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">outputS3Region</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestedDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">serviceRole</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SSM/CommandStatus.html">CommandStatus</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">statusDetails</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targetCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/SSM/Target.html">Target</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1227,7 +1227,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

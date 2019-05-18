@@ -14,7 +14,7 @@
     <a title="DescribeReservedCacheNodesOfferingsMessage Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6markerSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/marker" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6markerSSSgvp">marker</a>
+                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeTypeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheNodeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeTypeSSSgvp">cacheNodeType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.</p>
+                        <p>The cache node type filter value. Use this parameter to show only the available offerings matching the specified cache node type. The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge   R4 node types; cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge       Notes:    All T2 instances are created in an Amazon Virtual Private Cloud (Amazon VPC).   Redis (cluster mode disabled): Redis backup/restore is not supported on T1 and T2 instances.    Redis (cluster mode enabled): Backup/restore is not supported on T1 instances.   Redis Append-only files (AOF) functionality is not supported for T1 or T2 instances.   For a complete listing of node types and specifications, see:    Amazon ElastiCache Product Features and Details     Cache Node Type-Specific Parameters for Memcached     Cache Node Type-Specific Parameters for Redis</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV08reservedbE10OfferingIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/reservedCacheNodesOfferingId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV08reservedbE10OfferingIdSSSgvp">reservedCacheNodesOfferingId</a>
+                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6markerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/marker" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6markerSSSgvp">marker</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The offering identifier filter value. Use this parameter to show only the available offering that matches the specified reservation identifier. Example: 438012d3-4052-4cc7-b2e3-8d3372e0e706</p>
+                        <p>An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reservedCacheNodesOfferingId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV18productDescriptionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/productDescription" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV18productDescriptionSSSgvp">productDescription</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The product description filter value. Use this parameter to show only the available offerings matching the specified product description.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeTypeSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/cacheNodeType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeTypeSSSgvp">cacheNodeType</a>
+                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV18productDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/productDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV18productDescriptionSSSgvp">productDescription</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -749,14 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The cache node type filter value. Use this parameter to show only the available offerings matching the specified cache node type. The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge   R4 node types; cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge       Notes:    All T2 instances are created in an Amazon Virtual Private Cloud (Amazon VPC).   Redis (cluster mode disabled): Redis backup/restore is not supported on T1 and T2 instances.    Redis (cluster mode enabled): Backup/restore is not supported on T1 instances.   Redis Append-only files (AOF) functionality is not supported for T1 or T2 instances.   For a complete listing of node types and specifications, see:    Amazon ElastiCache Product Features and Details     Cache Node Type-Specific Parameters for Memcached     Cache Node Type-Specific Parameters for Redis</p>
+                        <p>The product description filter value. Use this parameter to show only the available offerings matching the specified product description.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">productDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,9 +739,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6marker8duration08reservedbE10OfferingId18productDescription10maxRecords12offeringType09cacheNodeR0ADSSSg_A3Ls5Int32VSgA2Ltcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(marker:duration:reservedCacheNodesOfferingId:productDescription:maxRecords:offeringType:cacheNodeType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV6marker8duration08reservedbE10OfferingId18productDescription10maxRecords12offeringType09cacheNodeR0ADSSSg_A3Ls5Int32VSgA2Ltcfc">init(marker:duration:reservedCacheNodesOfferingId:productDescription:maxRecords:offeringType:cacheNodeType:)</a>
+                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV08reservedbE10OfferingIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/reservedCacheNodesOfferingId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV08reservedbE10OfferingIdSSSgvp">reservedCacheNodesOfferingId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The offering identifier filter value. Use this parameter to show only the available offering that matches the specified reservation identifier. Example: 438012d3-4052-4cc7-b2e3-8d3372e0e706</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">reservedCacheNodesOfferingId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeType8duration6marker10maxRecords08offeringJ018productDescription08reservedbE10OfferingIdADSSSg_A2Ls5Int32VSgA3Ltcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cacheNodeType:duration:marker:maxRecords:offeringType:productDescription:reservedCacheNodesOfferingId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11ElastiCacheAAV016DescribeReservedB21NodesOfferingsMessageV13cacheNodeType8duration6marker10maxRecords08offeringJ018productDescription08reservedbE10OfferingIdADSSSg_A2Ls5Int32VSgA3Ltcfc">init(cacheNodeType:duration:marker:maxRecords:offeringType:productDescription:reservedCacheNodesOfferingId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -783,7 +783,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reservedCacheNodesOfferingId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">offeringType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cacheNodeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">marker</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxRecords</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">offeringType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">productDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">reservedCacheNodesOfferingId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -795,7 +795,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

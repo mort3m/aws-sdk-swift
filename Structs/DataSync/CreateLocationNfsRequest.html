@@ -14,7 +14,7 @@
     <a title="CreateLocationNfsRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,60 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV4tagsSayAB12TagListEntryVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV4tagsSayAB12TagListEntryVGSgvp">tags</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The key-value pair that represents the tag that you want to add to the location. The value can be an empty string. We recommend using tags to name your resources.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DataSync/TagListEntry.html">TagListEntry</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV12subdirectorySSvp"></a>
-                    <a name="//apple_ref/swift/Property/subdirectory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV12subdirectorySSvp">subdirectory</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination. The NFS path should be a path that&rsquo;s exported by the NFS server, or a subdirectory of that path. The path should be such that it can be mounted by other NFS clients in your network.  To see all the paths exported by your NFS server. run <q>showmount -e nfs-server-name</q> from an NFS client that has access to your server. You can specify any directory that appears in the results, and any subdirectory of that directory. Ensure that the NFS export is accessible without Kerberos authentication.  To transfer all the data in the folder you specified, DataSync needs to have permissions to read all the data. To ensure this, either configure the NFS export with no_root_squash, or ensure that the permissions for all of the files that you want sync allow read access for all users. Doing either enables the agent to read the files. For the agent to access directories, you must additionally enable all execute access. For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Centos documentation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subdirectory</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV12onPremConfigAB02OnhI0Vvp"></a>
                     <a name="//apple_ref/swift/Property/onPremConfig" class="dashAnchor"></a>
                     <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV12onPremConfigAB02OnhI0Vvp">onPremConfig</a>
@@ -685,9 +631,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV4tags12subdirectory12onPremConfig14serverHostnameADSayAB12TagListEntryVGSg_SSAB02OnjK0VSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(tags:subdirectory:onPremConfig:serverHostname:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV4tags12subdirectory12onPremConfig14serverHostnameADSayAB12TagListEntryVGSg_SSAB02OnjK0VSStcfc">init(tags:subdirectory:onPremConfig:serverHostname:)</a>
+                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV12subdirectorySSvp"></a>
+                    <a name="//apple_ref/swift/Property/subdirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV12subdirectorySSvp">subdirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination. The NFS path should be a path that&rsquo;s exported by the NFS server, or a subdirectory of that path. The path should be such that it can be mounted by other NFS clients in your network.  To see all the paths exported by your NFS server. run <q>showmount -e nfs-server-name</q> from an NFS client that has access to your server. You can specify any directory that appears in the results, and any subdirectory of that directory. Ensure that the NFS export is accessible without Kerberos authentication.  To transfer all the data in the folder you specified, DataSync needs to have permissions to read all the data. To ensure this, either configure the NFS export with no_root_squash, or ensure that the permissions for all of the files that you want sync allow read access for all users. Doing either enables the agent to read the files. For the agent to access directories, you must additionally enable all execute access. For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Centos documentation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subdirectory</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV4tagsSayAB12TagListEntryVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV4tagsSayAB12TagListEntryVGSgvp">tags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The key-value pair that represents the tag that you want to add to the location. The value can be an empty string. We recommend using tags to name your resources.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DataSync/TagListEntry.html">TagListEntry</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8DataSyncAAV24CreateLocationNfsRequestV12onPremConfig14serverHostname12subdirectory4tagsAdB02OnhI0V_S2SSayAB12TagListEntryVGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(onPremConfig:serverHostname:subdirectory:tags:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8DataSyncAAV24CreateLocationNfsRequestV12onPremConfig14serverHostname12subdirectory4tagsAdB02OnhI0V_S2SSayAB12TagListEntryVGSgtcfc">init(onPremConfig:serverHostname:subdirectory:tags:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DataSync/TagListEntry.html">TagListEntry</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subdirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">onPremConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataSync/OnPremConfig.html">OnPremConfig</a></span><span class="p">,</span> <span class="nv">serverHostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">onPremConfig</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataSync/OnPremConfig.html">OnPremConfig</a></span><span class="p">,</span> <span class="nv">serverHostname</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subdirectory</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/DataSync/TagListEntry.html">TagListEntry</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

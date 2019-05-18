@@ -14,7 +14,7 @@
     <a title="ProjectArtifacts Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV4nameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4nameSSSgvp">name</a>
+                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifierSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/artifactIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifierSSSgvp">artifactIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Along with path and namespaceType, the pattern that AWS CodeBuild uses to name and store the output artifact:   If type is set to CODEPIPELINE, AWS CodePipeline ignores this value if specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.   If type is set to NO_ARTIFACTS, this value is ignored if specified, because no build output is produced.   If type is set to S3, this is the name of the output artifact object. If you set the name to be a forward slash (<q>/</q>), the artifact is stored in the root of the output bucket.   For example:    If path is set to MyArtifacts, namespaceType is set to BUILD_ID, and name is set to MyArtifact.zip, then the output artifact is stored in MyArtifacts/build-ID/MyArtifact.zip.     If path is empty, namespaceType is set to NONE, and name is set to <q>/</q>, the output artifact is stored in the root of the output bucket.     If path is set to MyArtifacts, namespaceType is set to BUILD_ID, and name is set to <q>/</q>, the output artifact is stored in MyArtifacts/build-ID .</p>
+                        <p>An identifier for this artifact definition.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">artifactIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV4typeAB0D4TypeOvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4typeAB0D4TypeOvp">type</a>
+                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV18encryptionDisabledSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encryptionDisabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV18encryptionDisabledSbSgvp">encryptionDisabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of build output artifact. Valid values include:    CODEPIPELINE: The build project has build output generated through AWS CodePipeline.    NO_ARTIFACTS: The build project does not produce any build output.    S3: The build project stores build output in Amazon Simple Storage Service (Amazon S3).</p>
+                        <p>Set to true if you do not want your output artifacts encrypted. This option is valid only if your artifacts type is Amazon Simple Storage Service (Amazon S3). If this is set with another artifacts type, an invalidInputException is thrown.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactsType.html">ArtifactsType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryptionDisabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV18encryptionDisabledSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encryptionDisabled" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV18encryptionDisabledSbSgvp">encryptionDisabled</a>
+                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4nameSSSgvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,14 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set to true if you do not want your output artifacts encrypted. This option is valid only if your artifacts type is Amazon Simple Storage Service (Amazon S3). If this is set with another artifacts type, an invalidInputException is thrown.</p>
+                        <p>Along with path and namespaceType, the pattern that AWS CodeBuild uses to name and store the output artifact:   If type is set to CODEPIPELINE, AWS CodePipeline ignores this value if specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.   If type is set to NO_ARTIFACTS, this value is ignored if specified, because no build output is produced.   If type is set to S3, this is the name of the output artifact object. If you set the name to be a forward slash (<q>/</q>), the artifact is stored in the root of the output bucket.   For example:    If path is set to MyArtifacts, namespaceType is set to BUILD_ID, and name is set to MyArtifact.zip, then the output artifact is stored in MyArtifacts/build-ID/MyArtifact.zip.     If path is empty, namespaceType is set to NONE, and name is set to <q>/</q>, the output artifact is stored in the root of the output bucket.     If path is set to MyArtifacts, namespaceType is set to BUILD_ID, and name is set to <q>/</q>, the output artifact is stored in MyArtifacts/build-ID .</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encryptionDisabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,33 +766,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifierSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/artifactIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifierSSSgvp">artifactIdentifier</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An identifier for this artifact definition.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">artifactIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:9CodeBuildAAV16ProjectArtifactsV4pathSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
                     <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4pathSSSgvp">path</a>
@@ -820,9 +793,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV4name4type8location18encryptionDisabled13namespaceType20overrideArtifactName9packaging18artifactIdentifier4pathADSSSg_AB0dK0OANSbSgAB0M9NamespaceOSgAqB0M9PackagingOSgA2Ntcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(name:type:location:encryptionDisabled:namespaceType:overrideArtifactName:packaging:artifactIdentifier:path:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4name4type8location18encryptionDisabled13namespaceType20overrideArtifactName9packaging18artifactIdentifier4pathADSSSg_AB0dK0OANSbSgAB0M9NamespaceOSgAqB0M9PackagingOSgA2Ntcfc">init(name:type:location:encryptionDisabled:namespaceType:overrideArtifactName:packaging:artifactIdentifier:path:)</a>
+                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV4typeAB0D4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV4typeAB0D4TypeOvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of build output artifact. Valid values include:    CODEPIPELINE: The build project has build output generated through AWS CodePipeline.    NO_ARTIFACTS: The build project does not produce any build output.    S3: The build project stores build output in Amazon Simple Storage Service (Amazon S3).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactsType.html">ArtifactsType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifier18encryptionDisabled8location4name13namespaceType20overrideArtifactName9packaging4path4typeADSSSg_SbSgA2nB0N9NamespaceOSgAoB0N9PackagingOSgAnB0dL0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(artifactIdentifier:encryptionDisabled:location:name:namespaceType:overrideArtifactName:packaging:path:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV16ProjectArtifactsV18artifactIdentifier18encryptionDisabled8location4name13namespaceType20overrideArtifactName9packaging4path4typeADSSSg_SbSgA2nB0N9NamespaceOSgAoB0N9PackagingOSgAnB0dL0Otcfc">init(artifactIdentifier:encryptionDisabled:location:name:namespaceType:overrideArtifactName:packaging:path:type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -837,7 +837,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactsType.html">ArtifactsType</a></span><span class="p">,</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryptionDisabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespaceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactNamespace.html">ArtifactNamespace</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">overrideArtifactName</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">packaging</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactPackaging.html">ArtifactPackaging</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">artifactIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">artifactIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryptionDisabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">namespaceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactNamespace.html">ArtifactNamespace</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">overrideArtifactName</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">packaging</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactPackaging.html">ArtifactPackaging</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ArtifactsType.html">ArtifactsType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

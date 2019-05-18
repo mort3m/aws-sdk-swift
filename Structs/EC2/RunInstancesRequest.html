@@ -14,7 +14,7 @@
     <a title="RunInstancesRequest Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfileAB03IamfG13SpecificationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/iamInstanceProfile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfileAB03IamfG13SpecificationVSgvp">iamInstanceProfile</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV14additionalInfoSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/additionalInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14additionalInfoSSSgvp">additionalInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The IAM instance profile.</p>
+                        <p>Reserved.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">additionalInfo</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV14launchTemplateAB06LaunchF13SpecificationVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/launchTemplate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14launchTemplateAB06LaunchF13SpecificationVSgvp">launchTemplate</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV19blockDeviceMappingsAB05Blockf7MappingD4ListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/blockDeviceMappings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV19blockDeviceMappingsAB05Blockf7MappingD4ListVSgvp">blockDeviceMappings</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The launch template to use to launch the instances. Any parameters that you specify in RunInstances override the same parameters in the launch template. You can specify either the name or ID of a launch template, but not both.</p>
+                        <p>One or more block device mapping entries. You can&rsquo;t specify both a snapshot ID and an encryption value. This is because only blank volumes can be encrypted on creation. If a snapshot is the basis for a volume, it is not blank and its encryption status is used for the volume encryption status.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingRequestList.html">BlockDeviceMappingRequestList</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV21instanceMarketOptionsAB08InstancefgD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceMarketOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21instanceMarketOptionsAB08InstancefgD0VSgvp">instanceMarketOptions</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV32capacityReservationSpecificationAB08CapacityfG0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capacityReservationSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV32capacityReservationSpecificationAB08CapacityfG0VSgvp">capacityReservationSpecification</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The market (purchasing) option for the instances. For RunInstances, persistent Spot Instance requests are only supported when InstanceInterruptionBehavior is set to either hibernate or stop.</p>
+                        <p>Information about the Capacity Reservation targeting option.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceMarketOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMarketOptionsRequest.html">InstanceMarketOptionsRequest</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">capacityReservationSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationSpecification.html">CapacityReservationSpecification</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -658,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV18hibernationOptionsAB011HibernationfD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/hibernationOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV18hibernationOptionsAB011HibernationfD0VSgvp">hibernationOptions</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV11clientTokenSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV11clientTokenSSSgvp">clientToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,257 +668,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates whether an instance is enabled for hibernation. For more information, see Hibernate Your Instance in the Amazon Elastic Compute Cloud User Guide.</p>
+                        <p>Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hibernationOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/HibernationOptionsRequest.html">HibernationOptionsRequest</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV14securityGroupsAB23SecurityGroupStringListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14securityGroupsAB23SecurityGroupStringListVSgvp">securityGroups</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>[EC2-Classic, default VPC] One or more security group names. For a nondefault VPC, you must use security group IDs instead. Default: Amazon EC2 uses the default security group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupStringList.html">SecurityGroupStringList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV7keyNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/keyName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV7keyNameSSSgvp">keyName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the key pair. You can create a key pair using CreateKeyPair or ImportKeyPair.  If you do not specify a key pair, you can&rsquo;t connect to the instance unless you choose an AMI that is configured to allow users another way to log in.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV21licenseSpecificationsAB024LicenseSpecificationListD0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/licenseSpecifications" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21licenseSpecificationsAB024LicenseSpecificationListD0VSgvp">licenseSpecifications</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The license configurations.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">licenseSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LicenseSpecificationListRequest.html">LicenseSpecificationListRequest</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV16ipv6AddressCounts5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ipv6AddressCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16ipv6AddressCounts5Int32VSgvp">ipv6AddressCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>[EC2-VPC] A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet. You cannot specify this option and the option to assign specific IPv6 addresses in the same request. You can specify this option if you&rsquo;ve specified a minimum number of instances to launch.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ipv6AddressCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV16securityGroupIdsAB08SecurityF12IdStringListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16securityGroupIdsAB08SecurityF12IdStringListVSgvp">securityGroupIds</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more security group IDs. You can create a security group using CreateSecurityGroup. Default: Amazon EC2 uses the default security group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupIdStringList.html">SecurityGroupIdStringList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV8kernelIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/kernelId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8kernelIdSSSgvp">kernelId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the kernel.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV10monitoringAB0bC17MonitoringEnabledVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/monitoring" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV10monitoringAB0bC17MonitoringEnabledVSgvp">monitoring</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The monitoring for the instance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/RunInstancesMonitoringEnabled.html">RunInstancesMonitoringEnabled</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV03dryB0SbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dryRun" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV03dryB0SbSgvp">dryRun</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV8maxCounts5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/maxCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8maxCounts5Int32Vvp">maxCount</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above MinCount. Constraints: Between 1 and the maximum number you&rsquo;re allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 FAQ.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -982,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV23elasticGpuSpecificationAB07ElasticF14SpecificationsVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/elasticGpuSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV23elasticGpuSpecificationAB07ElasticF14SpecificationsVSgvp">elasticGpuSpecification</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV21disableApiTerminationSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/disableApiTermination" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21disableApiTerminationSbSgvp">disableApiTermination</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -992,14 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An elastic GPU to associate with the instance.</p>
+                        <p>If you set this parameter to true, you can&rsquo;t terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. To change this attribute to false after launch, use ModifyInstanceAttribute. Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate the instance by running the shutdown command from the instance. Default: false</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elasticGpuSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticGpuSpecifications.html">ElasticGpuSpecifications</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">disableApiTermination</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,9 +766,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV19blockDeviceMappingsAB05Blockf7MappingD4ListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/blockDeviceMappings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV19blockDeviceMappingsAB05Blockf7MappingD4ListVSgvp">blockDeviceMappings</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV03dryB0SbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dryRun" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV03dryB0SbSgvp">dryRun</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1019,14 +776,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>One or more block device mapping entries. You can&rsquo;t specify both a snapshot ID and an encryption value. This is because only blank volumes can be encrypted on creation. If a snapshot is the basis for a volume, it is not blank and its encryption status is used for the volume encryption status.</p>
+                        <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingRequestList.html">BlockDeviceMappingRequestList</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1063,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV8minCounts5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/minCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8minCounts5Int32Vvp">minCount</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV23elasticGpuSpecificationAB07ElasticF14SpecificationsVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/elasticGpuSpecification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV23elasticGpuSpecificationAB07ElasticF14SpecificationsVSgvp">elasticGpuSpecification</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1073,122 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches no instances. Constraints: Between 1 and the maximum number you&rsquo;re allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 General FAQ.</p>
+                        <p>An elastic GPU to associate with the instance.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV7imageIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/imageId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV7imageIdSSSgvp">imageId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the AMI, which you can get by calling DescribeImages. An AMI is required to launch an instance and must be specified here or in a launch template.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV17networkInterfacesAB41InstanceNetworkInterfaceSpecificationListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/networkInterfaces" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV17networkInterfacesAB41InstanceNetworkInterfaceSpecificationListVSgvp">networkInterfaces</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>One or more network interfaces.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV11clientTokenSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/clientToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV11clientTokenSSSgvp">clientToken</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV33instanceInitiatedShutdownBehaviorAB0gH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceInitiatedShutdownBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV33instanceInitiatedShutdownBehaviorAB0gH0OSgvp">instanceInitiatedShutdownBehavior</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether an instance stops or terminates when you initiate shutdown from the instance (using the operating system command for system shutdown). Default: stop</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceInitiatedShutdownBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ShutdownBehavior.html">ShutdownBehavior</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">elasticGpuSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticGpuSpecifications.html">ElasticGpuSpecifications</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,9 +874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV9ramdiskIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ramdiskId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV9ramdiskIdSSSgvp">ramdiskId</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV18hibernationOptionsAB011HibernationfD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hibernationOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV18hibernationOptionsAB011HibernationfD0VSgvp">hibernationOptions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1235,14 +884,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the RAM disk.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide.</p>
+                        <p>Indicates whether an instance is enabled for hibernation. For more information, see Hibernate Your Instance in the Amazon Elastic Compute Cloud User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hibernationOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/HibernationOptionsRequest.html">HibernationOptionsRequest</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfileAB03IamfG13SpecificationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iamInstanceProfile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfileAB03IamfG13SpecificationVSgvp">iamInstanceProfile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The IAM instance profile.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV7imageIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/imageId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV7imageIdSSSgvp">imageId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the AMI, which you can get by calling DescribeImages. An AMI is required to launch an instance and must be specified here or in a launch template.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV33instanceInitiatedShutdownBehaviorAB0gH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceInitiatedShutdownBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV33instanceInitiatedShutdownBehaviorAB0gH0OSgvp">instanceInitiatedShutdownBehavior</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates whether an instance stops or terminates when you initiate shutdown from the instance (using the operating system command for system shutdown). Default: stop</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceInitiatedShutdownBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ShutdownBehavior.html">ShutdownBehavior</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV21instanceMarketOptionsAB08InstancefgD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceMarketOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21instanceMarketOptionsAB08InstancefgD0VSgvp">instanceMarketOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The market (purchasing) option for the instances. For RunInstances, persistent Spot Instance requests are only supported when InstanceInterruptionBehavior is set to either hibernate or stop.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceMarketOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMarketOptionsRequest.html">InstanceMarketOptionsRequest</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1279,6 +1036,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV16ipv6AddressCounts5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ipv6AddressCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16ipv6AddressCounts5Int32VSgvp">ipv6AddressCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[EC2-VPC] A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet. You cannot specify this option and the option to assign specific IPv6 addresses in the same request. You can specify this option if you&rsquo;ve specified a minimum number of instances to launch.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ipv6AddressCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EC2AAV19RunInstancesRequestV13ipv6AddressesAB23InstanceIpv6AddressListVSgvp"></a>
                     <a name="//apple_ref/swift/Property/ipv6Addresses" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV13ipv6AddressesAB23InstanceIpv6AddressListVSgvp">ipv6Addresses</a>
@@ -1306,9 +1090,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV14additionalInfoSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/additionalInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14additionalInfoSSSgvp">additionalInfo</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV8kernelIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/kernelId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8kernelIdSSSgvp">kernelId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1316,14 +1100,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Reserved.</p>
+                        <p>The ID of the kernel.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">additionalInfo</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1333,9 +1117,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV8subnetIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/subnetId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8subnetIdSSSgvp">subnetId</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV7keyNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/keyName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV7keyNameSSSgvp">keyName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1343,14 +1127,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>[EC2-VPC] The ID of the subnet to launch the instance into.</p>
+                        <p>The name of the key pair. You can create a key pair using CreateKeyPair or ImportKeyPair.  If you do not specify a key pair, you can&rsquo;t connect to the instance unless you choose an AMI that is configured to allow users another way to log in.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1360,9 +1144,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV16privateIpAddressSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/privateIpAddress" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16privateIpAddressSSSgvp">privateIpAddress</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV14launchTemplateAB06LaunchF13SpecificationVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/launchTemplate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14launchTemplateAB06LaunchF13SpecificationVSgvp">launchTemplate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1370,14 +1154,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>[EC2-VPC] The primary IPv4 address. You must specify a value from the IPv4 address range of the subnet. Only one private IP address can be designated as primary. You can&rsquo;t specify this option if you&rsquo;ve specified the option to designate a private IP address as the primary IP address in a network interface specification. You cannot specify this option if you&rsquo;re launching more than one instance in the request.</p>
+                        <p>The launch template to use to launch the instances. Any parameters that you specify in RunInstances override the same parameters in the launch template. You can specify either the name or ID of a launch template, but not both.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">privateIpAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1387,9 +1171,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV21disableApiTerminationSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/disableApiTermination" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21disableApiTerminationSbSgvp">disableApiTermination</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV21licenseSpecificationsAB024LicenseSpecificationListD0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/licenseSpecifications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV21licenseSpecificationsAB024LicenseSpecificationListD0VSgvp">licenseSpecifications</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1397,14 +1181,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If you set this parameter to true, you can&rsquo;t terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. To change this attribute to false after launch, use ModifyInstanceAttribute. Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate the instance by running the shutdown command from the instance. Default: false</p>
+                        <p>The license configurations.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">disableApiTermination</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">licenseSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LicenseSpecificationListRequest.html">LicenseSpecificationListRequest</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1414,9 +1198,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV32capacityReservationSpecificationAB08CapacityfG0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/capacityReservationSpecification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV32capacityReservationSpecificationAB08CapacityfG0VSgvp">capacityReservationSpecification</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV8maxCounts5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/maxCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8maxCounts5Int32Vvp">maxCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1424,14 +1208,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Information about the Capacity Reservation targeting option.</p>
+                        <p>The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above MinCount. Constraints: Between 1 and the maximum number you&rsquo;re allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 FAQ.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">capacityReservationSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationSpecification.html">CapacityReservationSpecification</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -1441,9 +1225,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV8userDataSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/userData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8userDataSSSgvp">userData</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV8minCounts5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/minCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8minCounts5Int32Vvp">minCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1451,14 +1235,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The user data to make available to the instance. For more information, see Running Commands on Your Linux Instance at Launch (Linux) and Adding User Data (Windows). If you are using a command line tool, base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.</p>
+                        <p>The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches no instances. Constraints: Between 1 and the maximum number you&rsquo;re allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 General FAQ.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV10monitoringAB0bC17MonitoringEnabledVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/monitoring" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV10monitoringAB0bC17MonitoringEnabledVSgvp">monitoring</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The monitoring for the instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/RunInstancesMonitoringEnabled.html">RunInstancesMonitoringEnabled</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV17networkInterfacesAB41InstanceNetworkInterfaceSpecificationListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/networkInterfaces" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV17networkInterfacesAB41InstanceNetworkInterfaceSpecificationListVSgvp">networkInterfaces</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more network interfaces.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1495,6 +1333,141 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV16privateIpAddressSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/privateIpAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16privateIpAddressSSSgvp">privateIpAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[EC2-VPC] The primary IPv4 address. You must specify a value from the IPv4 address range of the subnet. Only one private IP address can be designated as primary. You can&rsquo;t specify this option if you&rsquo;ve specified the option to designate a private IP address as the primary IP address in a network interface specification. You cannot specify this option if you&rsquo;re launching more than one instance in the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">privateIpAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV9ramdiskIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ramdiskId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV9ramdiskIdSSSgvp">ramdiskId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the RAM disk.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV16securityGroupIdsAB08SecurityF12IdStringListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroupIds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV16securityGroupIdsAB08SecurityF12IdStringListVSgvp">securityGroupIds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>One or more security group IDs. You can create a security group using CreateSecurityGroup. Default: Amazon EC2 uses the default security group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupIdStringList.html">SecurityGroupIdStringList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV14securityGroupsAB23SecurityGroupStringListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/securityGroups" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14securityGroupsAB23SecurityGroupStringListVSgvp">securityGroups</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[EC2-Classic, default VPC] One or more security group names. For a nondefault VPC, you must use security group IDs instead. Default: Amazon EC2 uses the default security group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupStringList.html">SecurityGroupStringList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV8subnetIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/subnetId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8subnetIdSSSgvp">subnetId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>[EC2-VPC] The ID of the subnet to launch the instance into.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:3EC2AAV19RunInstancesRequestV17tagSpecificationsAB20TagSpecificationListVSgvp"></a>
                     <a name="//apple_ref/swift/Property/tagSpecifications" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV17tagSpecificationsAB20TagSpecificationListVSgvp">tagSpecifications</a>
@@ -1522,9 +1495,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfile14launchTemplate21instanceMarketOptions011hibernationL014securityGroups7keyName21licenseSpecifications16ipv6AddressCount0N8GroupIds8kernelId10monitoring03dryB003maxV003cpuL019creditSpecification23elasticGpuSpecification19blockDeviceMappings12ebsOptimized03minV005imageZ017networkInterfaces11clientToken0J25InitiatedShutdownBehavior28elasticInferenceAccelerators07ramdiskZ00J4Type0T9Addresses14additionalInfo06subnetZ009privateIpU021disableApiTermination32capacityReservationSpecification8userData9placement03tagS0AdB03IamfG13SpecificationVSg_AB06LaunchI13SpecificationVSgAB0fklD0VSgAB011HibernationlD0VSgAB08SecurityW10StringListVSgSSSgAB024LicenseSpecificationListD0VSgs5Int32VSgAB08SecuritywZ10StringListVSgA27_AB0bC17MonitoringEnabledVSgSbSgA32_AB03CpulD0VSgAB019CreditSpecificationD0VSgAB010ElasticGpuS0VSgAB018BlockDeviceMappingD4ListVSgA40_A32_A27_AB0F33NetworkInterfaceSpecificationListVSgA27_AB16ShutdownBehaviorOSgAB28ElasticInferenceAcceleratorsVSgA27_AB0F4TypeOSgAB0f4Ipv6U4ListVSgA27_A27_A27_A40_AB32CapacityReservationSpecificationVSgA27_AB9PlacementVSgAB20TagSpecificationListVSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(iamInstanceProfile:launchTemplate:instanceMarketOptions:hibernationOptions:securityGroups:keyName:licenseSpecifications:ipv6AddressCount:securityGroupIds:kernelId:monitoring:dryRun:maxCount:cpuOptions:creditSpecification:elasticGpuSpecification:blockDeviceMappings:ebsOptimized:minCount:imageId:networkInterfaces:clientToken:instanceInitiatedShutdownBehavior:elasticInferenceAccelerators:ramdiskId:instanceType:ipv6Addresses:additionalInfo:subnetId:privateIpAddress:disableApiTermination:capacityReservationSpecification:userData:placement:tagSpecifications:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV18iamInstanceProfile14launchTemplate21instanceMarketOptions011hibernationL014securityGroups7keyName21licenseSpecifications16ipv6AddressCount0N8GroupIds8kernelId10monitoring03dryB003maxV003cpuL019creditSpecification23elasticGpuSpecification19blockDeviceMappings12ebsOptimized03minV005imageZ017networkInterfaces11clientToken0J25InitiatedShutdownBehavior28elasticInferenceAccelerators07ramdiskZ00J4Type0T9Addresses14additionalInfo06subnetZ009privateIpU021disableApiTermination32capacityReservationSpecification8userData9placement03tagS0AdB03IamfG13SpecificationVSg_AB06LaunchI13SpecificationVSgAB0fklD0VSgAB011HibernationlD0VSgAB08SecurityW10StringListVSgSSSgAB024LicenseSpecificationListD0VSgs5Int32VSgAB08SecuritywZ10StringListVSgA27_AB0bC17MonitoringEnabledVSgSbSgA32_AB03CpulD0VSgAB019CreditSpecificationD0VSgAB010ElasticGpuS0VSgAB018BlockDeviceMappingD4ListVSgA40_A32_A27_AB0F33NetworkInterfaceSpecificationListVSgA27_AB16ShutdownBehaviorOSgAB28ElasticInferenceAcceleratorsVSgA27_AB0F4TypeOSgAB0f4Ipv6U4ListVSgA27_A27_A27_A40_AB32CapacityReservationSpecificationVSgA27_AB9PlacementVSgAB20TagSpecificationListVSgtcfc">init(iamInstanceProfile:launchTemplate:instanceMarketOptions:hibernationOptions:securityGroups:keyName:licenseSpecifications:ipv6AddressCount:securityGroupIds:kernelId:monitoring:dryRun:maxCount:cpuOptions:creditSpecification:elasticGpuSpecification:blockDeviceMappings:ebsOptimized:minCount:imageId:networkInterfaces:clientToken:instanceInitiatedShutdownBehavior:elasticInferenceAccelerators:ramdiskId:instanceType:ipv6Addresses:additionalInfo:subnetId:privateIpAddress:disableApiTermination:capacityReservationSpecification:userData:placement:tagSpecifications:)</a>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV8userDataSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV8userDataSSSgvp">userData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The user data to make available to the instance. For more information, see Running Commands on Your Linux Instance at Launch (Linux) and Adding User Data (Windows). If you are using a command line tool, base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV19RunInstancesRequestV14additionalInfo19blockDeviceMappings32capacityReservationSpecification11clientToken10cpuOptions06creditL021disableApiTermination03dryB012ebsOptimized010elasticGpuL00X21InferenceAccelerators011hibernationP018iamInstanceProfile7imageId33instanceInitiatedShutdownBehavior014instanceMarketP012instanceType16ipv6AddressCount13ipv6Addresses8kernelId7keyName14launchTemplate21licenseSpecifications8maxCount8minCount10monitoring17networkInterfaces9placement16privateIpAddress9ramdiskId16securityGroupIds14securityGroups8subnetId17tagSpecifications8userDataADSSSg_AB05Blockh7MappingD4ListVSgAB08CapacitykL0VSgA12_AB03CpupD0VSgAB06CreditlD0VSgSbSgA25_A25_AB07ElasticY14SpecificationsVSgAB07ElasticZ12AcceleratorsVSgAB011HibernationpD0VSgAB018IamInstanceProfileL0VSgA12_AB16ShutdownBehaviorOSgAB014InstanceMarketpD0VSgAB12InstanceTypeOSgs5Int32VSgAB23InstanceIpv6AddressListVSgA12_A12_AB014LaunchTemplateL0VSgAB07Licensel4ListD0VSgA48_A48_AB0bC17MonitoringEnabledVSgAB024InstanceNetworkInterfaceL4ListVSgAB9PlacementVSgA12_A12_AB25SecurityGroupIdStringListVSgAB23SecurityGroupStringListVSgA12_AB03TagL4ListVSgA12_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(additionalInfo:blockDeviceMappings:capacityReservationSpecification:clientToken:cpuOptions:creditSpecification:disableApiTermination:dryRun:ebsOptimized:elasticGpuSpecification:elasticInferenceAccelerators:hibernationOptions:iamInstanceProfile:imageId:instanceInitiatedShutdownBehavior:instanceMarketOptions:instanceType:ipv6AddressCount:ipv6Addresses:kernelId:keyName:launchTemplate:licenseSpecifications:maxCount:minCount:monitoring:networkInterfaces:placement:privateIpAddress:ramdiskId:securityGroupIds:securityGroups:subnetId:tagSpecifications:userData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV19RunInstancesRequestV14additionalInfo19blockDeviceMappings32capacityReservationSpecification11clientToken10cpuOptions06creditL021disableApiTermination03dryB012ebsOptimized010elasticGpuL00X21InferenceAccelerators011hibernationP018iamInstanceProfile7imageId33instanceInitiatedShutdownBehavior014instanceMarketP012instanceType16ipv6AddressCount13ipv6Addresses8kernelId7keyName14launchTemplate21licenseSpecifications8maxCount8minCount10monitoring17networkInterfaces9placement16privateIpAddress9ramdiskId16securityGroupIds14securityGroups8subnetId17tagSpecifications8userDataADSSSg_AB05Blockh7MappingD4ListVSgAB08CapacitykL0VSgA12_AB03CpupD0VSgAB06CreditlD0VSgSbSgA25_A25_AB07ElasticY14SpecificationsVSgAB07ElasticZ12AcceleratorsVSgAB011HibernationpD0VSgAB018IamInstanceProfileL0VSgA12_AB16ShutdownBehaviorOSgAB014InstanceMarketpD0VSgAB12InstanceTypeOSgs5Int32VSgAB23InstanceIpv6AddressListVSgA12_A12_AB014LaunchTemplateL0VSgAB07Licensel4ListD0VSgA48_A48_AB0bC17MonitoringEnabledVSgAB024InstanceNetworkInterfaceL4ListVSgAB9PlacementVSgA12_A12_AB25SecurityGroupIdStringListVSgAB23SecurityGroupStringListVSgA12_AB03TagL4ListVSgA12_tcfc">init(additionalInfo:blockDeviceMappings:capacityReservationSpecification:clientToken:cpuOptions:creditSpecification:disableApiTermination:dryRun:ebsOptimized:elasticGpuSpecification:elasticInferenceAccelerators:hibernationOptions:iamInstanceProfile:imageId:instanceInitiatedShutdownBehavior:instanceMarketOptions:instanceType:ipv6AddressCount:ipv6Addresses:kernelId:keyName:launchTemplate:licenseSpecifications:maxCount:minCount:monitoring:networkInterfaces:placement:privateIpAddress:ramdiskId:securityGroupIds:securityGroups:subnetId:tagSpecifications:userData:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1539,7 +1539,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceMarketOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMarketOptionsRequest.html">InstanceMarketOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hibernationOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/HibernationOptionsRequest.html">HibernationOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupStringList.html">SecurityGroupStringList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LicenseSpecificationListRequest.html">LicenseSpecificationListRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ipv6AddressCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupIdStringList.html">SecurityGroupIdStringList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/RunInstancesMonitoringEnabled.html">RunInstancesMonitoringEnabled</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">cpuOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CpuOptionsRequest.html">CpuOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creditSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CreditSpecificationRequest.html">CreditSpecificationRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticGpuSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticGpuSpecifications.html">ElasticGpuSpecifications</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingRequestList.html">BlockDeviceMappingRequestList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">minCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceInitiatedShutdownBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ShutdownBehavior.html">ShutdownBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticInferenceAccelerators</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticInferenceAccelerators.html">ElasticInferenceAccelerators</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ipv6Addresses</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceIpv6AddressList.html">InstanceIpv6AddressList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">additionalInfo</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">privateIpAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableApiTermination</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">capacityReservationSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationSpecification.html">CapacityReservationSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/Placement.html">Placement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">additionalInfo</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">blockDeviceMappings</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/BlockDeviceMappingRequestList.html">BlockDeviceMappingRequestList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">capacityReservationSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CapacityReservationSpecification.html">CapacityReservationSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">clientToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cpuOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CpuOptionsRequest.html">CpuOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creditSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/CreditSpecificationRequest.html">CreditSpecificationRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">disableApiTermination</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dryRun</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ebsOptimized</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticGpuSpecification</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticGpuSpecifications.html">ElasticGpuSpecifications</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">elasticInferenceAccelerators</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ElasticInferenceAccelerators.html">ElasticInferenceAccelerators</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">hibernationOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/HibernationOptionsRequest.html">HibernationOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">iamInstanceProfile</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/IamInstanceProfileSpecification.html">IamInstanceProfileSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">imageId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceInitiatedShutdownBehavior</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/ShutdownBehavior.html">ShutdownBehavior</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceMarketOptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceMarketOptionsRequest.html">InstanceMarketOptionsRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceType.html">InstanceType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ipv6AddressCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ipv6Addresses</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceIpv6AddressList.html">InstanceIpv6AddressList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kernelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">keyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">launchTemplate</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LaunchTemplateSpecification.html">LaunchTemplateSpecification</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">licenseSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/LicenseSpecificationListRequest.html">LicenseSpecificationListRequest</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">maxCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">minCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">monitoring</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/RunInstancesMonitoringEnabled.html">RunInstancesMonitoringEnabled</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">networkInterfaces</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/InstanceNetworkInterfaceSpecificationList.html">InstanceNetworkInterfaceSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">placement</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/Placement.html">Placement</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">privateIpAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ramdiskId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroupIds</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupIdStringList.html">SecurityGroupIdStringList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">securityGroups</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SecurityGroupStringList.html">SecurityGroupStringList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">subnetId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tagSpecifications</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagSpecificationList.html">TagSpecificationList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">userData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1551,7 +1551,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

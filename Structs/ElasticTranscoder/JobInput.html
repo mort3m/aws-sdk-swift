@@ -14,7 +14,7 @@
     <a title="JobInput Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV3keySSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/key" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV3keySSSgvp">key</a>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV11aspectRatioSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/aspectRatio" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV11aspectRatioSSSgvp">aspectRatio</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the file to transcode. Elsewhere in the body of the JSON block is the the ID of the pipeline to use for processing the job. The InputBucket object in that pipeline tells Elastic Transcoder which Amazon S3 bucket to get the file from.  If the file name includes a prefix, such as cooking/lasagna.mpg, include the prefix in the key. If the file isn&rsquo;t in the specified bucket, Elastic Transcoder returns an error.</p>
+                        <p>The aspect ratio of the input file. If you want Elastic Transcoder to automatically detect the aspect ratio of the input file, specify auto. If you want to specify the aspect ratio for the output file, enter one of the following values:   1:1, 4:3, 3:2, 16:9   If you specify a value other than auto, Elastic Transcoder disables automatic detection of the aspect ratio.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV10interlacedSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/interlaced" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV10interlacedSSSgvp">interlaced</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Whether the input file is interlaced. If you want Elastic Transcoder to automatically detect whether the input file is interlaced, specify auto. If you want to specify whether the input file is interlaced, enter one of the following values:  true, false  If you specify a value other than auto, Elastic Transcoder disables automatic detection of interlacing.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interlaced</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV10resolutionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/resolution" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV10resolutionSSSgvp">resolution</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This value must be auto, which causes Elastic Transcoder to automatically detect the resolution of the input file.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resolution</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV13inputCaptionsAB0dF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/inputCaptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV13inputCaptionsAB0dF0VSgvp">inputCaptions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>You can configure Elastic Transcoder to transcode captions, or subtitles, from one format to another. All captions must be in UTF-8. Elastic Transcoder supports two types of captions:    Embedded: Embedded captions are included in the same file as the audio and video. Elastic Transcoder supports only one embedded caption per language, to a maximum of 300 embedded captions per file. Valid input values include: CEA-608 (EIA-608, first non-empty channel only), CEA-708 (EIA-708, first non-empty channel only), and mov-text  Valid outputs include: mov-text  Elastic Transcoder supports a maximum of one embedded format per output.    Sidecar: Sidecar captions are kept in a separate metadata file from the audio and video data. Sidecar captions require a player that is capable of understanding the relationship between the video file and the sidecar file. Elastic Transcoder supports only one sidecar caption per language, to a maximum of 20 sidecar captions per file. Valid input values include: dfxp (first div element only), ebu-tt, scc, smpt, srt, ttml (first div element only), and webvtt  Valid outputs include: dfxp (first div element only), scc, srt, and webvtt.   If you want ttml or smpte-tt compatible captions, specify dfxp as your output format. Elastic Transcoder does not support OCR (Optical Character Recognition), does not accept pictures as a valid input for captions, and is not available for audio-only transcoding. Elastic Transcoder does not preserve text formatting (for example, italics) during the transcoding process. To remove captions or leave the captions empty, set Captions to null. To pass through existing captions unchanged, set the MergePolicy to MergeRetain, and pass in a null CaptionSources array. For more information on embedded files, see the Subtitles Wikipedia page. For more information on sidecar files, see the Extensible Metadata Platform and Sidecar file Wikipedia pages.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">inputCaptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/InputCaptions.html">InputCaptions</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV8timeSpanAB04TimeF0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeSpan" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV8timeSpanAB04TimeF0VSgvp">timeSpan</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Settings for clipping an input. Each input can have different clip settings.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/TimeSpan.html">TimeSpan</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aspectRatio</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,33 +658,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV9frameRateSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/frameRate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV9frameRateSSSgvp">frameRate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The frame rate of the input file. If you want Elastic Transcoder to automatically detect the frame rate of the input file, specify auto. If you want to specify the frame rate for the input file, enter one of the following values:   10, 15, 23.97, 24, 25, 29.97, 30, 60  If you specify a value other than auto, Elastic Transcoder disables automatic detection of the frame rate.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17ElasticTranscoderAAV8JobInputV10encryptionAB10EncryptionVSgvp"></a>
                     <a name="//apple_ref/swift/Property/encryption" class="dashAnchor"></a>
                     <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV10encryptionAB10EncryptionVSgvp">encryption</a>
@@ -820,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV11aspectRatioSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/aspectRatio" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV11aspectRatioSSSgvp">aspectRatio</a>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV9frameRateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/frameRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV9frameRateSSSgvp">frameRate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The aspect ratio of the input file. If you want Elastic Transcoder to automatically detect the aspect ratio of the input file, specify auto. If you want to specify the aspect ratio for the output file, enter one of the following values:   1:1, 4:3, 3:2, 16:9   If you specify a value other than auto, Elastic Transcoder disables automatic detection of the aspect ratio.</p>
+                        <p>The frame rate of the input file. If you want Elastic Transcoder to automatically detect the frame rate of the input file, specify auto. If you want to specify the frame rate for the input file, enter one of the following values:   10, 15, 23.97, 24, 25, 29.97, 30, 60  If you specify a value other than auto, Elastic Transcoder disables automatic detection of the frame rate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">aspectRatio</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -847,9 +712,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17ElasticTranscoderAAV8JobInputV3key10interlaced10resolution13inputCaptions8timeSpan9container18detectedProperties9frameRate10encryption11aspectRatioADSSSg_A2oB0dI0VSgAB04TimeK0VSgAoB08DetectedN0VSgAoB10EncryptionVSgAOtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(key:interlaced:resolution:inputCaptions:timeSpan:container:detectedProperties:frameRate:encryption:aspectRatio:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV3key10interlaced10resolution13inputCaptions8timeSpan9container18detectedProperties9frameRate10encryption11aspectRatioADSSSg_A2oB0dI0VSgAB04TimeK0VSgAoB08DetectedN0VSgAoB10EncryptionVSgAOtcfc">init(key:interlaced:resolution:inputCaptions:timeSpan:container:detectedProperties:frameRate:encryption:aspectRatio:)</a>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV13inputCaptionsAB0dF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/inputCaptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV13inputCaptionsAB0dF0VSgvp">inputCaptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can configure Elastic Transcoder to transcode captions, or subtitles, from one format to another. All captions must be in UTF-8. Elastic Transcoder supports two types of captions:    Embedded: Embedded captions are included in the same file as the audio and video. Elastic Transcoder supports only one embedded caption per language, to a maximum of 300 embedded captions per file. Valid input values include: CEA-608 (EIA-608, first non-empty channel only), CEA-708 (EIA-708, first non-empty channel only), and mov-text  Valid outputs include: mov-text  Elastic Transcoder supports a maximum of one embedded format per output.    Sidecar: Sidecar captions are kept in a separate metadata file from the audio and video data. Sidecar captions require a player that is capable of understanding the relationship between the video file and the sidecar file. Elastic Transcoder supports only one sidecar caption per language, to a maximum of 20 sidecar captions per file. Valid input values include: dfxp (first div element only), ebu-tt, scc, smpt, srt, ttml (first div element only), and webvtt  Valid outputs include: dfxp (first div element only), scc, srt, and webvtt.   If you want ttml or smpte-tt compatible captions, specify dfxp as your output format. Elastic Transcoder does not support OCR (Optical Character Recognition), does not accept pictures as a valid input for captions, and is not available for audio-only transcoding. Elastic Transcoder does not preserve text formatting (for example, italics) during the transcoding process. To remove captions or leave the captions empty, set Captions to null. To pass through existing captions unchanged, set the MergePolicy to MergeRetain, and pass in a null CaptionSources array. For more information on embedded files, see the Subtitles Wikipedia page. For more information on sidecar files, see the Extensible Metadata Platform and Sidecar file Wikipedia pages.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">inputCaptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/InputCaptions.html">InputCaptions</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV10interlacedSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/interlaced" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV10interlacedSSSgvp">interlaced</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the input file is interlaced. If you want Elastic Transcoder to automatically detect whether the input file is interlaced, specify auto. If you want to specify whether the input file is interlaced, enter one of the following values:  true, false  If you specify a value other than auto, Elastic Transcoder disables automatic detection of interlacing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">interlaced</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV3keySSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/key" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV3keySSSgvp">key</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the file to transcode. Elsewhere in the body of the JSON block is the the ID of the pipeline to use for processing the job. The InputBucket object in that pipeline tells Elastic Transcoder which Amazon S3 bucket to get the file from.  If the file name includes a prefix, such as cooking/lasagna.mpg, include the prefix in the key. If the file isn&rsquo;t in the specified bucket, Elastic Transcoder returns an error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV10resolutionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/resolution" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV10resolutionSSSgvp">resolution</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This value must be auto, which causes Elastic Transcoder to automatically detect the resolution of the input file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">resolution</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV8timeSpanAB04TimeF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeSpan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV8timeSpanAB04TimeF0VSgvp">timeSpan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings for clipping an input. Each input can have different clip settings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/TimeSpan.html">TimeSpan</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ElasticTranscoderAAV8JobInputV11aspectRatio9container18detectedProperties10encryption9frameRate13inputCaptions10interlaced3key10resolution8timeSpanADSSSg_AoB08DetectedI0VSgAB10EncryptionVSgAoB0dN0VSgA3oB04TimeS0VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(aspectRatio:container:detectedProperties:encryption:frameRate:inputCaptions:interlaced:key:resolution:timeSpan:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ElasticTranscoderAAV8JobInputV11aspectRatio9container18detectedProperties10encryption9frameRate13inputCaptions10interlaced3key10resolution8timeSpanADSSSg_AoB08DetectedI0VSgAB10EncryptionVSgAoB0dN0VSgA3oB04TimeS0VSgtcfc">init(aspectRatio:container:detectedProperties:encryption:frameRate:inputCaptions:interlaced:key:resolution:timeSpan:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -864,7 +864,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">interlaced</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resolution</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inputCaptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/InputCaptions.html">InputCaptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/TimeSpan.html">TimeSpan</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">detectedProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/DetectedProperties.html">DetectedProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">aspectRatio</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">aspectRatio</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">detectedProperties</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/DetectedProperties.html">DetectedProperties</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encryption</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/Encryption.html">Encryption</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">inputCaptions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/InputCaptions.html">InputCaptions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">interlaced</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">resolution</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeSpan</span><span class="p">:</span> <span class="kt"><a href="../../Structs/ElasticTranscoder/TimeSpan.html">TimeSpan</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -876,7 +876,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

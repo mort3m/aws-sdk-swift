@@ -14,7 +14,7 @@
     <a title="PostTextResponse Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV5slotsSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/slots" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV5slotsSDyS2SGSgvp">slots</a>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogStateAB06DialogH0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dialogState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogStateAB06DialogH0OSgvp">dialogState</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,122 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The intent slots that Amazon Lex detected from the user input in the conversation.  Amazon Lex creates a resolution list containing likely values for a slot. The value that it returns is determined by the valueSelectionStrategy selected when the slot type was created or updated. If valueSelectionStrategy is set to ORIGINAL_VALUE, the value provided by the user is returned, if the user value is similar to the slot values. If valueSelectionStrategy is set to TOP_RESOLUTION Amazon Lex returns the first value in the resolution list or, if there is no resolution list, null. If you don&rsquo;t specify a valueSelectionStrategy, the default is ORIGINAL_VALUE.</p>
+                        <p>Identifies the current state of the user interaction. Amazon Lex returns one of the following values as dialogState. The client can optionally use this information to customize the user interface.     ElicitIntent - Amazon Lex wants to elicit user intent.  For example, a user might utter an intent (<q>I want to order a pizza</q>). If Amazon Lex cannot infer the user intent from this utterance, it will return this dialogState.    ConfirmIntent - Amazon Lex is expecting a <q>yes</q> or <q>no</q> response.   For example, Amazon Lex wants user confirmation before fulfilling an intent.  Instead of a simple <q>yes</q> or <q>no,</q> a user might respond with additional information. For example, <q>yes, but make it thick crust pizza</q> or <q>no, I want to order a drink</q>. Amazon Lex can process such additional information (in these examples, update the crust type slot value, or change intent from OrderPizza to OrderDrink).    ElicitSlot - Amazon Lex is expecting a slot value for the current intent.  For example, suppose that in the response Amazon Lex sends this message: <q>What size pizza would you like?</q>. A user might reply with the slot value (e.g., <q>medium</q>). The user might also provide additional information in the response (e.g., <q>medium thick crust pizza</q>). Amazon Lex can process such additional information appropriately.     Fulfilled - Conveys that the Lambda function configured for the intent has successfully fulfilled the intent.     ReadyForFulfillment - Conveys that the client has to fulfill the intent.     Failed - Conveys that the conversation with the user failed.   This can happen for various reasons including that the user did not provide an appropriate response to prompts from the service (you can configure how many times Amazon Lex can prompt a user for specific information), or the Lambda function failed to fulfill the intent.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slots</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV17sessionAttributesSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/sessionAttributes" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV17sessionAttributesSDyS2SGSgvp">sessionAttributes</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A map of key-value pairs representing the session-specific context information.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV12responseCardAB0fH0VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/responseCard" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV12responseCardAB0fH0VSgvp">responseCard</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Represents the options that the user has to respond to the current prompt. Response Card can come from the bot configuration (in the Amazon Lex console, choose the settings button next to a slot) or from a code hook (Lambda function).</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">responseCard</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/ResponseCard.html">ResponseCard</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV12slotToElicitSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/slotToElicit" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV12slotToElicitSSSgvp">slotToElicit</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>If the dialogState value is ElicitSlot, returns the name of the slot for which Amazon Lex is eliciting a value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slotToElicit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV13messageFormatAB07MessageH4TypeOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/messageFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV13messageFormatAB07MessageH4TypeOSgvp">messageFormat</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The format of the response message. One of the following values:    PlainText - The message contains plain UTF-8 text.    CustomPayload - The message is a custom format defined by the Lambda function.    SSML - The message contains text formatted for voice output.    Composite - The message contains an escaped JSON object containing one or more messages from the groups that messages were assigned to when the intent was created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageFormat</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/MessageFormatType.html">MessageFormatType</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dialogState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/DialogState.html">DialogState</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogStateAB06DialogH0OSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dialogState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogStateAB06DialogH0OSgvp">dialogState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Identifies the current state of the user interaction. Amazon Lex returns one of the following values as dialogState. The client can optionally use this information to customize the user interface.     ElicitIntent - Amazon Lex wants to elicit user intent.  For example, a user might utter an intent (<q>I want to order a pizza</q>). If Amazon Lex cannot infer the user intent from this utterance, it will return this dialogState.    ConfirmIntent - Amazon Lex is expecting a <q>yes</q> or <q>no</q> response.   For example, Amazon Lex wants user confirmation before fulfilling an intent.  Instead of a simple <q>yes</q> or <q>no,</q> a user might respond with additional information. For example, <q>yes, but make it thick crust pizza</q> or <q>no, I want to order a drink</q>. Amazon Lex can process such additional information (in these examples, update the crust type slot value, or change intent from OrderPizza to OrderDrink).    ElicitSlot - Amazon Lex is expecting a slot value for the current intent.  For example, suppose that in the response Amazon Lex sends this message: <q>What size pizza would you like?</q>. A user might reply with the slot value (e.g., <q>medium</q>). The user might also provide additional information in the response (e.g., <q>medium thick crust pizza</q>). Amazon Lex can process such additional information appropriately.     Fulfilled - Conveys that the Lambda function configured for the intent has successfully fulfilled the intent.     ReadyForFulfillment - Conveys that the client has to fulfill the intent.     Failed - Conveys that the conversation with the user failed.   This can happen for various reasons including that the user did not provide an appropriate response to prompts from the service (you can configure how many times Amazon Lex can prompt a user for specific information), or the Lambda function failed to fulfill the intent.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dialogState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/DialogState.html">DialogState</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV7messageSSSgvp"></a>
                     <a name="//apple_ref/swift/Property/message" class="dashAnchor"></a>
                     <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV7messageSSSgvp">message</a>
@@ -793,9 +658,144 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV5slots17sessionAttributes12responseCard12slotToElicit13messageFormat10intentName11dialogState0O0ADSDyS2SGSg_AnB0fK0VSgSSSgAB07MessageP4TypeOSgArB06DialogT0OSgARtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(slots:sessionAttributes:responseCard:slotToElicit:messageFormat:intentName:dialogState:message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV5slots17sessionAttributes12responseCard12slotToElicit13messageFormat10intentName11dialogState0O0ADSDyS2SGSg_AnB0fK0VSgSSSgAB07MessageP4TypeOSgArB06DialogT0OSgARtcfc">init(slots:sessionAttributes:responseCard:slotToElicit:messageFormat:intentName:dialogState:message:)</a>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV13messageFormatAB07MessageH4TypeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/messageFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV13messageFormatAB07MessageH4TypeOSgvp">messageFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The format of the response message. One of the following values:    PlainText - The message contains plain UTF-8 text.    CustomPayload - The message is a custom format defined by the Lambda function.    SSML - The message contains text formatted for voice output.    Composite - The message contains an escaped JSON object containing one or more messages from the groups that messages were assigned to when the intent was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">messageFormat</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/MessageFormatType.html">MessageFormatType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV12responseCardAB0fH0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/responseCard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV12responseCardAB0fH0VSgvp">responseCard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents the options that the user has to respond to the current prompt. Response Card can come from the bot configuration (in the Amazon Lex console, choose the settings button next to a slot) or from a code hook (Lambda function).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">responseCard</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/ResponseCard.html">ResponseCard</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV17sessionAttributesSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sessionAttributes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV17sessionAttributesSDyS2SGSgvp">sessionAttributes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A map of key-value pairs representing the session-specific context information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV12slotToElicitSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/slotToElicit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV12slotToElicitSSSgvp">slotToElicit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the dialogState value is ElicitSlot, returns the name of the slot for which Amazon Lex is eliciting a value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slotToElicit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV5slotsSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/slots" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV5slotsSDyS2SGSgvp">slots</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The intent slots that Amazon Lex detected from the user input in the conversation.  Amazon Lex creates a resolution list containing likely values for a slot. The value that it returns is determined by the valueSelectionStrategy selected when the slot type was created or updated. If valueSelectionStrategy is set to ORIGINAL_VALUE, the value provided by the user is returned, if the user value is similar to the slot values. If valueSelectionStrategy is set to TOP_RESOLUTION Amazon Lex returns the first value in the resolution list or, if there is no resolution list, null. If you don&rsquo;t specify a valueSelectionStrategy, the default is ORIGINAL_VALUE.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">slots</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogState10intentName7message0K6Format12responseCard17sessionAttributes12slotToElicit5slotsAdB06DialogH0OSg_SSSgApB07MessageL4TypeOSgAB0fN0VSgSDyS2SGSgApXtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dialogState:intentName:message:messageFormat:responseCard:sessionAttributes:slotToElicit:slots:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17LexRuntimeServiceAAV16PostTextResponseV11dialogState10intentName7message0K6Format12responseCard17sessionAttributes12slotToElicit5slotsAdB06DialogH0OSg_SSSgApB07MessageL4TypeOSgAB0fN0VSgSDyS2SGSgApXtcfc">init(dialogState:intentName:message:messageFormat:responseCard:sessionAttributes:slotToElicit:slots:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -810,7 +810,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">slots</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sessionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">responseCard</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/ResponseCard.html">ResponseCard</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">slotToElicit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageFormat</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/MessageFormatType.html">MessageFormatType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">intentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dialogState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/DialogState.html">DialogState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dialogState</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/DialogState.html">DialogState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">intentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">messageFormat</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/MessageFormatType.html">MessageFormatType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">responseCard</span><span class="p">:</span> <span class="kt"><a href="../../Structs/LexRuntimeService/ResponseCard.html">ResponseCard</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sessionAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">slotToElicit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">slots</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -822,7 +822,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

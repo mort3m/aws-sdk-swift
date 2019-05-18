@@ -14,7 +14,7 @@
     <a title="Snapshot Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV8SnapshotV9encryptedSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV9encryptedSbSgvp">encrypted</a>
+                    <a name="/s:3EC2AAV8SnapshotV19dataEncryptionKeyIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dataEncryptionKeyId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV19dataEncryptionKeyIdSSSgvp">dataEncryptionKeyId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,257 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates whether the snapshot is encrypted.</p>
+                        <p>The data encryption key identifier for the snapshot. This value is a unique identifier that corresponds to the data encryption key that was used to encrypt the original volume or snapshot copy. Because data encryption keys are inherited by volumes created from snapshots, and vice versa, if snapshots share the same data encryption key identifier, then they belong to the same volume/snapshot lineage. This parameter is only returned by the DescribeSnapshots API operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV5stateAB0B5StateOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV5stateAB0B5StateOSgvp">state</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The snapshot state.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SnapshotState.html">SnapshotState</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV10volumeSizes5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/volumeSize" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV10volumeSizes5Int32VSgvp">volumeSize</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The size of the volume, in GiB.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV4tagsAB7TagListVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV4tagsAB7TagListVSgvp">tags</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Any tags assigned to the snapshot.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagList.html">TagList</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV12stateMessageSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/stateMessage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV12stateMessageSSSgvp">stateMessage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details to help you diagnose why the error occurred. This parameter is only returned by the DescribeSnapshots API operation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stateMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV10snapshotIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/snapshotId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV10snapshotIdSSSgvp">snapshotId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the snapshot. Each snapshot receives a unique identifier when it is created.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV10ownerAliasSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/ownerAlias" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV10ownerAliasSSSgvp">ownerAlias</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Value from an Amazon-maintained list (amazon | aws-marketplace | microsoft) of snapshot owners. Not to be confused with the user-configured AWS account alias, which is set from the IAM console.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ownerAlias</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV9startTime15AWSSDKSwiftCore0D5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV9startTime15AWSSDKSwiftCore0D5StampVSgvp">startTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The time stamp when the snapshot was initiated.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV8volumeIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/volumeId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV8volumeIdSSSgvp">volumeId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The ID of the volume that was used to create the snapshot. Snapshots created by the CopySnapshot action have an arbitrary volume ID that should not be used for any purpose.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EC2AAV8SnapshotV8kmsKeyIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/kmsKeyId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV8kmsKeyIdSSSgvp">kmsKeyId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The full ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume encryption key for the parent volume.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dataEncryptionKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -874,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV8SnapshotV8progressSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/progress" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV8progressSSSgvp">progress</a>
+                    <a name="/s:3EC2AAV8SnapshotV9encryptedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV9encryptedSbSgvp">encrypted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -884,14 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The progress of the snapshot, as a percentage.</p>
+                        <p>Indicates whether the snapshot is encrypted.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV8SnapshotV19dataEncryptionKeyIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/dataEncryptionKeyId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV19dataEncryptionKeyIdSSSgvp">dataEncryptionKeyId</a>
+                    <a name="/s:3EC2AAV8SnapshotV8kmsKeyIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/kmsKeyId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV8kmsKeyIdSSSgvp">kmsKeyId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,14 +668,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The data encryption key identifier for the snapshot. This value is a unique identifier that corresponds to the data encryption key that was used to encrypt the original volume or snapshot copy. Because data encryption keys are inherited by volumes created from snapshots, and vice versa, if snapshots share the same data encryption key identifier, then they belong to the same volume/snapshot lineage. This parameter is only returned by the DescribeSnapshots API operation.</p>
+                        <p>The full ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume encryption key for the parent volume.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dataEncryptionKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV10ownerAliasSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ownerAlias" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV10ownerAliasSSSgvp">ownerAlias</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Value from an Amazon-maintained list (amazon | aws-marketplace | microsoft) of snapshot owners. Not to be confused with the user-configured AWS account alias, which is set from the IAM console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ownerAlias</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -955,9 +739,225 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EC2AAV8SnapshotV9encrypted5state10volumeSize4tags0D7Message10snapshotId10ownerAlias9startTime0eJ006kmsKeyJ011description8progress014dataEncryptionpJ00kJ0ADSbSg_AB0B5StateOSgs5Int32VSgAB7TagListVSgSSSgA1_A1_15AWSSDKSwiftCore0N5StampVSgA1_A1_A1_A1_A1_A1_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(encrypted:state:volumeSize:tags:stateMessage:snapshotId:ownerAlias:startTime:volumeId:kmsKeyId:description:progress:dataEncryptionKeyId:ownerId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EC2AAV8SnapshotV9encrypted5state10volumeSize4tags0D7Message10snapshotId10ownerAlias9startTime0eJ006kmsKeyJ011description8progress014dataEncryptionpJ00kJ0ADSbSg_AB0B5StateOSgs5Int32VSgAB7TagListVSgSSSgA1_A1_15AWSSDKSwiftCore0N5StampVSgA1_A1_A1_A1_A1_A1_tcfc">init(encrypted:state:volumeSize:tags:stateMessage:snapshotId:ownerAlias:startTime:volumeId:kmsKeyId:description:progress:dataEncryptionKeyId:ownerId:)</a>
+                    <a name="/s:3EC2AAV8SnapshotV8progressSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/progress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV8progressSSSgvp">progress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The progress of the snapshot, as a percentage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV10snapshotIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/snapshotId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV10snapshotIdSSSgvp">snapshotId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the snapshot. Each snapshot receives a unique identifier when it is created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV9startTime15AWSSDKSwiftCore0D5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV9startTime15AWSSDKSwiftCore0D5StampVSgvp">startTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time stamp when the snapshot was initiated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV5stateAB0B5StateOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV5stateAB0B5StateOSgvp">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The snapshot state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SnapshotState.html">SnapshotState</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV12stateMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/stateMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV12stateMessageSSSgvp">stateMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details to help you diagnose why the error occurred. This parameter is only returned by the DescribeSnapshots API operation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stateMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV4tagsAB7TagListVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV4tagsAB7TagListVSgvp">tags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Any tags assigned to the snapshot.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagList.html">TagList</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV8volumeIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/volumeId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV8volumeIdSSSgvp">volumeId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the volume that was used to create the snapshot. Snapshots created by the CopySnapshot action have an arbitrary volume ID that should not be used for any purpose.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV10volumeSizes5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/volumeSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV10volumeSizes5Int32VSgvp">volumeSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The size of the volume, in GiB.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">volumeSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EC2AAV8SnapshotV19dataEncryptionKeyId11description9encrypted03kmseF010ownerAlias0jF08progress08snapshotF09startTime5state0P7Message4tags06volumeF00S4SizeADSSSg_ASSbSgA5S15AWSSDKSwiftCore0O5StampVSgAB0B5StateOSgAsB7TagListVSgASs5Int32VSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(dataEncryptionKeyId:description:encrypted:kmsKeyId:ownerAlias:ownerId:progress:snapshotId:startTime:state:stateMessage:tags:volumeId:volumeSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EC2AAV8SnapshotV19dataEncryptionKeyId11description9encrypted03kmseF010ownerAlias0jF08progress08snapshotF09startTime5state0P7Message4tags06volumeF00S4SizeADSSSg_ASSbSgA5S15AWSSDKSwiftCore0O5StampVSgAB0B5StateOSgAsB7TagListVSgASs5Int32VSgtcfc">init(dataEncryptionKeyId:description:encrypted:kmsKeyId:ownerAlias:ownerId:progress:snapshotId:startTime:state:stateMessage:tags:volumeId:volumeSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +972,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SnapshotState.html">SnapshotState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stateMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerAlias</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">dataEncryptionKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">dataEncryptionKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">kmsKeyId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerAlias</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">ownerId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">snapshotId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/SnapshotState.html">SnapshotState</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">stateMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">tags</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EC2/TagList.html">TagList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">volumeSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +984,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

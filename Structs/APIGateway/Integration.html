@@ -14,7 +14,7 @@
     <a title="Integration Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,114 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV15timeoutInMilliss5Int32VSgvp"></a>
-                    <a name="//apple_ref/swift/Property/timeoutInMillis" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV15timeoutInMilliss5Int32VSgvp">timeoutInMillis</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeoutInMillis</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV12connectionIdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/connectionId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV12connectionIdSSSgvp">connectionId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The (id) of the VpcLink used for the integration when connectionType=VPC_LINK and undefined, otherwise.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV15contentHandlingAB07ContentD8StrategyOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/contentHandling" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV15contentHandlingAB07ContentD8StrategyOSgvp">contentHandling</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies how to handle request payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT, with the following behaviors:  CONVERT_TO_BINARY: Converts a request payload from a Base64-encoded string to the corresponding binary blob. CONVERT_TO_TEXT: Converts a request payload from a binary blob to a Base64-encoded string.  If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">contentHandling</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ContentHandlingStrategy.html">ContentHandlingStrategy</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV17requestParametersSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requestParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV17requestParametersSDyS2SGSgvp">requestParameters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A key-value map specifying request parameters that are passed from the method request to the back end. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre-encoded as required by the back end. The method request parameter value must match the pattern of method.request.{location}.{name}, where location is querystring, path, or header and name must be a valid and unique method request parameter name.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10APIGatewayAAV11IntegrationV18cacheKeyParametersSaySSGSgvp"></a>
                     <a name="//apple_ref/swift/Property/cacheKeyParameters" class="dashAnchor"></a>
                     <a class="token" href="#/s:10APIGatewayAAV11IntegrationV18cacheKeyParametersSaySSGSgvp">cacheKeyParameters</a>
@@ -703,33 +595,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cacheKeyParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV11credentialsSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/credentials" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV11credentialsSSSgvp">credentials</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies the credentials required for the integration, if any. For AWS integrations, three options are available. To specify an IAM Role for API Gateway to assume, use the role&rsquo;s Amazon Resource Name (ARN). To require that the caller&rsquo;s identity be passed through from the request, specify the string arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -766,6 +631,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV12connectionIdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/connectionId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV12connectionIdSSSgvp">connectionId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The (id) of the VpcLink used for the integration when connectionType=VPC_LINK and undefined, otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">connectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10APIGatewayAAV11IntegrationV14connectionTypeAB010ConnectionD0OSgvp"></a>
                     <a name="//apple_ref/swift/Property/connectionType" class="dashAnchor"></a>
                     <a class="token" href="#/s:10APIGatewayAAV11IntegrationV14connectionTypeAB010ConnectionD0OSgvp">connectionType</a>
@@ -793,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV3uriSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/uri" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV3uriSSSgvp">uri</a>
+                    <a name="/s:10APIGatewayAAV11IntegrationV15contentHandlingAB07ContentD8StrategyOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/contentHandling" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV15contentHandlingAB07ContentD8StrategyOSgvp">contentHandling</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies Uniform Resource Identifier (URI) of the integration endpoint.   For HTTP or HTTP_PROXY integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification, for either standard integration, where connectionType is not VPC_LINK, or private integration, where connectionType is VPC_LINK. For a private HTTP integration, the URI is not used for routing.    For AWS or AWS_PROXY integrations, the URI is of the form arn:aws:apigateway:{region}:{subdomain.service|service}:path|action/{service_api}. Here, {Region} is the API Gateway region (e.g., us-east-1); {service} is the name of the integrated AWS service (e.g., s3); and {subdomain} is a designated subdomain supported by certain AWS service for fast host-name lookup. action can be used for an AWS service action-based API, using an Action={name}&amp;{p1}={v1}&amp;p2={v2}&hellip; query string. The ensuing {service_api} refers to a supported action {name} plus any required input parameters. Alternatively, path can be used for an AWS service path-based API. The ensuing service_api refers to the path to an AWS service resource, including the region of the integrated AWS service, if applicable. For example, for integration with the S3 API of GetObject, the uri can be either arn:aws:apigateway:us-west-2:s3:action/GetObject&amp;Bucket={bucket}&amp;Key={key} or arn:aws:apigateway:us-west-2:s3:path/{bucket}/{key}</p>
+                        <p>Specifies how to handle request payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT, with the following behaviors:  CONVERT_TO_BINARY: Converts a request payload from a Base64-encoded string to the corresponding binary blob. CONVERT_TO_TEXT: Converts a request payload from a binary blob to a Base64-encoded string.  If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">contentHandling</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ContentHandlingStrategy.html">ContentHandlingStrategy</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV4typeAB0B4TypeOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV4typeAB0B4TypeOSgvp">type</a>
+                    <a name="/s:10APIGatewayAAV11IntegrationV11credentialsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/credentials" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV11credentialsSSSgvp">credentials</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,41 +722,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies an API method integration type. The valid value is one of the following:  AWS: for integrating the API method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. AWS_PROXY: for integrating the API method request with the Lambda function-invoking action with the client request passed through as-is. This integration is also referred to as the Lambda proxy integration. HTTP: for integrating the API method request with an HTTP endpoint, including a private HTTP endpoint within a VPC. This integration is also referred to as the HTTP custom integration. HTTP_PROXY: for integrating the API method request with an HTTP endpoint, including a private HTTP endpoint within a VPC, with the client request passed through as-is. This is also referred to as the HTTP proxy integration. MOCK: for integrating the API method request with API Gateway as a <q>loop-back</q> endpoint without invoking any backend.  For the HTTP and HTTP proxy integrations, each integration can specify a protocol (http/https), port and path. Standard 80 and 443 ports are supported as well as custom ports above 1024. An HTTP or HTTP proxy integration with a connectionType of VPC_LINK is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</p>
+                        <p>Specifies the credentials required for the integration, if any. For AWS integrations, three options are available. To specify an IAM Role for API Gateway to assume, use the role&rsquo;s Amazon Resource Name (ARN). To require that the caller&rsquo;s identity be passed through from the request, specify the string arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationType.html">IntegrationType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV19passthroughBehaviorSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/passthroughBehavior" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV19passthroughBehaviorSSSgvp">passthroughBehavior</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Specifies how the method request body of an unmapped content type will be passed through the integration request to the back end without transformation. A content type is unmapped if no mapping template is defined in the integration or the content type does not match any of the mapped content types, as specified in requestTemplates. The valid value is one of the following:    WHEN_NO_MATCH: passes the method request body through the integration request to the back end without transformation when the method request content type does not match any content type associated with the mapping templates defined in the integration request.   WHEN_NO_TEMPLATES: passes the method request body through the integration request to the back end without transformation when no mapping template is defined in the integration request. If a template is defined when this option is selected, the method request of an unmapped content-type will be rejected with an HTTP 415 Unsupported Media Type response.   NEVER: rejects the method request with an HTTP 415 Unsupported Media Type response when either the method request content type does not match any content type associated with the mapping templates defined in the integration request or no mapping template is defined in the integration request.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">passthroughBehavior</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -901,33 +766,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV16requestTemplatesSDyS2SGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/requestTemplates" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV16requestTemplatesSDyS2SGSgvp">requestTemplates</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Represents a map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. The content type value is the key in this map, and the template (as a String) is the value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestTemplates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:10APIGatewayAAV11IntegrationV20integrationResponsesSDySSAB0B8ResponseVGSgvp"></a>
                     <a name="//apple_ref/swift/Property/integrationResponses" class="dashAnchor"></a>
                     <a class="token" href="#/s:10APIGatewayAAV11IntegrationV20integrationResponsesSDySSAB0B8ResponseVGSgvp">integrationResponses</a>
@@ -955,9 +793,171 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10APIGatewayAAV11IntegrationV15timeoutInMillis12connectionId15contentHandling17requestParameters08cacheKeyK011credentials0L9Namespace0F4Type3uri4type19passthroughBehavior10httpMethod0J9Templates20integrationResponsesADs5Int32VSg_SSSgAB07ContentI8StrategyOSgSDyS2SGSgSaySSGSgA2vB010ConnectionP0OSgAvB0bP0OSgA2VA_SDySSAB0B8ResponseVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(timeoutInMillis:connectionId:contentHandling:requestParameters:cacheKeyParameters:credentials:cacheNamespace:connectionType:uri:type:passthroughBehavior:httpMethod:requestTemplates:integrationResponses:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV15timeoutInMillis12connectionId15contentHandling17requestParameters08cacheKeyK011credentials0L9Namespace0F4Type3uri4type19passthroughBehavior10httpMethod0J9Templates20integrationResponsesADs5Int32VSg_SSSgAB07ContentI8StrategyOSgSDyS2SGSgSaySSGSgA2vB010ConnectionP0OSgAvB0bP0OSgA2VA_SDySSAB0B8ResponseVGSgtcfc">init(timeoutInMillis:connectionId:contentHandling:requestParameters:cacheKeyParameters:credentials:cacheNamespace:connectionType:uri:type:passthroughBehavior:httpMethod:requestTemplates:integrationResponses:)</a>
+                    <a name="/s:10APIGatewayAAV11IntegrationV19passthroughBehaviorSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/passthroughBehavior" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV19passthroughBehaviorSSSgvp">passthroughBehavior</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies how the method request body of an unmapped content type will be passed through the integration request to the back end without transformation. A content type is unmapped if no mapping template is defined in the integration or the content type does not match any of the mapped content types, as specified in requestTemplates. The valid value is one of the following:    WHEN_NO_MATCH: passes the method request body through the integration request to the back end without transformation when the method request content type does not match any content type associated with the mapping templates defined in the integration request.   WHEN_NO_TEMPLATES: passes the method request body through the integration request to the back end without transformation when no mapping template is defined in the integration request. If a template is defined when this option is selected, the method request of an unmapped content-type will be rejected with an HTTP 415 Unsupported Media Type response.   NEVER: rejects the method request with an HTTP 415 Unsupported Media Type response when either the method request content type does not match any content type associated with the mapping templates defined in the integration request or no mapping template is defined in the integration request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">passthroughBehavior</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV17requestParametersSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requestParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV17requestParametersSDyS2SGSgvp">requestParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A key-value map specifying request parameters that are passed from the method request to the back end. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre-encoded as required by the back end. The method request parameter value must match the pattern of method.request.{location}.{name}, where location is querystring, path, or header and name must be a valid and unique method request parameter name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV16requestTemplatesSDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/requestTemplates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV16requestTemplatesSDyS2SGSgvp">requestTemplates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. The content type value is the key in this map, and the template (as a String) is the value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestTemplates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV15timeoutInMilliss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timeoutInMillis" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV15timeoutInMilliss5Int32VSgvp">timeoutInMillis</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timeoutInMillis</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV4typeAB0B4TypeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV4typeAB0B4TypeOSgvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies an API method integration type. The valid value is one of the following:  AWS: for integrating the API method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. AWS_PROXY: for integrating the API method request with the Lambda function-invoking action with the client request passed through as-is. This integration is also referred to as the Lambda proxy integration. HTTP: for integrating the API method request with an HTTP endpoint, including a private HTTP endpoint within a VPC. This integration is also referred to as the HTTP custom integration. HTTP_PROXY: for integrating the API method request with an HTTP endpoint, including a private HTTP endpoint within a VPC, with the client request passed through as-is. This is also referred to as the HTTP proxy integration. MOCK: for integrating the API method request with API Gateway as a <q>loop-back</q> endpoint without invoking any backend.  For the HTTP and HTTP proxy integrations, each integration can specify a protocol (http/https), port and path. Standard 80 and 443 ports are supported as well as custom ports above 1024. An HTTP or HTTP proxy integration with a connectionType of VPC_LINK is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationType.html">IntegrationType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV3uriSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uri" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV3uriSSSgvp">uri</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies Uniform Resource Identifier (URI) of the integration endpoint.   For HTTP or HTTP_PROXY integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification, for either standard integration, where connectionType is not VPC_LINK, or private integration, where connectionType is VPC_LINK. For a private HTTP integration, the URI is not used for routing.    For AWS or AWS_PROXY integrations, the URI is of the form arn:aws:apigateway:{region}:{subdomain.service|service}:path|action/{service_api}. Here, {Region} is the API Gateway region (e.g., us-east-1); {service} is the name of the integrated AWS service (e.g., s3); and {subdomain} is a designated subdomain supported by certain AWS service for fast host-name lookup. action can be used for an AWS service action-based API, using an Action={name}&amp;{p1}={v1}&amp;p2={v2}&hellip; query string. The ensuing {service_api} refers to a supported action {name} plus any required input parameters. Alternatively, path can be used for an AWS service path-based API. The ensuing service_api refers to the path to an AWS service resource, including the region of the integrated AWS service, if applicable. For example, for integration with the S3 API of GetObject, the uri can be either arn:aws:apigateway:us-west-2:s3:action/GetObject&amp;Bucket={bucket}&amp;Key={key} or arn:aws:apigateway:us-west-2:s3:path/{bucket}/{key}</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10APIGatewayAAV11IntegrationV18cacheKeyParameters0C9Namespace12connectionId0G4Type15contentHandling11credentials10httpMethod20integrationResponses19passthroughBehavior07requestE00S9Templates15timeoutInMillis4type3uriADSaySSGSg_SSSgAuB010ConnectionI0OSgAB07ContentK8StrategyOSgA2USDySSAB0B8ResponseVGSgAUSDyS2SGSgA5_s5Int32VSgAB0bI0OSgAUtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cacheKeyParameters:cacheNamespace:connectionId:connectionType:contentHandling:credentials:httpMethod:integrationResponses:passthroughBehavior:requestParameters:requestTemplates:timeoutInMillis:type:uri:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10APIGatewayAAV11IntegrationV18cacheKeyParameters0C9Namespace12connectionId0G4Type15contentHandling11credentials10httpMethod20integrationResponses19passthroughBehavior07requestE00S9Templates15timeoutInMillis4type3uriADSaySSGSg_SSSgAuB010ConnectionI0OSgAB07ContentK8StrategyOSgA2USDySSAB0B8ResponseVGSgAUSDyS2SGSgA5_s5Int32VSgAB0bI0OSgAUtcfc">init(cacheKeyParameters:cacheNamespace:connectionId:connectionType:contentHandling:credentials:httpMethod:integrationResponses:passthroughBehavior:requestParameters:requestTemplates:timeoutInMillis:type:uri:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +972,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">timeoutInMillis</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">contentHandling</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ContentHandlingStrategy.html">ContentHandlingStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheKeyParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNamespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ConnectionType.html">ConnectionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationType.html">IntegrationType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">passthroughBehavior</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestTemplates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">integrationResponses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationResponse.html">IntegrationResponse</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cacheKeyParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cacheNamespace</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">connectionType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ConnectionType.html">ConnectionType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">contentHandling</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/ContentHandlingStrategy.html">ContentHandlingStrategy</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">httpMethod</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">integrationResponses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationResponse.html">IntegrationResponse</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">passthroughBehavior</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestTemplates</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timeoutInMillis</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/APIGateway/IntegrationType.html">IntegrationType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +984,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

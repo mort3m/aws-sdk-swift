@@ -14,7 +14,7 @@
     <a title="QualificationRequirement Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV24QualificationRequirementV19qualificationTypeIdSSvp"></a>
-                    <a name="//apple_ref/swift/Property/qualificationTypeId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV19qualificationTypeIdSSvp">qualificationTypeId</a>
+                    <a name="/s:5MTurkAAV24QualificationRequirementV14actionsGuardedAB16HITAccessActionsOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/actionsGuarded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV14actionsGuardedAB16HITAccessActionsOSgvp">actionsGuarded</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ID of the Qualification type for the requirement.</p>
+                        <p>Setting this attribute prevents Workers whose Qualifications do not meet this QualificationRequirement from taking the specified action. Valid arguments include <q>Accept</q> (Worker cannot accept the HIT, but can preview the HIT and see it in their search results), <q>PreviewAndAccept</q> (Worker cannot accept or preview the HIT, but can see the HIT in their search results), and <q>DiscoverPreviewAndAccept</q> (Worker cannot accept, preview, or see the HIT in their search results). It&rsquo;s possible for you to create a HIT with multiple QualificationRequirements (which can have different values for the ActionGuarded attribute). In this case, the Worker is only permitted to perform an action when they have met all QualificationRequirements guarding the action. The actions in the order of least restrictive to most restrictive are Discover, Preview and Accept. For example, if a Worker meets all QualificationRequirements that are set to DiscoverPreviewAndAccept, but do not meet all requirements that are set with PreviewAndAccept, then the Worker will be able to Discover, i.e. see the HIT in their search result, but will not be able to Preview or Accept the HIT. ActionsGuarded should not be used in combination with the RequiredToPreview field.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">actionsGuarded</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/HITAccessActions.html">HITAccessActions</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,33 +631,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV24QualificationRequirementV12localeValuesSayAB6LocaleVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/localeValues" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV12localeValuesSayAB6LocaleVGSgvp">localeValues</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The locale value to compare against the Qualification&rsquo;s value. The local value must be a valid ISO 3166 country code or supports ISO 3166-2 subdivisions. LocaleValue can only be used with a Worker_Locale QualificationType ID. LocaleValue can only be used with the EqualTo, NotEqualTo, In, and NotIn comparators. You must only use a single LocaleValue element when using the EqualTo or NotEqualTo comparators. When performing a set comparison by using the In or the NotIn comparator, you can use up to 30 LocaleValue elements in a QualificationRequirement data structure.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/Locale.html">Locale</a></span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5MTurkAAV24QualificationRequirementV13integerValuesSays5Int32VGSgvp"></a>
                     <a name="//apple_ref/swift/Property/integerValues" class="dashAnchor"></a>
                     <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV13integerValuesSays5Int32VGSgvp">integerValues</a>
@@ -685,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV24QualificationRequirementV14actionsGuardedAB16HITAccessActionsOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/actionsGuarded" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV14actionsGuardedAB16HITAccessActionsOSgvp">actionsGuarded</a>
+                    <a name="/s:5MTurkAAV24QualificationRequirementV12localeValuesSayAB6LocaleVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/localeValues" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV12localeValuesSayAB6LocaleVGSgvp">localeValues</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -695,14 +668,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Setting this attribute prevents Workers whose Qualifications do not meet this QualificationRequirement from taking the specified action. Valid arguments include <q>Accept</q> (Worker cannot accept the HIT, but can preview the HIT and see it in their search results), <q>PreviewAndAccept</q> (Worker cannot accept or preview the HIT, but can see the HIT in their search results), and <q>DiscoverPreviewAndAccept</q> (Worker cannot accept, preview, or see the HIT in their search results). It&rsquo;s possible for you to create a HIT with multiple QualificationRequirements (which can have different values for the ActionGuarded attribute). In this case, the Worker is only permitted to perform an action when they have met all QualificationRequirements guarding the action. The actions in the order of least restrictive to most restrictive are Discover, Preview and Accept. For example, if a Worker meets all QualificationRequirements that are set to DiscoverPreviewAndAccept, but do not meet all requirements that are set with PreviewAndAccept, then the Worker will be able to Discover, i.e. see the HIT in their search result, but will not be able to Preview or Accept the HIT. ActionsGuarded should not be used in combination with the RequiredToPreview field.</p>
+                        <p>The locale value to compare against the Qualification&rsquo;s value. The local value must be a valid ISO 3166 country code or supports ISO 3166-2 subdivisions. LocaleValue can only be used with a Worker_Locale QualificationType ID. LocaleValue can only be used with the EqualTo, NotEqualTo, In, and NotIn comparators. You must only use a single LocaleValue element when using the EqualTo or NotEqualTo comparators. When performing a set comparison by using the In or the NotIn comparator, you can use up to 30 LocaleValue elements in a QualificationRequirement data structure.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">actionsGuarded</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/HITAccessActions.html">HITAccessActions</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">localeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/Locale.html">Locale</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5MTurkAAV24QualificationRequirementV19qualificationTypeIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/qualificationTypeId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV19qualificationTypeIdSSvp">qualificationTypeId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the Qualification type for the requirement.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5MTurkAAV24QualificationRequirementV19qualificationTypeId10comparator12localeValues07integerI014actionsGuarded17requiredToPreviewADSS_AB10ComparatorOSayAB6LocaleVGSgSays5Int32VGSgAB16HITAccessActionsOSgSbSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(qualificationTypeId:comparator:localeValues:integerValues:actionsGuarded:requiredToPreview:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV19qualificationTypeId10comparator12localeValues07integerI014actionsGuarded17requiredToPreviewADSS_AB10ComparatorOSayAB6LocaleVGSgSays5Int32VGSgAB16HITAccessActionsOSgSbSgtcfc">init(qualificationTypeId:comparator:localeValues:integerValues:actionsGuarded:requiredToPreview:)</a>
+                    <a name="/s:5MTurkAAV24QualificationRequirementV14actionsGuarded10comparator13integerValues06localeH019qualificationTypeId17requiredToPreviewAdB16HITAccessActionsOSg_AB10ComparatorOSays5Int32VGSgSayAB6LocaleVGSgSSSbSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(actionsGuarded:comparator:integerValues:localeValues:qualificationTypeId:requiredToPreview:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5MTurkAAV24QualificationRequirementV14actionsGuarded10comparator13integerValues06localeH019qualificationTypeId17requiredToPreviewAdB16HITAccessActionsOSg_AB10ComparatorOSays5Int32VGSgSayAB6LocaleVGSgSSSbSgtcfc">init(actionsGuarded:comparator:integerValues:localeValues:qualificationTypeId:requiredToPreview:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">comparator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/Comparator.html">Comparator</a></span><span class="p">,</span> <span class="nv">localeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/Locale.html">Locale</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">integerValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int32</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">actionsGuarded</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/HITAccessActions.html">HITAccessActions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requiredToPreview</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">actionsGuarded</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/HITAccessActions.html">HITAccessActions</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">comparator</span><span class="p">:</span> <span class="kt"><a href="../../Structs/MTurk/Comparator.html">Comparator</a></span><span class="p">,</span> <span class="nv">integerValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int32</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">localeValues</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/MTurk/Locale.html">Locale</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">qualificationTypeId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">requiredToPreview</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

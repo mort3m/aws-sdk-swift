@@ -14,7 +14,7 @@
     <a title="ProjectEnvironment Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV4typeAB0D4TypeOvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV4typeAB0D4TypeOvp">type</a>
+                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV11certificateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/certificate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV11certificateSSSgvp">certificate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of build environment to use for related builds.</p>
+                        <p>The certificate to use with this build project.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/EnvironmentType.html">EnvironmentType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV14privilegedModeSbSgvp"></a>
-                    <a name="//apple_ref/swift/Property/privilegedMode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV14privilegedModeSbSgvp">privilegedMode</a>
+                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV20environmentVariablesSayAB0D8VariableVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/environmentVariables" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV20environmentVariablesSayAB0D8VariableVGSgvp">environmentVariables</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,41 +641,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enables running the Docker daemon inside a Docker container. Set to true only if the build project is be used to build Docker images, and the specified build environment image is not provided by AWS CodeBuild with Docker support. Otherwise, all associated builds that attempt to interact with the Docker daemon fail. You must also start the Docker daemon so that builds can interact with it. One way to do this is to initialize the Docker daemon during the install phase of your build spec by running the following build commands. (Do not run these commands if the specified build environment image is provided by AWS CodeBuild with Docker support.) If the operating system&rsquo;s base image is Ubuntu Linux:  - nohup /usr/local/bin/dockerd &ndash;host=unix:///var/run/docker.sock &ndash;host=tcp://0.0.0.0:2375 &ndash;storage-driver=overlay&amp; - timeout 15 sh -c <q>until docker info; do echo .; sleep 1; done</q>  If the operating system&rsquo;s base image is Alpine Linux, add the -t argument to timeout:  - nohup /usr/local/bin/dockerd &ndash;host=unix:///var/run/docker.sock &ndash;host=tcp://0.0.0.0:2375 &ndash;storage-driver=overlay&amp; - timeout 15 -t sh -c <q>until docker info; do echo .; sleep 1; done</q></p>
+                        <p>A set of environment variables to make available to builds for this build project.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">privilegedMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV11certificateSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/certificate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV11certificateSSSgvp">certificate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The certificate to use with this build project.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environmentVariables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CodeBuild/EnvironmentVariable.html">EnvironmentVariable</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +685,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV20environmentVariablesSayAB0D8VariableVGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/environmentVariables" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV20environmentVariablesSayAB0D8VariableVGSgvp">environmentVariables</a>
+                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV14privilegedModeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/privilegedMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV14privilegedModeSbSgvp">privilegedMode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +695,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A set of environment variables to make available to builds for this build project.</p>
+                        <p>Enables running the Docker daemon inside a Docker container. Set to true only if the build project is be used to build Docker images, and the specified build environment image is not provided by AWS CodeBuild with Docker support. Otherwise, all associated builds that attempt to interact with the Docker daemon fail. You must also start the Docker daemon so that builds can interact with it. One way to do this is to initialize the Docker daemon during the install phase of your build spec by running the following build commands. (Do not run these commands if the specified build environment image is provided by AWS CodeBuild with Docker support.) If the operating system&rsquo;s base image is Ubuntu Linux:  - nohup /usr/local/bin/dockerd &ndash;host=unix:///var/run/docker.sock &ndash;host=tcp://0.0.0.0:2375 &ndash;storage-driver=overlay&amp; - timeout 15 sh -c <q>until docker info; do echo .; sleep 1; done</q>  If the operating system&rsquo;s base image is Alpine Linux, add the -t argument to timeout:  - nohup /usr/local/bin/dockerd &ndash;host=unix:///var/run/docker.sock &ndash;host=tcp://0.0.0.0:2375 &ndash;storage-driver=overlay&amp; - timeout 15 -t sh -c <q>until docker info; do echo .; sleep 1; done</q></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">environmentVariables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CodeBuild/EnvironmentVariable.html">EnvironmentVariable</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">privilegedMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -739,9 +712,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV4type11computeType14privilegedMode11certificate5image20environmentVariablesAdB0dG0O_AB07ComputeG0OSbSgSSSgSSSayAB0D8VariableVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(type:computeType:privilegedMode:certificate:image:environmentVariables:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV4type11computeType14privilegedMode11certificate5image20environmentVariablesAdB0dG0O_AB07ComputeG0OSbSgSSSgSSSayAB0D8VariableVGSgtcfc">init(type:computeType:privilegedMode:certificate:image:environmentVariables:)</a>
+                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV4typeAB0D4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV4typeAB0D4TypeOvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of build environment to use for related builds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/EnvironmentType.html">EnvironmentType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CodeBuildAAV18ProjectEnvironmentV11certificate11computeType20environmentVariables5image14privilegedMode4typeADSSSg_AB07ComputeG0OSayAB0D8VariableVGSgSSSbSgAB0dG0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(certificate:computeType:environmentVariables:image:privilegedMode:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CodeBuildAAV18ProjectEnvironmentV11certificate11computeType20environmentVariables5image14privilegedMode4typeADSSSg_AB07ComputeG0OSayAB0D8VariableVGSgSSSbSgAB0dG0Otcfc">init(certificate:computeType:environmentVariables:image:privilegedMode:type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -756,7 +756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/EnvironmentType.html">EnvironmentType</a></span><span class="p">,</span> <span class="nv">computeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ComputeType.html">ComputeType</a></span><span class="p">,</span> <span class="nv">privilegedMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">environmentVariables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CodeBuild/EnvironmentVariable.html">EnvironmentVariable</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">certificate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">computeType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/ComputeType.html">ComputeType</a></span><span class="p">,</span> <span class="nv">environmentVariables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/CodeBuild/EnvironmentVariable.html">EnvironmentVariable</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">privilegedMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CodeBuild/EnvironmentType.html">EnvironmentType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -768,7 +768,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

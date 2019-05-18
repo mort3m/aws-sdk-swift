@@ -14,7 +14,7 @@
     <a title="InitiateAuthResponse Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,33 +577,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeNameAB09ChallengeH4TypeOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/challengeName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeNameAB09ChallengeH4TypeOSgvp">challengeName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the challenge which you are responding to with this call. This is returned to you in the AdminInitiateAuth response if you need to pass another challenge. Valid values include the following. Note that all of these challenges require USERNAME and SECRET_HASH (if applicable) in the parameters.    SMS_MFA: Next challenge is to supply an SMS_MFA_CODE, delivered via SMS.    PASSWORD_VERIFIER: Next challenge is to supply PASSWORD_CLAIM_SIGNATURE, PASSWORD_CLAIM_SECRET_BLOCK, and TIMESTAMP after the client-side SRP calculations.    CUSTOM_CHALLENGE: This is returned if your custom authentication flow determines that the user should pass another challenge before tokens are issued.    DEVICE_SRP_AUTH: If device tracking was enabled on your user pool and the previous challenges were passed, this challenge is returned so that Amazon Cognito can start tracking this device.    DEVICE_PASSWORD_VERIFIER: Similar to PASSWORD_VERIFIER, but for devices only.    NEW_PASSWORD_REQUIRED: For users which are required to change their passwords after successful first login. This challenge should be passed with NEW_PASSWORD and any other required attributes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">challengeName</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/ChallengeNameType.html">ChallengeNameType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV20authenticationResultAB014AuthenticationH4TypeVSgvp"></a>
                     <a name="//apple_ref/swift/Property/authenticationResult" class="dashAnchor"></a>
                     <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV20authenticationResultAB014AuthenticationH4TypeVSgvp">authenticationResult</a>
@@ -631,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV7sessionSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV7sessionSSSgvp">session</a>
+                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeNameAB09ChallengeH4TypeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/challengeName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeNameAB09ChallengeH4TypeOSgvp">challengeName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The session which should be passed both ways in challenge-response calls to the service. If the or API call determines that the caller needs to go through another challenge, they return a session with other challenge parameters. This session should be passed as it is to the next RespondToAuthChallenge API call.</p>
+                        <p>The name of the challenge which you are responding to with this call. This is returned to you in the AdminInitiateAuth response if you need to pass another challenge. Valid values include the following. Note that all of these challenges require USERNAME and SECRET_HASH (if applicable) in the parameters.    SMS_MFA: Next challenge is to supply an SMS_MFA_CODE, delivered via SMS.    PASSWORD_VERIFIER: Next challenge is to supply PASSWORD_CLAIM_SIGNATURE, PASSWORD_CLAIM_SECRET_BLOCK, and TIMESTAMP after the client-side SRP calculations.    CUSTOM_CHALLENGE: This is returned if your custom authentication flow determines that the user should pass another challenge before tokens are issued.    DEVICE_SRP_AUTH: If device tracking was enabled on your user pool and the previous challenges were passed, this challenge is returned so that Amazon Cognito can start tracking this device.    DEVICE_PASSWORD_VERIFIER: Similar to PASSWORD_VERIFIER, but for devices only.    NEW_PASSWORD_REQUIRED: For users which are required to change their passwords after successful first login. This challenge should be passed with NEW_PASSWORD and any other required attributes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">challengeName</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/ChallengeNameType.html">ChallengeNameType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -685,9 +658,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeName20authenticationResult7session0G10ParametersAdB09ChallengeH4TypeOSg_AB014AuthenticationjN0VSgSSSgSDyS2SGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(challengeName:authenticationResult:session:challengeParameters:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV13challengeName20authenticationResult7session0G10ParametersAdB09ChallengeH4TypeOSg_AB014AuthenticationjN0VSgSSSgSDyS2SGSgtcfc">init(challengeName:authenticationResult:session:challengeParameters:)</a>
+                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV7sessionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV7sessionSSSgvp">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The session which should be passed both ways in challenge-response calls to the service. If the or API call determines that the caller needs to go through another challenge, they return a session with other challenge parameters. This session should be passed as it is to the next RespondToAuthChallenge API call.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV20authenticationResult13challengeName0I10Parameters7sessionAdB014AuthenticationH4TypeVSg_AB09ChallengejN0OSgSDyS2SGSgSSSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(authenticationResult:challengeName:challengeParameters:session:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:23CognitoIdentityProviderAAV20InitiateAuthResponseV20authenticationResult13challengeName0I10Parameters7sessionAdB014AuthenticationH4TypeVSg_AB09ChallengejN0OSgSDyS2SGSgSSSgtcfc">init(authenticationResult:challengeName:challengeParameters:session:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -702,7 +702,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">challengeName</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/ChallengeNameType.html">ChallengeNameType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">authenticationResult</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/AuthenticationResultType.html">AuthenticationResultType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">challengeParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">authenticationResult</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/AuthenticationResultType.html">AuthenticationResultType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">challengeName</span><span class="p">:</span> <span class="kt"><a href="../../Structs/CognitoIdentityProvider/ChallengeNameType.html">ChallengeNameType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">challengeParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -714,7 +714,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

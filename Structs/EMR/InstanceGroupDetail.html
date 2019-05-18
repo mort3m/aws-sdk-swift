@@ -14,7 +14,7 @@
     <a title="InstanceGroupDetail Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html"> Docs</a> (45% documented)</p>
+        <p><a href="../../index.html"> Docs</a> (44% documented)</p>
         <p class="header-right"><a href="https://github.com/swift-aws/aws-sdk-swift"><img src="../../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -577,9 +577,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV6marketAB10MarketTypeOvp"></a>
-                    <a name="//apple_ref/swift/Property/market" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV6marketAB10MarketTypeOvp">market</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV8bidPriceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bidPrice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV8bidPriceSSSgvp">bidPrice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -587,14 +587,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Market type of the EC2 instances used to create a cluster node.</p>
+                        <p>The maximum Spot price your are willing to pay for EC2 instances. An optional, nullable field that applies if the MarketType for the instance group is specified as SPOT. Specified in USD. If the value is NULL and SPOT is specified, the maximum Spot price is set equal to the On-Demand price.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">market</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/MarketType.html">MarketType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bidPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +604,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV20instanceRunningCounts5Int32Vvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceRunningCount" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV20instanceRunningCounts5Int32Vvp">instanceRunningCount</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV16creationDateTime15AWSSDKSwiftCore0G5StampVvp"></a>
+                    <a name="//apple_ref/swift/Property/creationDateTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV16creationDateTime15AWSSDKSwiftCore0G5StampVvp">creationDateTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -614,14 +614,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Actual count of running instances.</p>
+                        <p>The date/time the instance group was created.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceRunningCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
 
                         </div>
                       </div>
@@ -631,9 +631,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV5stateAB0bC5StateOvp"></a>
-                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV5stateAB0bC5StateOvp">state</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV11endDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endDateTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV11endDateTime15AWSSDKSwiftCore0G5StampVSgvp">endDateTime</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -641,14 +641,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.</p>
+                        <p>The date/time the instance group was terminated.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceGroupState.html">InstanceGroupState</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV08instanceC2IdSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceGroupId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV08instanceC2IdSSSgvp">instanceGroupId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unique identifier for the instance group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -712,9 +739,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV11endDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/endDateTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV11endDateTime15AWSSDKSwiftCore0G5StampVSgvp">endDateTime</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV20instanceRunningCounts5Int32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/instanceRunningCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV20instanceRunningCounts5Int32Vvp">instanceRunningCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,41 +749,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date/time the instance group was terminated.</p>
+                        <p>Actual count of running instances.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV8bidPriceSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/bidPrice" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV8bidPriceSSSgvp">bidPrice</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The maximum Spot price your are willing to pay for EC2 instances. An optional, nullable field that applies if the MarketType for the instance group is specified as SPOT. Specified in USD. If the value is NULL and SPOT is specified, the maximum Spot price is set equal to the On-Demand price.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bidPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceRunningCount</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -793,9 +793,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV08instanceC2IdSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/instanceGroupId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV08instanceC2IdSSSgvp">instanceGroupId</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV21lastStateChangeReasonSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastStateChangeReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV21lastStateChangeReasonSSSgvp">lastStateChangeReason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -803,14 +803,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unique identifier for the instance group.</p>
+                        <p>Details regarding the state of the instance group.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">instanceGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastStateChangeReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -820,9 +820,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV16creationDateTime15AWSSDKSwiftCore0G5StampVvp"></a>
-                    <a name="//apple_ref/swift/Property/creationDateTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV16creationDateTime15AWSSDKSwiftCore0G5StampVvp">creationDateTime</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV6marketAB10MarketTypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/market" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV6marketAB10MarketTypeOvp">market</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -830,14 +830,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The date/time the instance group was created.</p>
+                        <p>Market type of the EC2 instances used to create a cluster node.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">market</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/MarketType.html">MarketType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -874,60 +874,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV13startDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
-                    <a name="//apple_ref/swift/Property/startDateTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV13startDateTime15AWSSDKSwiftCore0G5StampVSgvp">startDateTime</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The date/time the instance group was started.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV21lastStateChangeReasonSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/lastStateChangeReason" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV21lastStateChangeReasonSSSgvp">lastStateChangeReason</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Details regarding the state of the instance group.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">lastStateChangeReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:3EMRAAV19InstanceGroupDetailV13readyDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
                     <a name="//apple_ref/swift/Property/readyDateTime" class="dashAnchor"></a>
                     <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV13readyDateTime15AWSSDKSwiftCore0G5StampVSgvp">readyDateTime</a>
@@ -955,9 +901,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:3EMRAAV19InstanceGroupDetailV6market20instanceRunningCount5state0f7RequestH00F4Role11endDateTime8bidPrice0F4Type0fC2Id08creationmN04name05startmN021lastStateChangeReason05readymN0AdB06MarketQ0O_s5Int32VAB0bcW0OAvB0bkQ0O15AWSSDKSwiftCore0N5StampVSgSSSgSSA3_A1_A3_A2_A3_A2_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(market:instanceRunningCount:state:instanceRequestCount:instanceRole:endDateTime:bidPrice:instanceType:instanceGroupId:creationDateTime:name:startDateTime:lastStateChangeReason:readyDateTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV6market20instanceRunningCount5state0f7RequestH00F4Role11endDateTime8bidPrice0F4Type0fC2Id08creationmN04name05startmN021lastStateChangeReason05readymN0AdB06MarketQ0O_s5Int32VAB0bcW0OAvB0bkQ0O15AWSSDKSwiftCore0N5StampVSgSSSgSSA3_A1_A3_A2_A3_A2_tcfc">init(market:instanceRunningCount:state:instanceRequestCount:instanceRole:endDateTime:bidPrice:instanceType:instanceGroupId:creationDateTime:name:startDateTime:lastStateChangeReason:readyDateTime:)</a>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV13startDateTime15AWSSDKSwiftCore0G5StampVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/startDateTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV13startDateTime15AWSSDKSwiftCore0G5StampVSgvp">startDateTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The date/time the instance group was started.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV5stateAB0bC5StateOvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV5stateAB0bC5StateOvp">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceGroupState.html">InstanceGroupState</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3EMRAAV19InstanceGroupDetailV8bidPrice16creationDateTime03endhI008instanceC2Id0K12RequestCount0K4Role0k7RunningN00K4Type21lastStateChangeReason6market4name05readyhI005starthI05stateADSSSg_15AWSSDKSwiftCore0I5StampVAVSgASs5Int32VAB0boQ0OAYSSAsB06MarketQ0OAs2wB0bcS0Otcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(bidPrice:creationDateTime:endDateTime:instanceGroupId:instanceRequestCount:instanceRole:instanceRunningCount:instanceType:lastStateChangeReason:market:name:readyDateTime:startDateTime:state:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3EMRAAV19InstanceGroupDetailV8bidPrice16creationDateTime03endhI008instanceC2Id0K12RequestCount0K4Role0k7RunningN00K4Type21lastStateChangeReason6market4name05readyhI005starthI05stateADSSSg_15AWSSDKSwiftCore0I5StampVAVSgASs5Int32VAB0boQ0OAYSSAsB06MarketQ0OAs2wB0bcS0Otcfc">init(bidPrice:creationDateTime:endDateTime:instanceGroupId:instanceRequestCount:instanceRole:instanceRunningCount:instanceType:lastStateChangeReason:market:name:readyDateTime:startDateTime:state:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,7 +972,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">market</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/MarketType.html">MarketType</a></span><span class="p">,</span> <span class="nv">instanceRunningCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceGroupState.html">InstanceGroupState</a></span><span class="p">,</span> <span class="nv">instanceRequestCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">instanceRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceRoleType.html">InstanceRoleType</a></span><span class="p">,</span> <span class="nv">endDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bidPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">instanceGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">lastStateChangeReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readyDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">bidPrice</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">creationDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">,</span> <span class="nv">endDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceGroupId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">instanceRequestCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">instanceRole</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceRoleType.html">InstanceRoleType</a></span><span class="p">,</span> <span class="nv">instanceRunningCount</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">instanceType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">lastStateChangeReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">market</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/MarketType.html">MarketType</a></span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readyDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">startDateTime</span><span class="p">:</span> <span class="kt">TimeStamp</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../../Structs/EMR/InstanceGroupState.html">InstanceGroupState</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -984,7 +984,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© Copyright (c) 2018 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs)</p>
+          <p>© Copyright (c) 2019 Yuki Takei(noppoMan), Joe Smith(Yasumoto), Jonathan McAllister(jonnymacs), Adam Fowler (adam-fowler)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
